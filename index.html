@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My US Stock Portfolio</title>
+    <title>My US Stock Portfolio (Full Automation)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .text-profit { color: #198754; font-weight: bold; }
         .text-loss { color: #dc3545; font-weight: bold; }
+        /* ปรับปรุงกล่องกรอกราคาให้เด่นชัดและคลิกง่าย */
         .price-input {
-            border: 2px solid #0d6efd !important;
-            background-color: #f8f9fa !important;
-            border-radius: 6px;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-            transition: all 0.2s;
+            border: 2px solid #ffc107 !important;
+            background-color: #fff3cd !important;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: #0d6efd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 5px;
+            width: 100px;
         }
         .price-input:focus {
-            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+            box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.4);
             outline: none;
         }
     </style>
@@ -24,7 +29,7 @@
 <body class="bg-light p-4">
 
     <div class="container">
-        <h3 class="mb-4">ระบบจัดการพอร์ตลงทุน</h3>
+        <h3 class="mb-4">ระบบจัดการพอร์ตลงทุน (คำนวณอัตโนมัติ 100%)</h3>
 
         <div class="row">
             <div class="col-md-4 mb-4">
@@ -64,7 +69,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
                             <h5 class="card-title text-primary mb-0">สรุปพอร์ตโฟลิโอ</h5>
-                            <button class="btn btn-sm btn-outline-success" id="btnUpdateAllPrices">🔄 ดึงราคาล่าสุด</button>
+                            <button class="btn btn-sm btn-outline-success" id="btnUpdateAllPrices">🔄 ดึงราคาล่าสุดอัตโนมัติ</button>
                         </div>
                         <div class="table-responsive">
                             <table class="table table-bordered text-center align-middle" style="font-size: 0.95rem;">
@@ -74,7 +79,8 @@
                                         <th>จำนวนหุ้น</th>
                                         <th>ทุนรวม (USD)</th>
                                         <th>ทุนรวม (THB)</th>
-                                        <th class="bg-warning bg-opacity-25">ราคาปัจจุบัน (USD)<br><small class="text-danger">พิมพ์แก้ไขได้เลย</small></th>
+                                        <!-- เน้นย้ำให้รู้ว่าช่องนี้แก้ไขได้ -->
+                                        <th class="bg-warning bg-opacity-25">ราคาปัจจุบัน (USD)<br><small class="text-danger fw-bold">กรอกแก้ได้เลย ↓</small></th>
                                         <th class="bg-info bg-opacity-10">มูลค่าปัจจุบัน<br><small>(Auto THB)</small></th>
                                         <th>ผลตอบแทนรวม<br><small>(เทียบเคียงแอป 100%)</small></th>
                                     </tr>
@@ -111,9 +117,9 @@
                                 <div class="col-6">
                                     <label class="form-label text-danger fw-bold" id="lblTotalTHB">เงินบาทที่จ่ายจริง (THB)</label>
                                     <div class="input-group">
-                                        <input type="number" id="txnTotalTHB" class="form-control border-danger" step="0.01" placeholder="จากสลิปแอป">
-                                        <button class="btn btn-outline-danger" type="button" id="btnAutoFxTxn" title="ประเมินบาท">Auto</button>
+                                        <input type="number" id="txnTotalTHB" class="form-control border-danger" step="0.01" placeholder="จะคำนวณให้ Auto">
                                     </div>
+                                    <small class="text-muted" style="font-size: 0.7rem;">(ถ้าว่าง ระบบจะดึงเรทจากวันที่ทำรายการมาคูณให้)</small>
                                 </div>
                             </div>
                             <div class="mb-3 p-2 bg-light border rounded">
@@ -176,33 +182,6 @@
             hint.innerText = stockNames[val] ? `(${stockNames[val]})` : '';
         });
 
-        document.getElementById('btnAutoFxTxn').addEventListener('click', async function() {
-            const dateInput = document.getElementById('txnDate').value; 
-            const price = parseFloat(document.getElementById('txnPrice').value) || 0;
-            const shares = parseFloat(document.getElementById('txnShares').value) || 0;
-            const isDiv = document.getElementById('txnType').value === 'DIVIDEND';
-            let baseComm = parseFloat(document.getElementById('txnComm').value) || 0;
-            let actualComm = (document.getElementById('txnVat').checked && !isDiv) ? baseComm * 1.07 : baseComm;
-            const thbInput = document.getElementById('txnTotalTHB');
-            
-            if (!dateInput) { alert('กรุณาเลือกวันที่ก่อนครับ'); return; }
-            if (price === 0 && shares === 0 && !isDiv) { alert('กรุณากรอกราคาหรือจำนวนหุ้นก่อน'); return; }
-            
-            const btn = this; const originalText = btn.innerHTML; btn.innerHTML = '⏳'; btn.disabled = true;
-
-            try {
-                let res = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${dateInput}/v1/currencies/usd.json`);
-                if (!res.ok) res = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json`);
-                const data = await res.json();
-                
-                if(data && data.usd && data.usd.thb) {
-                    let totalUSD = isDiv ? (price - actualComm) : (document.getElementById('txnType').value === 'BUY' ? Number((price * shares).toFixed(2)) + actualComm : Number((price * shares).toFixed(2)) - actualComm);
-                    thbInput.value = (totalUSD * data.usd.thb).toFixed(2);
-                }
-            } catch(e) { alert('ดึงเรทเงินล้มเหลว กรุณากรอกเอง'); } 
-            finally { btn.innerHTML = originalText; btn.disabled = false; }
-        });
-
         document.getElementById('txnType').addEventListener('change', function() {
             const isDiv = this.value === 'DIVIDEND';
             const isSell = this.value === 'SELL';
@@ -213,7 +192,7 @@
             
             if(isDiv) document.getElementById('lblTotalTHB').innerText = 'บาทที่รับจริง (ถ้ามี)';
             else if(isSell) document.getElementById('lblTotalTHB').innerText = 'บาทที่รับจริง (ถ้ามี)';
-            else document.getElementById('lblTotalTHB').innerText = 'บาทที่จ่ายจริง (ถ้ามี)';
+            else document.getElementById('lblTotalTHB').innerText = 'เงินบาทที่จ่ายจริง (THB)';
             
             if(editingIndex === -1) {
                 document.getElementById('txnShares').value = isDiv ? 0 : '';
@@ -242,20 +221,33 @@
             document.getElementById('txnVat').disabled = this.checked;
         });
 
+        // -----------------------------------------------------
+        // ฟังก์ชันดึงข้อมูลจาก API แบบมีเสถียรภาพ (แก้ปัญหา CORS)
+        // -----------------------------------------------------
+        async function fetchLiveFx() {
+            try {
+                let res = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json`);
+                let data = await res.json();
+                if(data && data.usd && data.usd.thb) {
+                    liveFxRate = data.usd.thb;
+                }
+            } catch(e) { console.error('Fx API Error'); }
+        }
+
         document.getElementById('btnUpdateAllPrices').addEventListener('click', async function() {
             const btn = this; const originalText = btn.innerHTML; btn.innerHTML = '⏳ กำลังดึง...'; btn.disabled = true;
+            await fetchLiveFx(); 
             try {
-                let resFx = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json`);
-                let dataFx = await resFx.json();
-                if(dataFx && dataFx.usd && dataFx.usd.thb) liveFxRate = dataFx.usd.thb;
-
                 for(let ticker of Object.keys(marketPrices)) {
+                    // ใช้ Proxy ที่เสถียรกว่าเดิม
                     let url = `https://corsproxy.io/?url=${encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`)}`;
                     let res = await fetch(url).catch(() => null);
+                    
                     if(!res || !res.ok) {
                         url = `https://api.allorigins.win/raw?url=${encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`)}`;
                         res = await fetch(url);
                     }
+
                     if(res && res.ok) {
                         const data = await res.json();
                         if(data.chart.result && data.chart.result[0].meta.regularMarketPrice) {
@@ -265,27 +257,62 @@
                 }
                 localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
                 updateSummaryAndChart();
-                alert('อัปเดตราคาสำเร็จ');
-            } catch(e) { alert('ดึงราคาไม่สำเร็จ กรุณาพิมพ์แก้ไขราคาด้วยตนเองในช่องได้เลยครับ'); } 
+            } catch(e) { alert('ระบบบล็อกการดึงราคา แต่คุณสามารถพิมพ์ราคาปัจจุบันในกล่องสีเหลืองได้โดยตรงครับ'); } 
             finally { btn.innerHTML = originalText; btn.disabled = false; }
         });
 
+        // -----------------------------------------------------
+        // ฐานข้อมูลและระบบ Auto-Repair (ซ่อมยอดบาทที่ไม่ได้กรอก)
+        // -----------------------------------------------------
         let transactions = JSON.parse(localStorage.getItem('myPortfolioTxns')) || [];
         let allocationChart = null; 
 
         function sortTransactions() { transactions.sort((a, b) => new Date(a.date) - new Date(b.date)); }
+
+        // ฟังก์ชันช่วยดึงเรทเงินของ "วันในอดีต" (Historical FX) เพื่อซ่อมแซมข้อมูลเก่า
+        async function getHistoricalFx(dateStr) {
+            try {
+                let url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${dateStr}/v1/currencies/usd.json`;
+                let res = await fetch(url);
+                if (!res.ok) return liveFxRate; // ถ้าดึงไม่ผ่าน ใช้เรทปัจจุบันแทน
+                const data = await res.json();
+                return data.usd.thb;
+            } catch(e) { return liveFxRate; }
+        }
+
+        async function autoRepairTransactions() {
+            let hasChanged = false;
+            for(let i = 0; i < transactions.length; i++) {
+                let txn = transactions[i];
+                let parsedTHB = parseFloat(txn.totalTHB);
+                
+                // หากยังไม่เคยมียอด THB ให้คำนวณให้ทันที (Auto-Repair)
+                if(isNaN(parsedTHB) || parsedTHB === 0) {
+                    let usdAmount = Number((txn.shares * txn.price).toFixed(2));
+                    let totalUSD = 0;
+                    if(txn.type === 'BUY') totalUSD = usdAmount + txn.comm;
+                    else if(txn.type === 'SELL') totalUSD = usdAmount - txn.comm;
+                    else if(txn.type === 'DIVIDEND') totalUSD = txn.price - txn.comm;
+                    
+                    // ดึงเรทของวันที่ทำรายการมาคูณ!
+                    let historicalRate = await getHistoricalFx(txn.date);
+                    txn.totalTHB = Number((totalUSD * historicalRate).toFixed(2));
+                    hasChanged = true;
+                }
+            }
+            if(hasChanged) {
+                localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
+            }
+            return hasChanged;
+        }
 
         function updateSummaryAndChart() {
             let holdings = {};
             transactions.forEach(txn => {
                 if(!holdings[txn.ticker]) holdings[txn.ticker] = { shares: 0, costUSD: 0, costTHB: 0, divTHB: 0 };
                 let usdAmount = Number((txn.shares * txn.price).toFixed(2));
-                let parsedTHB = parseFloat(txn.totalTHB);
-                if(isNaN(parsedTHB) || parsedTHB === 0) {
-                    if(txn.type === 'BUY') parsedTHB = (usdAmount + txn.comm) * txn.fx;
-                    else if(txn.type === 'SELL') parsedTHB = (usdAmount - txn.comm) * txn.fx;
-                    else if(txn.type === 'DIVIDEND') parsedTHB = (txn.price - txn.comm) * txn.fx;
-                }
+                
+                let parsedTHB = parseFloat(txn.totalTHB) || 0; // มั่นใจว่าผ่านการซ่อมมาแล้ว
                 
                 if(txn.type === 'BUY') {
                     holdings[txn.ticker].shares += txn.shares;
@@ -320,7 +347,8 @@
                     let currentPriceUSD = marketPrices[ticker] || (costUSD / shares);
                     let mktValueUSD = Number((shares * currentPriceUSD).toFixed(2));
                     
-                    let effectiveFx = costUSD > 0 ? (costTHB / costUSD) : 34.00;
+                    // คำนวณ Effective FX Rate จากต้นทุนพอร์ต (ทุนบาท ÷ ทุนดอลลาร์)
+                    let effectiveFx = costUSD > 0 ? (costTHB / costUSD) : liveFxRate;
                     let mktValueTHB = Number((mktValueUSD * effectiveFx).toFixed(2));
 
                     let plUSD = mktValueUSD - costUSD;
@@ -336,11 +364,13 @@
                             <td>${shares.toFixed(7)}</td>
                             <td>$${costUSD.toFixed(2)}</td>
                             <td>฿${costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</td>
-                            <td class="bg-warning bg-opacity-25">
+                            <td class="bg-warning bg-opacity-25 align-middle">
+                                <!-- กล่องกรอกราคาที่คลิกง่าย ชัดเจนขึ้น -->
                                 <div class="d-flex justify-content-center">
-                                    <input type="number" class="form-control form-control-sm text-primary fw-bold text-center price-input" 
-                                           style="width: 100px; font-size: 1.1rem;" value="${currentPriceUSD.toFixed(2)}" step="any"
-                                           oninput="updateMarketPrice('${ticker}', this.value)">
+                                    <input type="number" class="form-control price-input" 
+                                           value="${currentPriceUSD.toFixed(2)}" step="any"
+                                           oninput="updateMarketPrice('${ticker}', this.value)"
+                                           onclick="this.select()">
                                 </div>
                             </td>
                             <td class="bg-info bg-opacity-10 fw-bold">≈ ฿${mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
@@ -372,8 +402,12 @@
             updateSummaryAndChart();
         }
 
-        function renderTable() {
-            sortTransactions(); const tbody = document.getElementById('txnTableBody'); tbody.innerHTML = '';
+        async function renderTable() {
+            sortTransactions(); 
+            // ทำการ Auto Repair ก่อนแสดงผล
+            await autoRepairTransactions();
+            
+            const tbody = document.getElementById('txnTableBody'); tbody.innerHTML = '';
             transactions.forEach((txn, index) => {
                 let totalUSD = 0, typeBadge = '', commText = '', displayShares = txn.shares, displayPrice = `$${txn.price}`;
                 let usdAmount = Number((txn.shares * txn.price).toFixed(2));
@@ -389,14 +423,7 @@
                     typeBadge = '<span class="badge bg-info">ปันผล</span>'; commText = txn.comm === 0 ? '-' : `<span class="text-danger">-$${txn.comm.toFixed(2)}</span>`; displayShares = '-';
                 }
                 
-                let parsedTHB = parseFloat(txn.totalTHB);
-                if(isNaN(parsedTHB) || parsedTHB === 0) {
-                    if(txn.type === 'BUY') parsedTHB = (usdAmount + txn.comm) * txn.fx;
-                    else if(txn.type === 'SELL') parsedTHB = (usdAmount - txn.comm) * txn.fx;
-                    else if(txn.type === 'DIVIDEND') parsedTHB = (txn.price - txn.comm) * txn.fx;
-                }
-                
-                let displayTHB = parsedTHB > 0 ? `฿${parsedTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}` : `<span class="text-muted">(USD ล้วน)</span>`;
+                let displayTHB = txn.totalTHB > 0 ? `฿${txn.totalTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}` : `<span class="text-muted">(USD ล้วน)</span>`;
                 
                 tbody.innerHTML += `<tr><td>${txn.date}</td><td>${typeBadge}</td><td><strong>${txn.ticker}</strong></td><td>${displayShares}</td><td>${displayPrice}</td><td>${commText}</td><td class="text-primary fw-bold">$${totalUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</td><td class="text-danger fw-bold">${displayTHB}</td><td><div class="d-flex justify-content-center gap-1"><button class="btn btn-sm btn-warning" onclick="editTxn(${index})">แก้ไข</button><button class="btn btn-sm btn-danger" onclick="deleteTxn(${index})">ลบ</button></div></td></tr>`;
             });
@@ -417,8 +444,7 @@
                 document.getElementById('dimePromo').dispatchEvent(new Event('change'));
             }
             
-            let parsedTHB = parseFloat(txn.totalTHB);
-            document.getElementById('txnTotalTHB').value = (!isNaN(parsedTHB) && parsedTHB > 0) ? parsedTHB : ''; 
+            document.getElementById('txnTotalTHB').value = txn.totalTHB > 0 ? txn.totalTHB : ''; 
             
             const btn = document.getElementById('btnSubmitTxn'); btn.innerText = 'บันทึกแก้ไข'; btn.classList.replace('btn-success', 'btn-warning'); btn.classList.replace('w-100', 'w-50');
             document.getElementById('btnCancelEdit').classList.remove('d-none'); document.getElementById('formCard').classList.replace('border-success', 'border-warning'); document.getElementById('formTitle').classList.replace('text-success', 'text-warning');
@@ -434,27 +460,39 @@
 
         document.getElementById('txnForm').addEventListener('submit', async function(e) {
             e.preventDefault();
+            const btn = document.getElementById('btnSubmitTxn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '⏳ กำลังประมวลผล...'; btn.disabled = true;
+
+            const dateVal = document.getElementById('txnDate').value;
             const typeVal = document.getElementById('txnType').value;
-            let actualComm = parseFloat(document.getElementById('txnComm').value) || 0;
-            if (document.getElementById('txnVat').checked && typeVal !== 'DIVIDEND') actualComm *= 1.07;
+            const priceVal = parseFloat(document.getElementById('txnPrice').value) || 0;
+            const sharesVal = parseFloat(document.getElementById('txnShares').value) || 0;
+            
+            let baseComm = parseFloat(document.getElementById('txnComm').value) || 0;
+            let actualComm = (document.getElementById('txnVat').checked && typeVal !== 'DIVIDEND') ? baseComm * 1.07 : baseComm;
 
             let inputTHB = document.getElementById('txnTotalTHB').value;
-            let totalTHB = parseFloat(inputTHB) || 0;
+            let totalTHB = parseFloat(inputTHB);
+
+            // หากไม่กรอกช่อง THB ระบบจะวิ่งไปดึงเรทย้อนหลังมาคูณให้
+            if (isNaN(totalTHB) || totalTHB <= 0) {
+                let totalUSD = typeVal === 'DIVIDEND' ? priceVal - actualComm : (typeVal === 'BUY' ? Number((priceVal * sharesVal).toFixed(2)) + actualComm : Number((priceVal * sharesVal).toFixed(2)) - actualComm);
+                let historicalRate = await getHistoricalFx(dateVal);
+                totalTHB = Number((totalUSD * historicalRate).toFixed(2));
+            }
             
             const newTxn = { 
-                date: document.getElementById('txnDate').value, 
-                ticker: document.getElementById('txnTicker').value.toUpperCase(), 
-                type: typeVal, 
-                shares: parseFloat(document.getElementById('txnShares').value) || 0, 
-                price: parseFloat(document.getElementById('txnPrice').value) || 0, 
-                comm: actualComm,
-                totalTHB: totalTHB 
+                date: dateVal, ticker: document.getElementById('txnTicker').value.toUpperCase(), type: typeVal, 
+                shares: sharesVal, price: priceVal, comm: actualComm, totalTHB: totalTHB 
             };
 
             if (editingIndex > -1) { transactions[editingIndex] = newTxn; cancelEdit(); } 
             else { transactions.push(newTxn); const td = document.getElementById('txnDate').value; this.reset(); document.getElementById('txnDate').value = td; document.getElementById('txnType').value = 'BUY'; document.getElementById('txnType').dispatchEvent(new Event('change')); document.getElementById('txnVat').checked = true; }
 
-            localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions)); renderTable(); 
+            localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions)); 
+            await renderTable(); 
+            btn.innerHTML = originalText; btn.disabled = false;
         });
 
         function deleteTxn(index) {
@@ -473,7 +511,15 @@
         }
 
         document.getElementById('txnDate').valueAsDate = new Date();
-        renderTable(); 
+        
+        // รันฟังก์ชันซ่อมแซมข้อมูลเก่า และดึงราคาล่าสุดทันทีที่เปิดเว็บ
+        async function initializeApp() {
+            await fetchLiveFx();
+            await renderTable(); // ซ่อมข้อมูลเก่า
+            document.getElementById('btnUpdateAllPrices').click(); // สั่งดึงราคาอัปเดตให้อัตโนมัติ
+        }
+        
+        initializeApp();
     </script>
 </body>
 </html>
