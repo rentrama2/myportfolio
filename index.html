@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V31)</title>
+    <title>My Portfolio Pro Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -24,10 +24,7 @@
         .group-badge { cursor: pointer; transition: all 0.2s; background-color: #e9ecef; color: #495057; border-radius: 20px; padding: 4px 10px; font-size: 0.75rem; font-weight: 600; }
         .group-badge:hover { background-color: #0984e3; color: white; }
         
-        /* สไตล์สำหรับ Scroll แถบ Filter */
-        .filter-scroll {
-            display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: thin;
-        }
+        .filter-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: thin; }
         .filter-scroll::-webkit-scrollbar { height: 4px; }
         .filter-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
     </style>
@@ -39,15 +36,9 @@
         <!-- Header -->
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="fw-bold" style="color: #2d3436;">My Portfolio</h2>
-            <div class="d-flex align-items-center gap-3">
-                <span class="text-muted fw-bold" style="font-size: 0.9rem;">
-                    เรทเงินแอป: <input type="number" id="liveFxInput" class="fx-input" value="33.229" step="0.00001"> THB
-                </span>
-                <button class="btn btn-dark" style="border-radius: 8px;" id="btnUpdateAllPrices">ดึงราคาล่าสุด</button>
-            </div>
         </div>
 
-        <!-- 4 Key Metrics (Top Row) -->
+        <!-- 4 Key Metrics -->
         <div class="row g-3 mb-2">
             <div class="col-md-3 col-6">
                 <div class="card h-100 p-3">
@@ -80,19 +71,18 @@
         </div>
 
         <div class="row">
-            <!-- Asset Allocation Chart -->
+            <!-- Chart -->
             <div class="col-md-4">
                 <div class="card h-100">
                     <div class="card-header-pro">สัดส่วนการลงทุน (THB)</div>
                     <div class="card-body text-center d-flex flex-column justify-content-center align-items-center">
                         <p id="noDataText" class="text-muted mt-5" style="display: none;">ยังไม่มีข้อมูล</p>
                         <div style="max-width: 250px; width: 100%;"><canvas id="allocationChart"></canvas></div>
-                        <small class="text-muted mt-3">แบ่งตามกลุ่มพอร์ต (คลิกที่ป้ายในตารางเพื่อเปลี่ยนกลุ่ม)</small>
                     </div>
                 </div>
             </div>
 
-            <!-- Pre-buying (Simplified) & Cash Actions -->
+            <!-- Form -->
             <div class="col-md-8">
                 <div class="row h-100">
                     <div class="col-12 mb-3">
@@ -131,7 +121,7 @@
                                         <div class="col-md-6 col-12">
                                             <label class="form-label text-danger fw-bold" id="lblTotalTHB" style="font-size:0.8rem;">เงินบาทที่จ่ายจริง (THB) - ข้ามได้</label>
                                             <div class="input-group input-group-sm">
-                                                <input type="number" id="txnTotalTHB" class="form-control border-danger bg-danger bg-opacity-10" step="0.01" placeholder="ถ้ายอดดอลลาร์ล้วน ให้เว้นว่างไว้">
+                                                <input type="number" id="txnTotalTHB" class="form-control border-danger bg-danger bg-opacity-10" step="0.01" placeholder="เว้นว่างได้">
                                                 <button type="submit" id="btnSubmitTxn" class="btn btn-dark w-25">บันทึก</button>
                                             </div>
                                         </div>
@@ -147,7 +137,16 @@
         <div class="row mb-4">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-header-pro">รายการลงทุนของฉัน (Holdings)</div>
+                    <!-- เรทเงิน -->
+                    <div class="card-header-pro d-flex justify-content-between align-items-center flex-wrap">
+                        <span>รายการลงทุนของฉัน (Holdings)</span>
+                        <div class="d-flex align-items-center gap-3 mt-2 mt-md-0">
+                            <span class="text-muted fw-bold" style="font-size: 0.9rem;">
+                                เรทเงินแอป: <input type="number" id="liveFxInput" class="fx-input" value="33.2291" step="0.00001"> THB
+                            </span>
+                            <button class="btn btn-dark btn-sm" style="border-radius: 8px;" id="btnUpdateAllPrices">ดึงราคาล่าสุด</button>
+                        </div>
+                    </div>
                     <div class="card-body p-0">
                         <div class="table-responsive">
                             <table class="table table-hover text-center align-middle m-0" style="font-size: 0.95rem;">
@@ -178,11 +177,8 @@
                         <button class="btn btn-sm btn-outline-danger" onclick="clearAllData()">ล้างข้อมูลทั้งหมด</button>
                     </div>
                     
-                    <!-- ส่วน Filter รายพอร์ต / รายหุ้น -->
                     <div class="p-3 border-bottom" style="background-color: #fdfdfd;">
-                        <div id="filterContainer" class="filter-scroll">
-                            <!-- ปุ่ม Filter จะถูกวาดที่นี่ด้วย Javascript -->
-                        </div>
+                        <div id="filterContainer" class="filter-scroll"></div>
                     </div>
 
                     <div class="card-body p-0">
@@ -212,8 +208,11 @@
         let marketPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
         
         let liveFxRate = parseFloat(localStorage.getItem('myLiveFxRate'));
-        if(isNaN(liveFxRate)) liveFxRate = 33.2290;
+        if(isNaN(liveFxRate)) liveFxRate = 33.2291;
         document.getElementById('liveFxInput').value = liveFxRate;
+
+        // ดึงตัวแปรที่ใช้จำ "ส่วนต่างที่โดนจูน"
+        let tunedDiffs = JSON.parse(localStorage.getItem('myTunedDiffs')) || {};
 
         let portfolioMapping = JSON.parse(localStorage.getItem('myPortfolioGroups')) || {
             'VTI': 'ETF', 'VXUS': 'ETF', 'VOO': 'ETF', 'SCHD': 'ETF', 'QQQ': 'ETF', 'QQQM': 'ETF',
@@ -226,8 +225,7 @@
             'AAPL': 'Apple Inc', 'MSFT': 'Microsoft Corp', 'GOOGL': 'Alphabet Inc', 'VXUS': 'Vanguard Total Intl'
         };
 
-        // สถานะการกรองข้อมูล (Filter State)
-        let currentFilterType = 'ALL'; // 'ALL', 'GROUP', 'TICKER'
+        let currentFilterType = 'ALL';
         let currentFilterValue = '';
 
         document.getElementById('txnType').addEventListener('change', function() {
@@ -340,8 +338,11 @@
             return hasChanged;
         }
 
+        // ==========================================
+        // ระบบ Magic Sync & Undo
+        // ==========================================
         window.syncCostTHB = function(ticker, currentSystemTHB) {
-            let target = prompt(`(หุ้น ${ticker})\nกรุณากรอก "ทุนรวม (THB)" ที่แอปซ่อนไว้\n(วิธีหา: เอามูลค่าล่าสุด ลบด้วย ผลตอบแทนรวม)\nเช่น 5777.54 - (-48.34) = 5825.88`);
+            let target = prompt(`(หุ้น ${ticker})\nกรุณากรอก "ทุนรวม (THB)" ที่แอปซ่อนไว้\n(วิธีหา: เอามูลค่าล่าสุด ลบด้วย ผลตอบแทนรวม)`);
             if(!target) return;
             let targetVal = parseFloat(target.replace(/,/g, '')); 
             if(isNaN(targetVal)) return;
@@ -353,9 +354,33 @@
                 if(transactions[i].ticker === ticker && transactions[i].type === 'BUY') { lastIndex = i; break; }
             }
             if(lastIndex !== -1) {
+                // จำเอาไว้ว่าเคยจูนไปเท่าไหร่ เพื่อให้กด Undo ได้
+                tunedDiffs[ticker] = (tunedDiffs[ticker] || 0) + diff;
+                localStorage.setItem('myTunedDiffs', JSON.stringify(tunedDiffs));
+
                 transactions[lastIndex].totalTHB = (transactions[lastIndex].totalTHB || 0) + diff;
                 localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
                 renderTable(); 
+            }
+        };
+
+        window.undoSyncTHB = function(ticker) {
+            if(!confirm(`ต้องการลบส่วนต่างของหุ้น ${ticker} ที่เคยปรับจูนแอปไปแล้วหรือไม่?`)) return;
+            
+            let diffToUndo = tunedDiffs[ticker] || 0;
+            if(diffToUndo === 0) return;
+
+            let lastIndex = -1;
+            for(let i = transactions.length - 1; i >= 0; i--) {
+                if(transactions[i].ticker === ticker && transactions[i].type === 'BUY') { lastIndex = i; break; }
+            }
+            if(lastIndex !== -1) {
+                transactions[lastIndex].totalTHB = (transactions[lastIndex].totalTHB || 0) - diffToUndo;
+                delete tunedDiffs[ticker];
+                localStorage.setItem('myTunedDiffs', JSON.stringify(tunedDiffs));
+                localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
+                renderTable();
+                alert(`คืนค่าเดิมเรียบร้อยแล้วครับ!`);
             }
         };
 
@@ -366,7 +391,7 @@
                 portfolioMapping[ticker] = newGroup.trim();
                 localStorage.setItem('myPortfolioGroups', JSON.stringify(portfolioMapping));
                 updateSummaryAndChart();
-                renderFilters(); // อัปเดตปุ่ม Filter ใหม่
+                renderFilters();
             }
         };
 
@@ -378,7 +403,6 @@
             transactions.forEach(txn => {
                 let parsedTHB = parseFloat(txn.totalTHB) || 0; 
                 
-                // คำนวณ Cash Balance
                 if(txn.type === 'DEPOSIT') topMetrics.cash += parsedTHB;
                 else if(txn.type === 'WITHDRAW') topMetrics.cash -= parsedTHB;
                 else if(txn.type === 'BUY') topMetrics.cash -= parsedTHB;
@@ -433,6 +457,9 @@
                     let plClass = plUSD >= 0 ? 'text-profit' : 'text-loss';
                     let sign = plUSD >= 0 ? '+' : '';
 
+                    // แสดงปุ่ม Undo ถ้าหุ้นตัวนี้เคยถูกจูน
+                    let undoBtn = tunedDiffs[ticker] ? `<button class="btn btn-sm btn-outline-secondary mt-1 py-0 px-2 ms-1" style="font-size: 0.7rem;" onclick="undoSyncTHB('${ticker}')" title="คืนค่าที่ระบบคำนวณให้">↩️</button>` : '';
+
                     summaryBody.innerHTML += `
                         <tr>
                             <td class="border-end-0">
@@ -447,6 +474,7 @@
                             <td class="border-0">
                                 ฿${costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}<br>
                                 <button class="btn btn-sm btn-outline-warning mt-1 py-0 px-2" style="font-size: 0.7rem;" onclick="syncCostTHB('${ticker}', ${costTHB})">🪄 จูนทุนแอป</button>
+                                ${undoBtn}
                             </td>
                             <td class="bg-warning bg-opacity-10 align-middle border-0">
                                 <div class="d-flex justify-content-center">
@@ -509,28 +537,17 @@
             }
         }
 
-        // ==========================================
-        // ระบบ Filter กรองข้อมูลตารางประวัติ (ใหม่ V31)
-        // ==========================================
         window.setFilter = function(type, value) {
-            currentFilterType = type;
-            currentFilterValue = value;
-            renderTable();
+            currentFilterType = type; currentFilterValue = value; renderTable();
         };
 
         function renderFilters() {
             const container = document.getElementById('filterContainer');
-            let groups = new Set();
-            let tickers = new Set();
-            let hasCash = false;
+            let groups = new Set(); let tickers = new Set(); let hasCash = false;
 
             transactions.forEach(t => {
-                if(t.type === 'DEPOSIT' || t.type === 'WITHDRAW') {
-                    hasCash = true;
-                } else {
-                    tickers.add(t.ticker);
-                    groups.add(portfolioMapping[t.ticker] || 'Stock');
-                }
+                if(t.type === 'DEPOSIT' || t.type === 'WITHDRAW') hasCash = true;
+                else { tickers.add(t.ticker); groups.add(portfolioMapping[t.ticker] || 'Stock'); }
             });
 
             let html = `<button class="btn btn-sm ${currentFilterType === 'ALL' ? 'btn-dark' : 'btn-outline-secondary'} rounded-pill px-3" onclick="setFilter('ALL', '')">ทั้งหมด</button>`;
@@ -545,12 +562,12 @@
                 html += `<button class="btn btn-sm ${active} rounded-pill px-3" onclick="setFilter('GROUP', '${g}')">${g}</button>`;
             });
 
-            let ddActive = currentFilterType === 'TICKER' ? 'bg-dark text-white' : 'btn-outline-secondary';
+            let ddActive = currentFilterType === 'TICKER' ? 'btn-dark text-white' : 'btn-outline-secondary';
             html += `<select class="form-select form-select-sm rounded-pill d-inline-block w-auto ms-2 ${ddActive}" style="min-width: 130px; border-color: #6c757d;" onchange="if(this.value) setFilter('TICKER', this.value); else setFilter('ALL', '')">
-                <option value="" class="text-dark">-- กรองรายหุ้น --</option>`;
+                <option value="" class="bg-white text-dark">-- กรองรายหุ้น --</option>`;
             Array.from(tickers).sort().forEach(tk => {
                 let sel = (currentFilterType === 'TICKER' && currentFilterValue === tk) ? 'selected' : '';
-                html += `<option value="${tk}" class="text-dark" ${sel}>${tk}</option>`;
+                html += `<option value="${tk}" class="bg-white text-dark" ${sel}>${tk}</option>`;
             });
             html += `</select>`;
 
@@ -560,12 +577,10 @@
         async function renderTable() {
             sortTransactions(); 
             await autoRepairTransactions();
-            
-            renderFilters(); // อัปเดตปุ่มกรอง
+            renderFilters(); 
 
             const tbody = document.getElementById('txnTableBody'); tbody.innerHTML = '';
             
-            // ใช้ Filter กรองข้อมูล
             let filteredTxns = transactions.filter(txn => {
                 if (currentFilterType === 'ALL') return true;
                 if (currentFilterType === 'TICKER') return txn.ticker === currentFilterValue;
@@ -577,9 +592,7 @@
             });
 
             filteredTxns.forEach((txn) => {
-                // หา Index ดั้งเดิม เพื่อให้ปุ่มลบ/แก้ไขทำงานถูกตัวเวลาที่ถูกกรอง
                 let originalIndex = transactions.indexOf(txn);
-                
                 let totalUSD = 0, typeBadge = '', commText = '', displayShares = txn.shares, displayPrice = `$${txn.price}`;
                 let usdAmount = Number((txn.shares * txn.price).toFixed(2));
                 let displayTHB = txn.totalTHB > 0 ? `฿${txn.totalTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}` : `<span class="text-muted">(USD ล้วน)</span>`;
