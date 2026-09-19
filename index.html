@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My US Stock Portfolio (V27 - True Sync)</title>
+    <title>My US Stock Portfolio (Dime! Clone)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .text-profit { color: #198754; font-weight: bold; }
@@ -38,7 +38,7 @@
 <body class="bg-light p-4">
 
     <div class="container">
-        <h3 class="mb-4">ระบบจัดการพอร์ตลงทุน (ซิงก์ตรงแอป 100%)</h3>
+        <h3 class="mb-4">ระบบจัดการพอร์ตลงทุน (เทียบแอป 100%)</h3>
 
         <div class="row">
             <div class="col-md-4 mb-4">
@@ -77,11 +77,10 @@
                 <div class="card shadow-sm border-primary">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
-                            <h5 class="card-title text-primary mb-0">สรุปพอร์ตโฟลิโอ</h5>
+                            <h5 class="card-title text-primary mb-0">การลงทุนของฉัน (จำลองแอป)</h5>
                             <div class="d-flex align-items-center gap-3 mt-2 mt-md-0">
-                                <!-- กล่องเรทเงินแอป จะแสดงผลตรงนี้ -->
                                 <span class="badge bg-light text-dark border p-2 fs-6">
-                                    เรทเงินแอป: <input type="number" id="liveFxInput" class="fx-input" value="33.23" step="0.0001"> 
+                                    เรทเงินแอป: <input type="number" id="liveFxInput" class="fx-input" value="33.229" step="0.00001"> 
                                 </span>
                                 <button class="btn btn-sm btn-outline-success" id="btnUpdateAllPrices">🔄 ดึงราคาล่าสุด</button>
                             </div>
@@ -92,11 +91,11 @@
                                     <tr>
                                         <th>หุ้น</th>
                                         <th>จำนวนหุ้น</th>
-                                        <th>ทุนรวม (USD)</th>
-                                        <th>ทุนรวม (THB)</th>
-                                        <th class="bg-warning bg-opacity-25">ราคาปัจจุบัน (USD)<br><small class="text-danger fw-bold">คลิกพิมพ์ > กด Enter</small></th>
-                                        <th class="bg-info bg-opacity-10">มูลค่าปัจจุบัน<br><small>(THB)</small></th>
-                                        <th>ผลตอบแทนรวม<br><small>(เทียบเคียงแอป 100%)</small></th>
+                                        <th>ราคาต้นทุน<br><small>(เฉลี่ยต่อหุ้น USD)</small></th>
+                                        <th>ทุนรวม (THB)<br><small>สำหรับหักลบกำไร</small></th>
+                                        <th class="bg-warning bg-opacity-25">ราคาปัจจุบัน (USD)<br><small class="text-danger fw-bold">คลิกแก้ได้</small></th>
+                                        <th class="bg-info bg-opacity-10">มูลค่าล่าสุด<br><small>(USD / THB)</small></th>
+                                        <th>ผลตอบแทนรวม<br><small>(% / USD / THB)</small></th>
                                     </tr>
                                 </thead>
                                 <tbody id="summaryTableBody"></tbody>
@@ -130,7 +129,7 @@
                                 <div class="col-6"><label class="form-label" id="lblPrice">ราคา (USD)</label><input type="number" id="txnPrice" class="form-control" step="0.01" required></div>
                                 <div class="col-6">
                                     <label class="form-label text-danger fw-bold" id="lblTotalTHB">เงินบาทที่จ่ายจริง (THB)</label>
-                                    <input type="number" id="txnTotalTHB" class="form-control border-danger" step="0.01" placeholder="เว้นไว้ถ้ายอดแอปไม่โชว์">
+                                    <input type="number" id="txnTotalTHB" class="form-control border-danger" step="0.01" placeholder="คำนวณ Auto ได้">
                                 </div>
                             </div>
                             <div class="mb-3 p-2 bg-light border rounded mt-2">
@@ -180,11 +179,9 @@
         let editingIndex = -1; 
         let marketPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
         
-        // ดึงเรทเงินจากความจำ ถ้าไม่มีให้ใช้ 33.23 (เรทปัจจุบันใกล้เคียง)
         let liveFxRate = parseFloat(localStorage.getItem('myLiveFxRate'));
-        if(isNaN(liveFxRate)) liveFxRate = 33.2300;
-        
-        document.getElementById('liveFxInput').value = liveFxRate.toFixed(4);
+        if(isNaN(liveFxRate)) liveFxRate = 33.2290;
+        document.getElementById('liveFxInput').value = liveFxRate;
 
         const stockNames = {
             'VTI': 'Vanguard Total Stock', 'VOO': 'Vanguard S&P 500', 'SCHD': 'Schwab Dividend ETF',
@@ -231,38 +228,26 @@
             document.getElementById('txnVat').disabled = this.checked;
         });
 
-        // Event ตอนกรอกเรทเงิน
         document.getElementById('liveFxInput').addEventListener('change', function() {
-            liveFxRate = parseFloat(this.value) || 33.2300;
+            liveFxRate = parseFloat(this.value) || 33.2290;
             localStorage.setItem('myLiveFxRate', liveFxRate);
             updateSummaryAndChart();
         });
 
         document.getElementById('btnUpdateAllPrices').addEventListener('click', async function() {
             const btn = this; const originalText = btn.innerHTML; btn.innerHTML = '⏳ กำลังดึง...'; btn.disabled = true;
-            
             try {
                 const tickers = Object.keys(marketPrices);
                 for(let ticker of tickers) {
                     let success = false;
                     const encodedUrl = encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`);
-                    
                     try {
                         let res = await fetch(`https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`);
-                        if(res.ok) {
-                            let data = await res.json();
-                            if(data.chart.result) { marketPrices[ticker] = data.chart.result[0].meta.regularMarketPrice; success = true; }
-                        }
+                        if(res.ok) { let data = await res.json(); if(data.chart.result) { marketPrices[ticker] = data.chart.result[0].meta.regularMarketPrice; success = true; } }
                     } catch(e) {}
-
                     if(!success) {
-                        try {
-                            let res = await fetch(`https://api.allorigins.win/raw?url=${encodedUrl}`);
-                            if(res.ok) {
-                                let data = await res.json();
-                                if(data.chart.result) { marketPrices[ticker] = data.chart.result[0].meta.regularMarketPrice; }
-                            }
-                        } catch(e) {}
+                        let res = await fetch(`https://api.allorigins.win/raw?url=${encodedUrl}`);
+                        if(res.ok) { let data = await res.json(); if(data.chart.result) { marketPrices[ticker] = data.chart.result[0].meta.regularMarketPrice; } }
                     }
                 }
                 localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
@@ -280,8 +265,7 @@
             try {
                 let res = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${dateStr}/v1/currencies/usd.json`);
                 if (!res.ok) return liveFxRate; 
-                const data = await res.json();
-                return data.usd.thb;
+                const data = await res.json(); return data.usd.thb;
             } catch(e) { return liveFxRate; }
         }
 
@@ -290,11 +274,9 @@
             for(let i = 0; i < transactions.length; i++) {
                 let txn = transactions[i];
                 let parsedTHB = parseFloat(txn.totalTHB);
-                
                 if(isNaN(parsedTHB) || parsedTHB <= 0) {
                     let usdAmount = Number((txn.shares * txn.price).toFixed(2));
                     let totalUSD = txn.type === 'DIVIDEND' ? (txn.price - txn.comm) : (txn.type === 'BUY' ? usdAmount + txn.comm : usdAmount - txn.comm);
-                    
                     let historicalRate = await getHistoricalFx(txn.date);
                     txn.totalTHB = Number((totalUSD * historicalRate).toFixed(2));
                     hasChanged = true;
@@ -305,28 +287,21 @@
         }
 
         window.syncCostTHB = function(ticker, currentSystemTHB) {
-            let target = prompt(`(หุ้น ${ticker}) ทุนรวม (THB) ในระบบคือ ฿${currentSystemTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}\n\nกรุณากรอก "ทุนรวม (THB)" จากแอป Dime!\n(ถ้าในแอปไม่มีช่องทุนรวม ให้เอา มูลค่าล่าสุด ลบด้วย ผลตอบแทน):`);
+            let target = prompt(`(หุ้น ${ticker})\nกรุณากรอก "ทุนรวม (THB)" ที่แอปซ่อนไว้\n(วิธีหา: เอามูลค่าล่าสุด ลบด้วย ผลตอบแทนรวม)\nเช่น 5777.54 - (-48.34) = 5825.88`);
             if(!target) return;
-            
             let targetVal = parseFloat(target.replace(/,/g, '')); 
-            if(isNaN(targetVal)) { alert('กรุณากรอกเป็นตัวเลขครับ'); return; }
-            
+            if(isNaN(targetVal)) return;
             let diff = targetVal - currentSystemTHB;
-            if(Math.abs(diff) < 0.01) { alert('ตัวเลขทุนรวมตรงกับแอปอยู่แล้วครับ!'); return; }
+            if(Math.abs(diff) < 0.01) return;
             
             let lastIndex = -1;
             for(let i = transactions.length - 1; i >= 0; i--) {
-                if(transactions[i].ticker === ticker) {
-                    lastIndex = i; break;
-                }
+                if(transactions[i].ticker === ticker) { lastIndex = i; break; }
             }
-            
             if(lastIndex !== -1) {
                 transactions[lastIndex].totalTHB = (transactions[lastIndex].totalTHB || 0) + diff;
                 localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
                 renderTable(); 
-            } else {
-                alert('ไม่พบประวัติการทำรายการ');
             }
         };
 
@@ -365,10 +340,9 @@
                     
                     labels.push(ticker); dataValues.push(costTHB); 
                     
-                    let currentPriceUSD = marketPrices[ticker] || (costUSD / shares);
+                    let avgCostUSD = costUSD / shares; // ตรงนี้คือ ราคาต้นทุนเฉลี่ย
+                    let currentPriceUSD = marketPrices[ticker] || avgCostUSD;
                     let mktValueUSD = Number((shares * currentPriceUSD).toFixed(2));
-                    
-                    // คำนวณมูลค่าปัจจุบันจาก เรทเงินที่กรอก (Live FX) ล้วนๆ
                     let mktValueTHB = Number((mktValueUSD * liveFxRate).toFixed(2));
 
                     let plUSD = mktValueUSD - costUSD;
@@ -376,16 +350,19 @@
                     let plTHB = mktValueTHB - costTHB;
 
                     let plClass = plUSD >= 0 ? 'text-profit' : 'text-loss';
-                    let sign = plUSD >= 0 ? '+' : '';
+                    let sign = plUSD >= 0 ? '' : ''; // ติดลบมีเครื่องหมายลบอยู่แล้วในตัวแปร
 
                     summaryBody.innerHTML += `
                         <tr>
                             <td><strong>${ticker}</strong> <br><small class="text-muted">${stockNames[ticker] || ''}</small></td>
                             <td>${shares.toFixed(7)}</td>
-                            <td>$${costUSD.toFixed(2)}</td>
+                            <td>
+                                <strong>$${avgCostUSD.toFixed(4)}</strong><br>
+                                <small class="text-muted">(รวม: $${costUSD.toFixed(2)})</small>
+                            </td>
                             <td>
                                 ฿${costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}<br>
-                                <button class="btn btn-sm btn-outline-warning mt-1" style="font-size: 0.7rem; padding: 2px 6px;" onclick="syncCostTHB('${ticker}', ${costTHB})">🪄 ปรับให้ตรงแอป</button>
+                                <button class="btn btn-sm btn-outline-warning mt-1" style="font-size: 0.7rem; padding: 2px 6px;" onclick="syncCostTHB('${ticker}', ${costTHB})">🪄 จูนทุนแอป</button>
                             </td>
                             <td class="bg-warning bg-opacity-25 align-middle">
                                 <div class="d-flex justify-content-center">
@@ -395,11 +372,14 @@
                                            onclick="this.select()">
                                 </div>
                             </td>
-                            <td class="bg-info bg-opacity-10 fw-bold">≈ ฿${mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-                            <td class="${plClass} fs-6" style="line-height: 1.2;">
-                                ${sign}${plPercent.toFixed(2)}%<br>
-                                <small>(${sign}$${Math.abs(plUSD).toFixed(2)})</small><br>
-                                ≈ ${sign}฿${Math.abs(plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                            <td class="bg-info bg-opacity-10 fw-bold">
+                                $${mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}<br>
+                                ≈ ฿${mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                            </td>
+                            <td class="${plClass} fw-bold" style="line-height: 1.3; font-size: 0.95rem;">
+                                ${plPercent > 0 ? '+' : ''}${plPercent.toFixed(2)}%<br>
+                                (${plUSD > 0 ? '+' : ''}$${plUSD.toFixed(2)})<br>
+                                ≈ ${plTHB > 0 ? '+' : ''}฿${plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}
                             </td>
                         </tr>
                     `;
