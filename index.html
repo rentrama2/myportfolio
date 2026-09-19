@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My US Stock Portfolio (Dime! Clone)</title>
+    <title>My US Stock Portfolio (V29 - Portfolio Allocation)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .text-profit { color: #198754; font-weight: bold; }
@@ -33,6 +33,14 @@
             outline: none;
             border-bottom: 2px dashed #dc3545;
         }
+        .group-badge {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .group-badge:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="bg-light p-4">
@@ -44,9 +52,10 @@
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm h-100">
                     <div class="card-body text-center">
-                        <h5 class="card-title">สัดส่วนการลงทุน (THB)</h5>
+                        <h5 class="card-title">สัดส่วนพอร์ตโฟลิโอ (THB)</h5>
                         <p id="noDataText" class="text-muted mt-5" style="display: none;">ยังไม่มีข้อมูล</p>
                         <canvas id="allocationChart"></canvas>
+                        <small class="text-muted mt-2 d-block">รวมสัดส่วนตามกลุ่มที่คุณตั้งไว้</small>
                     </div>
                 </div>
             </div>
@@ -89,7 +98,7 @@
                             <table class="table table-bordered text-center align-middle" style="font-size: 0.95rem;">
                                 <thead class="table-primary">
                                     <tr>
-                                        <th>หุ้น</th>
+                                        <th>หุ้น / กลุ่มพอร์ต</th>
                                         <th>จำนวนหุ้น</th>
                                         <th>ราคาต้นทุน<br><small>(เฉลี่ยต่อหุ้น USD)</small></th>
                                         <th>ทุนรวม (THB)<br><small>สำหรับหักลบกำไร</small></th>
@@ -182,6 +191,20 @@
         let liveFxRate = parseFloat(localStorage.getItem('myLiveFxRate'));
         if(isNaN(liveFxRate)) liveFxRate = 33.2290;
         document.getElementById('liveFxInput').value = liveFxRate;
+
+        // ระบบจัดกลุ่ม Portfolio ใหม่!
+        let portfolioMapping = JSON.parse(localStorage.getItem('myPortfolioGroups')) || {
+            'VTI': 'ETF',
+            'VXUS': 'ETF',
+            'VOO': 'ETF',
+            'SCHD': 'ETF',
+            'QQQ': 'ETF',
+            'QQQM': 'ETF',
+            'NVDA': 'Stock',
+            'AAPL': 'Stock',
+            'MSFT': 'Stock',
+            'GOOGL': 'Stock'
+        };
 
         const stockNames = {
             'VTI': 'Vanguard Total Stock', 'VOO': 'Vanguard S&P 500', 'SCHD': 'Schwab Dividend ETF',
@@ -305,8 +328,21 @@
             }
         };
 
+        // ฟังก์ชันใหม่: ให้ผู้ใช้เปลี่ยนกลุ่มพอร์ตได้เอง
+        window.changeGroup = function(ticker) {
+            let currentGroup = portfolioMapping[ticker] || 'Stock';
+            let newGroup = prompt(`จัดกลุ่มพอร์ตให้ ${ticker}\n(เช่น ETF, Stock, Core Port, Retire Port, Growth):`, currentGroup);
+            if(newGroup !== null && newGroup.trim() !== '') {
+                portfolioMapping[ticker] = newGroup.trim();
+                localStorage.setItem('myPortfolioGroups', JSON.stringify(portfolioMapping));
+                updateSummaryAndChart();
+            }
+        };
+
         function updateSummaryAndChart() {
             let holdings = {};
+            let groupTotals = {}; // สำหรับรวมยอดวาดกราฟ
+
             transactions.forEach(txn => {
                 if(!holdings[txn.ticker]) holdings[txn.ticker] = { shares: 0, costUSD: 0, costTHB: 0 };
                 let usdAmount = Number((txn.shares * txn.price).toFixed(2));
@@ -327,7 +363,6 @@
                 }
             });
 
-            const labels = [], dataValues = [], bgColors = ['#0d6efd', '#198754', '#ffc107', '#dc3545', '#6f42c1', '#fd7e14', '#20c997'];
             const summaryBody = document.getElementById('summaryTableBody');
             summaryBody.innerHTML = ''; let hasData = false;
 
@@ -338,9 +373,12 @@
                     let costUSD = holdings[ticker].costUSD;
                     let costTHB = holdings[ticker].costTHB;
                     
-                    labels.push(ticker); dataValues.push(costTHB); 
+                    // รวมยอดตามกลุ่มเพื่อวาดกราฟโดนัท
+                    let groupName = portfolioMapping[ticker] || 'Stock';
+                    if(!groupTotals[groupName]) groupTotals[groupName] = 0;
+                    groupTotals[groupName] += costTHB; // สัดส่วนตามต้นทุนที่ลงไป
                     
-                    let avgCostUSD = costUSD / shares; // ตรงนี้คือ ราคาต้นทุนเฉลี่ย
+                    let avgCostUSD = costUSD / shares;
                     let currentPriceUSD = marketPrices[ticker] || avgCostUSD;
                     let mktValueUSD = Number((shares * currentPriceUSD).toFixed(2));
                     let mktValueTHB = Number((mktValueUSD * liveFxRate).toFixed(2));
@@ -350,11 +388,16 @@
                     let plTHB = mktValueTHB - costTHB;
 
                     let plClass = plUSD >= 0 ? 'text-profit' : 'text-loss';
-                    let sign = plUSD >= 0 ? '' : ''; // ติดลบมีเครื่องหมายลบอยู่แล้วในตัวแปร
+                    let sign = plUSD >= 0 ? '+' : '';
 
                     summaryBody.innerHTML += `
                         <tr>
-                            <td><strong>${ticker}</strong> <br><small class="text-muted">${stockNames[ticker] || ''}</small></td>
+                            <td>
+                                <strong>${ticker}</strong><br>
+                                <span class="badge bg-secondary group-badge mt-1" onclick="changeGroup('${ticker}')" title="คลิกเพื่อเปลี่ยนกลุ่มพอร์ต">
+                                    📁 ${groupName}
+                                </span>
+                            </td>
                             <td>${shares.toFixed(7)}</td>
                             <td>
                                 <strong>$${avgCostUSD.toFixed(4)}</strong><br>
@@ -391,10 +434,26 @@
             document.getElementById('allocationChart').style.display = hasData ? 'block' : 'none';
 
             const ctx = document.getElementById('allocationChart').getContext('2d');
+            
+            // สร้างสีให้กลุ่มต่างๆ แบบสุ่มแต่สวยงาม
+            const bgColors = ['#0d6efd', '#198754', '#ffc107', '#dc3545', '#6f42c1', '#fd7e14', '#20c997', '#0dcaf0', '#6c757d', '#d63384'];
+            
             if (allocationChart != null) {
-                allocationChart.data.labels = labels; allocationChart.data.datasets[0].data = dataValues; allocationChart.update();
+                allocationChart.data.labels = Object.keys(groupTotals); 
+                allocationChart.data.datasets[0].data = Object.values(groupTotals); 
+                allocationChart.update();
             } else {
-                allocationChart = new Chart(ctx, { type: 'doughnut', data: { labels: labels, datasets: [{ data: dataValues, backgroundColor: bgColors }] }, options: { responsive: true, plugins: { legend: { position: 'bottom' } } } });
+                allocationChart = new Chart(ctx, { 
+                    type: 'doughnut', 
+                    data: { 
+                        labels: Object.keys(groupTotals), 
+                        datasets: [{ data: Object.values(groupTotals), backgroundColor: bgColors }] 
+                    }, 
+                    options: { 
+                        responsive: true, 
+                        plugins: { legend: { position: 'bottom' } } 
+                    } 
+                });
             }
         }
 
