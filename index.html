@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V48)</title>
+    <title>My Portfolio Pro Dashboard (V50)</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -64,18 +65,19 @@
         .page-item.active .page-link { background-color: #111827; border-color: #111827; color: white; }
         .page-item.disabled .page-link { color: #9ca3af; pointer-events: none; }
 
-        /* V48: สไตล์เพิ่มเติมสำหรับ Allocation Progress */
         .alloc-scroll::-webkit-scrollbar { width: 4px; }
         .alloc-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         
-        /* Modal Overlay สำหรับตั้งเป้าหมาย */
         #targetOverlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:9999; justify-content:center; align-items:center; backdrop-filter: blur(2px); }
         .modal-box { background:white; padding:24px; border-radius:16px; width:90%; max-width:400px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        
+        .sim-input { border: 1px solid #e5e7eb; border-radius: 8px; font-weight: bold; background: white; }
+        .sim-input:focus { border-color: #3b82f6; outline: none; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); }
     </style>
 </head>
 <body class="p-3 p-md-4">
 
-    <!-- V48 Target Settings Modal Overlay -->
+    <!-- Modal: Target Settings -->
     <div id="targetOverlay">
         <div class="modal-box">
             <h5 class="fw-bold mb-1">ตั้งค่าเป้าหมายสัดส่วน (%)</h5>
@@ -91,12 +93,78 @@
         </div>
     </div>
 
+    <!-- Modal: Simulator -->
+    <div class="modal fade" id="simulatorModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="fw-bold m-0" style="color: #111827;">🧮 จำลองการซื้อขาย</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    
+                    <div class="d-flex mb-3 rounded" style="background: #f3f4f6; padding: 4px;">
+                        <button id="btnSimBuy" class="btn btn-sm w-50 fw-bold" style="background: #10b981; color: white; border-radius: 8px;" onclick="setSimAction('BUY')">ซื้อ</button>
+                        <button id="btnSimSell" class="btn btn-sm w-50 text-muted fw-bold" style="background: transparent; border-radius: 8px;" onclick="setSimAction('SELL')">ขาย</button>
+                    </div>
+                    
+                    <select id="simTicker" class="form-select form-select-lg mb-3 fw-bold text-center" style="border-radius: 12px; font-size: 1.1rem; border-color: #e5e7eb;" onchange="updateSimTicker()">
+                    </select>
+                    
+                    <div class="card mb-4 border-0 shadow-sm" style="background: #f9fafb; border-radius: 12px;">
+                        <div class="card-body p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-muted fw-bold" style="font-size: 0.85rem;">จำนวนเงิน (THB)</span>
+                                <div class="input-group input-group-sm" style="width: 140px;">
+                                    <input type="number" id="simAmount" class="form-control sim-input text-end" placeholder="0" oninput="calcSim()">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-muted fw-bold" style="font-size: 0.85rem;">อัตราแลกเปลี่ยน</span>
+                                <div class="input-group input-group-sm" style="width: 140px;">
+                                    <input type="number" id="simFx" class="form-control sim-input text-end text-muted" step="0.0001" oninput="calcSim()">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted fw-bold" style="font-size: 0.85rem;" id="simPriceLabel">ราคา (USD)</span>
+                                <div class="input-group input-group-sm" style="width: 140px;">
+                                    <input type="number" id="simPrice" class="form-control sim-input text-end text-primary" step="0.01" oninput="calcSim()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0" style="border: 1px solid #e5e7eb !important; border-radius: 12px;">
+                        <div class="card-header text-center bg-white fw-bold" style="border-bottom: 1px solid #e5e7eb; border-radius: 12px 12px 0 0; color: #111827;" id="simResultTitle">ผลลัพธ์หลังซื้อ</div>
+                        <div class="card-body p-0 d-flex">
+                            <div class="w-50 p-3" style="border-right: 1px solid #e5e7eb; background: #fafafa;">
+                                <div class="text-center fw-bold mb-3 text-muted" id="simBeforeTitle" style="font-size: 0.9rem;">ก่อนซื้อ</div>
+                                <div class="d-flex justify-content-between mb-2" style="font-size: 0.85rem;"><span class="text-muted">จำนวนหุ้น</span><span id="simOldShares" class="fw-bold">0</span></div>
+                                <div class="d-flex justify-content-between mb-2" style="font-size: 0.85rem;"><span class="text-muted">ราคาเฉลี่ย</span><span id="simOldAvg" class="fw-bold">0</span></div>
+                                <div class="d-flex justify-content-between" style="font-size: 0.85rem;"><span class="text-muted">สัดส่วน</span><span id="simOldAlloc" class="fw-bold">0%</span></div>
+                            </div>
+                            <div class="w-50 p-3" style="background: #f0fdf4;" id="simAfterBg">
+                                <div class="text-center fw-bold mb-3 text-success" id="simAfterTitle" style="font-size: 0.9rem;">หลังซื้อ</div>
+                                <div class="d-flex justify-content-between mb-2" style="font-size: 0.85rem;"><span class="text-muted">จำนวนหุ้น</span><span id="simNewShares" class="fw-bold">0</span></div>
+                                <div class="d-flex justify-content-between mb-2" style="font-size: 0.85rem;"><span class="text-muted">ราคาเฉลี่ยใหม่</span><span id="simNewAvg" class="fw-bold text-success">0</span></div>
+                                <div class="d-flex justify-content-between" style="font-size: 0.85rem;"><span class="text-muted">สัดส่วนใหม่</span><span id="simNewAlloc" class="fw-bold text-success">0%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
     <div class="container-fluid" style="max-width: 98%; margin: 0 auto;">
         
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="fw-bold" style="color: #111827; letter-spacing: -0.5px;">My Portfolio</h2>
+        <div class="d-flex justify-content-between align-items-center mb-4 mt-2">
+            <h2 class="fw-bold m-0" style="color: #111827; letter-spacing: -0.5px;">My Portfolio</h2>
         </div>
 
+        <!-- ROW 1: Metrics -->
         <div class="row g-4 mb-4">
             <div class="col-xl-8 col-lg-12">
                 <div class="row g-3 h-100">
@@ -168,8 +236,8 @@
             </div>
         </div>
 
+        <!-- ROW 2: Charts -->
         <div class="row g-4 mb-4">
-            <!-- ขยับสัดส่วนการแสดงผลให้ Allocation Card มีพื้นที่มากขึ้น -->
             <div class="col-xl-7 col-lg-12">
                 <div class="card h-100 border-prf">
                     <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2">
@@ -192,7 +260,6 @@
                 </div>
             </div>
             
-            <!-- V48: Allocation Card แบบใหม่ -->
             <div class="col-xl-5 col-lg-12">
                 <div class="card h-100 border-alc d-flex flex-column">
                     <div class="card-header-pro border-0 d-flex justify-content-between align-items-start pb-0">
@@ -205,43 +272,38 @@
                         </button>
                     </div>
                     <div class="card-body pt-2 d-flex flex-column">
-                        
-                        <!-- Top Part: Donut & Legend side-by-side -->
                         <div class="row align-items-center mb-3 flex-shrink-0">
-                            <!-- กราฟโดนัท (ซ้าย) -->
                             <div class="col-5">
                                 <div style="position: relative; width: 100%; max-width: 140px; height: 140px; margin: 0 auto;">
                                     <canvas id="allocationChart"></canvas>
-                                    <div id="donutCenterText" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%; pointer-events: none;">
-                                        <!-- เติมด้วย JS -->
-                                    </div>
+                                    <div id="donutCenterText" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%; pointer-events: none;"></div>
                                 </div>
                             </div>
-                            <!-- เลเจนด์รายละเอียด (ขวา) -->
                             <div class="col-7">
                                 <div id="customLegend" class="alloc-scroll" style="max-height: 140px; overflow-y: auto; overflow-x: hidden; padding-right: 5px;"></div>
                             </div>
                         </div>
-                        
-                        <!-- Divider -->
                         <hr style="border-color: #f3f4f6; margin: 10px 0;">
-                        
-                        <!-- Bottom Part: Progress Bars -->
                         <div class="flex-grow-1 d-flex flex-column">
                             <div style="font-size: 0.85rem; font-weight: bold; margin-bottom: 12px; color: #374151;">สัดส่วนเทียบเป้าหมาย</div>
                             <div id="allocationBars" class="alloc-scroll" style="flex-grow: 1; overflow-y: auto; padding-right: 5px; padding-bottom: 5px;"></div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- ROW 3: Holdings -->
         <div class="row mb-4">
             <div class="col-12">
                 <div class="card border-tbl">
                     <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap">
-                        <span>รายการลงทุนของฉัน (Holdings)</span>
+                        <div class="d-flex align-items-center gap-3">
+                            <span>รายการลงทุนของฉัน (Holdings)</span>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-3 d-flex align-items-center gap-1" style="font-size: 0.8rem;" onclick="openSimulator()">
+                                🧮 จำลองซื้อขาย
+                            </button>
+                        </div>
                         <div class="d-flex align-items-center gap-3 mt-2 mt-md-0">
                             <span class="text-muted fw-bold" style="font-size: 0.9rem;">
                                 เรทเงินแอป: <input type="number" id="liveFxInput" class="fx-input" value="33.2291" step="0.00001"> THB
@@ -271,6 +333,7 @@
             </div>
         </div>
 
+        <!-- ROW 4: Transaction Form -->
         <div class="row mb-4" id="transactionFormSection">
             <div class="col-12">
                 <div class="card border-tbl" id="formCardHighlight">
@@ -338,6 +401,7 @@
             </div>
         </div>
 
+        <!-- ROW 5: History -->
         <div class="row">
             <div class="col-12">
                 <div class="card border-tbl">
@@ -381,9 +445,14 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
+        let globalHoldings = {};
+        let globalTotalPortfolioValue = 0;
+        let simAction = 'BUY';
+
         let editingIndex = -1; 
         let marketPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
         
@@ -392,8 +461,6 @@
         document.getElementById('liveFxInput').value = liveFxRate;
 
         let tunedDiffsV2 = JSON.parse(localStorage.getItem('myTunedDiffsV2')) || {};
-        
-        // V48: ตัวแปรเก็บเป้าหมายการจัดพอร์ต
         let portfolioTargets = JSON.parse(localStorage.getItem('myPortfolioTargets')) || {};
 
         let portfolioMapping = JSON.parse(localStorage.getItem('myPortfolioGroups')) || {
@@ -410,6 +477,7 @@
         let currentFilterType = 'ALL';
         let currentFilterValue = '';
         let perfChartObj = null;
+        let allocationChart = null; 
         let currentChartRange = 'ALL';
 
         let currentPage = 1;
@@ -417,6 +485,133 @@
         
         let filterStartDate = '';
         let filterEndDate = '';
+
+        window.setSimAction = function(action) {
+            simAction = action;
+            const btnBuy = document.getElementById('btnSimBuy');
+            const btnSell = document.getElementById('btnSimSell');
+            const priceLabel = document.getElementById('simPriceLabel');
+            const afterBg = document.getElementById('simAfterBg');
+            
+            if(action === 'BUY') {
+                btnBuy.style.background = '#10b981';
+                btnBuy.style.color = 'white';
+                btnBuy.classList.remove('text-muted');
+                btnSell.style.background = 'transparent';
+                btnSell.style.color = '';
+                btnSell.classList.add('text-muted');
+                
+                document.getElementById('simResultTitle').innerText = 'ผลลัพธ์หลังซื้อ';
+                document.getElementById('simBeforeTitle').innerText = 'ก่อนซื้อ';
+                document.getElementById('simAfterTitle').innerText = 'หลังซื้อ';
+                document.getElementById('simAfterTitle').className = 'text-center fw-bold mb-3 text-success';
+                
+                priceLabel.innerText = 'ราคาซื้อ (USD)';
+                afterBg.style.background = '#f0fdf4';
+                
+                document.querySelectorAll('#simNewAvg, #simNewAlloc').forEach(el => {
+                    el.classList.remove('text-danger');
+                    el.classList.add('text-success');
+                });
+            } else {
+                btnSell.style.background = '#ef4444';
+                btnSell.style.color = 'white';
+                btnSell.classList.remove('text-muted');
+                btnBuy.style.background = 'transparent';
+                btnBuy.style.color = '';
+                btnBuy.classList.add('text-muted');
+                
+                document.getElementById('simResultTitle').innerText = 'ผลลัพธ์หลังขาย';
+                document.getElementById('simBeforeTitle').innerText = 'ก่อนขาย';
+                document.getElementById('simAfterTitle').innerText = 'หลังขาย';
+                document.getElementById('simAfterTitle').className = 'text-center fw-bold mb-3 text-danger';
+                
+                priceLabel.innerText = 'ราคาขาย (USD)';
+                afterBg.style.background = '#fef2f2';
+                
+                document.querySelectorAll('#simNewAvg, #simNewAlloc').forEach(el => {
+                    el.classList.remove('text-success');
+                    el.classList.add('text-danger');
+                });
+            }
+            calcSim();
+        };
+
+        window.openSimulator = function() {
+            let select = document.getElementById('simTicker');
+            select.innerHTML = '<option value="">-- เลือกหุ้นเพื่อจำลอง --</option>';
+            
+            let sortedTickers = Object.keys(globalHoldings).sort();
+            sortedTickers.forEach(t => {
+                select.innerHTML += `<option value="${t}">${t}</option>`;
+            });
+            
+            document.getElementById('simFx').value = liveFxRate.toFixed(4);
+            document.getElementById('simPrice').value = '';
+            document.getElementById('simAmount').value = '';
+            
+            setSimAction('BUY');
+            calcSim();
+            
+            var myModal = new bootstrap.Modal(document.getElementById('simulatorModal'));
+            myModal.show();
+        };
+
+        window.updateSimTicker = function() {
+            let ticker = document.getElementById('simTicker').value;
+            if(ticker && marketPrices[ticker]) {
+                document.getElementById('simPrice').value = marketPrices[ticker].toFixed(2);
+            } else {
+                document.getElementById('simPrice').value = '';
+            }
+            calcSim();
+        }
+
+        window.calcSim = function() {
+            let ticker = document.getElementById('simTicker').value;
+            let amountTHB = parseFloat(document.getElementById('simAmount').value) || 0;
+            let fx = parseFloat(document.getElementById('simFx').value) || liveFxRate;
+            let price = parseFloat(document.getElementById('simPrice').value) || 0;
+            
+            let oldShares = 0, oldAvg = 0, oldAlloc = 0;
+            let newShares = 0, newAvg = 0, newAlloc = 0;
+            
+            if(ticker && globalHoldings[ticker]) {
+                let h = globalHoldings[ticker];
+                oldShares = h.shares;
+                oldAvg = h.shares > 0 ? h.costUSD / h.shares : 0;
+                oldAlloc = globalTotalPortfolioValue > 0 ? (h.mktValueTHB / globalTotalPortfolioValue) * 100 : 0;
+                
+                let simShares = (price > 0 && fx > 0) ? (amountTHB / fx) / price : 0;
+                
+                if(simAction === 'BUY') {
+                    newShares = oldShares + simShares;
+                    let newCostUSD = h.costUSD + (simShares * price);
+                    newAvg = newShares > 0 ? newCostUSD / newShares : 0;
+                    
+                    let newMktTHB = h.mktValueTHB + amountTHB;
+                    let newTotalPort = globalTotalPortfolioValue + amountTHB; 
+                    newAlloc = newTotalPort > 0 ? (newMktTHB / newTotalPort) * 100 : 0;
+                } else {
+                    newShares = oldShares - simShares;
+                    if(newShares < 0) newShares = 0;
+                    newAvg = oldAvg; 
+                    
+                    let newMktTHB = h.mktValueTHB - amountTHB;
+                    if(newMktTHB < 0) newMktTHB = 0;
+                    let newTotalPort = globalTotalPortfolioValue - amountTHB;
+                    newAlloc = newTotalPort > 0 ? (newMktTHB / newTotalPort) * 100 : 0;
+                }
+            }
+            
+            document.getElementById('simOldShares').innerText = oldShares > 0 ? oldShares.toFixed(5) : '0';
+            document.getElementById('simOldAvg').innerText = oldAvg > 0 ? `$${oldAvg.toFixed(4)}` : '$0.00';
+            document.getElementById('simOldAlloc').innerText = oldAlloc.toFixed(2) + '%';
+            
+            document.getElementById('simNewShares').innerText = newShares > 0 ? newShares.toFixed(5) : '0';
+            document.getElementById('simNewAvg').innerText = newAvg > 0 ? `$${newAvg.toFixed(4)}` : '$0.00';
+            document.getElementById('simNewAlloc').innerText = newAlloc.toFixed(2) + '%';
+        };
 
         window.updateMarketPrice = function(ticker, value) {
             let newPrice = parseFloat(value);
@@ -535,7 +730,6 @@
         });
 
         let transactions = JSON.parse(localStorage.getItem('myPortfolioTxns')) || [];
-        let allocationChart = null; 
 
         function sortTransactions() { transactions.sort((a, b) => new Date(a.date) - new Date(b.date)); }
 
@@ -639,7 +833,6 @@
             }
         };
 
-        // V48: ฟังก์ชันเปิด/ปิด/เซฟ เป้าหมายการจัดพอร์ต
         window.openTargetSettings = function() {
             let html = '';
             let groups = new Set();
@@ -945,6 +1138,8 @@
                     topMetrics.invested += costTHB;
                     topMetrics.mktValue += mktValueTHB;
                     groupTotals[groupName] += mktValueTHB;
+                    
+                    holdings[ticker].mktValueTHB = mktValueTHB;
 
                     let plUSD = mktValueUSD - costUSD;
                     let plPercent = costUSD > 0 ? (plUSD / costUSD) * 100 : 0;
@@ -1005,6 +1200,9 @@
             let totalPlTHB = topMetrics.mktValue - topMetrics.invested;
             let totalPlPercent = topMetrics.invested > 0 ? (totalPlTHB / topMetrics.invested) * 100 : 0;
             
+            globalHoldings = holdings;
+            globalTotalPortfolioValue = totalPortfolioValue;
+            
             document.getElementById('topTotalValue').innerText = `฿${totalPortfolioValue.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             document.getElementById('topTotalInvested').innerText = `฿${topMetrics.invested.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             document.getElementById('topTotalCash').innerText = `฿${topMetrics.cash.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
@@ -1026,21 +1224,23 @@
 
             if(topMetrics.cash > 0) groupTotals['เงินสด'] = topMetrics.cash;
             
-            // V48: สร้าง UI ของ Allocation Card ใหม่ (Donut, Legend, Progress Bars)
             const bgColors = ['#3b82f6', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#ef4444', '#10b981', '#64748b'];
             let keys = Object.keys(groupTotals);
             
-            document.getElementById('noDataText').style.display = keys.length > 0 ? 'none' : 'block';
+            let noDataEl = document.getElementById('noDataText');
+            if(noDataEl) noDataEl.style.display = keys.length > 0 ? 'none' : 'block';
             
             let legendHTML = '';
             let barsHTML = '';
             
             if(keys.length > 0) {
-                // จัดการข้อความกลางโดนัท
-                document.getElementById('donutCenterText').innerHTML = `
-                    <div style="font-size:0.75rem; color:#6b7280; font-weight:bold;">TOTAL</div>
-                    <div style="font-size:1.05rem; color:#111827; font-weight:bold;">฿${totalPortfolioValue.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
-                `;
+                let donutCenterTextEl = document.getElementById('donutCenterText');
+                if(donutCenterTextEl) {
+                    donutCenterTextEl.innerHTML = `
+                        <div style="font-size:0.75rem; color:#6b7280; font-weight:bold;">TOTAL</div>
+                        <div style="font-size:1.05rem; color:#111827; font-weight:bold;">฿${totalPortfolioValue.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+                    `;
+                }
 
                 keys.forEach((group, index) => {
                     let actualVal = groupTotals[group];
@@ -1054,19 +1254,18 @@
 
                     if (targetPct === 0) {
                         status = 'ไม่ได้ตั้งเป้า';
-                        statusColor = '#9ca3af'; // Gray
+                        statusColor = '#9ca3af'; 
                     } else if (diff < -2) {
                         status = 'ต่ำกว่าเป้า';
-                        statusColor = '#d97706'; // Orange
+                        statusColor = '#d97706'; 
                     } else if (diff > 2) {
                         status = 'เกินเป้า';
-                        statusColor = '#ef4444'; // Red
+                        statusColor = '#ef4444'; 
                     } else {
                         status = 'ตามแผน';
-                        statusColor = '#10b981'; // Green
+                        statusColor = '#10b981'; 
                     }
 
-                    // เลเจนด์ขวาของโดนัท
                     legendHTML += `
                         <div class="d-flex justify-content-between align-items-center mb-2" style="font-size:0.85rem;">
                             <div class="text-truncate" style="flex:1; padding-right:10px;"><span style="color:${barColor}">●</span> ${group}</div>
@@ -1075,7 +1274,6 @@
                         </div>
                     `;
 
-                    // หลอดพลังด้านล่าง
                     barsHTML += `
                         <div class="mb-3">
                             <div class="d-flex justify-content-between align-items-end" style="margin-bottom:6px;">
@@ -1093,27 +1291,33 @@
                     `;
                 });
             } else {
-                document.getElementById('donutCenterText').innerHTML = '';
+                let donutCenterTextEl = document.getElementById('donutCenterText');
+                if(donutCenterTextEl) donutCenterTextEl.innerHTML = '';
             }
 
-            document.getElementById('customLegend').innerHTML = legendHTML;
-            document.getElementById('allocationBars').innerHTML = barsHTML;
+            let customLegendEl = document.getElementById('customLegend');
+            if(customLegendEl) customLegendEl.innerHTML = legendHTML;
+            
+            let allocationBarsEl = document.getElementById('allocationBars');
+            if(allocationBarsEl) allocationBarsEl.innerHTML = barsHTML;
 
-            // วาดกราฟโดนัทเปล่าๆ ซ่อนเลเจนด์ดั้งเดิม
-            const ctx = document.getElementById('allocationChart').getContext('2d');
-            if (allocationChart != null) {
-                allocationChart.data.labels = keys; 
-                allocationChart.data.datasets[0].data = Object.values(groupTotals); 
-                allocationChart.update();
-            } else {
-                allocationChart = new Chart(ctx, { 
-                    type: 'doughnut', 
-                    data: { labels: keys, datasets: [{ data: Object.values(groupTotals), backgroundColor: bgColors, borderWidth: 0 }] }, 
-                    options: { 
-                        responsive: true, maintainAspectRatio: false, cutout: '75%', 
-                        plugins: { legend: { display: false } } // ปิด Legend เดิมของ Chart.js
-                    } 
-                });
+            const allocCtxEl = document.getElementById('allocationChart');
+            if(allocCtxEl) {
+                const ctx = allocCtxEl.getContext('2d');
+                if (allocationChart != null) {
+                    allocationChart.data.labels = keys; 
+                    allocationChart.data.datasets[0].data = Object.values(groupTotals); 
+                    allocationChart.update();
+                } else {
+                    allocationChart = new Chart(ctx, { 
+                        type: 'doughnut', 
+                        data: { labels: keys, datasets: [{ data: Object.values(groupTotals), backgroundColor: bgColors, borderWidth: 0 }] }, 
+                        options: { 
+                            responsive: true, maintainAspectRatio: false, cutout: '75%', 
+                            plugins: { legend: { display: false } } 
+                        } 
+                    });
+                }
             }
 
             renderPerformanceChart();
