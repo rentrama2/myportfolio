@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V37)</title>
+    <title>My Portfolio Pro Dashboard (V38)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -11,7 +11,7 @@
         .text-profit { color: #198754 !important; font-weight: bold; } 
         .text-loss { color: #dc3545 !important; font-weight: bold; } 
         
-        .card { border: none; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); margin-bottom: 20px; transition: transform 0.2s; }
+        .card { border: none; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); transition: transform 0.2s, box-shadow 0.3s; }
         .card-header-pro { background-color: transparent; border-bottom: 1px solid #f0f0f0; padding: 16px 20px; font-weight: 600; font-size: 1.1rem; }
         .metric-title { font-size: 0.85rem; color: #6c757d; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
         .metric-value { font-size: 1.8rem; font-weight: 700; color: #2d3436; line-height: 1.2; margin-top: 5px; }
@@ -29,6 +29,9 @@
         .filter-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: thin; }
         .filter-scroll::-webkit-scrollbar { height: 4px; }
         .filter-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        
+        /* Effect ตอนกดแก้ไข */
+        .form-highlight { border: 2px solid #ffc107 !important; box-shadow: 0 0 15px rgba(255, 193, 7, 0.3) !important; }
     </style>
 </head>
 <body class="p-3 p-md-4">
@@ -40,51 +43,44 @@
             <h2 class="fw-bold" style="color: #2d3436;">My Portfolio</h2>
         </div>
 
-        <!-- 4 Key Metrics -->
-        <div class="row g-3 mb-2">
-            <div class="col-md-3 col-6">
-                <div class="card h-100 p-3">
-                    <div class="metric-title text-primary">🔵 มูลค่ารวม (Total Value)</div>
-                    <div class="metric-value" id="topTotalValue">฿0.00</div>
-                    <small class="text-muted mt-1" style="font-size: 0.75rem;">หุ้น + เงินสด</small>
-                </div>
-            </div>
-            <div class="col-md-3 col-6">
-                <div class="card h-100 p-3">
-                    <div class="metric-title">📈 ผลตอบแทนรวม (Return)</div>
-                    <div class="metric-value" id="topTotalReturn">฿0.00</div>
-                    <small class="mt-1 fw-bold" id="topReturnPercent" style="font-size: 0.85rem;">0.00%</small>
-                </div>
-            </div>
-            <div class="col-md-3 col-6">
-                <div class="card h-100 p-3">
-                    <div class="metric-title text-warning">🟠 ทุนในหุ้น (Invested)</div>
-                    <div class="metric-value" id="topTotalInvested">฿0.00</div>
-                    <small class="text-muted mt-1" style="font-size: 0.75rem;">ต้นทุนหุ้นทั้งหมด</small>
-                </div>
-            </div>
-            <div class="col-md-3 col-6">
-                <div class="card h-100 p-3">
-                    <div class="metric-title text-success">🟢 เงินสด (Cash)</div>
-                    <div class="metric-value" id="topTotalCash">฿0.00</div>
-                    <small class="text-muted mt-1" style="font-size: 0.75rem;">เงินคงเหลือในพอร์ต</small>
-                </div>
-            </div>
-        </div>
-
-        <!-- Performance Chart & Dividend Summary -->
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <div class="card h-100">
-                    <div class="card-header-pro">📈 Performance (มูลค่าทุนสะสมตามช่วงเวลา)</div>
-                    <div class="card-body" id="performanceChartContainer" style="position: relative; height: 280px; width: 100%;">
-                        <canvas id="performanceChart"></canvas>
-                        <div id="noPerfData" class="text-center text-muted" style="display:none; padding-top: 80px;">ยังไม่มีประวัติการทำรายการเพียงพอ</div>
+        <!-- ROW 1: 4 Key Metrics + Dividend Summary -->
+        <div class="row g-3 mb-4">
+            <!-- 4 Metrics -->
+            <div class="col-xl-8 col-lg-12">
+                <div class="row g-3 h-100">
+                    <div class="col-md-3 col-6">
+                        <div class="card h-100 p-3">
+                            <div class="metric-title text-primary">🔵 มูลค่ารวม (Total Value)</div>
+                            <div class="metric-value" id="topTotalValue">฿0.00</div>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">หุ้น + เงินสด</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card h-100 p-3">
+                            <div class="metric-title">📈 ผลตอบแทนรวม (Return)</div>
+                            <div class="metric-value" id="topTotalReturn">฿0.00</div>
+                            <small class="mt-1 fw-bold" id="topReturnPercent" style="font-size: 0.85rem;">0.00%</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card h-100 p-3">
+                            <div class="metric-title text-warning">🟠 ทุนในหุ้น (Invested)</div>
+                            <div class="metric-value" id="topTotalInvested">฿0.00</div>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">ต้นทุนหุ้นทั้งหมด</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card h-100 p-3">
+                            <div class="metric-title text-success">🟢 เงินสด (Cash)</div>
+                            <div class="metric-value" id="topTotalCash">฿0.00</div>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">เงินคงเหลือในพอร์ต</small>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-md-4">
+            <!-- Dividend Summary -->
+            <div class="col-xl-4 col-lg-12">
                 <div class="card h-100">
                     <div class="card-header-pro">💰 สรุปเงินปันผลรับ (Dividends)</div>
                     <div class="card-body p-0">
@@ -105,7 +101,8 @@
             </div>
         </div>
 
-        <div class="row">
+        <!-- ROW 2: Charts (Allocation + Performance) -->
+        <div class="row g-3 mb-4">
             <div class="col-md-4">
                 <div class="card h-100">
                     <div class="card-header-pro">สัดส่วนการลงทุน (THB)</div>
@@ -115,71 +112,18 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-8">
-                <div class="row h-100">
-                    <div class="col-12 mb-3">
-                        <div class="card h-100">
-                            <div class="card-header-pro d-flex justify-content-between align-items-center">
-                                บันทึกรายการใหม่ (Transaction)
-                                <button type="button" id="btnCancelEdit" class="btn btn-sm btn-outline-secondary d-none" onclick="cancelEdit()">ยกเลิกการแก้ไข</button>
-                            </div>
-                            <div class="card-body">
-                                <form id="txnForm">
-                                    <div class="row g-2 mb-2">
-                                        <div class="col-md-3 col-6"><label class="form-label" style="font-size:0.8rem;">วันที่</label><input type="date" id="txnDate" class="form-control form-control-sm" required></div>
-                                        <div class="col-md-3 col-6">
-                                            <label class="form-label text-primary fw-bold" style="font-size:0.8rem;">ประเภท</label>
-                                            <select id="txnType" class="form-select form-select-sm border-primary">
-                                                <option value="BUY">ซื้อ (BUY)</option>
-                                                <option value="SELL">ขาย (SELL)</option>
-                                                <option value="DIVIDEND">ปันผล (DIVIDEND)</option>
-                                                <option value="DEPOSIT" class="text-success fw-bold">💰 ฝากเงิน (DEPOSIT)</option>
-                                                <option value="WITHDRAW" class="text-danger fw-bold">💸 ถอนเงิน (WITHDRAW)</option>
-                                            </select>
-                                        </div>
-                                        <!-- V37 Auto Detect: เพิ่ม list="tickerList" เพื่อทำ Auto-Complete -->
-                                        <div class="col-md-3 col-6">
-                                            <label class="form-label" style="font-size:0.8rem;">หุ้น (Ticker) <small id="tickerHint" class="text-success fw-bold"></small></label>
-                                            <input type="text" id="txnTicker" class="form-control form-control-sm" required placeholder="เช่น VTI" style="text-transform: uppercase;" list="tickerList" autocomplete="off">
-                                            <datalist id="tickerList"></datalist>
-                                        </div>
-                                        <div class="col-md-3 col-6"><label class="form-label" id="lblShares" style="font-size:0.8rem;">จำนวนหุ้น</label><input type="number" id="txnShares" class="form-control form-control-sm" step="any" required></div>
-                                    </div>
-                                    <div class="row g-2 mb-3">
-                                        <div class="col-md-3 col-6"><label class="form-label" id="lblPrice" style="font-size:0.8rem;">ราคา (USD)</label><input type="number" id="txnPrice" class="form-control form-control-sm" step="0.01" required></div>
-                                        
-                                        <div class="col-md-3 col-6">
-                                            <label class="form-label" id="lblComm" style="font-size:0.8rem;">ค่าคอมฯ</label>
-                                            <div class="input-group input-group-sm">
-                                                <input type="number" id="txnComm" class="form-control" step="any" value="1.64" required>
-                                                <select id="txnCommCurr" class="form-select border-secondary text-secondary" style="max-width: 65px; padding: 0 5px; font-size: 0.75rem;">
-                                                    <option value="THB" selected>THB</option>
-                                                    <option value="USD">USD</option>
-                                                </select>
-                                            </div>
-                                            <div class="d-flex justify-content-between mt-1">
-                                                <div class="form-check" id="vatWrapper"><input class="form-check-input" style="transform: scale(0.8);" type="checkbox" id="txnVat" disabled><label class="form-check-label text-muted" style="font-size: 0.7rem;">+ VAT</label></div>
-                                                <div class="form-check"><input class="form-check-input" style="transform: scale(0.8);" type="checkbox" id="dimePromo"><label class="form-check-label text-success" style="font-size: 0.7rem;">ฟรีคอม</label></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 col-12">
-                                            <label class="form-label text-danger fw-bold" id="lblTotalTHB" style="font-size:0.8rem;">เงินบาทที่จ่ายจริง (THB) - ข้ามได้</label>
-                                            <div class="input-group input-group-sm">
-                                                <input type="number" id="txnTotalTHB" class="form-control border-danger bg-danger bg-opacity-10" step="0.01" placeholder="เว้นว่างได้">
-                                                <button type="submit" id="btnSubmitTxn" class="btn btn-dark w-25">บันทึก</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                <div class="card h-100">
+                    <div class="card-header-pro">📈 Performance (มูลค่าทุนสะสมตามช่วงเวลา)</div>
+                    <div class="card-body" id="performanceChartContainer" style="position: relative; height: 280px; width: 100%;">
+                        <canvas id="performanceChart"></canvas>
+                        <div id="noPerfData" class="text-center text-muted" style="display:none; padding-top: 80px;">ยังไม่มีประวัติการทำรายการเพียงพอ</div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- ROW 3: Holdings (รายการลงทุนของฉัน) -->
         <div class="row mb-4">
             <div class="col-12">
                 <div class="card">
@@ -214,6 +158,76 @@
             </div>
         </div>
 
+        <!-- ROW 4: Form (บันทึกรายการ) -->
+        <div class="row mb-4" id="transactionFormSection">
+            <div class="col-12">
+                <div class="card" id="formCardHighlight" style="border: 2px solid transparent;">
+                    <div class="card-header-pro d-flex justify-content-between align-items-center" id="formHeader">
+                        <span id="formTitleText">บันทึกรายการใหม่ (Transaction)</span>
+                        <button type="button" id="btnCancelEdit" class="btn btn-sm btn-outline-secondary d-none" onclick="cancelEdit()">ยกเลิกการแก้ไข</button>
+                    </div>
+                    <div class="card-body">
+                        <form id="txnForm">
+                            <!-- ฟอร์มถูกจัดเรียงเป็นแนวยาว เพื่อให้ประหยัดพื้นที่แนวตั้ง -->
+                            <div class="row g-3 mb-3 align-items-start">
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <label class="form-label" style="font-size:0.8rem;">วันที่</label>
+                                    <input type="date" id="txnDate" class="form-control form-control-sm" required>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <label class="form-label text-primary fw-bold" style="font-size:0.8rem;">ประเภท</label>
+                                    <select id="txnType" class="form-select form-select-sm border-primary">
+                                        <option value="BUY">ซื้อ (BUY)</option>
+                                        <option value="SELL">ขาย (SELL)</option>
+                                        <option value="DIVIDEND">ปันผล (DIVIDEND)</option>
+                                        <option value="DEPOSIT" class="text-success fw-bold">💰 ฝากเงิน (DEPOSIT)</option>
+                                        <option value="WITHDRAW" class="text-danger fw-bold">💸 ถอนเงิน (WITHDRAW)</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <label class="form-label" style="font-size:0.8rem;">หุ้น (Ticker) <small id="tickerHint" class="text-success fw-bold"></small></label>
+                                    <input type="text" id="txnTicker" class="form-control form-control-sm" required placeholder="เช่น VTI" style="text-transform: uppercase;" list="tickerList" autocomplete="off">
+                                    <datalist id="tickerList"></datalist>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <label class="form-label" id="lblShares" style="font-size:0.8rem;">จำนวนหุ้น</label>
+                                    <input type="number" id="txnShares" class="form-control form-control-sm" step="any" required>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <label class="form-label" id="lblPrice" style="font-size:0.8rem;">ราคา (USD)</label>
+                                    <input type="number" id="txnPrice" class="form-control form-control-sm" step="0.01" required>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-6">
+                                    <label class="form-label" id="lblComm" style="font-size:0.8rem;">ค่าคอมฯ</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" id="txnComm" class="form-control" step="any" value="1.64" required>
+                                        <select id="txnCommCurr" class="form-select border-secondary text-secondary" style="max-width: 65px; padding: 0 5px; font-size: 0.75rem;">
+                                            <option value="THB" selected>THB</option>
+                                            <option value="USD">USD</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-1">
+                                        <div class="form-check" id="vatWrapper"><input class="form-check-input" style="transform: scale(0.8);" type="checkbox" id="txnVat" disabled><label class="form-check-label text-muted" style="font-size: 0.7rem;">+ VAT</label></div>
+                                        <div class="form-check"><input class="form-check-input" style="transform: scale(0.8);" type="checkbox" id="dimePromo"><label class="form-check-label text-success" style="font-size: 0.7rem;">ฟรีคอม</label></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 justify-content-end">
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <label class="form-label text-danger fw-bold" id="lblTotalTHB" style="font-size:0.8rem;">เงินบาทที่จ่ายจริง (THB) - ข้ามได้</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" id="txnTotalTHB" class="form-control border-danger bg-danger bg-opacity-10" step="0.01" placeholder="เว้นว่างได้">
+                                        <button type="submit" id="btnSubmitTxn" class="btn btn-dark w-25">บันทึก</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 5: History (ประวัติ) -->
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -334,17 +348,14 @@
             }
         });
 
-        // V37 Auto Detect: ค้นหาชื่อหุ้นและเติมให้ตอนพิมพ์
         document.getElementById('txnTicker').addEventListener('input', function() {
             let val = this.value.toUpperCase().trim();
             document.getElementById('tickerHint').innerText = stockNames[val] ? `(${stockNames[val]})` : '';
         });
 
-        // V37 Auto Detect: ดึงราคาอัตโนมัติเมื่อพิมพ์เสร็จ (คลิกที่อื่น หรือ กด Tab)
         document.getElementById('txnTicker').addEventListener('blur', function() {
             let val = this.value.toUpperCase().trim();
-            this.value = val; // บังคับตัวพิมพ์ใหญ่ลงในฟอร์ม
-            // ถ้าระบบมีราคาล่าสุดเก็บไว้ ให้เติมใส่ช่องราคาให้อัตโนมัติ (ยกเว้นช่องปันผล)
+            this.value = val; 
             if(val && marketPrices[val] && document.getElementById('txnType').value !== 'DIVIDEND') {
                 document.getElementById('txnPrice').value = marketPrices[val].toFixed(2);
             }
@@ -757,10 +768,10 @@
 
         function renderFilters() {
             const container = document.getElementById('filterContainer');
-            const datalist = document.getElementById('tickerList'); // V37 Datalist
+            const datalist = document.getElementById('tickerList'); 
             
             let groups = new Set(); let tickers = new Set(); let hasCash = false;
-            let allTickers = new Set(Object.keys(stockNames)); // ใส่หุ้นดังๆ เผื่อไว้ให้พิมพ์ง่ายๆ
+            let allTickers = new Set(Object.keys(stockNames)); 
 
             transactions.forEach(t => {
                 if(t.type === 'DEPOSIT' || t.type === 'WITHDRAW') hasCash = true;
@@ -771,7 +782,6 @@
                 }
             });
 
-            // V37 Auto Detect: อัปเดตรายชื่อหุ้นเข้าไปใน Datalist
             if(datalist) {
                 let datalistHTML = '';
                 Array.from(allTickers).sort().forEach(tk => { datalistHTML += `<option value="${tk}">`; });
@@ -885,7 +895,15 @@
             
             const btn = document.getElementById('btnSubmitTxn'); btn.innerText = 'บันทึกแก้ไข'; btn.classList.replace('btn-dark', 'btn-warning'); btn.classList.replace('w-25', 'w-50');
             document.getElementById('btnCancelEdit').classList.remove('d-none');
-            window.scrollTo({ top: document.getElementById('transactionSection').offsetTop - 20, behavior: 'smooth' });
+            
+            document.getElementById('formTitleText').innerText = '✏️ กำลังแก้ไขรายการ...';
+            document.getElementById('formHeader').classList.add('text-warning');
+            
+            // Effect เลื่อนจอและสว่างขึ้น
+            window.scrollTo({ top: document.getElementById('transactionFormSection').offsetTop - 20, behavior: 'smooth' });
+            const formCard = document.getElementById('formCardHighlight');
+            formCard.classList.add('form-highlight');
+            setTimeout(() => { formCard.classList.remove('form-highlight'); }, 1500);
         };
 
         window.cancelEdit = function() {
@@ -893,6 +911,9 @@
             const btn = document.getElementById('btnSubmitTxn'); btn.innerText = 'บันทึก'; btn.classList.replace('btn-warning', 'btn-dark'); btn.classList.replace('w-50', 'w-25');
             document.getElementById('btnCancelEdit').classList.add('d-none');
             document.getElementById('txnDate').valueAsDate = new Date();
+            
+            document.getElementById('formTitleText').innerText = 'บันทึกรายการใหม่ (Transaction)';
+            document.getElementById('formHeader').classList.remove('text-warning');
         };
 
         document.getElementById('txnForm').addEventListener('submit', async function(e) {
