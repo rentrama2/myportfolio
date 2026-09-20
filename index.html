@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V45)</title>
+    <title>My Portfolio Pro Dashboard (V46)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -58,6 +58,11 @@
         .chart-btn { border: none; background: transparent; color: #4b5563; font-weight: 600; border-radius: 16px; padding: 4px 12px; font-size: 0.8rem; transition: all 0.2s; }
         .chart-btn:hover { color: #111827; }
         .active-chart-btn { background-color: #111827 !important; color: white !important; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        
+        /* สไตล์ปุ่ม Pagination ให้เข้ากับธีม */
+        .page-link { border-color: #e5e7eb; color: #4b5563; font-size: 0.85rem; }
+        .page-link:hover { background-color: #f3f4f6; color: #111827; }
+        .page-item.active .page-link { background-color: #111827; border-color: #111827; color: white; }
     </style>
 </head>
 <body class="p-3 p-md-4">
@@ -307,6 +312,13 @@
                                 <tbody id="txnTableBody" style="border-top: 1px solid #e5e7eb;"></tbody>
                             </table>
                         </div>
+                        
+                        <!-- V46: ส่วนแสดงผลแบ่งหน้า (Pagination UI) -->
+                        <div id="paginationControls" class="d-flex flex-wrap justify-content-between align-items-center p-3" style="background-color: #f9fafb; border-top: 1px solid #e5e7eb;">
+                            <span id="paginationInfo" class="text-muted mb-2 mb-md-0" style="font-size: 0.85rem;"></span>
+                            <ul id="paginationPages" class="pagination pagination-sm m-0"></ul>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -323,7 +335,6 @@
         if(isNaN(liveFxRate)) liveFxRate = 33.2291;
         document.getElementById('liveFxInput').value = liveFxRate;
 
-        // V45: แยกที่เก็บการจูนแบบใหม่ เพื่อไม่ให้ไปกวนประวัติเดิม
         let tunedDiffsV2 = JSON.parse(localStorage.getItem('myTunedDiffsV2')) || {};
 
         let portfolioMapping = JSON.parse(localStorage.getItem('myPortfolioGroups')) || {
@@ -341,6 +352,10 @@
         let currentFilterValue = '';
         let perfChartObj = null;
         let currentChartRange = 'ALL';
+
+        // V46: ตัวแปรสำหรับการแบ่งหน้าตาราง
+        let currentPage = 1;
+        const rowsPerPage = 10;
 
         window.updateMarketPrice = function(ticker, value) {
             let newPrice = parseFloat(value);
@@ -496,7 +511,6 @@
             return hasChanged;
         }
 
-        // V45: ฟังก์ชันล้างค่าเก่าที่เคยทำประวัติพัง
         window.undoSyncTHB = function(ticker) {
             if(!confirm(`ระบบตรวจพบการจูนทุนเวอร์ชันเก่าของ ${ticker}\nต้องการล้างค่าเก่าเพื่อใช้ Smart Sync ระบบใหม่หรือไม่?`)) return;
             
@@ -517,7 +531,6 @@
             }
         };
 
-        // V45: ฟังก์ชัน Smart Sync อัจฉริยะ (แก้ไขเฉพาะจุด ไม่กวนประวัติ)
         window.smartSync = function(ticker, currentPriceUSD, shares, rawCostTHB) {
             let mktTHBStr = prompt(`[1/2] หุ้น ${ticker}\nกรุณากรอก "มูลค่าล่าสุด (บาท)" ที่แสดงในแอป Dime!\n(เช่น 6775.74)`);
             if(!mktTHBStr) return;
@@ -529,7 +542,6 @@
             let plTHB = parseFloat(plTHBStr.replace(/,/g, ''));
             if(isNaN(plTHB)) return;
 
-            // 1. คำนวณหาเรทเงินที่แท้จริง
             let mktUSD = currentPriceUSD * shares;
             if(mktUSD > 0) {
                 let newFx = mktTHB / mktUSD;
@@ -538,7 +550,6 @@
                 localStorage.setItem('myLiveFxRate', liveFxRate);
             }
 
-            // 2. คำนวณหาต้นทุนจริงและเก็บส่วนต่างแยกไว้
             let targetCostTHB = mktTHB - plTHB;
             let diff = targetCostTHB - rawCostTHB;
             
@@ -798,7 +809,6 @@
                     let costUSD = holdings[ticker].costUSD;
                     let rawCostTHB = holdings[ticker].costTHB;
                     
-                    // V45: รวม Cost จากฐานข้อมูลดิบ และส่วนต่างจาก Smart Sync เข้าด้วยกัน
                     let costTHB = rawCostTHB + (tunedDiffsV2[ticker] || 0);
                     
                     let groupName = portfolioMapping[ticker] || 'Stock';
@@ -820,7 +830,6 @@
                     let plClass = plUSD >= 0 ? 'text-profit' : 'text-loss';
                     let sign = plUSD >= 0 ? '+' : '';
 
-                    // V45: ควบคุมปุ่ม Sync ใหม่อัจฉริยะ
                     let syncBtns = `<button class="btn btn-sm btn-outline-info mt-1 py-0 px-2 fw-bold" style="font-size: 0.7rem;" onclick="smartSync('${ticker}', ${currentPriceUSD}, ${shares}, ${rawCostTHB})">✨ Smart Sync</button>`;
                     
                     if(tunedDiffsV2[ticker]) {
@@ -917,8 +926,17 @@
             renderDividends();
         }
 
+        // V46: ฟังก์ชันเกี่ยวกับการกรองและการเปลี่ยนหน้าตารางประวัติ
         window.setFilter = function(type, value) {
-            currentFilterType = type; currentFilterValue = value; renderTable();
+            currentFilterType = type; 
+            currentFilterValue = value; 
+            currentPage = 1; // กลับไปหน้าแรกเสมอเมื่อกรองใหม่
+            renderTable();
+        };
+
+        window.changePage = function(page) {
+            currentPage = page;
+            renderTable();
         };
 
         function renderFilters() {
@@ -967,13 +985,52 @@
             container.innerHTML = html;
         }
 
+        // V46: อัปเดต UI ของปุ่มเปลี่ยนหน้า
+        function renderPaginationControls(totalItems, totalPages) {
+            const info = document.getElementById('paginationInfo');
+            const ul = document.getElementById('paginationPages');
+            
+            if(totalItems === 0) {
+                info.innerText = 'ไม่พบข้อมูล';
+                ul.innerHTML = '';
+                return;
+            }
+
+            let startInfo = ((currentPage - 1) * rowsPerPage) + 1;
+            let endInfo = Math.min(currentPage * rowsPerPage, totalItems);
+            info.innerText = `แสดง ${startInfo} - ${endInfo} จากทั้งหมด ${totalItems} รายการ`;
+
+            let html = '';
+            
+            html += `<li class="page-item ${currentPage === 1 ? 'disabled' : ''}"><button class="page-link" onclick="changePage(${currentPage - 1})">ก่อนหน้า</button></li>`;
+            
+            let startPage = Math.max(1, currentPage - 2);
+            let endPage = Math.min(totalPages, currentPage + 2);
+            
+            if(startPage > 1) {
+                html += `<li class="page-item"><button class="page-link" onclick="changePage(1)">1</button></li>`;
+                if(startPage > 2) html += `<li class="page-item disabled"><span class="page-link text-muted">...</span></li>`;
+            }
+
+            for(let i = startPage; i <= endPage; i++) {
+                html += `<li class="page-item ${i === currentPage ? 'active' : ''}"><button class="page-link" onclick="changePage(${i})">${i}</button></li>`;
+            }
+
+            if(endPage < totalPages) {
+                if(endPage < totalPages - 1) html += `<li class="page-item disabled"><span class="page-link text-muted">...</span></li>`;
+                html += `<li class="page-item"><button class="page-link" onclick="changePage(${totalPages})">${totalPages}</button></li>`;
+            }
+
+            html += `<li class="page-item ${currentPage === totalPages ? 'disabled' : ''}"><button class="page-link" onclick="changePage(${currentPage + 1})">ถัดไป</button></li>`;
+
+            ul.innerHTML = html;
+        }
+
         async function renderTable() {
             sortTransactions(); 
             await autoRepairTransactions();
             renderFilters(); 
 
-            const tbody = document.getElementById('txnTableBody'); tbody.innerHTML = '';
-            
             let filteredTxns = transactions.filter(txn => {
                 if (currentFilterType === 'ALL') return true;
                 if (currentFilterType === 'TICKER') return txn.ticker === currentFilterValue;
@@ -984,8 +1041,24 @@
                 return true;
             });
 
-            filteredTxns.forEach((txn) => {
-                let originalIndex = transactions.indexOf(txn);
+            // V46: คำนวณและตัดข้อมูลเฉพาะหน้าที่จะแสดง (Pagination Logic)
+            let totalPages = Math.ceil(filteredTxns.length / rowsPerPage);
+            if(currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+            if(currentPage < 1) currentPage = 1;
+
+            let startIndex = (currentPage - 1) * rowsPerPage;
+            let endIndex = startIndex + rowsPerPage;
+            let paginatedTxns = filteredTxns.slice(startIndex, endIndex);
+
+            const tbody = document.getElementById('txnTableBody'); 
+            tbody.innerHTML = '';
+
+            if (paginatedTxns.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="9" class="text-muted py-5 border-0">ไม่มีประวัติในหน้านี้</td></tr>`;
+            }
+
+            paginatedTxns.forEach((txn) => {
+                let originalIndex = transactions.indexOf(txn); // V46: อ้างอิง index เดิมเพื่อกันลบ/แก้ไขผิดตัว
                 let totalUSD = 0, typeBadge = '', commText = '', displayShares = txn.shares, displayPrice = `$${txn.price}`;
                 let usdAmount = Number((txn.shares * txn.price).toFixed(2));
                 let displayTHB = txn.totalTHB > 0 ? `฿${txn.totalTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}` : `<span class="text-muted">(USD ล้วน)</span>`;
@@ -1011,6 +1084,8 @@
 
                 tbody.innerHTML += `<tr><td class="border-0 py-3">${txn.date}</td><td class="border-0 py-3">${typeBadge}</td><td class="border-0 py-3"><strong>${txn.ticker}</strong></td><td class="border-0 py-3">${displayShares}</td><td class="border-0 py-3">${displayPrice}</td><td class="border-0 py-3">${commText}</td><td class="text-primary fw-bold border-0 py-3">${showUSD}</td><td class="text-danger fw-bold border-0 py-3">${displayTHB}</td><td class="border-0 py-3"><div class="d-flex justify-content-center gap-1"><button class="btn btn-sm btn-warning py-0 px-2" onclick="editTxn(${originalIndex})">แก้ไข</button><button class="btn btn-sm btn-outline-danger py-0 px-2" onclick="deleteTxn(${originalIndex})">ลบ</button></div></td></tr>`;
             });
+            
+            renderPaginationControls(filteredTxns.length, totalPages);
             updateSummaryAndChart();
         }
 
