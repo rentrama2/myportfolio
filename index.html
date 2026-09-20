@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V46)</title>
+    <title>My Portfolio Pro Dashboard (V47)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -48,7 +48,7 @@
         .group-badge { cursor: pointer; transition: all 0.2s; background-color: #f3f4f6; color: #4b5563; border: 1px solid #e5e7eb; border-radius: 20px; padding: 4px 10px; font-size: 0.75rem; font-weight: 600; }
         .group-badge:hover { background-color: #3b82f6; color: white; border-color: #3b82f6; }
         
-        .filter-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: thin; }
+        .filter-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: thin; align-items: center; }
         .filter-scroll::-webkit-scrollbar { height: 4px; }
         .filter-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         
@@ -59,10 +59,10 @@
         .chart-btn:hover { color: #111827; }
         .active-chart-btn { background-color: #111827 !important; color: white !important; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         
-        /* สไตล์ปุ่ม Pagination ให้เข้ากับธีม */
-        .page-link { border-color: #e5e7eb; color: #4b5563; font-size: 0.85rem; }
+        .page-link { border-color: #e5e7eb; color: #4b5563; font-size: 0.85rem; cursor: pointer; }
         .page-link:hover { background-color: #f3f4f6; color: #111827; }
         .page-item.active .page-link { background-color: #111827; border-color: #111827; color: white; }
+        .page-item.disabled .page-link { color: #9ca3af; pointer-events: none; }
     </style>
 </head>
 <body class="p-3 p-md-4">
@@ -313,7 +313,6 @@
                             </table>
                         </div>
                         
-                        <!-- V46: ส่วนแสดงผลแบ่งหน้า (Pagination UI) -->
                         <div id="paginationControls" class="d-flex flex-wrap justify-content-between align-items-center p-3" style="background-color: #f9fafb; border-top: 1px solid #e5e7eb;">
                             <span id="paginationInfo" class="text-muted mb-2 mb-md-0" style="font-size: 0.85rem;"></span>
                             <ul id="paginationPages" class="pagination pagination-sm m-0"></ul>
@@ -353,9 +352,12 @@
         let perfChartObj = null;
         let currentChartRange = 'ALL';
 
-        // V46: ตัวแปรสำหรับการแบ่งหน้าตาราง
         let currentPage = 1;
         const rowsPerPage = 10;
+        
+        // V47: ตัวแปรเก็บวันที่กรอง
+        let filterStartDate = '';
+        let filterEndDate = '';
 
         window.updateMarketPrice = function(ticker, value) {
             let newPrice = parseFloat(value);
@@ -926,11 +928,27 @@
             renderDividends();
         }
 
-        // V46: ฟังก์ชันเกี่ยวกับการกรองและการเปลี่ยนหน้าตารางประวัติ
+        // V47: ฟังก์ชันการจัดการ Date Filter
+        window.setDateFilter = function() {
+            filterStartDate = document.getElementById('filterStart').value;
+            filterEndDate = document.getElementById('filterEnd').value;
+            currentPage = 1;
+            renderTable();
+        };
+
+        window.clearDateFilter = function() {
+            document.getElementById('filterStart').value = '';
+            document.getElementById('filterEnd').value = '';
+            filterStartDate = '';
+            filterEndDate = '';
+            currentPage = 1;
+            renderTable();
+        };
+
         window.setFilter = function(type, value) {
             currentFilterType = type; 
             currentFilterValue = value; 
-            currentPage = 1; // กลับไปหน้าแรกเสมอเมื่อกรองใหม่
+            currentPage = 1; 
             renderTable();
         };
 
@@ -973,6 +991,10 @@
                 html += `<button class="btn btn-sm ${active} rounded-pill px-3" onclick="setFilter('GROUP', '${g}')">${g}</button>`;
             });
 
+            // V47: ปุ่มกรองปันผล
+            let activeDiv = (currentFilterType === 'DIVIDEND') ? 'btn-dark' : 'btn-outline-secondary';
+            html += `<button class="btn btn-sm ${activeDiv} rounded-pill px-3" onclick="setFilter('DIVIDEND', 'ปันผล')">ปันผล</button>`;
+
             let ddActive = currentFilterType === 'TICKER' ? 'btn-dark text-white' : 'btn-outline-secondary';
             html += `<select class="form-select form-select-sm rounded-pill d-inline-block w-auto ms-2 ${ddActive}" style="min-width: 130px; border-color: #6b7280;" onchange="if(this.value) setFilter('TICKER', this.value); else setFilter('ALL', '')">
                 <option value="" class="bg-white text-dark">-- กรองรายหุ้น --</option>`;
@@ -982,10 +1004,20 @@
             });
             html += `</select>`;
 
+            // V47: ตัวเลือกกรองช่วงเวลา (Date Range)
+            html += `
+                <div class="d-flex align-items-center ms-auto gap-2 flex-wrap" style="padding-left: 10px; border-left: 1px solid #e5e7eb;">
+                    <span class="text-muted" style="font-size: 0.8rem; white-space: nowrap;">ช่วงเวลา:</span>
+                    <input type="date" id="filterStart" class="form-control form-control-sm rounded-pill text-muted" style="width: 115px; font-size: 0.75rem;" value="${filterStartDate}" onchange="setDateFilter()">
+                    <span class="text-muted">-</span>
+                    <input type="date" id="filterEnd" class="form-control form-control-sm rounded-pill text-muted" style="width: 115px; font-size: 0.75rem;" value="${filterEndDate}" onchange="setDateFilter()">
+                    <button class="btn btn-sm btn-outline-danger rounded-pill px-2" onclick="clearDateFilter()" title="ล้างวันที่" style="font-size: 0.7rem; font-weight: bold;">✕</button>
+                </div>
+            `;
+
             container.innerHTML = html;
         }
 
-        // V46: อัปเดต UI ของปุ่มเปลี่ยนหน้า
         function renderPaginationControls(totalItems, totalPages) {
             const info = document.getElementById('paginationInfo');
             const ul = document.getElementById('paginationPages');
@@ -1031,17 +1063,26 @@
             await autoRepairTransactions();
             renderFilters(); 
 
+            // V47: เพิ่มเงื่อนไข Date Filter เข้าไปในลูปกรองข้อมูล
             let filteredTxns = transactions.filter(txn => {
-                if (currentFilterType === 'ALL') return true;
-                if (currentFilterType === 'TICKER') return txn.ticker === currentFilterValue;
-                if (currentFilterType === 'GROUP') {
-                    if (currentFilterValue === 'เงินสด') return txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW';
-                    return (portfolioMapping[txn.ticker] || 'Stock') === currentFilterValue && txn.type !== 'DEPOSIT' && txn.type !== 'WITHDRAW';
+                let typeMatch = true;
+                
+                if (currentFilterType === 'TICKER') {
+                    typeMatch = txn.ticker === currentFilterValue;
+                } else if (currentFilterType === 'GROUP') {
+                    if (currentFilterValue === 'เงินสด') typeMatch = txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW';
+                    else typeMatch = (portfolioMapping[txn.ticker] || 'Stock') === currentFilterValue && txn.type !== 'DEPOSIT' && txn.type !== 'WITHDRAW' && txn.type !== 'DIVIDEND';
+                } else if (currentFilterType === 'DIVIDEND') {
+                    typeMatch = txn.type === 'DIVIDEND';
                 }
-                return true;
+
+                let dateMatch = true;
+                if (filterStartDate) dateMatch = dateMatch && (txn.date >= filterStartDate);
+                if (filterEndDate) dateMatch = dateMatch && (txn.date <= filterEndDate);
+
+                return typeMatch && dateMatch;
             });
 
-            // V46: คำนวณและตัดข้อมูลเฉพาะหน้าที่จะแสดง (Pagination Logic)
             let totalPages = Math.ceil(filteredTxns.length / rowsPerPage);
             if(currentPage > totalPages && totalPages > 0) currentPage = totalPages;
             if(currentPage < 1) currentPage = 1;
@@ -1054,11 +1095,11 @@
             tbody.innerHTML = '';
 
             if (paginatedTxns.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="9" class="text-muted py-5 border-0">ไม่มีประวัติในหน้านี้</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="9" class="text-muted py-5 border-0">ไม่มีประวัติในหน้านี้ หรือไม่พบข้อมูลตามตัวกรอง</td></tr>`;
             }
 
             paginatedTxns.forEach((txn) => {
-                let originalIndex = transactions.indexOf(txn); // V46: อ้างอิง index เดิมเพื่อกันลบ/แก้ไขผิดตัว
+                let originalIndex = transactions.indexOf(txn); 
                 let totalUSD = 0, typeBadge = '', commText = '', displayShares = txn.shares, displayPrice = `$${txn.price}`;
                 let usdAmount = Number((txn.shares * txn.price).toFixed(2));
                 let displayTHB = txn.totalTHB > 0 ? `฿${txn.totalTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}` : `<span class="text-muted">(USD ล้วน)</span>`;
