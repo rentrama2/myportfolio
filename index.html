@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V44)</title>
+    <title>My Portfolio Pro Dashboard (V45)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -323,7 +323,8 @@
         if(isNaN(liveFxRate)) liveFxRate = 33.2291;
         document.getElementById('liveFxInput').value = liveFxRate;
 
-        let tunedDiffs = JSON.parse(localStorage.getItem('myTunedDiffs')) || {};
+        // V45: แยกที่เก็บการจูนแบบใหม่ เพื่อไม่ให้ไปกวนประวัติเดิม
+        let tunedDiffsV2 = JSON.parse(localStorage.getItem('myTunedDiffsV2')) || {};
 
         let portfolioMapping = JSON.parse(localStorage.getItem('myPortfolioGroups')) || {
             'VTI': 'ETF', 'VXUS': 'ETF', 'VOO': 'ETF', 'SCHD': 'ETF', 'QQQ': 'ETF', 'QQQM': 'ETF',
@@ -495,45 +496,64 @@
             return hasChanged;
         }
 
-        window.syncCostTHB = function(ticker, currentSystemTHB) {
-            let target = prompt(`(หุ้น ${ticker})\nกรุณากรอก "ทุนรวม (THB)" ที่แอปซ่อนไว้\n(วิธีหา: เอามูลค่าล่าสุด ลบด้วย ผลตอบแทนรวม)`);
-            if(!target) return;
-            let targetVal = parseFloat(target.replace(/,/g, '')); 
-            if(isNaN(targetVal)) return;
-            let diff = targetVal - currentSystemTHB;
-            if(Math.abs(diff) < 0.01) return;
-            
-            let lastIndex = -1;
-            for(let i = transactions.length - 1; i >= 0; i--) {
-                if(transactions[i].ticker === ticker && transactions[i].type === 'BUY') { lastIndex = i; break; }
-            }
-            if(lastIndex !== -1) {
-                tunedDiffs[ticker] = (tunedDiffs[ticker] || 0) + diff;
-                localStorage.setItem('myTunedDiffs', JSON.stringify(tunedDiffs));
-
-                transactions[lastIndex].totalTHB = (transactions[lastIndex].totalTHB || 0) + diff;
-                localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
-                renderTable(); 
-            }
-        };
-
+        // V45: ฟังก์ชันล้างค่าเก่าที่เคยทำประวัติพัง
         window.undoSyncTHB = function(ticker) {
-            if(!confirm(`ต้องการลบส่วนต่างของหุ้น ${ticker} ที่เคยปรับจูนแอปไปแล้วหรือไม่?`)) return;
+            if(!confirm(`ระบบตรวจพบการจูนทุนเวอร์ชันเก่าของ ${ticker}\nต้องการล้างค่าเก่าเพื่อใช้ Smart Sync ระบบใหม่หรือไม่?`)) return;
             
-            let diffToUndo = tunedDiffs[ticker] || 0;
-            if(diffToUndo === 0) return;
-
+            let oldTunedDiffs = JSON.parse(localStorage.getItem('myTunedDiffs')) || {};
+            let diffToUndo = oldTunedDiffs[ticker] || 0;
+            
             let lastIndex = -1;
             for(let i = transactions.length - 1; i >= 0; i--) {
                 if(transactions[i].ticker === ticker && transactions[i].type === 'BUY') { lastIndex = i; break; }
             }
             if(lastIndex !== -1) {
                 transactions[lastIndex].totalTHB = (transactions[lastIndex].totalTHB || 0) - diffToUndo;
-                delete tunedDiffs[ticker];
-                localStorage.setItem('myTunedDiffs', JSON.stringify(tunedDiffs));
+                delete oldTunedDiffs[ticker];
+                localStorage.setItem('myTunedDiffs', JSON.stringify(oldTunedDiffs));
                 localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
-                renderTable();
+                updateSummaryAndChart();
+                alert("ล้างค่าเก่าสำเร็จ! กดปุ่ม ✨ Smart Sync เพื่อจูนใหม่ให้ตรง 100% ได้เลยครับ");
             }
+        };
+
+        // V45: ฟังก์ชัน Smart Sync อัจฉริยะ (แก้ไขเฉพาะจุด ไม่กวนประวัติ)
+        window.smartSync = function(ticker, currentPriceUSD, shares, rawCostTHB) {
+            let mktTHBStr = prompt(`[1/2] หุ้น ${ticker}\nกรุณากรอก "มูลค่าล่าสุด (บาท)" ที่แสดงในแอป Dime!\n(เช่น 6775.74)`);
+            if(!mktTHBStr) return;
+            let mktTHB = parseFloat(mktTHBStr.replace(/,/g, ''));
+            if(isNaN(mktTHB)) return;
+
+            let plTHBStr = prompt(`[2/2] หุ้น ${ticker}\nกรุณากรอก "ผลตอบแทนรวม (บาท)" ที่แสดงในแอป Dime!\n(เช่น 254.68 หรือ -10.50)`);
+            if(!plTHBStr) return;
+            let plTHB = parseFloat(plTHBStr.replace(/,/g, ''));
+            if(isNaN(plTHB)) return;
+
+            // 1. คำนวณหาเรทเงินที่แท้จริง
+            let mktUSD = currentPriceUSD * shares;
+            if(mktUSD > 0) {
+                let newFx = mktTHB / mktUSD;
+                document.getElementById('liveFxInput').value = newFx.toFixed(4);
+                liveFxRate = newFx;
+                localStorage.setItem('myLiveFxRate', liveFxRate);
+            }
+
+            // 2. คำนวณหาต้นทุนจริงและเก็บส่วนต่างแยกไว้
+            let targetCostTHB = mktTHB - plTHB;
+            let diff = targetCostTHB - rawCostTHB;
+            
+            tunedDiffsV2[ticker] = diff;
+            localStorage.setItem('myTunedDiffsV2', JSON.stringify(tunedDiffsV2));
+            
+            updateSummaryAndChart();
+            alert(`✨ Smart Sync ทำงานสำเร็จ!\nระบบได้ปรับเรทเงินให้ตรงกับแอปอัตโนมัติ\nและปรับจูนต้นทุนของ ${ticker} ให้ตรง 100% แบบถาวรแล้วครับ`);
+        };
+
+        window.undoSmartSync = function(ticker) {
+            if(!confirm(`ต้องการยกเลิกการซิงค์ข้อมูลของหุ้น ${ticker} หรือไม่?`)) return;
+            delete tunedDiffsV2[ticker];
+            localStorage.setItem('myTunedDiffsV2', JSON.stringify(tunedDiffsV2));
+            updateSummaryAndChart();
         };
 
         window.changeGroup = function(ticker) {
@@ -753,7 +773,6 @@
                 
                 if(txn.type === 'BUY') {
                     holdings[txn.ticker].shares += txn.shares;
-                    // V44: ถอดค่าคอมมิชชันออกจากต้นทุน USD เพื่อให้ราคาเฉลี่ยต่อหุ้นตรงกับแอป
                     holdings[txn.ticker].costUSD += usdAmount; 
                     holdings[txn.ticker].costTHB += parsedTHB; 
                 } else if(txn.type === 'SELL') {
@@ -769,13 +788,18 @@
 
             const summaryBody = document.getElementById('summaryTableBody');
             summaryBody.innerHTML = ''; let hasData = false;
+            
+            let oldTunedDiffs = JSON.parse(localStorage.getItem('myTunedDiffs')) || {};
 
             for(let ticker in holdings) {
                 if(holdings[ticker].shares > 0.0001) { 
                     hasData = true;
                     let shares = holdings[ticker].shares;
                     let costUSD = holdings[ticker].costUSD;
-                    let costTHB = holdings[ticker].costTHB;
+                    let rawCostTHB = holdings[ticker].costTHB;
+                    
+                    // V45: รวม Cost จากฐานข้อมูลดิบ และส่วนต่างจาก Smart Sync เข้าด้วยกัน
+                    let costTHB = rawCostTHB + (tunedDiffsV2[ticker] || 0);
                     
                     let groupName = portfolioMapping[ticker] || 'Stock';
                     if(!groupTotals[groupName]) groupTotals[groupName] = 0;
@@ -796,7 +820,15 @@
                     let plClass = plUSD >= 0 ? 'text-profit' : 'text-loss';
                     let sign = plUSD >= 0 ? '+' : '';
 
-                    let undoBtn = tunedDiffs[ticker] ? `<button class="btn btn-sm btn-outline-secondary mt-1 py-0 px-2 ms-1" style="font-size: 0.7rem;" onclick="undoSyncTHB('${ticker}')" title="คืนค่าที่ระบบคำนวณให้">↩️</button>` : '';
+                    // V45: ควบคุมปุ่ม Sync ใหม่อัจฉริยะ
+                    let syncBtns = `<button class="btn btn-sm btn-outline-info mt-1 py-0 px-2 fw-bold" style="font-size: 0.7rem;" onclick="smartSync('${ticker}', ${currentPriceUSD}, ${shares}, ${rawCostTHB})">✨ Smart Sync</button>`;
+                    
+                    if(tunedDiffsV2[ticker]) {
+                        syncBtns += `<button class="btn btn-sm btn-outline-secondary mt-1 py-0 px-2 ms-1" style="font-size: 0.7rem;" onclick="undoSmartSync('${ticker}')" title="ล้างค่าที่ซิงค์ไว้">↩️</button>`;
+                    }
+                    if(oldTunedDiffs[ticker]) {
+                        syncBtns += `<br><button class="btn btn-sm btn-outline-danger mt-1 py-0 px-2" style="font-size: 0.65rem;" onclick="undoSyncTHB('${ticker}')" title="ลบข้อมูลจูนแบบเก่าที่ทำประวัติพัง">⚠️ ล้างค่าเก่าก่อน</button>`;
+                    }
 
                     summaryBody.innerHTML += `
                         <tr>
@@ -811,8 +843,7 @@
                             </td>
                             <td class="border-0 py-3">
                                 <span style="color: #111827;">฿${costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</span><br>
-                                <button class="btn btn-sm btn-outline-warning mt-1 py-0 px-2" style="font-size: 0.7rem;" onclick="syncCostTHB('${ticker}', ${costTHB})">🪄 จูนทุนแอป</button>
-                                ${undoBtn}
+                                ${syncBtns}
                             </td>
                             <td class="bg-warning bg-opacity-10 align-middle border-0 py-3">
                                 <div class="d-flex justify-content-center">
