@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V36)</title>
+    <title>My Portfolio Pro Dashboard (V37)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -138,7 +138,12 @@
                                                 <option value="WITHDRAW" class="text-danger fw-bold">💸 ถอนเงิน (WITHDRAW)</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-3 col-6"><label class="form-label" style="font-size:0.8rem;">หุ้น (Ticker) <small id="tickerHint" class="text-success fw-bold"></small></label><input type="text" id="txnTicker" class="form-control form-control-sm" required placeholder="เช่น VTI" style="text-transform: uppercase;"></div>
+                                        <!-- V37 Auto Detect: เพิ่ม list="tickerList" เพื่อทำ Auto-Complete -->
+                                        <div class="col-md-3 col-6">
+                                            <label class="form-label" style="font-size:0.8rem;">หุ้น (Ticker) <small id="tickerHint" class="text-success fw-bold"></small></label>
+                                            <input type="text" id="txnTicker" class="form-control form-control-sm" required placeholder="เช่น VTI" style="text-transform: uppercase;" list="tickerList" autocomplete="off">
+                                            <datalist id="tickerList"></datalist>
+                                        </div>
                                         <div class="col-md-3 col-6"><label class="form-label" id="lblShares" style="font-size:0.8rem;">จำนวนหุ้น</label><input type="number" id="txnShares" class="form-control form-control-sm" step="any" required></div>
                                     </div>
                                     <div class="row g-2 mb-3">
@@ -212,7 +217,6 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <!-- V36: เพิ่มปุ่ม Import / Export ตรงนี้ -->
                     <div class="card-header-pro d-flex justify-content-between align-items-center flex-wrap gap-2">
                         <span>ประวัติการทำรายการ (History)</span>
                         <div class="d-flex gap-2">
@@ -330,9 +334,20 @@
             }
         });
 
+        // V37 Auto Detect: ค้นหาชื่อหุ้นและเติมให้ตอนพิมพ์
         document.getElementById('txnTicker').addEventListener('input', function() {
             let val = this.value.toUpperCase().trim();
             document.getElementById('tickerHint').innerText = stockNames[val] ? `(${stockNames[val]})` : '';
+        });
+
+        // V37 Auto Detect: ดึงราคาอัตโนมัติเมื่อพิมพ์เสร็จ (คลิกที่อื่น หรือ กด Tab)
+        document.getElementById('txnTicker').addEventListener('blur', function() {
+            let val = this.value.toUpperCase().trim();
+            this.value = val; // บังคับตัวพิมพ์ใหญ่ลงในฟอร์ม
+            // ถ้าระบบมีราคาล่าสุดเก็บไว้ ให้เติมใส่ช่องราคาให้อัตโนมัติ (ยกเว้นช่องปันผล)
+            if(val && marketPrices[val] && document.getElementById('txnType').value !== 'DIVIDEND') {
+                document.getElementById('txnPrice').value = marketPrices[val].toFixed(2);
+            }
         });
 
         document.getElementById('dimePromo').addEventListener('change', function() {
@@ -742,12 +757,26 @@
 
         function renderFilters() {
             const container = document.getElementById('filterContainer');
+            const datalist = document.getElementById('tickerList'); // V37 Datalist
+            
             let groups = new Set(); let tickers = new Set(); let hasCash = false;
+            let allTickers = new Set(Object.keys(stockNames)); // ใส่หุ้นดังๆ เผื่อไว้ให้พิมพ์ง่ายๆ
 
             transactions.forEach(t => {
                 if(t.type === 'DEPOSIT' || t.type === 'WITHDRAW') hasCash = true;
-                else { tickers.add(t.ticker); groups.add(portfolioMapping[t.ticker] || 'Stock'); }
+                else { 
+                    tickers.add(t.ticker); 
+                    allTickers.add(t.ticker);
+                    groups.add(portfolioMapping[t.ticker] || 'Stock'); 
+                }
             });
+
+            // V37 Auto Detect: อัปเดตรายชื่อหุ้นเข้าไปใน Datalist
+            if(datalist) {
+                let datalistHTML = '';
+                Array.from(allTickers).sort().forEach(tk => { datalistHTML += `<option value="${tk}">`; });
+                datalist.innerHTML = datalistHTML;
+            }
 
             let html = `<button class="btn btn-sm ${currentFilterType === 'ALL' ? 'btn-dark' : 'btn-outline-secondary'} rounded-pill px-3" onclick="setFilter('ALL', '')">ทั้งหมด</button>`;
             
@@ -934,9 +963,6 @@
             if(confirm("คำเตือน! ล้างประวัติทั้งหมด?")) { transactions = []; localStorage.clear(); cancelEdit(); renderTable(); }
         };
 
-        // ==========================================
-        // V36: ฟังก์ชัน Import / Export CSV
-        // ==========================================
         window.exportCSV = function() {
             if(transactions.length === 0) { alert("ยังไม่มีข้อมูลให้ส่งออกครับ"); return; }
             let csvContent = "\uFEFFDate,Type,Ticker,Shares,Price_USD,Comm_USD,Comm_THB,Comm_Curr,Total_THB\n";
