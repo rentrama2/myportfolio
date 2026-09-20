@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V38)</title>
+    <title>My Portfolio Pro Dashboard (V39)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -11,10 +11,25 @@
         .text-profit { color: #198754 !important; font-weight: bold; } 
         .text-loss { color: #dc3545 !important; font-weight: bold; } 
         
-        .card { border: none; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); transition: transform 0.2s, box-shadow 0.3s; }
-        .card-header-pro { background-color: transparent; border-bottom: 1px solid #f0f0f0; padding: 16px 20px; font-weight: 600; font-size: 1.1rem; }
-        .metric-title { font-size: 0.85rem; color: #6c757d; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-        .metric-value { font-size: 1.8rem; font-weight: 700; color: #2d3436; line-height: 1.2; margin-top: 5px; }
+        /* V39: ปรับกรอบและสัดส่วนให้ชัดเจน */
+        .card { 
+            border: 1px solid #e2e8f0; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); 
+            transition: transform 0.2s, box-shadow 0.3s; 
+            background-color: #ffffff;
+        }
+        .card-header-pro { 
+            background-color: #f8fafc; /* พื้นหลังสีเทาอ่อนแยกสัดส่วนชัดเจน */
+            border-bottom: 1px solid #e2e8f0; 
+            border-radius: 12px 12px 0 0;
+            padding: 14px 20px; 
+            font-weight: 600; 
+            font-size: 1.05rem; 
+            color: #1e293b;
+        }
+        .metric-title { font-size: 0.85rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .metric-value { font-size: 1.8rem; font-weight: 700; color: #0f172a; line-height: 1.2; margin-top: 5px; }
         
         .price-input {
             border: 1px solid #e0e0e0 !important; background-color: #fdfdfd !important;
@@ -23,55 +38,56 @@
         }
         .price-input:focus { border-color: #0984e3 !important; box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.2) !important; outline: none; }
         .fx-input { width: 85px; border: none; background: transparent; color: #6c757d; font-weight: bold; text-align: center; outline: none; border-bottom: 2px dashed #b2bec3; }
-        .group-badge { cursor: pointer; transition: all 0.2s; background-color: #e9ecef; color: #495057; border-radius: 20px; padding: 4px 10px; font-size: 0.75rem; font-weight: 600; }
-        .group-badge:hover { background-color: #0984e3; color: white; }
+        .group-badge { cursor: pointer; transition: all 0.2s; background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; border-radius: 20px; padding: 4px 10px; font-size: 0.75rem; font-weight: 600; }
+        .group-badge:hover { background-color: #0984e3; color: white; border-color: #0984e3; }
         
         .filter-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: thin; }
         .filter-scroll::-webkit-scrollbar { height: 4px; }
         .filter-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         
-        /* Effect ตอนกดแก้ไข */
         .form-highlight { border: 2px solid #ffc107 !important; box-shadow: 0 0 15px rgba(255, 193, 7, 0.3) !important; }
     </style>
 </head>
 <body class="p-3 p-md-4">
 
-    <div class="container-fluid max-w-1200" style="max-width: 1300px; margin: 0 auto;">
+    <!-- V39: ขยาย max-width ให้เต็มจอ 98% ของหน้าจอ -->
+    <div class="container-fluid" style="max-width: 98%; margin: 0 auto;">
         
         <!-- Header -->
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="fw-bold" style="color: #2d3436;">My Portfolio</h2>
+            <h2 class="fw-bold" style="color: #0f172a;">My Portfolio</h2>
         </div>
 
         <!-- ROW 1: 4 Key Metrics + Dividend Summary -->
-        <div class="row g-3 mb-4">
+        <div class="row g-4 mb-4">
             <!-- 4 Metrics -->
             <div class="col-xl-8 col-lg-12">
                 <div class="row g-3 h-100">
                     <div class="col-md-3 col-6">
-                        <div class="card h-100 p-3">
+                        <!-- V39: เพิ่มขอบสีด้านบน -->
+                        <div class="card h-100 p-3" style="border-top: 4px solid #0d6efd;">
                             <div class="metric-title text-primary">🔵 มูลค่ารวม (Total Value)</div>
                             <div class="metric-value" id="topTotalValue">฿0.00</div>
                             <small class="text-muted mt-1" style="font-size: 0.75rem;">หุ้น + เงินสด</small>
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
-                        <div class="card h-100 p-3">
-                            <div class="metric-title">📈 ผลตอบแทนรวม (Return)</div>
+                        <div class="card h-100 p-3" style="border-top: 4px solid #198754;">
+                            <div class="metric-title text-success">📈 ผลตอบแทนรวม (Return)</div>
                             <div class="metric-value" id="topTotalReturn">฿0.00</div>
                             <small class="mt-1 fw-bold" id="topReturnPercent" style="font-size: 0.85rem;">0.00%</small>
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
-                        <div class="card h-100 p-3">
+                        <div class="card h-100 p-3" style="border-top: 4px solid #fd7e14;">
                             <div class="metric-title text-warning">🟠 ทุนในหุ้น (Invested)</div>
                             <div class="metric-value" id="topTotalInvested">฿0.00</div>
                             <small class="text-muted mt-1" style="font-size: 0.75rem;">ต้นทุนหุ้นทั้งหมด</small>
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
-                        <div class="card h-100 p-3">
-                            <div class="metric-title text-success">🟢 เงินสด (Cash)</div>
+                        <div class="card h-100 p-3" style="border-top: 4px solid #20c997;">
+                            <div class="metric-title text-info" style="color: #20c997 !important;">🟢 เงินสด (Cash)</div>
                             <div class="metric-value" id="topTotalCash">฿0.00</div>
                             <small class="text-muted mt-1" style="font-size: 0.75rem;">เงินคงเหลือในพอร์ต</small>
                         </div>
@@ -86,11 +102,11 @@
                     <div class="card-body p-0">
                         <div class="table-responsive">
                             <table class="table table-hover text-center align-middle m-0" style="font-size: 0.95rem;">
-                                <thead class="table-light">
+                                <thead style="background-color: #f8fafc;">
                                     <tr>
-                                        <th class="border-0">ปี (Year)</th>
-                                        <th class="border-0">ยอดรวม (USD)</th>
-                                        <th class="border-0">ยอดรวม (THB)</th>
+                                        <th class="py-2 border-0 text-muted" style="font-weight: 600;">ปี (Year)</th>
+                                        <th class="py-2 border-0 text-muted" style="font-weight: 600;">ยอดรวม (USD)</th>
+                                        <th class="py-2 border-0 text-muted" style="font-weight: 600;">ยอดรวม (THB)</th>
                                     </tr>
                                 </thead>
                                 <tbody id="dividendTableBody"></tbody>
@@ -101,23 +117,23 @@
             </div>
         </div>
 
-        <!-- ROW 2: Charts (Allocation + Performance) -->
-        <div class="row g-3 mb-4">
-            <div class="col-md-4">
+        <!-- ROW 2: Charts (สลับ Performance ซ้าย / Allocation ขวา) -->
+        <div class="row g-4 mb-4">
+            <div class="col-xl-8 col-lg-7">
                 <div class="card h-100">
-                    <div class="card-header-pro">สัดส่วนการลงทุน (THB)</div>
-                    <div class="card-body text-center d-flex flex-column justify-content-center align-items-center">
-                        <p id="noDataText" class="text-muted mt-5" style="display: none;">ยังไม่มีข้อมูล</p>
-                        <div style="max-width: 250px; width: 100%;"><canvas id="allocationChart"></canvas></div>
+                    <div class="card-header-pro">📈 Performance (มูลค่าทุนสะสมตามช่วงเวลา)</div>
+                    <div class="card-body" id="performanceChartContainer" style="position: relative; height: 320px; width: 100%;">
+                        <canvas id="performanceChart"></canvas>
+                        <div id="noPerfData" class="text-center text-muted" style="display:none; padding-top: 100px;">ยังไม่มีประวัติการทำรายการเพียงพอ</div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-xl-4 col-lg-5">
                 <div class="card h-100">
-                    <div class="card-header-pro">📈 Performance (มูลค่าทุนสะสมตามช่วงเวลา)</div>
-                    <div class="card-body" id="performanceChartContainer" style="position: relative; height: 280px; width: 100%;">
-                        <canvas id="performanceChart"></canvas>
-                        <div id="noPerfData" class="text-center text-muted" style="display:none; padding-top: 80px;">ยังไม่มีประวัติการทำรายการเพียงพอ</div>
+                    <div class="card-header-pro">สัดส่วนการลงทุน (THB)</div>
+                    <div class="card-body text-center d-flex flex-column justify-content-center align-items-center" style="height: 320px;">
+                        <p id="noDataText" class="text-muted mt-5" style="display: none;">ยังไม่มีข้อมูล</p>
+                        <div style="max-width: 260px; width: 100%;"><canvas id="allocationChart"></canvas></div>
                     </div>
                 </div>
             </div>
@@ -139,18 +155,18 @@
                     <div class="card-body p-0">
                         <div class="table-responsive">
                             <table class="table table-hover text-center align-middle m-0" style="font-size: 0.95rem;">
-                                <thead style="background-color: #f8f9fa;">
+                                <thead style="background-color: #f8fafc;">
                                     <tr>
                                         <th class="py-3 border-0">หุ้น / กลุ่มพอร์ต</th>
                                         <th class="py-3 border-0">จำนวนหุ้น</th>
-                                        <th class="py-3 border-0">ราคาต้นทุน<br><small>(เฉลี่ยต่อหุ้น USD)</small></th>
-                                        <th class="py-3 border-0">ทุนรวม (THB)<br><small>สำหรับหักลบกำไร</small></th>
-                                        <th class="py-3 border-0" style="background-color: #fff9e6; border-radius: 8px 8px 0 0;">ราคาปัจจุบัน (USD)<br><small class="text-muted fw-normal">คลิกแก้ได้</small></th>
-                                        <th class="py-3 border-0">มูลค่าล่าสุด<br><small>(USD / THB)</small></th>
-                                        <th class="py-3 border-0">ผลตอบแทนรวม<br><small>(% / USD / THB)</small></th>
+                                        <th class="py-3 border-0">ราคาต้นทุน<br><small class="text-muted">(เฉลี่ยต่อหุ้น USD)</small></th>
+                                        <th class="py-3 border-0">ทุนรวม (THB)<br><small class="text-muted">สำหรับหักลบกำไร</small></th>
+                                        <th class="py-3 border-0" style="background-color: #fff9e6; border-radius: 12px 12px 0 0;">ราคาปัจจุบัน (USD)<br><small class="text-muted fw-normal">คลิกแก้ได้</small></th>
+                                        <th class="py-3 border-0">มูลค่าล่าสุด<br><small class="text-muted">(USD / THB)</small></th>
+                                        <th class="py-3 border-0">ผลตอบแทนรวม<br><small class="text-muted">(% / USD / THB)</small></th>
                                     </tr>
                                 </thead>
-                                <tbody id="summaryTableBody" style="border-top: 1px solid #eee;"></tbody>
+                                <tbody id="summaryTableBody" style="border-top: 1px solid #e2e8f0;"></tbody>
                             </table>
                         </div>
                     </div>
@@ -162,21 +178,20 @@
         <div class="row mb-4" id="transactionFormSection">
             <div class="col-12">
                 <div class="card" id="formCardHighlight" style="border: 2px solid transparent;">
-                    <div class="card-header-pro d-flex justify-content-between align-items-center" id="formHeader">
+                    <div class="card-header-pro d-flex justify-content-between align-items-center" id="formHeader" style="background-color: #f8fafc;">
                         <span id="formTitleText">บันทึกรายการใหม่ (Transaction)</span>
                         <button type="button" id="btnCancelEdit" class="btn btn-sm btn-outline-secondary d-none" onclick="cancelEdit()">ยกเลิกการแก้ไข</button>
                     </div>
                     <div class="card-body">
                         <form id="txnForm">
-                            <!-- ฟอร์มถูกจัดเรียงเป็นแนวยาว เพื่อให้ประหยัดพื้นที่แนวตั้ง -->
                             <div class="row g-3 mb-3 align-items-start">
                                 <div class="col-lg-2 col-md-4 col-6">
-                                    <label class="form-label" style="font-size:0.8rem;">วันที่</label>
+                                    <label class="form-label text-muted fw-bold" style="font-size:0.8rem;">วันที่</label>
                                     <input type="date" id="txnDate" class="form-control form-control-sm" required>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-6">
                                     <label class="form-label text-primary fw-bold" style="font-size:0.8rem;">ประเภท</label>
-                                    <select id="txnType" class="form-select form-select-sm border-primary">
+                                    <select id="txnType" class="form-select form-select-sm border-primary" style="background-color: #f0f9ff;">
                                         <option value="BUY">ซื้อ (BUY)</option>
                                         <option value="SELL">ขาย (SELL)</option>
                                         <option value="DIVIDEND">ปันผล (DIVIDEND)</option>
@@ -185,20 +200,20 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-6">
-                                    <label class="form-label" style="font-size:0.8rem;">หุ้น (Ticker) <small id="tickerHint" class="text-success fw-bold"></small></label>
+                                    <label class="form-label text-muted fw-bold" style="font-size:0.8rem;">หุ้น (Ticker) <small id="tickerHint" class="text-success fw-bold"></small></label>
                                     <input type="text" id="txnTicker" class="form-control form-control-sm" required placeholder="เช่น VTI" style="text-transform: uppercase;" list="tickerList" autocomplete="off">
                                     <datalist id="tickerList"></datalist>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-6">
-                                    <label class="form-label" id="lblShares" style="font-size:0.8rem;">จำนวนหุ้น</label>
+                                    <label class="form-label text-muted fw-bold" id="lblShares" style="font-size:0.8rem;">จำนวนหุ้น</label>
                                     <input type="number" id="txnShares" class="form-control form-control-sm" step="any" required>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-6">
-                                    <label class="form-label" id="lblPrice" style="font-size:0.8rem;">ราคา (USD)</label>
+                                    <label class="form-label text-muted fw-bold" id="lblPrice" style="font-size:0.8rem;">ราคา (USD)</label>
                                     <input type="number" id="txnPrice" class="form-control form-control-sm" step="0.01" required>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-6">
-                                    <label class="form-label" id="lblComm" style="font-size:0.8rem;">ค่าคอมฯ</label>
+                                    <label class="form-label text-muted fw-bold" id="lblComm" style="font-size:0.8rem;">ค่าคอมฯ</label>
                                     <div class="input-group input-group-sm">
                                         <input type="number" id="txnComm" class="form-control" step="any" value="1.64" required>
                                         <select id="txnCommCurr" class="form-select border-secondary text-secondary" style="max-width: 65px; padding: 0 5px; font-size: 0.75rem;">
@@ -241,7 +256,7 @@
                         </div>
                     </div>
                     
-                    <div class="p-3 border-bottom" style="background-color: #fdfdfd;">
+                    <div class="p-3 border-bottom" style="background-color: #f8fafc;">
                         <div id="filterContainer" class="filter-scroll"></div>
                     </div>
 
@@ -250,13 +265,13 @@
                             <table class="table table-hover text-center align-middle m-0" style="font-size: 0.85rem;">
                                 <thead class="table-light">
                                     <tr>
-                                        <th class="border-0">วันที่</th><th class="border-0">ประเภท</th><th class="border-0">หุ้น</th>
-                                        <th class="border-0">จำนวน</th><th class="border-0">ราคา(USD)</th>
-                                        <th class="border-0">ค่าธรรมเนียม</th><th class="border-0 text-primary">ยอดสุทธิ(USD)</th>
-                                        <th class="border-0 text-danger">ยอดสุทธิ(THB)</th><th class="border-0">จัดการ</th>
+                                        <th class="border-0 py-3">วันที่</th><th class="border-0 py-3">ประเภท</th><th class="border-0 py-3">หุ้น</th>
+                                        <th class="border-0 py-3">จำนวน</th><th class="border-0 py-3">ราคา(USD)</th>
+                                        <th class="border-0 py-3">ค่าธรรมเนียม</th><th class="border-0 text-primary py-3">ยอดสุทธิ(USD)</th>
+                                        <th class="border-0 text-danger py-3">ยอดสุทธิ(THB)</th><th class="border-0 py-3">จัดการ</th>
                                     </tr>
                                 </thead>
-                                <tbody id="txnTableBody"></tbody>
+                                <tbody id="txnTableBody" style="border-top: 1px solid #e2e8f0;"></tbody>
                             </table>
                         </div>
                     </div>
@@ -506,10 +521,10 @@
             let years = Object.keys(divByYear).sort((a,b) => b - a);
             
             if(years.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="3" class="text-muted py-4">ยังไม่มีประวัติรับเงินปันผล</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="3" class="text-muted py-4 border-0">ยังไม่มีประวัติรับเงินปันผล</td></tr>';
             } else {
                 years.forEach(y => {
-                    tbody.innerHTML += `<tr><td class="fw-bold border-0">${y}</td><td class="text-profit border-0">+$${divByYear[y].usd.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2})}</td><td class="text-profit border-0">+฿${divByYear[y].thb.toLocaleString('th-TH', {minimumFractionDigits:2, maximumFractionDigits:2})}</td></tr>`;
+                    tbody.innerHTML += `<tr><td class="fw-bold border-0 py-2">${y}</td><td class="text-profit border-0 py-2">+$${divByYear[y].usd.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2})}</td><td class="text-profit border-0 py-2">+฿${divByYear[y].thb.toLocaleString('th-TH', {minimumFractionDigits:2, maximumFractionDigits:2})}</td></tr>`;
                 });
             }
         }
@@ -613,7 +628,7 @@
                             return label;
                         }}}
                     },
-                    scales: { y: { beginAtZero: true, ticks: { callback: function(value) { return '฿' + value.toLocaleString(); } } }, x: { grid: { display: false } } }
+                    scales: { y: { beginAtZero: true, border: {display: false}, grid: {color: '#f1f5f9'}, ticks: { callback: function(value) { return '฿' + value.toLocaleString(); }, font: {size: 10} } }, x: { grid: { display: false }, ticks: {font: {size: 10}} } }
                 }
             });
         }
@@ -684,21 +699,21 @@
 
                     summaryBody.innerHTML += `
                         <tr>
-                            <td class="border-end-0">
+                            <td class="border-end-0 py-3">
                                 <strong>${ticker}</strong><br>
                                 <span class="badge group-badge mt-1" onclick="changeGroup('${ticker}')">📁 ${groupName}</span>
                             </td>
-                            <td class="border-0">${shares.toFixed(7)}</td>
-                            <td class="border-0">
-                                <strong>$${avgCostUSD.toFixed(4)}</strong><br>
+                            <td class="border-0 py-3">${shares.toFixed(7)}</td>
+                            <td class="border-0 py-3">
+                                <strong style="color: #0f172a;">$${avgCostUSD.toFixed(4)}</strong><br>
                                 <small class="text-muted">(รวม $${costUSD.toFixed(2)})</small>
                             </td>
-                            <td class="border-0">
-                                ฿${costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}<br>
+                            <td class="border-0 py-3">
+                                <span style="color: #0f172a;">฿${costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</span><br>
                                 <button class="btn btn-sm btn-outline-warning mt-1 py-0 px-2" style="font-size: 0.7rem;" onclick="syncCostTHB('${ticker}', ${costTHB})">🪄 จูนทุนแอป</button>
                                 ${undoBtn}
                             </td>
-                            <td class="bg-warning bg-opacity-10 align-middle border-0">
+                            <td class="bg-warning bg-opacity-10 align-middle border-0 py-3">
                                 <div class="d-flex justify-content-center">
                                     <input type="number" class="form-control price-input" 
                                            value="${currentPriceUSD.toFixed(2)}" step="any"
@@ -706,11 +721,11 @@
                                            onclick="this.select()">
                                 </div>
                             </td>
-                            <td class="border-0">
+                            <td class="border-0 py-3">
                                 $${mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}<br>
-                                <strong>≈ ฿${mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>
+                                <strong style="color: #0f172a;">≈ ฿${mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>
                             </td>
-                            <td class="${plClass} fw-bold border-start-0" style="font-size: 0.95rem;">
+                            <td class="${plClass} border-start-0 py-3" style="font-size: 0.95rem;">
                                 ${sign}${plPercent.toFixed(2)}%<br>
                                 <small style="font-size: 0.75rem;">(${sign}$${plUSD.toFixed(2)})</small><br>
                                 ≈ ${sign}฿${plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}
@@ -720,7 +735,7 @@
                 }
             }
 
-            if(!hasData) summaryBody.innerHTML = `<tr><td colspan="7" class="text-muted py-4">ยังไม่มีหุ้นในพอร์ตโฟลิโอ เริ่มบันทึกรายการได้เลย!</td></tr>`;
+            if(!hasData) summaryBody.innerHTML = `<tr><td colspan="7" class="text-muted py-5 border-0">ยังไม่มีหุ้นในพอร์ตโฟลิโอ เริ่มบันทึกรายการได้เลย!</td></tr>`;
             
             let totalPortfolioValue = topMetrics.mktValue + topMetrics.cash;
             let totalPlTHB = topMetrics.mktValue - topMetrics.invested;
@@ -754,7 +769,7 @@
                 allocationChart = new Chart(ctx, { 
                     type: 'doughnut', 
                     data: { labels: keys, datasets: [{ data: Object.values(groupTotals), backgroundColor: bgColors, borderWidth: 0 }] }, 
-                    options: { responsive: true, cutout: '75%', plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, padding: 20 } } } } 
+                    options: { responsive: true, maintainAspectRatio: false, cutout: '75%', plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, padding: 20 } } } } 
                 });
             }
 
@@ -854,7 +869,7 @@
                 
                 let showUSD = totalUSD > 0 ? `$${totalUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}` : '-';
 
-                tbody.innerHTML += `<tr><td class="border-0">${txn.date}</td><td class="border-0">${typeBadge}</td><td class="border-0"><strong>${txn.ticker}</strong></td><td class="border-0">${displayShares}</td><td class="border-0">${displayPrice}</td><td class="border-0">${commText}</td><td class="text-primary fw-bold border-0">${showUSD}</td><td class="text-danger fw-bold border-0">${displayTHB}</td><td class="border-0"><div class="d-flex justify-content-center gap-1"><button class="btn btn-sm btn-warning py-0 px-2" onclick="editTxn(${originalIndex})">แก้ไข</button><button class="btn btn-sm btn-outline-danger py-0 px-2" onclick="deleteTxn(${originalIndex})">ลบ</button></div></td></tr>`;
+                tbody.innerHTML += `<tr><td class="border-0 py-3">${txn.date}</td><td class="border-0 py-3">${typeBadge}</td><td class="border-0 py-3"><strong>${txn.ticker}</strong></td><td class="border-0 py-3">${displayShares}</td><td class="border-0 py-3">${displayPrice}</td><td class="border-0 py-3">${commText}</td><td class="text-primary fw-bold border-0 py-3">${showUSD}</td><td class="text-danger fw-bold border-0 py-3">${displayTHB}</td><td class="border-0 py-3"><div class="d-flex justify-content-center gap-1"><button class="btn btn-sm btn-warning py-0 px-2" onclick="editTxn(${originalIndex})">แก้ไข</button><button class="btn btn-sm btn-outline-danger py-0 px-2" onclick="deleteTxn(${originalIndex})">ลบ</button></div></td></tr>`;
             });
             updateSummaryAndChart();
         }
@@ -899,7 +914,6 @@
             document.getElementById('formTitleText').innerText = '✏️ กำลังแก้ไขรายการ...';
             document.getElementById('formHeader').classList.add('text-warning');
             
-            // Effect เลื่อนจอและสว่างขึ้น
             window.scrollTo({ top: document.getElementById('transactionFormSection').offsetTop - 20, behavior: 'smooth' });
             const formCard = document.getElementById('formCardHighlight');
             formCard.classList.add('form-highlight');
