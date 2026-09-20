@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V34)</title>
+    <title>My Portfolio Pro Dashboard (V35)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <!-- New Row: Performance Chart & Dividend Summary -->
+        <!-- Performance Chart & Dividend Summary -->
         <div class="row mb-2">
             <!-- Performance Chart -->
             <div class="col-md-8">
@@ -147,14 +147,23 @@
                                     </div>
                                     <div class="row g-2 mb-3">
                                         <div class="col-md-3 col-6"><label class="form-label" id="lblPrice" style="font-size:0.8rem;">ราคา (USD)</label><input type="number" id="txnPrice" class="form-control form-control-sm" step="0.01" required></div>
+                                        
+                                        <!-- V35 Smart Commission Input -->
                                         <div class="col-md-3 col-6">
-                                            <label class="form-label" id="lblComm" style="font-size:0.8rem;">ค่าคอมมิชชัน (USD)</label>
-                                            <input type="number" id="txnComm" class="form-control form-control-sm" step="any" value="0.15" required>
+                                            <label class="form-label" id="lblComm" style="font-size:0.8rem;">ค่าคอมฯ</label>
+                                            <div class="input-group input-group-sm">
+                                                <input type="number" id="txnComm" class="form-control" step="any" value="1.64" required>
+                                                <select id="txnCommCurr" class="form-select border-secondary text-secondary" style="max-width: 65px; padding: 0 5px; font-size: 0.75rem;">
+                                                    <option value="THB" selected>THB</option>
+                                                    <option value="USD">USD</option>
+                                                </select>
+                                            </div>
                                             <div class="d-flex justify-content-between mt-1">
-                                                <div class="form-check"><input class="form-check-input" style="transform: scale(0.8);" type="checkbox" id="txnVat" checked><label class="form-check-label text-muted" style="font-size: 0.7rem;">+ VAT</label></div>
+                                                <div class="form-check" id="vatWrapper"><input class="form-check-input" style="transform: scale(0.8);" type="checkbox" id="txnVat" disabled><label class="form-check-label text-muted" style="font-size: 0.7rem;">+ VAT</label></div>
                                                 <div class="form-check"><input class="form-check-input" style="transform: scale(0.8);" type="checkbox" id="dimePromo"><label class="form-check-label text-success" style="font-size: 0.7rem;">ฟรีคอม</label></div>
                                             </div>
                                         </div>
+
                                         <div class="col-md-6 col-12">
                                             <label class="form-label text-danger fw-bold" id="lblTotalTHB" style="font-size:0.8rem;">เงินบาทที่จ่ายจริง (THB) - ข้ามได้</label>
                                             <div class="input-group input-group-sm">
@@ -265,6 +274,7 @@
         let currentFilterValue = '';
         let perfChartObj = null;
 
+        // ควบคุมฟอร์ม UI
         document.getElementById('txnType').addEventListener('change', function() {
             const type = this.value;
             const isDiv = type === 'DIVIDEND';
@@ -274,7 +284,7 @@
             document.getElementById('txnShares').disabled = isCash;
             document.getElementById('txnPrice').disabled = isCash;
             document.getElementById('txnComm').disabled = isCash;
-            document.getElementById('txnVat').disabled = isCash || isDiv;
+            document.getElementById('txnCommCurr').disabled = isCash || isDiv;
             document.getElementById('dimePromo').disabled = isCash || isDiv;
 
             if(isCash) {
@@ -289,16 +299,36 @@
                 document.getElementById('lblShares').innerText = isDiv ? 'จำนวนหุ้น (ข้ามได้)' : 'จำนวนหุ้น';
                 document.getElementById('txnShares').readOnly = isDiv;
                 document.getElementById('lblPrice').innerText = isDiv ? 'ยอดปันผลรวม (USD)' : 'ราคา (USD)';
-                document.getElementById('lblComm').innerText = isDiv ? 'หักภาษี 15% WHT (USD)' : 'ค่าคอมมิชชัน (USD)';
+                document.getElementById('lblComm').innerText = isDiv ? 'หักภาษี 15% WHT' : 'ค่าคอมฯ';
                 document.getElementById('lblTotalTHB').innerText = 'เงินบาทที่จ่ายจริง (THB) - ข้ามได้';
                 document.getElementById('txnTotalTHB').required = false;
                 
                 if(editingIndex === -1) {
                     document.getElementById('txnShares').value = isDiv ? 0 : '';
-                    document.getElementById('txnComm').value = isDiv ? 0 : 0.15;
-                    document.getElementById('txnVat').checked = !isDiv;
+                    
+                    if (isDiv) {
+                        document.getElementById('txnCommCurr').value = 'USD';
+                        document.getElementById('txnComm').value = 0;
+                    } else {
+                        document.getElementById('txnCommCurr').value = 'THB';
+                        document.getElementById('txnComm').value = 1.64;
+                    }
+                    document.getElementById('txnCommCurr').dispatchEvent(new Event('change'));
                     document.getElementById('dimePromo').checked = false;
                 }
+            }
+        });
+
+        // จัดการเรื่องเลือกสกุลเงินคอมมิชชัน THB/USD
+        document.getElementById('txnCommCurr').addEventListener('change', function() {
+            let curr = this.value;
+            let type = document.getElementById('txnType').value;
+            if (curr === 'THB' || type === 'DIVIDEND') {
+                document.getElementById('txnVat').disabled = true;
+                document.getElementById('txnVat').checked = false;
+            } else {
+                document.getElementById('txnVat').disabled = false;
+                document.getElementById('txnVat').checked = true;
             }
         });
 
@@ -308,10 +338,12 @@
         });
 
         document.getElementById('dimePromo').addEventListener('change', function() {
-            document.getElementById('txnComm').value = this.checked ? 0 : 0.15;
+            document.getElementById('txnComm').value = this.checked ? 0 : (document.getElementById('txnCommCurr').value === 'THB' ? 1.64 : 0.15);
             document.getElementById('txnComm').readOnly = this.checked;
-            document.getElementById('txnVat').checked = !this.checked;
-            document.getElementById('txnVat').disabled = this.checked;
+            if (document.getElementById('txnCommCurr').value === 'USD') {
+                document.getElementById('txnVat').checked = !this.checked;
+                document.getElementById('txnVat').disabled = this.checked;
+            }
         });
 
         document.getElementById('liveFxInput').addEventListener('change', function() {
@@ -361,6 +393,13 @@
             for(let i = 0; i < transactions.length; i++) {
                 let txn = transactions[i];
                 if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') continue;
+
+                // V35 Legacy Fix: ถ้าไม่มีค่า commCurr (ข้อมูลเก่า) ให้เหมาว่าเป็น USD
+                if (!txn.commCurr) {
+                    txn.commCurr = 'USD';
+                    txn.commTHB = txn.comm; 
+                    hasChanged = true;
+                }
 
                 let parsedTHB = parseFloat(txn.totalTHB);
                 if(isNaN(parsedTHB) || parsedTHB <= 0) {
@@ -413,7 +452,6 @@
                 localStorage.setItem('myTunedDiffs', JSON.stringify(tunedDiffs));
                 localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
                 renderTable();
-                alert(`คืนค่าเดิมเรียบร้อยแล้วครับ!`);
             }
         };
 
@@ -428,9 +466,6 @@
             }
         };
 
-        // ==========================================
-        // ฟังก์ชันใหม่: สรุปปันผลรายปี
-        // ==========================================
         function renderDividends() {
             let divByYear = {};
             transactions.forEach(t => {
@@ -445,26 +480,17 @@
             
             let tbody = document.getElementById('dividendTableBody');
             tbody.innerHTML = '';
-            let years = Object.keys(divByYear).sort((a,b) => b - a); // เรียงปีล่าสุดขึ้นก่อน
+            let years = Object.keys(divByYear).sort((a,b) => b - a);
             
             if(years.length === 0) {
                 tbody.innerHTML = '<tr><td colspan="3" class="text-muted py-4">ยังไม่มีประวัติรับเงินปันผล</td></tr>';
             } else {
                 years.forEach(y => {
-                    tbody.innerHTML += `
-                        <tr>
-                            <td class="fw-bold border-0">${y}</td>
-                            <td class="text-profit border-0">+$${divByYear[y].usd.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
-                            <td class="text-profit border-0">+฿${divByYear[y].thb.toLocaleString('th-TH', {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
-                        </tr>
-                    `;
+                    tbody.innerHTML += `<tr><td class="fw-bold border-0">${y}</td><td class="text-profit border-0">+$${divByYear[y].usd.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2})}</td><td class="text-profit border-0">+฿${divByYear[y].thb.toLocaleString('th-TH', {minimumFractionDigits:2, maximumFractionDigits:2})}</td></tr>`;
                 });
             }
         }
 
-        // ==========================================
-        // ฟังก์ชันใหม่: วาดกราฟ Performance แบบขั้นบันได
-        // ==========================================
         function renderPerformanceChart() {
             let container = document.getElementById('performanceChart');
             let noData = document.getElementById('noPerfData');
@@ -479,7 +505,7 @@
 
             let sortedTxns = [...transactions].sort((a,b) => new Date(a.date) - new Date(b.date));
             let dates = [];
-            let datasetsData = { 'Total': [] }; // เก็บยอดรวมทั้งหมด
+            let datasetsData = { 'Total': [] }; 
             let holdings = {};
             let currentCash = 0;
             
@@ -487,7 +513,6 @@
             let currentIndex = 0;
 
             uniqueDates.forEach(date => {
-                // อัปเดตข้อมูลของแต่ละวัน
                 while(currentIndex < sortedTxns.length && sortedTxns[currentIndex].date === date) {
                     let txn = sortedTxns[currentIndex];
                     let parsedTHB = parseFloat(txn.totalTHB) || 0;
@@ -512,7 +537,6 @@
                     currentIndex++;
                 }
 
-                // สรุปยอดตามกลุ่มพอร์ต ณ สิ้นวันนั้นๆ
                 let groupCosts = {};
                 let totalInvested = 0;
                 for(let ticker in holdings) {
@@ -526,7 +550,6 @@
                 dates.push(date);
                 datasetsData['Total'].push(totalInvested + currentCash);
 
-                // เติมข้อมูลให้แต่ละกลุ่ม ถ้าวันก่อนหน้าไม่มีให้ใส่ 0
                 Object.keys(groupCosts).forEach(g => {
                     if(!datasetsData[g]) datasetsData[g] = new Array(dates.length - 1).fill(0); 
                 });
@@ -535,36 +558,17 @@
                 });
             });
 
-            // สร้างชุดข้อมูลสำหรับ Chart.js
             let datasets = [];
-            
-            // 1. เส้นมูลค่ารวม (สีเขียว พื้นที่แรเงา)
             datasets.push({
-                label: 'มูลค่ารวม (Total)',
-                data: datasetsData['Total'],
-                borderColor: '#00b894',
-                backgroundColor: 'rgba(0, 184, 148, 0.15)', // แรเงาสีเขียวอ่อน
-                borderWidth: 2,
-                fill: true,
-                stepped: 'before', // ทำให้เป็นกราฟขั้นบันได
-                pointRadius: 0,
-                pointHoverRadius: 4
+                label: 'มูลค่ารวม (Total)', data: datasetsData['Total'], borderColor: '#00b894', backgroundColor: 'rgba(0, 184, 148, 0.15)', borderWidth: 2, fill: true, stepped: 'before', pointRadius: 0, pointHoverRadius: 4
             });
 
-            // 2. เส้นแบ่งตามกลุ่มพอร์ต (สีต่างๆ เส้นบางๆ)
             const colors = ['#0984e3', '#fdcb6e', '#6c5ce7', '#e84393', '#00cec9', '#d63031'];
             let colorIdx = 0;
             Object.keys(datasetsData).forEach(g => {
                 if(g !== 'Total' && Math.max(...datasetsData[g]) > 0) {
                     datasets.push({
-                        label: g,
-                        data: datasetsData[g],
-                        borderColor: colors[colorIdx % colors.length],
-                        borderWidth: 1.5,
-                        fill: false,
-                        stepped: 'before',
-                        pointRadius: 0,
-                        pointHoverRadius: 4
+                        label: g, data: datasetsData[g], borderColor: colors[colorIdx % colors.length], borderWidth: 1.5, fill: false, stepped: 'before', pointRadius: 0, pointHoverRadius: 4
                     });
                     colorIdx++;
                 }
@@ -574,12 +578,9 @@
             if (perfChartObj != null) perfChartObj.destroy();
             
             perfChartObj = new Chart(ctx, {
-                type: 'line',
-                data: { labels: dates, datasets: datasets },
+                type: 'line', data: { labels: dates, datasets: datasets },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    interaction: { mode: 'index', intersect: false },
+                    responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
                     plugins: { 
                         legend: { position: 'bottom', labels: { boxWidth: 12, usePointStyle: true, padding: 20 } },
                         tooltip: { callbacks: { label: function(context) {
@@ -589,13 +590,7 @@
                             return label;
                         }}}
                     },
-                    scales: { 
-                        y: { 
-                            beginAtZero: true, 
-                            ticks: { callback: function(value) { return '฿' + value.toLocaleString(); } }
-                        },
-                        x: { grid: { display: false } }
-                    }
+                    scales: { y: { beginAtZero: true, ticks: { callback: function(value) { return '฿' + value.toLocaleString(); } } }, x: { grid: { display: false } } }
                 }
             });
         }
@@ -740,7 +735,6 @@
                 });
             }
 
-            // เรียกใช้วาดกราฟ และ อัปเดตปันผล
             renderPerformanceChart();
             renderDividends();
         }
@@ -805,10 +799,16 @@
                 let usdAmount = Number((txn.shares * txn.price).toFixed(2));
                 let displayTHB = txn.totalTHB > 0 ? `฿${txn.totalTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}` : `<span class="text-muted">(USD ล้วน)</span>`;
 
+                // V35: จัดการแสดงผลค่าคอม ให้แสดงเป็นเงินที่ใช้จริง (THB หรือ USD)
+                let showCommText = '';
+                if(txn.comm === 0) showCommText = '<span class="text-success">ฟรี</span>';
+                else if(txn.commCurr === 'THB') showCommText = `฿${txn.commTHB}`; // โชว์เป็นบาทเลยตามหน้าแอป
+                else showCommText = `$${txn.comm.toFixed(4)}`;
+
                 if(txn.type === 'BUY') {
-                    totalUSD = usdAmount + txn.comm; typeBadge = '<span class="badge bg-success">ซื้อ</span>'; commText = txn.comm === 0 ? '<span class="text-success">ฟรี</span>' : `$${txn.comm.toFixed(4)}`;
+                    totalUSD = usdAmount + txn.comm; typeBadge = '<span class="badge bg-success">ซื้อ</span>'; commText = showCommText;
                 } else if(txn.type === 'SELL') {
-                    totalUSD = usdAmount - txn.comm; typeBadge = '<span class="badge bg-danger">ขาย</span>'; commText = txn.comm === 0 ? '<span class="text-success">ฟรี</span>' : `$${txn.comm.toFixed(4)}`;
+                    totalUSD = usdAmount - txn.comm; typeBadge = '<span class="badge bg-danger">ขาย</span>'; commText = showCommText;
                 } else if(txn.type === 'DIVIDEND') {
                     totalUSD = txn.price - txn.comm; typeBadge = '<span class="badge bg-info">ปันผล</span>'; commText = txn.comm === 0 ? '-' : `<span class="text-danger">-$${txn.comm.toFixed(2)}</span>`; displayShares = '-';
                 } else if(txn.type === 'DEPOSIT') {
@@ -837,8 +837,23 @@
                 document.getElementById('txnPrice').value = txn.price; document.getElementById('txnComm').value = txn.comm;
             } else {
                 document.getElementById('txnShares').value = txn.shares; document.getElementById('txnPrice').value = txn.price;
-                if(txn.comm === 0) { document.getElementById('dimePromo').checked = true; } 
-                else { document.getElementById('dimePromo').checked = false; document.getElementById('txnVat').checked = false; document.getElementById('txnComm').value = txn.comm; }
+                
+                // ดึงค่าสกุลเงินคอมมิชชันกลับมา
+                document.getElementById('txnCommCurr').value = txn.commCurr || 'USD';
+                document.getElementById('txnCommCurr').dispatchEvent(new Event('change'));
+
+                if(txn.comm === 0) { 
+                    document.getElementById('dimePromo').checked = true; 
+                    document.getElementById('txnComm').value = 0;
+                } else { 
+                    document.getElementById('dimePromo').checked = false; 
+                    if(txn.commCurr === 'THB') {
+                        document.getElementById('txnComm').value = txn.commTHB;
+                    } else {
+                        document.getElementById('txnVat').checked = false; 
+                        document.getElementById('txnComm').value = txn.comm; 
+                    }
+                }
                 document.getElementById('dimePromo').dispatchEvent(new Event('change'));
             }
             
@@ -853,9 +868,10 @@
             editingIndex = -1; document.getElementById('txnForm').reset(); document.getElementById('txnType').value = 'BUY'; document.getElementById('txnType').dispatchEvent(new Event('change'));
             const btn = document.getElementById('btnSubmitTxn'); btn.innerText = 'บันทึก'; btn.classList.replace('btn-warning', 'btn-dark'); btn.classList.replace('w-50', 'w-25');
             document.getElementById('btnCancelEdit').classList.add('d-none');
-            document.getElementById('txnDate').valueAsDate = new Date(); document.getElementById('txnVat').checked = true; 
+            document.getElementById('txnDate').valueAsDate = new Date();
         };
 
+        // V35 Smart Submit Logic
         document.getElementById('txnForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const btn = document.getElementById('btnSubmitTxn');
@@ -867,21 +883,51 @@
             const priceVal = parseFloat(document.getElementById('txnPrice').value) || 0;
             const sharesVal = parseFloat(document.getElementById('txnShares').value) || 0;
             
-            let baseComm = parseFloat(document.getElementById('txnComm').value) || 0;
-            let actualComm = (document.getElementById('txnVat').checked && typeVal !== 'DIVIDEND' && typeVal !== 'DEPOSIT' && typeVal !== 'WITHDRAW') ? baseComm * 1.07 : baseComm;
-
+            const commCurrVal = document.getElementById('txnCommCurr').value;
+            const inputComm = parseFloat(document.getElementById('txnComm').value) || 0;
+            let actualCommUSD = 0;
+            let savedCommTHB = inputComm;
+            
             let totalTHB = parseFloat(document.getElementById('txnTotalTHB').value);
+            let baseUSD = Number((priceVal * sharesVal).toFixed(2));
+
+            // ตรรกะคำนวณค่าคอม USD จากเงิน THB (Reverse Calculation)
+            if (typeVal === 'BUY' || typeVal === 'SELL') {
+                if (commCurrVal === 'THB') {
+                    if (!isNaN(totalTHB) && totalTHB > 0 && baseUSD > 0) {
+                        // คำนวณเรทเงินแฝงที่แอปใช้ ณ วินาทีนั้น
+                        let implicitFx = typeVal === 'BUY' ? (totalTHB - inputComm) / baseUSD : (totalTHB + inputComm) / baseUSD;
+                        actualCommUSD = inputComm / implicitFx;
+                    } else {
+                        // ถ้าไม่ยอมกรอกยอด THB รวม, ดึงเรทย้อนหลังมาคำนวณให้
+                        let historicalRate = await getHistoricalFx(dateVal);
+                        actualCommUSD = inputComm / historicalRate;
+                        totalTHB = typeVal === 'BUY' ? (baseUSD * historicalRate) + inputComm : (baseUSD * historicalRate) - inputComm;
+                    }
+                } else {
+                    // กรณีใช้แบบ USD ดั้งเดิม
+                    actualCommUSD = (document.getElementById('txnVat').checked) ? inputComm * 1.07 : inputComm;
+                    savedCommTHB = 0; // ไม่ใช้
+                }
+            } else if (typeVal === 'DIVIDEND') {
+                actualCommUSD = inputComm; // ปันผลมักหักภาษี 15% เป็นดอลลาร์
+            }
 
             if (typeVal !== 'DEPOSIT' && typeVal !== 'WITHDRAW' && (isNaN(totalTHB) || totalTHB <= 0)) {
-                let totalUSD = typeVal === 'DIVIDEND' ? priceVal - actualComm : (typeVal === 'BUY' ? Number((priceVal * sharesVal).toFixed(2)) + actualComm : Number((priceVal * sharesVal).toFixed(2)) - actualComm);
+                let totalUSD = typeVal === 'DIVIDEND' ? priceVal - actualCommUSD : (typeVal === 'BUY' ? baseUSD + actualCommUSD : baseUSD - actualCommUSD);
                 let historicalRate = await getHistoricalFx(dateVal);
                 totalTHB = Number((totalUSD * historicalRate).toFixed(2));
             }
             
-            const newTxn = { date: dateVal, ticker: tickerVal, type: typeVal, shares: sharesVal, price: priceVal, comm: actualComm, totalTHB: totalTHB };
+            // เพิ่มการเก็บค่า commTHB และ commCurr ลงประวัติ
+            const newTxn = { 
+                date: dateVal, ticker: tickerVal, type: typeVal, shares: sharesVal, 
+                price: priceVal, comm: actualCommUSD, commTHB: savedCommTHB, commCurr: commCurrVal, 
+                totalTHB: totalTHB 
+            };
 
             if (editingIndex > -1) { transactions[editingIndex] = newTxn; cancelEdit(); } 
-            else { transactions.push(newTxn); const td = document.getElementById('txnDate').value; this.reset(); document.getElementById('txnDate').value = td; document.getElementById('txnType').value = 'BUY'; document.getElementById('txnType').dispatchEvent(new Event('change')); document.getElementById('txnVat').checked = true; }
+            else { transactions.push(newTxn); const td = document.getElementById('txnDate').value; this.reset(); document.getElementById('txnDate').value = td; document.getElementById('txnType').value = 'BUY'; document.getElementById('txnType').dispatchEvent(new Event('change')); }
 
             localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions)); 
             await renderTable(); 
