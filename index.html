@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard</title>
+    <title>My Portfolio Pro Dashboard (V33)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .text-profit { color: #00b0ff; font-weight: bold; }
-        .text-loss { color: #ff5252; font-weight: bold; }
+        
+        /* แก้ไขสี กำไร/ขาดทุน ตรงนี้ครับ */
+        .text-profit { color: #198754 !important; font-weight: bold; } /* สีเขียว */
+        .text-loss { color: #dc3545 !important; font-weight: bold; } /* สีแดง */
+        
         .card { border: none; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); margin-bottom: 20px; transition: transform 0.2s; }
         .card-header-pro { background-color: transparent; border-bottom: 1px solid #f0f0f0; padding: 16px 20px; font-weight: 600; font-size: 1.1rem; }
         .metric-title { font-size: 0.85rem; color: #6c757d; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -211,7 +214,6 @@
         if(isNaN(liveFxRate)) liveFxRate = 33.2291;
         document.getElementById('liveFxInput').value = liveFxRate;
 
-        // ดึงตัวแปรที่ใช้จำ "ส่วนต่างที่โดนจูน"
         let tunedDiffs = JSON.parse(localStorage.getItem('myTunedDiffs')) || {};
 
         let portfolioMapping = JSON.parse(localStorage.getItem('myPortfolioGroups')) || {
@@ -338,9 +340,6 @@
             return hasChanged;
         }
 
-        // ==========================================
-        // ระบบ Magic Sync & Undo
-        // ==========================================
         window.syncCostTHB = function(ticker, currentSystemTHB) {
             let target = prompt(`(หุ้น ${ticker})\nกรุณากรอก "ทุนรวม (THB)" ที่แอปซ่อนไว้\n(วิธีหา: เอามูลค่าล่าสุด ลบด้วย ผลตอบแทนรวม)`);
             if(!target) return;
@@ -354,7 +353,6 @@
                 if(transactions[i].ticker === ticker && transactions[i].type === 'BUY') { lastIndex = i; break; }
             }
             if(lastIndex !== -1) {
-                // จำเอาไว้ว่าเคยจูนไปเท่าไหร่ เพื่อให้กด Undo ได้
                 tunedDiffs[ticker] = (tunedDiffs[ticker] || 0) + diff;
                 localStorage.setItem('myTunedDiffs', JSON.stringify(tunedDiffs));
 
@@ -457,7 +455,6 @@
                     let plClass = plUSD >= 0 ? 'text-profit' : 'text-loss';
                     let sign = plUSD >= 0 ? '+' : '';
 
-                    // แสดงปุ่ม Undo ถ้าหุ้นตัวนี้เคยถูกจูน
                     let undoBtn = tunedDiffs[ticker] ? `<button class="btn btn-sm btn-outline-secondary mt-1 py-0 px-2 ms-1" style="font-size: 0.7rem;" onclick="undoSyncTHB('${ticker}')" title="คืนค่าที่ระบบคำนวณให้">↩️</button>` : '';
 
                     summaryBody.innerHTML += `
