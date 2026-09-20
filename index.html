@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V33)</title>
+    <title>My Portfolio Pro Dashboard (V34)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
-        /* แก้ไขสี กำไร/ขาดทุน ตรงนี้ครับ */
-        .text-profit { color: #198754 !important; font-weight: bold; } /* สีเขียว */
-        .text-loss { color: #dc3545 !important; font-weight: bold; } /* สีแดง */
+        .text-profit { color: #198754 !important; font-weight: bold; } 
+        .text-loss { color: #dc3545 !important; font-weight: bold; } 
         
         .card { border: none; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); margin-bottom: 20px; transition: transform 0.2s; }
         .card-header-pro { background-color: transparent; border-bottom: 1px solid #f0f0f0; padding: 16px 20px; font-weight: 600; font-size: 1.1rem; }
@@ -73,8 +72,43 @@
             </div>
         </div>
 
+        <!-- New Row: Performance Chart & Dividend Summary -->
+        <div class="row mb-2">
+            <!-- Performance Chart -->
+            <div class="col-md-8">
+                <div class="card h-100">
+                    <div class="card-header-pro">📈 Performance (มูลค่าทุนสะสมตามช่วงเวลา)</div>
+                    <div class="card-body" id="performanceChartContainer" style="position: relative; height: 280px; width: 100%;">
+                        <canvas id="performanceChart"></canvas>
+                        <div id="noPerfData" class="text-center text-muted" style="display:none; padding-top: 80px;">ยังไม่มีประวัติการทำรายการเพียงพอ</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dividend Summary -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header-pro">💰 สรุปเงินปันผลรับ (Dividends)</div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover text-center align-middle m-0" style="font-size: 0.95rem;">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th class="border-0">ปี (Year)</th>
+                                        <th class="border-0">ยอดรวม (USD)</th>
+                                        <th class="border-0">ยอดรวม (THB)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dividendTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
-            <!-- Chart -->
+            <!-- Chart Allocation -->
             <div class="col-md-4">
                 <div class="card h-100">
                     <div class="card-header-pro">สัดส่วนการลงทุน (THB)</div>
@@ -229,6 +263,7 @@
 
         let currentFilterType = 'ALL';
         let currentFilterValue = '';
+        let perfChartObj = null;
 
         document.getElementById('txnType').addEventListener('change', function() {
             const type = this.value;
@@ -393,6 +428,178 @@
             }
         };
 
+        // ==========================================
+        // ฟังก์ชันใหม่: สรุปปันผลรายปี
+        // ==========================================
+        function renderDividends() {
+            let divByYear = {};
+            transactions.forEach(t => {
+                if(t.type === 'DIVIDEND') {
+                    let year = t.date.substring(0, 4);
+                    if(!divByYear[year]) divByYear[year] = { usd: 0, thb: 0 };
+                    let netUsd = t.price - t.comm;
+                    divByYear[year].usd += netUsd;
+                    divByYear[year].thb += parseFloat(t.totalTHB) || 0;
+                }
+            });
+            
+            let tbody = document.getElementById('dividendTableBody');
+            tbody.innerHTML = '';
+            let years = Object.keys(divByYear).sort((a,b) => b - a); // เรียงปีล่าสุดขึ้นก่อน
+            
+            if(years.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="3" class="text-muted py-4">ยังไม่มีประวัติรับเงินปันผล</td></tr>';
+            } else {
+                years.forEach(y => {
+                    tbody.innerHTML += `
+                        <tr>
+                            <td class="fw-bold border-0">${y}</td>
+                            <td class="text-profit border-0">+$${divByYear[y].usd.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
+                            <td class="text-profit border-0">+฿${divByYear[y].thb.toLocaleString('th-TH', {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
+                        </tr>
+                    `;
+                });
+            }
+        }
+
+        // ==========================================
+        // ฟังก์ชันใหม่: วาดกราฟ Performance แบบขั้นบันได
+        // ==========================================
+        function renderPerformanceChart() {
+            let container = document.getElementById('performanceChart');
+            let noData = document.getElementById('noPerfData');
+            
+            if (transactions.length === 0) {
+                container.style.display = 'none';
+                noData.style.display = 'block';
+                return;
+            }
+            container.style.display = 'block';
+            noData.style.display = 'none';
+
+            let sortedTxns = [...transactions].sort((a,b) => new Date(a.date) - new Date(b.date));
+            let dates = [];
+            let datasetsData = { 'Total': [] }; // เก็บยอดรวมทั้งหมด
+            let holdings = {};
+            let currentCash = 0;
+            
+            let uniqueDates = [...new Set(sortedTxns.map(t => t.date))].sort();
+            let currentIndex = 0;
+
+            uniqueDates.forEach(date => {
+                // อัปเดตข้อมูลของแต่ละวัน
+                while(currentIndex < sortedTxns.length && sortedTxns[currentIndex].date === date) {
+                    let txn = sortedTxns[currentIndex];
+                    let parsedTHB = parseFloat(txn.totalTHB) || 0;
+
+                    if(txn.type === 'DEPOSIT') currentCash += parsedTHB;
+                    else if(txn.type === 'WITHDRAW') currentCash -= parsedTHB;
+                    else if(txn.type === 'DIVIDEND') currentCash += parsedTHB;
+                    else if(txn.type === 'BUY') {
+                        currentCash -= parsedTHB;
+                        if(!holdings[txn.ticker]) holdings[txn.ticker] = { shares: 0, costTHB: 0 };
+                        holdings[txn.ticker].shares += txn.shares;
+                        holdings[txn.ticker].costTHB += parsedTHB;
+                    }
+                    else if(txn.type === 'SELL') {
+                        if(holdings[txn.ticker] && holdings[txn.ticker].shares > 0) {
+                            let avgCostTHB = holdings[txn.ticker].costTHB / holdings[txn.ticker].shares;
+                            holdings[txn.ticker].shares -= txn.shares;
+                            holdings[txn.ticker].costTHB -= (txn.shares * avgCostTHB);
+                            currentCash += parsedTHB;
+                        }
+                    }
+                    currentIndex++;
+                }
+
+                // สรุปยอดตามกลุ่มพอร์ต ณ สิ้นวันนั้นๆ
+                let groupCosts = {};
+                let totalInvested = 0;
+                for(let ticker in holdings) {
+                    if(holdings[ticker].shares > 0.0001) {
+                        let g = portfolioMapping[ticker] || 'Stock';
+                        groupCosts[g] = (groupCosts[g] || 0) + holdings[ticker].costTHB;
+                        totalInvested += holdings[ticker].costTHB;
+                    }
+                }
+
+                dates.push(date);
+                datasetsData['Total'].push(totalInvested + currentCash);
+
+                // เติมข้อมูลให้แต่ละกลุ่ม ถ้าวันก่อนหน้าไม่มีให้ใส่ 0
+                Object.keys(groupCosts).forEach(g => {
+                    if(!datasetsData[g]) datasetsData[g] = new Array(dates.length - 1).fill(0); 
+                });
+                Object.keys(datasetsData).forEach(g => {
+                    if(g !== 'Total') datasetsData[g].push(groupCosts[g] || 0);
+                });
+            });
+
+            // สร้างชุดข้อมูลสำหรับ Chart.js
+            let datasets = [];
+            
+            // 1. เส้นมูลค่ารวม (สีเขียว พื้นที่แรเงา)
+            datasets.push({
+                label: 'มูลค่ารวม (Total)',
+                data: datasetsData['Total'],
+                borderColor: '#00b894',
+                backgroundColor: 'rgba(0, 184, 148, 0.15)', // แรเงาสีเขียวอ่อน
+                borderWidth: 2,
+                fill: true,
+                stepped: 'before', // ทำให้เป็นกราฟขั้นบันได
+                pointRadius: 0,
+                pointHoverRadius: 4
+            });
+
+            // 2. เส้นแบ่งตามกลุ่มพอร์ต (สีต่างๆ เส้นบางๆ)
+            const colors = ['#0984e3', '#fdcb6e', '#6c5ce7', '#e84393', '#00cec9', '#d63031'];
+            let colorIdx = 0;
+            Object.keys(datasetsData).forEach(g => {
+                if(g !== 'Total' && Math.max(...datasetsData[g]) > 0) {
+                    datasets.push({
+                        label: g,
+                        data: datasetsData[g],
+                        borderColor: colors[colorIdx % colors.length],
+                        borderWidth: 1.5,
+                        fill: false,
+                        stepped: 'before',
+                        pointRadius: 0,
+                        pointHoverRadius: 4
+                    });
+                    colorIdx++;
+                }
+            });
+
+            const ctx = document.getElementById('performanceChart').getContext('2d');
+            if (perfChartObj != null) perfChartObj.destroy();
+            
+            perfChartObj = new Chart(ctx, {
+                type: 'line',
+                data: { labels: dates, datasets: datasets },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: { 
+                        legend: { position: 'bottom', labels: { boxWidth: 12, usePointStyle: true, padding: 20 } },
+                        tooltip: { callbacks: { label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) label += ': ';
+                            if (context.parsed.y !== null) label += '฿' + context.parsed.y.toLocaleString('th-TH', {minimumFractionDigits: 2});
+                            return label;
+                        }}}
+                    },
+                    scales: { 
+                        y: { 
+                            beginAtZero: true, 
+                            ticks: { callback: function(value) { return '฿' + value.toLocaleString(); } }
+                        },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        }
+
         function updateSummaryAndChart() {
             let holdings = {};
             let groupTotals = {}; 
@@ -532,6 +739,10 @@
                     options: { responsive: true, cutout: '75%', plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, padding: 20 } } } } 
                 });
             }
+
+            // เรียกใช้วาดกราฟ และ อัปเดตปันผล
+            renderPerformanceChart();
+            renderDividends();
         }
 
         window.setFilter = function(type, value) {
