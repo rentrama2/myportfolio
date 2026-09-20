@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V42)</title>
+    <title>My Portfolio Pro Dashboard (V43)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -11,7 +11,6 @@
         .text-profit { color: #10b981 !important; font-weight: bold; } 
         .text-loss { color: #ef4444 !important; font-weight: bold; } 
         
-        /* สไตล์กล่องหลัก */
         .card { 
             border-radius: 12px; 
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.02), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
@@ -19,15 +18,14 @@
             background-color: #ffffff;
         }
         
-        /* V42: สีขอบการ์ดสไตล์พาสเทล */
-        .border-val { border: 2px solid #c4b5fd !important; } /* ม่วง */
-        .border-ret { border: 2px solid #fca5a5 !important; } /* แดง */
-        .border-inv { border: 2px solid #93c5fd !important; } /* ฟ้า */
-        .border-csh { border: 2px solid #f9a8d4 !important; } /* ชมพู */
-        .border-div { border: 2px solid #fde047 !important; } /* เหลืองส้ม */
-        .border-prf { border: 2px solid #86efac !important; } /* เขียว */
-        .border-alc { border: 2px solid #7dd3fc !important; } /* ฟ้าอ่อน */
-        .border-tbl { border: 2px solid #cbd5e1 !important; } /* เทาอมฟ้า */
+        .border-val { border: 2px solid #c4b5fd !important; }
+        .border-ret { border: 2px solid #fca5a5 !important; }
+        .border-inv { border: 2px solid #93c5fd !important; }
+        .border-csh { border: 2px solid #f9a8d4 !important; }
+        .border-div { border: 2px solid #fde047 !important; }
+        .border-prf { border: 2px solid #86efac !important; }
+        .border-alc { border: 2px solid #7dd3fc !important; }
+        .border-tbl { border: 2px solid #cbd5e1 !important; }
 
         .card-header-pro { 
             background-color: #ffffff; 
@@ -66,14 +64,11 @@
 
     <div class="container-fluid" style="max-width: 98%; margin: 0 auto;">
         
-        <!-- Header -->
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="fw-bold" style="color: #111827; letter-spacing: -0.5px;">My Portfolio</h2>
         </div>
 
-        <!-- ROW 1: 4 Key Metrics + Dividend Summary -->
         <div class="row g-4 mb-4">
-            <!-- 4 Metrics -->
             <div class="col-xl-8 col-lg-12">
                 <div class="row g-3 h-100">
                     <div class="col-md-3 col-6">
@@ -123,7 +118,6 @@
                 </div>
             </div>
             
-            <!-- Dividend Summary -->
             <div class="col-xl-4 col-lg-12">
                 <div class="card h-100 border-div">
                     <div class="card-header-pro border-0 pb-0">💰 สรุปเงินปันผลรับ (Dividends)</div>
@@ -145,7 +139,6 @@
             </div>
         </div>
 
-        <!-- ROW 2: Charts -->
         <div class="row g-4 mb-4">
             <div class="col-xl-8 col-lg-7">
                 <div class="card h-100 border-prf">
@@ -182,7 +175,6 @@
             </div>
         </div>
 
-        <!-- ROW 3: Holdings (รายการลงทุนของฉัน) -->
         <div class="row mb-4">
             <div class="col-12">
                 <div class="card border-tbl">
@@ -217,7 +209,6 @@
             </div>
         </div>
 
-        <!-- ROW 4: Form (บันทึกรายการ) -->
         <div class="row mb-4" id="transactionFormSection">
             <div class="col-12">
                 <div class="card border-tbl" id="formCardHighlight">
@@ -285,7 +276,6 @@
             </div>
         </div>
 
-        <!-- ROW 5: History (ประวัติ) -->
         <div class="row">
             <div class="col-12">
                 <div class="card border-tbl">
@@ -350,6 +340,16 @@
         let currentFilterValue = '';
         let perfChartObj = null;
         let currentChartRange = 'ALL';
+
+        // V43: ฟังก์ชันอัปเดตราคาตลาดเมื่อพิมพ์เปลี่ยนค่าในตาราง
+        window.updateMarketPrice = function(ticker, value) {
+            let newPrice = parseFloat(value);
+            if(!isNaN(newPrice) && newPrice >= 0) {
+                marketPrices[ticker] = newPrice;
+                localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
+                updateSummaryAndChart();
+            }
+        };
 
         document.getElementById('txnType').addEventListener('change', function() {
             const type = this.value;
@@ -745,7 +745,7 @@
                 if(txn.type === 'DEPOSIT') topMetrics.cash += parsedTHB;
                 else if(txn.type === 'WITHDRAW') topMetrics.cash -= parsedTHB;
                 else if(txn.type === 'BUY') topMetrics.cash -= parsedTHB;
-                else if(txn.type === 'SELL') topMetrics.cash += parsedTHB;
+                else if(txn.type === 'SELL' || txn.type === 'DIVIDEND') topMetrics.cash += parsedTHB;
 
                 if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') return;
 
