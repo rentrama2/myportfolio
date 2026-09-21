@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V51)</title>
+    <title>My Portfolio Pro Dashboard (V52)</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -44,27 +45,7 @@
             box-shadow: inset 0 1px 2px rgba(0,0,0,0.02); padding: 5px; width: 90px;
         }
         .price-input:focus { border-color: #3b82f6 !important; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important; outline: none; }
-        
-        /* V51: ปรับแต่งช่องกรอกเรทเงินแอปให้กว้างขึ้นและตอบสนองดีขึ้น */
-        .fx-input { 
-            width: 100px; 
-            border: none; 
-            background: transparent; 
-            color: #6b7280; 
-            font-weight: bold; 
-            text-align: center; 
-            outline: none; 
-            border-bottom: 2px dashed #d1d5db; 
-            transition: all 0.2s; 
-            padding: 2px 4px;
-        }
-        .fx-input:focus { 
-            border-bottom-color: #3b82f6; 
-            color: #111827; 
-            background-color: #eff6ff; 
-            border-radius: 4px 4px 0 0;
-        }
-
+        .fx-input { width: 85px; border: none; background: transparent; color: #6b7280; font-weight: bold; text-align: center; outline: none; border-bottom: 2px dashed #d1d5db; }
         .group-badge { cursor: pointer; transition: all 0.2s; background-color: #f3f4f6; color: #4b5563; border: 1px solid #e5e7eb; border-radius: 20px; padding: 4px 10px; font-size: 0.75rem; font-weight: 600; }
         .group-badge:hover { background-color: #3b82f6; color: white; border-color: #3b82f6; }
         
@@ -322,7 +303,6 @@
                             </button>
                         </div>
                         <div class="d-flex align-items-center gap-3 mt-2 mt-md-0">
-                            <!-- V51: เปลี่ยนแปลง input ให้ครอบคลุมการใช้งานและไม่ติด step ยิบย่อย -->
                             <span class="text-muted fw-bold" style="font-size: 0.9rem;">
                                 เรทเงินแอป: <input type="number" id="liveFxInput" class="fx-input" value="33.2291" step="any" onclick="this.select()"> THB
                             </span>
@@ -630,24 +610,33 @@
             document.getElementById('simNewAlloc').innerText = newAlloc.toFixed(2) + '%';
         };
 
+        // V52: แก้ปัญหากดแกะราคาแล้วเด้งหลุดโฟกัส (Focus Restore)
         window.updateMarketPrice = function(ticker, value) {
             let newPrice = parseFloat(value);
             if(!isNaN(newPrice) && newPrice >= 0) {
                 marketPrices[ticker] = newPrice;
                 localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
+                
                 updateSummaryAndChart();
+                
+                setTimeout(() => {
+                    let input = document.getElementById('priceInput_' + ticker);
+                    if(input) {
+                        input.focus();
+                    }
+                }, 0);
             }
         };
 
-        // V51: ปรับแก้ฟังก์ชันของช่อง Live FX ให้ดึงค่าได้ถูกต้อง และกันเผลอลบ
-        document.getElementById('liveFxInput').addEventListener('change', function() {
+        // V52: แก้ปัญหาเปลี่ยนเรทเงินแล้วเด้ง (เปลี่ยนไปใช้ onblur แทน onchange เพื่อลดความจุกจิกตอนลบเลข)
+        document.getElementById('liveFxInput').addEventListener('blur', function() {
             let newFx = parseFloat(this.value);
             if(!isNaN(newFx) && newFx > 0) {
                 liveFxRate = newFx;
                 localStorage.setItem('myLiveFxRate', liveFxRate);
                 updateSummaryAndChart();
             } else {
-                this.value = liveFxRate; // ดึงค่าเก่ากลับมาถ้าพิมพ์ผิด
+                this.value = liveFxRate; 
             }
         });
 
@@ -929,17 +918,18 @@
                 }
             });
             
-            let tbody = document.getElementById('dividendTableBody');
-            tbody.innerHTML = '';
+            // V52: ใช้ String Buffer ป้องกันตารางกระตุก
+            let divHTML = '';
             let years = Object.keys(divByYear).sort((a,b) => b - a);
             
             if(years.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="3" class="text-muted py-4 border-0">ยังไม่มีประวัติรับเงินปันผล</td></tr>';
+                divHTML = '<tr><td colspan="3" class="text-muted py-4 border-0">ยังไม่มีประวัติรับเงินปันผล</td></tr>';
             } else {
                 years.forEach(y => {
-                    tbody.innerHTML += `<tr><td class="fw-bold border-0 py-2">${y}</td><td class="text-profit border-0 py-2">+$${divByYear[y].usd.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2})}</td><td class="text-profit border-0 py-2">+฿${divByYear[y].thb.toLocaleString('th-TH', {minimumFractionDigits:2, maximumFractionDigits:2})}</td></tr>`;
+                    divHTML += `<tr><td class="fw-bold border-0 py-2">${y}</td><td class="text-profit border-0 py-2">+$${divByYear[y].usd.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2})}</td><td class="text-profit border-0 py-2">+฿${divByYear[y].thb.toLocaleString('th-TH', {minimumFractionDigits:2, maximumFractionDigits:2})}</td></tr>`;
                 });
             }
+            document.getElementById('dividendTableBody').innerHTML = divHTML;
         }
 
         window.setChartRange = function(range) {
@@ -1136,8 +1126,9 @@
                 }
             });
 
-            const summaryBody = document.getElementById('summaryTableBody');
-            summaryBody.innerHTML = ''; let hasData = false;
+            // V52: ใช้ String Buffer อัด HTML รวดเดียว ป้องกัน Layout เด้ง
+            let summaryHTML = ''; 
+            let hasData = false;
             
             let oldTunedDiffs = JSON.parse(localStorage.getItem('myTunedDiffs')) || {};
 
@@ -1180,7 +1171,8 @@
                         syncBtns += `<br><button class="btn btn-sm btn-outline-danger mt-1 py-0 px-2" style="font-size: 0.65rem;" onclick="undoSyncTHB('${ticker}')" title="ลบข้อมูลจูนแบบเก่าที่ทำประวัติพัง">⚠️ ล้างค่าเก่าก่อน</button>`;
                     }
 
-                    summaryBody.innerHTML += `
+                    // V52: เพิ่ม ID ให้ Input และใช้ onblur ป้องกันพิมพ์ไปเด้งไป
+                    summaryHTML += `
                         <tr>
                             <td class="border-end-0 py-3">
                                 <strong>${ticker}</strong><br>
@@ -1197,9 +1189,9 @@
                             </td>
                             <td class="bg-warning bg-opacity-10 align-middle border-0 py-3">
                                 <div class="d-flex justify-content-center">
-                                    <input type="number" class="form-control price-input" 
+                                    <input type="number" id="priceInput_${ticker}" class="form-control price-input" 
                                            value="${currentPriceUSD.toFixed(2)}" step="any"
-                                           onchange="updateMarketPrice('${ticker}', this.value)"
+                                           onblur="updateMarketPrice('${ticker}', this.value)"
                                            onclick="this.select()">
                                 </div>
                             </td>
@@ -1217,7 +1209,9 @@
                 }
             }
 
-            if(!hasData) summaryBody.innerHTML = `<tr><td colspan="7" class="text-muted py-5 border-0">ยังไม่มีหุ้นในพอร์ตโฟลิโอ เริ่มบันทึกรายการได้เลย!</td></tr>`;
+            if(!hasData) summaryHTML = `<tr><td colspan="7" class="text-muted py-5 border-0">ยังไม่มีหุ้นในพอร์ตโฟลิโอ เริ่มบันทึกรายการได้เลย!</td></tr>`;
+            
+            document.getElementById('summaryTableBody').innerHTML = summaryHTML;
             
             let totalPortfolioValue = topMetrics.mktValue + topMetrics.cash;
             let totalPlTHB = topMetrics.mktValue - topMetrics.invested;
@@ -1506,41 +1500,42 @@
             let endIndex = startIndex + rowsPerPage;
             let paginatedTxns = filteredTxns.slice(startIndex, endIndex);
 
-            const tbody = document.getElementById('txnTableBody'); 
-            tbody.innerHTML = '';
+            // V52: ใช้ String Buffer เตรียม HTML ก่อนแปะลงตาราง ลดการเด้ง
+            let txnHTML = '';
 
             if (paginatedTxns.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="9" class="text-muted py-5 border-0">ไม่มีประวัติในหน้านี้ หรือไม่พบข้อมูลตามตัวกรอง</td></tr>`;
+                txnHTML = `<tr><td colspan="9" class="text-muted py-5 border-0">ไม่มีประวัติในหน้านี้ หรือไม่พบข้อมูลตามตัวกรอง</td></tr>`;
+            } else {
+                paginatedTxns.forEach((txn) => {
+                    let originalIndex = transactions.indexOf(txn); 
+                    let totalUSD = 0, typeBadge = '', commText = '', displayShares = txn.shares, displayPrice = `$${txn.price}`;
+                    let usdAmount = Number((txn.shares * txn.price).toFixed(2));
+                    let displayTHB = txn.totalTHB > 0 ? `฿${txn.totalTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}` : `<span class="text-muted">(USD ล้วน)</span>`;
+
+                    let showCommText = '';
+                    if(txn.comm === 0) showCommText = '<span class="text-success">ฟรี</span>';
+                    else if(txn.commCurr === 'THB') showCommText = `฿${txn.commTHB}`; 
+                    else showCommText = `$${txn.comm.toFixed(4)}`;
+
+                    if(txn.type === 'BUY') {
+                        totalUSD = usdAmount + txn.comm; typeBadge = '<span class="badge bg-success">ซื้อ</span>'; commText = showCommText;
+                    } else if(txn.type === 'SELL') {
+                        totalUSD = usdAmount - txn.comm; typeBadge = '<span class="badge bg-danger">ขาย</span>'; commText = showCommText;
+                    } else if(txn.type === 'DIVIDEND') {
+                        totalUSD = txn.price - txn.comm; typeBadge = '<span class="badge bg-info">ปันผล</span>'; commText = txn.comm === 0 ? '-' : `<span class="text-danger">-$${txn.comm.toFixed(2)}</span>`; displayShares = '-';
+                    } else if(txn.type === 'DEPOSIT') {
+                        typeBadge = '<span class="badge bg-dark">ฝากเงิน</span>'; commText = '-'; displayShares = '-'; displayPrice = '-'; totalUSD = 0; displayTHB = `<strong class="text-success">+฿${txn.totalTHB.toLocaleString('th-TH')}</strong>`;
+                    } else if(txn.type === 'WITHDRAW') {
+                        typeBadge = '<span class="badge bg-secondary">ถอนเงิน</span>'; commText = '-'; displayShares = '-'; displayPrice = '-'; totalUSD = 0; displayTHB = `<strong class="text-danger">-฿${txn.totalTHB.toLocaleString('th-TH')}</strong>`;
+                    }
+                    
+                    let showUSD = totalUSD > 0 ? `$${totalUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}` : '-';
+
+                    txnHTML += `<tr><td class="border-0 py-3">${txn.date}</td><td class="border-0 py-3">${typeBadge}</td><td class="border-0 py-3"><strong>${txn.ticker}</strong></td><td class="border-0 py-3">${displayShares}</td><td class="border-0 py-3">${displayPrice}</td><td class="border-0 py-3">${commText}</td><td class="text-primary fw-bold border-0 py-3">${showUSD}</td><td class="text-danger fw-bold border-0 py-3">${displayTHB}</td><td class="border-0 py-3"><div class="d-flex justify-content-center gap-1"><button class="btn btn-sm btn-warning py-0 px-2" onclick="editTxn(${originalIndex})">แก้ไข</button><button class="btn btn-sm btn-outline-danger py-0 px-2" onclick="deleteTxn(${originalIndex})">ลบ</button></div></td></tr>`;
+                });
             }
-
-            paginatedTxns.forEach((txn) => {
-                let originalIndex = transactions.indexOf(txn); 
-                let totalUSD = 0, typeBadge = '', commText = '', displayShares = txn.shares, displayPrice = `$${txn.price}`;
-                let usdAmount = Number((txn.shares * txn.price).toFixed(2));
-                let displayTHB = txn.totalTHB > 0 ? `฿${txn.totalTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}` : `<span class="text-muted">(USD ล้วน)</span>`;
-
-                let showCommText = '';
-                if(txn.comm === 0) showCommText = '<span class="text-success">ฟรี</span>';
-                else if(txn.commCurr === 'THB') showCommText = `฿${txn.commTHB}`; 
-                else showCommText = `$${txn.comm.toFixed(4)}`;
-
-                if(txn.type === 'BUY') {
-                    totalUSD = usdAmount + txn.comm; typeBadge = '<span class="badge bg-success">ซื้อ</span>'; commText = showCommText;
-                } else if(txn.type === 'SELL') {
-                    totalUSD = usdAmount - txn.comm; typeBadge = '<span class="badge bg-danger">ขาย</span>'; commText = showCommText;
-                } else if(txn.type === 'DIVIDEND') {
-                    totalUSD = txn.price - txn.comm; typeBadge = '<span class="badge bg-info">ปันผล</span>'; commText = txn.comm === 0 ? '-' : `<span class="text-danger">-$${txn.comm.toFixed(2)}</span>`; displayShares = '-';
-                } else if(txn.type === 'DEPOSIT') {
-                    typeBadge = '<span class="badge bg-dark">ฝากเงิน</span>'; commText = '-'; displayShares = '-'; displayPrice = '-'; totalUSD = 0; displayTHB = `<strong class="text-success">+฿${txn.totalTHB.toLocaleString('th-TH')}</strong>`;
-                } else if(txn.type === 'WITHDRAW') {
-                    typeBadge = '<span class="badge bg-secondary">ถอนเงิน</span>'; commText = '-'; displayShares = '-'; displayPrice = '-'; totalUSD = 0; displayTHB = `<strong class="text-danger">-฿${txn.totalTHB.toLocaleString('th-TH')}</strong>`;
-                }
-                
-                let showUSD = totalUSD > 0 ? `$${totalUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}` : '-';
-
-                tbody.innerHTML += `<tr><td class="border-0 py-3">${txn.date}</td><td class="border-0 py-3">${typeBadge}</td><td class="border-0 py-3"><strong>${txn.ticker}</strong></td><td class="border-0 py-3">${displayShares}</td><td class="border-0 py-3">${displayPrice}</td><td class="border-0 py-3">${commText}</td><td class="text-primary fw-bold border-0 py-3">${showUSD}</td><td class="text-danger fw-bold border-0 py-3">${displayTHB}</td><td class="border-0 py-3"><div class="d-flex justify-content-center gap-1"><button class="btn btn-sm btn-warning py-0 px-2" onclick="editTxn(${originalIndex})">แก้ไข</button><button class="btn btn-sm btn-outline-danger py-0 px-2" onclick="deleteTxn(${originalIndex})">ลบ</button></div></td></tr>`;
-            });
             
+            document.getElementById('txnTableBody').innerHTML = txnHTML;
             renderPaginationControls(filteredTxns.length, totalPages);
             updateSummaryAndChart();
         }
