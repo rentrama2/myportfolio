@@ -454,10 +454,16 @@
         let simAction = 'BUY';
 
         let editingIndex = -1; 
-        let marketPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
+        const defaultInitialPrices = {
+            'GOOGL': 342.75, 'MSFT': 514.09, 'JEPI': 56.59, 'JEPQ': 61.14, 'VTI': 378.21,
+            'VOO': 707.48, 'QQQ': 741.51, 'QQQM': 305.29, 'SCHD': 33.15, 'AAPL': 336.82,
+            'NVDA': 223.43, 'VXUS': 85.87, 'SPY': 767.94
+        };
+        let storedPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
+        let marketPrices = Object.assign({}, defaultInitialPrices, storedPrices);
         
         let liveFxRate = parseFloat(localStorage.getItem('myLiveFxRate'));
-        if(isNaN(liveFxRate) || liveFxRate <= 0) liveFxRate = 33.2291;
+        if(isNaN(liveFxRate) || liveFxRate <= 0) liveFxRate = 33.42;
         document.getElementById('liveFxInput').value = liveFxRate;
 
         let tunedDiffsV2 = JSON.parse(localStorage.getItem('myTunedDiffsV2')) || {};
@@ -465,13 +471,15 @@
 
         let portfolioMapping = JSON.parse(localStorage.getItem('myPortfolioGroups')) || {
             'VTI': 'ETF', 'VXUS': 'ETF', 'VOO': 'ETF', 'SCHD': 'ETF', 'QQQ': 'ETF', 'QQQM': 'ETF',
+            'JEPI': 'ETF', 'JEPQ': 'ETF', 'SPY': 'ETF',
             'NVDA': 'Stock', 'AAPL': 'Stock', 'MSFT': 'Stock', 'GOOGL': 'Stock'
         };
 
         const stockNames = {
             'VTI': 'Vanguard Total Stock', 'VOO': 'Vanguard S&P 500', 'SCHD': 'Schwab Dividend ETF',
             'QQQ': 'Invesco Nasdaq 100', 'QQQM': 'Invesco Nasdaq 100 ETF', 'NVDA': 'NVIDIA Corp',
-            'AAPL': 'Apple Inc', 'MSFT': 'Microsoft Corp', 'GOOGL': 'Alphabet Inc', 'VXUS': 'Vanguard Total Intl'
+            'AAPL': 'Apple Inc', 'MSFT': 'Microsoft Corp', 'GOOGL': 'Alphabet Inc', 'VXUS': 'Vanguard Total Intl',
+            'JEPI': 'JPMorgan Equity Premium Inc', 'JEPQ': 'JPMorgan Nasdaq Premium Inc', 'SPY': 'SPDR S&P 500 ETF'
         };
 
         let currentFilterType = 'ALL';
@@ -800,6 +808,8 @@
             autoCalculateDimeFees();
         });
 
+        let lastPricesSyncTime = '';
+
         async function fetchWithTimeout(url, options = {}, timeoutMs = 4000) {
             const controller = new AbortController();
             const timer = setTimeout(() => controller.abort(), timeoutMs);
@@ -850,27 +860,60 @@
             return null;
         }
 
+        async function loadStaticPrices() {
+            const urls = [
+                `./data/prices.json?t=${Date.now()}`,
+                `https://rentrama2.github.io/myportfolio/data/prices.json?t=${Date.now()}`
+            ];
+
+            for (let url of urls) {
+                try {
+                    let res = await fetchWithTimeout(url, { cache: 'no-store' }, 3500);
+                    if (res.ok) {
+                        let data = await res.json();
+                        if (data && data.prices && typeof data.prices === 'object') {
+                            let count = 0;
+                            for (let [tk, pr] of Object.entries(data.prices)) {
+                                if (pr && typeof pr === 'number' && pr > 0) {
+                                    marketPrices[tk] = pr;
+                                    count++;
+                                }
+                            }
+                            if (data.updated_at_thai) {
+                                lastPricesSyncTime = data.updated_at_thai;
+                            }
+                            if (data.fx && data.fx.USDTHB && (!liveFxRate || liveFxRate === 33.2291)) {
+                                liveFxRate = parseFloat(data.fx.USDTHB);
+                                localStorage.setItem('myLiveFxRate', liveFxRate);
+                                const fxInput = document.getElementById('liveFxInput');
+                                if (fxInput) fxInput.value = liveFxRate.toFixed(4);
+                            }
+                            localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
+                            return { count, data };
+                        }
+                    }
+                } catch(e) {}
+            }
+            return null;
+        }
+
         async function fetchStockPrice(ticker) {
             if (!ticker || ticker === 'CASH') return null;
+            if (marketPrices[ticker] && marketPrices[ticker] > 0) {
+                return marketPrices[ticker];
+            }
+
             const encodedUrl = encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`);
-            
             const proxies = [
-                `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`,
                 `https://api.allorigins.win/raw?url=${encodedUrl}`,
-                `https://api.allorigins.win/get?url=${encodedUrl}`
+                `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`
             ];
 
             for (let proxyUrl of proxies) {
                 try {
-                    let res = await fetchWithTimeout(proxyUrl, {}, 3500);
+                    let res = await fetchWithTimeout(proxyUrl, {}, 2500);
                     if (res.ok) {
-                        let data;
-                        if (proxyUrl.includes('/get?url=')) {
-                            let wrapper = await res.json();
-                            data = JSON.parse(wrapper.contents);
-                        } else {
-                            data = await res.json();
-                        }
+                        let data = await res.json();
                         if (data && data.chart && data.chart.result && data.chart.result.length > 0) {
                             let meta = data.chart.result[0].meta;
                             let price = meta.regularMarketPrice || meta.chartPreviousClose || meta.previousClose;
@@ -893,13 +936,16 @@
             if (btn) btn.disabled = true;
             if (icon) icon.innerText = '⏳';
             if (text) text.innerText = 'กำลังอัปเดต...';
-            if (badge) badge.innerText = '(กำลังดึงข้อมูล...)';
+            if (badge) {
+                badge.innerText = '(กำลังดึงข้อมูล...)';
+                badge.className = 'badge bg-warning bg-opacity-10 text-warning border border-warning py-1 px-2';
+            }
 
             let updatedCount = 0;
             let fxUpdated = false;
 
             try {
-                // 1. ดึงเรทแลกเปลี่ยน USD/THB ล่าสุดอัตโนมัติ
+                // 1. ดึงเรทแลกเปลี่ยน USD/THB ล่าสุดแบบ Real-time
                 const newFx = await fetchLiveFxRate();
                 if (newFx && newFx > 0) {
                     liveFxRate = newFx;
@@ -909,7 +955,13 @@
                     fxUpdated = true;
                 }
 
-                // 2. รวบรวมหุ้นทุกตัวที่มีในพอร์ตและประวัติทำรายการ
+                // 2. ดึงราคาหุ้นล่าสุดจาก JSON (อัปเดตอัตโนมัติจาก GitHub Actions / Yahoo Finance)
+                const staticRes = await loadStaticPrices();
+                if (staticRes && staticRes.count > 0) {
+                    updatedCount += staticRes.count;
+                }
+
+                // 3. ตรวจสอบหุ้นในพอร์ต หากตัวไหนยังไม่มีราคา ให้พยายามดึงเสริม
                 const tickersToFetch = new Set();
                 transactions.forEach(t => {
                     if (t.ticker && t.ticker !== 'CASH' && t.type !== 'DEPOSIT' && t.type !== 'WITHDRAW') {
@@ -920,18 +972,15 @@
                     if (t && t !== 'CASH') tickersToFetch.add(t.toUpperCase().trim());
                 });
 
-                // 3. ดึงราคาหุ้นแบบเป็นกลุ่ม (Batch) เพื่อความรวดเร็วและไม่หน่วง
                 const tickerList = Array.from(tickersToFetch);
-                const batchSize = 3;
-                for (let i = 0; i < tickerList.length; i += batchSize) {
-                    const batch = tickerList.slice(i, i + batchSize);
-                    await Promise.allSettled(batch.map(async (tk) => {
+                for (let tk of tickerList) {
+                    if (!marketPrices[tk] || marketPrices[tk] <= 0) {
                         const price = await fetchStockPrice(tk);
                         if (price && price > 0) {
                             marketPrices[tk] = price;
                             updatedCount++;
                         }
-                    }));
+                    }
                 }
 
                 localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
@@ -940,12 +989,21 @@
                 const now = new Date();
                 const timeStr = now.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' });
                 if (badge) {
-                    badge.innerText = `(อัปเดต ${timeStr} น.)`;
-                    badge.className = 'badge bg-success bg-opacity-10 text-success border border-success py-1 px-2';
+                    if (updatedCount > 0 || fxUpdated) {
+                        const syncLabel = lastPricesSyncTime ? `อัปเดต ${lastPricesSyncTime}` : `อัปเดต ${timeStr} น.`;
+                        badge.innerText = `(${syncLabel} | ฿${liveFxRate.toFixed(2)})`;
+                        badge.className = 'badge bg-success bg-opacity-10 text-success border border-success py-1 px-2';
+                    } else {
+                        badge.innerText = `(อัปเดตไม่สำเร็จ - โปรดลองใหม่)`;
+                        badge.className = 'badge bg-warning bg-opacity-10 text-warning border border-warning py-1 px-2';
+                    }
                 }
             } catch (err) {
                 console.warn('Auto update issue:', err);
-                if (badge) badge.innerText = `(อัปเดตไม่สมบูรณ์)`;
+                if (badge) {
+                    badge.innerText = `(อัปเดตไม่สมบูรณ์)`;
+                    badge.className = 'badge bg-danger bg-opacity-10 text-danger border border-danger py-1 px-2';
+                }
             } finally {
                 if (btn) btn.disabled = false;
                 if (icon) icon.innerText = '🔄';
