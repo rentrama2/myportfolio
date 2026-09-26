@@ -367,8 +367,12 @@
             <div class="col-12">
                 <div class="card border-tbl">
                     <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap">
-                        <div class="d-flex align-items-center gap-3">
-                            <span>รายการลงทุนของฉัน (Holdings)</span>
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <span class="fw-bold" style="color: #111827;">รายการลงทุนของฉัน (Holdings)</span>
+                            <div class="btn-group btn-group-sm ms-md-2" role="group" style="border-radius: 8px;">
+                                <button type="button" id="btnModeDime" class="btn btn-primary btn-sm fw-bold px-2 py-1" onclick="setCalcMode('DIME')" title="สูตรคำนวณเหมือนในแอป Dime 100% (คำนวณ Auto อิงเรทเงินปัจจุบัน)">📱 โหมด Dime (Auto)</button>
+                                <button type="button" id="btnModeHist" class="btn btn-outline-secondary btn-sm fw-bold px-2 py-1" onclick="setCalcMode('HISTORICAL')" title="คำนวณตามเงินบาทจริงที่แลกซื้อในแต่ละออเดอร์">🏦 ทุนเงินบาทจริง</button>
+                            </div>
                             <button class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-3 d-flex align-items-center gap-1" style="font-size: 0.8rem;" onclick="openSimulator()">
                                 🧮 จำลองซื้อขาย
                             </button>
@@ -391,7 +395,7 @@
                                         <th class="py-3 border-0">หุ้น / กลุ่มพอร์ต</th>
                                         <th class="py-3 border-0">จำนวนหุ้น</th>
                                         <th class="py-3 border-0">ราคาต้นทุน<br><small class="text-muted">(เฉลี่ยต่อหุ้น USD)</small></th>
-                                        <th class="py-3 border-0">ทุนรวม (THB)<br><small class="text-muted">สำหรับหักลบกำไร</small></th>
+                                        <th class="py-3 border-0">ทุนรวม (THB)<br><small class="text-muted" id="thCostSub">อิงเรทเงิน Dime</small></th>
                                         <th class="py-3 border-0" style="background-color: #fffbeb;">ราคาปัจจุบัน (USD)<br><small class="text-muted fw-normal">คลิกแก้ได้</small></th>
                                         <th class="py-3 border-0">มูลค่าล่าสุด<br><small class="text-muted">(USD / THB)</small></th>
                                         <th class="py-3 border-0">ผลตอบแทนรวม<br><small class="text-muted">(% / USD / THB)</small></th>
@@ -535,8 +539,33 @@
         let marketPrices = Object.assign({}, defaultInitialPrices, storedPrices);
         
         let liveFxRate = parseFloat(localStorage.getItem('myLiveFxRate'));
-        if(isNaN(liveFxRate) || liveFxRate <= 0) liveFxRate = 33.42;
+        if(isNaN(liveFxRate) || liveFxRate <= 0) liveFxRate = 33.31;
         document.getElementById('liveFxInput').value = liveFxRate;
+
+        let currentCalcMode = localStorage.getItem('myCalcMode') || 'DIME';
+
+        window.setCalcMode = function(mode) {
+            currentCalcMode = mode;
+            localStorage.setItem('myCalcMode', mode);
+            updateModeButtons();
+            updateSummaryAndChart();
+        };
+
+        function updateModeButtons() {
+            const btnDime = document.getElementById('btnModeDime');
+            const btnHist = document.getElementById('btnModeHist');
+            const thSub = document.getElementById('thCostSub');
+            if (!btnDime || !btnHist) return;
+            if (currentCalcMode === 'DIME') {
+                btnDime.className = 'btn btn-primary btn-sm fw-bold px-2 py-1';
+                btnHist.className = 'btn btn-outline-secondary btn-sm fw-bold px-2 py-1';
+                if (thSub) thSub.innerText = 'อิงเรทเงิน Dime';
+            } else {
+                btnDime.className = 'btn btn-outline-primary btn-sm fw-bold px-2 py-1';
+                btnHist.className = 'btn btn-secondary btn-sm fw-bold px-2 py-1';
+                if (thSub) thSub.innerText = 'ตามประวัติแลกเงิน';
+            }
+        }
 
         let tunedDiffsV2 = JSON.parse(localStorage.getItem('myTunedDiffsV2')) || {};
         let portfolioTargets = JSON.parse(localStorage.getItem('myPortfolioTargets')) || {};
@@ -954,7 +983,7 @@
                             if (data.updated_at_thai) {
                                 lastPricesSyncTime = data.updated_at_thai;
                             }
-                            if (data.fx && data.fx.USDTHB && (!liveFxRate || liveFxRate === 33.2291)) {
+                            if (data.fx && data.fx.USDTHB) {
                                 liveFxRate = parseFloat(data.fx.USDTHB);
                                 localStorage.setItem('myLiveFxRate', liveFxRate);
                                 const fxInput = document.getElementById('liveFxInput');
@@ -1548,8 +1577,6 @@
                     let costUSD = holdings[ticker].costUSD;
                     let rawCostTHB = holdings[ticker].costTHB;
                     
-                    let costTHB = rawCostTHB + (tunedDiffsV2[ticker] || 0);
-                    
                     let groupName = portfolioMapping[ticker] || 'Stock';
                     if(!groupTotals[groupName]) groupTotals[groupName] = 0;
                     
@@ -1558,20 +1585,31 @@
                     let mktValueUSD = Number((shares * currentPriceUSD).toFixed(2));
                     let mktValueTHB = Number((mktValueUSD * liveFxRate).toFixed(2));
 
+                    let isDimeMode = (currentCalcMode === 'DIME');
+                    let costTHB;
+                    let plUSD = mktValueUSD - costUSD;
+                    let plPercent = costUSD > 0 ? (plUSD / costUSD) * 100 : 0;
+                    let plTHB;
+                    let capGainUSD = (currentPriceUSD - avgCostUSD) * shares;
+                    let capGainTHB = capGainUSD * liveFxRate;
+                    let fxGainTHB = 0;
+
+                    if (isDimeMode) {
+                        // โหมดแอป Dime: คำนวณ Auto ตรงกับแอป Dime 100% จากราคาและเรทปัจจุบันโดยไม่ต้องกรอกเอง
+                        costTHB = Number((costUSD * liveFxRate).toFixed(2));
+                        plTHB = Number((plUSD * liveFxRate).toFixed(2));
+                    } else {
+                        // โหมดต้นทุนจริงตามประวัติแลกเงิน
+                        costTHB = rawCostTHB + (tunedDiffsV2[ticker] || 0);
+                        plTHB = mktValueTHB - costTHB;
+                        fxGainTHB = plTHB - capGainTHB;
+                    }
+
                     topMetrics.invested += costTHB;
                     topMetrics.mktValue += mktValueTHB;
                     groupTotals[groupName] += mktValueTHB;
                     
                     holdings[ticker].mktValueTHB = mktValueTHB;
-
-                    let plUSD = mktValueUSD - costUSD;
-                    let plPercent = costUSD > 0 ? (plUSD / costUSD) * 100 : 0;
-                    let plTHB = mktValueTHB - costTHB;
-
-                    // Dime Gain Breakdown: กำไรจากราคาหุ้น (Capital Gain) vs กำไรจากอัตราแลกเปลี่ยน (FX Gain)
-                    let capGainUSD = (currentPriceUSD - avgCostUSD) * shares;
-                    let capGainTHB = capGainUSD * liveFxRate;
-                    let fxGainTHB = plTHB - capGainTHB;
 
                     let plClass = plUSD >= 0 ? 'text-profit' : 'text-loss';
                     let sign = plUSD >= 0 ? '+' : '';
@@ -1598,8 +1636,11 @@
                                 <small class="text-muted">(รวม $${costUSD.toFixed(2)})</small>
                             </td>
                             <td class="border-0 py-3">
-                                <span style="color: #111827;">฿${costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</span><br>
-                                ${syncBtns}
+                                <strong style="color: #111827;">฿${costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong><br>
+                                ${isDimeMode 
+                                    ? `<small class="text-muted" style="font-size: 0.72rem;" title="ต้นทุนจริงที่แลกซื้อในอดีต">ต้นทุนแลกจริง ฿${rawCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</small>` 
+                                    : syncBtns
+                                }
                             </td>
                             <td class="bg-warning bg-opacity-10 align-middle border-0 py-3">
                                 <div class="d-flex justify-content-center">
@@ -1617,11 +1658,12 @@
                                 ${sign}${plPercent.toFixed(2)}%<br>
                                 <small style="font-size: 0.75rem;">(${sign}$${plUSD.toFixed(2)})</small><br>
                                 <strong style="color: inherit;">≈ ${sign}฿${plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>
+                                ${!isDimeMode ? `
                                 <div class="mt-1" style="font-size: 0.7rem; font-weight: normal; line-height: 1.2;" title="แจกแจงผลตอบแทน: กำไรราคาหุ้น (Capital Gain) และกำไร/ขาดทุนจากอัตราแลกเปลี่ยน (FX)">
                                     <span class="badge bg-light text-muted border" style="font-weight: 500;">
                                         หุ้น: ${capGainTHB >= 0 ? '+' : ''}฿${Math.round(capGainTHB).toLocaleString('th-TH')} | FX: ${fxGainTHB >= 0 ? '+' : ''}฿${Math.round(fxGainTHB).toLocaleString('th-TH')}
                                     </span>
-                                </div>
+                                </div>` : ''}
                             </td>
                         </tr>
                     `;
@@ -2150,6 +2192,7 @@
         document.getElementById('txnDate').valueAsDate = new Date();
         
         async function initializeApp() { 
+            updateModeButtons();
             await renderTable(); 
             autoCalculateDimeFees();
             // ดึงราคาและเรทเงินแอปอัตโนมัติในเบื้องหลังเมื่อเปิดหน้าเว็บ
@@ -2157,7 +2200,7 @@
                 if (typeof window.updateAllPricesAndFx === 'function') {
                     window.updateAllPricesAndFx(false);
                 }
-            }, 350);
+            }, 100);
         }
         initializeApp();
     </script>
