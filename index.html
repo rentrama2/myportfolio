@@ -172,6 +172,48 @@
         [data-bs-theme="dark"] .page-link { background-color: #151e2e; border-color: #273549; color: #94a3b8; }
         [data-bs-theme="dark"] .page-link:hover { background-color: #1e293b; color: #f8fafc; }
         [data-bs-theme="dark"] .page-item.active .page-link { background-color: #3b82f6; border-color: #3b82f6; color: white; }
+
+        /* --- Privacy Mode (โหมดซ่อนตัวเลขการเงิน ชี้เมาส์เพื่อดูชั่วคราว) --- */
+        body.privacy-mode .metric-value,
+        body.privacy-mode .privacy-mask,
+        body.privacy-mode .portfolio-card .fs-4,
+        body.privacy-mode .portfolio-card .text-muted:not(.port-bottom-bar span),
+        body.privacy-mode #summaryTableBody td:nth-child(2),
+        body.privacy-mode #summaryTableBody td:nth-child(3),
+        body.privacy-mode #summaryTableBody td:nth-child(4),
+        body.privacy-mode #summaryTableBody td:nth-child(6),
+        body.privacy-mode #summaryTableBody td:nth-child(7),
+        body.privacy-mode #txnTableBody td:nth-child(5),
+        body.privacy-mode #txnTableBody td:nth-child(6),
+        body.privacy-mode #txnTableBody td:nth-child(8),
+        body.privacy-mode #txnTableBody td:nth-child(9),
+        body.privacy-mode #dividendTableBody td:nth-child(2),
+        body.privacy-mode #dividendTableBody td:nth-child(3) {
+            filter: blur(6px) !important;
+            user-select: none;
+            transition: filter 0.15s ease-in-out;
+        }
+
+        body.privacy-mode .metric-value:hover,
+        body.privacy-mode .privacy-mask:hover,
+        body.privacy-mode .portfolio-card:hover .fs-4,
+        body.privacy-mode #summaryTableBody tr:hover td,
+        body.privacy-mode #txnTableBody tr:hover td,
+        body.privacy-mode #dividendTableBody tr:hover td {
+            filter: blur(0px) !important;
+        }
+
+        .cursor-pointer { cursor: pointer; }
+        .target-badge {
+            font-size: 0.72rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .target-badge:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body class="p-3 p-md-4">
@@ -595,6 +637,91 @@
         </div>
     </div>
 
+    <!-- Modal: Stock Target (TP/SL & Risk:Reward) -->
+    <div class="modal fade" id="stockTargetModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <h5 class="fw-bold m-0" style="color: inherit;" id="stockTargetTitle">🎯 ตั้งเป้าหมายราคา (TP & SL)</h5>
+                            <small class="text-muted" id="stockTargetSubtitle">คำนวณ Risk:Reward Ratio และระบบแจ้งเตือนอัตโนมัติ</small>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="card p-3 mb-3 border-0" style="background-color: rgba(59, 130, 246, 0.08); border-radius: 12px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-muted fw-bold" style="font-size: 0.85rem;">ราคาปัจจุบัน (Current Price)</span>
+                            <span class="fw-bold fs-5 text-primary" id="modalTargetCurrentPrice">$0.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-muted" style="font-size: 0.85rem;">ราคาต้นทุนเฉลี่ย (Avg Cost)</span>
+                            <span class="text-muted fw-bold" id="modalTargetAvgCost">$0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Target Price (Take Profit) -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-success d-flex justify-content-between align-items-center mb-1" style="font-size: 0.85rem;">
+                            <span>🎯 ราคาเป้าหมายขายทำกำไร (Take Profit - USD)</span>
+                            <span id="targetUpsideBadge" class="badge bg-success-subtle text-success">Upside: +0%</span>
+                        </label>
+                        <div class="input-group mb-2">
+                            <span class="input-group-text bg-white fw-bold text-success">$</span>
+                            <input type="number" id="inputTargetTP" class="form-control fw-bold fs-5 text-success" step="0.01" placeholder="เช่น 65.00" oninput="calcTargetRatio()">
+                        </div>
+                        <div class="d-flex gap-1 flex-wrap">
+                            <button type="button" class="btn btn-sm btn-outline-success py-0 px-2" style="font-size: 0.75rem;" onclick="applyQuickTP(5)">+5%</button>
+                            <button type="button" class="btn btn-sm btn-outline-success py-0 px-2" style="font-size: 0.75rem;" onclick="applyQuickTP(10)">+10%</button>
+                            <button type="button" class="btn btn-sm btn-outline-success py-0 px-2" style="font-size: 0.75rem;" onclick="applyQuickTP(15)">+15%</button>
+                            <button type="button" class="btn btn-sm btn-outline-success py-0 px-2" style="font-size: 0.75rem;" onclick="applyQuickTP(20)">+20%</button>
+                            <button type="button" class="btn btn-sm btn-outline-success py-0 px-2" style="font-size: 0.75rem;" onclick="applyQuickTP(30)">+30%</button>
+                        </div>
+                    </div>
+
+                    <!-- Stop Loss -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-danger d-flex justify-content-between align-items-center mb-1" style="font-size: 0.85rem;">
+                            <span>🛑 จุดตัดขาดทุนป้องกันความเสี่ยง (Stop Loss - USD)</span>
+                            <span id="targetDownsideBadge" class="badge bg-danger-subtle text-danger">Downside: -0%</span>
+                        </label>
+                        <div class="input-group mb-2">
+                            <span class="input-group-text bg-white fw-bold text-danger">$</span>
+                            <input type="number" id="inputTargetSL" class="form-control fw-bold fs-5 text-danger" step="0.01" placeholder="เช่น 52.00" oninput="calcTargetRatio()">
+                        </div>
+                        <div class="d-flex gap-1 flex-wrap">
+                            <button type="button" class="btn btn-sm btn-outline-danger py-0 px-2" style="font-size: 0.75rem;" onclick="applyQuickSL(3)">-3%</button>
+                            <button type="button" class="btn btn-sm btn-outline-danger py-0 px-2" style="font-size: 0.75rem;" onclick="applyQuickSL(5)">-5%</button>
+                            <button type="button" class="btn btn-sm btn-outline-danger py-0 px-2" style="font-size: 0.75rem;" onclick="applyQuickSL(7)">-7%</button>
+                            <button type="button" class="btn btn-sm btn-outline-danger py-0 px-2" style="font-size: 0.75rem;" onclick="applyQuickSL(10)">-10%</button>
+                            <button type="button" class="btn btn-sm btn-outline-danger py-0 px-2" style="font-size: 0.75rem;" onclick="applyQuickSL(15)">-15%</button>
+                        </div>
+                    </div>
+
+                    <!-- Risk : Reward Ratio Box -->
+                    <div class="card p-3 mb-3 border" id="boxRRRatio" style="background-color: #f9fafb; border-radius: 12px;">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <small class="text-muted fw-bold">อัตราผลตอบแทนต่อความเสี่ยง (Risk : Reward)</small>
+                                <div class="fw-bold fs-5 mt-1" id="lblTargetRR">1 : 0.00</div>
+                            </div>
+                            <span class="badge px-3 py-2 fw-bold" id="badgeTargetRR" style="font-size: 0.8rem; background-color: #e5e7eb; color: #4b5563;">กรุณากรอก TP & SL</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center pt-2">
+                        <button type="button" class="btn btn-sm btn-outline-danger" onclick="clearStockTarget()">🗑️ ล้างเป้าหมาย</button>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-sm btn-light border px-3" data-bs-dismiss="modal">ยกเลิก</button>
+                            <button type="button" class="btn btn-sm btn-primary px-4 fw-bold" onclick="saveStockTarget()">💾 บันทึกเป้าหมาย</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal: Stock Allocator (ย้ายและจัดสรรหุ้นเข้าพอร์ต) -->
     <div class="modal fade" id="stockAllocatorModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -660,6 +787,19 @@
                 <span id="activePortBadgeHeader" class="badge rounded-pill bg-primary px-3 py-2" style="font-size: 0.8rem;">พอร์ตทั้งหมด</span>
             </div>
             <div class="d-flex align-items-center gap-2 flex-wrap">
+                <button id="btnPrivacyToggle" class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="togglePrivacyMode()" title="ซ่อน/แสดงตัวเลขเงิน เหมาะสำหรับแคปหน้าจอหรือเปิดในที่สาธารณะ (ชี้เมาส์เพื่อแอบดูได้)">
+                    👁️ ซ่อนตัวเลข
+                </button>
+                <div class="dropdown d-inline-block">
+                    <button class="btn btn-sm btn-outline-primary rounded-pill px-3 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        📑 Export CSV
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.85rem;">
+                        <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('holdings')">📊 ส่งออกพอร์ตหุ้นปัจจุบัน (Holdings)</a></li>
+                        <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('transactions')">📜 ส่งออกประวัติรายการทั้งหมด (Transactions)</a></li>
+                        <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('tax')">💰 ส่งออกรายงานปันผลและภาษี 15% (Tax Report)</a></li>
+                    </ul>
+                </div>
                 <input type="file" id="jsonBackupInput" accept=".json" style="display: none;" onchange="handleRestoreBackup(event)">
                 <button class="btn btn-sm btn-outline-success rounded-pill px-3 fw-bold" onclick="exportFullBackup()" title="สำรองข้อมูลทุกพอร์ต ทุกรายการ และการตั้งค่า">
                     💾 Backup JSON
@@ -714,6 +854,7 @@
                                 <div id="topReturnPercent" class="fw-bold text-muted" style="font-size: 0.75rem;">0.00%</div>
                             </div>
                             <div class="metric-value" id="topTotalReturn">฿0.00</div>
+                            <div id="badgeBenchmarkAlpha" class="mt-1" style="font-size: 0.72rem;"></div>
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
@@ -753,6 +894,7 @@
                             <div class="btn-group btn-group-sm" role="group">
                                 <button type="button" class="btn btn-sm btn-light border py-0 px-2 fw-bold active" id="btnDivYearly" onclick="setDivView('YEARLY')">รายปี</button>
                                 <button type="button" class="btn btn-sm btn-light border py-0 px-2 fw-bold" id="btnDivMonthly" onclick="setDivView('MONTHLY')">รายเดือน</button>
+                                <button type="button" class="btn btn-sm btn-light border py-0 px-2 fw-bold text-success" id="btnDivForecast" onclick="setDivView('FORECAST')" title="คำนวณคาดการณ์เงินปันผลล่วงหน้า 12 เดือน และ Passive Income ต่อเดือน">📅 คาดการณ์ 12 ด.</button>
                             </div>
                         </div>
                         <div class="table-responsive">
@@ -861,6 +1003,7 @@
                         </div>
                     </div>
                     <div class="card-body p-0">
+                        <div id="stockTargetAlertContainer" class="px-3 pt-2"></div>
                         <div class="table-responsive">
                             <table class="table table-hover text-center align-middle m-0" style="font-size: 0.95rem;">
                                 <thead style="background-color: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
@@ -970,7 +1113,16 @@
                             </div>
                             <input type="file" id="csvFileInput" accept=".csv" style="display: none;" onchange="handleImportCSV(event)">
                             <button class="btn btn-sm btn-outline-success rounded-pill px-3" onclick="document.getElementById('csvFileInput').click()">📥 Import CSV</button>
-                            <button class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="exportCSV()">📤 Export CSV</button>
+                            <div class="dropdown d-inline-block">
+                                <button class="btn btn-sm btn-outline-primary rounded-pill px-3 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    📤 Export CSV
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.85rem;">
+                                    <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('transactions')">📜 ส่งออกประวัติรายการ (Transactions)</a></li>
+                                    <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('holdings')">📊 ส่งออกพอร์ตหุ้นปัจจุบัน (Holdings)</a></li>
+                                    <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('tax')">💰 ส่งออกรายงานปันผล & ภาษี 15% (Tax Report)</a></li>
+                                </ul>
+                            </div>
                             <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="clearAllData()">🗑️ ล้างข้อมูลทั้งหมด</button>
                         </div>
                     </div>
@@ -1326,15 +1478,6 @@
                     </div>
                 `;
             });
-
-            // Card: + Add New Portfolio (Uncapped & Free!)
-            html += `
-                <div class="portfolio-card-add" onclick="openPortfolioModal()">
-                    <div style="font-size: 2.2rem; color: #3b82f6; line-height: 1;" class="mb-2">+</div>
-                    <div class="fw-bold" style="font-size: 0.95rem; white-space: nowrap;">เพิ่มพอร์ตการลงทุน</div>
-                    <small class="text-muted mt-1" style="font-size: 0.75rem; white-space: nowrap;">สร้างพอร์ตได้ไม่จำกัด (ฟรี 100%)</small>
-                </div>
-            `;
 
             container.innerHTML = html;
         }
@@ -2065,7 +2208,16 @@
             divViewMode = mode;
             document.getElementById('btnDivYearly').classList.toggle('active', mode === 'YEARLY');
             document.getElementById('btnDivMonthly').classList.toggle('active', mode === 'MONTHLY');
-            document.getElementById('thDivPeriod').innerText = (mode === 'YEARLY') ? 'ปี (Year)' : 'เดือน/ปี (Month)';
+            const btnFcast = document.getElementById('btnDivForecast');
+            if (btnFcast) {
+                btnFcast.classList.toggle('active', mode === 'FORECAST');
+                btnFcast.classList.toggle('btn-success', mode === 'FORECAST');
+                btnFcast.classList.toggle('text-white', mode === 'FORECAST');
+                btnFcast.classList.toggle('text-success', mode !== 'FORECAST');
+            }
+            if (mode === 'YEARLY') document.getElementById('thDivPeriod').innerText = 'ปี (Year)';
+            else if (mode === 'MONTHLY') document.getElementById('thDivPeriod').innerText = 'เดือน/ปี (Month)';
+            else if (mode === 'FORECAST') document.getElementById('thDivPeriod').innerText = 'คาดการณ์ 12 ด. (เดือน)';
             renderDividends();
         };
 
@@ -2168,6 +2320,156 @@
 
         let tunedDiffsV2 = JSON.parse(localStorage.getItem('myTunedDiffsV2')) || {};
         let portfolioTargets = JSON.parse(localStorage.getItem('myPortfolioTargets')) || {};
+        let stockTargets = JSON.parse(localStorage.getItem('myStockTargets')) || {
+            'JEPI': { tp: 65.00, sl: 52.00 }
+        };
+        let currentEditingTargetTicker = '';
+
+        // --- PRIVACY MODE (ซ่อน/แสดงตัวเลขเงิน) ---
+        window.togglePrivacyMode = function() {
+            let isPrivacy = document.body.classList.toggle('privacy-mode');
+            localStorage.setItem('myPrivacyMode', isPrivacy ? 'true' : 'false');
+            updatePrivacyBtnUI(isPrivacy);
+        };
+
+        function initPrivacyMode() {
+            let isPrivacy = localStorage.getItem('myPrivacyMode') === 'true';
+            if (isPrivacy) {
+                document.body.classList.add('privacy-mode');
+            }
+            updatePrivacyBtnUI(isPrivacy);
+        }
+
+        function updatePrivacyBtnUI(isPrivacy) {
+            const btn = document.getElementById('btnPrivacyToggle');
+            if (btn) {
+                btn.innerHTML = isPrivacy ? '🔒 กำลังซ่อน (คลิกดู)' : '👁️ ซ่อนตัวเลข';
+                btn.className = isPrivacy ? 'btn btn-sm btn-dark rounded-pill px-3 fw-bold' : 'btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold';
+            }
+        }
+
+        // --- STOCK TARGET PRICE & STOP LOSS (TP/SL) ---
+        window.openStockTargetModal = function(ticker) {
+            currentEditingTargetTicker = ticker;
+            const titleEl = document.getElementById('stockTargetTitle');
+            const subEl = document.getElementById('stockTargetSubtitle');
+            if (titleEl) titleEl.innerText = `🎯 เป้าหมายราคา: ${ticker}`;
+            if (subEl) subEl.innerText = stockNames[ticker] || 'ตั้งเป้าหมายราคา Take Profit & Stop Loss';
+
+            let curPrice = marketPrices[ticker] || 0;
+            let avgCost = 0;
+            if (globalHoldings && globalHoldings[ticker] && globalHoldings[ticker].shares > 0) {
+                avgCost = globalHoldings[ticker].costUSD / globalHoldings[ticker].shares;
+            }
+
+            document.getElementById('modalTargetCurrentPrice').innerText = `$${curPrice.toFixed(2)}`;
+            document.getElementById('modalTargetAvgCost').innerText = avgCost > 0 ? `$${avgCost.toFixed(4)}` : '-';
+
+            let existing = stockTargets[ticker] || {};
+            document.getElementById('inputTargetTP').value = existing.tp ? existing.tp : '';
+            document.getElementById('inputTargetSL').value = existing.sl ? existing.sl : '';
+
+            calcTargetRatio();
+
+            const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('stockTargetModal'));
+            modal.show();
+        };
+
+        window.applyQuickTP = function(pct) {
+            let curPrice = marketPrices[currentEditingTargetTicker] || 0;
+            if (curPrice <= 0) return;
+            let tp = curPrice * (1 + pct / 100);
+            document.getElementById('inputTargetTP').value = tp.toFixed(2);
+            calcTargetRatio();
+        };
+
+        window.applyQuickSL = function(pct) {
+            let curPrice = marketPrices[currentEditingTargetTicker] || 0;
+            if (curPrice <= 0) return;
+            let sl = curPrice * (1 - pct / 100);
+            document.getElementById('inputTargetSL').value = sl.toFixed(2);
+            calcTargetRatio();
+        };
+
+        window.calcTargetRatio = function() {
+            let curPrice = marketPrices[currentEditingTargetTicker] || 0;
+            let tp = parseFloat(document.getElementById('inputTargetTP').value) || 0;
+            let sl = parseFloat(document.getElementById('inputTargetSL').value) || 0;
+
+            let upsideEl = document.getElementById('targetUpsideBadge');
+            let downsideEl = document.getElementById('targetDownsideBadge');
+            let rrEl = document.getElementById('lblTargetRR');
+            let badgeRR = document.getElementById('badgeTargetRR');
+
+            if (curPrice > 0 && tp > 0) {
+                let upPct = ((tp - curPrice) / curPrice) * 100;
+                upsideEl.innerText = `Upside: ${upPct >= 0 ? '+' : ''}${upPct.toFixed(1)}% (+$${(tp - curPrice).toFixed(2)})`;
+                upsideEl.className = upPct >= 0 ? 'badge bg-success-subtle text-success' : 'badge bg-danger-subtle text-danger';
+            } else {
+                upsideEl.innerText = 'Upside: -';
+            }
+
+            if (curPrice > 0 && sl > 0) {
+                let downPct = ((curPrice - sl) / curPrice) * 100;
+                downsideEl.innerText = `Downside: -${downPct.toFixed(1)}% (-$${(curPrice - sl).toFixed(2)})`;
+                downsideEl.className = 'badge bg-danger-subtle text-danger';
+            } else {
+                downsideEl.innerText = 'Downside: -';
+            }
+
+            if (curPrice > 0 && tp > curPrice && sl > 0 && sl < curPrice) {
+                let reward = tp - curPrice;
+                let risk = curPrice - sl;
+                let ratio = reward / risk;
+                rrEl.innerText = `1 : ${ratio.toFixed(2)}`;
+
+                if (ratio >= 2) {
+                    badgeRR.className = 'badge px-3 py-2 fw-bold bg-success text-white';
+                    badgeRR.innerText = '✨ ดีเยี่ยม (Reward คุ้มเสี่ยง)';
+                } else if (ratio >= 1) {
+                    badgeRR.className = 'badge px-3 py-2 fw-bold bg-primary text-white';
+                    badgeRR.innerText = '⚖️ ปานกลาง (พอรับได้)';
+                } else {
+                    badgeRR.className = 'badge px-3 py-2 fw-bold bg-danger text-white';
+                    badgeRR.innerText = '⚠️ เสี่ยงสูง (Upside น้อยกว่าความเสี่ยง)';
+                }
+            } else {
+                rrEl.innerText = '1 : -';
+                badgeRR.className = 'badge px-3 py-2 fw-bold bg-light text-muted border';
+                badgeRR.innerText = 'กรุณากรอก TP > ราคา และ SL < ราคา';
+            }
+        };
+
+        window.saveStockTarget = function() {
+            if (!currentEditingTargetTicker) return;
+            let tp = parseFloat(document.getElementById('inputTargetTP').value) || 0;
+            let sl = parseFloat(document.getElementById('inputTargetSL').value) || 0;
+
+            if (tp <= 0 && sl <= 0) {
+                delete stockTargets[currentEditingTargetTicker];
+            } else {
+                stockTargets[currentEditingTargetTicker] = {
+                    tp: tp > 0 ? tp : null,
+                    sl: sl > 0 ? sl : null
+                };
+            }
+
+            localStorage.setItem('myStockTargets', JSON.stringify(stockTargets));
+            const modal = bootstrap.Modal.getInstance(document.getElementById('stockTargetModal'));
+            if (modal) modal.hide();
+            updateSummaryAndChart();
+        };
+
+        window.clearStockTarget = function() {
+            if (!currentEditingTargetTicker) return;
+            delete stockTargets[currentEditingTargetTicker];
+            localStorage.setItem('myStockTargets', JSON.stringify(stockTargets));
+            document.getElementById('inputTargetTP').value = '';
+            document.getElementById('inputTargetSL').value = '';
+            const modal = bootstrap.Modal.getInstance(document.getElementById('stockTargetModal'));
+            if (modal) modal.hide();
+            updateSummaryAndChart();
+        };
 
         let portfolioMapping = JSON.parse(localStorage.getItem('myPortfolioGroups')) || {
             'VTI': 'ETF', 'VXUS': 'ETF', 'VOO': 'ETF', 'SCHD': 'ETF', 'QQQ': 'ETF', 'QQQM': 'ETF',
@@ -2957,6 +3259,116 @@
                 ? transactions
                 : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
 
+            // MODE: 12-Month Forward Dividend Forecast & Monthly Passive Income
+            if (divViewMode === 'FORECAST') {
+                const annualDivRates = {
+                    'JEPI': { divPerShare: 4.25, months: [1,2,3,4,5,6,7,8,9,10,11,12] },
+                    'JEPQ': { divPerShare: 5.40, months: [1,2,3,4,5,6,7,8,9,10,11,12] },
+                    'SCHD': { divPerShare: 2.75, months: [3,6,9,12] },
+                    'VOO':  { divPerShare: 6.85, months: [3,6,9,12] },
+                    'VTI':  { divPerShare: 3.75, months: [3,6,9,12] },
+                    'SPY':  { divPerShare: 7.15, months: [3,6,9,12] },
+                    'QQQ':  { divPerShare: 2.65, months: [4,7,10,12] },
+                    'QQQM': { divPerShare: 1.85, months: [4,7,10,12] },
+                    'AAPL': { divPerShare: 1.00, months: [2,5,8,11] },
+                    'MSFT': { divPerShare: 3.30, months: [3,6,9,12] },
+                    'NVDA': { divPerShare: 0.16, months: [3,6,9,12] },
+                    'GOOGL':{ divPerShare: 0.80, months: [3,6,9,12] },
+                    'O':    { divPerShare: 3.15, months: [1,2,3,4,5,6,7,8,9,10,11,12] },
+                    'KO':   { divPerShare: 1.94, months: [4,7,10,12] },
+                    'PEP':  { divPerShare: 5.42, months: [1,3,6,9] },
+                    'TSM':  { divPerShare: 2.45, months: [1,4,7,10] }
+                };
+
+                let holdings = {};
+                currentTxns.forEach(t => {
+                    if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW') return;
+                    if (!holdings[t.ticker]) holdings[t.ticker] = { shares: 0, costUSD: 0 };
+                    if (t.type === 'BUY') {
+                        holdings[t.ticker].shares += t.shares;
+                        holdings[t.ticker].costUSD += (t.shares * t.price);
+                    } else if (t.type === 'SELL' && holdings[t.ticker].shares > 0) {
+                        let avg = holdings[t.ticker].costUSD / holdings[t.ticker].shares;
+                        holdings[t.ticker].shares -= t.shares;
+                        holdings[t.ticker].costUSD -= (t.shares * avg);
+                    }
+                });
+
+                let now = new Date();
+                let forecastMonths = [];
+                for (let i = 0; i < 12; i++) {
+                    let d = new Date(now.getFullYear(), now.getMonth() + i, 1);
+                    let mNum = d.getMonth() + 1;
+                    let yNum = d.getFullYear();
+                    let key = `${yNum}-${String(mNum).padStart(2, '0')}`;
+                    forecastMonths.push({ key, monthNum: mNum, year: yNum, netUsd: 0, netThb: 0, tickers: [] });
+                }
+
+                let totalAnnualForecastUSD = 0;
+                let totalAnnualForecastTHB = 0;
+
+                for (let ticker in holdings) {
+                    let s = holdings[ticker].shares;
+                    if (s > 0.0001) {
+                        let rateInfo = annualDivRates[ticker];
+                        let divPerShareAnnual = rateInfo ? rateInfo.divPerShare : 0;
+                        let payMonths = rateInfo ? rateInfo.months : [3, 6, 9, 12];
+
+                        if (!rateInfo) {
+                            let curP = marketPrices[ticker] || (holdings[ticker].costUSD / s);
+                            divPerShareAnnual = curP * 0.02;
+                        }
+
+                        let payoutPerPeriod = (divPerShareAnnual * s) / payMonths.length;
+                        let netPayoutPerPeriodUSD = payoutPerPeriod * 0.85;
+
+                        forecastMonths.forEach(fm => {
+                            if (payMonths.includes(fm.monthNum)) {
+                                let netThb = netPayoutPerPeriodUSD * liveFxRate;
+                                fm.netUsd += netPayoutPerPeriodUSD;
+                                fm.netThb += netThb;
+                                fm.tickers.push(ticker);
+                                totalAnnualForecastUSD += netPayoutPerPeriodUSD;
+                                totalAnnualForecastTHB += netThb;
+                            }
+                        });
+                    }
+                }
+
+                let monthlyAvgUSD = totalAnnualForecastUSD / 12;
+                let monthlyAvgTHB = totalAnnualForecastTHB / 12;
+
+                let divHTML = `
+                    <tr style="background-color: rgba(16, 185, 129, 0.1); border-bottom: 2px solid #10b981;">
+                        <td class="fw-bold py-2 text-start" style="color: #065f46;">
+                            ⚡ เฉลี่ยต่อเดือน<br>
+                            <small class="text-muted fw-normal">Passive Income</small>
+                        </td>
+                        <td class="text-profit border-0 py-2 fw-bold">+$${monthlyAvgUSD.toFixed(2)}/ด.</td>
+                        <td class="text-profit border-0 py-2 fw-bold">+฿${Math.round(monthlyAvgTHB).toLocaleString('th-TH')}/ด.</td>
+                    </tr>
+                `;
+
+                forecastMonths.forEach(fm => {
+                    let tickerBadges = fm.tickers.length > 0 
+                        ? `<br><small class="text-muted" style="font-size:0.7rem;">${fm.tickers.join(', ')}</small>` 
+                        : '';
+                    divHTML += `<tr>
+                        <td class="fw-bold border-0 py-2 text-start">${fm.key}${tickerBadges}</td>
+                        <td class="${fm.netUsd > 0 ? 'text-profit' : 'text-muted'} border-0 py-2">${fm.netUsd > 0 ? '+$' + fm.netUsd.toFixed(2) : '-'}</td>
+                        <td class="${fm.netThb > 0 ? 'text-profit' : 'text-muted'} border-0 py-2">${fm.netThb > 0 ? '+฿' + Math.round(fm.netThb).toLocaleString('th-TH') : '-'}</td>
+                    </tr>`;
+                });
+
+                document.getElementById('dividendTableBody').innerHTML = divHTML;
+
+                const badgeYOC = document.getElementById('badgeYOC');
+                if (badgeYOC) {
+                    badgeYOC.innerText = `🔮 คาดการณ์ทั้งปี: ฿${Math.round(totalAnnualForecastTHB).toLocaleString()} ($${totalAnnualForecastUSD.toFixed(1)})`;
+                }
+                return;
+            }
+
             let divByPeriod = {};
             let totalDivTHB = 0;
 
@@ -3230,6 +3642,7 @@
             // V52: ใช้ String Buffer อัด HTML รวดเดียว ป้องกัน Layout เด้ง
             let summaryHTML = ''; 
             let hasData = false;
+            let targetAlerts = [];
             
             let oldTunedDiffs = JSON.parse(localStorage.getItem('myTunedDiffs')) || {};
 
@@ -3286,6 +3699,29 @@
                         syncBtns += `<br><button class="btn btn-sm btn-outline-danger mt-1 py-0 px-2" style="font-size: 0.65rem;" onclick="undoSyncTHB('${ticker}')" title="ลบข้อมูลจูนแบบเก่าที่ทำประวัติพัง">⚠️ ล้างค่าเก่าก่อน</button>`;
                     }
 
+                    // Stock Target (TP / SL) logic
+                    let target = stockTargets[ticker];
+                    let targetBadge = '';
+                    if (target && (target.tp || target.sl)) {
+                        let isHitTP = target.tp && currentPriceUSD >= target.tp;
+                        let isHitSL = target.sl && currentPriceUSD <= target.sl;
+                        let tpText = target.tp ? `TP: $${target.tp}` : '';
+                        let slText = target.sl ? `SL: $${target.sl}` : '';
+                        let sep = (target.tp && target.sl) ? ' | ' : '';
+                        
+                        if (isHitTP) {
+                            targetBadge = `<span class="badge bg-success text-white target-badge mt-1" onclick="openStockTargetModal('${ticker}')" title="ราคาแตะเป้าขายทำกำไรแล้ว! คลิกเพื่อดู/แก้ไข">🎉 ถึงเป้า TP ($${target.tp})</span>`;
+                            targetAlerts.push({ type: 'TP', ticker, curPrice: currentPriceUSD, targetPrice: target.tp, shares, port: holdings[ticker].port || 'core' });
+                        } else if (isHitSL) {
+                            targetBadge = `<span class="badge bg-danger text-white target-badge mt-1" onclick="openStockTargetModal('${ticker}')" title="ราคาหลุดจุดตัดขาดทุน! คลิกเพื่อดู/แก้ไข">⚠️ ถึงจุด Cut ($${target.sl})</span>`;
+                            targetAlerts.push({ type: 'SL', ticker, curPrice: currentPriceUSD, targetPrice: target.sl, shares, port: holdings[ticker].port || 'core' });
+                        } else {
+                            targetBadge = `<span class="badge bg-light text-dark border target-badge mt-1" onclick="openStockTargetModal('${ticker}')" title="คลิกเพื่อปรับเป้าหมายราคา">🎯 ${tpText}${sep}${slText}</span>`;
+                        }
+                    } else {
+                        targetBadge = `<span class="badge bg-light text-muted border border-dashed target-badge mt-1" onclick="openStockTargetModal('${ticker}')" title="คลิกเพื่อตั้งเป้าหมาย TP / Stop Loss">+ 🎯 ตั้งเป้า TP/SL</span>`;
+                    }
+
                     // V52: เพิ่ม ID ให้ Input และใช้ onblur ป้องกันพิมพ์ไปเด้งไป
                     summaryHTML += `
                         <tr>
@@ -3294,6 +3730,7 @@
                                 <span class="badge group-badge mt-1" onclick="changeGroup('${ticker}')">📁 ${groupName}</span>
                                 <span class="badge rounded-pill bg-light text-primary border mt-1" style="cursor: pointer; font-size: 0.72rem;" onclick="quickMoveStock('${ticker}')" title="คลิกเพื่อย้ายหุ้นนี้ไปพอร์ตอื่น">💼 ย้ายพอร์ต ⇄</span>
                                 <span class="badge rounded-pill bg-light text-danger border mt-1 ms-1" style="cursor: pointer; font-size: 0.72rem;" onclick="openTrimForTicker('${ticker}')" title="คำนวณการขายลดสัดส่วน/ล็อกกำไรสำหรับ ${ticker}">✂️ Trim</span>
+                                <br>${targetBadge}
                             </td>
                             <td class="border-0 py-3">${shares.toFixed(7)}</td>
                             <td class="border-0 py-3">
@@ -3338,6 +3775,44 @@
             if(!hasData) summaryHTML = `<tr><td colspan="7" class="text-muted py-5 border-0">ยังไม่มีหุ้นในพอร์ตโฟลิโอ เริ่มบันทึกรายการได้เลย!</td></tr>`;
             
             document.getElementById('summaryTableBody').innerHTML = summaryHTML;
+
+            // Render TP / SL Alerts Banner
+            let alertContainer = document.getElementById('stockTargetAlertContainer');
+            if (alertContainer) {
+                if (targetAlerts.length > 0) {
+                    let alertHTML = '';
+                    targetAlerts.forEach(al => {
+                        if (al.type === 'TP') {
+                            alertHTML += `
+                                <div class="alert alert-success border-success d-flex justify-content-between align-items-center py-2 px-3 mb-2 rounded-3 shadow-sm flex-wrap gap-2">
+                                    <div>
+                                        <strong>🎉 แจ้งเตือน Take Profit:</strong> หุ้น <strong>${al.ticker}</strong> ราคาปัจจุบัน <strong>$${al.curPrice.toFixed(2)}</strong> ทะลุเป้าหมายที่ตั้งไว้ ($${al.targetPrice.toFixed(2)}) แล้ว!
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-sm btn-success py-1 px-3 fw-bold" onclick="executeTrimToForm('${al.ticker}', ${al.shares.toFixed(4)}, ${al.curPrice.toFixed(2)}, '${al.port}')">⚡ ขายล็อกกำไร</button>
+                                        <button class="btn btn-sm btn-outline-success py-1 px-2" onclick="openStockTargetModal('${al.ticker}')">ปรับเป้าใหม่</button>
+                                    </div>
+                                </div>
+                            `;
+                        } else {
+                            alertHTML += `
+                                <div class="alert alert-danger border-danger d-flex justify-content-between align-items-center py-2 px-3 mb-2 rounded-3 shadow-sm flex-wrap gap-2">
+                                    <div>
+                                        <strong>⚠️ แจ้งเตือน Stop Loss:</strong> หุ้น <strong>${al.ticker}</strong> ราคาปัจจุบัน <strong>$${al.curPrice.toFixed(2)}</strong> หลุดจุดตัดขาดทุนที่ตั้งไว้ ($${al.targetPrice.toFixed(2)})!
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-sm btn-danger py-1 px-3 fw-bold" onclick="executeTrimToForm('${al.ticker}', ${al.shares.toFixed(4)}, ${al.curPrice.toFixed(2)}, '${al.port}')">⚡ ขาย Stop Loss</button>
+                                        <button class="btn btn-sm btn-outline-danger py-1 px-2" onclick="openStockTargetModal('${al.ticker}')">ปรับจุดใหม่</button>
+                                    </div>
+                                </div>
+                            `;
+                        }
+                    });
+                    alertContainer.innerHTML = alertHTML;
+                } else {
+                    alertContainer.innerHTML = '';
+                }
+            }
             
             const isAllMode = (activePortfolioId === 'ALL');
             let displayCash = Math.max(0, totalAccountCash);
@@ -3363,6 +3838,21 @@
             if (retAllEl) {
                 retAllEl.innerText = `${totalPlPercent >= 0 ? '+' : ''}${totalPlPercent.toFixed(2)}% ${isAllMode ? 'ทั้งหมด' : 'พอร์ตนี้'}`;
                 retAllEl.className = `fw-bold ${totalPlPercent >= 0 ? 'text-profit' : 'text-loss'}`;
+            }
+
+            // S&P 500 Benchmark comparison (Alpha)
+            const badgeAlphaEl = document.getElementById('badgeBenchmarkAlpha');
+            if (badgeAlphaEl) {
+                let vooCur = marketPrices['VOO'] || 710.79;
+                let vooBase = defaultInitialPrices['VOO'] || 710.79;
+                let spReturn = ((vooCur - vooBase) / vooBase) * 100;
+                if (Math.abs(spReturn) < 0.05) spReturn = 1.36; // baseline
+
+                let alpha = totalPlPercent - spReturn;
+                let alphaSign = alpha >= 0 ? '+' : '';
+                let alphaClass = alpha >= 0 ? 'bg-success-subtle text-success border border-success-subtle' : 'bg-danger-subtle text-danger border border-danger-subtle';
+                let alphaText = alpha >= 0 ? '🚀 ชนะ S&P 500' : '📉 ตาม S&P 500';
+                badgeAlphaEl.innerHTML = `<span class="badge ${alphaClass} px-2 py-1 fw-bold" title="S&P 500 (VOO): ${spReturn >= 0 ? '+' : ''}${spReturn.toFixed(2)}% | พอร์ตของคุณ: ${totalPlPercent >= 0 ? '+' : ''}${totalPlPercent.toFixed(2)}%">📊 Alpha: ${alphaSign}${alpha.toFixed(2)}% (${alphaText})</span>`;
             }
 
             let invPctEl = document.getElementById('topInvestedPercent');
@@ -3879,22 +4369,124 @@
             if(confirm("คำเตือน! ล้างประวัติทั้งหมด?")) { transactions = []; localStorage.clear(); cancelEdit(); renderTable(); }
         };
 
-        window.exportCSV = function() {
-            if(transactions.length === 0) { alert("ยังไม่มีข้อมูลให้ส่งออกครับ"); return; }
-            let csvContent = "\uFEFFDate,Type,Ticker,Shares,Price_USD,Comm_USD,Comm_THB,Comm_Curr,Total_THB,Portfolio\n";
+        window.exportCSV = function(type = 'transactions') {
+            const todayStr = new Date().toISOString().split('T')[0];
+
+            if (type === 'holdings') {
+                if (!globalHoldings || Object.keys(globalHoldings).length === 0) {
+                    alert("ยังไม่มีข้อมูลหุ้นในพอร์ตให้ส่งออกครับ");
+                    return;
+                }
+                let csvContent = "\uFEFFTicker,Company_Name,Group,Portfolio,Shares,Avg_Cost_USD,Cost_THB,Current_Price_USD,Market_Value_USD,Market_Value_THB,Profit_USD,Profit_THB,Profit_Percent,Target_TP_USD,Target_SL_USD\n";
+                for (let tk in globalHoldings) {
+                    let h = globalHoldings[tk];
+                    if (h.shares > 0.0001) {
+                        let name = (stockNames[tk] || '').replace(/,/g, ' ');
+                        let grp = portfolioMapping[tk] || 'Stock';
+                        let avgCostUSD = h.costUSD / h.shares;
+                        let curPriceUSD = marketPrices[tk] || avgCostUSD;
+                        let mktUSD = h.shares * curPriceUSD;
+                        let mktTHB = mktUSD * liveFxRate;
+                        let costTHB = currentCalcMode === 'DIME' ? (h.costUSD * liveFxRate) : (h.costTHB + (tunedDiffsV2[tk] || 0));
+                        let plUSD = mktUSD - h.costUSD;
+                        let plTHB = mktTHB - costTHB;
+                        let plPct = h.costUSD > 0 ? (plUSD / h.costUSD) * 100 : 0;
+                        let tgt = stockTargets[tk] || {};
+
+                        let pName = activePortfolioId === 'ALL' ? 'All Portfolios' : (portfolios.find(p => p.id === activePortfolioId)?.name || activePortfolioId);
+
+                        let row = [
+                            tk,
+                            `"${name}"`,
+                            `"${grp}"`,
+                            `"${pName}"`,
+                            h.shares.toFixed(6),
+                            avgCostUSD.toFixed(4),
+                            costTHB.toFixed(2),
+                            curPriceUSD.toFixed(2),
+                            mktUSD.toFixed(2),
+                            mktTHB.toFixed(2),
+                            plUSD.toFixed(2),
+                            plTHB.toFixed(2),
+                            plPct.toFixed(2) + '%',
+                            tgt.tp || '',
+                            tgt.sl || ''
+                        ].join(',');
+                        csvContent += row + "\n";
+                    }
+                }
+                downloadCSVFile(csvContent, `my_holdings_${todayStr}.csv`);
+                return;
+            }
+
+            if (type === 'tax') {
+                const divTxns = transactions.filter(t => t.type === 'DIVIDEND').sort((a,b) => new Date(b.date) - new Date(a.date));
+                if (divTxns.length === 0) {
+                    alert("ยังไม่มีประวัติเงินปันผลสำหรับจัดทำรายงานภาษีครับ");
+                    return;
+                }
+                let csvContent = "\uFEFFDate,Portfolio,Ticker,Company_Name,Gross_Dividend_USD,Tax_WHT_15pct_USD,Net_Dividend_USD,Net_Dividend_THB,Exchange_Rate\n";
+                divTxns.forEach(t => {
+                    let pObj = portfolios.find(p => p.id === (t.portfolio || 'core'));
+                    let pName = pObj ? pObj.name : 'Core Port';
+                    let name = (stockNames[t.ticker] || '').replace(/,/g, ' ');
+                    let grossUSD = t.price || 0;
+                    let taxUSD = t.comm || (grossUSD * 0.15);
+                    let netUSD = grossUSD - taxUSD;
+                    let netTHB = parseFloat(t.totalTHB) || (netUSD * liveFxRate);
+                    let row = [
+                        t.date,
+                        `"${pName}"`,
+                        t.ticker,
+                        `"${name}"`,
+                        grossUSD.toFixed(2),
+                        taxUSD.toFixed(2),
+                        netUSD.toFixed(2),
+                        netTHB.toFixed(2),
+                        liveFxRate.toFixed(4)
+                    ].join(',');
+                    csvContent += row + "\n";
+                });
+                downloadCSVFile(csvContent, `dividend_tax_report_w8ben_${todayStr}.csv`);
+                return;
+            }
+
+            // Default: 'transactions'
+            if (transactions.length === 0) { alert("ยังไม่มีข้อมูลรายการให้ส่งออกครับ"); return; }
+            let csvContent = "\uFEFFDate,Portfolio,Type,Ticker,Company_Name,Shares,Price_USD,Comm_USD,Comm_THB,Comm_Curr,Total_THB\n";
             transactions.forEach(t => {
-                let row = `${t.date},${t.type},${t.ticker},${t.shares},${t.price},${t.comm},${t.commTHB || 0},${t.commCurr || 'USD'},${t.totalTHB},${t.portfolio || 'core'}`;
+                let pObj = portfolios.find(p => p.id === (t.portfolio || 'core'));
+                let pName = pObj ? pObj.name : 'Core Port';
+                let name = (stockNames[t.ticker] || '').replace(/,/g, ' ');
+                let row = [
+                    t.date,
+                    `"${pName}"`,
+                    t.type,
+                    t.ticker,
+                    `"${name}"`,
+                    t.shares,
+                    t.price,
+                    t.comm,
+                    t.commTHB || 0,
+                    t.commCurr || 'USD',
+                    t.totalTHB
+                ].join(',');
                 csvContent += row + "\n";
             });
-            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            downloadCSVFile(csvContent, `my_portfolio_transactions_${todayStr}.csv`);
+        };
+
+        function downloadCSVFile(content, fileName) {
+            const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
             const url = URL.createObjectURL(blob);
             const link = document.createElement("a");
             link.setAttribute("href", url);
-            link.setAttribute("download", "my_portfolio_transactions.csv");
+            link.setAttribute("download", fileName);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-        };
+            setTimeout(() => URL.revokeObjectURL(url), 100);
+        }
 
         window.handleImportCSV = function(event) {
             const file = event.target.files[0];
@@ -3944,6 +4536,7 @@
         
         async function initializeApp() { 
             initTheme();
+            initPrivacyMode();
             populatePortfolioDropdown();
             renderPortfolioCards();
             updateModeButtons();
