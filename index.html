@@ -80,9 +80,9 @@
             border-radius: 18px;
             border: 2px solid #e5e7eb;
             padding: 16px 18px 14px 18px;
-            min-width: 300px;
-            max-width: 340px;
-            flex: 0 0 310px;
+            min-width: 250px;
+            max-width: 280px;
+            flex: 0 0 260px;
             cursor: pointer;
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
@@ -105,16 +105,16 @@
             background: #fafafa;
             border: 2px dashed #cbd5e1;
             border-radius: 18px;
-            min-width: 250px;
-            max-width: 280px;
-            flex: 0 0 260px;
+            min-width: 200px;
+            max-width: 230px;
+            flex: 0 0 215px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
-            padding: 24px;
+            padding: 20px 14px;
             text-align: center;
         }
         .portfolio-card-add:hover {
@@ -617,7 +617,7 @@
                         <div class="card h-100 p-3 border-csh">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="fw-bold" style="font-size: 0.85rem; color: #374151;">
-                                    <span style="color: #ec4899;">●</span> เงินสดคงเหลือ
+                                    <span style="color: #ec4899;">●</span> <span id="txtTopCashTitle">เงินสดคงเหลือ</span>
                                 </div>
                                 <div id="topCashPercent" class="fw-bold text-muted" style="font-size: 0.75rem;">0% ของพอร์ต</div>
                             </div>
@@ -1260,7 +1260,7 @@
                             <input type="checkbox" class="form-check-input alloc-check" value="${tk}" ${isChecked ? 'checked' : ''} onchange="updateAllocSummaryCount()">
                         </td>
                         <td class="text-start py-2">
-                            <strong>${tk}</strong> <small class="text-muted">(${stockNames[tk] || ''})</small>
+                            <strong>${tk}</strong> ${stockNames[tk] ? `<small class="text-muted">(${stockNames[tk]})</small>` : ''}
                         </td>
                         <td class="py-2">${shares.toFixed(4)}</td>
                         <td class="py-2">
@@ -1700,7 +1700,18 @@
             'VTI': 'Vanguard Total Stock', 'VOO': 'Vanguard S&P 500', 'SCHD': 'Schwab Dividend ETF',
             'QQQ': 'Invesco Nasdaq 100', 'QQQM': 'Invesco Nasdaq 100 ETF', 'NVDA': 'NVIDIA Corp',
             'AAPL': 'Apple Inc', 'MSFT': 'Microsoft Corp', 'GOOGL': 'Alphabet Inc', 'VXUS': 'Vanguard Total Intl',
-            'JEPI': 'JPMorgan Equity Premium Inc', 'JEPQ': 'JPMorgan Nasdaq Premium Inc', 'SPY': 'SPDR S&P 500 ETF'
+            'JEPI': 'JPMorgan Equity Premium Inc', 'JEPQ': 'JPMorgan Nasdaq Premium Inc', 'SPY': 'SPDR S&P 500 ETF',
+            'SPMO': 'Invesco S&P 500 Momentum ETF', 'GRID': 'First Trust Smart Grid ETF',
+            'XLV': 'Health Care Select Sector SPDR', 'SPYD': 'SPDR S&P 500 High Dividend ETF',
+            'XLK': 'Technology Select Sector SPDR', 'XLF': 'Financial Select Sector SPDR',
+            'XLE': 'Energy Select Sector SPDR', 'XLU': 'Utilities Select Sector SPDR',
+            'XLI': 'Industrial Select Sector SPDR', 'XLP': 'Consumer Staples Select Sector SPDR',
+            'XLY': 'Consumer Discretionary Select Sector SPDR', 'XLB': 'Materials Select Sector SPDR',
+            'VNQ': 'Vanguard Real Estate ETF', 'TLT': 'iShares 20+ Year Treasury Bond ETF',
+            'BND': 'Vanguard Total Bond Market ETF', 'VT': 'Vanguard Total World Stock ETF',
+            'TSLA': 'Tesla Inc', 'AMZN': 'Amazon.com Inc', 'META': 'Meta Platforms Inc',
+            'TSM': 'Taiwan Semiconductor', 'AMD': 'Advanced Micro Devices', 'AVGO': 'Broadcom Inc',
+            'COST': 'Costco Wholesale Corp', 'KO': 'Coca-Cola Co', 'PEP': 'PepsiCo Inc', 'O': 'Realty Income Corp'
         };
 
         let currentFilterType = 'ALL';
@@ -2577,7 +2588,8 @@
                 }
 
                 dates.push(date);
-                datasetsData['Total'].push(totalInvested + currentCash);
+                let pointTotal = (activePortfolioId === 'ALL') ? (totalInvested + currentCash) : totalInvested;
+                datasetsData['Total'].push(pointTotal);
 
                 Object.keys(groupCosts).forEach(g => {
                     if(!datasetsData[g]) datasetsData[g] = new Array(dates.length - 1).fill(0); 
@@ -2677,17 +2689,44 @@
             let groupTotals = {}; 
             let topMetrics = { cash: 0, invested: 0, mktValue: 0 };
 
+            // คำนวณเงินสดคงเหลือจริงของบัญชี Dime ทั้งหมด (Account-Level Cash)
+            let totalAccountCash = 0;
+            transactions.forEach(txn => {
+                let parsedTHB = parseFloat(txn.totalTHB) || 0;
+                if(txn.type === 'DEPOSIT') totalAccountCash += parsedTHB;
+                else if(txn.type === 'WITHDRAW') totalAccountCash -= parsedTHB;
+                else if(txn.type === 'BUY') totalAccountCash -= parsedTHB;
+                else if(txn.type === 'SELL' || txn.type === 'DIVIDEND') totalAccountCash += parsedTHB;
+            });
+
+            // คำนวณมูลค่าตลาดรวมของทุกพอร์ต เพื่อใช้บอกน้ำหนัก (%) ของพอร์ตย่อยนี้ในบัญชีทั้งหมด
+            let allHoldingsMap = {};
+            transactions.forEach(txn => {
+                if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') return;
+                if(!allHoldingsMap[txn.ticker]) allHoldingsMap[txn.ticker] = { shares: 0, costUSD: 0 };
+                if(txn.type === 'BUY') {
+                    allHoldingsMap[txn.ticker].shares += txn.shares;
+                    allHoldingsMap[txn.ticker].costUSD += (txn.shares * txn.price);
+                } else if(txn.type === 'SELL' && allHoldingsMap[txn.ticker].shares > 0) {
+                    let avg = allHoldingsMap[txn.ticker].costUSD / allHoldingsMap[txn.ticker].shares;
+                    allHoldingsMap[txn.ticker].shares -= txn.shares;
+                    allHoldingsMap[txn.ticker].costUSD -= (txn.shares * avg);
+                }
+            });
+            let allPortfoliosMktTHB = 0;
+            for(let tk in allHoldingsMap) {
+                if(allHoldingsMap[tk].shares > 0.0001) {
+                    let curPrice = marketPrices[tk] || (allHoldingsMap[tk].costUSD / allHoldingsMap[tk].shares);
+                    allPortfoliosMktTHB += (allHoldingsMap[tk].shares * curPrice * liveFxRate);
+                }
+            }
+
             const currentTxns = (activePortfolioId === 'ALL')
                 ? transactions
                 : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
 
             currentTxns.forEach(txn => {
                 let parsedTHB = parseFloat(txn.totalTHB) || 0; 
-                
-                if(txn.type === 'DEPOSIT') topMetrics.cash += parsedTHB;
-                else if(txn.type === 'WITHDRAW') topMetrics.cash -= parsedTHB;
-                else if(txn.type === 'BUY') topMetrics.cash -= parsedTHB;
-                else if(txn.type === 'SELL' || txn.type === 'DIVIDEND') topMetrics.cash += parsedTHB;
 
                 if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') return;
 
@@ -2820,7 +2859,9 @@
             
             document.getElementById('summaryTableBody').innerHTML = summaryHTML;
             
-            let totalPortfolioValue = topMetrics.mktValue + topMetrics.cash;
+            const isAllMode = (activePortfolioId === 'ALL');
+            let displayCash = Math.max(0, totalAccountCash);
+            let totalPortfolioValue = isAllMode ? (topMetrics.mktValue + displayCash) : topMetrics.mktValue;
             let totalPlTHB = topMetrics.mktValue - topMetrics.invested;
             let totalPlPercent = topMetrics.invested > 0 ? (totalPlTHB / topMetrics.invested) * 100 : 0;
             
@@ -2829,7 +2870,7 @@
             
             document.getElementById('topTotalValue').innerText = `฿${totalPortfolioValue.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             document.getElementById('topTotalInvested').innerText = `฿${topMetrics.invested.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-            document.getElementById('topTotalCash').innerText = `฿${topMetrics.cash.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            document.getElementById('topTotalCash').innerText = `฿${displayCash.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             
             let retEl = document.getElementById('topTotalReturn');
             let retPct = document.getElementById('topReturnPercent');
@@ -2838,15 +2879,35 @@
             retEl.className = `metric-value ${totalPlTHB >= 0 ? 'text-profit' : 'text-loss'}`;
             retPct.className = `fw-bold ${totalPlTHB >= 0 ? 'text-profit' : 'text-loss'}`;
             
-            let mktPct = totalPortfolioValue > 0 ? (topMetrics.mktValue / totalPortfolioValue) * 100 : 0;
-            let cashPct = totalPortfolioValue > 0 ? (topMetrics.cash / totalPortfolioValue) * 100 : 0;
-            document.getElementById('topInvestedPercent').innerText = `${mktPct.toFixed(0)}% ของพอร์ต`;
-            document.getElementById('topCashPercent').innerText = `${cashPct.toFixed(0)}% ของพอร์ต`;
-            
-            document.getElementById('topReturnPercentAll').innerText = `${totalPlPercent >= 0 ? '+' : ''}${totalPlPercent.toFixed(2)}% ทั้งหมด`;
-            document.getElementById('topReturnPercentAll').className = `fw-bold ${totalPlPercent >= 0 ? 'text-profit' : 'text-loss'}`;
+            let retAllEl = document.getElementById('topReturnPercentAll');
+            if (retAllEl) {
+                retAllEl.innerText = `${totalPlPercent >= 0 ? '+' : ''}${totalPlPercent.toFixed(2)}% ${isAllMode ? 'ทั้งหมด' : 'พอร์ตนี้'}`;
+                retAllEl.className = `fw-bold ${totalPlPercent >= 0 ? 'text-profit' : 'text-loss'}`;
+            }
 
-            if(topMetrics.cash > 0) groupTotals['เงินสด'] = topMetrics.cash;
+            let invPctEl = document.getElementById('topInvestedPercent');
+            let cashPctEl = document.getElementById('topCashPercent');
+            let cashTitleEl = document.getElementById('txtTopCashTitle');
+
+            if (isAllMode) {
+                let mktPct = totalPortfolioValue > 0 ? (topMetrics.mktValue / totalPortfolioValue) * 100 : 0;
+                let cashPct = totalPortfolioValue > 0 ? (displayCash / totalPortfolioValue) * 100 : 0;
+                if (invPctEl) invPctEl.innerText = `${mktPct.toFixed(0)}% ของพอร์ต`;
+                if (cashPctEl) {
+                    cashPctEl.innerText = `${cashPct.toFixed(0)}% ของพอร์ต`;
+                    cashPctEl.className = 'fw-bold text-muted';
+                }
+                if (cashTitleEl) cashTitleEl.innerText = 'เงินสดคงเหลือ';
+                if (displayCash > 0) groupTotals['เงินสด'] = displayCash;
+            } else {
+                let weightOfAll = allPortfoliosMktTHB > 0 ? (topMetrics.mktValue / allPortfoliosMktTHB) * 100 : 0;
+                if (invPctEl) invPctEl.innerText = `${weightOfAll.toFixed(1)}% ของพอร์ตทั้งหมด`;
+                if (cashPctEl) {
+                    cashPctEl.innerText = 'พร้อมลงทุน';
+                    cashPctEl.className = 'fw-bold text-success';
+                }
+                if (cashTitleEl) cashTitleEl.innerText = 'เงินสดในบัญชี (รวม)';
+            }
             
             const bgColors = ['#3b82f6', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#ef4444', '#10b981', '#64748b'];
             let keys = Object.keys(groupTotals);
