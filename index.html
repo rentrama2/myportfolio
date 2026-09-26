@@ -480,8 +480,17 @@
             <div class="col-12">
                 <div class="card border-tbl">
                     <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2">
-                        <span>ประวัติการทำรายการ (History)</span>
-                        <div class="d-flex gap-2">
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <span class="fw-bold">ประวัติการทำรายการ (History)</span>
+                            <button id="btnToggleSort" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-1" onclick="toggleTxnSort()" title="คลิกเพื่อสลับ ล่าสุดก่อน / เก่าสุดก่อน" style="font-size: 0.8rem;">
+                                ⏱️ <span id="sortOrderLabel">ล่าสุดมาก่อน (ใหม่ ➔ เก่า)</span>
+                            </button>
+                        </div>
+                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                            <div class="input-group input-group-sm" style="width: 190px;">
+                                <span class="input-group-text bg-white border-end-0" style="border-radius: 20px 0 0 20px;">🔍</span>
+                                <input type="text" id="txnSearchInput" class="form-control form-control-sm border-start-0" placeholder="ค้นหาหุ้น, วันที่..." style="border-radius: 0 20px 20px 0;" oninput="onTxnSearchInput(this.value)">
+                            </div>
                             <input type="file" id="csvFileInput" accept=".csv" style="display: none;" onchange="handleImportCSV(event)">
                             <button class="btn btn-sm btn-outline-success rounded-pill px-3" onclick="document.getElementById('csvFileInput').click()">📥 Import CSV</button>
                             <button class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="exportCSV()">📤 Export CSV</button>
@@ -498,10 +507,15 @@
                             <table class="table table-hover text-center align-middle m-0" style="font-size: 0.85rem;">
                                 <thead style="background-color: #f9fafb;">
                                     <tr>
-                                        <th class="border-0 py-3">วันที่</th><th class="border-0 py-3">ประเภท</th><th class="border-0 py-3">หุ้น</th>
-                                        <th class="border-0 py-3">จำนวน</th><th class="border-0 py-3">ราคา(USD)</th>
-                                        <th class="border-0 py-3">ค่าธรรมเนียม</th><th class="border-0 text-primary py-3">ยอดสุทธิ(USD)</th>
-                                        <th class="border-0 text-danger py-3">ยอดสุทธิ(THB)</th><th class="border-0 py-3">จัดการ</th>
+                                        <th class="border-0 py-3" style="cursor: pointer;" onclick="toggleTxnSort()" title="คลิกเพื่อสลับการเรียงลำดับ วันที่">วันที่ <span id="sortDateArrow">▼</span></th>
+                                        <th class="border-0 py-3">ประเภท</th>
+                                        <th class="border-0 py-3">หุ้น</th>
+                                        <th class="border-0 py-3">จำนวน</th>
+                                        <th class="border-0 py-3">ราคา(USD)</th>
+                                        <th class="border-0 py-3">ค่าธรรมเนียม</th>
+                                        <th class="border-0 text-primary py-3">ยอดสุทธิ(USD)</th>
+                                        <th class="border-0 text-danger py-3">ยอดสุทธิ(THB)</th>
+                                        <th class="border-0 py-3">จัดการ</th>
                                     </tr>
                                 </thead>
                                 <tbody id="txnTableBody" style="border-top: 1px solid #e5e7eb;"></tbody>
@@ -1929,10 +1943,35 @@
             ul.innerHTML = html;
         }
 
+        let txnSortOrder = localStorage.getItem('myTxnSortOrder') || 'DESC'; // เริ่มต้นเป็น DESC: รายการล่าสุดมาก่อน
+        let txnSearchQuery = '';
+
+        window.toggleTxnSort = function() {
+            txnSortOrder = txnSortOrder === 'DESC' ? 'ASC' : 'DESC';
+            localStorage.setItem('myTxnSortOrder', txnSortOrder);
+            updateSortUI();
+            currentPage = 1;
+            renderTable();
+        };
+
+        window.onTxnSearchInput = function(val) {
+            txnSearchQuery = (val || '').trim().toUpperCase();
+            currentPage = 1;
+            renderTable();
+        };
+
+        function updateSortUI() {
+            const lbl = document.getElementById('sortOrderLabel');
+            const arrow = document.getElementById('sortDateArrow');
+            if (lbl) lbl.innerText = txnSortOrder === 'DESC' ? 'ล่าสุดมาก่อน (ใหม่ ➔ เก่า)' : 'เก่าสุดมาก่อน (เก่า ➔ ใหม่)';
+            if (arrow) arrow.innerText = txnSortOrder === 'DESC' ? '▼' : '▲';
+        }
+
         async function renderTable() {
             sortTransactions(); 
             await autoRepairTransactions();
             renderFilters(); 
+            updateSortUI();
 
             let filteredTxns = transactions.filter(txn => {
                 let typeMatch = true;
@@ -1950,8 +1989,30 @@
                 if (filterStartDate) dateMatch = dateMatch && (txn.date >= filterStartDate);
                 if (filterEndDate) dateMatch = dateMatch && (txn.date <= filterEndDate);
 
-                return typeMatch && dateMatch;
+                let searchMatch = true;
+                if (txnSearchQuery) {
+                    searchMatch = (txn.ticker && txn.ticker.toUpperCase().includes(txnSearchQuery)) ||
+                                  (txn.date && txn.date.includes(txnSearchQuery)) ||
+                                  (txn.type && txn.type.toUpperCase().includes(txnSearchQuery));
+                }
+
+                return typeMatch && dateMatch && searchMatch;
             });
+
+            // เรียงลำดับรายการตามที่ผู้ใช้ต้องการ (เริ่มต้น: รายการล่าสุดมาก่อน DESC)
+            if (txnSortOrder === 'DESC') {
+                filteredTxns.sort((a, b) => {
+                    let d = new Date(b.date) - new Date(a.date);
+                    if (d !== 0) return d;
+                    return transactions.indexOf(b) - transactions.indexOf(a);
+                });
+            } else {
+                filteredTxns.sort((a, b) => {
+                    let d = new Date(a.date) - new Date(b.date);
+                    if (d !== 0) return d;
+                    return transactions.indexOf(a) - transactions.indexOf(b);
+                });
+            }
 
             let totalPages = Math.ceil(filteredTxns.length / rowsPerPage);
             if(currentPage > totalPages && totalPages > 0) currentPage = totalPages;
