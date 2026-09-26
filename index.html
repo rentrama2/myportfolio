@@ -157,6 +157,77 @@
         </div>
     </div>
 
+    <!-- Modal: Smart Sync with Dime -->
+    <div class="modal fade" id="smartSyncModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="fw-bold m-0" style="color: #111827;">✨ Smart Sync จูนค่าให้ตรงกับแอป Dime</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="alert alert-info py-2 px-3 mb-3 border-0" style="font-size: 0.82rem; border-radius: 10px; background-color: #eff6ff; color: #1e40af;">
+                        💡 กรอกตัวเลขตามที่เห็นในหน้าหุ้นของแอป Dime เพื่อให้ระบบปรับราคา เรทเงิน และต้นทุนให้ตรง 100%
+                    </div>
+                    
+                    <input type="hidden" id="syncTicker">
+                    <input type="hidden" id="syncShares">
+                    <input type="hidden" id="syncRawCostTHB">
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-muted mb-1" style="font-size: 0.85rem;">หุ้น / สินทรัพย์</label>
+                        <input type="text" id="syncTickerDisplay" class="form-control fw-bold bg-light" readonly style="border-radius: 10px;">
+                    </div>
+
+                    <div class="row g-2 mb-3">
+                        <div class="col-6">
+                            <label class="form-label fw-bold text-muted mb-1" style="font-size: 0.85rem;">ราคาปัจจุบันใน Dime ($)</label>
+                            <input type="number" id="syncPriceUSD" class="form-control fw-bold text-primary" step="any" style="border-radius: 10px;" oninput="previewSmartSync()">
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label fw-bold text-muted mb-1" style="font-size: 0.85rem;">จำนวนหุ้นที่ถือ</label>
+                            <input type="text" id="syncSharesDisplay" class="form-control bg-light" readonly style="border-radius: 10px;">
+                        </div>
+                    </div>
+
+                    <div class="row g-2 mb-3">
+                        <div class="col-6">
+                            <label class="form-label fw-bold text-muted mb-1" style="font-size: 0.85rem;">มูลค่าล่าสุดใน Dime (฿)</label>
+                            <input type="number" id="syncMktTHB" class="form-control fw-bold" step="any" placeholder="เช่น 2605.12" style="border-radius: 10px;" oninput="previewSmartSync()">
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label fw-bold text-muted mb-1" style="font-size: 0.85rem;">ผลตอบแทนใน Dime (฿)</label>
+                            <input type="number" id="syncPlTHB" class="form-control fw-bold text-success" step="any" placeholder="เช่น 34.92" style="border-radius: 10px;" oninput="previewSmartSync()">
+                        </div>
+                    </div>
+
+                    <!-- Live Preview -->
+                    <div class="card mb-3 border-0" style="background-color: #f8fafc; border: 1px solid #e2e8f0 !important; border-radius: 12px;">
+                        <div class="card-body p-3">
+                            <div class="d-flex justify-content-between text-muted mb-1" style="font-size: 0.82rem;">
+                                <span>เรทเงิน Dime ที่คำนวณได้:</span>
+                                <strong id="previewSyncFx" class="text-dark">-</strong>
+                            </div>
+                            <div class="d-flex justify-content-between text-muted mb-1" style="font-size: 0.82rem;">
+                                <span>ทุนรวมที่จะปรับจูน (THB):</span>
+                                <strong id="previewSyncCostTHB" class="text-dark">-</strong>
+                            </div>
+                            <div class="d-flex justify-content-between text-muted" style="font-size: 0.82rem;">
+                                <span>ผลตอบแทนรวม (% / USD):</span>
+                                <strong id="previewSyncPlSummary" class="text-success">-</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-primary w-100 fw-bold py-2" style="border-radius: 10px;" onclick="applySmartSync()">💾 บันทึกและปรับจูนทันที</button>
+                        <button type="button" class="btn btn-light w-50 fw-bold py-2 border" style="border-radius: 10px;" data-bs-dismiss="modal">ยกเลิก</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Dashboard -->
     <div class="container-fluid" style="max-width: 98%; margin: 0 auto;">
         
@@ -455,9 +526,10 @@
 
         let editingIndex = -1; 
         const defaultInitialPrices = {
-            'GOOGL': 342.75, 'MSFT': 514.09, 'JEPI': 56.59, 'JEPQ': 61.14, 'VTI': 378.21,
-            'VOO': 707.48, 'QQQ': 741.51, 'QQQM': 305.29, 'SCHD': 33.15, 'AAPL': 336.82,
-            'NVDA': 223.43, 'VXUS': 85.87, 'SPY': 767.94
+            'GOOGL': 343.92, 'MSFT': 516.17, 'JEPI': 56.76, 'JEPQ': 61.24, 'VTI': 379.77,
+            'VOO': 710.79, 'QQQ': 744.50, 'QQQM': 306.54, 'SCHD': 33.21, 'AAPL': 341.07,
+            'NVDA': 225.07, 'VXUS': 86.35, 'SPY': 771.35, 'AMZN': 249.67, 'META': 751.66,
+            'TSLA': 372.11
         };
         let storedPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
         let marketPrices = Object.assign({}, defaultInitialPrices, storedPrices);
@@ -1070,33 +1142,98 @@
             }
         };
 
-        window.smartSync = function(ticker, currentPriceUSD, shares, rawCostTHB) {
-            let mktTHBStr = prompt(`[1/2] หุ้น ${ticker}\nกรุณากรอก "มูลค่าล่าสุด (บาท)" ที่แสดงในแอป Dime!\n(เช่น 6775.74)`);
-            if(!mktTHBStr) return;
-            let mktTHB = parseFloat(mktTHBStr.replace(/,/g, ''));
-            if(isNaN(mktTHB)) return;
+        let smartSyncModalInstance = null;
 
-            let plTHBStr = prompt(`[2/2] หุ้น ${ticker}\nกรุณากรอก "ผลตอบแทนรวม (บาท)" ที่แสดงในแอป Dime!\n(เช่น 254.68 หรือ -10.50)`);
-            if(!plTHBStr) return;
-            let plTHB = parseFloat(plTHBStr.replace(/,/g, ''));
-            if(isNaN(plTHB)) return;
+        window.openSmartSyncModal = function(ticker, currentPriceUSD, shares, rawCostTHB) {
+            document.getElementById('syncTicker').value = ticker;
+            document.getElementById('syncShares').value = shares;
+            document.getElementById('syncRawCostTHB').value = rawCostTHB;
+            
+            document.getElementById('syncTickerDisplay').value = `${ticker} - ${stockNames[ticker] || 'สินทรัพย์'}`;
+            
+            let activePrice = (marketPrices[ticker] && marketPrices[ticker] > 0) ? marketPrices[ticker] : currentPriceUSD;
+            document.getElementById('syncPriceUSD').value = activePrice ? activePrice.toFixed(2) : '';
+            document.getElementById('syncSharesDisplay').value = `${shares.toFixed(7)} หุ้น`;
+            
+            let initialMktTHB = Number(((shares * activePrice) * liveFxRate).toFixed(2));
+            let initialPlTHB = Number((initialMktTHB - rawCostTHB).toFixed(2));
+            
+            document.getElementById('syncMktTHB').value = initialMktTHB > 0 ? initialMktTHB.toFixed(2) : '';
+            document.getElementById('syncPlTHB').value = initialPlTHB !== 0 ? initialPlTHB.toFixed(2) : '';
+            
+            previewSmartSync();
 
-            let mktUSD = currentPriceUSD * shares;
-            if(mktUSD > 0) {
+            if (!smartSyncModalInstance) {
+                smartSyncModalInstance = new bootstrap.Modal(document.getElementById('smartSyncModal'));
+            }
+            smartSyncModalInstance.show();
+        };
+
+        window.previewSmartSync = function() {
+            let ticker = document.getElementById('syncTicker').value;
+            let shares = parseFloat(document.getElementById('syncShares').value) || 0;
+            let rawCostTHB = parseFloat(document.getElementById('syncRawCostTHB').value) || 0;
+            
+            let priceUSD = parseFloat(document.getElementById('syncPriceUSD').value) || 0;
+            let mktTHB = parseFloat(document.getElementById('syncMktTHB').value) || 0;
+            let plTHB = parseFloat(document.getElementById('syncPlTHB').value) || 0;
+            
+            let mktUSD = shares * priceUSD;
+            let calcFx = mktUSD > 0 && mktTHB > 0 ? (mktTHB / mktUSD) : liveFxRate;
+            let targetCostTHB = mktTHB - plTHB;
+            
+            let targetCostUSD = calcFx > 0 ? (targetCostTHB / calcFx) : 0;
+            let plUSD = mktUSD - targetCostUSD;
+            let plPercent = targetCostUSD > 0 ? (plUSD / targetCostUSD) * 100 : 0;
+            
+            document.getElementById('previewSyncFx').innerText = `${calcFx.toFixed(4)} THB/USD`;
+            document.getElementById('previewSyncCostTHB').innerText = `฿${targetCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            
+            let sign = plTHB >= 0 ? '+' : '';
+            let plClass = plTHB >= 0 ? 'text-success' : 'text-danger';
+            document.getElementById('previewSyncPlSummary').className = plClass;
+            document.getElementById('previewSyncPlSummary').innerText = `${sign}${plPercent.toFixed(2)}% (${sign}$${plUSD.toFixed(2)}) ≈ ${sign}฿${plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}`;
+        };
+
+        window.applySmartSync = function() {
+            let ticker = document.getElementById('syncTicker').value;
+            let shares = parseFloat(document.getElementById('syncShares').value) || 0;
+            let rawCostTHB = parseFloat(document.getElementById('syncRawCostTHB').value) || 0;
+            
+            let priceUSD = parseFloat(document.getElementById('syncPriceUSD').value) || 0;
+            let mktTHB = parseFloat(document.getElementById('syncMktTHB').value) || 0;
+            let plTHB = parseFloat(document.getElementById('syncPlTHB').value) || 0;
+            
+            if (priceUSD > 0) {
+                marketPrices[ticker] = priceUSD;
+                localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
+            }
+            
+            let mktUSD = shares * priceUSD;
+            if (mktUSD > 0 && mktTHB > 0) {
                 let newFx = mktTHB / mktUSD;
-                document.getElementById('liveFxInput').value = newFx.toFixed(4);
                 liveFxRate = newFx;
                 localStorage.setItem('myLiveFxRate', liveFxRate);
+                const fxInput = document.getElementById('liveFxInput');
+                if (fxInput) fxInput.value = liveFxRate.toFixed(4);
             }
-
+            
             let targetCostTHB = mktTHB - plTHB;
             let diff = targetCostTHB - rawCostTHB;
             
             tunedDiffsV2[ticker] = diff;
             localStorage.setItem('myTunedDiffsV2', JSON.stringify(tunedDiffsV2));
             
+            if (smartSyncModalInstance) {
+                smartSyncModalInstance.hide();
+            }
+            
             updateSummaryAndChart();
-            alert(`✨ Smart Sync ทำงานสำเร็จ!\nระบบได้ปรับเรทเงินให้ตรงกับแอปอัตโนมัติ\nและปรับจูนต้นทุนของ ${ticker} ให้ตรง 100% แบบถาวรแล้วครับ`);
+            alert(`✨ ปรับจูน ${ticker} สำเร็จ!\n• ราคาปัจจุบัน: $${priceUSD.toFixed(2)}\n• เรทเงิน Dime: ฿${liveFxRate.toFixed(4)}\n• ทุนรวม: ฿${targetCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}\n• กำไร/ขาดทุน: ฿${plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}\nข้อมูลตรงกับในแอป 100% เรียบร้อยครับ!`);
+        };
+
+        window.smartSync = function(ticker, currentPriceUSD, shares, rawCostTHB) {
+            window.openSmartSyncModal(ticker, currentPriceUSD, shares, rawCostTHB);
         };
 
         window.undoSmartSync = function(ticker) {
