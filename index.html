@@ -31,13 +31,13 @@
         .card-header-pro { 
             background-color: #ffffff; 
             border-radius: 12px 12px 0 0;
-            padding: 16px 20px; 
+            padding: 10px 16px; 
             font-weight: 700; 
-            font-size: 1.05rem; 
+            font-size: 0.95rem; 
             color: #111827;
         }
         
-        .metric-value { font-size: 1.8rem; font-weight: 700; color: #111827; line-height: 1.2; margin-top: 8px; }
+        .metric-value { font-size: 1.45rem; font-weight: 700; color: #111827; line-height: 1.15; margin-top: 3px; }
         
         .price-input {
             border: 1px solid #e5e7eb !important; background-color: #f9fafb !important;
@@ -77,44 +77,44 @@
         /* --- Multi-Portfolio Cards Styling (ตรงตาม App & รูปภาพ) --- */
         .portfolio-card {
             background: #ffffff;
-            border-radius: 18px;
+            border-radius: 14px;
             border: 2px solid #e5e7eb;
-            padding: 16px 18px 14px 18px;
-            min-width: 250px;
-            max-width: 280px;
-            flex: 0 0 260px;
+            padding: 10px 14px 8px 14px;
+            min-width: 215px;
+            max-width: 245px;
+            flex: 0 0 225px;
             cursor: pointer;
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
         .portfolio-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px -4px rgba(0,0,0,0.06);
             border-color: #cbd5e1;
         }
         .portfolio-card.active-port {
             border-color: #3b82f6 !important;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2), 0 8px 20px rgba(59, 130, 246, 0.12) !important;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2), 0 6px 14px rgba(59, 130, 246, 0.12) !important;
             background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
         }
         .portfolio-card-add {
             background: #fafafa;
             border: 2px dashed #cbd5e1;
-            border-radius: 18px;
-            min-width: 200px;
-            max-width: 230px;
-            flex: 0 0 215px;
+            border-radius: 14px;
+            min-width: 180px;
+            max-width: 210px;
+            flex: 0 0 195px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
-            padding: 20px 14px;
+            padding: 14px 10px;
             text-align: center;
         }
         .portfolio-card-add:hover {
@@ -125,21 +125,74 @@
         .port-bottom-bar {
             background-color: #111827;
             color: #ffffff;
-            border-radius: 10px;
-            padding: 8px 14px;
-            font-size: 0.8rem;
+            border-radius: 8px;
+            padding: 4px 10px;
+            font-size: 0.74rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 12px;
+            margin-top: 6px;
         }
         .port-tag-pill {
             background-color: #eff6ff;
             color: #2563eb;
-            font-size: 0.72rem;
-            padding: 2px 8px;
-            border-radius: 12px;
+            font-size: 0.7rem;
+            padding: 1px 7px;
+            border-radius: 10px;
             font-weight: 600;
+        }
+
+        /* Compact Portfolio Pills (เมื่อย่อแถบพอร์ตเพื่อเพิ่มพื้นที่ดูกราฟ) */
+        .port-pills-bar {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            padding: 4px 2px 6px 2px;
+            align-items: center;
+        }
+        .port-pill-btn {
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            color: #4b5563;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .port-pill-btn:hover {
+            border-color: #3b82f6;
+            color: #3b82f6;
+        }
+        .port-pill-btn.active-pill {
+            background: #3b82f6 !important;
+            color: #ffffff !important;
+            border-color: #3b82f6 !important;
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.25);
+        }
+
+        /* Chart Fullscreen Mode */
+        .chart-card-fullscreen {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 99999 !important;
+            border-radius: 0 !important;
+            margin: 0 !important;
+            padding: 20px 24px !important;
+            background: #ffffff !important;
+            box-shadow: none !important;
+        }
+        [data-bs-theme="dark"] .chart-card-fullscreen {
+            background: #151e2e !important;
         }
 
         /* --- Dark Mode Overrides (โหมดมืดถนอมสายตา) --- */
@@ -216,7 +269,7 @@
         }
     </style>
 </head>
-<body class="p-3 p-md-4">
+<body class="p-2 p-md-3">
 
     <!-- Modal: Target Settings -->
     <div id="targetOverlay">
@@ -781,10 +834,10 @@
     <div class="container-fluid" style="max-width: 98%; margin: 0 auto;">
         
         <!-- Header & Quick Actions -->
-        <div class="d-flex justify-content-between align-items-center mb-3 mt-2 flex-wrap gap-2">
+        <div class="d-flex justify-content-between align-items-center mb-2 mt-1 flex-wrap gap-2">
             <div class="d-flex align-items-center gap-2">
-                <h2 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.5px;">My Portfolio</h2>
-                <span id="activePortBadgeHeader" class="badge rounded-pill bg-primary px-3 py-2" style="font-size: 0.8rem;">พอร์ตทั้งหมด</span>
+                <h2 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.5px; font-size: 1.6rem;">My Portfolio</h2>
+                <span id="activePortBadgeHeader" class="badge rounded-pill bg-primary px-3 py-1" style="font-size: 0.8rem;">พอร์ตทั้งหมด</span>
             </div>
             <div class="d-flex align-items-center gap-2 flex-wrap">
                 <button id="btnPrivacyToggle" class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="togglePrivacyMode()" title="ซ่อน/แสดงตัวเลขเงิน เหมาะสำหรับแคปหน้าจอหรือเปิดในที่สาธารณะ (ชี้เมาส์เพื่อแอบดูได้)">
@@ -814,67 +867,76 @@
         </div>
 
         <!-- Multi-Portfolio Carousel Row (จัดพอร์ตได้เหมือนใน App ฟรีไม่จำกัด) -->
-        <div class="mb-4">
-            <div class="d-flex justify-content-between align-items-center mb-2 px-1">
-                <div>
-                    <span class="fw-bold" style="font-size: 1.05rem;">📁 พอร์ตการลงทุนของฉัน (Portfolios)</span>
-                    <small class="text-muted ms-2 d-none d-sm-inline">คลิกเลือกพอร์ตเพื่อดูข้อมูล หรือกดดูภาพรวมทั้งหมด</small>
+        <div class="mb-2" id="portfolioSection">
+            <div class="d-flex justify-content-between align-items-center mb-1 px-1">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="fw-bold" style="font-size: 0.95rem;">📁 พอร์ตการลงทุนของฉัน</span>
+                    <small class="text-muted ms-1 d-none d-md-inline" style="font-size: 0.78rem;">(คลิกเลือกพอร์ตเพื่อกรองข้อมูล)</small>
                 </div>
-                <button class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openPortfolioModal()">
-                    + เพิ่มพอร์ตการลงทุน
-                </button>
+                <div class="d-flex align-items-center gap-2">
+                    <button id="btnToggleCarousel" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="togglePortfolioCarousel()" title="ย่อแถบพอร์ตเพื่อดูกราฟได้เต็มหน้าจอโดยไม่ต้องเลื่อน" style="font-size: 0.78rem;">
+                        📁 ย่อแถบพอร์ต
+                    </button>
+                    <button class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openPortfolioModal()" style="font-size: 0.78rem;">
+                        + เพิ่มพอร์ต
+                    </button>
+                </div>
             </div>
             
-            <div id="portfolioCardsContainer" class="d-flex gap-3 overflow-x-auto pb-2" style="scrollbar-width: thin; -webkit-overflow-scrolling: touch;">
+            <!-- Compact Pills Bar (เมื่อย่อแถบพอร์ต ประหยัดพื้นที่ ~180px ทันที ดูกราฟได้เต็มหน้าจอ) -->
+            <div id="portfolioPillsContainer" class="port-pills-bar mb-2" style="display: none;"></div>
+
+            <!-- Full Cards Carousel -->
+            <div id="portfolioCardsContainer" class="d-flex gap-3 overflow-x-auto pb-1" style="scrollbar-width: thin; -webkit-overflow-scrolling: touch;">
                 <!-- Cards will be dynamically injected here by renderPortfolioCards() -->
             </div>
         </div>
 
         <!-- ROW 1: Metrics -->
-        <div class="row g-4 mb-4">
+        <div class="row g-2 mb-2">
             <div class="col-xl-8 col-lg-12">
-                <div class="row g-3 h-100">
+                <div class="row g-2 h-100">
                     <div class="col-md-3 col-6">
-                        <div class="card h-100 p-3 border-val">
+                        <div class="card h-100 p-2 p-md-3 border-val">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold" style="font-size: 0.85rem; color: #374151;">
+                                <div class="fw-bold" style="font-size: 0.82rem; color: #374151;">
                                     <span style="color: #8b5cf6;">●</span> มูลค่ารวม
                                 </div>
-                                <div id="topReturnPercentAll" class="fw-bold" style="font-size: 0.75rem; color: #10b981;">+0.00% ทั้งหมด</div>
+                                <div id="topReturnPercentAll" class="fw-bold" style="font-size: 0.72rem; color: #10b981;">+0.00% ทั้งหมด</div>
                             </div>
                             <div class="metric-value" id="topTotalValue" style="color: #10b981;">฿0.00</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
-                        <div class="card h-100 p-3 border-ret">
+                        <div class="card h-100 p-2 p-md-3 border-ret">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold" style="font-size: 0.85rem; color: #374151;">
+                                <div class="fw-bold" style="font-size: 0.82rem; color: #374151;">
                                     <span style="color: #ef4444;">●</span> ผลตอบแทน
                                 </div>
-                                <div id="topReturnPercent" class="fw-bold text-muted" style="font-size: 0.75rem;">0.00%</div>
+                                <div id="topReturnPercent" class="fw-bold text-muted" style="font-size: 0.72rem;">0.00%</div>
                             </div>
                             <div class="metric-value" id="topTotalReturn">฿0.00</div>
-                            <div id="badgeBenchmarkAlpha" class="mt-1" style="font-size: 0.72rem;"></div>
+                            <div id="badgeBenchmarkAlpha" class="mt-1" style="font-size: 0.7rem;"></div>
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
-                        <div class="card h-100 p-3 border-inv">
+                        <div class="card h-100 p-2 p-md-3 border-inv">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold" style="font-size: 0.85rem; color: #374151;">
+                                <div class="fw-bold" style="font-size: 0.82rem; color: #374151;">
                                     <span style="color: #3b82f6;">●</span> เงินลงทุนในหุ้น
                                 </div>
-                                <div id="topInvestedPercent" class="fw-bold text-muted" style="font-size: 0.75rem;">0% ของพอร์ต</div>
+                                <div id="topInvestedPercent" class="fw-bold text-muted" style="font-size: 0.72rem;">0% ของพอร์ต</div>
                             </div>
                             <div class="metric-value" id="topTotalInvested">฿0.00</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
-                        <div class="card h-100 p-3 border-csh">
+                        <div class="card h-100 p-2 p-md-3 border-csh">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold" style="font-size: 0.85rem; color: #374151;">
+                                <div class="fw-bold" style="font-size: 0.82rem; color: #374151;">
                                     <span style="color: #ec4899;">●</span> <span id="txtTopCashTitle">เงินสดคงเหลือ</span>
                                 </div>
-                                <div id="topCashPercent" class="fw-bold text-muted" style="font-size: 0.75rem;">0% ของพอร์ต</div>
+                                <div id="topCashPercent" class="fw-bold text-muted" style="font-size: 0.72rem;">0% ของพอร์ต</div>
                             </div>
                             <div class="metric-value" id="topTotalCash">฿0.00</div>
                         </div>
@@ -884,26 +946,26 @@
             
             <div class="col-xl-4 col-lg-12">
                 <div class="card h-100 border-div">
-                    <div class="card-header-pro border-0 pb-0 d-flex justify-content-between align-items-center flex-wrap gap-1">
-                        <span>💰 สรุปเงินปันผลรับ (Dividends)</span>
-                        <button class="btn btn-sm btn-outline-warning text-dark fw-bold rounded-pill px-2 py-0" style="font-size: 0.75rem;" onclick="openDividendModal()" title="ดูปฏิทินปันผลและรายงานภาษี 15% สหรัฐฯ">🔍 ปฏิทิน & ภาษี 15%</button>
+                    <div class="card-header-pro border-0 pb-0 d-flex justify-content-between align-items-center flex-wrap gap-1" style="padding: 8px 14px;">
+                        <span style="font-size: 0.9rem;">💰 สรุปเงินปันผลรับ (Dividends)</span>
+                        <button class="btn btn-sm btn-outline-warning text-dark fw-bold rounded-pill px-2 py-0" style="font-size: 0.72rem;" onclick="openDividendModal()" title="ดูปฏิทินปันผลและรายงานภาษี 15% สหรัฐฯ">🔍 ปฏิทิน & ภาษี</button>
                     </div>
-                    <div class="card-body p-3 pt-2">
-                        <div class="d-flex justify-content-between align-items-center mb-2 px-1">
-                            <span class="badge rounded-pill fw-bold" id="badgeYOC" style="background-color: #fef3c7; color: #92400e; font-size: 0.75rem;">✨ YOC: 0.00%</span>
+                    <div class="card-body p-2 pt-1">
+                        <div class="d-flex justify-content-between align-items-center mb-1 px-1">
+                            <span class="badge rounded-pill fw-bold" id="badgeYOC" style="background-color: #fef3c7; color: #92400e; font-size: 0.72rem;">✨ YOC: 0.00%</span>
                             <div class="btn-group btn-group-sm" role="group">
-                                <button type="button" class="btn btn-sm btn-light border py-0 px-2 fw-bold active" id="btnDivYearly" onclick="setDivView('YEARLY')">รายปี</button>
-                                <button type="button" class="btn btn-sm btn-light border py-0 px-2 fw-bold" id="btnDivMonthly" onclick="setDivView('MONTHLY')">รายเดือน</button>
-                                <button type="button" class="btn btn-sm btn-light border py-0 px-2 fw-bold text-success" id="btnDivForecast" onclick="setDivView('FORECAST')" title="คำนวณคาดการณ์เงินปันผลล่วงหน้า 12 เดือน และ Passive Income ต่อเดือน">📅 คาดการณ์ 12 ด.</button>
+                                <button type="button" class="btn btn-sm btn-light border py-0 px-2 fw-bold active" id="btnDivYearly" style="font-size: 0.72rem;" onclick="setDivView('YEARLY')">รายปี</button>
+                                <button type="button" class="btn btn-sm btn-light border py-0 px-2 fw-bold" id="btnDivMonthly" style="font-size: 0.72rem;" onclick="setDivView('MONTHLY')">รายเดือน</button>
+                                <button type="button" class="btn btn-sm btn-light border py-0 px-2 fw-bold text-success" id="btnDivForecast" style="font-size: 0.72rem;" onclick="setDivView('FORECAST')" title="คำนวณคาดการณ์เงินปันผลล่วงหน้า 12 เดือน และ Passive Income ต่อเดือน">📅 คาดการณ์ 12 ด.</button>
                             </div>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-borderless text-center align-middle m-0" style="font-size: 0.9rem;">
+                            <table class="table table-borderless text-center align-middle m-0" style="font-size: 0.85rem;">
                                 <thead style="border-bottom: 1px solid rgba(0,0,0,0.06);">
                                     <tr>
-                                        <th class="py-2 text-muted" style="font-weight: 600; font-size: 0.8rem;" id="thDivPeriod">ปี (Year)</th>
-                                        <th class="py-2 text-muted" style="font-weight: 600; font-size: 0.8rem;">สุทธิ (USD)</th>
-                                        <th class="py-2 text-muted" style="font-weight: 600; font-size: 0.8rem;">สุทธิ (THB)</th>
+                                        <th class="py-1 text-muted" style="font-weight: 600; font-size: 0.75rem;" id="thDivPeriod">ปี (Year)</th>
+                                        <th class="py-1 text-muted" style="font-weight: 600; font-size: 0.75rem;">สุทธิ (USD)</th>
+                                        <th class="py-1 text-muted" style="font-weight: 600; font-size: 0.75rem;">สุทธิ (THB)</th>
                                     </tr>
                                 </thead>
                                 <tbody id="dividendTableBody"></tbody>
@@ -914,64 +976,68 @@
             </div>
         </div>
 
-        <div class="row g-4 mb-4">
+        <!-- ROW 2: Performance & Asset Allocation -->
+        <div class="row g-2 mb-3">
             <div class="col-xl-7 col-lg-12">
-                <div class="card h-100 border-prf">
-                    <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div class="card h-100 border-prf" id="performanceCard">
+                    <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2" style="padding: 8px 14px;">
                         <div>
-                            Performance <br>
-                            <small class="text-muted fw-normal" style="font-size: 0.8rem;">มูลค่าทุนสะสมตามช่วงเวลา</small>
+                            Performance
+                            <small class="text-muted fw-normal ms-1" style="font-size: 0.78rem;">มูลค่าทุนสะสมตามช่วงเวลา</small>
                         </div>
-                        <div class="chart-btn-group">
-                            <button class="chart-btn" id="btn-1M" onclick="setChartRange('1M')">1M</button>
-                            <button class="chart-btn" id="btn-3M" onclick="setChartRange('3M')">3M</button>
-                            <button class="chart-btn" id="btn-6M" onclick="setChartRange('6M')">6M</button>
-                            <button class="chart-btn" id="btn-1Y" onclick="setChartRange('1Y')">1Y</button>
-                            <button class="chart-btn active-chart-btn" id="btn-ALL" onclick="setChartRange('ALL')">ALL</button>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="chart-btn-group">
+                                <button class="chart-btn" id="btn-1M" onclick="setChartRange('1M')">1M</button>
+                                <button class="chart-btn" id="btn-3M" onclick="setChartRange('3M')">3M</button>
+                                <button class="chart-btn" id="btn-6M" onclick="setChartRange('6M')">6M</button>
+                                <button class="chart-btn" id="btn-1Y" onclick="setChartRange('1Y')">1Y</button>
+                                <button class="chart-btn active-chart-btn" id="btn-ALL" onclick="setChartRange('ALL')">ALL</button>
+                            </div>
+                            <button class="btn btn-sm btn-outline-secondary rounded-pill px-2 py-0 fw-bold" id="btnChartFs" onclick="toggleChartFullscreen()" title="ขยายกราฟให้แสดงเต็มหน้าจอ" style="font-size: 0.75rem;">⛶ เต็มจอ</button>
                         </div>
                     </div>
-                    <div class="card-body pt-0" id="performanceChartContainer" style="position: relative; height: 320px; width: 100%;">
+                    <div class="card-body pt-0" id="performanceChartContainer" style="position: relative; height: 240px; width: 100%;">
                         <canvas id="performanceChart"></canvas>
-                        <div id="noPerfData" class="text-center text-muted" style="display:none; padding-top: 100px;">ยังไม่มีประวัติการทำรายการเพียงพอ</div>
+                        <div id="noPerfData" class="text-center text-muted" style="display:none; padding-top: 80px;">ยังไม่มีประวัติการทำรายการเพียงพอ</div>
                     </div>
                 </div>
             </div>
             
             <div class="col-xl-5 col-lg-12">
                 <div class="card h-100 border-alc d-flex flex-column">
-                    <div class="card-header-pro border-0 d-flex justify-content-between align-items-start pb-0">
+                    <div class="card-header-pro border-0 d-flex justify-content-between align-items-center pb-1" style="padding: 8px 14px;">
                         <div>
-                            สัดส่วนเงินลงทุนรวม<br>
-                            <small class="text-muted fw-normal" style="font-size: 0.8rem;">เงินลงทุนและเงินสดรวม</small>
+                            สัดส่วนเงินลงทุนรวม
+                            <small class="text-muted fw-normal ms-1" style="font-size: 0.78rem;">เงินลงทุนและเงินสด</small>
                         </div>
                         <div class="d-flex gap-1 flex-wrap">
-                            <button class="btn btn-sm btn-outline-danger d-flex align-items-center gap-1 rounded-pill px-3 fw-bold" onclick="openTrimCalculator()" title="คำนวณการขายลดสัดส่วนเพื่อล็อกกำไร หรือปรับสัดส่วนกลับสู่เป้าหมาย (เหมือนใน Take Profit 24)">
-                                ✂️ Trim ล็อกกำไร
+                            <button class="btn btn-sm btn-outline-danger d-flex align-items-center gap-1 rounded-pill px-2 py-0 fw-bold" style="font-size: 0.75rem;" onclick="openTrimCalculator()" title="คำนวณการขายลดสัดส่วนเพื่อล็อกกำไร หรือปรับสัดส่วนกลับสู่เป้าหมาย (เหมือนใน Take Profit 24)">
+                                ✂️ Trim
                             </button>
-                            <button class="btn btn-sm btn-outline-primary d-flex align-items-center gap-1 rounded-pill px-3" onclick="openDCAPlanner()" title="คำนวณการเติมเงิน DCA เพื่อปรับพอร์ตตามเป้าหมาย">
-                                ⚖️ วางแผน DCA
+                            <button class="btn btn-sm btn-outline-primary d-flex align-items-center gap-1 rounded-pill px-2 py-0 fw-bold" style="font-size: 0.75rem;" onclick="openDCAPlanner()" title="คำนวณการเติมเงิน DCA เพื่อปรับพอร์ตตามเป้าหมาย">
+                                ⚖️ DCA
                             </button>
-                            <button class="btn btn-sm btn-dark d-flex align-items-center gap-1 rounded-pill px-3" onclick="openTargetSettings()">
-                                ⚙️ ตั้งค่า
+                            <button class="btn btn-sm btn-dark d-flex align-items-center gap-1 rounded-pill px-2 py-0 fw-bold" style="font-size: 0.75rem;" onclick="openTargetSettings()">
+                                ⚙️ เป้าหมาย
                             </button>
                         </div>
                     </div>
-                    <div class="card-body pt-2 d-flex flex-column">
-                        <div class="row align-items-center mb-3 flex-shrink-0">
+                    <div class="card-body p-2 pt-1 d-flex flex-column">
+                        <div class="row align-items-center mb-2 flex-shrink-0">
                             <div class="col-5">
-                                <div style="position: relative; width: 100%; max-width: 140px; height: 140px; margin: 0 auto;">
+                                <div style="position: relative; width: 100%; max-width: 125px; height: 125px; margin: 0 auto;">
                                     <canvas id="allocationChart"></canvas>
                                     <div id="donutCenterText" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%; pointer-events: none;"></div>
                                 </div>
                             </div>
                             <div class="col-7">
-                                <div id="customLegend" class="alloc-scroll" style="max-height: 140px; overflow-y: auto; overflow-x: hidden; padding-right: 5px;"></div>
+                                <div id="customLegend" class="alloc-scroll" style="max-height: 125px; overflow-y: auto; overflow-x: hidden; padding-right: 5px;"></div>
                             </div>
                         </div>
-                        <hr style="border-color: #f3f4f6; margin: 10px 0;">
+                        <hr style="border-color: #f3f4f6; margin: 6px 0;">
                         <div class="flex-grow-1 d-flex flex-column">
-                            <div style="font-size: 0.85rem; font-weight: bold; margin-bottom: 12px; color: #374151;">สัดส่วนเทียบเป้าหมาย</div>
-                            <div id="allocationBars" class="alloc-scroll" style="flex-grow: 1; overflow-y: auto; padding-right: 5px; padding-bottom: 5px;"></div>
+                            <div style="font-size: 0.8rem; font-weight: bold; margin-bottom: 8px; color: #374151;">สัดส่วนเทียบเป้าหมาย</div>
+                            <div id="allocationBars" class="alloc-scroll" style="flex-grow: 1; overflow-y: auto; padding-right: 5px; padding-bottom: 3px; max-height: 100px;"></div>
                         </div>
                     </div>
                 </div>
@@ -1480,7 +1546,90 @@
             });
 
             container.innerHTML = html;
+
+            // Also render compact pills bar
+            const pillsContainer = document.getElementById('portfolioPillsContainer');
+            if (pillsContainer) {
+                let pillsHtml = `
+                    <button class="port-pill-btn ${activePortfolioId === 'ALL' ? 'active-pill' : ''}" onclick="selectPortfolio('ALL')">
+                        🌐 พอร์ตทั้งหมด <span class="badge ${activePortfolioId === 'ALL' ? 'bg-white text-dark' : 'bg-light text-dark border'} rounded-pill ms-1">${allM.assetCount}</span>
+                    </button>
+                `;
+                portfolios.forEach(p => {
+                    const m = calcPortfolioMetrics(p.id);
+                    const isActive = (activePortfolioId === p.id);
+                    pillsHtml += `
+                        <button class="port-pill-btn ${isActive ? 'active-pill' : ''}" onclick="selectPortfolio('${p.id}')">
+                            📁 ${p.name} <span class="badge ${isActive ? 'bg-white text-primary' : 'bg-light text-dark border'} rounded-pill ms-1">${m.assetCount}</span>
+                        </button>
+                    `;
+                });
+                pillsContainer.innerHTML = pillsHtml;
+            }
         }
+
+        window.togglePortfolioCarousel = function() {
+            const cardsContainer = document.getElementById('portfolioCardsContainer');
+            const pillsContainer = document.getElementById('portfolioPillsContainer');
+            const btn = document.getElementById('btnToggleCarousel');
+            if (!cardsContainer || !pillsContainer || !btn) return;
+
+            const isCurrentlyHidden = (cardsContainer.style.display === 'none');
+            if (isCurrentlyHidden) {
+                // ขยายแถบพอร์ต
+                cardsContainer.style.display = 'flex';
+                pillsContainer.style.display = 'none';
+                btn.innerHTML = '📁 ย่อแถบพอร์ต';
+                localStorage.setItem('myPortCarouselCollapsed', 'false');
+            } else {
+                // ย่อแถบพอร์ต
+                cardsContainer.style.display = 'none';
+                pillsContainer.style.display = 'flex';
+                btn.innerHTML = '📂 ขยายแถบพอร์ต';
+                localStorage.setItem('myPortCarouselCollapsed', 'true');
+            }
+        };
+
+        window.initCarouselState = function() {
+            const isCollapsed = localStorage.getItem('myPortCarouselCollapsed') === 'true';
+            const cardsContainer = document.getElementById('portfolioCardsContainer');
+            const pillsContainer = document.getElementById('portfolioPillsContainer');
+            const btn = document.getElementById('btnToggleCarousel');
+            if (!cardsContainer || !pillsContainer || !btn) return;
+
+            if (isCollapsed) {
+                cardsContainer.style.display = 'none';
+                pillsContainer.style.display = 'flex';
+                btn.innerHTML = '📂 ขยายแถบพอร์ต';
+            } else {
+                cardsContainer.style.display = 'flex';
+                pillsContainer.style.display = 'none';
+                btn.innerHTML = '📁 ย่อแถบพอร์ต';
+            }
+        };
+
+        window.toggleChartFullscreen = function() {
+            const card = document.getElementById('performanceCard');
+            const btn = document.getElementById('btnChartFs');
+            const container = document.getElementById('performanceChartContainer');
+            if (!card) return;
+
+            const isFs = card.classList.contains('chart-card-fullscreen');
+            if (isFs) {
+                card.classList.remove('chart-card-fullscreen');
+                if (btn) btn.innerHTML = '⛶ เต็มจอ';
+                if (container) container.style.height = '240px';
+                document.body.style.overflow = '';
+            } else {
+                card.classList.add('chart-card-fullscreen');
+                if (btn) btn.innerHTML = '✕ ปิดเต็มจอ';
+                if (container) container.style.height = 'calc(100vh - 120px)';
+                document.body.style.overflow = 'hidden';
+            }
+            if (typeof perfChartObj !== 'undefined' && perfChartObj != null) {
+                setTimeout(() => perfChartObj.resize(), 100);
+            }
+        };
 
         // --- STOCK ALLOCATOR & QUICK REASSIGN LOGIC ---
         window.openStockAllocatorModal = function(portId, event) {
@@ -3534,8 +3683,23 @@
                     }
                 }
             } else {
-                finalDates = dates;
-                finalDatasetsData = datasetsData;
+                // ALL range: trim leading zero points so chart doesn't have an empty flat zero span
+                let firstActiveIndex = datasetsData['Total'].findIndex(val => val > 0);
+                let startTrim = (firstActiveIndex > 0) ? (firstActiveIndex - 1) : 0;
+                finalDates = dates.slice(startTrim);
+                for (let k in datasetsData) {
+                    finalDatasetsData[k] = datasetsData[k].slice(startTrim);
+                }
+            }
+
+            // Always extend stepped line to today so it fills the right side of the chart cleanly
+            let todayStr = new Date().toISOString().split('T')[0];
+            if (finalDates.length > 0 && finalDates[finalDates.length - 1] < todayStr) {
+                finalDates.push(todayStr);
+                for (let k in finalDatasetsData) {
+                    let lastVal = finalDatasetsData[k].length > 0 ? finalDatasetsData[k][finalDatasetsData[k].length - 1] : 0;
+                    finalDatasetsData[k].push(lastVal);
+                }
             }
 
             let datasets = [];
@@ -4539,6 +4703,7 @@
             initPrivacyMode();
             populatePortfolioDropdown();
             renderPortfolioCards();
+            initCarouselState();
             updateModeButtons();
             await renderTable(); 
             autoCalculateDimeFees();
