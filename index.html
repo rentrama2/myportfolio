@@ -80,9 +80,8 @@
             border-radius: 14px;
             border: 2px solid #e5e7eb;
             padding: 10px 14px 8px 14px;
-            min-width: 215px;
-            max-width: 245px;
-            flex: 0 0 225px;
+            min-width: 190px;
+            flex: 1 1 0px;
             cursor: pointer;
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
@@ -885,7 +884,7 @@
             <div id="portfolioPillsContainer" class="port-pills-bar mb-2" style="display: none;"></div>
 
             <!-- Full Cards Carousel -->
-            <div id="portfolioCardsContainer" class="d-flex gap-3 overflow-x-auto pb-1" style="scrollbar-width: thin; -webkit-overflow-scrolling: touch;">
+            <div id="portfolioCardsContainer" class="d-flex gap-2 gap-md-3 overflow-x-auto pb-1 w-100" style="scrollbar-width: thin; -webkit-overflow-scrolling: touch;">
                 <!-- Cards will be dynamically injected here by renderPortfolioCards() -->
             </div>
         </div>
@@ -1455,7 +1454,7 @@
                 <div class="portfolio-card ${isAllActive ? 'active-port' : ''}" onclick="selectPortfolio('ALL')">
                     <div>
                         <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="fw-bold fs-5 text-truncate" style="max-width: 190px;">พอร์ตทั้งหมด</span>
+                            <span class="fw-bold fs-5 text-truncate" title="พอร์ตทั้งหมด">พอร์ตทั้งหมด</span>
                             <span class="port-tag-pill">All Portfolios</span>
                         </div>
                         <div class="text-muted" style="font-size: 0.8rem; min-height: 20px;">ภาพรวมสินทรัพย์ทุกพอร์ตรวมกัน</div>
