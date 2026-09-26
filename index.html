@@ -481,6 +481,61 @@
         </div>
     </div>
 
+    <!-- Modal: Stock Allocator (ย้ายและจัดสรรหุ้นเข้าพอร์ต) -->
+    <div class="modal fade" id="stockAllocatorModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <h5 class="fw-bold m-0" id="allocatorModalTitle">📦 จัดการหุ้นสำหรับพอร์ต</h5>
+                            <small class="text-muted">ติ๊กเลือกหุ้นที่ต้องการให้อยู่ในพอร์ตนี้</small>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <input type="hidden" id="allocatorTargetPortId">
+
+                    <div class="card p-3 mb-3 border-0 bg-light" style="border-radius: 12px;">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                            <div>
+                                <span class="text-muted fw-bold" style="font-size: 0.85rem;">พอร์ตเป้าหมาย:</span>
+                                <strong id="allocatorTargetPortName" class="fs-5 text-primary ms-2">US Stocks</strong>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3" onclick="toggleSelectAllStocks(true)">เลือกทั้งหมด</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3" onclick="toggleSelectAllStocks(false)">ยกเลิกทั้งหมด</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                        <table class="table table-hover align-middle text-center m-0" style="font-size: 0.88rem;">
+                            <thead class="sticky-top table-light">
+                                <tr>
+                                    <th class="py-2" style="width: 50px;">เลือก</th>
+                                    <th class="py-2 text-start">หุ้น (Ticker)</th>
+                                    <th class="py-2">จำนวนหุ้น</th>
+                                    <th class="py-2">มูลค่า ($ / ฿)</th>
+                                    <th class="py-2">พอร์ตปัจจุบัน</th>
+                                </tr>
+                            </thead>
+                            <tbody id="allocatorStockTableBody"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                        <span id="allocatorSummaryText" class="text-muted fw-bold" style="font-size: 0.85rem;">เลือกไว้ 0 หุ้น</span>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-light border px-3" data-bs-dismiss="modal">ยกเลิก</button>
+                            <button type="button" class="btn btn-primary px-4 fw-bold" onclick="saveStockAllocation()">💾 บันทึกการจัดพอร์ต</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Dashboard -->
     <div class="container-fluid" style="max-width: 98%; margin: 0 auto;">
         
@@ -1059,6 +1114,9 @@
             const isAllActive = (activePortfolioId === 'ALL');
             const allSign = allM.plUSD >= 0 ? '+' : '';
             const allPlClass = allM.plUSD >= 0 ? 'text-profit' : 'text-loss';
+            const allPlDisplay = (allM.totalCostUSD === 0 && allM.totalMktUSD === 0)
+                ? `<div class="text-muted fw-bold" style="font-size: 0.85rem;">- 0.00% (฿0.00)</div>`
+                : `<div class="${allPlClass} fw-bold" style="font-size: 0.85rem;">↗ ${allSign}${allM.plPercent.toFixed(2)}% (${allSign}฿${allM.plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})})</div>`;
 
             html += `
                 <div class="portfolio-card ${isAllActive ? 'active-port' : ''}" onclick="selectPortfolio('ALL')">
@@ -1072,9 +1130,7 @@
 
                     <div class="text-end my-2">
                         <div class="fw-bold fs-4">$${allM.totalMktUSD.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
-                        <div class="${allPlClass} fw-bold" style="font-size: 0.85rem;">
-                            ↗ ${allSign}${allM.plPercent.toFixed(2)}% (${allSign}฿${allM.plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})})
-                        </div>
+                        ${allPlDisplay}
                         <small class="text-muted">≈ ฿${allM.totalMktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</small>
                     </div>
 
@@ -1097,14 +1153,29 @@
                 const isActive = (activePortfolioId === p.id);
                 const sign = m.plUSD >= 0 ? '+' : '';
                 const plClass = m.plUSD >= 0 ? 'text-profit' : 'text-loss';
+                const plDisplay = (m.totalCostUSD === 0 && m.totalMktUSD === 0)
+                    ? `<div class="text-muted fw-bold" style="font-size: 0.85rem;">- 0.00% (฿0.00)</div>`
+                    : `<div class="${plClass} fw-bold" style="font-size: 0.85rem;">↗ ${sign}${m.plPercent.toFixed(2)}% (${sign}฿${m.plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})})</div>`;
+
+                let chipsHTML = '';
+                if (m.tickers.length > 0) {
+                    chipsHTML = m.tickers.slice(0, 4).map(tk => `<span class="badge bg-light text-dark border" style="font-size: 0.7rem;">${tk}</span>`).join('') + (m.tickers.length > 4 ? `<span class="badge bg-light text-muted border" style="font-size: 0.7rem;">+${m.tickers.length - 4}</span>` : '');
+                } else {
+                    chipsHTML = `
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <span class="text-muted" style="font-size: 0.75rem;">ยังไม่มีหุ้นในพอร์ตนี้</span>
+                            <button class="btn btn-sm btn-outline-primary py-0 px-2 fw-bold" style="font-size: 0.72rem; border-radius: 8px;" onclick="openStockAllocatorModal('${p.id}', event)">+ จัดสรรหุ้น</button>
+                        </div>
+                    `;
+                }
 
                 html += `
                     <div class="portfolio-card ${isActive ? 'active-port' : ''}" onclick="selectPortfolio('${p.id}')">
                         <div>
                             <div class="d-flex justify-content-between align-items-center mb-1">
-                                <div class="d-flex align-items-center gap-2 text-truncate" style="max-width: 210px;">
-                                    <span class="fw-bold fs-5 text-truncate">${p.name}</span>
-                                    <span class="port-tag-pill">${p.tag || p.name}</span>
+                                <div class="d-flex align-items-center gap-2 flex-grow-1 overflow-hidden me-2">
+                                    <span class="fw-bold fs-5 text-truncate" title="${p.name}">${p.name}</span>
+                                    ${(p.tag && p.tag.toLowerCase() !== p.name.toLowerCase()) ? `<span class="port-tag-pill flex-shrink-0">${p.tag}</span>` : ''}
                                 </div>
                                 <div class="dropdown" onclick="event.stopPropagation()">
                                     <button class="btn btn-sm btn-link text-muted p-0 text-decoration-none fw-bold" style="font-size: 1.1rem; line-height: 1;" type="button" data-bs-toggle="dropdown">
@@ -1112,6 +1183,7 @@
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.85rem;">
                                         <li><a class="dropdown-item" href="javascript:void(0)" onclick="openPortfolioModal('${p.id}')">✏️ แก้ไขชื่อ/โน้ต</a></li>
+                                        <li><a class="dropdown-item fw-bold text-primary" href="javascript:void(0)" onclick="openStockAllocatorModal('${p.id}', event)">📦 จัดการ/ย้ายหุ้นเข้าพอร์ตนี้</a></li>
                                         ${p.id !== 'core' ? `<li><hr class="dropdown-divider"></li><li><a class="dropdown-item text-danger" href="javascript:void(0)" onclick="deletePortfolio('${p.id}', event)">🗑️ ลบพอร์ตนี้</a></li>` : ''}
                                     </ul>
                                 </div>
@@ -1121,17 +1193,13 @@
 
                         <div class="text-end my-2">
                             <div class="fw-bold fs-4">$${m.totalMktUSD.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
-                            <div class="${plClass} fw-bold" style="font-size: 0.85rem;">
-                                ↗ ${sign}${m.plPercent.toFixed(2)}% (${sign}฿${m.plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})})
-                            </div>
+                            ${plDisplay}
                             <small class="text-muted">≈ ฿${m.totalMktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</small>
                         </div>
 
                         <div>
-                            <div class="d-flex gap-1 flex-wrap mb-1" style="min-height: 24px;">
-                                ${m.tickers.length > 0 
-                                    ? m.tickers.slice(0, 4).map(tk => `<span class="badge bg-light text-dark border" style="font-size: 0.7rem;">${tk}</span>`).join('') + (m.tickers.length > 4 ? `<span class="badge bg-light text-muted border" style="font-size: 0.7rem;">+${m.tickers.length - 4}</span>` : '')
-                                    : '<span class="text-muted" style="font-size: 0.75rem;">ยังไม่มีหุ้นในพอร์ตนี้</span>'}
+                            <div class="d-flex gap-1 flex-wrap mb-1 align-items-center" style="min-height: 24px;">
+                                ${chipsHTML}
                             </div>
                             <div class="port-bottom-bar">
                                 <span>${m.assetCount} สินทรัพย์</span>
@@ -1146,13 +1214,146 @@
             html += `
                 <div class="portfolio-card-add" onclick="openPortfolioModal()">
                     <div style="font-size: 2.2rem; color: #3b82f6; line-height: 1;" class="mb-2">+</div>
-                    <div class="fw-bold" style="font-size: 0.95rem;">เพิ่มพอร์ตการลงทุน</div>
-                    <small class="text-muted mt-1" style="font-size: 0.75rem;">สร้างพอร์ตได้ไม่จำกัด (ฟรี 100%)</small>
+                    <div class="fw-bold" style="font-size: 0.95rem; white-space: nowrap;">เพิ่มพอร์ตการลงทุน</div>
+                    <small class="text-muted mt-1" style="font-size: 0.75rem; white-space: nowrap;">สร้างพอร์ตได้ไม่จำกัด (ฟรี 100%)</small>
                 </div>
             `;
 
             container.innerHTML = html;
         }
+
+        // --- STOCK ALLOCATOR & QUICK REASSIGN LOGIC ---
+        window.openStockAllocatorModal = function(portId, event) {
+            if (event) event.stopPropagation();
+            if (!portId || portId === 'ALL') portId = portfolios[0].id;
+
+            const p = portfolios.find(x => x.id === portId) || portfolios[0];
+            document.getElementById('allocatorTargetPortId').value = p.id;
+            document.getElementById('allocatorTargetPortName').innerText = p.name;
+            document.getElementById('allocatorModalTitle').innerText = `📦 จัดการหุ้นสำหรับพอร์ต: ${p.name}`;
+
+            let allHoldings = {};
+            transactions.forEach(t => {
+                if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW') return;
+                if (!allHoldings[t.ticker]) allHoldings[t.ticker] = { shares: 0, currentPort: t.portfolio || 'core' };
+                if (t.type === 'BUY') allHoldings[t.ticker].shares += t.shares;
+                else if (t.type === 'SELL') allHoldings[t.ticker].shares -= t.shares;
+                if (t.portfolio) allHoldings[t.ticker].currentPort = t.portfolio;
+            });
+
+            let html = '';
+            let activeTickers = Object.keys(allHoldings).filter(tk => allHoldings[tk].shares > 0.0001);
+
+            activeTickers.forEach(tk => {
+                let shares = allHoldings[tk].shares;
+                let curPortId = allHoldings[tk].currentPort || 'core';
+                let isChecked = (curPortId === p.id);
+                let curPortObj = portfolios.find(x => x.id === curPortId);
+                let curPortName = curPortObj ? curPortObj.name : 'Core Port';
+                let price = marketPrices[tk] || 0;
+                let mktUSD = shares * price;
+                let mktTHB = mktUSD * liveFxRate;
+
+                html += `
+                    <tr>
+                        <td class="py-2">
+                            <input type="checkbox" class="form-check-input alloc-check" value="${tk}" ${isChecked ? 'checked' : ''} onchange="updateAllocSummaryCount()">
+                        </td>
+                        <td class="text-start py-2">
+                            <strong>${tk}</strong> <small class="text-muted">(${stockNames[tk] || ''})</small>
+                        </td>
+                        <td class="py-2">${shares.toFixed(4)}</td>
+                        <td class="py-2">
+                            $${mktUSD.toFixed(2)}<br><small class="text-muted">≈ ฿${mktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</small>
+                        </td>
+                        <td class="py-2">
+                            <span class="badge rounded-pill bg-light text-dark border">${curPortName}</span>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            if (activeTickers.length === 0) {
+                html = '<tr><td colspan="5" class="text-muted py-4">ยังไม่มีหุ้นในระบบเลยครับ</td></tr>';
+            }
+
+            document.getElementById('allocatorStockTableBody').innerHTML = html;
+            updateAllocSummaryCount();
+
+            const modal = new bootstrap.Modal(document.getElementById('stockAllocatorModal'));
+            modal.show();
+        };
+
+        window.toggleSelectAllStocks = function(select) {
+            document.querySelectorAll('.alloc-check').forEach(cb => { cb.checked = select; });
+            updateAllocSummaryCount();
+        };
+
+        window.updateAllocSummaryCount = function() {
+            let checkedCount = document.querySelectorAll('.alloc-check:checked').length;
+            let totalCount = document.querySelectorAll('.alloc-check').length;
+            let el = document.getElementById('allocatorSummaryText');
+            if (el) el.innerText = `เลือกไว้ ${checkedCount} จาก ${totalCount} หุ้น`;
+        };
+
+        window.saveStockAllocation = function() {
+            const targetPortId = document.getElementById('allocatorTargetPortId').value;
+            const targetPort = portfolios.find(x => x.id === targetPortId);
+            if (!targetPort) return;
+
+            let checkedTickers = new Set();
+            document.querySelectorAll('.alloc-check:checked').forEach(cb => {
+                checkedTickers.add(cb.value);
+            });
+
+            let allModalTickers = new Set();
+            document.querySelectorAll('.alloc-check').forEach(cb => {
+                allModalTickers.add(cb.value);
+            });
+
+            transactions.forEach(t => {
+                if (allModalTickers.has(t.ticker)) {
+                    if (checkedTickers.has(t.ticker)) {
+                        t.portfolio = targetPortId;
+                    } else if (t.portfolio === targetPortId) {
+                        t.portfolio = 'core';
+                    }
+                }
+            });
+
+            localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
+            bootstrap.Modal.getInstance(document.getElementById('stockAllocatorModal')).hide();
+
+            activePortfolioId = targetPortId;
+            localStorage.setItem('myActivePortfolioId', targetPortId);
+
+            populatePortfolioDropdown();
+            renderPortfolioCards();
+            updateSummaryAndChart();
+            renderTable();
+
+            alert(`จัดสรรหุ้นเข้าพอร์ต "${targetPort.name}" สำเร็จเรียบร้อยครับ! 🎉`);
+        };
+
+        window.quickMoveStock = function(ticker) {
+            let pList = portfolios.map((p, idx) => `${idx + 1}. ${p.name}`).join('\n');
+            let ans = prompt(`เลือกพอร์ตที่ต้องการย้ายหุ้น ${ticker} ไป:\n${pList}\n\nกรุณาพิมพ์หมายเลขพอร์ต (1 - ${portfolios.length}):`);
+            if (!ans) return;
+            let idx = parseInt(ans) - 1;
+            if (idx >= 0 && idx < portfolios.length) {
+                let targetPort = portfolios[idx];
+                transactions.forEach(t => {
+                    if (t.ticker === ticker) t.portfolio = targetPort.id;
+                });
+                localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
+                renderPortfolioCards();
+                updateSummaryAndChart();
+                renderTable();
+                alert(`ย้ายหุ้น ${ticker} ไปยังพอร์ต "${targetPort.name}" สำเร็จเรียบร้อยครับ!`);
+            } else {
+                alert("หมายเลขพอร์ตไม่ถูกต้องครับ");
+            }
+        };
 
         // --- DARK MODE LOGIC ---
         function initTheme() {
@@ -2573,6 +2774,7 @@
                             <td class="border-end-0 py-3">
                                 <strong>${ticker}</strong><br>
                                 <span class="badge group-badge mt-1" onclick="changeGroup('${ticker}')">📁 ${groupName}</span>
+                                <span class="badge rounded-pill bg-light text-primary border mt-1" style="cursor: pointer; font-size: 0.72rem;" onclick="quickMoveStock('${ticker}')" title="คลิกเพื่อย้ายหุ้นนี้ไปพอร์ตอื่น">💼 ย้ายพอร์ต ⇄</span>
                             </td>
                             <td class="border-0 py-3">${shares.toFixed(7)}</td>
                             <td class="border-0 py-3">
