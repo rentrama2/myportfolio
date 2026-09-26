@@ -836,15 +836,15 @@
         <!-- Header & Quick Actions -->
         <div class="d-flex justify-content-between align-items-center mb-2 mt-1 flex-wrap gap-2">
             <div class="d-flex align-items-center gap-2">
-                <h2 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.5px; font-size: 1.6rem;">My Portfolio</h2>
+                <h2 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.5px; font-size: 1.55rem;">My Portfolio</h2>
                 <span id="activePortBadgeHeader" class="badge rounded-pill bg-primary px-3 py-1" style="font-size: 0.8rem;">พอร์ตทั้งหมด</span>
             </div>
-            <div class="d-flex align-items-center gap-2 flex-wrap">
-                <button id="btnPrivacyToggle" class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="togglePrivacyMode()" title="ซ่อน/แสดงตัวเลขเงิน เหมาะสำหรับแคปหน้าจอหรือเปิดในที่สาธารณะ (ชี้เมาส์เพื่อแอบดูได้)">
+            <div class="d-flex align-items-center gap-1 gap-md-2 flex-wrap justify-content-end">
+                <button id="btnPrivacyToggle" class="btn btn-sm btn-outline-secondary rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="togglePrivacyMode()" title="ซ่อน/แสดงตัวเลขเงิน เหมาะสำหรับแคปหน้าจอหรือเปิดในที่สาธารณะ (ชี้เมาส์เพื่อแอบดูได้)" style="font-size: 0.78rem;">
                     👁️ ซ่อนตัวเลข
                 </button>
                 <div class="dropdown d-inline-block">
-                    <button class="btn btn-sm btn-outline-primary rounded-pill px-3 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-sm btn-outline-primary rounded-pill px-2 px-md-3 py-1 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.78rem;">
                         📑 Export CSV
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.85rem;">
@@ -854,32 +854,30 @@
                     </ul>
                 </div>
                 <input type="file" id="jsonBackupInput" accept=".json" style="display: none;" onchange="handleRestoreBackup(event)">
-                <button class="btn btn-sm btn-outline-success rounded-pill px-3 fw-bold" onclick="exportFullBackup()" title="สำรองข้อมูลทุกพอร์ต ทุกรายการ และการตั้งค่า">
+                <button class="btn btn-sm btn-outline-success rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="exportFullBackup()" title="สำรองข้อมูลทุกพอร์ต ทุกรายการ และการตั้งค่า" style="font-size: 0.78rem;">
                     💾 Backup JSON
                 </button>
-                <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold" onclick="document.getElementById('jsonBackupInput').click()" title="กู้คืนข้อมูลจากไฟล์ Backup">
+                <button class="btn btn-sm btn-outline-secondary rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="document.getElementById('jsonBackupInput').click()" title="กู้คืนข้อมูลจากไฟล์ Backup" style="font-size: 0.78rem;">
                     📥 Restore
                 </button>
-                <button id="btnThemeToggle" class="btn btn-sm btn-outline-dark rounded-pill px-3 fw-bold" onclick="toggleTheme()">
+                <button id="btnThemeToggle" class="btn btn-sm btn-outline-dark rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="toggleTheme()" style="font-size: 0.78rem;">
                     🌙 โหมดมืด
+                </button>
+                <button id="btnToggleCarousel" class="btn btn-sm btn-outline-secondary rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="togglePortfolioCarousel()" title="ย่อ/ขยายแถบพอร์ตเพื่อดูกราฟได้เต็มหน้าจอโดยไม่ต้องเลื่อน" style="font-size: 0.78rem;">
+                    📁 ย่อแถบพอร์ต
+                </button>
+                <button class="btn btn-sm btn-outline-primary rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="openPortfolioModal()" style="font-size: 0.78rem;">
+                    + เพิ่มพอร์ต
                 </button>
             </div>
         </div>
 
         <!-- Multi-Portfolio Carousel Row (จัดพอร์ตได้เหมือนใน App ฟรีไม่จำกัด) -->
         <div class="mb-2" id="portfolioSection">
-            <div class="d-flex justify-content-between align-items-center mb-1 px-1">
+            <div id="portfolioTitleRow" class="d-flex justify-content-between align-items-center mb-1 px-1">
                 <div class="d-flex align-items-center gap-2">
-                    <span class="fw-bold" style="font-size: 0.95rem;">📁 พอร์ตการลงทุนของฉัน</span>
+                    <span class="fw-bold" style="font-size: 0.92rem;">📁 พอร์ตการลงทุนของฉัน</span>
                     <small class="text-muted ms-1 d-none d-md-inline" style="font-size: 0.78rem;">(คลิกเลือกพอร์ตเพื่อกรองข้อมูล)</small>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                    <button id="btnToggleCarousel" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="togglePortfolioCarousel()" title="ย่อแถบพอร์ตเพื่อดูกราฟได้เต็มหน้าจอโดยไม่ต้องเลื่อน" style="font-size: 0.78rem;">
-                        📁 ย่อแถบพอร์ต
-                    </button>
-                    <button class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openPortfolioModal()" style="font-size: 0.78rem;">
-                        + เพิ่มพอร์ต
-                    </button>
                 </div>
             </div>
             
@@ -1551,6 +1549,7 @@
             const pillsContainer = document.getElementById('portfolioPillsContainer');
             if (pillsContainer) {
                 let pillsHtml = `
+                    <span class="text-muted fw-bold me-1" style="font-size: 0.8rem; white-space: nowrap;">📁 เลือกพอร์ต:</span>
                     <button class="port-pill-btn ${activePortfolioId === 'ALL' ? 'active-pill' : ''}" onclick="selectPortfolio('ALL')">
                         🌐 พอร์ตทั้งหมด <span class="badge ${activePortfolioId === 'ALL' ? 'bg-white text-dark' : 'bg-light text-dark border'} rounded-pill ms-1">${allM.assetCount}</span>
                     </button>
@@ -1571,6 +1570,7 @@
         window.togglePortfolioCarousel = function() {
             const cardsContainer = document.getElementById('portfolioCardsContainer');
             const pillsContainer = document.getElementById('portfolioPillsContainer');
+            const titleRow = document.getElementById('portfolioTitleRow');
             const btn = document.getElementById('btnToggleCarousel');
             if (!cardsContainer || !pillsContainer || !btn) return;
 
@@ -1579,12 +1579,14 @@
                 // ขยายแถบพอร์ต
                 cardsContainer.style.display = 'flex';
                 pillsContainer.style.display = 'none';
+                if (titleRow) titleRow.style.display = 'flex';
                 btn.innerHTML = '📁 ย่อแถบพอร์ต';
                 localStorage.setItem('myPortCarouselCollapsed', 'false');
             } else {
                 // ย่อแถบพอร์ต
                 cardsContainer.style.display = 'none';
                 pillsContainer.style.display = 'flex';
+                if (titleRow) titleRow.style.display = 'none';
                 btn.innerHTML = '📂 ขยายแถบพอร์ต';
                 localStorage.setItem('myPortCarouselCollapsed', 'true');
             }
@@ -1594,16 +1596,19 @@
             const isCollapsed = localStorage.getItem('myPortCarouselCollapsed') === 'true';
             const cardsContainer = document.getElementById('portfolioCardsContainer');
             const pillsContainer = document.getElementById('portfolioPillsContainer');
+            const titleRow = document.getElementById('portfolioTitleRow');
             const btn = document.getElementById('btnToggleCarousel');
             if (!cardsContainer || !pillsContainer || !btn) return;
 
             if (isCollapsed) {
                 cardsContainer.style.display = 'none';
                 pillsContainer.style.display = 'flex';
+                if (titleRow) titleRow.style.display = 'none';
                 btn.innerHTML = '📂 ขยายแถบพอร์ต';
             } else {
                 cardsContainer.style.display = 'flex';
                 pillsContainer.style.display = 'none';
+                if (titleRow) titleRow.style.display = 'flex';
                 btn.innerHTML = '📁 ย่อแถบพอร์ต';
             }
         };
