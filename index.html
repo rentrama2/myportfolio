@@ -412,6 +412,120 @@
         </div>
     </div>
 
+    <!-- Modal: Trim Portfolio Calculator (ขายลดสัดส่วน & ล็อกกำไร) -->
+    <div class="modal fade" id="trimModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <h5 class="fw-bold m-0" style="color: inherit;">✂️ ตัดขายลดสัดส่วน & ล็อกกำไร (Trim Portfolio Calculator)</h5>
+                            <small class="text-muted">คำนวณจำนวนหุ้นและมูลค่าที่ควรขายเพื่อล็อกกำไร หรือปรับสัดส่วนกลับสู่เป้าหมาย (เหมือนใน Take Profit 24)</small>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Summary Cards -->
+                    <div class="row g-2 mb-3">
+                        <div class="col-md-3 col-6">
+                            <div class="card p-2 text-center border-0" style="background-color: rgba(239, 68, 68, 0.08); border-radius: 10px;">
+                                <small class="text-muted fw-bold">ดึงเงินสดกลับเข้าพอร์ต</small>
+                                <div class="fw-bold text-danger fs-5" id="trimTotalCashTHB">฿0.00</div>
+                                <small class="text-muted" id="trimTotalCashUSD">≈ $0.00</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="card p-2 text-center border-0" style="background-color: rgba(16, 185, 129, 0.08); border-radius: 10px;">
+                                <small class="text-muted fw-bold">กำไรที่จะล็อกได้ (Realized)</small>
+                                <div class="fw-bold text-success fs-5" id="trimTotalProfitTHB">+฿0.00</div>
+                                <small class="text-muted" id="trimTotalProfitUSD">≈ +$0.00</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="card p-2 text-center border-0" style="background-color: rgba(59, 130, 246, 0.08); border-radius: 10px;">
+                                <small class="text-muted fw-bold">จำนวนหุ้นที่แนะนำให้ Trim</small>
+                                <div class="fw-bold text-primary fs-5" id="trimTotalStocksCount">0 สินทรัพย์</div>
+                                <small class="text-muted">พร้อมขายล็อกกำไร</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="card p-2 text-center border-0" style="background-color: rgba(245, 158, 11, 0.08); border-radius: 10px;">
+                                <small class="text-muted fw-bold">สถานะความเสี่ยงพอร์ต</small>
+                                <div class="fw-bold text-warning fs-5" id="trimRiskStatus">สมดุล</div>
+                                <small class="text-muted" id="trimRiskNote">ไม่มีสินทรัพย์ Overweight</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strategy Control Card -->
+                    <div class="card p-3 mb-3 border-0" style="border-radius: 12px; background: rgba(239, 68, 68, 0.04); border: 1px solid rgba(239, 68, 68, 0.15) !important;">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                            <div>
+                                <label class="fw-bold mb-1" style="font-size: 0.9rem;">เลือกกลยุทธ์การ Trim:</label>
+                                <div class="btn-group btn-group-sm d-flex flex-wrap" role="group">
+                                    <button type="button" class="btn btn-outline-danger fw-bold active" id="btnTrimModeTarget" onclick="setTrimStrategy('TARGET')">
+                                        🎯 1. ลดสัดส่วนที่เกินเป้า (Rebalance Overweight)
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger fw-bold" id="btnTrimModeProfit" onclick="setTrimStrategy('PROFIT')">
+                                        💰 2. ขายเฉพาะกำไร (Lock Profit Only)
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger fw-bold" id="btnTrimModeCapital" onclick="setTrimStrategy('CAPITAL')">
+                                        🛡️ 3. ถอนเงินต้นคืน (Take Out Capital)
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger fw-bold" id="btnTrimModeCustom" onclick="setTrimStrategy('CUSTOM')">
+                                        🔢 4. ระบุ % ขายเอง
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="trimCustomPercentWrap" class="d-none align-items-center gap-2">
+                                <label class="fw-bold text-muted" style="font-size: 0.85rem;">% ที่ต้องการ Trim:</label>
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-light border py-1" onclick="setCustomTrimPct(25)">25%</button>
+                                    <button type="button" class="btn btn-light border py-1" onclick="setCustomTrimPct(33.33)">1/3</button>
+                                    <button type="button" class="btn btn-light border py-1" onclick="setCustomTrimPct(50)">50%</button>
+                                </div>
+                                <div class="input-group input-group-sm" style="width: 100px;">
+                                    <input type="number" id="trimCustomPctInput" class="form-control text-end fw-bold" value="25" min="1" max="100" step="1" oninput="calculateTrim()">
+                                    <span class="input-group-text">%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2 text-muted" id="trimStrategyDesc" style="font-size: 0.82rem;">
+                            🎯 <strong>กลยุทธ์ 1:</strong> คำนวณตัดขายสินทรัพย์หรือกลุ่มที่มีสัดส่วนสูงเกิน Target Weight % เพื่อปรับลดให้พอร์ตกลับมาสมดุลตามแผนการลงทุน
+                        </div>
+                    </div>
+
+                    <!-- Trim Table -->
+                    <div class="table-responsive" style="max-height: 420px; overflow-y: auto;">
+                        <table class="table table-hover align-middle text-center m-0" style="font-size: 0.88rem;">
+                            <thead class="sticky-top table-light">
+                                <tr>
+                                    <th class="py-2 text-start">หุ้น / กลุ่ม</th>
+                                    <th class="py-2">จำนวนหุ้นที่มี</th>
+                                    <th class="py-2">ราคาปัจจุบัน</th>
+                                    <th class="py-2">กำไรปัจจุบัน</th>
+                                    <th class="py-2">สัดส่วนในพอร์ต</th>
+                                    <th class="py-2 text-danger fw-bold">แนะนำ Trim (หุ้น)</th>
+                                    <th class="py-2 text-danger fw-bold">เงินที่จะได้ (฿ / $)</th>
+                                    <th class="py-2 text-success fw-bold">ล็อกกำไรได้</th>
+                                    <th class="py-2">การจัดการ</th>
+                                </tr>
+                            </thead>
+                            <tbody id="trimTableBody"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top flex-wrap gap-2">
+                        <small class="text-muted">
+                            ℹ️ สามารถกดปุ่ม <strong>⚡ ส่งไปฟอร์มขาย</strong> เพื่อกรอกข้อมูลขายอัตโนมัติ หรือกด <strong>🧮 จำลองผลลัพธ์</strong> เพื่อดูสัดส่วนหลังขายก่อนได้ครับ
+                        </small>
+                        <button type="button" class="btn btn-secondary px-4 fw-bold" style="border-radius: 10px;" data-bs-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal: Dividend Calendar & Tax Summary (W-8BEN 15%) -->
     <div class="modal fade" id="dividendModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -688,7 +802,10 @@
                             สัดส่วนเงินลงทุนรวม<br>
                             <small class="text-muted fw-normal" style="font-size: 0.8rem;">เงินลงทุนและเงินสดรวม</small>
                         </div>
-                        <div class="d-flex gap-1">
+                        <div class="d-flex gap-1 flex-wrap">
+                            <button class="btn btn-sm btn-outline-danger d-flex align-items-center gap-1 rounded-pill px-3 fw-bold" onclick="openTrimCalculator()" title="คำนวณการขายลดสัดส่วนเพื่อล็อกกำไร หรือปรับสัดส่วนกลับสู่เป้าหมาย (เหมือนใน Take Profit 24)">
+                                ✂️ Trim ล็อกกำไร
+                            </button>
                             <button class="btn btn-sm btn-outline-primary d-flex align-items-center gap-1 rounded-pill px-3" onclick="openDCAPlanner()" title="คำนวณการเติมเงิน DCA เพื่อปรับพอร์ตตามเป้าหมาย">
                                 ⚖️ วางแผน DCA
                             </button>
@@ -1577,6 +1694,368 @@
             });
 
             tbody.innerHTML = html;
+        };
+
+        // --- TRIM PORTFOLIO CALCULATOR (ขายลดสัดส่วน & ล็อกกำไร) ---
+        let currentTrimStrategy = 'TARGET'; // 'TARGET', 'PROFIT', 'CAPITAL', 'CUSTOM'
+        let customTrimPercent = 25;
+
+        window.openTrimCalculator = function() {
+            const modal = new bootstrap.Modal(document.getElementById('trimModal'));
+            calculateTrim();
+            modal.show();
+        };
+
+        window.openTrimForTicker = function(ticker) {
+            openTrimCalculator();
+            setTimeout(() => {
+                const rows = document.querySelectorAll('#trimTableBody tr');
+                rows.forEach(r => {
+                    if (r.innerText.includes(ticker)) {
+                        r.classList.add('table-primary');
+                        r.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        setTimeout(() => r.classList.remove('table-primary'), 2500);
+                    }
+                });
+            }, 350);
+        };
+
+        window.setTrimStrategy = function(strategy) {
+            currentTrimStrategy = strategy;
+            ['btnTrimModeTarget', 'btnTrimModeProfit', 'btnTrimModeCapital', 'btnTrimModeCustom'].forEach(id => {
+                const b = document.getElementById(id);
+                if (b) {
+                    b.classList.remove('active', 'btn-danger');
+                    b.classList.add('btn-outline-danger');
+                }
+            });
+
+            const activeBtnMap = {
+                'TARGET': 'btnTrimModeTarget',
+                'PROFIT': 'btnTrimModeProfit',
+                'CAPITAL': 'btnTrimModeCapital',
+                'CUSTOM': 'btnTrimModeCustom'
+            };
+            const actBtn = document.getElementById(activeBtnMap[strategy]);
+            if (actBtn) {
+                actBtn.classList.add('active', 'btn-danger');
+                actBtn.classList.remove('btn-outline-danger');
+            }
+
+            const wrapCustom = document.getElementById('trimCustomPercentWrap');
+            if (wrapCustom) {
+                if (strategy === 'CUSTOM') {
+                    wrapCustom.classList.remove('d-none');
+                    wrapCustom.classList.add('d-flex');
+                } else {
+                    wrapCustom.classList.add('d-none');
+                    wrapCustom.classList.remove('d-flex');
+                }
+            }
+
+            const descEl = document.getElementById('trimStrategyDesc');
+            if (descEl) {
+                if (strategy === 'TARGET') {
+                    descEl.innerHTML = '🎯 <strong>กลยุทธ์ 1 (Rebalance to Target):</strong> คำนวณตัดขายสินทรัพย์หรือกลุ่มที่มีสัดส่วนสูงเกิน Target Weight % เพื่อปรับลดให้พอร์ตกลับมาสมดุลตามแผนการลงทุน';
+                } else if (strategy === 'PROFIT') {
+                    descEl.innerHTML = '💰 <strong>กลยุทธ์ 2 (Lock Profit Only):</strong> ขายเฉพาะส่วนที่เป็นกำไรดึงออกมาเป็นเงินสดเข้าบัญชี โดยเหลือเงินต้นไว้ทำงานต่อ 100%';
+                } else if (strategy === 'CAPITAL') {
+                    descEl.innerHTML = '🛡️ <strong>กลยุทธ์ 3 (Take Out Capital):</strong> ขายหุ้นเท่ากับจำนวนเงินต้นคืนเข้ากระเป๋า แล้วปล่อยให้กำไรที่เหลือวิ่งต่อแบบฟรีๆ ไร้ความเสี่ยง (House Money)';
+                } else if (strategy === 'CUSTOM') {
+                    descEl.innerHTML = '🔢 <strong>กลยุทธ์ 4 (Partial Trim):</strong> แบ่งขายทำกำไรตาม % ที่ระบุ (เช่น 25%, 33%, 50%) จากจำนวนหุ้นที่ถืออยู่';
+                }
+            }
+
+            calculateTrim();
+        };
+
+        window.setCustomTrimPct = function(pct) {
+            customTrimPercent = pct;
+            const input = document.getElementById('trimCustomPctInput');
+            if (input) input.value = pct;
+            calculateTrim();
+        };
+
+        window.calculateTrim = function() {
+            const tbody = document.getElementById('trimTableBody');
+            if (!tbody) return;
+
+            if (currentTrimStrategy === 'CUSTOM') {
+                const inp = document.getElementById('trimCustomPctInput');
+                customTrimPercent = inp ? (parseFloat(inp.value) || 25) : 25;
+            }
+
+            const currentTxns = (activePortfolioId === 'ALL')
+                ? transactions
+                : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
+
+            let holdings = {};
+            let groupValues = {};
+
+            currentTxns.forEach(t => {
+                if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW') return;
+                if (!holdings[t.ticker]) holdings[t.ticker] = { shares: 0, costUSD: 0, costTHB: 0, port: t.portfolio || 'core' };
+                let usd = Number((t.shares * t.price).toFixed(2));
+                let thb = parseFloat(t.totalTHB) || (usd * liveFxRate);
+                if (t.type === 'BUY') {
+                    holdings[t.ticker].shares += t.shares;
+                    holdings[t.ticker].costUSD += usd;
+                    holdings[t.ticker].costTHB += thb;
+                } else if (t.type === 'SELL' && holdings[t.ticker].shares > 0) {
+                    let avgUSD = holdings[t.ticker].costUSD / holdings[t.ticker].shares;
+                    let avgTHB = holdings[t.ticker].costTHB / holdings[t.ticker].shares;
+                    holdings[t.ticker].shares -= t.shares;
+                    holdings[t.ticker].costUSD -= (t.shares * avgUSD);
+                    holdings[t.ticker].costTHB -= (t.shares * avgTHB);
+                }
+                if (t.portfolio) holdings[t.ticker].port = t.portfolio;
+            });
+
+            let totalPortMktTHB = 0;
+            let tickerData = [];
+
+            for (let tk in holdings) {
+                if (holdings[tk].shares > 0.0001) {
+                    let shares = holdings[tk].shares;
+                    let costUSD = holdings[tk].costUSD;
+                    let avgCostUSD = costUSD / shares;
+                    let priceUSD = marketPrices[tk] || avgCostUSD;
+                    let mktUSD = shares * priceUSD;
+                    let mktTHB = mktUSD * liveFxRate;
+                    let costTHB = (currentCalcMode === 'DIME') ? (costUSD * liveFxRate) : (holdings[tk].costTHB + (tunedDiffsV2[tk] || 0));
+                    let profitUSD = mktUSD - costUSD;
+                    let profitTHB = mktTHB - costTHB;
+                    let profitPct = costUSD > 0 ? (profitUSD / costUSD) * 100 : 0;
+                    let grp = portfolioMapping[tk] || 'Stock';
+
+                    groupValues[grp] = (groupValues[grp] || 0) + mktTHB;
+                    totalPortMktTHB += mktTHB;
+
+                    tickerData.push({
+                        ticker: tk,
+                        shares: shares,
+                        avgCostUSD: avgCostUSD,
+                        priceUSD: priceUSD,
+                        costUSD: costUSD,
+                        costTHB: costTHB,
+                        mktUSD: mktUSD,
+                        mktTHB: mktTHB,
+                        profitUSD: profitUSD,
+                        profitTHB: profitTHB,
+                        profitPct: profitPct,
+                        group: grp,
+                        port: holdings[tk].port
+                    });
+                }
+            }
+
+            let totalTrimCashTHB = 0;
+            let totalTrimCashUSD = 0;
+            let totalLockedProfitTHB = 0;
+            let totalLockedProfitUSD = 0;
+            let trimCandidateCount = 0;
+            let overweightCount = 0;
+
+            if (tickerData.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="9" class="text-muted py-5">ยังไม่มีรายการหุ้นในพอร์ตที่เลือกครับ</td></tr>';
+                document.getElementById('trimTotalCashTHB').innerText = '฿0.00';
+                document.getElementById('trimTotalCashUSD').innerText = '≈ $0.00';
+                document.getElementById('trimTotalProfitTHB').innerText = '+฿0.00';
+                document.getElementById('trimTotalProfitUSD').innerText = '≈ +$0.00';
+                document.getElementById('trimTotalStocksCount').innerText = '0 สินทรัพย์';
+                document.getElementById('trimRiskStatus').innerText = 'ว่าง';
+                document.getElementById('trimRiskNote').innerText = 'ยังไม่มีหุ้นในพอร์ต';
+                return;
+            }
+
+            let html = '';
+
+            tickerData.forEach(item => {
+                let actualWeightPct = totalPortMktTHB > 0 ? (item.mktTHB / totalPortMktTHB) * 100 : 0;
+                let grpActualWeight = totalPortMktTHB > 0 ? ((groupValues[item.group] || 0) / totalPortMktTHB) * 100 : 0;
+                let targetGrpPct = portfolioTargets[item.group] || 0;
+                let isGrpOverweight = (targetGrpPct > 0 && grpActualWeight > targetGrpPct + 1);
+                if (isGrpOverweight) overweightCount++;
+
+                let trimShares = 0;
+                let trimUSD = 0;
+                let trimTHB = 0;
+                let lockedProfitUSD = 0;
+                let lockedProfitTHB = 0;
+                let statusBadge = '';
+
+                if (currentTrimStrategy === 'TARGET') {
+                    if (isGrpOverweight) {
+                        let excessGroupTHB = (groupValues[item.group] - (totalPortMktTHB * (targetGrpPct / 100)));
+                        let stockShareOfGroup = groupValues[item.group] > 0 ? item.mktTHB / groupValues[item.group] : 0;
+                        trimTHB = Math.max(0, excessGroupTHB * stockShareOfGroup);
+                        trimUSD = liveFxRate > 0 ? trimTHB / liveFxRate : 0;
+                        trimShares = item.priceUSD > 0 ? trimUSD / item.priceUSD : 0;
+                        trimShares = Math.min(item.shares, trimShares);
+                        trimUSD = trimShares * item.priceUSD;
+                        trimTHB = trimUSD * liveFxRate;
+                        statusBadge = '<span class="badge bg-danger">Overweight (เกินเป้า)</span>';
+                    } else if (targetGrpPct > 0 && grpActualWeight < targetGrpPct - 1) {
+                        statusBadge = '<span class="badge bg-warning text-dark">Underweight</span>';
+                    } else if (targetGrpPct > 0) {
+                        statusBadge = '<span class="badge bg-success">ตามเป้าหมาย</span>';
+                    } else {
+                        statusBadge = '<span class="badge bg-secondary">ไม่ได้ตั้งเป้า</span>';
+                    }
+                } else if (currentTrimStrategy === 'PROFIT') {
+                    if (item.profitUSD > 0.01) {
+                        trimUSD = item.profitUSD;
+                        trimShares = item.priceUSD > 0 ? trimUSD / item.priceUSD : 0;
+                        trimShares = Math.min(item.shares, trimShares);
+                        trimUSD = trimShares * item.priceUSD;
+                        trimTHB = trimUSD * liveFxRate;
+                        statusBadge = '<span class="badge bg-success">มีกำไรพร้อมล็อก</span>';
+                    } else {
+                        statusBadge = '<span class="badge bg-light text-muted border">ยังไม่มีกำไร</span>';
+                    }
+                } else if (currentTrimStrategy === 'CAPITAL') {
+                    if (item.profitUSD > 0.01) {
+                        trimUSD = Math.min(item.costUSD, item.mktUSD);
+                        trimShares = item.priceUSD > 0 ? trimUSD / item.priceUSD : 0;
+                        trimShares = Math.min(item.shares, trimShares);
+                        trimUSD = trimShares * item.priceUSD;
+                        trimTHB = trimUSD * liveFxRate;
+                        statusBadge = '<span class="badge bg-info text-dark">ดึงทุนคืนได้</span>';
+                    } else {
+                        statusBadge = '<span class="badge bg-light text-muted border">ยังไม่ถึงจุดดึงทุน</span>';
+                    }
+                } else if (currentTrimStrategy === 'CUSTOM') {
+                    let pct = Math.min(100, Math.max(0, customTrimPercent)) / 100;
+                    trimShares = item.shares * pct;
+                    trimUSD = trimShares * item.priceUSD;
+                    trimTHB = trimUSD * liveFxRate;
+                    statusBadge = `<span class="badge bg-primary">ตัดขาย ${customTrimPercent}%</span>`;
+                }
+
+                if (trimShares > 0.0001) {
+                    trimCandidateCount++;
+                    let unitProfitUSD = Math.max(0, item.priceUSD - item.avgCostUSD);
+                    lockedProfitUSD = trimShares * unitProfitUSD;
+                    lockedProfitTHB = lockedProfitUSD * liveFxRate;
+
+                    totalTrimCashTHB += trimTHB;
+                    totalTrimCashUSD += trimUSD;
+                    totalLockedProfitTHB += lockedProfitTHB;
+                    totalLockedProfitUSD += lockedProfitUSD;
+                }
+
+                let profitClass = item.profitUSD >= 0 ? 'text-profit' : 'text-loss';
+                let profitSign = item.profitUSD >= 0 ? '+' : '';
+
+                html += `
+                    <tr class="${trimShares > 0.0001 ? 'table-warning bg-opacity-10' : ''}">
+                        <td class="text-start py-2">
+                            <strong class="fs-6">${item.ticker}</strong> 
+                            <small class="text-muted d-block" style="font-size: 0.75rem;">📁 ${item.group}</small>
+                            ${statusBadge}
+                        </td>
+                        <td class="py-2">
+                            <strong>${item.shares.toFixed(4)}</strong><br>
+                            <small class="text-muted">ทุน $${item.avgCostUSD.toFixed(2)}</small>
+                        </td>
+                        <td class="py-2">
+                            <strong class="text-primary">$${item.priceUSD.toFixed(2)}</strong><br>
+                            <small class="text-muted">≈ ฿${(item.priceUSD * liveFxRate).toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</small>
+                        </td>
+                        <td class="py-2 ${profitClass} fw-bold">
+                            ${profitSign}${item.profitPct.toFixed(2)}%<br>
+                            <small>(${profitSign}$${item.profitUSD.toFixed(2)})</small>
+                        </td>
+                        <td class="py-2">
+                            <strong>${actualWeightPct.toFixed(1)}%</strong><br>
+                            <small class="text-muted">กลุ่ม: ${grpActualWeight.toFixed(1)}% / เป้า ${targetGrpPct}%</small>
+                        </td>
+                        <td class="py-2">
+                            ${trimShares > 0.0001 ? `<strong class="text-danger fs-6">${trimShares.toFixed(4)} หุ้น</strong>` : '<span class="text-muted">-</span>'}
+                        </td>
+                        <td class="py-2">
+                            ${trimShares > 0.0001 ? `<strong class="text-danger">฿${trimTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong><br><small class="text-muted">≈ $${trimUSD.toFixed(2)}</small>` : '<span class="text-muted">-</span>'}
+                        </td>
+                        <td class="py-2">
+                            ${lockedProfitUSD > 0.01 ? `<strong class="text-success">+฿${lockedProfitTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong><br><small class="text-muted">(+$${lockedProfitUSD.toFixed(2)})</small>` : '<span class="text-muted">-</span>'}
+                        </td>
+                        <td class="py-2">
+                            ${trimShares > 0.0001 ? `
+                                <div class="d-flex flex-column gap-1">
+                                    <button class="btn btn-sm btn-danger py-0 px-2 fw-bold" style="font-size: 0.72rem; border-radius: 6px;" onclick="executeTrimToForm('${item.ticker}', ${trimShares.toFixed(4)}, ${item.priceUSD.toFixed(2)}, '${item.port}')" title="ส่งข้อมูลไปยังฟอร์มบันทึกการขาย">
+                                        ⚡ ส่งไปฟอร์มขาย
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-secondary py-0 px-2 fw-bold" style="font-size: 0.72rem; border-radius: 6px;" onclick="simulateTrimAction('${item.ticker}', ${trimTHB.toFixed(2)}, ${item.priceUSD.toFixed(2)})" title="เปิดหน้าจำลองการขาย">
+                                        🧮 จำลองผลลัพธ์
+                                    </button>
+                                </div>
+                            ` : '<span class="badge bg-light text-muted border">ไม่ต้องขาย</span>'}
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html;
+
+            document.getElementById('trimTotalCashTHB').innerText = `฿${totalTrimCashTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            document.getElementById('trimTotalCashUSD').innerText = `≈ $${totalTrimCashUSD.toFixed(2)}`;
+            document.getElementById('trimTotalProfitTHB').innerText = `+฿${totalLockedProfitTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            document.getElementById('trimTotalProfitUSD').innerText = `≈ +$${totalLockedProfitUSD.toFixed(2)}`;
+            document.getElementById('trimTotalStocksCount').innerText = `${trimCandidateCount} สินทรัพย์`;
+
+            const statusEl = document.getElementById('trimRiskStatus');
+            const noteEl = document.getElementById('trimRiskNote');
+            if (overweightCount > 0) {
+                statusEl.innerText = 'Overweight';
+                statusEl.className = 'fw-bold text-danger fs-5';
+                noteEl.innerText = `มี ${overweightCount} กลุ่มเกินเป้าหมาย`;
+            } else {
+                statusEl.innerText = 'สมดุล';
+                statusEl.className = 'fw-bold text-success fs-5';
+                noteEl.innerText = 'สัดส่วนอยู่ในเกณฑ์เป้าหมาย';
+            }
+        };
+
+        window.executeTrimToForm = function(ticker, shares, price, portfolioId) {
+            bootstrap.Modal.getInstance(document.getElementById('trimModal')).hide();
+
+            document.getElementById('txnType').value = 'SELL';
+            document.getElementById('txnType').dispatchEvent(new Event('change'));
+            document.getElementById('txnTicker').value = ticker;
+            document.getElementById('txnTicker').dispatchEvent(new Event('blur'));
+            document.getElementById('txnShares').value = shares;
+            document.getElementById('txnPrice').value = price;
+
+            const portSel = document.getElementById('txnPortfolio');
+            if (portSel && portfolioId) portSel.value = portfolioId;
+
+            if (window.autoCalculateDimeFees) window.autoCalculateDimeFees();
+
+            const formCard = document.getElementById('txnForm');
+            if (formCard) {
+                formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        };
+
+        window.simulateTrimAction = function(ticker, amountTHB, priceUSD) {
+            bootstrap.Modal.getInstance(document.getElementById('trimModal')).hide();
+
+            let select = document.getElementById('simTicker');
+            select.innerHTML = '<option value="">-- เลือกหุ้นเพื่อจำลอง --</option>';
+            let sortedTickers = Object.keys(globalHoldings).sort();
+            sortedTickers.forEach(t => {
+                select.innerHTML += `<option value="${t}" ${t === ticker ? 'selected' : ''}>${t}</option>`;
+            });
+
+            document.getElementById('simFx').value = liveFxRate.toFixed(4);
+            document.getElementById('simPrice').value = priceUSD;
+            document.getElementById('simAmount').value = Math.round(amountTHB);
+
+            setSimAction('SELL');
+            calcSim();
+
+            const simModal = new bootstrap.Modal(document.getElementById('simulatorModal'));
+            simModal.show();
         };
 
         // --- DIVIDEND CALENDAR & 15% TAX (W-8BEN) ---
@@ -2814,6 +3293,7 @@
                                 <strong>${ticker}</strong><br>
                                 <span class="badge group-badge mt-1" onclick="changeGroup('${ticker}')">📁 ${groupName}</span>
                                 <span class="badge rounded-pill bg-light text-primary border mt-1" style="cursor: pointer; font-size: 0.72rem;" onclick="quickMoveStock('${ticker}')" title="คลิกเพื่อย้ายหุ้นนี้ไปพอร์ตอื่น">💼 ย้ายพอร์ต ⇄</span>
+                                <span class="badge rounded-pill bg-light text-danger border mt-1 ms-1" style="cursor: pointer; font-size: 0.72rem;" onclick="openTrimForTicker('${ticker}')" title="คำนวณการขายลดสัดส่วน/ล็อกกำไรสำหรับ ${ticker}">✂️ Trim</span>
                             </td>
                             <td class="border-0 py-3">${shares.toFixed(7)}</td>
                             <td class="border-0 py-3">
