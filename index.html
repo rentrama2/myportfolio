@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V55)</title>
+    <title>My Portfolio Pro Dashboard (V56)</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -277,6 +277,64 @@
         .target-badge:hover {
             transform: translateY(-1px);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* --- Holdings Table Toolbar & Pagination --- */
+        .holdings-tab-btn {
+            font-size: 0.78rem;
+            font-weight: 600;
+            border-radius: 20px;
+            padding: 3px 10px;
+            border: 1px solid #cbd5e1;
+            background: #ffffff;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+            display: inline-flex;
+            align-items: center;
+            line-height: 1.2;
+        }
+        .holdings-tab-btn:hover {
+            background: #f1f5f9;
+            color: #0f172a;
+            border-color: #94a3b8;
+        }
+        .holdings-tab-btn.active {
+            background: #0f172a !important;
+            color: #ffffff !important;
+            border-color: #0f172a !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .holdings-tab-badge {
+            font-size: 0.7rem;
+            border-radius: 10px;
+            padding: 1px 6px;
+            margin-left: 5px;
+            background: #f1f5f9;
+            color: #475569;
+            font-weight: 700;
+        }
+        .holdings-tab-btn.active .holdings-tab-badge {
+            background: rgba(255, 255, 255, 0.25) !important;
+            color: #ffffff !important;
+        }
+        .holdings-group-row {
+            background-color: #f8fafc !important;
+            border-top: 2px solid #e2e8f0;
+            border-bottom: 2px solid #e2e8f0;
+            cursor: pointer;
+            transition: background-color 0.15s;
+        }
+        .holdings-group-row:hover {
+            background-color: #f1f5f9 !important;
+        }
+        body.privacy-mode .holdings-privacy-blur {
+            filter: blur(6px) !important;
+            user-select: none;
+            transition: filter 0.15s;
+        }
+        body.privacy-mode tr:hover .holdings-privacy-blur {
+            filter: blur(0px) !important;
         }
     </style>
 </head>
@@ -1137,6 +1195,39 @@
                     </div>
                     <div class="card-body p-0">
                         <div id="stockTargetAlertContainer" class="px-3 pt-2"></div>
+
+                        <!-- Toolbar: Tabs by Group/Portfolio & View Mode / Pagination Settings -->
+                        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom flex-wrap gap-2" style="background-color: #f8fafc;">
+                            <!-- Filter Tabs -->
+                            <div class="d-flex align-items-center gap-1 flex-wrap" id="holdingsFilterTabs"></div>
+
+                            <!-- View Mode & Page Size -->
+                            <div class="d-flex align-items-center gap-3 flex-wrap ms-auto">
+                                <!-- View Mode: Grouped vs Flat -->
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="text-muted fw-bold" style="font-size: 0.78rem;">มุมมอง:</span>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2 fw-bold" id="btnHoldingsViewGrouped" onclick="setHoldingsViewMode('GROUPED')" title="จัดกลุ่มตามหมวดหมู่และพับเก็บได้">
+                                            📁 จัดกลุ่ม
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2 fw-bold" id="btnHoldingsViewFlat" onclick="setHoldingsViewMode('FLAT')" title="แสดงรายการเดี่ยวเรียงกัน">
+                                            📋 ตารางรวม
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Page Size -->
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="text-muted fw-bold" style="font-size: 0.78rem;">หน้าละ:</span>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2 fw-bold" id="btnHoldingsPageSize_5" onclick="setHoldingsPageSize(5)">5</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2 fw-bold" id="btnHoldingsPageSize_10" onclick="setHoldingsPageSize(10)">10</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2 fw-bold" id="btnHoldingsPageSize_ALL" onclick="setHoldingsPageSize('ALL')">ทั้งหมด</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="table-responsive">
                             <table class="table table-hover text-center align-middle m-0" style="font-size: 0.95rem;">
                                 <thead style="background-color: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
@@ -1152,6 +1243,14 @@
                                 </thead>
                                 <tbody id="summaryTableBody"></tbody>
                             </table>
+                        </div>
+
+                        <!-- Pagination Footer for Holdings -->
+                        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-top flex-wrap gap-2" id="holdingsPaginationContainer" style="background-color: #ffffff;">
+                            <span class="text-muted fw-bold" style="font-size: 0.8rem;" id="holdingsPaginationInfo"></span>
+                            <nav aria-label="Holdings Pagination">
+                                <ul class="pagination pagination-sm m-0" id="holdingsPaginationList"></ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
@@ -1413,6 +1512,8 @@
         window.selectPortfolio = function(portId) {
             activePortfolioId = portId;
             localStorage.setItem('myActivePortfolioId', portId);
+            if (typeof holdingsCurrentPage !== 'undefined') holdingsCurrentPage = 1;
+            if (typeof holdingsFilterGroup !== 'undefined') holdingsFilterGroup = 'ALL';
             renderPortfolioCards();
             updateSummaryAndChart();
             renderTable();
@@ -4491,8 +4592,8 @@
                 }
             });
 
-            // V52: ใช้ String Buffer อัด HTML รวดเดียว ป้องกัน Layout เด้ง
-            let summaryHTML = ''; 
+            // สะสมข้อมูลหุ้นทั้งหมดลงใน holdingItems เพื่อส่งให้ renderHoldingsTable (รองรับ Tabs, จัดกลุ่ม, แบ่งหน้า)
+            let holdingItems = []; 
             let hasData = false;
             let targetAlerts = [];
             
@@ -4523,11 +4624,9 @@
                     let fxGainTHB = 0;
 
                     if (isDimeMode) {
-                        // โหมดแอป Dime: คำนวณ Auto ตรงกับแอป Dime 100% จากราคาและเรทปัจจุบันโดยไม่ต้องกรอกเอง
                         costTHB = Number((costUSD * liveFxRate).toFixed(2));
                         plTHB = Number((plUSD * liveFxRate).toFixed(2));
                     } else {
-                        // โหมดต้นทุนจริงตามประวัติแลกเงิน
                         costTHB = rawCostTHB + (tunedDiffsV2[ticker] || 0);
                         plTHB = mktValueTHB - costTHB;
                         fxGainTHB = plTHB - capGainTHB;
@@ -4554,6 +4653,10 @@
                     // Stock Target (TP / SL) logic
                     let target = stockTargets[ticker];
                     let targetBadge = '';
+                    let portId = holdings[ticker].port || 'core';
+                    let portObj = portfolios.find(p => p.id === portId);
+                    let portName = portObj ? portObj.name : 'พอร์ตหลัก';
+
                     if (target && (target.tp || target.sl)) {
                         let isHitTP = target.tp && currentPriceUSD >= target.tp;
                         let isHitSL = target.sl && currentPriceUSD <= target.sl;
@@ -4563,10 +4666,10 @@
                         
                         if (isHitTP) {
                             targetBadge = `<span class="badge bg-success text-white target-badge mt-1" onclick="openStockTargetModal('${ticker}')" title="ราคาแตะเป้าขายทำกำไรแล้ว! คลิกเพื่อดู/แก้ไข">🎉 ถึงเป้า TP ($${target.tp})</span>`;
-                            targetAlerts.push({ type: 'TP', ticker, curPrice: currentPriceUSD, targetPrice: target.tp, shares, port: holdings[ticker].port || 'core' });
+                            targetAlerts.push({ type: 'TP', ticker, curPrice: currentPriceUSD, targetPrice: target.tp, shares, port: portId });
                         } else if (isHitSL) {
                             targetBadge = `<span class="badge bg-danger text-white target-badge mt-1" onclick="openStockTargetModal('${ticker}')" title="ราคาหลุดจุดตัดขาดทุน! คลิกเพื่อดู/แก้ไข">⚠️ ถึงจุด Cut ($${target.sl})</span>`;
-                            targetAlerts.push({ type: 'SL', ticker, curPrice: currentPriceUSD, targetPrice: target.sl, shares, port: holdings[ticker].port || 'core' });
+                            targetAlerts.push({ type: 'SL', ticker, curPrice: currentPriceUSD, targetPrice: target.sl, shares, port: portId });
                         } else {
                             targetBadge = `<span class="badge bg-light text-dark border target-badge mt-1" onclick="openStockTargetModal('${ticker}')" title="คลิกเพื่อปรับเป้าหมายราคา">🎯 ${tpText}${sep}${slText}</span>`;
                         }
@@ -4574,59 +4677,35 @@
                         targetBadge = `<span class="badge bg-light text-muted border border-dashed target-badge mt-1" onclick="openStockTargetModal('${ticker}')" title="คลิกเพื่อตั้งเป้าหมาย TP / Stop Loss">+ 🎯 ตั้งเป้า TP/SL</span>`;
                     }
 
-                    // V52: เพิ่ม ID ให้ Input และใช้ onblur ป้องกันพิมพ์ไปเด้งไป
-                    summaryHTML += `
-                        <tr>
-                            <td class="border-end-0 py-3">
-                                <strong>${ticker}</strong><br>
-                                <span class="badge group-badge mt-1" onclick="changeGroup('${ticker}')">📁 ${groupName}</span>
-                                <span class="badge rounded-pill bg-light text-primary border mt-1" style="cursor: pointer; font-size: 0.72rem;" onclick="quickMoveStock('${ticker}')" title="คลิกเพื่อย้ายหุ้นนี้ไปพอร์ตอื่น">💼 ย้ายพอร์ต ⇄</span>
-                                <span class="badge rounded-pill bg-light text-danger border mt-1 ms-1" style="cursor: pointer; font-size: 0.72rem;" onclick="openTrimForTicker('${ticker}')" title="คำนวณการขายลดสัดส่วน/ล็อกกำไรสำหรับ ${ticker}">✂️ Trim</span>
-                                <br>${targetBadge}
-                            </td>
-                            <td class="border-0 py-3">${shares.toFixed(7)}</td>
-                            <td class="border-0 py-3">
-                                <strong style="color: #111827;">$${avgCostUSD.toFixed(4)}</strong><br>
-                                <small class="text-muted">(รวม $${costUSD.toFixed(2)})</small>
-                            </td>
-                            <td class="border-0 py-3">
-                                <strong style="color: #111827;">฿${costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong><br>
-                                ${isDimeMode 
-                                    ? `<small class="text-muted" style="font-size: 0.72rem;" title="ต้นทุนจริงที่แลกซื้อในอดีต">ต้นทุนแลกจริง ฿${rawCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</small>` 
-                                    : syncBtns
-                                }
-                            </td>
-                            <td class="bg-warning bg-opacity-10 align-middle border-0 py-3">
-                                <div class="d-flex justify-content-center">
-                                    <input type="number" id="priceInput_${ticker}" class="form-control price-input" 
-                                           value="${currentPriceUSD.toFixed(2)}" step="any"
-                                           onblur="updateMarketPrice('${ticker}', this.value)"
-                                           onclick="this.select()">
-                                </div>
-                            </td>
-                            <td class="border-0 py-3">
-                                $${mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}<br>
-                                <strong style="color: #111827;">≈ ฿${mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>
-                            </td>
-                            <td class="${plClass} border-start-0 py-3" style="font-size: 0.95rem;">
-                                ${sign}${plPercent.toFixed(2)}%<br>
-                                <small style="font-size: 0.75rem;">(${sign}$${plUSD.toFixed(2)})</small><br>
-                                <strong style="color: inherit;">≈ ${sign}฿${plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>
-                                ${!isDimeMode ? `
-                                <div class="mt-1" style="font-size: 0.7rem; font-weight: normal; line-height: 1.2;" title="แจกแจงผลตอบแทน: กำไรราคาหุ้น (Capital Gain) และกำไร/ขาดทุนจากอัตราแลกเปลี่ยน (FX)">
-                                    <span class="badge bg-light text-muted border" style="font-weight: 500;">
-                                        หุ้น: ${capGainTHB >= 0 ? '+' : ''}฿${Math.round(capGainTHB).toLocaleString('th-TH')} | FX: ${fxGainTHB >= 0 ? '+' : ''}฿${Math.round(fxGainTHB).toLocaleString('th-TH')}
-                                    </span>
-                                </div>` : ''}
-                            </td>
-                        </tr>
-                    `;
+                    holdingItems.push({
+                        ticker,
+                        shares,
+                        costUSD,
+                        rawCostTHB,
+                        costTHB,
+                        groupName,
+                        portId,
+                        portName,
+                        avgCostUSD,
+                        currentPriceUSD,
+                        mktValueUSD,
+                        mktValueTHB,
+                        plUSD,
+                        plPercent,
+                        plTHB,
+                        capGainTHB,
+                        fxGainTHB,
+                        plClass,
+                        sign,
+                        isDimeMode,
+                        syncBtns,
+                        targetBadge
+                    });
                 }
             }
 
-            if(!hasData) summaryHTML = `<tr><td colspan="7" class="text-muted py-5 border-0">ยังไม่มีหุ้นในพอร์ตโฟลิโอ เริ่มบันทึกรายการได้เลย!</td></tr>`;
-            
-            document.getElementById('summaryTableBody').innerHTML = summaryHTML;
+            window.cachedHoldingItems = holdingItems;
+            renderHoldingsTable();
 
             // Render TP / SL Alerts Banner
             let alertContainer = document.getElementById('stockTargetAlertContainer');
@@ -4831,6 +4910,320 @@
             renderDividends();
             renderPortfolioCards();
         }
+
+        // --- HOLDINGS TABLE HYBRID SYSTEM (Tabs, Grouped / Collapsible, Pagination) ---
+        let holdingsFilterGroup = 'ALL';
+        let holdingsViewMode = localStorage.getItem('myHoldingsViewMode') || 'GROUPED';
+        let holdingsPageSize = localStorage.getItem('myHoldingsPageSize') || '10';
+        let holdingsCurrentPage = 1;
+        let holdingsCollapsedGroups = JSON.parse(localStorage.getItem('myHoldingsCollapsedGroups') || '{}');
+
+        window.setHoldingsFilterTab = function(tab) {
+            holdingsFilterGroup = tab;
+            holdingsCurrentPage = 1;
+            renderHoldingsTable();
+        };
+
+        window.setHoldingsViewMode = function(mode) {
+            holdingsViewMode = mode;
+            localStorage.setItem('myHoldingsViewMode', mode);
+            renderHoldingsTable();
+        };
+
+        window.setHoldingsPageSize = function(size) {
+            holdingsPageSize = (size === 'ALL') ? 'ALL' : String(size);
+            localStorage.setItem('myHoldingsPageSize', holdingsPageSize);
+            holdingsCurrentPage = 1;
+            renderHoldingsTable();
+        };
+
+        window.changeHoldingsPage = function(page) {
+            holdingsCurrentPage = page;
+            renderHoldingsTable();
+        };
+
+        window.toggleHoldingsGroupCollapse = function(grp) {
+            holdingsCollapsedGroups[grp] = !holdingsCollapsedGroups[grp];
+            localStorage.setItem('myHoldingsCollapsedGroups', JSON.stringify(holdingsCollapsedGroups));
+            renderHoldingsTable();
+        };
+
+        window.renderHoldingsTable = function() {
+            const allItems = window.cachedHoldingItems || [];
+            const tbody = document.getElementById('summaryTableBody');
+            if (!tbody) return;
+
+            // 1. Count items per group and portfolio for tabs
+            let groupCounts = {};
+            let portCounts = {};
+            allItems.forEach(item => {
+                groupCounts[item.groupName] = (groupCounts[item.groupName] || 0) + 1;
+                portCounts[item.portId] = (portCounts[item.portId] || 0) + 1;
+            });
+
+            // 2. Render Filter Tabs
+            const tabsContainer = document.getElementById('holdingsFilterTabs');
+            if (tabsContainer) {
+                let tabsHtml = `
+                    <button type="button" class="holdings-tab-btn ${holdingsFilterGroup === 'ALL' ? 'active' : ''}" onclick="setHoldingsFilterTab('ALL')">
+                        🌐 ทั้งหมด <span class="holdings-tab-badge">${allItems.length}</span>
+                    </button>
+                `;
+
+                const groupIcons = { 'ETF': '🔷', 'Stock': '🔶', 'REIT': '🏢', 'Crypto': '🪙' };
+
+                Object.keys(groupCounts).sort().forEach(grp => {
+                    let icon = groupIcons[grp] || '📁';
+                    let isActive = (holdingsFilterGroup === grp);
+                    tabsHtml += `
+                        <button type="button" class="holdings-tab-btn ${isActive ? 'active' : ''}" onclick="setHoldingsFilterTab('${grp}')">
+                            ${icon} ${grp} <span class="holdings-tab-badge">${groupCounts[grp]}</span>
+                        </button>
+                    `;
+                });
+
+                if (activePortfolioId === 'ALL' && portfolios.length > 1) {
+                    tabsHtml += `<span class="text-muted mx-1" style="font-size: 0.8rem;">|</span>`;
+                    portfolios.forEach(p => {
+                        let count = portCounts[p.id] || 0;
+                        if (count > 0) {
+                            let tabKey = 'PORT:' + p.id;
+                            let isActive = (holdingsFilterGroup === tabKey);
+                            tabsHtml += `
+                                <button type="button" class="holdings-tab-btn ${isActive ? 'active' : ''}" onclick="setHoldingsFilterTab('${tabKey}')" title="กรองดูเฉพาะ ${p.name}">
+                                    💼 ${p.name} <span class="holdings-tab-badge">${count}</span>
+                                </button>
+                            `;
+                        }
+                    });
+                }
+
+                tabsContainer.innerHTML = tabsHtml;
+            }
+
+            // 3. Update View Mode Buttons UI
+            const btnGrouped = document.getElementById('btnHoldingsViewGrouped');
+            const btnFlat = document.getElementById('btnHoldingsViewFlat');
+            if (btnGrouped && btnFlat) {
+                if (holdingsViewMode === 'GROUPED') {
+                    btnGrouped.className = 'btn btn-sm btn-dark py-0 px-2 fw-bold';
+                    btnFlat.className = 'btn btn-sm btn-outline-secondary py-0 px-2 fw-bold';
+                } else {
+                    btnGrouped.className = 'btn btn-sm btn-outline-secondary py-0 px-2 fw-bold';
+                    btnFlat.className = 'btn btn-sm btn-dark py-0 px-2 fw-bold';
+                }
+            }
+
+            // 4. Update Page Size Buttons UI
+            ['5', '10', 'ALL'].forEach(sz => {
+                const btn = document.getElementById(`btnHoldingsPageSize_${sz}`);
+                if (btn) {
+                    if (holdingsPageSize === sz) {
+                        btn.className = 'btn btn-sm btn-dark py-0 px-2 fw-bold';
+                    } else {
+                        btn.className = 'btn btn-sm btn-outline-secondary py-0 px-2 fw-bold';
+                    }
+                }
+            });
+
+            // 5. Filter Items
+            let filteredItems = allItems.filter(item => {
+                if (holdingsFilterGroup === 'ALL') return true;
+                if (holdingsFilterGroup.startsWith('PORT:')) {
+                    let targetPortId = holdingsFilterGroup.replace('PORT:', '');
+                    return item.portId === targetPortId;
+                }
+                return item.groupName === holdingsFilterGroup;
+            });
+
+            const totalFiltered = filteredItems.length;
+
+            if (totalFiltered === 0) {
+                tbody.innerHTML = `<tr><td colspan="7" class="text-muted py-5 border-0">ไม่มีหุ้นในหมวดหมู่นี้ เริ่มบันทึกรายการได้เลย!</td></tr>`;
+                const infoEl = document.getElementById('holdingsPaginationInfo');
+                const listEl = document.getElementById('holdingsPaginationList');
+                if (infoEl) infoEl.innerText = 'ไม่มีรายการหุ้น';
+                if (listEl) listEl.innerHTML = '';
+                return;
+            }
+
+            // 6. Pagination Calculations
+            let pageSize = (holdingsPageSize === 'ALL') ? totalFiltered : (parseInt(holdingsPageSize) || 10);
+            let totalPages = Math.max(1, Math.ceil(totalFiltered / pageSize));
+            if (holdingsCurrentPage > totalPages) holdingsCurrentPage = totalPages;
+            if (holdingsCurrentPage < 1) holdingsCurrentPage = 1;
+
+            let startIndex = (holdingsCurrentPage - 1) * pageSize;
+            let endIndex = Math.min(startIndex + pageSize, totalFiltered);
+            let pageItems = filteredItems.slice(startIndex, endIndex);
+
+            // 7. Render Rows
+            let html = '';
+
+            const renderRow = (item) => `
+                <tr>
+                    <td class="border-end-0 py-3">
+                        <strong>${item.ticker}</strong><br>
+                        <span class="badge group-badge mt-1" onclick="changeGroup('${item.ticker}')">📁 ${item.groupName}</span>
+                        ${activePortfolioId === 'ALL' ? `<span class="badge bg-light text-secondary border mt-1 ms-1" style="font-size: 0.7rem;">💼 ${item.portName}</span>` : ''}
+                        <span class="badge rounded-pill bg-light text-primary border mt-1 ms-1" style="cursor: pointer; font-size: 0.72rem;" onclick="quickMoveStock('${item.ticker}')" title="คลิกเพื่อย้ายหุ้นนี้ไปพอร์ตอื่น">ย้ายพอร์ต ⇄</span>
+                        <span class="badge rounded-pill bg-light text-danger border mt-1 ms-1" style="cursor: pointer; font-size: 0.72rem;" onclick="openTrimForTicker('${item.ticker}')" title="คำนวณการขายลดสัดส่วน/ล็อกกำไรสำหรับ ${item.ticker}">✂️ Trim</span>
+                        <br>${item.targetBadge}
+                    </td>
+                    <td class="border-0 py-3">${item.shares.toFixed(7)}</td>
+                    <td class="border-0 py-3">
+                        <strong style="color: #111827;">$${item.avgCostUSD.toFixed(4)}</strong><br>
+                        <small class="text-muted">(รวม $${item.costUSD.toFixed(2)})</small>
+                    </td>
+                    <td class="border-0 py-3">
+                        <strong style="color: #111827;">฿${item.costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong><br>
+                        ${item.isDimeMode 
+                            ? `<small class="text-muted" style="font-size: 0.72rem;" title="ต้นทุนจริงที่แลกซื้อในอดีต">ต้นทุนแลกจริง ฿${item.rawCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</small>` 
+                            : item.syncBtns
+                        }
+                    </td>
+                    <td class="bg-warning bg-opacity-10 align-middle border-0 py-3">
+                        <div class="d-flex justify-content-center">
+                            <input type="number" id="priceInput_${item.ticker}" class="form-control price-input" 
+                                   value="${item.currentPriceUSD.toFixed(2)}" step="any"
+                                   onblur="updateMarketPrice('${item.ticker}', this.value)"
+                                   onclick="this.select()">
+                        </div>
+                    </td>
+                    <td class="border-0 py-3">
+                        $${item.mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}<br>
+                        <strong style="color: #111827;">≈ ฿${item.mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>
+                    </td>
+                    <td class="${item.plClass} border-start-0 py-3" style="font-size: 0.95rem;">
+                        ${item.sign}${item.plPercent.toFixed(2)}%<br>
+                        <small style="font-size: 0.75rem;">(${item.sign}$${item.plUSD.toFixed(2)})</small><br>
+                        <strong style="color: inherit;">≈ ${item.sign}฿${item.plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>
+                        ${!item.isDimeMode ? `
+                        <div class="mt-1" style="font-size: 0.7rem; font-weight: normal; line-height: 1.2;" title="แจกแจงผลตอบแทน: กำไรราคาหุ้น (Capital Gain) และกำไร/ขาดทุนจากอัตราแลกเปลี่ยน (FX)">
+                            <span class="badge bg-light text-muted border" style="font-weight: 500;">
+                                หุ้น: ${item.capGainTHB >= 0 ? '+' : ''}฿${Math.round(item.capGainTHB).toLocaleString('th-TH')} | FX: ${item.fxGainTHB >= 0 ? '+' : ''}฿${Math.round(item.fxGainTHB).toLocaleString('th-TH')}
+                            </span>
+                        </div>` : ''}
+                    </td>
+                </tr>
+            `;
+
+            if (holdingsViewMode === 'GROUPED') {
+                let groupsOnPage = {};
+                pageItems.forEach(item => {
+                    if (!groupsOnPage[item.groupName]) groupsOnPage[item.groupName] = [];
+                    groupsOnPage[item.groupName].push(item);
+                });
+
+                const groupBadgeColors = {
+                    'ETF': 'bg-primary',
+                    'Stock': 'bg-warning text-dark',
+                    'REIT': 'bg-info text-dark',
+                    'Crypto': 'bg-danger'
+                };
+
+                for (let grp in groupsOnPage) {
+                    let grpItems = groupsOnPage[grp];
+                    let fullGrpItems = filteredItems.filter(it => it.groupName === grp);
+                    let grpMktTHB = fullGrpItems.reduce((acc, it) => acc + it.mktValueTHB, 0);
+                    let grpCostTHB = fullGrpItems.reduce((acc, it) => acc + it.costTHB, 0);
+                    let grpPlTHB = grpMktTHB - grpCostTHB;
+                    let grpPlPct = grpCostTHB > 0 ? (grpPlTHB / grpCostTHB) * 100 : 0;
+                    let grpSign = grpPlTHB >= 0 ? '+' : '';
+                    let grpPlClass = grpPlTHB >= 0 ? 'text-profit' : 'text-loss';
+                    let isCollapsed = !!holdingsCollapsedGroups[grp];
+                    let badgeClass = groupBadgeColors[grp] || 'bg-secondary';
+
+                    html += `
+                        <tr class="holdings-group-row" onclick="toggleHoldingsGroupCollapse('${grp}')" title="คลิกเพื่อพับเก็บ/กางออก">
+                            <td colspan="7" class="py-2 px-3 text-start">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                                        <span class="badge ${badgeClass} px-2 py-1 fs-6">${grp}</span>
+                                        <span class="fw-bold text-dark" style="font-size: 0.88rem;">${fullGrpItems.length} หุ้น</span>
+                                        <span class="text-muted" style="font-size: 0.8rem;">• มูลค่า: <strong class="text-dark holdings-privacy-blur">฿${grpMktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong></span>
+                                        <span class="${grpPlClass} fw-bold holdings-privacy-blur" style="font-size: 0.82rem;">• ผลตอบแทน: ${grpSign}฿${grpPlTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})} (${grpSign}${grpPlPct.toFixed(2)}%)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1 text-muted" style="font-size: 0.78rem;">
+                                        <span class="badge bg-white text-secondary border px-2 py-1 shadow-sm">${isCollapsed ? '▶ คลิกเพื่อกางออก' : '▼ พับเก็บ'}</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+
+                    if (!isCollapsed) {
+                        grpItems.forEach(item => {
+                            html += renderRow(item);
+                        });
+                    }
+                }
+            } else {
+                pageItems.forEach(item => {
+                    html += renderRow(item);
+                });
+            }
+
+            tbody.innerHTML = html;
+
+            // 8. Render Pagination Footer
+            const infoEl = document.getElementById('holdingsPaginationInfo');
+            const listEl = document.getElementById('holdingsPaginationList');
+            const containerEl = document.getElementById('holdingsPaginationContainer');
+
+            if (infoEl) {
+                if (holdingsPageSize === 'ALL' || totalFiltered <= pageSize) {
+                    infoEl.innerHTML = `แสดงทั้งหมด <strong>${totalFiltered}</strong> หุ้น`;
+                } else {
+                    infoEl.innerHTML = `กำลังแสดง <strong>${startIndex + 1} - ${endIndex}</strong> จากทั้งหมด <strong>${totalFiltered}</strong> หุ้น <span class="text-muted ms-1">(หน้า ${holdingsCurrentPage}/${totalPages})</span>`;
+                }
+            }
+
+            if (listEl) {
+                if (holdingsPageSize === 'ALL' || totalPages <= 1) {
+                    listEl.innerHTML = '';
+                    if (containerEl) containerEl.classList.add('justify-content-center');
+                } else {
+                    if (containerEl) containerEl.classList.remove('justify-content-center');
+                    let pagesHtml = '';
+
+                    pagesHtml += `
+                        <li class="page-item ${holdingsCurrentPage === 1 ? 'disabled' : ''}">
+                            <button class="page-link" onclick="changeHoldingsPage(${holdingsCurrentPage - 1})">ก่อนหน้า</button>
+                        </li>
+                    `;
+
+                    let startP = Math.max(1, holdingsCurrentPage - 2);
+                    let endP = Math.min(totalPages, holdingsCurrentPage + 2);
+
+                    if (startP > 1) {
+                        pagesHtml += `<li class="page-item"><button class="page-link" onclick="changeHoldingsPage(1)">1</button></li>`;
+                        if (startP > 2) pagesHtml += `<li class="page-item disabled"><span class="page-link border-0">...</span></li>`;
+                    }
+
+                    for (let p = startP; p <= endP; p++) {
+                        pagesHtml += `
+                            <li class="page-item ${p === holdingsCurrentPage ? 'active' : ''}">
+                                <button class="page-link" onclick="changeHoldingsPage(${p})">${p}</button>
+                            </li>
+                        `;
+                    }
+
+                    if (endP < totalPages) {
+                        if (endP < totalPages - 1) pagesHtml += `<li class="page-item disabled"><span class="page-link border-0">...</span></li>`;
+                        pagesHtml += `<li class="page-item"><button class="page-link" onclick="changeHoldingsPage(${totalPages})">${totalPages}</button></li>`;
+                    }
+
+                    pagesHtml += `
+                        <li class="page-item ${holdingsCurrentPage === totalPages ? 'disabled' : ''}">
+                            <button class="page-link" onclick="changeHoldingsPage(${holdingsCurrentPage + 1})">ถัดไป</button>
+                        </li>
+                    `;
+
+                    listEl.innerHTML = pagesHtml;
+                }
+            }
+        };
 
         window.setDateFilter = function() {
             filterStartDate = document.getElementById('filterStart').value;
