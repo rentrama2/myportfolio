@@ -32,6 +32,29 @@ def fetch_yahoo_price(ticker):
         print(f"Error fetching {ticker}: {e}")
         return None
 
+def fetch_yahoo_index(ticker):
+    try:
+        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d"
+        data = fetch_json(url)
+        meta = data["chart"]["result"][0]["meta"]
+        price = meta.get("regularMarketPrice") or meta.get("chartPreviousClose") or meta.get("previousClose")
+        prev = meta.get("chartPreviousClose") or meta.get("previousClose") or price
+        if price is not None:
+            price = round(float(price), 2)
+            prev = round(float(prev), 2) if prev is not None else price
+            diff = round(price - prev, 2)
+            pct = round((diff / prev) * 100, 2) if prev > 0 else 0.0
+            return {
+                "price": price,
+                "prevClose": prev,
+                "change": diff,
+                "changePct": pct
+            }
+        return None
+    except Exception as e:
+        print(f"Error fetching index {ticker}: {e}")
+        return None
+
 def fetch_usd_thb():
     # 1. Try Yahoo Finance THB=X
     rate = fetch_yahoo_price("THB=X")
@@ -90,6 +113,22 @@ def main():
     usd_thb = fetch_usd_thb() or existing_data.get("fx", {}).get("USDTHB", 33.40)
     print(f"  USD/THB: {usd_thb}")
 
+    print("Fetching US Market Indices (^DJI, ^GSPC, ^IXIC)...")
+    indices_config = {
+        "^DJI": "Dow Jones",
+        "^GSPC": "S&P 500",
+        "^IXIC": "Nasdaq"
+    }
+    indices = existing_data.get("indices", {})
+    for sym, name in indices_config.items():
+        idx_data = fetch_yahoo_index(sym)
+        if idx_data:
+            idx_data["name"] = name
+            indices[sym] = idx_data
+            print(f"  [OK Index] {name} ({sym}): {idx_data['price']} ({idx_data['changePct']:+0.2f}%)")
+        else:
+            print(f"  [FAIL Index] {name} ({sym}) (kept previous: {indices.get(sym)})")
+
     now_utc = datetime.datetime.now(datetime.timezone.utc)
     # Thai time UTC+7
     thai_tz = datetime.timezone(datetime.timedelta(hours=7))
@@ -104,6 +143,7 @@ def main():
         "fx": {
             "USDTHB": usd_thb
         },
+        "indices": indices,
         "prices": prices
     }
 

@@ -4,6 +4,29 @@
   "fx": {
     "USDTHB": 33.59
   },
+  "indices": {
+    "^DJI": {
+      "name": "Dow Jones",
+      "price": 42313.0,
+      "prevClose": 42175.09,
+      "change": 137.91,
+      "changePct": 0.33
+    },
+    "^GSPC": {
+      "name": "S&P 500",
+      "price": 5738.17,
+      "prevClose": 5712.37,
+      "change": 25.8,
+      "changePct": 0.45
+    },
+    "^IXIC": {
+      "name": "Nasdaq",
+      "price": 18179.98,
+      "prevClose": 18062.78,
+      "change": 117.2,
+      "changePct": 0.65
+    }
+  },
   "prices": {
     "AAPL": 341.24,
     "AMD": 603.99,

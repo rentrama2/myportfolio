@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V56)</title>
+    <title>My Portfolio Pro Dashboard (V57)</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -335,6 +335,69 @@
         }
         body.privacy-mode tr:hover .holdings-privacy-blur {
             filter: blur(0px) !important;
+        }
+
+        /* --- US Market Indices Bar --- */
+        .market-indices-bar {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
+        }
+        .market-index-chip {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            transition: all 0.15s ease;
+            cursor: pointer;
+        }
+        .market-index-chip:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+            transform: translateY(-1px);
+        }
+        .index-badge-up {
+            background-color: #d1fae5 !important;
+            color: #065f46 !important;
+        }
+        .index-badge-down {
+            background-color: #fee2e2 !important;
+            color: #991b1b !important;
+        }
+        [data-bs-theme="dark"] .market-indices-bar {
+            background: #151e2e !important;
+            border-color: #273549 !important;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
+        }
+        [data-bs-theme="dark"] .market-index-chip {
+            background: #1e293b !important;
+            border-color: #334155 !important;
+            color: #f8fafc !important;
+        }
+        [data-bs-theme="dark"] .market-index-chip:hover {
+            background: #253347 !important;
+            border-color: #475569 !important;
+        }
+        [data-bs-theme="dark"] .index-badge-up {
+            background-color: rgba(16, 185, 129, 0.2) !important;
+            color: #34d399 !important;
+        }
+        [data-bs-theme="dark"] .index-badge-down {
+            background-color: rgba(239, 68, 68, 0.2) !important;
+            color: #f87171 !important;
+        }
+        [data-bs-theme="dark"] .port-pill-btn {
+            background: #1e293b !important;
+            border-color: #334155 !important;
+            color: #cbd5e1 !important;
+        }
+        [data-bs-theme="dark"] .port-pill-btn:hover {
+            border-color: #60a5fa !important;
+            color: #60a5fa !important;
+        }
+        [data-bs-theme="dark"] .port-pill-btn.active-pill {
+            background: #2563eb !important;
+            color: #ffffff !important;
+            border-color: #2563eb !important;
         }
     </style>
 </head>
@@ -963,33 +1026,33 @@
         <!-- Header & Quick Actions -->
         <div class="d-flex justify-content-between align-items-center mb-2 mt-1 flex-wrap gap-2">
             <div class="d-flex align-items-center gap-2">
-                <h2 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.5px; font-size: 1.55rem;">My Portfolio</h2>
-                <span id="activePortBadgeHeader" class="badge rounded-pill bg-primary px-3 py-1" style="font-size: 0.8rem;">พอร์ตทั้งหมด</span>
+                <h2 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.5px; font-size: 1.5rem;">My Portfolio</h2>
+                <span id="activePortBadgeHeader" class="badge rounded-pill bg-primary px-3 py-1 shadow-sm" style="font-size: 0.8rem;">พอร์ตทั้งหมด</span>
             </div>
             <div class="d-flex align-items-center gap-1 gap-md-2 flex-wrap justify-content-end">
                 <button id="btnPrivacyToggle" class="btn btn-sm btn-outline-secondary rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="togglePrivacyMode()" title="ซ่อน/แสดงตัวเลขเงิน เหมาะสำหรับแคปหน้าจอหรือเปิดในที่สาธารณะ (ชี้เมาส์เพื่อแอบดูได้)" style="font-size: 0.78rem;">
                     👁️ ซ่อนตัวเลข
                 </button>
-                <div class="dropdown d-inline-block">
-                    <button class="btn btn-sm btn-outline-primary rounded-pill px-2 px-md-3 py-1 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.78rem;">
-                        📑 Export CSV
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.85rem;">
-                        <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('holdings')">📊 ส่งออกพอร์ตหุ้นปัจจุบัน (Holdings)</a></li>
-                        <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('transactions')">📜 ส่งออกประวัติรายการทั้งหมด (Transactions)</a></li>
-                        <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('tax')">💰 ส่งออกรายงานปันผลและภาษี 15% (Tax Report)</a></li>
-                    </ul>
-                </div>
-                <input type="file" id="jsonBackupInput" accept=".json" style="display: none;" onchange="handleRestoreBackup(event)">
-                <button class="btn btn-sm btn-outline-success rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="exportFullBackup()" title="สำรองข้อมูลทุกพอร์ต ทุกรายการ และการตั้งค่า" style="font-size: 0.78rem;">
-                    💾 Backup JSON
-                </button>
-                <button class="btn btn-sm btn-outline-secondary rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="document.getElementById('jsonBackupInput').click()" title="กู้คืนข้อมูลจากไฟล์ Backup" style="font-size: 0.78rem;">
-                    📥 Restore
-                </button>
                 <button id="btnThemeToggle" class="btn btn-sm btn-outline-dark rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="toggleTheme()" style="font-size: 0.78rem;">
                     🌙 โหมดมืด
                 </button>
+                <!-- Consolidated Data Management (รวม Export CSV, Backup JSON, Restore) -->
+                <div class="dropdown d-inline-block">
+                    <button class="btn btn-sm btn-outline-primary rounded-pill px-2 px-md-3 py-1 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.78rem;">
+                        💾 จัดการข้อมูล
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.85rem; min-width: 230px;">
+                        <li><h6 class="dropdown-header text-uppercase fw-bold text-muted" style="font-size: 0.72rem;">📑 ส่งออกข้อมูล (CSV)</h6></li>
+                        <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('holdings')">📊 ส่งออกพอร์ตหุ้น (Holdings)</a></li>
+                        <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('transactions')">📜 ส่งออกประวัติรายการ (Transactions)</a></li>
+                        <li><a class="dropdown-item py-2" href="javascript:void(0)" onclick="exportCSV('tax')">💰 ส่งออกรายงานปันผลและภาษี 15%</a></li>
+                        <li><hr class="dropdown-divider my-1"></li>
+                        <li><h6 class="dropdown-header text-uppercase fw-bold text-muted" style="font-size: 0.72rem;">💾 สำรอง & กู้คืน</h6></li>
+                        <li><a class="dropdown-item py-2 text-success fw-bold" href="javascript:void(0)" onclick="exportFullBackup()">💾 สำรองข้อมูลทั้งหมด (Backup JSON)</a></li>
+                        <li><a class="dropdown-item py-2 text-primary fw-bold" href="javascript:void(0)" onclick="document.getElementById('jsonBackupInput').click()">📥 กู้คืนข้อมูล (Restore Backup)</a></li>
+                    </ul>
+                </div>
+                <input type="file" id="jsonBackupInput" accept=".json" style="display: none;" onchange="handleRestoreBackup(event)">
                 <button id="btnToggleCarousel" class="btn btn-sm btn-outline-secondary rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="togglePortfolioCarousel()" title="ย่อ/ขยายแถบพอร์ตเพื่อดูกราฟได้เต็มหน้าจอโดยไม่ต้องเลื่อน" style="font-size: 0.78rem;">
                     📁 ย่อแถบพอร์ต
                 </button>
@@ -999,21 +1062,62 @@
             </div>
         </div>
 
-        <!-- Multi-Portfolio Carousel Row (จัดพอร์ตได้เหมือนใน App ฟรีไม่จำกัด) -->
+        <!-- Multi-Portfolio Selector (สลับพอร์ตการลงทุน - ไม่มีข้อความซ้ำซ้อน) -->
         <div class="mb-2" id="portfolioSection">
             <div id="portfolioTitleRow" class="d-flex justify-content-between align-items-center mb-1 px-1">
                 <div class="d-flex align-items-center gap-2">
-                    <span class="fw-bold" style="font-size: 0.92rem;">📁 พอร์ตการลงทุนของฉัน</span>
-                    <small class="text-muted ms-1 d-none d-md-inline" style="font-size: 0.78rem;">(คลิกเลือกพอร์ตเพื่อกรองข้อมูล)</small>
+                    <span class="fw-bold text-muted" style="font-size: 0.85rem;">📁 การ์ดพอร์ตการลงทุน:</span>
                 </div>
             </div>
             
-            <!-- Compact Pills Bar (เมื่อย่อแถบพอร์ต ประหยัดพื้นที่ ~180px ทันที ดูกราฟได้เต็มหน้าจอ) -->
+            <!-- Compact Pills Bar (เรียบง่ายและเป็นระเบียบ) -->
             <div id="portfolioPillsContainer" class="port-pills-bar mb-2" style="display: none;"></div>
 
             <!-- Full Cards Carousel -->
             <div id="portfolioCardsContainer" class="pb-1 w-100">
                 <!-- Cards will be dynamically injected here by renderPortfolioCards() -->
+            </div>
+        </div>
+
+        <!-- US Market Indices Bar (ดัชนีตลาดหุ้นสหรัฐฯ: Dow Jones, S&P 500, Nasdaq ตามรูป 2) -->
+        <div id="marketIndicesBar" class="market-indices-bar mb-2 p-2 px-3 rounded-3 d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <div class="d-flex align-items-center gap-2">
+                <span class="badge rounded-pill bg-dark text-white px-2 py-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">🇺🇸 US MARKETS</span>
+                <span class="fw-bold text-muted d-none d-lg-inline" style="font-size: 0.78rem;">ดัชนีตลาดสหรัฐฯ</span>
+            </div>
+            
+            <div class="d-flex align-items-center gap-2 gap-md-3 flex-wrap">
+                <!-- Dow Jones -->
+                <div class="market-index-chip d-flex align-items-center gap-2 py-1 px-2 rounded-2" id="chip-DJI" title="Dow Jones Industrial Average (^DJI) คลิกเพื่อรีเฟรช" onclick="refreshMarketIndices(true)">
+                    <span class="fw-bold text-nowrap" style="font-size: 0.82rem;">🇺🇸 Dow Jones</span>
+                    <span class="fw-bold market-index-price text-nowrap" id="val-DJI" style="font-size: 0.84rem;">42,313.00</span>
+                    <span class="badge rounded-pill fw-bold text-nowrap index-badge-up" id="badge-DJI" style="font-size: 0.72rem;">▲ +0.33% (+137.91)</span>
+                </div>
+                
+                <div class="text-muted opacity-25 d-none d-md-inline">|</div>
+
+                <!-- S&P 500 -->
+                <div class="market-index-chip d-flex align-items-center gap-2 py-1 px-2 rounded-2" id="chip-GSPC" title="S&P 500 Index (^GSPC) คลิกเพื่อรีเฟรช" onclick="refreshMarketIndices(true)">
+                    <span class="fw-bold text-nowrap" style="font-size: 0.82rem;">🇺🇸 S&P 500</span>
+                    <span class="fw-bold market-index-price text-nowrap" id="val-GSPC" style="font-size: 0.84rem;">5,738.17</span>
+                    <span class="badge rounded-pill fw-bold text-nowrap index-badge-up" id="badge-GSPC" style="font-size: 0.72rem;">▲ +0.45% (+25.80)</span>
+                </div>
+
+                <div class="text-muted opacity-25 d-none d-md-inline">|</div>
+
+                <!-- Nasdaq -->
+                <div class="market-index-chip d-flex align-items-center gap-2 py-1 px-2 rounded-2" id="chip-IXIC" title="Nasdaq Composite (^IXIC) คลิกเพื่อรีเฟรช" onclick="refreshMarketIndices(true)">
+                    <span class="fw-bold text-nowrap" style="font-size: 0.82rem;">🇺🇸 Nasdaq</span>
+                    <span class="fw-bold market-index-price text-nowrap" id="val-IXIC" style="font-size: 0.84rem;">18,179.98</span>
+                    <span class="badge rounded-pill fw-bold text-nowrap index-badge-up" id="badge-IXIC" style="font-size: 0.72rem;">▲ +0.65% (+117.20)</span>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-2 ms-auto ms-sm-0">
+                <span id="marketIndicesTime" class="text-muted" style="font-size: 0.72rem;">(อัปเดตอัตโนมัติ)</span>
+                <button class="btn btn-sm btn-light border py-0 px-2 rounded-pill text-muted fw-bold" onclick="refreshMarketIndices(true)" title="รีเฟรชดัชนีตลาดหุ้นสหรัฐฯ" style="font-size: 0.72rem;">
+                    🔄 รีเฟรช
+                </button>
             </div>
         </div>
 
@@ -1719,7 +1823,6 @@
             const pillsContainer = document.getElementById('portfolioPillsContainer');
             if (pillsContainer) {
                 let pillsHtml = `
-                    <span class="text-muted fw-bold me-1" style="font-size: 0.8rem; white-space: nowrap;">📁 เลือกพอร์ต:</span>
                     <button class="port-pill-btn ${activePortfolioId === 'ALL' ? 'active-pill' : ''}" onclick="selectPortfolio('ALL')">
                         🌐 พอร์ตทั้งหมด <span class="badge ${activePortfolioId === 'ALL' ? 'bg-white text-dark' : 'bg-light text-dark border'} rounded-pill ms-1">${allM.assetCount}</span>
                     </button>
@@ -1734,6 +1837,13 @@
                     `;
                 });
                 pillsContainer.innerHTML = pillsHtml;
+            }
+
+            // Sync titleRow visibility with carousel collapsed state
+            const isCurrentlyCollapsed = localStorage.getItem('myPortCarouselCollapsed') === 'true';
+            const titleRow = document.getElementById('portfolioTitleRow');
+            if (titleRow) {
+                titleRow.style.display = isCurrentlyCollapsed ? 'none' : 'flex';
             }
         }
 
@@ -3561,6 +3671,16 @@
                                 const fxInput = document.getElementById('liveFxInput');
                                 if (fxInput) fxInput.value = liveFxRate.toFixed(4);
                             }
+                            if (data.indices && typeof data.indices === 'object') {
+                                for (let [sym, idxData] of Object.entries(data.indices)) {
+                                    if (idxData && idxData.price) {
+                                        if (data.updated_at_thai) idxData.updatedAt = data.updated_at_thai;
+                                        marketIndices[sym] = idxData;
+                                    }
+                                }
+                                localStorage.setItem('myMarketIndices', JSON.stringify(marketIndices));
+                                renderMarketIndicesUI();
+                            }
                             localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
                             return { count, data };
                         }
@@ -3599,6 +3719,122 @@
             }
             return null;
         }
+
+        // --- US Market Indices (^DJI, ^GSPC, ^IXIC) ---
+        let marketIndices = {
+            "^DJI": { name: "Dow Jones", price: 42313.0, prevClose: 42175.09, change: 137.91, changePct: 0.33, updatedAt: "ล่าสุด" },
+            "^GSPC": { name: "S&P 500", price: 5738.17, prevClose: 5712.37, change: 25.8, changePct: 0.45, updatedAt: "ล่าสุด" },
+            "^IXIC": { name: "Nasdaq", price: 18179.98, prevClose: 18062.78, change: 117.2, changePct: 0.65, updatedAt: "ล่าสุด" }
+        };
+
+        window.initMarketIndices = function() {
+            try {
+                const saved = localStorage.getItem('myMarketIndices');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    if (parsed && typeof parsed === 'object') {
+                        marketIndices = { ...marketIndices, ...parsed };
+                    }
+                }
+            } catch(e) {}
+            renderMarketIndicesUI();
+        };
+
+        window.renderMarketIndicesUI = function() {
+            const indicesConfig = [
+                { key: '^DJI', valId: 'val-DJI', badgeId: 'badge-DJI', defaultName: 'Dow Jones' },
+                { key: '^GSPC', valId: 'val-GSPC', badgeId: 'badge-GSPC', defaultName: 'S&P 500' },
+                { key: '^IXIC', valId: 'val-IXIC', badgeId: 'badge-IXIC', defaultName: 'Nasdaq' }
+            ];
+
+            indicesConfig.forEach(item => {
+                const d = marketIndices[item.key];
+                const valEl = document.getElementById(item.valId);
+                const badgeEl = document.getElementById(item.badgeId);
+                if (!valEl || !badgeEl || !d || !d.price) return;
+
+                valEl.innerText = Number(d.price).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                
+                const change = typeof d.change === 'number' ? d.change : (d.price - (d.prevClose || d.price));
+                const changePct = typeof d.changePct === 'number' ? d.changePct : ((change / (d.prevClose || d.price)) * 100);
+                const isUp = change >= 0;
+                const sign = isUp ? '+' : '';
+                const arrow = isUp ? '▲' : '▼';
+                
+                badgeEl.innerText = `${arrow} ${sign}${changePct.toFixed(2)}% (${sign}${change.toFixed(2)})`;
+                badgeEl.className = `badge rounded-pill fw-bold text-nowrap ${isUp ? 'index-badge-up' : 'index-badge-down'}`;
+            });
+
+            const timeEl = document.getElementById('marketIndicesTime');
+            if (timeEl) {
+                const sample = marketIndices['^GSPC'] || marketIndices['^DJI'];
+                if (sample && sample.updatedAt) {
+                    timeEl.innerText = `อัปเดต ${sample.updatedAt}`;
+                }
+            }
+        };
+
+        window.fetchMarketIndexFromYahoo = async function(ticker) {
+            const encodedUrl = encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`);
+            const proxies = [
+                `https://api.allorigins.win/raw?url=${encodedUrl}`,
+                `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`
+            ];
+
+            for (let proxyUrl of proxies) {
+                try {
+                    let res = await fetchWithTimeout(proxyUrl, {}, 3500);
+                    if (res.ok) {
+                        let data = await res.json();
+                        if (data && data.chart && data.chart.result && data.chart.result.length > 0) {
+                            let meta = data.chart.result[0].meta;
+                            let price = meta.regularMarketPrice || meta.chartPreviousClose || meta.previousClose;
+                            let prev = meta.chartPreviousClose || meta.previousClose || price;
+                            if (price && typeof price === 'number') {
+                                let diff = price - prev;
+                                let pct = prev > 0 ? (diff / prev) * 100 : 0;
+                                return {
+                                    price: Number(price.toFixed(2)),
+                                    prevClose: Number(prev.toFixed(2)),
+                                    change: Number(diff.toFixed(2)),
+                                    changePct: Number(pct.toFixed(2))
+                                };
+                            }
+                        }
+                    }
+                } catch(e) {}
+            }
+            return null;
+        };
+
+        window.refreshMarketIndices = async function(isManual = false) {
+            const timeEl = document.getElementById('marketIndicesTime');
+            if (isManual && timeEl) {
+                timeEl.innerText = 'กำลังดึงดัชนี...';
+            }
+
+            let updatedCount = 0;
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' }) + ' น.';
+
+            for (let sym of ['^DJI', '^GSPC', '^IXIC']) {
+                try {
+                    const res = await fetchMarketIndexFromYahoo(sym);
+                    if (res) {
+                        res.updatedAt = timeStr;
+                        marketIndices[sym] = { ...marketIndices[sym], ...res };
+                        updatedCount++;
+                    }
+                } catch(e) {}
+            }
+
+            if (updatedCount > 0) {
+                localStorage.setItem('myMarketIndices', JSON.stringify(marketIndices));
+                renderMarketIndicesUI();
+            } else if (isManual && timeEl) {
+                renderMarketIndicesUI();
+            }
+        };
 
         window.updateAllPricesAndFx = async function(isManual = true) {
             const btn = document.getElementById('btnUpdateAllPrices');
@@ -3655,6 +3891,11 @@
                         }
                     }
                 }
+
+                // อัปเดตดัชนีตลาดหุ้นสหรัฐฯ (^DJI, ^GSPC, ^IXIC)
+                try {
+                    await refreshMarketIndices(false);
+                } catch(e) {}
 
                 localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
                 updateSummaryAndChart();
@@ -5782,6 +6023,7 @@
         async function initializeApp() { 
             initTheme();
             initPrivacyMode();
+            initMarketIndices();
             populatePortfolioDropdown();
             renderPortfolioCards();
             initCarouselState();
