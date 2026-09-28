@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V54)</title>
+    <title>My Portfolio Pro Dashboard (V55)</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -69,7 +69,7 @@
         .alloc-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         
         #targetOverlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:9999; justify-content:center; align-items:center; backdrop-filter: blur(2px); }
-        .modal-box { background:white; padding:24px; border-radius:16px; width:90%; max-width:400px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .modal-box { background:white; padding:24px; border-radius:16px; width:90%; max-width:440px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
         
         .sim-input { border: 1px solid #e5e7eb; border-radius: 8px; font-weight: bold; background: white; }
         .sim-input:focus { border-color: #3b82f6; outline: none; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); }
@@ -283,16 +283,39 @@
 <body class="p-2 p-md-3">
 
     <!-- Modal: Target Settings -->
-    <div id="targetOverlay">
-        <div class="modal-box">
-            <h5 class="fw-bold mb-1">ตั้งค่าเป้าหมายสัดส่วน (%)</h5>
-            <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 16px;">กำหนด % ของแต่ละกลุ่มพอร์ต (รวมให้ได้ 100%)</p>
-            <div id="targetInputs" class="mb-3" style="max-height: 300px; overflow-y: auto;"></div>
+    <div id="targetOverlay" onclick="if(event.target===this) closeTargetSettings()">
+        <div class="modal-box shadow-lg" style="max-width: 440px; padding: 20px 22px;">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="fw-bold m-0" style="color: #0f172a; font-size: 1.15rem;">🎯 ตั้งค่าเป้าหมายสัดส่วน (%)</h5>
+                <button type="button" class="btn-close" onclick="closeTargetSettings()" aria-label="Close"></button>
+            </div>
+            <p class="text-muted mb-2" style="font-size: 0.78rem;">กำหนดเป้าหมาย % รวมกันให้ได้ 100% (พิมพ์หรือกดปุ่มลัดได้ทันที รองรับแป้นพิมพ์ไทย/อังกฤษ)</p>
+            
+            <!-- Quick Preset Chips -->
+            <div class="p-2 mb-3 rounded" style="background-color: #f1f5f9; border: 1px solid #e2e8f0;">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="text-muted fw-bold" style="font-size: 0.72rem;">⚡ สัดส่วนสำเร็จรูป:</span>
+                    <button type="button" class="btn btn-link p-0 text-decoration-none text-primary fw-bold" style="font-size: 0.72rem;" onclick="autoBalanceTargetRemainder()">+ เติมส่วนที่เหลือให้ครบ 100%</button>
+                </div>
+                <div class="d-flex gap-1 flex-wrap">
+                    <button type="button" class="btn btn-xs btn-outline-secondary bg-white py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="applyTargetPresetModal('EQUAL')">⚖️ แบ่งเท่ากัน</button>
+                    <button type="button" class="btn btn-xs btn-outline-secondary bg-white py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="applyTargetPresetModal('60_40')">📊 60 / 40</button>
+                    <button type="button" class="btn btn-xs btn-outline-secondary bg-white py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="applyTargetPresetModal('70_30')">🚀 70 / 30</button>
+                    <button type="button" class="btn btn-xs btn-outline-secondary bg-white py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="applyTargetPresetModal('CASH_10')">💵 เงินสด 10%</button>
+                    <button type="button" class="btn btn-xs btn-outline-secondary bg-white py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="applyTargetPresetModal('CURRENT')">🔄 ตามพอร์ตจริง</button>
+                </div>
+            </div>
+
+            <div id="targetInputs" class="mb-3" style="max-height: 280px; overflow-y: auto;"></div>
+
             <div class="d-flex justify-content-between align-items-center mt-3 pt-3" style="border-top: 1px solid #e5e7eb;">
-                <span id="targetTotalCheck" class="fw-bold" style="font-size: 0.85rem;">รวม: 0%</span>
+                <div class="d-flex align-items-center gap-1">
+                    <span id="targetTotalCheck" class="badge px-2 py-1 fs-6" style="background: #e2e8f0; color: #1e293b;">รวม: 0%</span>
+                    <span id="targetTotalDiffHint" style="font-size: 0.75rem;"></span>
+                </div>
                 <div class="d-flex gap-2">
-                    <button class="btn btn-sm btn-light border" onclick="closeTargetSettings()">ยกเลิก</button>
-                    <button class="btn btn-sm btn-dark" onclick="saveTargets()">บันทึกเป้าหมาย</button>
+                    <button type="button" class="btn btn-sm btn-light border fw-bold" onclick="closeTargetSettings()">ยกเลิก</button>
+                    <button type="button" class="btn btn-sm btn-dark px-3 fw-bold" onclick="saveTargets()">💾 บันทึกเป้าหมาย</button>
                 </div>
             </div>
         </div>
@@ -1941,6 +1964,54 @@
             reader.readAsText(file);
         };
 
+        // --- SMART NUMERIC SANITIZER (รองรับแป้นพิมพ์ไทย Kedmanee และเลขอารบิก/ไทยอัตโนมัติ) ---
+        window.cleanNumericInput = function(val, allowDecimal = true) {
+            if (val === undefined || val === null) return '';
+            let str = String(val);
+            // 1. แปลงปุ่มแถวตัวเลขแป้นพิมพ์เกษมณี (ไทย) และเลขไทยเป็นเลขอารบิก
+            const kedmaneeMap = {
+                'ๅ': '1', '/': '2', '_': '3', 'ภ': '4', 'ถ': '5',
+                'ุ': '6', 'ึ': '7', 'ค': '8', 'ต': '9', 'จ': '0',
+                '๑': '1', '๒': '2', '๓': '3', '๔': '4', '๕': '5',
+                '๖': '6', '๗': '7', '๘': '8', '๙': '9', '๐': '0'
+            };
+            let converted = '';
+            for (let i = 0; i < str.length; i++) {
+                let ch = str[i];
+                if (kedmaneeMap[ch] !== undefined) {
+                    converted += kedmaneeMap[ch];
+                } else {
+                    converted += ch;
+                }
+            }
+            
+            // จัดการเครื่องหมายจุลภาค (Comma)
+            if (allowDecimal) {
+                if (converted.includes(',') && !converted.includes('.')) {
+                    if (/,\d{3}($|[^\d])/.test(converted)) {
+                        converted = converted.replace(/,/g, '');
+                    } else {
+                        converted = converted.replace(',', '.');
+                    }
+                } else {
+                    converted = converted.replace(/,/g, '');
+                }
+            } else {
+                converted = converted.replace(/,/g, '');
+            }
+
+            // กรองให้เหลือเฉพาะตัวเลข 0-9 และจุดทศนิยมเพียงจุดเดียว
+            let regex = allowDecimal ? /[^0-9.]/g : /[^0-9]/g;
+            let cleaned = converted.replace(regex, '');
+            if (allowDecimal) {
+                let parts = cleaned.split('.');
+                if (parts.length > 2) {
+                    cleaned = parts[0] + '.' + parts.slice(1).join('');
+                }
+            }
+            return cleaned;
+        };
+
         // --- DCA REBALANCING ASSISTANT ---
         window.openDCAPlanner = function() {
             const modal = new bootstrap.Modal(document.getElementById('dcaModal'));
@@ -1965,11 +2036,24 @@
         };
 
         window.handleDCAAmountInput = function(val) {
+            const inp = document.getElementById('dcaAmountInput');
+            if (inp) {
+                let clean = cleanNumericInput(inp.value, true);
+                if (inp.value !== clean) {
+                    let cursor = inp.selectionStart;
+                    inp.value = clean;
+                    try {
+                        let newPos = Math.min(clean.length, cursor !== null ? cursor : clean.length);
+                        inp.setSelectionRange(newPos, newPos);
+                    } catch(e) {}
+                }
+            }
             calculateDCA(false);
         };
 
         window.handleDCATargetChange = function(grp, val) {
-            let num = parseFloat(val) || 0;
+            let clean = cleanNumericInput(val, true);
+            let num = parseFloat(clean) || 0;
             if (num < 0) num = 0;
             if (num > 100) num = 100;
             portfolioTargets[grp] = num;
@@ -2107,7 +2191,7 @@
             if (fullRender === undefined) fullRender = true;
 
             const rawInput = document.getElementById('dcaAmountInput') ? document.getElementById('dcaAmountInput').value : '0';
-            const cleanInput = rawInput.toString().replace(/,/g, '').trim();
+            const cleanInput = cleanNumericInput(rawInput, true);
             const dcaTHB = parseFloat(cleanInput) || 0;
             const tbody = document.getElementById('dcaTableBody');
             if (!tbody) return;
@@ -2227,14 +2311,15 @@
                             <td class="py-2 fw-bold" id="dcaCurPct_${grp}">${curPct.toFixed(1)}%</td>
                             <td class="py-2" style="width: 110px;">
                                 <div class="input-group input-group-sm justify-content-center" style="max-width: 95px; margin: 0 auto;">
-                                    <input type="number" 
+                                    <input type="text" 
+                                           inputmode="decimal"
                                            class="form-control text-center fw-bold text-primary" 
                                            id="dcaTarget_${grp}" 
                                            value="${targetPct > 0 ? targetPct : ''}" 
                                            placeholder="0" 
-                                           min="0" max="100" step="any"
                                            onclick="this.select()"
-                                           oninput="handleDCATargetChange('${grp}', this.value)" 
+                                           onfocus="this.select()"
+                                           oninput="this.value = cleanNumericInput(this.value, true); handleDCATargetChange('${grp}', this.value)" 
                                            style="border-radius: 8px 0 0 8px;">
                                     <span class="input-group-text bg-light fw-bold" style="font-size: 0.75rem; border-radius: 0 8px 8px 0;">%</span>
                                 </div>
@@ -3669,28 +3754,281 @@
             }
         };
 
+        // --- TARGET SETTINGS & REBALANCING MODAL CONTROLS ---
+        window.handleTargetNumberInput = function(el) {
+            if (!el) return;
+            let oldVal = el.value;
+            let clean = cleanNumericInput(oldVal, true);
+            if (oldVal !== clean) {
+                let cursor = el.selectionStart;
+                el.value = clean;
+                try {
+                    let newPos = Math.min(clean.length, cursor !== null ? cursor : clean.length);
+                    el.setSelectionRange(newPos, newPos);
+                } catch(e) {}
+            }
+            calcTargetTotal();
+        };
+
+        window.adjustTargetStep = function(grp, delta) {
+            let inp = document.getElementById(`target_${grp}`);
+            if (!inp) return;
+            let current = parseFloat(cleanNumericInput(inp.value, true)) || 0;
+            let newVal = Math.max(0, Math.min(100, Number((current + delta).toFixed(1))));
+            inp.value = newVal;
+            calcTargetTotal();
+        };
+
+        window.applyTargetPresetModal = function(type) {
+            let inputs = document.querySelectorAll('[id^="target_"]');
+            let groupList = [];
+            inputs.forEach(inp => groupList.push(inp.id.replace('target_', '')));
+            if (groupList.length === 0) return;
+
+            let newVals = {};
+            if (type === 'EQUAL') {
+                let each = Number((100 / groupList.length).toFixed(1));
+                let running = 0;
+                groupList.forEach((g, idx) => {
+                    if (idx === groupList.length - 1) {
+                        newVals[g] = Number((100 - running).toFixed(1));
+                    } else {
+                        newVals[g] = each;
+                        running += each;
+                    }
+                });
+            } else if (type === '60_40') {
+                if (groupList.includes('ETF') && groupList.includes('Stock')) {
+                    newVals['ETF'] = 60;
+                    newVals['Stock'] = 40;
+                    groupList.forEach(g => { if (g !== 'ETF' && g !== 'Stock') newVals[g] = 0; });
+                } else if (groupList.length >= 2) {
+                    newVals[groupList[0]] = 60;
+                    newVals[groupList[1]] = 40;
+                    groupList.slice(2).forEach(g => newVals[g] = 0);
+                }
+            } else if (type === '70_30') {
+                if (groupList.includes('ETF') && groupList.includes('Stock')) {
+                    newVals['ETF'] = 70;
+                    newVals['Stock'] = 30;
+                    groupList.forEach(g => { if (g !== 'ETF' && g !== 'Stock') newVals[g] = 0; });
+                } else if (groupList.length >= 2) {
+                    newVals[groupList[0]] = 70;
+                    newVals[groupList[1]] = 30;
+                    groupList.slice(2).forEach(g => newVals[g] = 0);
+                }
+            } else if (type === 'CASH_10') {
+                let cashGrp = groupList.includes('เงินสด') ? 'เงินสด' : null;
+                if (cashGrp) newVals[cashGrp] = 10;
+                let otherGroups = groupList.filter(g => g !== cashGrp);
+                if (otherGroups.length === 2 && otherGroups.includes('ETF') && otherGroups.includes('Stock')) {
+                    newVals['ETF'] = 54;
+                    newVals['Stock'] = 36;
+                } else if (otherGroups.length > 0) {
+                    let remain = cashGrp ? 90 : 100;
+                    let each = Number((remain / otherGroups.length).toFixed(1));
+                    let running = 0;
+                    otherGroups.forEach((g, idx) => {
+                        if (idx === otherGroups.length - 1) {
+                            newVals[g] = Number((remain - running).toFixed(1));
+                        } else {
+                            newVals[g] = each;
+                            running += each;
+                        }
+                    });
+                }
+            } else if (type === 'CURRENT') {
+                let actualGroupVals = {};
+                let totalActual = 0;
+                try {
+                    let currentTxns = (activePortfolioId === 'ALL')
+                        ? transactions
+                        : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
+                    let holdings = {};
+                    currentTxns.forEach(t => {
+                        if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW' || t.type === 'DIVIDEND') return;
+                        if (!holdings[t.ticker]) holdings[t.ticker] = 0;
+                        if (t.type === 'BUY') holdings[t.ticker] += t.shares;
+                        else if (t.type === 'SELL') holdings[t.ticker] -= t.shares;
+                    });
+                    for (let tk in holdings) {
+                        if (holdings[tk] > 0.0001) {
+                            let pr = marketPrices[tk] || 0;
+                            let valTHB = holdings[tk] * pr * liveFxRate;
+                            let grp = portfolioMapping[tk] || 'Stock';
+                            actualGroupVals[grp] = (actualGroupVals[grp] || 0) + valTHB;
+                            totalActual += valTHB;
+                        }
+                    }
+                    let cashTHB = 0;
+                    if (activePortfolioId === 'ALL' || activePortfolioId === 'core') {
+                        transactions.forEach(t => {
+                            if (t.type === 'DEPOSIT') cashTHB += (t.amountTHB || 0);
+                            else if (t.type === 'WITHDRAW') cashTHB -= (t.amountTHB || 0);
+                            else if (t.type === 'BUY') cashTHB -= ((t.shares * t.price * (t.fxRate || liveFxRate)) + (t.commissionTHB || 0));
+                            else if (t.type === 'SELL') cashTHB += ((t.shares * t.price * (t.fxRate || liveFxRate)) - (t.commissionTHB || 0));
+                            else if (t.type === 'DIVIDEND') cashTHB += (t.amountTHB || 0);
+                        });
+                        if (cashTHB > 0) {
+                            actualGroupVals['เงินสด'] = cashTHB;
+                            totalActual += cashTHB;
+                        }
+                    }
+                } catch(e) {}
+
+                let running = 0;
+                groupList.forEach((g, idx) => {
+                    let pct = totalActual > 0 ? ((actualGroupVals[g] || 0) / totalActual) * 100 : (100 / groupList.length);
+                    let rounded = Number(pct.toFixed(1));
+                    if (idx === groupList.length - 1) {
+                        newVals[g] = Number((100 - running).toFixed(1));
+                    } else {
+                        newVals[g] = rounded;
+                        running += rounded;
+                    }
+                });
+            }
+
+            groupList.forEach(g => {
+                let inp = document.getElementById(`target_${g}`);
+                if (inp && newVals[g] !== undefined) {
+                    inp.value = newVals[g];
+                }
+            });
+            calcTargetTotal();
+        };
+
+        window.autoBalanceTargetRemainder = function() {
+            let inputs = document.querySelectorAll('[id^="target_"]');
+            if (inputs.length === 0) return;
+            let targetEl = document.getElementById('target_เงินสด');
+            if (!targetEl) targetEl = inputs[inputs.length - 1];
+
+            let sumOthers = 0;
+            inputs.forEach(inp => {
+                if (inp !== targetEl) {
+                    sumOthers += (parseFloat(cleanNumericInput(inp.value, true)) || 0);
+                }
+            });
+
+            let remainder = Math.max(0, Number((100 - sumOthers).toFixed(1)));
+            targetEl.value = remainder;
+            calcTargetTotal();
+        };
+
         window.openTargetSettings = function() {
-            let html = '';
             let groups = new Set();
             transactions.forEach(t => {
                 if(t.type !== 'DEPOSIT' && t.type !== 'WITHDRAW' && t.type !== 'DIVIDEND') {
                     groups.add(portfolioMapping[t.ticker] || 'Stock');
                 }
             });
+            for (let tg in portfolioTargets) {
+                groups.add(tg);
+            }
             groups.add('เงินสด');
 
-            Array.from(groups).sort().forEach(g => {
-                let currentTarget = portfolioTargets[g] || 0;
+            // คำนวณมูลค่าพอร์ตจริงปัจจุบันเพื่อแสดงสัดส่วนเปรียบเทียบ
+            let actualGroupVals = {};
+            let totalActual = 0;
+            try {
+                let currentTxns = (activePortfolioId === 'ALL')
+                    ? transactions
+                    : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
+                
+                let holdings = {};
+                currentTxns.forEach(t => {
+                    if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW' || t.type === 'DIVIDEND') return;
+                    if (!holdings[t.ticker]) holdings[t.ticker] = 0;
+                    if (t.type === 'BUY') holdings[t.ticker] += t.shares;
+                    else if (t.type === 'SELL') holdings[t.ticker] -= t.shares;
+                });
+
+                for (let tk in holdings) {
+                    if (holdings[tk] > 0.0001) {
+                        let pr = marketPrices[tk] || 0;
+                        let valTHB = holdings[tk] * pr * liveFxRate;
+                        let grp = portfolioMapping[tk] || 'Stock';
+                        actualGroupVals[grp] = (actualGroupVals[grp] || 0) + valTHB;
+                        totalActual += valTHB;
+                    }
+                }
+                
+                let cashTHB = 0;
+                if (activePortfolioId === 'ALL' || activePortfolioId === 'core') {
+                    transactions.forEach(t => {
+                        if (t.type === 'DEPOSIT') cashTHB += (t.amountTHB || 0);
+                        else if (t.type === 'WITHDRAW') cashTHB -= (t.amountTHB || 0);
+                        else if (t.type === 'BUY') cashTHB -= ((t.shares * t.price * (t.fxRate || liveFxRate)) + (t.commissionTHB || 0));
+                        else if (t.type === 'SELL') cashTHB += ((t.shares * t.price * (t.fxRate || liveFxRate)) - (t.commissionTHB || 0));
+                        else if (t.type === 'DIVIDEND') cashTHB += (t.amountTHB || 0);
+                    });
+                    if (cashTHB > 0) {
+                        actualGroupVals['เงินสด'] = cashTHB;
+                        totalActual += cashTHB;
+                    }
+                }
+            } catch(e) {}
+
+            let sortedGroups = Array.from(groups).sort((a, b) => {
+                if (a === 'เงินสด') return 1;
+                if (b === 'เงินสด') return -1;
+                return a.localeCompare(b);
+            });
+
+            let html = '';
+            const colorMap = {
+                'ETF': 'bg-primary',
+                'Stock': 'bg-warning text-dark',
+                'เงินสด': 'bg-success',
+                'REIT': 'bg-info text-dark',
+                'Crypto': 'bg-danger'
+            };
+
+            sortedGroups.forEach(g => {
+                let currentTarget = (portfolioTargets[g] !== undefined) ? portfolioTargets[g] : 0;
+                let actualVal = actualGroupVals[g] || 0;
+                let actualPct = totalActual > 0 ? (actualVal / totalActual) * 100 : 0;
+                let badgeBg = colorMap[g] || 'bg-secondary';
+
                 html += `
-                    <div class="d-flex justify-content-between align-items-center mb-2 p-2 rounded" style="background-color: #f9fafb; border: 1px solid #e5e7eb;">
-                        <label class="fw-bold text-secondary m-0" style="font-size:0.85rem;">${g}</label>
-                        <div class="input-group input-group-sm" style="width:100px;">
-                            <input type="number" id="target_${g}" class="form-control text-center" value="${currentTarget}" step="0.01" oninput="calcTargetTotal()">
-                            <span class="input-group-text bg-white">%</span>
+                    <div class="mb-2 p-2 rounded" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <div class="d-flex align-items-center gap-1">
+                                <span class="badge ${badgeBg} px-2 py-1" style="font-size: 0.8rem;">${g}</span>
+                                <span class="text-muted" style="font-size: 0.72rem;">พอร์ตจริง: <strong>${actualPct.toFixed(1)}%</strong></span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1">
+                                <button type="button" class="btn btn-sm btn-light border px-2 py-0 fw-bold text-secondary" style="font-size: 0.75rem; height: 28px;" onclick="adjustTargetStep('${g}', -5)" title="ลด 5%">-5%</button>
+                                <button type="button" class="btn btn-sm btn-light border px-1 py-0 fw-bold text-secondary" style="font-size: 0.75rem; height: 28px; width: 25px;" onclick="adjustTargetStep('${g}', -1)" title="ลด 1%">-1</button>
+                                
+                                <div class="input-group input-group-sm" style="width: 82px;">
+                                    <input type="text" 
+                                           inputmode="decimal" 
+                                           id="target_${g}" 
+                                           class="form-control text-center fw-bold fs-6 py-0 px-1" 
+                                           style="height: 28px; border-color: #cbd5e1;"
+                                           value="${currentTarget}" 
+                                           onclick="this.select()" 
+                                           onfocus="this.select()"
+                                           onblur="if(this.value.trim()==='') this.value='0'; calcTargetTotal();"
+                                           oninput="handleTargetNumberInput(this)"
+                                           onkeydown="if(event.key==='Enter') saveTargets();"
+                                           placeholder="0">
+                                    <span class="input-group-text bg-white px-1 py-0 fw-bold text-muted" style="font-size: 0.75rem;">%</span>
+                                </div>
+
+                                <button type="button" class="btn btn-sm btn-light border px-1 py-0 fw-bold text-secondary" style="font-size: 0.75rem; height: 28px; width: 25px;" onclick="adjustTargetStep('${g}', +1)" title="เพิ่ม 1%">+1</button>
+                                <button type="button" class="btn btn-sm btn-light border px-2 py-0 fw-bold text-secondary" style="font-size: 0.75rem; height: 28px;" onclick="adjustTargetStep('${g}', +5)" title="เพิ่ม 5%">+5%</button>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 5px; background-color: #e2e8f0; border-radius: 4px;">
+                            <div id="targetBar_${g}" class="progress-bar ${badgeBg.split(' ')[0]}" role="progressbar" style="width: ${Math.min(100, Math.max(0, currentTarget))}%; transition: width 0.2s;"></div>
                         </div>
                     </div>
                 `;
             });
+
             document.getElementById('targetInputs').innerHTML = html;
             document.getElementById('targetOverlay').style.display = 'flex';
             calcTargetTotal();
@@ -3703,10 +4041,32 @@
         window.calcTargetTotal = function() {
             let inputs = document.querySelectorAll('[id^="target_"]');
             let total = 0;
-            inputs.forEach(input => { total += (parseFloat(input.value) || 0); });
+            inputs.forEach(input => {
+                let val = parseFloat(cleanNumericInput(input.value, true)) || 0;
+                total += val;
+                let grp = input.id.replace('target_', '');
+                let bar = document.getElementById(`targetBar_${grp}`);
+                if (bar) {
+                    bar.style.width = `${Math.min(100, Math.max(0, val))}%`;
+                }
+            });
             let el = document.getElementById('targetTotalCheck');
-            el.innerText = `รวม: ${total.toFixed(2)}%`;
-            el.style.color = (total > 100 || total < 100) ? '#ef4444' : '#10b981';
+            let hint = document.getElementById('targetTotalDiffHint');
+            if (el) {
+                el.innerText = `รวม: ${total.toFixed(1)}%`;
+                if (Math.abs(total - 100) < 0.05) {
+                    el.className = 'badge bg-success px-2 py-1 fs-6';
+                    if (hint) hint.innerHTML = `<span class="text-success fw-bold ms-1">✓ ครบ 100% พอดี</span>`;
+                } else if (total < 100) {
+                    el.className = 'badge bg-warning text-dark px-2 py-1 fs-6';
+                    let diff = (100 - total).toFixed(1);
+                    if (hint) hint.innerHTML = `<span class="text-muted ms-1" style="font-size:0.75rem;">ขาดอีก <strong class="text-warning">${diff}%</strong></span>`;
+                } else {
+                    el.className = 'badge bg-danger px-2 py-1 fs-6';
+                    let diff = (total - 100).toFixed(1);
+                    if (hint) hint.innerHTML = `<span class="text-muted ms-1" style="font-size:0.75rem;">เกินอยู่ <strong class="text-danger">${diff}%</strong></span>`;
+                }
+            }
         };
 
         window.saveTargets = function() {
@@ -3715,19 +4075,20 @@
             let newTargets = {};
             inputs.forEach(input => {
                 let g = input.id.replace('target_', '');
-                let val = parseFloat(input.value) || 0;
+                let val = parseFloat(cleanNumericInput(input.value, true)) || 0;
                 newTargets[g] = val;
                 total += val;
             });
             
-            if(total !== 100 && total !== 0) {
-                if(!confirm(`คำเตือน: เป้าหมายรวมกันได้ ${total}% (ควรเป็น 100%)\nต้องการบันทึกต่อไปหรือไม่?`)) return;
+            if (Math.abs(total - 100) > 0.05 && total !== 0) {
+                if (!confirm(`คำเตือน: เป้าหมายรวมกันได้ ${total.toFixed(1)}% (ควรเป็น 100%)\nต้องการบันทึกต่อไปหรือไม่?`)) return;
             }
             
             portfolioTargets = newTargets;
             localStorage.setItem('myPortfolioTargets', JSON.stringify(portfolioTargets));
             closeTargetSettings();
             updateSummaryAndChart();
+            if (typeof calculateDCA === 'function') calculateDCA(false);
         };
 
         function renderDividends() {
