@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V53)</title>
+    <title>My Portfolio Pro Dashboard (V54)</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -479,19 +479,52 @@
                     
                     <div class="card p-3 mb-3 border-0" style="border-radius: 12px; background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.15) !important;">
                         <div class="row g-3 align-items-center">
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <label class="form-label fw-bold mb-1" style="font-size: 0.85rem;">จำนวนเงินที่ต้องการ DCA เพิ่มในครั้งนี้ (THB)</label>
                                 <div class="input-group">
                                     <span class="input-group-text fw-bold">฿</span>
-                                    <input type="number" id="dcaAmountInput" class="form-control form-control-lg fw-bold text-primary" placeholder="เช่น 5000" oninput="calculateDCA()">
+                                    <input type="text" inputmode="decimal" id="dcaAmountInput" class="form-control form-control-lg fw-bold text-primary" placeholder="เช่น 10,000 หรือ 20000" oninput="handleDCAAmountInput(this.value)" onclick="this.select()">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="clearDCAAmount()" title="ล้างจำนวนเงิน">✕</button>
+                                </div>
+                                <div class="d-flex gap-1 flex-wrap mt-2 align-items-center">
+                                    <span class="text-muted fw-bold me-1" style="font-size: 0.74rem;">ยอดด่วน:</span>
+                                    <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="setDCAQuickAmount(1000)">+1,000</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="setDCAQuickAmount(3000)">+3,000</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="setDCAQuickAmount(5000)">+5,000</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="setDCAQuickAmount(10000)">+10,000</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="setDCAQuickAmount(20000)">+20,000</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.74rem;" onclick="setDCAQuickAmount(50000)">+50,000</button>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <div class="text-muted" style="font-size: 0.82rem;">
-                                    💡 ระบบจะคำนวณสัดส่วนปัจจุบันเทียบกับเป้าหมาย แล้วจัดสรรเงินก้อนนี้ไปยังสินทรัพย์ที่สัดส่วนยังต่ำกว่าเป้าหมาย (Underweight) ก่อน เพื่อให้พอร์ตสมดุลที่สุด
+                                    💡 <strong>ระบบคำนวณอัตโนมัติ:</strong> จัดสรรเงินก้อนนี้ไปยังสินทรัพย์ที่สัดส่วนยังต่ำกว่าเป้าหมาย (Underweight) ก่อน เพื่อดึงพอร์ตกลับสู่สมดุลตาม Target % ที่ต้องการ
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Target % Quick Presets & Status Alert -->
+                    <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                        <div class="d-flex align-items-center gap-1 flex-wrap">
+                            <span class="fw-bold text-secondary me-1" style="font-size: 0.8rem;">🎯 กำหนดเป้าหมายด่วน:</span>
+                            <button type="button" class="btn btn-sm btn-light border py-0 px-2 rounded-pill fw-bold" style="font-size: 0.75rem;" onclick="applyDCAPreset('EQUAL')" title="แบ่งเป้าหมายเท่ากันทุกกลุ่ม (เช่น 50/50)">⚖️ แบ่งเท่ากัน</button>
+                            <button type="button" class="btn btn-sm btn-light border py-0 px-2 rounded-pill fw-bold" style="font-size: 0.75rem;" onclick="applyDCAPreset('CURRENT')" title="ใช้สัดส่วนปัจจุบันเป็นเป้าหมาย">🔄 ตามพอร์ตปัจจุบัน</button>
+                            <button type="button" class="btn btn-sm btn-light border py-0 px-2 rounded-pill fw-bold" style="font-size: 0.75rem;" onclick="applyDCAPreset('60_40')">📊 60 / 40</button>
+                            <button type="button" class="btn btn-sm btn-light border py-0 px-2 rounded-pill fw-bold" style="font-size: 0.75rem;" onclick="applyDCAPreset('70_30')">🚀 70 / 30</button>
+                        </div>
+                        <div id="dcaTargetTotalBadge" class="badge rounded-pill bg-light text-dark border px-3 py-1" style="font-size: 0.78rem;">
+                            รวมเป้าหมาย: 0%
+                        </div>
+                    </div>
+
+                    <div id="dcaNoTargetAlert" class="alert alert-warning py-2 px-3 mb-2 border-0 d-flex align-items-center justify-content-between flex-wrap gap-2" style="font-size: 0.82rem; border-radius: 10px; display: none;">
+                        <div>
+                            ⚠️ <strong>ยังไม่ได้กำหนดเป้าหมาย %:</strong> กรุณากรอกตัวเลขในช่อง <strong>"เป้าหมาย %"</strong> ด้านล่าง หรือกดปุ่ม <strong>[⚖️ แบ่งเท่ากัน]</strong>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-warning text-dark py-0 px-2 fw-bold" onclick="applyDCAPreset('EQUAL')" style="font-size: 0.75rem; border-radius: 6px;">
+                            กดแบ่งเท่ากันทันที
+                        </button>
                     </div>
 
                     <div class="table-responsive">
@@ -501,16 +534,18 @@
                                     <th class="py-2 text-start">กลุ่มสินทรัพย์</th>
                                     <th class="py-2">มูลค่าปัจจุบัน (฿)</th>
                                     <th class="py-2">สัดส่วนปัจจุบัน</th>
-                                    <th class="py-2">เป้าหมาย %</th>
+                                    <th class="py-2 text-primary" style="min-width: 110px;">เป้าหมาย % (กรอกได้)</th>
                                     <th class="py-2 text-primary">แนะนำซื้อเพิ่ม (฿)</th>
                                     <th class="py-2 text-primary">แนะนำ ($ ประมาณ)</th>
                                     <th class="py-2 text-success">สัดส่วนใหม่ (%)</th>
+                                    <th class="py-2">ส่งคำสั่ง</th>
                                 </tr>
                             </thead>
                             <tbody id="dcaTableBody"></tbody>
                         </table>
                     </div>
-                    <div class="d-flex justify-content-end mt-3">
+                    <div class="d-flex justify-content-between align-items-center mt-3 flex-wrap gap-2">
+                        <small class="text-muted">💡 สามารถพิมพ์แก้ไข <strong>"เป้าหมาย %"</strong> ในตารางได้โดยตรง ระบบจะบันทึกและคำนวณใหม่ให้อัตโนมัติ</small>
                         <button type="button" class="btn btn-secondary px-4 fw-bold" style="border-radius: 10px;" data-bs-dismiss="modal">ปิด</button>
                     </div>
                 </div>
@@ -1909,15 +1944,41 @@
         // --- DCA REBALANCING ASSISTANT ---
         window.openDCAPlanner = function() {
             const modal = new bootstrap.Modal(document.getElementById('dcaModal'));
-            calculateDCA();
+            calculateDCA(true);
             modal.show();
         };
 
-        window.calculateDCA = function() {
-            const dcaTHB = parseFloat(document.getElementById('dcaAmountInput').value) || 0;
-            const tbody = document.getElementById('dcaTableBody');
-            if (!tbody) return;
+        window.setDCAQuickAmount = function(amt) {
+            const inp = document.getElementById('dcaAmountInput');
+            if (inp) {
+                inp.value = Number(amt).toLocaleString('en-US');
+                calculateDCA(false);
+            }
+        };
 
+        window.clearDCAAmount = function() {
+            const inp = document.getElementById('dcaAmountInput');
+            if (inp) {
+                inp.value = '';
+                calculateDCA(false);
+            }
+        };
+
+        window.handleDCAAmountInput = function(val) {
+            calculateDCA(false);
+        };
+
+        window.handleDCATargetChange = function(grp, val) {
+            let num = parseFloat(val) || 0;
+            if (num < 0) num = 0;
+            if (num > 100) num = 100;
+            portfolioTargets[grp] = num;
+            localStorage.setItem('myPortfolioTargets', JSON.stringify(portfolioTargets));
+            calculateDCA(false);
+            if (typeof updateSummaryAndChart === 'function') updateSummaryAndChart();
+        };
+
+        function getDCAGroupValues() {
             const currentTxns = (activePortfolioId === 'ALL')
                 ? transactions
                 : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
@@ -1944,14 +2005,175 @@
                     groupValues[grp] = (groupValues[grp] || 0) + mktTHB;
                 }
             }
+            return groupValues;
+        }
+
+        window.applyDCAPreset = function(type) {
+            let groupValues = getDCAGroupValues();
+            let groupList = Object.keys(groupValues);
+            if (groupList.length === 0) groupList = ['ETF', 'Stock'];
+
+            let totalCurrentVal = Object.values(groupValues).reduce((a, b) => a + b, 0);
+
+            if (type === 'EQUAL') {
+                let each = Number((100 / groupList.length).toFixed(1));
+                let running = 0;
+                groupList.forEach((g, i) => {
+                    if (i === groupList.length - 1) {
+                        portfolioTargets[g] = Number((100 - running).toFixed(1));
+                    } else {
+                        portfolioTargets[g] = each;
+                        running += each;
+                    }
+                });
+            } else if (type === 'CURRENT') {
+                let running = 0;
+                groupList.forEach((g, i) => {
+                    let pct = totalCurrentVal > 0 ? (groupValues[g] / totalCurrentVal) * 100 : (100 / groupList.length);
+                    let rounded = Number(pct.toFixed(1));
+                    if (i === groupList.length - 1) {
+                        portfolioTargets[g] = Number((100 - running).toFixed(1));
+                    } else {
+                        portfolioTargets[g] = rounded;
+                        running += rounded;
+                    }
+                });
+            } else if (type === '60_40') {
+                if (groupList.includes('ETF') && groupList.includes('Stock')) {
+                    portfolioTargets['ETF'] = 60;
+                    portfolioTargets['Stock'] = 40;
+                } else if (groupList.length >= 2) {
+                    portfolioTargets[groupList[0]] = 60;
+                    portfolioTargets[groupList[1]] = 40;
+                }
+            } else if (type === '70_30') {
+                if (groupList.includes('ETF') && groupList.includes('Stock')) {
+                    portfolioTargets['ETF'] = 70;
+                    portfolioTargets['Stock'] = 30;
+                } else if (groupList.length >= 2) {
+                    portfolioTargets[groupList[0]] = 70;
+                    portfolioTargets[groupList[1]] = 30;
+                }
+            }
+
+            localStorage.setItem('myPortfolioTargets', JSON.stringify(portfolioTargets));
+            calculateDCA(true);
+            if (typeof updateSummaryAndChart === 'function') updateSummaryAndChart();
+        };
+
+        window.sendDCAToBuyForm = function(grp, allocTHB, allocUSD) {
+            const modalEl = document.getElementById('dcaModal');
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            if (modal) modal.hide();
+
+            let targetTicker = null;
+            for (let t in portfolioMapping) {
+                if (portfolioMapping[t] === grp) {
+                    targetTicker = t;
+                    break;
+                }
+            }
+            if (!targetTicker) {
+                targetTicker = (grp === 'ETF') ? 'VTI' : 'GOOGL';
+            }
+
+            const selType = document.getElementById('txnType');
+            const inpTicker = document.getElementById('txnTicker');
+            if (selType) selType.value = 'BUY';
+            if (inpTicker) {
+                inpTicker.value = targetTicker;
+                if (typeof handleTickerChange === 'function') handleTickerChange();
+            }
+
+            let price = marketPrices[targetTicker] || 0;
+            if (price > 0 && allocUSD > 0) {
+                let shares = (allocUSD / price).toFixed(4);
+                const inpShares = document.getElementById('txnShares');
+                const inpPrice = document.getElementById('txnPrice');
+                if (inpShares) inpShares.value = shares;
+                if (inpPrice) inpPrice.value = price.toFixed(2);
+            }
+            if (typeof calculateTxnTotal === 'function') calculateTxnTotal();
+
+            const formCard = document.getElementById('txnFormCard') || document.getElementById('txnType');
+            if (formCard) {
+                formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                formCard.classList.add('form-highlight');
+                setTimeout(() => formCard.classList.remove('form-highlight'), 2000);
+            }
+        };
+
+        window.calculateDCA = function(fullRender) {
+            if (fullRender === undefined) fullRender = true;
+
+            const rawInput = document.getElementById('dcaAmountInput') ? document.getElementById('dcaAmountInput').value : '0';
+            const cleanInput = rawInput.toString().replace(/,/g, '').trim();
+            const dcaTHB = parseFloat(cleanInput) || 0;
+            const tbody = document.getElementById('dcaTableBody');
+            if (!tbody) return;
+
+            const currentTxns = (activePortfolioId === 'ALL')
+                ? transactions
+                : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
+
+            let groupValues = {};
+            let groupTickers = {};
+            let allGroups = new Set();
+            for (let tk in portfolioMapping) allGroups.add(portfolioMapping[tk]);
+            for (let tg in portfolioTargets) allGroups.add(tg);
+            allGroups.forEach(g => { groupValues[g] = 0; groupTickers[g] = []; });
+
+            let holdings = {};
+            currentTxns.forEach(t => {
+                if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW') return;
+                if (!holdings[t.ticker]) holdings[t.ticker] = 0;
+                if (t.type === 'BUY') holdings[t.ticker] += t.shares;
+                else if (t.type === 'SELL') holdings[t.ticker] -= t.shares;
+            });
+
+            for (let tk in holdings) {
+                if (holdings[tk] > 0.0001) {
+                    let price = marketPrices[tk] || 0;
+                    let mktTHB = holdings[tk] * price * liveFxRate;
+                    let grp = portfolioMapping[tk] || 'Stock';
+                    groupValues[grp] = (groupValues[grp] || 0) + mktTHB;
+                    if (!groupTickers[grp]) groupTickers[grp] = [];
+                    if (!groupTickers[grp].includes(tk)) groupTickers[grp].push(tk);
+                }
+            }
 
             let totalCurrentVal = Object.values(groupValues).reduce((a, b) => a + b, 0);
             let newTotalVal = totalCurrentVal + dcaTHB;
 
-            let shortfalls = {};
-            let totalShortfall = 0;
             let groupList = Object.keys(groupValues);
             if (groupList.length === 0) groupList = ['ETF', 'Stock'];
+
+            let totalTargetPct = 0;
+            groupList.forEach(grp => {
+                totalTargetPct += (portfolioTargets[grp] || 0);
+            });
+
+            // Target total badge
+            const targetBadge = document.getElementById('dcaTargetTotalBadge');
+            if (targetBadge) {
+                targetBadge.innerText = `รวมเป้าหมาย: ${totalTargetPct.toFixed(1)}%`;
+                if (Math.abs(totalTargetPct - 100) < 0.1) {
+                    targetBadge.className = 'badge rounded-pill bg-success text-white border px-3 py-1';
+                } else if (totalTargetPct === 0) {
+                    targetBadge.className = 'badge rounded-pill bg-secondary text-white border px-3 py-1';
+                } else {
+                    targetBadge.className = 'badge rounded-pill bg-warning text-dark border px-3 py-1';
+                }
+            }
+
+            // Alert banner if targets are not set
+            const alertEl = document.getElementById('dcaNoTargetAlert');
+            if (alertEl) {
+                alertEl.style.display = (totalTargetPct === 0) ? 'flex' : 'none';
+            }
+
+            let shortfalls = {};
+            let totalShortfall = 0;
 
             groupList.forEach(grp => {
                 let targetPct = portfolioTargets[grp] || 0;
@@ -1962,46 +2184,135 @@
                 if (targetPct > 0) totalShortfall += shortfall;
             });
 
-            let html = '';
-            groupList.forEach(grp => {
-                let curVal = groupValues[grp] || 0;
-                let curPct = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * 100 : 0;
-                let targetPct = portfolioTargets[grp] || 0;
+            if (fullRender || !document.getElementById('dcaTarget_' + groupList[0])) {
+                let html = '';
+                groupList.forEach(grp => {
+                    let curVal = groupValues[grp] || 0;
+                    let curPct = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * 100 : 0;
+                    let targetPct = portfolioTargets[grp] || 0;
 
-                let allocTHB = 0;
-                if (dcaTHB > 0) {
-                    if (totalShortfall > 0 && shortfalls[grp] > 0) {
-                        allocTHB = (shortfalls[grp] / totalShortfall) * dcaTHB;
-                    } else if (targetPct > 0) {
-                        allocTHB = (targetPct / 100) * dcaTHB;
+                    let allocTHB = 0;
+                    if (dcaTHB > 0) {
+                        if (totalShortfall > 0 && shortfalls[grp] > 0) {
+                            allocTHB = (shortfalls[grp] / totalShortfall) * dcaTHB;
+                        } else if (targetPct > 0) {
+                            allocTHB = (targetPct / 100) * dcaTHB;
+                        } else if (totalTargetPct === 0) {
+                            // Fallback: divide proportionally by current value or equally
+                            allocTHB = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * dcaTHB : (dcaTHB / groupList.length);
+                        }
                     }
-                }
-                let allocUSD = liveFxRate > 0 ? allocTHB / liveFxRate : 0;
-                let newVal = curVal + allocTHB;
-                let newPct = newTotalVal > 0 ? (newVal / newTotalVal) * 100 : 0;
+                    let allocUSD = liveFxRate > 0 ? allocTHB / liveFxRate : 0;
+                    let newVal = curVal + allocTHB;
+                    let newPct = newTotalVal > 0 ? (newVal / newTotalVal) * 100 : 0;
 
-                let statusBadge = '';
-                if (targetPct === 0) statusBadge = '<span class="badge bg-secondary">ไม่มีเป้าหมาย</span>';
-                else if (curPct < targetPct - 1) statusBadge = '<span class="badge bg-warning text-dark">Underweight (ควรซื้อ)</span>';
-                else if (curPct > targetPct + 1) statusBadge = '<span class="badge bg-info text-dark">Overweight</span>';
-                else statusBadge = '<span class="badge bg-success">ตามเป้าหมาย</span>';
+                    let statusBadge = '';
+                    if (targetPct === 0) statusBadge = '<span class="badge bg-secondary" id="dcaStatus_' + grp + '">ยังไม่ตั้งเป้าหมาย</span>';
+                    else if (curPct < targetPct - 1) statusBadge = '<span class="badge bg-warning text-dark" id="dcaStatus_' + grp + '">Underweight (ควรซื้อ)</span>';
+                    else if (curPct > targetPct + 1) statusBadge = '<span class="badge bg-info text-dark" id="dcaStatus_' + grp + '">Overweight</span>';
+                    else statusBadge = '<span class="badge bg-success" id="dcaStatus_' + grp + '">ตามเป้าหมาย</span>';
 
-                html += `
-                    <tr>
-                        <td class="text-start py-2">
-                            <strong>${grp}</strong><br>${statusBadge}
-                        </td>
-                        <td class="py-2">฿${curVal.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-                        <td class="py-2 fw-bold">${curPct.toFixed(1)}%</td>
-                        <td class="py-2 text-primary fw-bold">${targetPct}%</td>
-                        <td class="py-2 text-primary fw-bold fs-6">+฿${allocTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-                        <td class="py-2 text-primary fw-bold">+$${allocUSD.toFixed(2)}</td>
-                        <td class="py-2 text-success fw-bold">${newPct.toFixed(1)}%</td>
-                    </tr>
-                `;
-            });
+                    let tickersDisplay = (groupTickers[grp] && groupTickers[grp].length > 0)
+                        ? `<div class="text-muted text-truncate" style="font-size: 0.74rem; max-width: 140px;">${groupTickers[grp].join(', ')}</div>`
+                        : '';
 
-            tbody.innerHTML = html;
+                    html += `
+                        <tr>
+                            <td class="text-start py-2">
+                                <strong class="fs-6">${grp}</strong>
+                                ${tickersDisplay}
+                                ${statusBadge}
+                            </td>
+                            <td class="py-2" id="dcaCurVal_${grp}">฿${curVal.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                            <td class="py-2 fw-bold" id="dcaCurPct_${grp}">${curPct.toFixed(1)}%</td>
+                            <td class="py-2" style="width: 110px;">
+                                <div class="input-group input-group-sm justify-content-center" style="max-width: 95px; margin: 0 auto;">
+                                    <input type="number" 
+                                           class="form-control text-center fw-bold text-primary" 
+                                           id="dcaTarget_${grp}" 
+                                           value="${targetPct > 0 ? targetPct : ''}" 
+                                           placeholder="0" 
+                                           min="0" max="100" step="any"
+                                           onclick="this.select()"
+                                           oninput="handleDCATargetChange('${grp}', this.value)" 
+                                           style="border-radius: 8px 0 0 8px;">
+                                    <span class="input-group-text bg-light fw-bold" style="font-size: 0.75rem; border-radius: 0 8px 8px 0;">%</span>
+                                </div>
+                            </td>
+                            <td class="py-2 text-primary fw-bold fs-6" id="dcaAllocTHB_${grp}">+฿${allocTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                            <td class="py-2 text-primary fw-bold" id="dcaAllocUSD_${grp}">+$${allocUSD.toFixed(2)}</td>
+                            <td class="py-2 text-success fw-bold" id="dcaNewPct_${grp}">${newPct.toFixed(1)}%</td>
+                            <td class="py-2">
+                                <button type="button" 
+                                        class="btn btn-sm btn-outline-primary py-0 px-2 fw-bold" 
+                                        id="dcaBuyBtn_${grp}"
+                                        style="font-size: 0.74rem; border-radius: 8px;" 
+                                        onclick="sendDCAToBuyForm('${grp}', ${allocTHB}, ${allocUSD})" 
+                                        ${allocTHB <= 0 ? 'disabled' : ''}>
+                                    ⚡ ส่งไปซื้อ
+                                </button>
+                            </td>
+                        </tr>
+                    `;
+                });
+                tbody.innerHTML = html;
+            } else {
+                // Update cells in place without replacing inputs (maintaining focus)
+                groupList.forEach(grp => {
+                    let curVal = groupValues[grp] || 0;
+                    let curPct = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * 100 : 0;
+                    let targetPct = portfolioTargets[grp] || 0;
+
+                    let allocTHB = 0;
+                    if (dcaTHB > 0) {
+                        if (totalShortfall > 0 && shortfalls[grp] > 0) {
+                            allocTHB = (shortfalls[grp] / totalShortfall) * dcaTHB;
+                        } else if (targetPct > 0) {
+                            allocTHB = (targetPct / 100) * dcaTHB;
+                        } else if (totalTargetPct === 0) {
+                            allocTHB = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * dcaTHB : (dcaTHB / groupList.length);
+                        }
+                    }
+                    let allocUSD = liveFxRate > 0 ? allocTHB / liveFxRate : 0;
+                    let newVal = curVal + allocTHB;
+                    let newPct = newTotalVal > 0 ? (newVal / newTotalVal) * 100 : 0;
+
+                    const curValEl = document.getElementById('dcaCurVal_' + grp);
+                    const curPctEl = document.getElementById('dcaCurPct_' + grp);
+                    const allocTHBEl = document.getElementById('dcaAllocTHB_' + grp);
+                    const allocUSDEl = document.getElementById('dcaAllocUSD_' + grp);
+                    const newPctEl = document.getElementById('dcaNewPct_' + grp);
+                    const statusEl = document.getElementById('dcaStatus_' + grp);
+                    const buyBtn = document.getElementById('dcaBuyBtn_' + grp);
+
+                    if (curValEl) curValEl.innerText = '฿' + curVal.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                    if (curPctEl) curPctEl.innerText = curPct.toFixed(1) + '%';
+                    if (allocTHBEl) allocTHBEl.innerText = '+฿' + allocTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                    if (allocUSDEl) allocUSDEl.innerText = '+$' + allocUSD.toFixed(2);
+                    if (newPctEl) newPctEl.innerText = newPct.toFixed(1) + '%';
+
+                    if (statusEl) {
+                        if (targetPct === 0) {
+                            statusEl.className = 'badge bg-secondary';
+                            statusEl.innerText = 'ยังไม่ตั้งเป้าหมาย';
+                        } else if (curPct < targetPct - 1) {
+                            statusEl.className = 'badge bg-warning text-dark';
+                            statusEl.innerText = 'Underweight (ควรซื้อ)';
+                        } else if (curPct > targetPct + 1) {
+                            statusEl.className = 'badge bg-info text-dark';
+                            statusEl.innerText = 'Overweight';
+                        } else {
+                            statusEl.className = 'badge bg-success';
+                            statusEl.innerText = 'ตามเป้าหมาย';
+                        }
+                    }
+
+                    if (buyBtn) {
+                        buyBtn.disabled = (allocTHB <= 0);
+                        buyBtn.setAttribute('onclick', `sendDCAToBuyForm('${grp}', ${allocTHB}, ${allocUSD})`);
+                    }
+                });
+            }
         };
 
         // --- TRIM PORTFOLIO CALCULATOR (ขายลดสัดส่วน & ล็อกกำไร) ---
