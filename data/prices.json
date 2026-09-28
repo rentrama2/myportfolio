@@ -1,56 +1,56 @@
 {
-  "updated_at": "2026-09-28T15:58:08Z",
-  "updated_at_thai": "28 ก.ย. 2569 22:58 น.",
+  "updated_at": "2026-09-28T16:46:52Z",
+  "updated_at_thai": "28 ก.ย. 2569 23:46 น.",
   "fx": {
-    "USDTHB": 33.59
+    "USDTHB": 33.58
   },
   "indices": {
     "^DJI": {
-      "name": "Dow Jones",
-      "price": 42313.0,
-      "prevClose": 42175.09,
-      "change": 137.91,
-      "changePct": 0.33
+      "price": 51580.28,
+      "prevClose": 51828.62,
+      "change": -248.34,
+      "changePct": -0.48,
+      "name": "Dow Jones"
     },
     "^GSPC": {
-      "name": "S&P 500",
-      "price": 5738.17,
-      "prevClose": 5712.37,
-      "change": 25.8,
-      "changePct": 0.45
+      "price": 7701.1,
+      "prevClose": 7743.41,
+      "change": -42.31,
+      "changePct": -0.55,
+      "name": "S&P 500"
     },
     "^IXIC": {
-      "name": "Nasdaq",
-      "price": 18179.98,
-      "prevClose": 18062.78,
-      "change": 117.2,
-      "changePct": 0.65
+      "price": 26898.74,
+      "prevClose": 27068.72,
+      "change": -169.98,
+      "changePct": -0.63,
+      "name": "Nasdaq"
     }
   },
   "prices": {
-    "AAPL": 341.24,
-    "AMD": 603.99,
-    "AMZN": 246.338,
-    "BRK-B": 504.74,
-    "COIN": 192.325,
-    "GOOGL": 340.52,
-    "INTC": 115.45,
-    "JEPI": 56.414,
-    "JEPQ": 61.025,
-    "META": 717.942,
-    "MSFT": 509.995,
-    "NFLX": 69.205,
-    "NVDA": 229.96,
-    "PLTR": 188.44,
-    "QQQ": 735.47,
-    "QQQM": 302.83,
-    "SCHD": 33.0,
-    "SMH": 597.8,
-    "SOXX": 557.05,
-    "SPY": 765.36,
-    "TSLA": 360.12,
-    "VOO": 703.513,
-    "VTI": 375.71,
-    "VXUS": 85.475
+    "AAPL": 340.535,
+    "AMD": 607.803,
+    "AMZN": 246.79,
+    "BRK-B": 504.46,
+    "COIN": 193.11,
+    "GOOGL": 340.43,
+    "INTC": 116.385,
+    "JEPI": 56.53,
+    "JEPQ": 61.13,
+    "META": 720.68,
+    "MSFT": 511.64,
+    "NFLX": 69.465,
+    "NVDA": 231.175,
+    "PLTR": 188.48,
+    "QQQ": 737.982,
+    "QQQM": 303.87,
+    "SCHD": 33.045,
+    "SMH": 602.11,
+    "SOXX": 561.63,
+    "SPY": 767.23,
+    "TSLA": 359.98,
+    "VOO": 705.14,
+    "VTI": 376.688,
+    "VXUS": 85.775
   }
 }
