@@ -1,56 +1,56 @@
 {
-  "updated_at": "2026-09-29T19:24:34Z",
-  "updated_at_thai": "30 ก.ย. 2569 02:24 น.",
+  "updated_at": "2026-09-29T23:04:35Z",
+  "updated_at_thai": "30 ก.ย. 2569 06:04 น.",
   "fx": {
-    "USDTHB": 33.55
+    "USDTHB": 33.56
   },
   "indices": {
     "^DJI": {
-      "price": 51361.48,
+      "price": 51349.92,
       "prevClose": 51481.51,
-      "change": -120.03,
-      "changePct": -0.23,
+      "change": -131.59,
+      "changePct": -0.26,
       "name": "Dow Jones"
     },
     "^GSPC": {
-      "price": 7674.95,
+      "price": 7670.84,
       "prevClose": 7683.69,
-      "change": -8.74,
-      "changePct": -0.11,
+      "change": -12.85,
+      "changePct": -0.17,
       "name": "S&P 500"
     },
     "^IXIC": {
-      "price": 26818.04,
+      "price": 26797.54,
       "prevClose": 26820.38,
-      "change": -2.34,
-      "changePct": -0.01,
+      "change": -22.84,
+      "changePct": -0.09,
       "name": "Nasdaq"
     }
   },
   "prices": {
-    "AAPL": 330.56,
-    "AMD": 608.305,
-    "AMZN": 247.37,
-    "BRK-B": 502.44,
-    "COIN": 189.05,
-    "GOOGL": 340.58,
-    "INTC": 116.14,
-    "JEPI": 56.505,
-    "JEPQ": 61.205,
-    "META": 732.645,
-    "MSFT": 511.41,
-    "NFLX": 70.305,
-    "NVDA": 228.08,
-    "PLTR": 185.88,
-    "QQQ": 738.24,
-    "QQQM": 303.989,
-    "SCHD": 32.835,
-    "SMH": 607.63,
-    "SOXX": 567.9,
-    "SPY": 764.575,
-    "TSLA": 352.885,
-    "VOO": 702.795,
-    "VTI": 375.36,
-    "VXUS": 85.495
+    "AAPL": 329.4,
+    "AMD": 607.57,
+    "AMZN": 246.67,
+    "BRK-B": 502.35,
+    "COIN": 190.02,
+    "GOOGL": 340.92,
+    "INTC": 115.93,
+    "JEPI": 56.49,
+    "JEPQ": 61.18,
+    "META": 738.79,
+    "MSFT": 508.96,
+    "NFLX": 70.3,
+    "NVDA": 227.21,
+    "PLTR": 186.97,
+    "QQQ": 737.93,
+    "QQQM": 303.83,
+    "SCHD": 32.85,
+    "SMH": 606.9,
+    "SOXX": 567.44,
+    "SPY": 764.2,
+    "TSLA": 352.84,
+    "VOO": 702.46,
+    "VTI": 375.26,
+    "VXUS": 85.515
   }
 }
