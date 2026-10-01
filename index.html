@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V57)</title>
+    <title>My Portfolio Pro Dashboard (V58)</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -1083,7 +1083,7 @@
         <div id="marketIndicesBar" class="market-indices-bar mb-2 p-2 px-3 rounded-3 d-flex align-items-center justify-content-between flex-wrap gap-2">
             <div class="d-flex align-items-center gap-2">
                 <span class="badge rounded-pill bg-dark text-white px-2 py-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">🇺🇸 US MARKETS</span>
-                <span class="fw-bold text-muted d-none d-lg-inline" style="font-size: 0.78rem;">ดัชนีตลาดสหรัฐฯ</span>
+                <span id="usMarketStatusBadge" class="badge rounded-pill bg-success px-2 py-1" style="font-size: 0.72rem;">🟢 ตลาดเปิด (LIVE)</span>
             </div>
             
             <div class="d-flex align-items-center gap-2 gap-md-3 flex-wrap">
@@ -1115,8 +1115,20 @@
 
             <div class="d-flex align-items-center gap-2 ms-auto ms-sm-0">
                 <span id="marketIndicesTime" class="text-muted" style="font-size: 0.72rem;">(อัปเดตอัตโนมัติ)</span>
-                <button class="btn btn-sm btn-light border py-0 px-2 rounded-pill text-muted fw-bold" onclick="refreshMarketIndices(true)" title="รีเฟรชดัชนีตลาดหุ้นสหรัฐฯ" style="font-size: 0.72rem;">
-                    🔄 รีเฟรช
+                <div class="dropdown d-inline-block">
+                    <button id="btnAutoRefreshToggle" class="btn btn-sm btn-outline-secondary py-0 px-2 rounded-pill fw-bold dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.72rem;">
+                        ⚡ Auto: ปิด
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="font-size: 0.8rem; border-radius: 10px; min-width: 190px;">
+                        <li><h6 class="dropdown-header py-1 text-muted" style="font-size: 0.7rem;">⚡ รีเฟรชราคาอัตโนมัติ (Live Polling)</h6></li>
+                        <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(0)">⚪ ปิด Auto-Refresh (ดึงเอง)</a></li>
+                        <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(60)">⚡ ทุก 1 นาที (Real-time)</a></li>
+                        <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(180)">⚡ ทุก 3 นาที</a></li>
+                        <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(300)">⚡ ทุก 5 นาที</a></li>
+                    </ul>
+                </div>
+                <button class="btn btn-sm btn-dark py-0 px-2 rounded-pill text-white fw-bold" onclick="updateAllPricesAndFx(true)" title="ดึงราคาสดล่าสุดทันที (Bypass Cache)" style="font-size: 0.72rem;">
+                    🔄 ดึงราคาสด
                 </button>
             </div>
         </div>
@@ -3690,9 +3702,9 @@
             return null;
         }
 
-        async function fetchStockPrice(ticker) {
+        async function fetchStockPrice(ticker, force = false) {
             if (!ticker || ticker === 'CASH') return null;
-            if (marketPrices[ticker] && marketPrices[ticker] > 0) {
+            if (!force && marketPrices[ticker] && marketPrices[ticker] > 0) {
                 return marketPrices[ticker];
             }
 
@@ -3704,7 +3716,7 @@
 
             for (let proxyUrl of proxies) {
                 try {
-                    let res = await fetchWithTimeout(proxyUrl, {}, 2500);
+                    let res = await fetchWithTimeout(proxyUrl, {}, 3000);
                     if (res.ok) {
                         let data = await res.json();
                         if (data && data.chart && data.chart.result && data.chart.result.length > 0) {
@@ -3807,6 +3819,83 @@
             return null;
         };
 
+        // --- สถานะตลาดหุ้นสหรัฐฯ (US Market Hours: Mon-Fri 09:30-16:00 EDT) ---
+        function getUSMarketStatus() {
+            try {
+                const nyStr = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
+                const nyDate = new Date(nyStr);
+                const day = nyDate.getDay(); // 0 Sun, 6 Sat
+                if (day === 0 || day === 6) {
+                    return { isOpen: false, text: "ตลาดปิด (วันหยุด)", badgeClass: "bg-secondary" };
+                }
+                const mins = nyDate.getHours() * 60 + nyDate.getMinutes();
+                // Regular market: 9:30 AM (570) to 4:00 PM (960)
+                if (mins >= 570 && mins < 960) {
+                    return { isOpen: true, text: "ตลาดเปิด (LIVE)", badgeClass: "bg-success" };
+                } else if (mins >= 240 && mins < 570) {
+                    return { isOpen: false, text: "Pre-Market", badgeClass: "bg-warning text-dark" };
+                } else if (mins >= 960 && mins < 1200) {
+                    return { isOpen: false, text: "After-Hours", badgeClass: "bg-info text-dark" };
+                } else {
+                    return { isOpen: false, text: "ตลาดปิด", badgeClass: "bg-secondary" };
+                }
+            } catch(e) {
+                return { isOpen: false, text: "ตลาดสหรัฐฯ", badgeClass: "bg-secondary" };
+            }
+        }
+
+        window.updateUSMarketStatusUI = function() {
+            const status = getUSMarketStatus();
+            const badge = document.getElementById('usMarketStatusBadge');
+            if (badge) {
+                badge.innerText = status.isOpen ? '🟢 ตลาดเปิด (LIVE)' : `⚪ ${status.text}`;
+                badge.className = `badge rounded-pill px-2 py-1 ${status.badgeClass}`;
+            }
+        };
+
+        // --- ระบบ Auto-Refresh ดึงราคาอัตโนมัติตามรอบเวลา ---
+        let autoRefreshTimer = null;
+        let autoRefreshIntervalSec = parseInt(localStorage.getItem('myAutoRefreshInterval') || '0', 10);
+
+        window.setAutoRefreshInterval = function(seconds) {
+            autoRefreshIntervalSec = seconds;
+            localStorage.setItem('myAutoRefreshInterval', seconds);
+            updateAutoRefreshUI();
+            startAutoRefreshTimer();
+        };
+
+        window.updateAutoRefreshUI = function() {
+            const btn = document.getElementById('btnAutoRefreshToggle');
+            if (!btn) return;
+            if (autoRefreshIntervalSec === 60) {
+                btn.innerHTML = '⚡ Auto: 1 นาที';
+                btn.className = 'btn btn-sm btn-success py-0 px-2 rounded-pill fw-bold dropdown-toggle';
+            } else if (autoRefreshIntervalSec === 180) {
+                btn.innerHTML = '⚡ Auto: 3 นาที';
+                btn.className = 'btn btn-sm btn-success py-0 px-2 rounded-pill fw-bold dropdown-toggle';
+            } else if (autoRefreshIntervalSec === 300) {
+                btn.innerHTML = '⚡ Auto: 5 นาที';
+                btn.className = 'btn btn-sm btn-success py-0 px-2 rounded-pill fw-bold dropdown-toggle';
+            } else {
+                btn.innerHTML = '⚡ Auto: ปิด';
+                btn.className = 'btn btn-sm btn-outline-secondary py-0 px-2 rounded-pill fw-bold dropdown-toggle';
+            }
+        };
+
+        window.startAutoRefreshTimer = function() {
+            if (autoRefreshTimer) {
+                clearInterval(autoRefreshTimer);
+                autoRefreshTimer = null;
+            }
+            if (autoRefreshIntervalSec > 0) {
+                autoRefreshTimer = setInterval(() => {
+                    if (!document.hidden && typeof window.updateAllPricesAndFx === 'function') {
+                        window.updateAllPricesAndFx(false);
+                    }
+                }, autoRefreshIntervalSec * 1000);
+            }
+        };
+
         window.refreshMarketIndices = async function(isManual = false) {
             const timeEl = document.getElementById('marketIndicesTime');
             if (isManual && timeEl) {
@@ -3817,7 +3906,7 @@
             const now = new Date();
             const timeStr = now.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' }) + ' น.';
 
-            for (let sym of ['^DJI', '^GSPC', '^IXIC']) {
+            await Promise.all(['^DJI', '^GSPC', '^IXIC'].map(async sym => {
                 try {
                     const res = await fetchMarketIndexFromYahoo(sym);
                     if (res) {
@@ -3826,7 +3915,7 @@
                         updatedCount++;
                     }
                 } catch(e) {}
-            }
+            }));
 
             if (updatedCount > 0) {
                 localStorage.setItem('myMarketIndices', JSON.stringify(marketIndices));
@@ -3834,6 +3923,7 @@
             } else if (isManual && timeEl) {
                 renderMarketIndicesUI();
             }
+            updateUSMarketStatusUI();
         };
 
         window.updateAllPricesAndFx = async function(isManual = true) {
@@ -3870,7 +3960,7 @@
                     updatedCount += staticRes.count;
                 }
 
-                // 3. ตรวจสอบหุ้นในพอร์ต หากตัวไหนยังไม่มีราคา ให้พยายามดึงเสริม
+                // 3. ตรวจสอบหุ้นในพอร์ต ดึงราคาสดล่าสุดแบบคู่ขนาน (Parallel Real-time Fetch)
                 const tickersToFetch = new Set();
                 transactions.forEach(t => {
                     if (t.ticker && t.ticker !== 'CASH' && t.type !== 'DEPOSIT' && t.type !== 'WITHDRAW') {
@@ -3882,20 +3972,23 @@
                 });
 
                 const tickerList = Array.from(tickersToFetch);
-                for (let tk of tickerList) {
-                    if (!marketPrices[tk] || marketPrices[tk] <= 0) {
-                        const price = await fetchStockPrice(tk);
+                const shouldForceFetch = isManual; // หากผู้ใช้กดเองหรือ Auto ให้ดึงสดข้ามแคช
+                
+                await Promise.all(tickerList.map(async tk => {
+                    if (shouldForceFetch || !marketPrices[tk] || marketPrices[tk] <= 0) {
+                        const price = await fetchStockPrice(tk, shouldForceFetch);
                         if (price && price > 0) {
                             marketPrices[tk] = price;
                             updatedCount++;
                         }
                     }
-                }
+                }));
 
                 // อัปเดตดัชนีตลาดหุ้นสหรัฐฯ (^DJI, ^GSPC, ^IXIC)
                 try {
                     await refreshMarketIndices(false);
                 } catch(e) {}
+                updateUSMarketStatusUI();
 
                 localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
                 updateSummaryAndChart();
@@ -6024,6 +6117,9 @@
             initTheme();
             initPrivacyMode();
             initMarketIndices();
+            updateUSMarketStatusUI();
+            updateAutoRefreshUI();
+            startAutoRefreshTimer();
             populatePortfolioDropdown();
             renderPortfolioCards();
             initCarouselState();
