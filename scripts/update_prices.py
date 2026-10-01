@@ -22,38 +22,50 @@ def fetch_json(url, timeout=10):
         return json.loads(response.read().decode("utf-8"))
 
 def fetch_yahoo_price(ticker):
-    try:
-        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d"
-        data = fetch_json(url)
-        meta = data["chart"]["result"][0]["meta"]
-        price = meta.get("regularMarketPrice") or meta.get("chartPreviousClose") or meta.get("previousClose")
-        return round(float(price), 4) if price else None
-    except Exception as e:
-        print(f"Error fetching {ticker}: {e}")
-        return None
+    endpoints = [
+        f"https://query2.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d",
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d",
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+    ]
+    for url in endpoints:
+        try:
+            data = fetch_json(url)
+            meta = data["chart"]["result"][0]["meta"]
+            price = meta.get("regularMarketPrice") or meta.get("chartPreviousClose") or meta.get("previousClose")
+            if price:
+                return round(float(price), 4)
+        except Exception:
+            continue
+    print(f"Error fetching {ticker}")
+    return None
 
 def fetch_yahoo_index(ticker):
-    try:
-        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d"
-        data = fetch_json(url)
-        meta = data["chart"]["result"][0]["meta"]
-        price = meta.get("regularMarketPrice") or meta.get("chartPreviousClose") or meta.get("previousClose")
-        prev = meta.get("chartPreviousClose") or meta.get("previousClose") or price
-        if price is not None:
-            price = round(float(price), 2)
-            prev = round(float(prev), 2) if prev is not None else price
-            diff = round(price - prev, 2)
-            pct = round((diff / prev) * 100, 2) if prev > 0 else 0.0
-            return {
-                "price": price,
-                "prevClose": prev,
-                "change": diff,
-                "changePct": pct
-            }
-        return None
-    except Exception as e:
-        print(f"Error fetching index {ticker}: {e}")
-        return None
+    endpoints = [
+        f"https://query2.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d",
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d",
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+    ]
+    for url in endpoints:
+        try:
+            data = fetch_json(url)
+            meta = data["chart"]["result"][0]["meta"]
+            price = meta.get("regularMarketPrice") or meta.get("chartPreviousClose") or meta.get("previousClose")
+            prev = meta.get("chartPreviousClose") or meta.get("previousClose") or price
+            if price is not None:
+                price = round(float(price), 2)
+                prev = round(float(prev), 2) if prev is not None else price
+                diff = round(price - prev, 2)
+                pct = round((diff / prev) * 100, 2) if prev > 0 else 0.0
+                return {
+                    "price": price,
+                    "prevClose": prev,
+                    "change": diff,
+                    "changePct": pct
+                }
+        except Exception:
+            continue
+    print(f"Error fetching index {ticker}")
+    return None
 
 def fetch_usd_thb():
     # 1. Try Yahoo Finance THB=X

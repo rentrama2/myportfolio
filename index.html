@@ -3708,10 +3708,11 @@
                 return marketPrices[ticker];
             }
 
-            const encodedUrl = encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`);
+            const encodedUrl = encodeURIComponent(`https://query2.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`);
             const proxies = [
                 `https://api.allorigins.win/raw?url=${encodedUrl}`,
-                `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`
+                `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`,
+                `https://corsproxy.io/?url=${encodedUrl}`
             ];
 
             for (let proxyUrl of proxies) {
@@ -3787,10 +3788,11 @@
         };
 
         window.fetchMarketIndexFromYahoo = async function(ticker) {
-            const encodedUrl = encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`);
+            const encodedUrl = encodeURIComponent(`https://query2.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`);
             const proxies = [
                 `https://api.allorigins.win/raw?url=${encodedUrl}`,
-                `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`
+                `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`,
+                `https://corsproxy.io/?url=${encodedUrl}`
             ];
 
             for (let proxyUrl of proxies) {
@@ -3995,9 +3997,14 @@
 
                 const now = new Date();
                 const timeStr = now.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' });
+                const timeEl = document.getElementById('marketIndicesTime');
+                if (timeEl && isManual) {
+                    timeEl.innerText = `อัปเดตสด ${timeStr} น.`;
+                }
+
                 if (badge) {
                     if (updatedCount > 0 || fxUpdated) {
-                        const syncLabel = lastPricesSyncTime ? `อัปเดต ${lastPricesSyncTime}` : `อัปเดต ${timeStr} น.`;
+                        const syncLabel = isManual ? `อัปเดตสด ${timeStr} น.` : (lastPricesSyncTime ? `อัปเดต ${lastPricesSyncTime}` : `อัปเดต ${timeStr} น.`);
                         badge.innerText = `(${syncLabel} | ฿${liveFxRate.toFixed(2)})`;
                         badge.className = 'badge bg-success bg-opacity-10 text-success border border-success py-1 px-2';
                     } else {
@@ -4013,7 +4020,12 @@
                 }
             } finally {
                 if (btn) btn.disabled = false;
-                if (icon) icon.innerText = '🔄';
+                if (icon) {
+                    icon.innerText = isManual ? '✅' : '🔄';
+                    if (isManual) {
+                        setTimeout(() => { if (icon) icon.innerText = '🔄'; }, 2500);
+                    }
+                }
                 if (text) text.innerText = 'ดึงราคา & เรทเงินล่าสุด';
             }
         };
