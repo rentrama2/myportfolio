@@ -981,7 +981,7 @@
                     <input type="hidden" id="allocatorTargetPortId">
 
                     <div class="card p-3 mb-3 border-0 bg-light" style="border-radius: 12px;">
-                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
                             <div>
                                 <span class="text-muted fw-bold" style="font-size: 0.85rem;">พอร์ตเป้าหมาย:</span>
                                 <strong id="allocatorTargetPortName" class="fs-5 text-primary ms-2">US Stocks</strong>
@@ -990,6 +990,10 @@
                                 <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3" onclick="toggleSelectAllStocks(true)">เลือกทั้งหมด</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3" onclick="toggleSelectAllStocks(false)">ยกเลิกทั้งหมด</button>
                             </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 pt-2 border-top flex-wrap">
+                            <span class="text-muted fw-bold" style="font-size: 0.8rem;">หากเอาติ๊กออก (ย้ายหุ้นที่ไม่ได้เลือกไปยัง):</span>
+                            <select id="allocatorUncheckTargetPort" class="form-select form-select-sm border-secondary fw-bold" style="width: auto; font-size: 0.8rem;"></select>
                         </div>
                     </div>
 
@@ -1015,6 +1019,23 @@
                             <button type="button" class="btn btn-primary px-4 fw-bold" onclick="saveStockAllocation()">💾 บันทึกการจัดพอร์ต</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Quick Move Stock (ย้ายหุ้นไปยังพอร์ตอื่นทันที) -->
+    <div class="modal fade" id="quickMoveModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-body p-4 text-center">
+                    <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-circle mb-3" style="width: 50px; height: 50px; font-size: 1.5rem;">
+                        ⇄
+                    </div>
+                    <h5 class="fw-bold mb-1" id="quickMoveModalTitle">ย้ายหุ้น</h5>
+                    <p class="text-muted small mb-3" id="quickMoveModalDesc">เลือกพอร์ตปลายทางที่ต้องการย้ายไป:</p>
+                    <div id="quickMoveModalPortList" class="d-grid gap-2 mb-2"></div>
+                    <button type="button" class="btn btn-sm btn-light border w-100 mt-2" data-bs-dismiss="modal">ยกเลิก</button>
                 </div>
             </div>
         </div>
@@ -1938,6 +1959,23 @@
             document.getElementById('allocatorTargetPortName').innerText = p.name;
             document.getElementById('allocatorModalTitle').innerText = `📦 จัดการหุ้นสำหรับพอร์ต: ${p.name}`;
 
+            // ตัวเลือกพอร์ตปลายทางสำหรับหุ้นที่ไม่ได้เลือก (เอาติ๊กออก)
+            const uncheckSel = document.getElementById('allocatorUncheckTargetPort');
+            if (uncheckSel) {
+                let uncheckHtml = '';
+                portfolios.forEach(otherP => {
+                    if (otherP.id !== p.id) {
+                        uncheckHtml += `<option value="${otherP.id}">💼 ${otherP.name}</option>`;
+                    }
+                });
+                uncheckSel.innerHTML = uncheckHtml || `<option value="core">💼 Core Port</option>`;
+                // Default ให้ไป Satellite Port หากพอร์ตเป้าหมายเป็น Retirement
+                if (p.name.toLowerCase().includes('retire')) {
+                    const satP = portfolios.find(x => x.id === 'satellite' || x.name.toLowerCase().includes('satellite'));
+                    if (satP) uncheckSel.value = satP.id;
+                }
+            }
+
             let allHoldings = {};
             transactions.forEach(t => {
                 if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW') return;
@@ -2007,6 +2045,8 @@
             const targetPort = portfolios.find(x => x.id === targetPortId);
             if (!targetPort) return;
 
+            const uncheckTargetId = document.getElementById('allocatorUncheckTargetPort')?.value || 'core';
+
             let checkedTickers = new Set();
             document.querySelectorAll('.alloc-check:checked').forEach(cb => {
                 checkedTickers.add(cb.value);
@@ -2022,7 +2062,7 @@
                     if (checkedTickers.has(t.ticker)) {
                         t.portfolio = targetPortId;
                     } else if (t.portfolio === targetPortId) {
-                        t.portfolio = 'core';
+                        t.portfolio = uncheckTargetId;
                     }
                 }
             });
@@ -2041,24 +2081,99 @@
             alert(`จัดสรรหุ้นเข้าพอร์ต "${targetPort.name}" สำเร็จเรียบร้อยครับ! 🎉`);
         };
 
+        let quickMoveCurrentTicker = '';
         window.quickMoveStock = function(ticker) {
-            let pList = portfolios.map((p, idx) => `${idx + 1}. ${p.name}`).join('\n');
-            let ans = prompt(`เลือกพอร์ตที่ต้องการย้ายหุ้น ${ticker} ไป:\n${pList}\n\nกรุณาพิมพ์หมายเลขพอร์ต (1 - ${portfolios.length}):`);
-            if (!ans) return;
-            let idx = parseInt(ans) - 1;
-            if (idx >= 0 && idx < portfolios.length) {
-                let targetPort = portfolios[idx];
-                transactions.forEach(t => {
-                    if (t.ticker === ticker) t.portfolio = targetPort.id;
-                });
-                localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
-                renderPortfolioCards();
-                updateSummaryAndChart();
-                renderTable();
-                alert(`ย้ายหุ้น ${ticker} ไปยังพอร์ต "${targetPort.name}" สำเร็จเรียบร้อยครับ!`);
-            } else {
-                alert("หมายเลขพอร์ตไม่ถูกต้องครับ");
+            quickMoveCurrentTicker = ticker;
+            const modalEl = document.getElementById('quickMoveModal');
+            if (!modalEl) {
+                let pList = portfolios.map((p, idx) => `${idx + 1}. ${p.name}`).join('\n');
+                let ans = prompt(`เลือกพอร์ตที่ต้องการย้ายหุ้น ${ticker} ไป:\n${pList}\n\nกรุณาพิมพ์หมายเลขพอร์ต (1 - ${portfolios.length}):`);
+                if (!ans) return;
+                let idx = parseInt(ans) - 1;
+                if (idx >= 0 && idx < portfolios.length) {
+                    executeQuickMove(portfolios[idx].id);
+                }
+                return;
             }
+
+            document.getElementById('quickMoveModalTitle').innerText = `ย้ายหุ้น ${ticker}`;
+            const descEl = document.getElementById('quickMoveModalDesc');
+            
+            let curPortId = 'core';
+            for (let t of transactions) {
+                if (t.ticker === ticker && t.portfolio) {
+                    curPortId = t.portfolio;
+                    break;
+                }
+            }
+            const curP = portfolios.find(x => x.id === curPortId);
+            descEl.innerText = `ปัจจุบันอยู่ใน: ${curP ? curP.name : 'Core Port'}`;
+
+            const listContainer = document.getElementById('quickMoveModalPortList');
+            let btnsHtml = '';
+            portfolios.forEach(p => {
+                const isCurrent = (p.id === curPortId);
+                btnsHtml += `
+                    <button type="button" class="btn ${isCurrent ? 'btn-outline-secondary disabled opacity-50' : 'btn-outline-primary fw-bold'} py-2 px-3 text-start d-flex justify-content-between align-items-center" onclick="executeQuickMove('${p.id}')" ${isCurrent ? 'disabled' : ''}>
+                        <span>💼 ${p.name}</span>
+                        ${isCurrent ? '<small class="badge bg-secondary">พอร์ตปัจจุบัน</small>' : '<small class="text-primary fw-bold">ย้ายมานี่ ➔</small>'}
+                    </button>
+                `;
+            });
+            listContainer.innerHTML = btnsHtml;
+
+            const modal = new bootstrap.Modal(modalEl);
+            modal.show();
+        };
+
+        window.executeQuickMove = function(targetPortId) {
+            if (!quickMoveCurrentTicker) return;
+            const targetPort = portfolios.find(x => x.id === targetPortId);
+            if (!targetPort) return;
+
+            transactions.forEach(t => {
+                if (t.ticker === quickMoveCurrentTicker) {
+                    t.portfolio = targetPort.id;
+                }
+            });
+            localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
+
+            const modalEl = document.getElementById('quickMoveModal');
+            if (modalEl) {
+                const modalInstance = bootstrap.Modal.getInstance(modalEl);
+                if (modalInstance) modalInstance.hide();
+            }
+
+            renderPortfolioCards();
+            updateSummaryAndChart();
+            renderTable();
+            alert(`ย้ายหุ้น ${quickMoveCurrentTicker} ไปยังพอร์ต "${targetPort.name}" สำเร็จเรียบร้อยครับ! 🎉`);
+        };
+
+        window.moveRetirementOverlapToSatellite = function() {
+            let satPort = portfolios.find(p => p.id === 'satellite' || p.name.toLowerCase().includes('satellite'));
+            if (!satPort) {
+                satPort = portfolios.find(p => p.id !== 'core' && !p.name.toLowerCase().includes('retire')) || portfolios[0];
+            }
+            if (!satPort) {
+                alert('ไม่พบพอร์ต Satellite ในระบบครับ');
+                return;
+            }
+
+            const overlapTickers = ['GRID', 'XLV', 'SPMO'];
+            let count = 0;
+            transactions.forEach(t => {
+                if (overlapTickers.includes(t.ticker)) {
+                    t.portfolio = satPort.id;
+                    count++;
+                }
+            });
+
+            localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
+            renderPortfolioCards();
+            updateSummaryAndChart();
+            renderTable();
+            alert(`ย้ายหุ้น GRID, XLV, SPMO ไปยังพอร์ต "${satPort.name}" สำเร็จเรียบร้อยครับ! 🎉\n(ตอนนี้ Retirement Port จะเหลือเฉพาะ 4 ตัว: JEPQ, JEPI, SCHD, SPYD พอดี)`);
         };
 
         // --- DARK MODE LOGIC ---
@@ -5053,11 +5168,31 @@
             window.cachedHoldingItems = holdingItems;
             renderHoldingsTable();
 
-            // Render TP / SL Alerts Banner
+            // Render TP / SL Alerts Banner & Retirement Overlap Alert
             let alertContainer = document.getElementById('stockTargetAlertContainer');
             if (alertContainer) {
+                let alertHTML = '';
+
+                // ตรวจสอบกรณีดูพอร์ต Retirement แล้วพบหุ้นทับซ้อน (GRID, XLV, SPMO)
+                const curPortObj = portfolios.find(p => p.id === activePortfolioId);
+                const isRetirePort = curPortObj && (curPortObj.name.toLowerCase().includes('retire') || curPortObj.id.toLowerCase().includes('retire'));
+                const overlapTickers = ['GRID', 'XLV', 'SPMO'];
+                const hasRetireOverlap = isRetirePort && overlapTickers.some(tk => holdings[tk] && holdings[tk].shares > 0.0001);
+
+                if (hasRetireOverlap) {
+                    alertHTML += `
+                        <div class="alert alert-warning border-warning d-flex justify-content-between align-items-center py-2 px-3 mb-2 rounded-3 shadow-sm flex-wrap gap-2">
+                            <div>
+                                <span class="fs-5 me-1">💡</span><strong>พบหุ้นทับซ้อนกับ Satellite Port (GRID, XLV, SPMO):</strong> Retirement Port ควรมีเฉพาะ 4 ตัวหลัก (JEPQ, JEPI, SCHD, SPYD)
+                            </div>
+                            <button class="btn btn-sm btn-dark text-white fw-bold rounded-pill px-3 shadow-sm" onclick="moveRetirementOverlapToSatellite()">
+                                ⚡ ย้าย 3 ตัวนี้ไป Satellite Port ทันที
+                            </button>
+                        </div>
+                    `;
+                }
+
                 if (targetAlerts.length > 0) {
-                    let alertHTML = '';
                     targetAlerts.forEach(al => {
                         if (al.type === 'TP') {
                             alertHTML += `
