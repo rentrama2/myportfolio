@@ -1369,7 +1369,7 @@
                             <table class="table table-hover text-center align-middle m-0" style="font-size: 0.95rem;">
                                 <thead style="background-color: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
                                     <tr>
-                                        <th class="py-3 border-0">หุ้น / กลุ่มพอร์ต</th>
+                                        <th class="py-3 border-0">ชื่อหุ้น / ETF</th>
                                         <th class="py-3 border-0">จำนวนหุ้น</th>
                                         <th class="py-3 border-0">ราคาต้นทุน<br><small class="text-muted">(เฉลี่ยต่อหุ้น USD)</small></th>
                                         <th class="py-3 border-0">ทุนรวม (THB)<br><small class="text-muted" id="thCostSub">อิงเรทเงิน Dime</small></th>
@@ -5696,36 +5696,60 @@
             // 7. Render Rows
             let html = '';
 
-            const renderRow = (item) => `
+            const renderRow = (item) => {
+                let targetInfo = '';
+                if (stockTargets[item.ticker]) {
+                    let t = stockTargets[item.ticker];
+                    if (t.tp || t.sl) {
+                        targetInfo = ` (${t.tp ? 'TP: $' + t.tp : ''}${t.tp && t.sl ? ' | ' : ''}${t.sl ? 'SL: $' + t.sl : ''})`;
+                    }
+                }
+
+                return `
                 <tr>
                     <td class="border-end-0 py-3 text-start">
-                        <div class="d-flex align-items-center mb-1">
-                            <div class="position-relative me-2 flex-shrink-0" style="width: 38px; height: 38px;">
-                                <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" 
-                                     alt="${item.ticker}" 
-                                     class="rounded-circle border bg-white p-1 shadow-sm" 
-                                     width="38" height="38" 
-                                     style="object-fit: contain;"
-                                     onerror="this.onerror=null; this.src='https://financialmodelingprep.com/image-stock/${item.ticker}.png'; this.onerror=() => { this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex'; };"
-                                     loading="lazy">
-                                <div class="rounded-circle bg-light border text-primary fw-bold justify-content-center align-items-center shadow-sm" 
-                                     style="width: 38px; height: 38px; font-size: 0.75rem; display: none;">
-                                    ${item.ticker.slice(0, 3)}
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center overflow-hidden me-2">
+                                <div class="position-relative me-2 flex-shrink-0" style="width: 38px; height: 38px;">
+                                    <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" 
+                                         alt="${item.ticker}" 
+                                         class="rounded-circle border bg-white p-1 shadow-sm" 
+                                         width="38" height="38" 
+                                         style="object-fit: contain;"
+                                         onerror="this.onerror=null; this.src='https://financialmodelingprep.com/image-stock/${item.ticker}.png'; this.onerror=() => { this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex'; };"
+                                         loading="lazy">
+                                    <div class="rounded-circle bg-light border text-primary fw-bold justify-content-center align-items-center shadow-sm" 
+                                         style="width: 38px; height: 38px; font-size: 0.75rem; display: none;">
+                                        ${item.ticker.slice(0, 3)}
+                                    </div>
+                                </div>
+                                <div class="text-start overflow-hidden">
+                                    <div class="fw-bold fs-6 lh-sm text-body" style="letter-spacing: -0.2px;">${item.ticker}</div>
+                                    <div class="text-primary text-truncate lh-sm mt-1" style="font-size: 0.78rem; max-width: 250px; font-weight: 500;" title="${item.fullName}">
+                                        ${item.fullName}
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-start overflow-hidden">
-                                <div class="fw-bold fs-6 lh-sm text-body" style="letter-spacing: -0.2px;">${item.ticker}</div>
-                                <div class="text-primary text-truncate lh-sm mt-1" style="font-size: 0.78rem; max-width: 240px; font-weight: 500;" title="${item.fullName}">
-                                    ${item.fullName}
-                                </div>
+                            <div class="dropdown flex-shrink-0" onclick="event.stopPropagation()">
+                                <button class="btn btn-sm btn-link text-muted p-1 text-decoration-none fw-bold" 
+                                        type="button" 
+                                        data-bs-toggle="dropdown" 
+                                        aria-expanded="false" 
+                                        title="เมนูจัดการ ${item.ticker}" 
+                                        style="font-size: 1.15rem; line-height: 1; opacity: 0.5;"
+                                        onmouseover="this.style.opacity='1'"
+                                        onmouseout="this.style.opacity='0.5'">
+                                    •••
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.82rem; min-width: 200px; z-index: 1050;">
+                                    <li><h6 class="dropdown-header text-uppercase fw-bold text-muted py-1" style="font-size: 0.7rem;">${item.ticker} • จัดการ</h6></li>
+                                    <li><a class="dropdown-item py-1.5" href="javascript:void(0)" onclick="quickMoveStock('${item.ticker}', '${item.portId}')">💼 ย้ายพอร์ต (${item.portName}) ⇄</a></li>
+                                    <li><a class="dropdown-item py-1.5 text-danger" href="javascript:void(0)" onclick="openTrimForTicker('${item.ticker}')">✂️ Trim / ล็อกกำไร</a></li>
+                                    <li><a class="dropdown-item py-1.5 text-primary" href="javascript:void(0)" onclick="openStockTargetModal('${item.ticker}')">🎯 ตั้งเป้า TP / SL${targetInfo}</a></li>
+                                    <li><hr class="dropdown-divider my-1"></li>
+                                    <li><a class="dropdown-item py-1.5 text-secondary" href="javascript:void(0)" onclick="changeGroup('${item.ticker}')">📁 จัดกลุ่ม (${item.groupName})</a></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="text-start">
-                            <span class="badge group-badge mt-1" onclick="changeGroup('${item.ticker}')">📁 ${item.groupName}</span>
-                            ${activePortfolioId === 'ALL' ? `<span class="badge bg-light text-secondary border mt-1 ms-1" style="font-size: 0.7rem;">💼 ${item.portName}</span>` : ''}
-                            <span class="badge rounded-pill bg-light text-primary border mt-1 ms-1" style="cursor: pointer; font-size: 0.72rem;" onclick="quickMoveStock('${item.ticker}', '${item.portId}')" title="คลิกเพื่อย้ายหุ้นนี้ไปพอร์ตอื่น">ย้ายพอร์ต ⇄</span>
-                            <span class="badge rounded-pill bg-light text-danger border mt-1 ms-1" style="cursor: pointer; font-size: 0.72rem;" onclick="openTrimForTicker('${item.ticker}')" title="คำนวณการขายลดสัดส่วน/ล็อกกำไรสำหรับ ${item.ticker}">✂️ Trim</span>
-                            ${item.targetBadge ? `<br>${item.targetBadge}` : ''}
                         </div>
                     </td>
                     <td class="border-0 py-3">${item.shares.toFixed(7)}</td>
