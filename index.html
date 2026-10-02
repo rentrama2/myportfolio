@@ -1443,12 +1443,8 @@
                                     <div class="d-flex justify-content-between mt-1 align-items-center">
                                         <div class="form-check" id="vatWrapper"><input class="form-check-input" style="transform: scale(0.8);" type="checkbox" id="txnVat" disabled><label class="form-check-label text-muted" style="font-size: 0.7rem;">+ VAT</label></div>
                                         <div class="form-check" id="dimePromoWrapper"><input class="form-check-input" style="transform: scale(0.8);" type="checkbox" id="dimePromo"><label class="form-check-label text-success" style="font-size: 0.7rem;">ฟรีคอม</label></div>
-                                        <div class="form-check d-none" id="divTaxCheckWrapper">
-                                            <input class="form-check-input" style="transform: scale(0.8);" type="checkbox" id="divTaxDeductCheck" checked>
-                                            <label class="form-check-label text-danger fw-semibold" style="font-size: 0.7rem;" title="หักภาษี 15% WHT อัตโนมัติ (เอาติ๊กออกถ้าเป็นยอดสุทธิที่ได้รับแล้ว)">หักภาษี 15%</label>
-                                        </div>
                                         <div class="d-none" id="divFreeNoticeWrapper">
-                                            <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25" style="font-size: 0.68rem;" title="ปันผลไม่มีค่าธรรมเนียม">✓ ฟรีค่าคอมฯ</span>
+                                            <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25" style="font-size: 0.68rem;" title="ยอดที่ใส่คือยอดสุทธิเข้าพอร์ตเต็มจำนวน ไม่มีค่าธรรมเนียม">✓ ยอดสุทธิ (ฟรีค่าธรรมเนียม)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1517,7 +1513,7 @@
                                         <th class="border-0 py-3">ประเภท</th>
                                         <th class="border-0 py-3">หุ้น</th>
                                         <th class="border-0 py-3">จำนวน</th>
-                                        <th class="border-0 py-3">ราคา(USD)</th>
+                                        <th class="border-0 py-3" title="ราคาต่อหุ้นสำหรับการซื้อขาย หรือยอดเงินปันผลสุทธิ">ราคา / ปันผล(USD)</th>
                                         <th class="border-0 py-3" title="ค่าคอมมิชชั่นซื้อขาย / ภาษีหัก ณ ที่จ่ายปันผล">ค่าธรรมเนียม / ภาษี</th>
                                         <th class="border-0 text-primary py-3">ยอดสุทธิ(USD)</th>
                                         <th class="border-0 text-danger py-3">ยอดสุทธิ(THB)</th>
@@ -3723,20 +3719,14 @@
             const promoCheck = document.getElementById('dimePromo');
 
             if (type === 'DIVIDEND') {
-                const grossDiv = price; // In dividend mode, txnPrice is gross dividend USD
-                const divTaxCheck = document.getElementById('divTaxDeductCheck');
-                let wht = 0;
-                if (!divTaxCheck || divTaxCheck.checked) {
-                    wht = Number((grossDiv * 0.15).toFixed(2));
-                }
-                document.getElementById('txnComm').value = wht;
+                document.getElementById('txnComm').value = 0;
                 document.getElementById('txnCommCurr').value = 'USD';
                 document.getElementById('txnVat').checked = false;
                 document.getElementById('txnVat').disabled = true;
                 promoCheck.checked = false;
                 promoCheck.disabled = true;
                 
-                const netUSD = grossDiv - wht;
+                const netUSD = price; // ยอดที่ใส่คือยอดสุทธิที่ได้รับจริง
                 document.getElementById('txnTotalTHB').placeholder = `ประมาณ ฿${(netUSD * liveFxRate).toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
                 return;
             }
@@ -3780,11 +3770,6 @@
             }
         }
 
-        const divTaxCheckEl = document.getElementById('divTaxDeductCheck');
-        if (divTaxCheckEl) {
-            divTaxCheckEl.addEventListener('change', autoCalculateDimeFees);
-        }
-
         document.getElementById('txnType').addEventListener('change', function() {
             const type = this.value;
             const isDiv = type === 'DIVIDEND';
@@ -3797,12 +3782,10 @@
             document.getElementById('txnCommCurr').disabled = isCash || isDiv;
             document.getElementById('dimePromo').disabled = isCash || isDiv;
 
-            const divTaxWrap = document.getElementById('divTaxCheckWrapper');
             const divFreeWrap = document.getElementById('divFreeNoticeWrapper');
             const vatWrap = document.getElementById('vatWrapper');
             const dimePromoWrap = document.getElementById('dimePromoWrapper');
 
-            if (divTaxWrap) divTaxWrap.classList.toggle('d-none', !isDiv);
             if (divFreeWrap) divFreeWrap.classList.toggle('d-none', !isDiv);
             if (vatWrap) vatWrap.classList.toggle('d-none', isDiv || isCash);
             if (dimePromoWrap) dimePromoWrap.classList.toggle('d-none', isDiv || isCash);
@@ -3819,10 +3802,17 @@
                 if(document.getElementById('txnTicker').value === 'CASH') document.getElementById('txnTicker').value = '';
                 document.getElementById('lblShares').innerText = isDiv ? 'จำนวนหุ้น (ข้ามได้)' : 'จำนวนหุ้น';
                 document.getElementById('txnShares').readOnly = isDiv;
-                document.getElementById('lblPrice').innerText = isDiv ? 'ยอดปันผลรวม (Gross USD)' : 'ราคา (USD)';
-                document.getElementById('lblComm').innerText = isDiv ? 'ภาษีหัก ณ ที่จ่าย 15% WHT' : 'ค่าคอมฯ Dime (USD)';
+                document.getElementById('lblPrice').innerText = isDiv ? 'ยอดปันผลสุทธิ (Net USD)' : 'ราคา (USD)';
+                document.getElementById('lblComm').innerText = isDiv ? 'ค่าธรรมเนียม / ภาษี' : 'ค่าคอมฯ Dime (USD)';
                 document.getElementById('lblTotalTHB').innerText = isDiv ? 'เงินบาทสุทธิที่เข้าบัญชี (ข้ามได้)' : 'เงินบาทที่จ่ายจริง (THB) - ข้ามได้';
                 document.getElementById('txnTotalTHB').required = false;
+
+                if (isDiv) {
+                    document.getElementById('txnComm').value = 0;
+                    document.getElementById('txnComm').readOnly = true;
+                } else {
+                    document.getElementById('txnComm').readOnly = false;
+                }
                 
                 if(editingIndex === -1) {
                     document.getElementById('txnShares').value = isDiv ? 0 : '';
@@ -4318,16 +4308,26 @@
                 let txn = transactions[i];
                 if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') continue;
 
+                // แก้ไขรายการปันผลเดิมที่เคยถูกระบบหักค่าธรรมเนียม/ภาษี 15% ซ้ำ (เนื่องจากยอดที่ผู้ใช้ใส่คือยอดสุทธิแล้ว)
+                if (txn.type === 'DIVIDEND' && txn.comm > 0) {
+                    txn.comm = 0;
+                    txn.commTHB = 0;
+                    txn.commCurr = 'USD';
+                    let historicalRate = await getHistoricalFx(txn.date);
+                    txn.totalTHB = Number((txn.price * historicalRate).toFixed(2));
+                    hasChanged = true;
+                }
+
                 if (!txn.commCurr) {
                     txn.commCurr = 'USD';
-                    txn.commTHB = txn.comm; 
+                    txn.commTHB = txn.comm || 0; 
                     hasChanged = true;
                 }
 
                 let parsedTHB = parseFloat(txn.totalTHB);
                 if(isNaN(parsedTHB) || parsedTHB <= 0) {
                     let usdAmount = Number((txn.shares * txn.price).toFixed(2));
-                    let totalUSD = txn.type === 'DIVIDEND' ? (txn.price - txn.comm) : (txn.type === 'BUY' ? usdAmount + txn.comm : usdAmount - txn.comm);
+                    let totalUSD = txn.type === 'DIVIDEND' ? txn.price : (txn.type === 'BUY' ? usdAmount + txn.comm : usdAmount - txn.comm);
                     let historicalRate = await getHistoricalFx(txn.date);
                     txn.totalTHB = Number((totalUSD * historicalRate).toFixed(2));
                     hasChanged = true;
@@ -6116,14 +6116,13 @@
                     } else if(txn.type === 'SELL') {
                         totalUSD = usdAmount - txn.comm; typeBadge = '<span class="badge bg-danger">ขาย</span>'; commText = showCommText;
                     } else if(txn.type === 'DIVIDEND') {
-                        totalUSD = txn.price - txn.comm; 
+                        totalUSD = txn.price; 
                         typeBadge = '<span class="badge bg-info">ปันผล</span>'; 
-                        commText = txn.comm === 0 
-                            ? '<span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 py-1 px-2" style="font-size:0.75rem;">ฟรี ($0)</span>' 
-                            : `<div class="d-inline-flex flex-column align-items-center"><span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 py-1 px-2" style="font-size:0.72rem; font-weight:600;" title="ภาษีหัก ณ ที่จ่าย 15% (US Withholding Tax ตามแบบ W-8BEN) • ปันผลไม่มีค่าธรรมเนียม">ภาษี -$${txn.comm.toFixed(2)}</span><small class="text-success mt-1" style="font-size:0.68rem; font-weight:600;" title="Dime ไม่มีค่าธรรมเนียมรับเงินปันผล">✓ ฟรีค่าธรรมเนียม</small></div>`; 
+                        commText = '<span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 py-1 px-2" style="font-size:0.75rem;">ฟรี ($0)</span>'; 
                         displayShares = '-';
-                        displayPrice = `$${txn.price.toFixed(2)}<br><small class="text-muted" style="font-size:0.68rem;">(ยอดก่อนภาษี)</small>`;
-                        displayTHB = `<strong class="text-success">+฿${parseFloat(txn.totalTHB || 0).toLocaleString('th-TH', {minimumFractionDigits: 2})}</strong>`;
+                        displayPrice = `$${txn.price.toFixed(2)}`;
+                        let thbVal = parseFloat(txn.totalTHB) || (txn.price * liveFxRate);
+                        displayTHB = `<strong class="text-success">+฿${thbVal.toLocaleString('th-TH', {minimumFractionDigits: 2})}</strong>`;
                     } else if(txn.type === 'DEPOSIT') {
                         typeBadge = '<span class="badge bg-dark">ฝากเงิน</span>'; commText = '-'; displayShares = '-'; displayPrice = '-'; totalUSD = 0; displayTHB = `<strong class="text-success">+฿${txn.totalTHB.toLocaleString('th-TH')}</strong>`;
                     } else if(txn.type === 'WITHDRAW') {
@@ -6132,7 +6131,7 @@
                     
                     let showUSD = totalUSD > 0 ? `$${totalUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}` : '-';
                     if (txn.type === 'DIVIDEND' && totalUSD > 0) {
-                        showUSD = `<strong class="text-primary">+$${totalUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</strong><br><small class="text-muted" style="font-size:0.68rem;">(รับสุทธิ)</small>`;
+                        showUSD = `<strong class="text-primary">+$${totalUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</strong>`;
                     }
 
                     let pObj = portfolios.find(p => p.id === (txn.portfolio || 'core'));
@@ -6179,9 +6178,7 @@
                 document.getElementById('txnTotalTHB').value = txn.totalTHB;
             } else if(txn.type === 'DIVIDEND') {
                 document.getElementById('txnPrice').value = txn.price; 
-                document.getElementById('txnComm').value = txn.comm;
-                const divTaxCheck = document.getElementById('divTaxDeductCheck');
-                if (divTaxCheck) divTaxCheck.checked = (txn.comm > 0);
+                document.getElementById('txnComm').value = 0;
             } else {
                 document.getElementById('txnShares').value = txn.shares; document.getElementById('txnPrice').value = txn.price;
                 
@@ -6221,8 +6218,7 @@
             editingIndex = -1;
             delete document.getElementById('dimePromo').dataset.userOverridden;
             document.getElementById('txnForm').reset();
-            const divTaxCheck = document.getElementById('divTaxDeductCheck');
-            if (divTaxCheck) divTaxCheck.checked = true;
+            document.getElementById('txnComm').readOnly = false;
             document.getElementById('txnType').value = 'BUY';
             document.getElementById('txnType').dispatchEvent(new Event('change'));
             const btn = document.getElementById('btnSubmitTxn'); btn.innerText = 'บันทึก'; btn.classList.replace('btn-warning', 'btn-dark'); btn.classList.replace('w-50', 'w-25');
@@ -6267,11 +6263,12 @@
                     savedCommTHB = 0; 
                 }
             } else if (typeVal === 'DIVIDEND') {
-                actualCommUSD = inputComm; 
+                actualCommUSD = 0; 
+                savedCommTHB = 0;
             }
 
             if (typeVal !== 'DEPOSIT' && typeVal !== 'WITHDRAW' && (isNaN(totalTHB) || totalTHB <= 0)) {
-                let totalUSD = typeVal === 'DIVIDEND' ? priceVal - actualCommUSD : (typeVal === 'BUY' ? baseUSD + actualCommUSD : baseUSD - actualCommUSD);
+                let totalUSD = typeVal === 'DIVIDEND' ? priceVal : (typeVal === 'BUY' ? baseUSD + actualCommUSD : baseUSD - actualCommUSD);
                 let historicalRate = await getHistoricalFx(dateVal);
                 totalTHB = Number((totalUSD * historicalRate).toFixed(2));
             }
@@ -6279,7 +6276,7 @@
             const portVal = document.getElementById('txnPortfolio') ? document.getElementById('txnPortfolio').value : 'core';
             const newTxn = { 
                 date: dateVal, ticker: tickerVal, type: typeVal, shares: sharesVal, 
-                price: priceVal, comm: actualCommUSD, commTHB: savedCommTHB, commCurr: commCurrVal, 
+                price: priceVal, comm: (typeVal === 'DIVIDEND' ? 0 : actualCommUSD), commTHB: savedCommTHB, commCurr: commCurrVal, 
                 totalTHB: totalTHB,
                 portfolio: portVal || 'core'
             };
