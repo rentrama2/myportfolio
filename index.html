@@ -1026,7 +1026,7 @@
 
     <!-- Modal: Quick Move Stock (ย้ายหุ้นไปยังพอร์ตอื่นทันที) -->
     <div class="modal fade" id="quickMoveModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 390px;">
             <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
                 <div class="modal-body p-4 text-center">
                     <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-circle mb-3" style="width: 50px; height: 50px; font-size: 1.5rem;">
@@ -1824,6 +1824,9 @@
                                     <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.85rem;">
                                         <li><a class="dropdown-item" href="javascript:void(0)" onclick="openPortfolioModal('${p.id}')">✏️ แก้ไขชื่อ/โน้ต</a></li>
                                         <li><a class="dropdown-item fw-bold text-primary" href="javascript:void(0)" onclick="openStockAllocatorModal('${p.id}', event)">📦 จัดการ/ย้ายหุ้นเข้าพอร์ตนี้</a></li>
+                                        ${(p.name.toLowerCase().includes('retire') && m.tickers.some(tk => ['GRID', 'XLV', 'SPMO'].includes(tk))) ? `
+                                            <li><a class="dropdown-item fw-bold text-warning" href="javascript:void(0)" onclick="moveRetirementOverlapToSatellite(event)">⚡ ย้ายหุ้นทับซ้อนไป Satellite Port</a></li>
+                                        ` : ''}
                                         ${p.id !== 'core' ? `<li><hr class="dropdown-divider"></li><li><a class="dropdown-item text-danger" href="javascript:void(0)" onclick="deletePortfolio('${p.id}', event)">🗑️ ลบพอร์ตนี้</a></li>` : ''}
                                     </ul>
                                 </div>
@@ -2094,9 +2097,24 @@
         };
 
         let quickMoveCurrentTicker = '';
-        window.quickMoveStock = function(ticker) {
+        let quickMoveSourcePortId = '';
+        window.quickMoveStock = function(ticker, fromPortId = null) {
             quickMoveCurrentTicker = ticker;
             const modalEl = document.getElementById('quickMoveModal');
+
+            // ตรวจสอบพอร์ตต้นทาง (Source Portfolio) ให้ถูกต้องแม่นยำ
+            let curPortId = fromPortId;
+            if (!curPortId) {
+                if (activePortfolioId && activePortfolioId !== 'ALL') {
+                    curPortId = activePortfolioId;
+                } else {
+                    const matchingTxn = transactions.find(t => t.ticker === ticker && t.portfolio);
+                    if (matchingTxn) curPortId = matchingTxn.portfolio;
+                }
+            }
+            if (!curPortId) curPortId = 'core';
+            quickMoveSourcePortId = curPortId;
+
             if (!modalEl) {
                 let pList = portfolios.map((p, idx) => `${idx + 1}. ${p.name}`).join('\n');
                 let ans = prompt(`เลือกพอร์ตที่ต้องการย้ายหุ้น ${ticker} ไป:\n${pList}\n\nกรุณาพิมพ์หมายเลขพอร์ต (1 - ${portfolios.length}):`);
@@ -2108,6 +2126,9 @@
                 return;
             }
 
+            const curP = portfolios.find(x => x.id === curPortId);
+            const curPortName = curP ? curP.name : 'Core Port';
+
             document.getElementById('quickMoveModalTitle').innerHTML = `
                 <div class="d-flex align-items-center justify-content-center gap-2">
                     <img src="https://assets.parqet.com/logos/symbol/${ticker}" class="rounded-circle border bg-white p-1" width="30" height="30" style="object-fit: contain;" onerror="this.style.display='none'">
@@ -2116,25 +2137,33 @@
                 ${stockNames[ticker] ? `<small class="text-primary fw-medium d-block mt-1" style="font-size: 0.8rem;">${stockNames[ticker]}</small>` : ''}
             `;
             const descEl = document.getElementById('quickMoveModalDesc');
-            
-            let curPortId = 'core';
-            for (let t of transactions) {
-                if (t.ticker === ticker && t.portfolio) {
-                    curPortId = t.portfolio;
-                    break;
-                }
-            }
-            const curP = portfolios.find(x => x.id === curPortId);
-            descEl.innerText = `ปัจจุบันอยู่ใน: ${curP ? curP.name : 'Core Port'}`;
+            descEl.innerHTML = `ปัจจุบันอยู่ใน: <strong class="text-dark">💼 ${curPortName}</strong><br><small class="text-muted">คลิกเลือกพอร์ตปลายทางที่ต้องการย้ายไป:</small>`;
+
+            const isRetireSource = curPortName.toLowerCase().includes('retire') || curPortId.toLowerCase().includes('retire');
+            const isOverlapTicker = ['GRID', 'XLV', 'SPMO'].includes(ticker);
 
             const listContainer = document.getElementById('quickMoveModalPortList');
             let btnsHtml = '';
+
+            // แสดงตัวช่วย 1-คลิก หากเปิดมาจาก Retirement Port และเป็นหุ้นที่ทับซ้อน (GRID, XLV, SPMO)
+            if (isRetireSource && isOverlapTicker) {
+                btnsHtml += `
+                    <div class="alert alert-warning border-warning p-2 mb-2 text-start rounded-3" style="font-size: 0.78rem;">
+                        <div class="fw-bold mb-1">💡 หุ้น ${ticker} ทับซ้อนกับ Satellite Port</div>
+                        <div class="text-muted mb-2">ย้ายทั้ง 3 ตัว (GRID, XLV, SPMO) ไป Satellite Port ทันที เพื่อให้ Retirement Port เหลือเฉพาะ 4 ตัวหลัก (JEPQ, JEPI, SCHD, SPYD)</div>
+                        <button type="button" class="btn btn-sm btn-dark w-100 fw-bold py-1 shadow-sm" onclick="moveRetirementOverlapToSatellite(event)">
+                            ⚡ ย้ายทั้ง 3 ตัวไป Satellite Port ทันที
+                        </button>
+                    </div>
+                `;
+            }
+
             portfolios.forEach(p => {
                 const isCurrent = (p.id === curPortId);
                 btnsHtml += `
-                    <button type="button" class="btn ${isCurrent ? 'btn-outline-secondary disabled opacity-50' : 'btn-outline-primary fw-bold'} py-2 px-3 text-start d-flex justify-content-between align-items-center" onclick="executeQuickMove('${p.id}')" ${isCurrent ? 'disabled' : ''}>
-                        <span>💼 ${p.name}</span>
-                        ${isCurrent ? '<small class="badge bg-secondary">พอร์ตปัจจุบัน</small>' : '<small class="text-primary fw-bold">ย้ายมานี่ ➔</small>'}
+                    <button type="button" class="btn ${isCurrent ? 'btn-light text-muted border disabled' : 'btn-outline-primary fw-semibold'} py-2 px-3 text-start d-flex justify-content-between align-items-center gap-2" onclick="executeQuickMove('${p.id}')" ${isCurrent ? 'disabled' : ''}>
+                        <span class="text-truncate">💼 ${p.name}</span>
+                        <span class="badge ${isCurrent ? 'bg-secondary' : 'bg-primary'} text-white rounded-pill px-2 py-1 text-nowrap flex-shrink-0" style="font-size: 0.75rem;">${isCurrent ? 'พอร์ตปัจจุบัน' : 'ย้ายมานี่ ➔'}</span>
                     </button>
                 `;
             });
@@ -2149,11 +2178,24 @@
             const targetPort = portfolios.find(x => x.id === targetPortId);
             if (!targetPort) return;
 
+            let movedCount = 0;
             transactions.forEach(t => {
                 if (t.ticker === quickMoveCurrentTicker) {
-                    t.portfolio = targetPort.id;
+                    if (!quickMoveSourcePortId || (t.portfolio || 'core') === quickMoveSourcePortId) {
+                        t.portfolio = targetPort.id;
+                        movedCount++;
+                    }
                 }
             });
+
+            if (movedCount === 0) {
+                transactions.forEach(t => {
+                    if (t.ticker === quickMoveCurrentTicker) {
+                        t.portfolio = targetPort.id;
+                    }
+                });
+            }
+
             localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
 
             const modalEl = document.getElementById('quickMoveModal');
@@ -2168,7 +2210,9 @@
             alert(`ย้ายหุ้น ${quickMoveCurrentTicker} ไปยังพอร์ต "${targetPort.name}" สำเร็จเรียบร้อยครับ! 🎉`);
         };
 
-        window.moveRetirementOverlapToSatellite = function() {
+        window.moveRetirementOverlapToSatellite = function(e) {
+            if (e && e.stopPropagation) e.stopPropagation();
+
             let satPort = portfolios.find(p => p.id === 'satellite' || p.name.toLowerCase().includes('satellite'));
             if (!satPort) {
                 satPort = portfolios.find(p => p.id !== 'core' && !p.name.toLowerCase().includes('retire')) || portfolios[0];
@@ -2188,6 +2232,13 @@
             });
 
             localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
+
+            const quickModalEl = document.getElementById('quickMoveModal');
+            if (quickModalEl) {
+                const modalInstance = bootstrap.Modal.getInstance(quickModalEl);
+                if (modalInstance) modalInstance.hide();
+            }
+
             renderPortfolioCards();
             updateSummaryAndChart();
             renderTable();
@@ -5111,7 +5162,8 @@
 
                 if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') return;
 
-                if(!holdings[txn.ticker]) holdings[txn.ticker] = { shares: 0, costUSD: 0, costTHB: 0 };
+                if(!holdings[txn.ticker]) holdings[txn.ticker] = { shares: 0, costUSD: 0, costTHB: 0, port: txn.portfolio || (activePortfolioId !== 'ALL' ? activePortfolioId : 'core') };
+                if(txn.portfolio) holdings[txn.ticker].port = txn.portfolio;
                 let usdAmount = Number((txn.shares * txn.price).toFixed(2));
                 
                 if(txn.type === 'BUY') {
@@ -5190,7 +5242,7 @@
                     // Stock Target (TP / SL) logic
                     let target = stockTargets[ticker];
                     let targetBadge = '';
-                    let portId = holdings[ticker].port || 'core';
+                    let portId = holdings[ticker].port || (activePortfolioId !== 'ALL' ? activePortfolioId : 'core');
                     let portObj = portfolios.find(p => p.id === portId);
                     let portName = portObj ? portObj.name : 'พอร์ตหลัก';
 
@@ -5645,7 +5697,7 @@
                         <div class="text-start">
                             <span class="badge group-badge mt-1" onclick="changeGroup('${item.ticker}')">📁 ${item.groupName}</span>
                             ${activePortfolioId === 'ALL' ? `<span class="badge bg-light text-secondary border mt-1 ms-1" style="font-size: 0.7rem;">💼 ${item.portName}</span>` : ''}
-                            <span class="badge rounded-pill bg-light text-primary border mt-1 ms-1" style="cursor: pointer; font-size: 0.72rem;" onclick="quickMoveStock('${item.ticker}')" title="คลิกเพื่อย้ายหุ้นนี้ไปพอร์ตอื่น">ย้ายพอร์ต ⇄</span>
+                            <span class="badge rounded-pill bg-light text-primary border mt-1 ms-1" style="cursor: pointer; font-size: 0.72rem;" onclick="quickMoveStock('${item.ticker}', '${item.portId}')" title="คลิกเพื่อย้ายหุ้นนี้ไปพอร์ตอื่น">ย้ายพอร์ต ⇄</span>
                             <span class="badge rounded-pill bg-light text-danger border mt-1 ms-1" style="cursor: pointer; font-size: 0.72rem;" onclick="openTrimForTicker('${item.ticker}')" title="คำนวณการขายลดสัดส่วน/ล็อกกำไรสำหรับ ${item.ticker}">✂️ Trim</span>
                             ${item.targetBadge ? `<br>${item.targetBadge}` : ''}
                         </div>
