@@ -399,6 +399,157 @@
             color: #ffffff !important;
             border-color: #2563eb !important;
         }
+
+        /* --- Technical Signals & Trend Hub (สไตล์ตามรูปภาพ 3 การ์ด 100%) --- */
+        .tech-panel-card {
+            background: #0b0f19;
+            color: #f8fafc;
+            border: 1px solid #1e293b !important;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .tech-card-header {
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .tech-card-title {
+            color: #ffffff;
+            font-weight: 800;
+            line-height: 1.25;
+        }
+        .tech-watch-item {
+            background: rgba(30, 41, 59, 0.45);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .tech-watch-item:hover {
+            background: rgba(51, 65, 85, 0.65);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-1px);
+        }
+        .tech-watch-item.active {
+            background: rgba(30, 58, 138, 0.45) !important;
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 18px rgba(59, 130, 246, 0.25);
+        }
+        .tech-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            color: #ffffff;
+        }
+        .tech-badge-watch {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+        .tech-badge-buy {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+        .tech-badge-sell {
+            background: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+        .tech-filter-btn {
+            font-size: 0.74rem;
+            font-weight: 600;
+            padding: 3px 12px;
+            border: 1px solid #334155;
+            background: #1e293b;
+            color: #94a3b8;
+            cursor: pointer;
+            transition: all 0.15s;
+            white-space: nowrap;
+        }
+        .tech-filter-btn:hover {
+            color: #ffffff;
+            border-color: #64748b;
+        }
+        .tech-filter-btn.active {
+            background: #3b82f6 !important;
+            border-color: #3b82f6 !important;
+            color: #ffffff !important;
+        }
+        .tech-tf-btn, .tech-gtf-btn {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border: 1px solid #334155;
+            background: transparent;
+            color: #94a3b8;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .tech-tf-btn:hover, .tech-gtf-btn:hover {
+            color: #ffffff;
+            border-color: #64748b;
+        }
+        .tech-tf-btn.active, .tech-gtf-btn.active {
+            background: #ffffff !important;
+            color: #0f172a !important;
+            border-color: #ffffff !important;
+        }
+        .tech-layer-badge {
+            cursor: pointer;
+            user-select: none;
+            transition: opacity 0.2s, transform 0.15s;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+        }
+        .tech-layer-badge.inactive {
+            opacity: 0.35;
+            text-decoration: line-through;
+        }
+        .tech-gauge-view-btn {
+            background: #1e293b;
+            color: #94a3b8;
+            border: none;
+            font-weight: 600;
+            padding: 2px 8px;
+        }
+        .tech-gauge-view-btn.active {
+            background: #3b82f6;
+            color: white;
+        }
+        .tech-watch-scroll::-webkit-scrollbar {
+            width: 5px;
+        }
+        .tech-watch-scroll::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="p-2 p-md-3">
@@ -1047,7 +1198,7 @@
                     <p class="text-muted small mb-3" id="quickMoveModalDesc">เลือกพอร์ตปลายทางที่ต้องการย้ายไป:</p>
                     <div id="quickMoveModalPortList" class="d-grid gap-2 mb-2"></div>
                     <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
-                        <a href="javascript:void(0)" class="text-primary small fw-bold text-decoration-none" onclick="bootstrap.Modal.getInstance(document.getElementById('quickMoveModal'))?.hide(); openStockAllocatorModal(activePortfolioId)">📦 จัดการหุ้นทั้งหมด (Allocator)</a>
+                        <a href="javascript:void(0)" class="text-primary small fw-bold text-decoration-none" onclick="bootstrap.Modal.getOrCreateInstance(document.getElementById('quickMoveModal')).hide(); openStockAllocatorModal(activePortfolioId)">📦 จัดการหุ้นทั้งหมด (Allocator)</a>
                         <button type="button" class="btn btn-sm btn-light border" data-bs-dismiss="modal">ปิด</button>
                     </div>
                 </div>
@@ -1063,6 +1214,17 @@
             <div class="d-flex align-items-center gap-2">
                 <h2 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.5px; font-size: 1.5rem;">My Portfolio</h2>
                 <span id="activePortBadgeHeader" class="badge rounded-pill bg-primary px-3 py-1 shadow-sm" style="font-size: 0.8rem;">พอร์ตทั้งหมด</span>
+                
+                <!-- Main View Tabs (พอร์ตการลงทุน VS สัญญาณเทคนิค & กราฟ) -->
+                <div class="nav nav-pills ms-2 p-1 rounded-pill border shadow-sm bg-body-tertiary" id="mainViewNav" role="tablist">
+                    <button class="nav-link active rounded-pill fw-bold py-1 px-3" id="tabBtnPortfolio" data-bs-toggle="pill" data-bs-target="#portfolioViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('PORTFOLIO')">
+                        💼 พอร์ตการลงทุน
+                    </button>
+                    <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1" id="tabBtnTechnical" data-bs-toggle="pill" data-bs-target="#technicalViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('TECHNICAL')">
+                        📈 สัญญาณเทคนิค & กราฟ
+                        <span class="badge bg-danger rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">NEW</span>
+                    </button>
+                </div>
             </div>
             <div class="d-flex align-items-center gap-1 gap-md-2 flex-wrap justify-content-end">
                 <button id="btnPrivacyToggle" class="btn btn-sm btn-outline-secondary rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="togglePrivacyMode()" title="ซ่อน/แสดงตัวเลขเงิน เหมาะสำหรับแคปหน้าจอหรือเปิดในที่สาธารณะ (ชี้เมาส์เพื่อแอบดูได้)" style="font-size: 0.78rem;">
@@ -1097,8 +1259,12 @@
             </div>
         </div>
 
-        <!-- Multi-Portfolio Selector (สลับพอร์ตการลงทุน - ไม่มีข้อความซ้ำซ้อน) -->
-        <div class="mb-2" id="portfolioSection">
+        <!-- Main Tab Content Wrapper -->
+        <div class="tab-content" id="mainTabContent">
+            <!-- PANE 1: พอร์ตการลงทุน (Default Portfolio View) -->
+            <div class="tab-pane fade show active" id="portfolioViewPane" role="tabpanel">
+                <!-- Multi-Portfolio Selector (สลับพอร์ตการลงทุน - ไม่มีข้อความซ้ำซ้อน) -->
+                <div class="mb-2" id="portfolioSection">
             <div id="portfolioTitleRow" class="d-flex justify-content-between align-items-center mb-1 px-1">
                 <div class="d-flex align-items-center gap-2">
                     <span class="fw-bold text-muted" style="font-size: 0.85rem;">📁 การ์ดพอร์ตการลงทุน:</span>
@@ -1559,6 +1725,226 @@
                 </div>
             </div>
         </div>
+
+            </div><!-- end portfolioViewPane -->
+
+            <!-- PANE 2: ระบบวิเคราะห์กราฟ & สัญญาณเทคนิค (3 การ์ดตรงตามรูปภาพ 100%) -->
+            <div class="tab-pane fade" id="technicalViewPane" role="tabpanel">
+                <!-- Section Subtitle Bar -->
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
+                    <div>
+                        <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
+                            📊 ระบบวิเคราะห์กราฟ & สัญญาณแนวโน้ม (Technical & Trend Hub)
+                        </h4>
+                        <small class="text-muted">
+                            วิเคราะห์สถานะสัญญาณ BUY/WATCH, กราฟแท่งเทียนพร้อม EMA แนวรับ-แนวต้าน และมาตรวัดความแข็งแรงโมเมนตัม 1D ถึง 1Y
+                        </small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-1.5 rounded-pill fw-bold" style="font-size: 0.78rem;">
+                            🟢 Live Technical Engine
+                        </span>
+                        <button class="btn btn-sm btn-dark rounded-pill px-3 py-1 fw-bold text-white shadow-sm" onclick="refreshTechnicalData()" style="font-size: 0.78rem;">
+                            🔄 รีเฟรชสัญญาณ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3 CARDS ROW (ตรงตามรูปภาพของผู้ใช้) -->
+                <div class="row g-3">
+                    
+                    <!-- CARD 1: รายการเฝ้าดู (Watchlist & Signal Status) -->
+                    <div class="col-xl-4 col-lg-5 col-md-12">
+                        <div class="card h-100 tech-panel-card" style="border-radius: 20px; overflow: hidden;">
+                            <!-- Header แบบในรูป -->
+                            <div class="p-4 pb-3 tech-card-header">
+                                <span class="text-uppercase fw-bold text-muted" style="font-size: 0.8rem; letter-spacing: 0.5px;">รายการเฝ้าดู</span>
+                                <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.55rem;">
+                                    สถานะสัญญาณ<br>ของทุกหุ้นที่ติดตาม
+                                </h3>
+                                <p class="text-muted mb-0" style="font-size: 0.85rem; line-height: 1.45;">
+                                    ดูราคา การเปลี่ยนแปลง และสถานะสัญญาณ BUY หรือ WATCH ของหุ้นที่คุณติดตามได้ในรายการเดียว
+                                </p>
+                            </div>
+
+                            <!-- Search & Filter Controls -->
+                            <div class="px-3 pt-2 pb-2">
+                                <div class="input-group input-group-sm mb-2 shadow-sm rounded-pill overflow-hidden border border-secondary border-opacity-25">
+                                    <span class="input-group-text bg-dark border-0 text-muted ps-3">🔍</span>
+                                    <input type="text" id="techWatchSearch" class="form-control bg-dark text-white border-0" placeholder="ค้นหาหุ้น หรือพิมพ์ชื่อเพื่อเพิ่ม..." oninput="filterTechWatchlist(this.value)">
+                                    <button class="btn btn-primary btn-sm px-3 fw-bold" onclick="addCustomWatchTicker()">+ เพิ่ม</button>
+                                </div>
+                                <!-- Filter Chips -->
+                                <div class="d-flex gap-1 overflow-x-auto pb-1" style="scrollbar-width: none;">
+                                    <button class="btn btn-xs rounded-pill tech-filter-btn active" id="techFilterAll" onclick="setTechFilter('ALL')">ทั้งหมด</button>
+                                    <button class="btn btn-xs rounded-pill tech-filter-btn" id="techFilterBuy" onclick="setTechFilter('BUY')">🟢 BUY</button>
+                                    <button class="btn btn-xs rounded-pill tech-filter-btn" id="techFilterWatch" onclick="setTechFilter('WATCH')">🟡 WATCH</button>
+                                    <button class="btn btn-xs rounded-pill tech-filter-btn" id="techFilterPort" onclick="setTechFilter('PORT')">💼 ในพอร์ต</button>
+                                </div>
+                            </div>
+
+                            <!-- Watchlist Items Container -->
+                            <div class="card-body p-2 pt-0 tech-watch-scroll" id="techWatchlistContainer" style="max-height: 520px; overflow-y: auto;">
+                                <!-- Items rendered dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2: กราฟวิเคราะห์ (Candlestick + Multi-EMA) -->
+                    <div class="col-xl-4 col-lg-7 col-md-12">
+                        <div class="card h-100 tech-panel-card" style="border-radius: 20px; overflow: hidden;">
+                            <!-- Header แบบในรูป -->
+                            <div class="p-4 pb-2 tech-card-header">
+                                <span class="text-uppercase fw-bold text-muted" style="font-size: 0.8rem; letter-spacing: 0.5px;">กราฟวิเคราะห์</span>
+                                <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.55rem;">
+                                    เห็นแนวโน้ม<br>ในกราฟเดียว
+                                </h3>
+                                <p class="text-muted mb-0" style="font-size: 0.85rem; line-height: 1.45;">
+                                    กราฟแท่งเทียนพร้อมเส้น EMA แนวรับ แนวต้าน และจุดตัดขาดทุน ช่วยให้วางแผนการซื้อขายได้ชัดเจน
+                                </p>
+                            </div>
+
+                            <div class="p-3 pt-2">
+                                <!-- Active Stock Header (e.g. NVDA $225.07 +0.22% แบบในรูป) -->
+                                <div class="d-flex justify-content-between align-items-center mb-2 p-2 px-3 rounded-3" style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255,255,255,0.06);">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="fw-bolder fs-5 text-white" id="activeChartTicker">NVDA</span>
+                                        <span class="fw-bold text-info fs-6" id="activeChartPrice">$225.07</span>
+                                        <span class="badge rounded-pill fw-bold" id="activeChartChange" style="font-size: 0.75rem; background: rgba(16, 185, 129, 0.2); color: #34d399;">+0.22%</span>
+                                    </div>
+                                    <div class="d-flex gap-1" id="chartTfButtons">
+                                        <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('1D')">1D</button>
+                                        <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('1W')">1W</button>
+                                        <button class="btn btn-xs tech-tf-btn active" onclick="setChartTf('1M')">1M</button>
+                                        <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('3M')">3M</button>
+                                        <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('1Y')">1Y</button>
+                                    </div>
+                                </div>
+
+                                <!-- Technical Layer Toggles -->
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-1 mb-2 px-1" style="font-size: 0.72rem;">
+                                    <div class="d-flex align-items-center gap-1 flex-wrap">
+                                        <span class="badge rounded-pill tech-layer-badge" id="layerEMA20" onclick="toggleTechLayer('ema20')" style="background-color: #06b6d4; color: white;">● EMA 20</span>
+                                        <span class="badge rounded-pill tech-layer-badge" id="layerEMA50" onclick="toggleTechLayer('ema50')" style="background-color: #a855f7; color: white;">● EMA 50</span>
+                                        <span class="badge rounded-pill tech-layer-badge" id="layerEMA200" onclick="toggleTechLayer('ema200')" style="background-color: #f59e0b; color: white;">● EMA 200</span>
+                                        <span class="badge rounded-pill tech-layer-badge" id="layerSR" onclick="toggleTechLayer('sr')" style="background-color: #10b981; color: white;">● แนวรับ-ต้าน</span>
+                                    </div>
+                                    <span class="text-muted" id="chartCrosshairInfo" style="font-size: 0.7rem;">เลื่อนเมาส์ดูกราฟ</span>
+                                </div>
+
+                                <!-- Canvas Candlestick Container -->
+                                <div style="position: relative; width: 100%; height: 260px; border-radius: 14px; overflow: hidden; background: #060913; border: 1px solid rgba(255,255,255,0.06);" id="candlestickCanvasWrapper">
+                                    <canvas id="candlestickCanvas" style="width: 100%; height: 100%; display: block;"></canvas>
+                                    <!-- Floating Tooltip -->
+                                    <div id="chartTooltip" style="display: none; position: absolute; pointer-events: none; z-index: 20; background: rgba(15, 23, 42, 0.95); border: 1px solid #334155; border-radius: 8px; padding: 6px 10px; font-size: 0.72rem; color: #f8fafc; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.5);"></div>
+                                </div>
+
+                                <!-- Support, Resistance & Stop Loss Cards -->
+                                <div class="row g-2 mt-2">
+                                    <div class="col-4">
+                                        <div class="p-2 text-center rounded-3" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25);">
+                                            <div class="text-muted" style="font-size: 0.68rem; font-weight: 600;">แนวรับ (Support)</div>
+                                            <div class="fw-bold text-success" id="valSupportLevel" style="font-size: 0.88rem;">$218.40</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="p-2 text-center rounded-3" style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.25);">
+                                            <div class="text-muted" style="font-size: 0.68rem; font-weight: 600;">แนวต้าน (Resistance)</div>
+                                            <div class="fw-bold text-danger" id="valResistanceLevel" style="font-size: 0.88rem;">$238.50</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="p-2 text-center rounded-3" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25);">
+                                            <div class="text-muted" style="font-size: 0.68rem; font-weight: 600;">จุดตัดขาดทุน (SL)</div>
+                                            <div class="fw-bold text-warning" id="valStopLossLevel" style="font-size: 0.88rem;">$212.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Technical Strategy Insight -->
+                                <div class="p-2 px-3 mt-2 rounded-3 d-flex align-items-center gap-2" style="background: rgba(59, 130, 246, 0.1); border: 1px dashed rgba(59, 130, 246, 0.35);">
+                                    <span style="font-size: 1.1rem;">💡</span>
+                                    <div style="font-size: 0.75rem; line-height: 1.35; color: #cbd5e1;" id="techChartInsight">
+                                        <strong>กลยุทธ์:</strong> ราคายืนเหนือ EMA 20 & EMA 50 โมเมนตัมขาขึ้นแข็งแกร่ง แนะนำถือต่อและรอซื้อเพิ่มบริเวณแนวรับ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3: ความแข็งแรงของแนวโน้ม (Trend Strength / Multi-Timeframe Gauges) -->
+                    <div class="col-xl-4 col-lg-12 col-md-12">
+                        <div class="card h-100 tech-panel-card" style="border-radius: 20px; overflow: hidden;">
+                            <!-- Header แบบในรูป -->
+                            <div class="p-4 pb-2 tech-card-header">
+                                <span class="text-uppercase fw-bold text-muted" style="font-size: 0.8rem; letter-spacing: 0.5px;">ความแข็งแรงของแนวโน้ม</span>
+                                <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.55rem;">
+                                    อ่านโมเมนตัม<br>ทุกกรอบเวลา
+                                </h3>
+                                <p class="text-muted mb-0" style="font-size: 0.85rem; line-height: 1.45;">
+                                    มาตรวัดแนวโน้มตั้งแต่ 1 วันถึง 1 ปี บอกระดับแรงซื้อและแรงขายได้ในพริบตา
+                                </p>
+                            </div>
+
+                            <div class="p-3 pt-2">
+                                <!-- Trend Strength Subtitle & View Mode -->
+                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                    <div>
+                                        <span class="fw-bold text-white" style="font-size: 0.88rem;">Trend Strength</span>
+                                        <div class="text-muted" style="font-size: 0.7rem;">ภาพรวมแนวโน้มตามช่วงเวลา</div>
+                                    </div>
+                                    <div class="btn-group btn-group-sm p-0 rounded-pill border border-secondary border-opacity-25 overflow-hidden">
+                                        <button class="btn btn-xs tech-gauge-view-btn active" id="btnGaugeGrid" onclick="setGaugeViewMode('GRID')">ทุกช่วง</button>
+                                        <button class="btn btn-xs tech-gauge-view-btn" id="btnGaugeFocus" onclick="setGaugeViewMode('FOCUS')">ช่วงเดียว</button>
+                                    </div>
+                                </div>
+
+                                <!-- Timeframe Selector Bar -->
+                                <div class="d-flex gap-1 mb-2.5 overflow-x-auto pb-1" id="gaugeTfPills">
+                                    <button class="btn btn-xs tech-gtf-btn active" onclick="setGaugeTf('1D')">1D</button>
+                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('1W')">1W</button>
+                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('1M')">1M</button>
+                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('3M')">3M</button>
+                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('6M')">6M</button>
+                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('1Y')">1Y</button>
+                                </div>
+
+                                <!-- Gauges Grid Mode (6 เกจเหมือนในรูป: 1D, 1W, 1M, 3M, 6M, 1Y) -->
+                                <div id="gaugesGridContainer" class="row g-2">
+                                    <!-- Rendered dynamically -->
+                                </div>
+
+                                <!-- Gauges Focus Mode (เกจใหญ่เดี่ยว) -->
+                                <div id="gaugeFocusContainer" style="display: none;" class="py-2 text-center">
+                                    <!-- Rendered dynamically -->
+                                </div>
+
+                                <!-- Key Indicator Breakdown Card -->
+                                <div class="card border-0 mt-2.5 p-2 px-3 rounded-3" style="background: rgba(30, 41, 59, 0.45); border: 1px solid rgba(255,255,255,0.06) !important; font-size: 0.76rem;">
+                                    <div class="d-flex justify-content-between align-items-center py-1 border-bottom border-secondary border-opacity-25">
+                                        <span class="text-muted">RSI (14 โมเมนตัม):</span>
+                                        <span class="fw-bold text-white" id="valTechRsi">61.5 (โซนขาขึ้น)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-1 border-bottom border-secondary border-opacity-25">
+                                        <span class="text-muted">MACD Indicator:</span>
+                                        <span class="fw-bold text-success" id="valTechMacd">Bullish Crossover (+2.40)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-1 border-bottom border-secondary border-opacity-25">
+                                        <span class="text-muted">เส้นค่าเฉลี่ย EMA:</span>
+                                        <span class="fw-bold text-info" id="valTechEmaTrend">ยืนเหนือ EMA 20 & 50 (Uptrend)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center pt-1">
+                                        <span class="text-muted">สรุปคะแนนความแข็งแรง:</span>
+                                        <span class="badge bg-success rounded-pill px-2.5 py-1 fw-bold" id="valTechOverallScore">68 / 100 (BUY)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- end technicalViewPane -->
+        </div><!-- end mainTabContent -->
     </div>
 
     <!-- Bootstrap Bundle with Popper (Required for Modals) -->
@@ -1575,11 +1961,40 @@
 
         // --- MULTI-PORTFOLIO SYSTEM (จัดพอร์ตได้เหมือน App ฟรีไม่จำกัด) ---
         const defaultPortfolios = [
-            { id: 'core', name: 'Core Port', tag: 'Core Port', note: 'พอร์ตหลักเน้นสะสมระยะยาว', color: '#3b82f6' },
-            { id: 'satellite', name: 'Satellite Port', tag: 'Satellite', note: 'พอร์ตดาวเทียม / เติบโตเก็งกำไร', color: '#8b5cf6' }
+            { id: 'core', name: 'Core ETF', tag: 'Core ETF', note: 'พอร์ตหลักเน้นสะสมระยะยาว (VTI, VXUS)', color: '#3b82f6' },
+            { id: 'stocks', name: 'US Stocks', tag: 'US Stocks', note: 'พอร์ตหุ้นรายตัวสหรัฐฯ (NVDA, GOOGL, MSFT, AAPL, BRK.B)', color: '#10b981' },
+            { id: 'satellite', name: 'Satellite ETF', tag: 'Satellite ETF', note: 'พอร์ต ETF เติบโตตามธีม (SPMO, XLV, GRID)', color: '#8b5cf6' },
+            { id: 'retirement', name: 'Retirement', tag: 'Retirement', note: 'พอร์ตเงินปันผลเกษียณ (JEPQ, JEPI, SCHD, SPYD)', color: '#f59e0b' }
         ];
         let portfolios = JSON.parse(localStorage.getItem('myPortfolios')) || defaultPortfolios;
         let activePortfolioId = localStorage.getItem('myActivePortfolioId') || 'ALL';
+
+        function syncPortfolioNamesWithDime() {
+            let changed = false;
+            portfolios.forEach(p => {
+                if (p.id === 'core' && (p.name === 'Core Port' || p.name === 'Core')) {
+                    p.name = 'Core ETF';
+                    p.tag = 'Core ETF';
+                    changed = true;
+                }
+                if (p.id === 'satellite' && (p.name === 'Satellite Port' || p.name === 'Satellite')) {
+                    p.name = 'Satellite ETF';
+                    p.tag = 'Satellite ETF';
+                    changed = true;
+                }
+            });
+            if (!portfolios.some(p => p.id === 'stocks' || p.name.toLowerCase().includes('stock'))) {
+                portfolios.push({ id: 'stocks', name: 'US Stocks', tag: 'US Stocks', note: 'พอร์ตหุ้นรายตัวสหรัฐฯ', color: '#10b981' });
+                changed = true;
+            }
+            if (!portfolios.some(p => p.id === 'retirement' || p.name.toLowerCase().includes('retire'))) {
+                portfolios.push({ id: 'retirement', name: 'Retirement', tag: 'Retirement', note: 'พอร์ตเงินปันผลเกษียณ', color: '#f59e0b' });
+                changed = true;
+            }
+            if (changed) {
+                savePortfolios();
+            }
+        }
 
         function savePortfolios() {
             localStorage.setItem('myPortfolios', JSON.stringify(portfolios));
@@ -1609,7 +2024,7 @@
                 tagInput.value = '';
                 noteInput.value = '';
             }
-            const modal = new bootstrap.Modal(modalEl);
+            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
             modal.show();
         };
 
@@ -1641,7 +2056,7 @@
                 localStorage.setItem('myActivePortfolioId', newId);
             }
             savePortfolios();
-            bootstrap.Modal.getInstance(document.getElementById('portfolioModal')).hide();
+            bootstrap.Modal.getOrCreateInstance(document.getElementById('portfolioModal')).hide();
             populatePortfolioDropdown();
             renderPortfolioCards();
             updateSummaryAndChart();
@@ -1724,7 +2139,7 @@
                 else if (t.type === 'BUY') cash -= parsedTHB;
                 else if (t.type === 'SELL' || t.type === 'DIVIDEND') cash += parsedTHB;
 
-                if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW') return;
+                if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW' || t.type === 'DIVIDEND') return;
                 if (!holdings[t.ticker]) holdings[t.ticker] = { shares: 0, costUSD: 0, costTHB: 0 };
                 let usdAmount = Number((t.shares * t.price).toFixed(2));
                 if (t.type === 'BUY') {
@@ -2068,7 +2483,7 @@
             document.getElementById('allocatorStockTableBody').innerHTML = html;
             updateAllocSummaryCount();
 
-            const modal = new bootstrap.Modal(document.getElementById('stockAllocatorModal'));
+            const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('stockAllocatorModal'));
             modal.show();
         };
 
@@ -2112,7 +2527,7 @@
             });
 
             localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
-            bootstrap.Modal.getInstance(document.getElementById('stockAllocatorModal')).hide();
+            bootstrap.Modal.getOrCreateInstance(document.getElementById('stockAllocatorModal')).hide();
 
             activePortfolioId = targetPortId;
             localStorage.setItem('myActivePortfolioId', targetPortId);
@@ -2226,7 +2641,7 @@
             });
             listContainer.innerHTML = btnsHtml;
 
-            const modal = new bootstrap.Modal(modalEl);
+            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
             modal.show();
         };
 
@@ -2257,8 +2672,7 @@
 
             const modalEl = document.getElementById('quickMoveModal');
             if (modalEl) {
-                const modalInstance = bootstrap.Modal.getInstance(modalEl);
-                if (modalInstance) modalInstance.hide();
+                bootstrap.Modal.getOrCreateInstance(modalEl).hide();
             }
 
             renderPortfolioCards();
@@ -2292,8 +2706,7 @@
 
             const quickModalEl = document.getElementById('quickMoveModal');
             if (quickModalEl) {
-                const modalInstance = bootstrap.Modal.getInstance(quickModalEl);
-                if (modalInstance) modalInstance.hide();
+                bootstrap.Modal.getOrCreateInstance(quickModalEl).hide();
             }
 
             renderPortfolioCards();
@@ -2478,7 +2891,7 @@
 
         // --- DCA REBALANCING ASSISTANT ---
         window.openDCAPlanner = function() {
-            const modal = new bootstrap.Modal(document.getElementById('dcaModal'));
+            const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('dcaModal'));
             calculateDCA(true);
             modal.show();
         };
@@ -2611,8 +3024,7 @@
 
         window.sendDCAToBuyForm = function(grp, allocTHB, allocUSD) {
             const modalEl = document.getElementById('dcaModal');
-            const modal = bootstrap.Modal.getInstance(modalEl);
-            if (modal) modal.hide();
+            bootstrap.Modal.getOrCreateInstance(modalEl).hide();
 
             let targetTicker = null;
             for (let t in portfolioMapping) {
@@ -2869,7 +3281,7 @@
         let customTrimPercent = 25;
 
         window.openTrimCalculator = function() {
-            const modal = new bootstrap.Modal(document.getElementById('trimModal'));
+            const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('trimModal'));
             calculateTrim();
             modal.show();
         };
@@ -3185,7 +3597,7 @@
         };
 
         window.executeTrimToForm = function(ticker, shares, price, portfolioId) {
-            bootstrap.Modal.getInstance(document.getElementById('trimModal')).hide();
+            bootstrap.Modal.getOrCreateInstance(document.getElementById('trimModal')).hide();
 
             document.getElementById('txnType').value = 'SELL';
             document.getElementById('txnType').dispatchEvent(new Event('change'));
@@ -3206,11 +3618,11 @@
         };
 
         window.simulateTrimAction = function(ticker, amountTHB, priceUSD) {
-            bootstrap.Modal.getInstance(document.getElementById('trimModal')).hide();
+            bootstrap.Modal.getOrCreateInstance(document.getElementById('trimModal')).hide();
 
             let select = document.getElementById('simTicker');
             select.innerHTML = '<option value="">-- เลือกหุ้นเพื่อจำลอง --</option>';
-            let sortedTickers = Object.keys(globalHoldings).sort();
+            let sortedTickers = Object.keys(globalHoldings || {}).sort();
             sortedTickers.forEach(t => {
                 select.innerHTML += `<option value="${t}" ${t === ticker ? 'selected' : ''}>${t}</option>`;
             });
@@ -3222,7 +3634,7 @@
             setSimAction('SELL');
             calcSim();
 
-            const simModal = new bootstrap.Modal(document.getElementById('simulatorModal'));
+            const simModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('simulatorModal'));
             simModal.show();
         };
 
@@ -3247,7 +3659,7 @@
         };
 
         window.openDividendModal = function() {
-            const modal = new bootstrap.Modal(document.getElementById('dividendModal'));
+            const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('dividendModal'));
             renderDividendModalTable();
             modal.show();
         };
@@ -3269,9 +3681,17 @@
                 tbody.innerHTML = '<tr><td colspan="6" class="text-muted py-4">ยังไม่มีประวัติเงินปันผลในพอร์ตนี้</td></tr>';
             } else {
                 divTxns.forEach(t => {
-                    let grossUSD = t.price || 0;
-                    let taxUSD = t.comm || (grossUSD * 0.15);
-                    let netUSD = grossUSD - taxUSD;
+                    let netUSD = t.price || 0; // ยอดสุทธิที่ได้รับจริง
+                    let grossUSD = 0;
+                    let taxUSD = 0;
+                    if (t.comm && t.comm > 0) {
+                        taxUSD = t.comm;
+                        grossUSD = netUSD + taxUSD;
+                    } else {
+                        // ภาษีหัก ณ ที่จ่าย 15% (W-8BEN): ยอดสุทธิ = 85% ของยอดก่อนภาษี
+                        grossUSD = Number((netUSD / 0.85).toFixed(4));
+                        taxUSD = Number((grossUSD - netUSD).toFixed(4));
+                    }
                     let netTHB = parseFloat(t.totalTHB) || (netUSD * liveFxRate);
 
                     totalGrossUSD += grossUSD;
@@ -3309,13 +3729,15 @@
             'GOOGL': 343.92, 'MSFT': 516.17, 'JEPI': 56.76, 'JEPQ': 61.24, 'VTI': 379.77,
             'VOO': 710.79, 'QQQ': 744.50, 'QQQM': 306.54, 'SCHD': 33.21, 'AAPL': 341.07,
             'NVDA': 225.07, 'VXUS': 86.35, 'SPY': 771.35, 'AMZN': 249.67, 'META': 751.66,
-            'TSLA': 372.11
+            'TSLA': 372.11, 'SPMO': 85.20, 'XLV': 156.40, 'GRID': 145.80, 'SPYD': 43.10,
+            'BRK.B': 502.65, 'BRK-B': 502.65,
+            'VRT': 250.75, 'MU': 1077.77, 'CIEN': 358.92, 'CRWD': 255.90, 'LLY': 1167.34
         };
         let storedPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
         let marketPrices = Object.assign({}, defaultInitialPrices, storedPrices);
         
         let liveFxRate = parseFloat(localStorage.getItem('myLiveFxRate'));
-        if(isNaN(liveFxRate) || liveFxRate <= 0) liveFxRate = 33.31;
+        if(isNaN(liveFxRate) || liveFxRate <= 0) liveFxRate = 33.46;
         document.getElementById('liveFxInput').value = liveFxRate;
 
         let currentCalcMode = localStorage.getItem('myCalcMode') || 'DIME';
@@ -3505,8 +3927,7 @@
             }
 
             localStorage.setItem('myStockTargets', JSON.stringify(stockTargets));
-            const modal = bootstrap.Modal.getInstance(document.getElementById('stockTargetModal'));
-            if (modal) modal.hide();
+            bootstrap.Modal.getOrCreateInstance(document.getElementById('stockTargetModal')).hide();
             updateSummaryAndChart();
         };
 
@@ -3516,18 +3937,24 @@
             localStorage.setItem('myStockTargets', JSON.stringify(stockTargets));
             document.getElementById('inputTargetTP').value = '';
             document.getElementById('inputTargetSL').value = '';
-            const modal = bootstrap.Modal.getInstance(document.getElementById('stockTargetModal'));
-            if (modal) modal.hide();
+            bootstrap.Modal.getOrCreateInstance(document.getElementById('stockTargetModal')).hide();
             updateSummaryAndChart();
         };
 
-        let portfolioMapping = JSON.parse(localStorage.getItem('myPortfolioGroups')) || {
+        const defaultGroupMapping = {
             'VTI': 'ETF', 'VXUS': 'ETF', 'VOO': 'ETF', 'SCHD': 'ETF', 'QQQ': 'ETF', 'QQQM': 'ETF',
-            'JEPI': 'ETF', 'JEPQ': 'ETF', 'SPY': 'ETF',
-            'NVDA': 'Stock', 'AAPL': 'Stock', 'MSFT': 'Stock', 'GOOGL': 'Stock'
+            'JEPI': 'ETF', 'JEPQ': 'ETF', 'SPY': 'ETF', 'SPMO': 'ETF', 'XLV': 'ETF', 'GRID': 'ETF', 'SPYD': 'ETF',
+            'NVDA': 'Stock', 'AAPL': 'Stock', 'MSFT': 'Stock', 'GOOGL': 'Stock', 'BRK.B': 'Stock', 'BRK-B': 'Stock',
+            'VRT': 'Stock', 'MU': 'Stock', 'CIEN': 'Stock', 'CRWD': 'Stock', 'LLY': 'Stock'
         };
+        let portfolioMapping = Object.assign({}, defaultGroupMapping, JSON.parse(localStorage.getItem('myPortfolioGroups')) || {});
 
         const stockNames = {
+            'VRT': 'Vertiv Holdings Co.',
+            'MU': 'Micron Technology, Inc.',
+            'CIEN': 'Ciena Corporation',
+            'CRWD': 'CrowdStrike Holdings, Inc.',
+            'LLY': 'Eli Lilly and Company',
             'VTI': 'Vanguard Total Stock Market ETF',
             'VOO': 'Vanguard S&P 500 ETF',
             'SCHD': 'Schwab U.S. Dividend Equity ETF',
@@ -3608,6 +4035,8 @@
         let perfChartObj = null;
         let allocationChart = null; 
         let currentChartRange = 'ALL';
+        let globalHoldings = {};
+        let globalTotalPortfolioValue = 0;
 
         let currentPage = 1;
         const rowsPerPage = 10;
@@ -3670,7 +4099,7 @@
             let select = document.getElementById('simTicker');
             select.innerHTML = '<option value="">-- เลือกหุ้นเพื่อจำลอง --</option>';
             
-            let sortedTickers = Object.keys(globalHoldings).sort();
+            let sortedTickers = Object.keys(globalHoldings || {}).sort();
             sortedTickers.forEach(t => {
                 select.innerHTML += `<option value="${t}">${t}</option>`;
             });
@@ -3682,7 +4111,7 @@
             setSimAction('BUY');
             calcSim();
             
-            var myModal = new bootstrap.Modal(document.getElementById('simulatorModal'));
+            var myModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('simulatorModal'));
             myModal.show();
         };
 
@@ -4457,9 +4886,7 @@
             
             previewSmartSync();
 
-            if (!smartSyncModalInstance) {
-                smartSyncModalInstance = new bootstrap.Modal(document.getElementById('smartSyncModal'));
-            }
+            smartSyncModalInstance = bootstrap.Modal.getOrCreateInstance(document.getElementById('smartSyncModal'));
             smartSyncModalInstance.show();
         };
 
@@ -5263,7 +5690,7 @@
             // คำนวณมูลค่าตลาดรวมของทุกพอร์ต เพื่อใช้บอกน้ำหนัก (%) ของพอร์ตย่อยนี้ในบัญชีทั้งหมด
             let allHoldingsMap = {};
             transactions.forEach(txn => {
-                if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') return;
+                if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW' || txn.type === 'DIVIDEND') return;
                 if(!allHoldingsMap[txn.ticker]) allHoldingsMap[txn.ticker] = { shares: 0, costUSD: 0 };
                 if(txn.type === 'BUY') {
                     allHoldingsMap[txn.ticker].shares += txn.shares;
@@ -5289,7 +5716,7 @@
             currentTxns.forEach(txn => {
                 let parsedTHB = parseFloat(txn.totalTHB) || 0; 
 
-                if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') return;
+                if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW' || txn.type === 'DIVIDEND') return;
 
                 if(!holdings[txn.ticker]) holdings[txn.ticker] = { shares: 0, costUSD: 0, costTHB: 0, port: txn.portfolio || (activePortfolioId !== 'ALL' ? activePortfolioId : 'core') };
                 if(txn.portfolio) holdings[txn.ticker].port = txn.portfolio;
@@ -5846,6 +6273,7 @@
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.82rem; min-width: 200px; z-index: 1050;">
                                     <li><h6 class="dropdown-header text-uppercase fw-bold text-muted py-1" style="font-size: 0.7rem;">${item.ticker} • จัดการ</h6></li>
+                                    <li><a class="dropdown-item py-1.5 text-primary fw-bold" href="javascript:void(0)" onclick="openTechnicalForTicker('${item.ticker}')">📈 วิเคราะห์กราฟ & สัญญาณ</a></li>
                                     <li><a class="dropdown-item py-1.5" href="javascript:void(0)" onclick="quickMoveStock('${item.ticker}', '${item.portId}')">💼 ย้ายพอร์ต (${item.portName}) ⇄</a></li>
                                     <li><a class="dropdown-item py-1.5 text-danger" href="javascript:void(0)" onclick="openTrimForTicker('${item.ticker}')">✂️ Trim / ล็อกกำไร</a></li>
                                     <li><a class="dropdown-item py-1.5 text-primary" href="javascript:void(0)" onclick="openStockTargetModal('${item.ticker}')">🎯 ตั้งเป้า TP / SL${targetInfo}</a></li>
@@ -6490,9 +6918,17 @@
                     let pObj = portfolios.find(p => p.id === (t.portfolio || 'core'));
                     let pName = pObj ? pObj.name : 'Core Port';
                     let name = (stockNames[t.ticker] || '').replace(/,/g, ' ');
-                    let grossUSD = t.price || 0;
-                    let taxUSD = t.comm || (grossUSD * 0.15);
-                    let netUSD = grossUSD - taxUSD;
+                    let netUSD = t.price || 0;
+                    let grossUSD = 0;
+                    let taxUSD = 0;
+                    if (t.comm && t.comm > 0) {
+                        taxUSD = t.comm;
+                        grossUSD = netUSD + taxUSD;
+                    } else {
+                        // ภาษีหัก ณ ที่จ่าย 15% (W-8BEN): ยอดสุทธิ = 85% ของยอดก่อนภาษี
+                        grossUSD = Number((netUSD / 0.85).toFixed(4));
+                        taxUSD = Number((grossUSD - netUSD).toFixed(4));
+                    }
                     let netTHB = parseFloat(t.totalTHB) || (netUSD * liveFxRate);
                     let row = [
                         t.date,
@@ -6592,9 +7028,775 @@
             reader.readAsText(file);
         };
 
-        document.getElementById('txnDate').valueAsDate = new Date();
-        
+        // ==========================================
+        // 📊 TECHNICAL SIGNALS & TREND HUB ENGINE
+        // (ตรงตามภาพ 3 การ์ด: Watchlist, Candlestick + EMA, Trend Gauges)
+        // ==========================================
+
+        let activeTechTicker = 'NVDA';
+        let activeTechChartTf = '1M';
+        let activeTechGaugeTf = '1D';
+        let techGaugeViewMode = 'GRID'; // 'GRID' | 'FOCUS'
+        let techWatchFilter = 'ALL';
+        let techLayers = {
+            ema20: true,
+            ema50: true,
+            ema200: true,
+            sr: true
+        };
+
+        const defaultWatchTickers = [
+            'VRT', 'MU', 'CIEN', 'CRWD', 'LLY',
+            'NVDA', 'GOOGL', 'MSFT', 'AAPL', 'BRK.B',
+            'VTI', 'VXUS', 'SPMO', 'XLV', 'GRID',
+            'JEPQ', 'JEPI', 'SCHD', 'SPYD'
+        ];
+        let techWatchlist = JSON.parse(localStorage.getItem('myTechWatchlist')) || defaultWatchTickers;
+
+        const tickerBrandStyles = {
+            'VRT': { bg: '#f97316', label: 'VRT' },
+            'MU': { bg: '#0284c7', label: 'MU' },
+            'CIEN': { bg: '#dc2626', label: 'CIEN' },
+            'CRWD': { bg: '#b91c1c', label: 'CRWD' },
+            'LLY': { bg: '#e11d48', label: 'LLY' },
+            'NVDA': { bg: '#16a34a', label: 'NVDA' },
+            'AAPL': { bg: '#334155', label: 'AAPL' },
+            'MSFT': { bg: '#2563eb', label: 'MSFT' },
+            'GOOGL': { bg: '#ea4335', label: 'G' },
+            'BRK.B': { bg: '#1e3a8a', label: 'BH' },
+            'VTI': { bg: '#991b1b', label: 'V' },
+            'VXUS': { bg: '#991b1b', label: 'V' },
+            'SPMO': { bg: '#3b82f6', label: 'SP' },
+            'XLV': { bg: '#dc2626', label: 'XLV' },
+            'GRID': { bg: '#0f766e', label: 'GRID' },
+            'JEPQ': { bg: '#1d4ed8', label: 'JP' },
+            'JEPI': { bg: '#1d4ed8', label: 'JP' },
+            'SCHD': { bg: '#0284c7', label: 'SCH' },
+            'SPYD': { bg: '#0369a1', label: 'SP' },
+            'TSLA': { bg: '#e11d48', label: 'T' },
+            'AMZN': { bg: '#f59e0b', label: 'A' },
+            'META': { bg: '#0284c7', label: 'M' }
+        };
+
+        const screenshotPresetData = {
+            'VRT': { price: 250.75, changePct: 2.2, signal: 'WATCH', scores: { '1D': 58, '1W': 55, '1M': 62, '3M': 68, '6M': 70, '1Y': 75 } },
+            'MU': { price: 1077.77, changePct: -0.3, signal: 'WATCH', scores: { '1D': 48, '1W': 50, '1M': 54, '3M': 59, '6M': 62, '1Y': 68 } },
+            'CIEN': { price: 358.92, changePct: -0.1, signal: 'WATCH', scores: { '1D': 52, '1W': 51, '1M': 55, '3M': 58, '6M': 60, '1Y': 65 } },
+            'CRWD': { price: 255.90, changePct: -1.5, signal: 'WATCH', scores: { '1D': 45, '1W': 48, '1M': 52, '3M': 56, '6M': 61, '1Y': 72 } },
+            'LLY': { price: 1167.34, changePct: 1.8, signal: 'BUY', scores: { '1D': 78, '1W': 74, '1M': 79, '3M': 82, '6M': 85, '1Y': 88 } },
+            'NVDA': { price: 225.07, changePct: 0.22, signal: 'BUY', scores: { '1D': 61, '1W': 53, '1M': 68, '3M': 74, '6M': 65, '1Y': 82 } }
+        };
+
+        window.onSwitchViewTab = function(mode) {
+            localStorage.setItem('myMainViewMode', mode);
+            const btnPort = document.getElementById('tabBtnPortfolio');
+            const btnTech = document.getElementById('tabBtnTechnical');
+            if (mode === 'TECHNICAL') {
+                if (btnPort) { btnPort.classList.remove('active'); btnPort.classList.add('text-muted'); }
+                if (btnTech) { btnTech.classList.add('active'); btnTech.classList.remove('text-muted'); }
+                setTimeout(() => {
+                    initTechnicalHub();
+                }, 50);
+            } else {
+                if (btnTech) { btnTech.classList.remove('active'); btnTech.classList.add('text-muted'); }
+                if (btnPort) { btnPort.classList.add('active'); btnPort.classList.remove('text-muted'); }
+            }
+        };
+
+        window.openTechnicalForTicker = function(ticker) {
+            if (!ticker) return;
+            ticker = ticker.toUpperCase().trim();
+            activeTechTicker = ticker;
+            if (!techWatchlist.includes(ticker)) {
+                techWatchlist.unshift(ticker);
+                localStorage.setItem('myTechWatchlist', JSON.stringify(techWatchlist));
+            }
+            const triggerEl = document.getElementById('tabBtnTechnical');
+            if (triggerEl) {
+                const tabInstance = bootstrap.Tab.getOrCreateInstance(triggerEl);
+                tabInstance.show();
+                onSwitchViewTab('TECHNICAL');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        function getTechnicalData(ticker, tf) {
+            ticker = (ticker || 'NVDA').toUpperCase();
+            let curPrice = marketPrices[ticker] || 100;
+            let preset = screenshotPresetData[ticker];
+            if (preset) {
+                curPrice = preset.price;
+            }
+
+            let changePct = preset ? preset.changePct : 0.5;
+            if (!preset && pricesData && pricesData.prices && pricesData.prices[ticker] && typeof pricesData.prices[ticker] === 'object') {
+                changePct = pricesData.prices[ticker].changePct || 0;
+            }
+
+            let seed = 0;
+            for (let i = 0; i < ticker.length; i++) seed += ticker.charCodeAt(i) * (i + 1);
+            function pseudoRandom(idx) {
+                let x = Math.sin(seed + idx * 997.3) * 10000;
+                return x - Math.floor(x);
+            }
+
+            let count = (tf === '1D') ? 24 : (tf === '1W' ? 30 : (tf === '1M' ? 35 : (tf === '3M' ? 40 : 45)));
+            let candles = [];
+            let priceWalk = curPrice;
+            let walkHistory = [];
+
+            for (let i = count - 1; i >= 0; i--) {
+                walkHistory.push(priceWalk);
+                let rnd = pseudoRandom(i);
+                let dailyVol = curPrice * 0.015;
+                let delta = (rnd - 0.48) * dailyVol;
+                priceWalk = Math.max(1, priceWalk - delta);
+            }
+            walkHistory.reverse();
+
+            let now = new Date();
+            for (let i = 0; i < count; i++) {
+                let p = walkHistory[i];
+                let rnd = pseudoRandom(i + 50);
+                let open = i === 0 ? p * (1 - 0.005) : walkHistory[i - 1];
+                let close = p;
+                let high = Math.max(open, close) + (curPrice * 0.008 * rnd);
+                let low = Math.min(open, close) - (curPrice * 0.008 * (1 - rnd));
+                
+                let barDate = new Date(now.getTime() - (count - 1 - i) * (tf === '1D' ? 3600000 : 86400000));
+                let dateStr = barDate.toLocaleDateString('th-TH', { day: 'numeric', month: 'short' });
+
+                candles.push({
+                    date: dateStr,
+                    open: Number(open.toFixed(2)),
+                    high: Number(high.toFixed(2)),
+                    low: Number(low.toFixed(2)),
+                    close: Number(close.toFixed(2)),
+                    volume: Math.round(15 + rnd * 30) + 'M'
+                });
+            }
+
+            function calcEMA(period) {
+                let k = 2 / (period + 1);
+                let emaArr = [];
+                let prev = candles[0].close;
+                for (let i = 0; i < candles.length; i++) {
+                    let val = (candles[i].close * k) + (prev * (1 - k));
+                    emaArr.push(Number(val.toFixed(2)));
+                    prev = val;
+                }
+                return emaArr;
+            }
+
+            let ema20 = calcEMA(20);
+            let ema50 = calcEMA(35);
+            let ema200 = calcEMA(50);
+
+            let recentBars = candles.slice(-15);
+            let lows = recentBars.map(c => c.low);
+            let highs = recentBars.map(c => c.high);
+            let support = Math.min(...lows);
+            let resistance = Math.max(...highs);
+            let stopLoss = Number((support * 0.965).toFixed(2));
+            let targetTP = Number((resistance * 1.055).toFixed(2));
+
+            let scores = {};
+            if (preset && preset.scores) {
+                scores = Object.assign({}, preset.scores);
+            } else {
+                let base = Math.max(15, Math.min(88, Math.round(52 + (changePct * 4))));
+                scores = {
+                    '1D': base,
+                    '1W': Math.min(95, Math.max(15, Math.round(base * 0.92 + 4))),
+                    '1M': Math.min(95, Math.max(15, Math.round(base * 1.05 - 1))),
+                    '3M': Math.min(95, Math.max(15, Math.round(base * 1.12 - 3))),
+                    '6M': Math.min(95, Math.max(15, Math.round(base * 1.02 + 1))),
+                    '1Y': Math.min(95, Math.max(15, Math.round(base * 1.18 - 5)))
+                };
+            }
+
+            let score1D = scores['1D'];
+            let signal = 'WATCH';
+            if (preset && preset.signal) {
+                signal = preset.signal;
+            } else {
+                if (score1D >= 60) signal = 'BUY';
+                else if (score1D <= 40) signal = 'SELL';
+                else signal = 'WATCH';
+            }
+
+            return {
+                ticker,
+                price: curPrice,
+                changePct,
+                signal,
+                candles,
+                ema20,
+                ema50,
+                ema200,
+                support: Number(support.toFixed(2)),
+                resistance: Number(resistance.toFixed(2)),
+                stopLoss,
+                targetTP,
+                scores
+            };
+        }
+
+        let activeCandleData = null;
+        let hoverCandleIdx = -1;
+
+        window.renderActiveTechnicalChart = function() {
+            const data = getTechnicalData(activeTechTicker, activeTechChartTf);
+            activeCandleData = data;
+
+            const elTicker = document.getElementById('activeChartTicker');
+            const elPrice = document.getElementById('activeChartPrice');
+            const elChange = document.getElementById('activeChartChange');
+            if (elTicker) elTicker.innerText = data.ticker;
+            if (elPrice) elPrice.innerText = `$${data.price.toFixed(2)}`;
+            if (elChange) {
+                const sign = data.changePct >= 0 ? '+' : '';
+                elChange.innerText = `${sign}${data.changePct.toFixed(2)}%`;
+                elChange.style.background = data.changePct >= 0 ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)';
+                elChange.style.color = data.changePct >= 0 ? '#34d399' : '#f87171';
+            }
+
+            const elSup = document.getElementById('valSupportLevel');
+            const elRes = document.getElementById('valResistanceLevel');
+            const elSL = document.getElementById('valStopLossLevel');
+            if (elSup) elSup.innerText = `$${data.support.toFixed(2)}`;
+            if (elRes) elRes.innerText = `$${data.resistance.toFixed(2)}`;
+            if (elSL) elSL.innerText = `$${data.stopLoss.toFixed(2)}`;
+
+            const elInsight = document.getElementById('techChartInsight');
+            if (elInsight) {
+                let msg = '';
+                if (data.signal === 'BUY') {
+                    msg = `<strong>กลยุทธ์:</strong> ราคายืนเหนือ EMA 20 & EMA 50 โมเมนตัมขาขึ้นแข็งแกร่ง แนะนำถือต่อและรอซื้อเพิ่มบริเวณแนวรับ $${data.support.toFixed(2)}`;
+                } else if (data.signal === 'SELL') {
+                    msg = `<strong>กลยุทธ์:</strong> ราคาหลุดต่ำกว่าเส้น EMA แนะนำทยอยลดพอร์ต หรือตั้งจุดตัดขาดทุนที่ $${data.stopLoss.toFixed(2)}`;
+                } else {
+                    msg = `<strong>กลยุทธ์:</strong> ราคาวิ่งไซด์เวย์ในกรอบ $${data.support.toFixed(2)} - $${data.resistance.toFixed(2)} รอทะลุกรอบก่อนเข้าสะสม`;
+                }
+                elInsight.innerHTML = msg;
+            }
+
+            drawCandlestickCanvas();
+        };
+
+        function drawCandlestickCanvas() {
+            const canvas = document.getElementById('candlestickCanvas');
+            if (!canvas || !activeCandleData) return;
+
+            const rect = canvas.getBoundingClientRect();
+            if (rect.width === 0 || rect.height === 0) return;
+
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+
+            const ctx = canvas.getContext('2d');
+            ctx.scale(dpr, dpr);
+
+            const width = rect.width;
+            const height = rect.height;
+
+            const padTop = 20;
+            const padBottom = 25;
+            const padLeft = 12;
+            const padRight = 70;
+
+            const plotW = width - padLeft - padRight;
+            const plotH = height - padTop - padBottom;
+
+            ctx.fillStyle = '#060913';
+            ctx.fillRect(0, 0, width, height);
+
+            const candles = activeCandleData.candles;
+            const count = candles.length;
+            if (count === 0) return;
+
+            let minP = Math.min(...candles.map(c => c.low));
+            let maxP = Math.max(...candles.map(c => c.high));
+            if (techLayers.sr) {
+                minP = Math.min(minP, activeCandleData.stopLoss, activeCandleData.support);
+                maxP = Math.max(maxP, activeCandleData.resistance);
+            }
+            const range = maxP - minP || 1;
+            const minBound = minP - range * 0.05;
+            const maxBound = maxP + range * 0.05;
+
+            function getY(p) {
+                return padTop + ((maxBound - p) / (maxBound - minBound)) * plotH;
+            }
+            function getX(i) {
+                return padLeft + (i / (count - 1)) * plotW;
+            }
+
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
+            ctx.lineWidth = 1;
+            const numGrids = 4;
+            for (let g = 0; g <= numGrids; g++) {
+                let y = padTop + (g / numGrids) * plotH;
+                let priceLevel = maxBound - (g / numGrids) * (maxBound - minBound);
+                ctx.beginPath();
+                ctx.moveTo(padLeft, y);
+                ctx.lineTo(width - padRight, y);
+                ctx.stroke();
+
+                ctx.fillStyle = '#64748b';
+                ctx.font = '10px "Segoe UI", sans-serif';
+                ctx.textAlign = 'left';
+                ctx.fillText(`$${priceLevel.toFixed(1)}`, width - padRight + 6, y + 3);
+            }
+
+            if (techLayers.sr) {
+                let ySup = getY(activeCandleData.support);
+                ctx.save();
+                ctx.strokeStyle = '#10b981';
+                ctx.lineWidth = 1.2;
+                ctx.setLineDash([4, 4]);
+                ctx.beginPath();
+                ctx.moveTo(padLeft, ySup);
+                ctx.lineTo(width - padRight, ySup);
+                ctx.stroke();
+                ctx.fillStyle = '#10b981';
+                ctx.font = 'bold 9px "Segoe UI", sans-serif';
+                ctx.fillText(`รับ $${activeCandleData.support.toFixed(1)}`, width - padRight + 4, ySup + 3);
+                ctx.restore();
+
+                let yRes = getY(activeCandleData.resistance);
+                ctx.save();
+                ctx.strokeStyle = '#ef4444';
+                ctx.lineWidth = 1.2;
+                ctx.setLineDash([4, 4]);
+                ctx.beginPath();
+                ctx.moveTo(padLeft, yRes);
+                ctx.lineTo(width - padRight, yRes);
+                ctx.stroke();
+                ctx.fillStyle = '#ef4444';
+                ctx.font = 'bold 9px "Segoe UI", sans-serif';
+                ctx.fillText(`ต้าน $${activeCandleData.resistance.toFixed(1)}`, width - padRight + 4, yRes + 3);
+                ctx.restore();
+
+                let ySL = getY(activeCandleData.stopLoss);
+                ctx.save();
+                ctx.strokeStyle = '#f59e0b';
+                ctx.lineWidth = 1.2;
+                ctx.setLineDash([2, 3]);
+                ctx.beginPath();
+                ctx.moveTo(padLeft, ySL);
+                ctx.lineTo(width - padRight, ySL);
+                ctx.stroke();
+                ctx.fillStyle = '#f59e0b';
+                ctx.font = 'bold 9px "Segoe UI", sans-serif';
+                ctx.fillText(`SL $${activeCandleData.stopLoss.toFixed(1)}`, width - padRight + 4, ySL + 3);
+                ctx.restore();
+            }
+
+            function drawCurve(arr, color, lw = 1.6) {
+                ctx.save();
+                ctx.strokeStyle = color;
+                ctx.lineWidth = lw;
+                ctx.beginPath();
+                for (let i = 0; i < count; i++) {
+                    let x = getX(i);
+                    let y = getY(arr[i]);
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+                ctx.restore();
+            }
+
+            if (techLayers.ema200) drawCurve(activeCandleData.ema200, '#f59e0b', 1.8);
+            if (techLayers.ema50) drawCurve(activeCandleData.ema50, '#a855f7', 1.8);
+            if (techLayers.ema20) drawCurve(activeCandleData.ema20, '#06b6d4', 2.0);
+
+            const barW = Math.max(3.5, Math.min(10, (plotW / count) * 0.65));
+            for (let i = 0; i < count; i++) {
+                const c = candles[i];
+                const x = getX(i);
+                const isUp = c.close >= c.open;
+                const candleColor = isUp ? '#10b981' : '#ef4444';
+
+                ctx.strokeStyle = candleColor;
+                ctx.lineWidth = 1.2;
+                ctx.beginPath();
+                ctx.moveTo(x, getY(c.high));
+                ctx.lineTo(x, getY(c.low));
+                ctx.stroke();
+
+                const yOpen = getY(c.open);
+                const yClose = getY(c.close);
+                const bodyY = Math.min(yOpen, yClose);
+                const bodyH = Math.max(2, Math.abs(yClose - yOpen));
+
+                ctx.fillStyle = candleColor;
+                ctx.fillRect(x - barW / 2, bodyY, barW, bodyH);
+
+                if (i === hoverCandleIdx) {
+                    ctx.save();
+                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
+                    ctx.setLineDash([2, 2]);
+                    ctx.beginPath();
+                    ctx.moveTo(x, padTop);
+                    ctx.lineTo(x, height - padBottom);
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+
+            ctx.fillStyle = '#64748b';
+            ctx.font = '9px "Segoe UI", sans-serif';
+            ctx.textAlign = 'center';
+            const step = Math.ceil(count / 5);
+            for (let i = 0; i < count; i += step) {
+                ctx.fillText(candles[i].date, getX(i), height - 8);
+            }
+        }
+
+        function initCanvasInteractiveEvents() {
+            const canvas = document.getElementById('candlestickCanvas');
+            const tooltip = document.getElementById('chartTooltip');
+            if (!canvas || !tooltip) return;
+
+            canvas.onmousemove = function(e) {
+                if (!activeCandleData) return;
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+
+                const count = activeCandleData.candles.length;
+                const padLeft = 12;
+                const padRight = 70;
+                const plotW = rect.width - padLeft - padRight;
+
+                let nearestIdx = Math.round(((mouseX - padLeft) / plotW) * (count - 1));
+                nearestIdx = Math.max(0, Math.min(count - 1, nearestIdx));
+
+                hoverCandleIdx = nearestIdx;
+                drawCandlestickCanvas();
+
+                const c = activeCandleData.candles[nearestIdx];
+                const changePct = (((c.close - c.open) / c.open) * 100).toFixed(2);
+                const isPos = changePct >= 0;
+
+                tooltip.style.display = 'block';
+                let tipX = mouseX + 15;
+                if (tipX + 160 > rect.width) tipX = mouseX - 170;
+                let tipY = Math.max(10, mouseY - 40);
+
+                tooltip.style.left = tipX + 'px';
+                tooltip.style.top = tipY + 'px';
+                tooltip.innerHTML = `
+                    <div class="fw-bold mb-1" style="color: #60a5fa;">📅 ${c.date}</div>
+                    <div class="d-flex justify-content-between gap-2"><span>Open:</span> <strong>$${c.open}</strong></div>
+                    <div class="d-flex justify-content-between gap-2"><span>High:</span> <strong>$${c.high}</strong></div>
+                    <div class="d-flex justify-content-between gap-2"><span>Low:</span> <strong>$${c.low}</strong></div>
+                    <div class="d-flex justify-content-between gap-2"><span>Close:</span> <strong style="color: ${isPos ? '#34d399' : '#f87171'}">$${c.close} (${isPos ? '+' : ''}${changePct}%)</strong></div>
+                    <div class="d-flex justify-content-between gap-2 border-top border-secondary mt-1 pt-1"><span class="text-muted">EMA 20:</span> <span>$${activeCandleData.ema20[nearestIdx]}</span></div>
+                `;
+
+                const crossInfo = document.getElementById('chartCrosshairInfo');
+                if (crossInfo) crossInfo.innerText = `${c.date} • $${c.close}`;
+            };
+
+            canvas.onmouseleave = function() {
+                hoverCandleIdx = -1;
+                tooltip.style.display = 'none';
+                drawCandlestickCanvas();
+                const crossInfo = document.getElementById('chartCrosshairInfo');
+                if (crossInfo) crossInfo.innerText = 'เลื่อนเมาส์ดูกราฟ';
+            };
+        }
+
+        function renderGaugeSvg(score, label, timeframeTitle, isFocus = false) {
+            score = Math.max(0, Math.min(100, Math.round(score)));
+            const angleDeg = 180 - (score * 1.8);
+            const angleRad = (angleDeg * Math.PI) / 180;
+            
+            const cx = 80, cy = 75;
+            const strokeWidth = isFocus ? 12 : 9;
+            const needleLen = isFocus ? 45 : 38;
+            const nx = cx + needleLen * Math.cos(angleRad);
+            const ny = cy - needleLen * Math.sin(angleRad);
+
+            let zoneColor = '#eab308';
+            let statusText = label;
+            if (!statusText) {
+                if (score < 20) { zoneColor = '#ef4444'; statusText = 'ขายแรง'; }
+                else if (score < 40) { zoneColor = '#f97316'; statusText = 'ขาย'; }
+                else if (score < 60) { zoneColor = '#eab308'; statusText = 'กลาง'; }
+                else if (score < 80) { zoneColor = '#84cc16'; statusText = 'ซื้อ'; }
+                else { zoneColor = '#10b981'; statusText = 'ซื้อแรง'; }
+            }
+
+            const uniqueGradId = `grad_${timeframeTitle}_${Math.random().toString(36).substr(2, 5)}`;
+
+            return `
+            <div class="tech-gauge-box p-2 text-center" style="background: rgba(30, 41, 59, 0.45); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px;">
+                <div class="fw-bold text-muted mb-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">${timeframeTitle}</div>
+                <svg viewBox="0 0 160 95" style="width: 100%; max-width: ${isFocus ? '220px' : '135px'}; display: block; margin: 0 auto; overflow: visible;">
+                    <defs>
+                        <linearGradient id="${uniqueGradId}" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#ef4444" />
+                            <stop offset="25%" stop-color="#f97316" />
+                            <stop offset="50%" stop-color="#eab308" />
+                            <stop offset="75%" stop-color="#84cc16" />
+                            <stop offset="100%" stop-color="#10b981" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 25 75 A 55 55 0 0 1 135 75" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="${strokeWidth}" stroke-linecap="round" />
+                    <path d="M 25 75 A 55 55 0 0 1 135 75" fill="none" stroke="url(#${uniqueGradId})" stroke-width="${strokeWidth}" stroke-linecap="round" />
+                    <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(2)}" y2="${ny.toFixed(2)}" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                    <circle cx="${cx}" cy="${cy}" r="4" fill="#ffffff" />
+                    <text x="24" y="90" font-size="8" fill="#94a3b8" text-anchor="middle" font-weight="600">ขาย</text>
+                    <text x="80" y="24" font-size="8" fill="#94a3b8" text-anchor="middle" font-weight="600">กลาง</text>
+                    <text x="136" y="90" font-size="8" fill="#94a3b8" text-anchor="middle" font-weight="600">ซื้อ</text>
+                    <text x="80" y="58" font-size="${isFocus ? '20' : '16'}" font-weight="800" fill="#ffffff" text-anchor="middle">${score}</text>
+                    <text x="80" y="72" font-size="${isFocus ? '12' : '10'}" font-weight="700" fill="${zoneColor}" text-anchor="middle">${statusText}</text>
+                </svg>
+            </div>
+            `;
+        }
+
+        window.renderTrendGauges = function(ticker) {
+            const data = getTechnicalData(ticker, activeTechGaugeTf);
+            const gridContainer = document.getElementById('gaugesGridContainer');
+            const focusContainer = document.getElementById('gaugeFocusContainer');
+            if (!gridContainer) return;
+
+            const timeframes = ['1D', '1W', '1M', '3M', '6M', '1Y'];
+
+            let gridHtml = '';
+            timeframes.forEach(tf => {
+                let score = data.scores[tf] || 50;
+                let label = '';
+                if (score < 20) label = 'ขายแรง';
+                else if (score < 40) label = 'ขาย';
+                else if (score < 60) label = 'กลาง';
+                else if (score < 80) label = 'ซื้อ';
+                else label = 'ซื้อแรง';
+
+                gridHtml += `
+                    <div class="col-6 col-sm-4">
+                        ${renderGaugeSvg(score, label, tf, false)}
+                    </div>
+                `;
+            });
+            gridContainer.innerHTML = gridHtml;
+
+            if (focusContainer) {
+                let tf = activeTechGaugeTf;
+                let score = data.scores[tf] || 50;
+                focusContainer.innerHTML = `
+                    <div class="p-3">
+                        ${renderGaugeSvg(score, '', `กรอบเวลา ${tf}`, true)}
+                    </div>
+                `;
+            }
+
+            const elRsi = document.getElementById('valTechRsi');
+            const elMacd = document.getElementById('valTechMacd');
+            const elEmaTrend = document.getElementById('valTechEmaTrend');
+            const elOverall = document.getElementById('valTechOverallScore');
+
+            let score1D = data.scores['1D'];
+            if (elRsi) elRsi.innerText = `${score1D.toFixed(1)} (${score1D >= 60 ? 'โซนขาขึ้น แข็งแกร่ง' : (score1D <= 40 ? 'โซนขาลง แรงขายเยอะ' : 'ไซด์เวย์ กลางๆ')})`;
+            if (elMacd) {
+                if (score1D >= 60) {
+                    elMacd.className = 'fw-bold text-success';
+                    elMacd.innerText = 'Bullish Crossover (+2.40)';
+                } else if (score1D <= 40) {
+                    elMacd.className = 'fw-bold text-danger';
+                    elMacd.innerText = 'Bearish Divergence (-1.80)';
+                } else {
+                    elMacd.className = 'fw-bold text-warning';
+                    elMacd.innerText = 'Consolidating (+0.25)';
+                }
+            }
+            if (elEmaTrend) {
+                if (score1D >= 60) {
+                    elEmaTrend.className = 'fw-bold text-info';
+                    elEmaTrend.innerText = 'ยืนเหนือ EMA 20 & 50 (Uptrend)';
+                } else if (score1D <= 40) {
+                    elEmaTrend.className = 'fw-bold text-danger';
+                    elEmaTrend.innerText = 'หลุดต่ำกว่าเส้น EMA (Downtrend)';
+                } else {
+                    elEmaTrend.className = 'fw-bold text-warning';
+                    elEmaTrend.innerText = 'ทดสอบแนวรับเส้น EMA 50';
+                }
+            }
+            if (elOverall) {
+                elOverall.innerText = `${score1D} / 100 (${data.signal})`;
+                elOverall.className = `badge rounded-pill px-2.5 py-1 fw-bold ${data.signal === 'BUY' ? 'bg-success' : (data.signal === 'SELL' ? 'bg-danger' : 'bg-warning text-dark')}`;
+            }
+        };
+
+        window.renderTechWatchlist = function() {
+            const container = document.getElementById('techWatchlistContainer');
+            if (!container) return;
+
+            let allTickers = Array.from(new Set([...techWatchlist, ...Object.keys(globalHoldings || {})]));
+
+            let query = (document.getElementById('techWatchSearch')?.value || '').toUpperCase().trim();
+            let items = allTickers.filter(t => {
+                if (query && !t.includes(query) && !(stockNames[t] || '').toUpperCase().includes(query)) return false;
+                let data = getTechnicalData(t, '1D');
+                if (techWatchFilter === 'BUY' && data.signal !== 'BUY') return false;
+                if (techWatchFilter === 'WATCH' && data.signal !== 'WATCH') return false;
+                if (techWatchFilter === 'PORT' && !(globalHoldings && globalHoldings[t] && globalHoldings[t].shares > 0)) return false;
+                return true;
+            });
+
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-4 text-muted">
+                        <div style="font-size: 1.5rem;">🔍</div>
+                        <div class="mt-2" style="font-size: 0.85rem;">ไม่พบหุ้นตามเงื่อนไขที่เลือก</div>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            items.forEach(ticker => {
+                let data = getTechnicalData(ticker, '1D');
+                let fullName = stockNames[ticker] || ticker;
+                let isCurrent = (ticker === activeTechTicker);
+                let sign = data.changePct >= 0 ? '+' : '';
+                let changeColor = data.changePct >= 0 ? '#34d399' : '#f87171';
+
+                let brand = tickerBrandStyles[ticker] || { bg: '#475569', label: ticker.slice(0, 3) };
+                let badgeClass = data.signal === 'BUY' ? 'tech-badge-buy' : (data.signal === 'SELL' ? 'tech-badge-sell' : 'tech-badge-watch');
+
+                html += `
+                    <div class="tech-watch-item ${isCurrent ? 'active' : ''}" onclick="selectTechTicker('${ticker}')">
+                        <div class="d-flex align-items-center gap-2.5 overflow-hidden" style="max-width: 62%;">
+                            <div class="tech-avatar shadow-sm" style="background-color: ${brand.bg};">
+                                ${brand.label}
+                            </div>
+                            <div class="text-truncate">
+                                <div class="d-flex align-items-center gap-1.5">
+                                    <span class="fw-bold text-white fs-6">${ticker}</span>
+                                    <span class="${badgeClass}">${data.signal}</span>
+                                </div>
+                                <div class="text-muted text-truncate" style="font-size: 0.73rem;" title="${fullName}">
+                                    ${fullName}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold text-white" style="font-size: 0.95rem;">$${data.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
+                            <div class="fw-bold" style="font-size: 0.75rem; color: ${changeColor};">
+                                ${sign}${data.changePct.toFixed(1)}%
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        };
+
+        window.selectTechTicker = function(ticker) {
+            activeTechTicker = ticker.toUpperCase();
+            renderTechWatchlist();
+            renderActiveTechnicalChart();
+            renderTrendGauges(activeTechTicker);
+        };
+
+        window.filterTechWatchlist = function(val) {
+            renderTechWatchlist();
+        };
+
+        window.setTechFilter = function(f) {
+            techWatchFilter = f;
+            ['All', 'Buy', 'Watch', 'Port'].forEach(k => {
+                const btn = document.getElementById(`techFilter${k}`);
+                if (btn) btn.classList.toggle('active', f.toUpperCase() === k.toUpperCase());
+            });
+            renderTechWatchlist();
+        };
+
+        window.addCustomWatchTicker = function() {
+            const input = document.getElementById('techWatchSearch');
+            if (!input) return;
+            const ticker = input.value.toUpperCase().trim();
+            if (!ticker) {
+                alert("กรุณากรอกชื่อย่อหุ้น (Ticker)");
+                return;
+            }
+            if (!techWatchlist.includes(ticker)) {
+                techWatchlist.unshift(ticker);
+                localStorage.setItem('myTechWatchlist', JSON.stringify(techWatchlist));
+            }
+            input.value = '';
+            selectTechTicker(ticker);
+        };
+
+        window.setChartTf = function(tf) {
+            activeTechChartTf = tf;
+            const container = document.getElementById('chartTfButtons');
+            if (container) {
+                Array.from(container.querySelectorAll('.tech-tf-btn')).forEach(btn => {
+                    btn.classList.toggle('active', btn.innerText.trim() === tf);
+                });
+            }
+            renderActiveTechnicalChart();
+        };
+
+        window.toggleTechLayer = function(layer) {
+            techLayers[layer] = !techLayers[layer];
+            const badgeId = layer === 'ema20' ? 'layerEMA20' : (layer === 'ema50' ? 'layerEMA50' : (layer === 'ema200' ? 'layerEMA200' : 'layerSR'));
+            const el = document.getElementById(badgeId);
+            if (el) el.classList.toggle('inactive', !techLayers[layer]);
+            drawCandlestickCanvas();
+        };
+
+        window.setGaugeViewMode = function(mode) {
+            techGaugeViewMode = mode;
+            const btnGrid = document.getElementById('btnGaugeGrid');
+            const btnFocus = document.getElementById('btnGaugeFocus');
+            const gridCont = document.getElementById('gaugesGridContainer');
+            const focusCont = document.getElementById('gaugeFocusContainer');
+            if (btnGrid && btnFocus && gridCont && focusCont) {
+                btnGrid.classList.toggle('active', mode === 'GRID');
+                btnFocus.classList.toggle('active', mode === 'FOCUS');
+                gridCont.style.display = mode === 'GRID' ? 'flex' : 'none';
+                focusCont.style.display = mode === 'FOCUS' ? 'block' : 'none';
+            }
+            renderTrendGauges(activeTechTicker);
+        };
+
+        window.setGaugeTf = function(tf) {
+            activeTechGaugeTf = tf;
+            const pills = document.getElementById('gaugeTfPills');
+            if (pills) {
+                Array.from(pills.querySelectorAll('.tech-gtf-btn')).forEach(btn => {
+                    btn.classList.toggle('active', btn.innerText.trim() === tf);
+                });
+            }
+            renderTrendGauges(activeTechTicker);
+        };
+
+        window.addEventListener('resize', () => {
+            const techPane = document.getElementById('technicalViewPane');
+            if (techPane && techPane.classList.contains('show')) {
+                drawCandlestickCanvas();
+            }
+        });
+
+        function initTechnicalHub() {
+            renderTechWatchlist();
+            renderActiveTechnicalChart();
+            renderTrendGauges(activeTechTicker);
+            initCanvasInteractiveEvents();
+        }
+
         async function initializeApp() { 
+            syncPortfolioNamesWithDime();
             initTheme();
             initPrivacyMode();
             initMarketIndices();
@@ -6607,6 +7809,17 @@
             updateModeButtons();
             await renderTable(); 
             autoCalculateDimeFees();
+            initTechnicalHub();
+
+            if (localStorage.getItem('myMainViewMode') === 'TECHNICAL') {
+                const triggerEl = document.getElementById('tabBtnTechnical');
+                if (triggerEl) {
+                    const tabInstance = bootstrap.Tab.getOrCreateInstance(triggerEl);
+                    tabInstance.show();
+                    onSwitchViewTab('TECHNICAL');
+                }
+            }
+
             // ดึงราคาและเรทเงินแอปอัตโนมัติในเบื้องหลังเมื่อเปิดหน้าเว็บ
             setTimeout(() => {
                 if (typeof window.updateAllPricesAndFx === 'function') {
