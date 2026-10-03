@@ -4035,8 +4035,6 @@
         let perfChartObj = null;
         let allocationChart = null; 
         let currentChartRange = 'ALL';
-        let globalHoldings = {};
-        let globalTotalPortfolioValue = 0;
 
         let currentPage = 1;
         const rowsPerPage = 10;
@@ -7097,6 +7095,9 @@
                 setTimeout(() => {
                     initTechnicalHub();
                 }, 50);
+                setTimeout(() => {
+                    drawCandlestickCanvas();
+                }, 200);
             } else {
                 if (btnTech) { btnTech.classList.remove('active'); btnTech.classList.add('text-muted'); }
                 if (btnPort) { btnPort.classList.add('active'); btnPort.classList.remove('text-muted'); }
@@ -7129,8 +7130,8 @@
             }
 
             let changePct = preset ? preset.changePct : 0.5;
-            if (!preset && pricesData && pricesData.prices && pricesData.prices[ticker] && typeof pricesData.prices[ticker] === 'object') {
-                changePct = pricesData.prices[ticker].changePct || 0;
+            if (!preset && typeof pricesUpdateData !== 'undefined' && pricesUpdateData && pricesUpdateData.prices && pricesUpdateData.prices[ticker] && typeof pricesUpdateData.prices[ticker] === 'object') {
+                changePct = pricesUpdateData.prices[ticker].changePct || 0;
             }
 
             let seed = 0;
@@ -7289,17 +7290,22 @@
             if (!canvas || !activeCandleData) return;
 
             const rect = canvas.getBoundingClientRect();
-            if (rect.width === 0 || rect.height === 0) return;
+            let width = rect.width;
+            let height = rect.height;
+            if (!width || width === 0) {
+                width = canvas.parentElement ? canvas.parentElement.clientWidth : 400;
+            }
+            if (!height || height === 0) {
+                height = 260;
+            }
+            if (!width || width === 0) return;
 
             const dpr = window.devicePixelRatio || 1;
-            canvas.width = rect.width * dpr;
-            canvas.height = rect.height * dpr;
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
 
             const ctx = canvas.getContext('2d');
             ctx.scale(dpr, dpr);
-
-            const width = rect.width;
-            const height = rect.height;
 
             const padTop = 20;
             const padBottom = 25;
