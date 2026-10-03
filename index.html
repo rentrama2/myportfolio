@@ -893,6 +893,12 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
 
+                    <div class="mb-3" id="stockTargetTickerSelectWrapper">
+                        <label class="form-label fw-bold small text-muted mb-1">เลือกหุ้นที่ต้องการตั้งเป้าหมาย:</label>
+                        <select id="stockTargetStockSelect" class="form-select form-select-sm fw-bold" onchange="openStockTargetModal(this.value)">
+                        </select>
+                    </div>
+
                     <div class="card p-3 mb-3 border-0" style="background-color: rgba(59, 130, 246, 0.08); border-radius: 12px;">
                         <div class="d-flex justify-content-between align-items-center mb-1">
                             <span class="text-muted fw-bold" style="font-size: 0.85rem;">ราคาปัจจุบัน (Current Price)</span>
@@ -1033,9 +1039,17 @@
                         ⇄
                     </div>
                     <h5 class="fw-bold mb-1" id="quickMoveModalTitle">ย้ายหุ้น</h5>
+                    <div class="mb-3 text-start" id="quickMoveStockSelectWrapper">
+                        <label class="form-label fw-bold small text-muted mb-1">เลือกหุ้นที่ต้องการย้าย:</label>
+                        <select id="quickMoveStockSelect" class="form-select form-select-sm fw-bold" onchange="quickMoveStock(this.value)">
+                        </select>
+                    </div>
                     <p class="text-muted small mb-3" id="quickMoveModalDesc">เลือกพอร์ตปลายทางที่ต้องการย้ายไป:</p>
                     <div id="quickMoveModalPortList" class="d-grid gap-2 mb-2"></div>
-                    <button type="button" class="btn btn-sm btn-light border w-100 mt-2" data-bs-dismiss="modal">ยกเลิก</button>
+                    <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                        <a href="javascript:void(0)" class="text-primary small fw-bold text-decoration-none" onclick="bootstrap.Modal.getInstance(document.getElementById('quickMoveModal'))?.hide(); openStockAllocatorModal(activePortfolioId)">📦 จัดการหุ้นทั้งหมด (Allocator)</a>
+                        <button type="button" class="btn btn-sm btn-light border" data-bs-dismiss="modal">ปิด</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1318,6 +1332,18 @@
                             </div>
                             <button class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-3 d-flex align-items-center gap-1" style="font-size: 0.8rem;" onclick="openSimulator()">
                                 🧮 จำลองซื้อขาย
+                            </button>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="quickMoveStock()" title="ย้ายหุ้นข้ามพอร์ตการลงทุน">
+                                💼 ย้ายพอร์ต ⇄
+                            </button>
+                            <button class="btn btn-outline-danger btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="openTrimCalculator()" title="คำนวณการขายลดสัดส่วน / ล็อกกำไร / คืนทุน">
+                                ✂️ Trim
+                            </button>
+                            <button class="btn btn-outline-success btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="openStockTargetModal()" title="ตั้งเป้าหมายกำไร TP และจุดตัดขาดทุน SL">
+                                🎯 ตั้งเป้า TP/SL
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="changeGroup()" title="จัดกลุ่มสินทรัพย์ เช่น ETF, Stock, REIT">
+                                📁 จัดกลุ่ม
                             </button>
                         </div>
                         <div class="d-flex align-items-center gap-2 mt-2 mt-md-0 flex-wrap justify-content-end">
@@ -2102,6 +2128,21 @@
         let quickMoveCurrentTicker = '';
         let quickMoveSourcePortId = '';
         window.quickMoveStock = function(ticker, fromPortId = null) {
+            let activeTickers = [];
+            if (window.cachedHoldingItems && window.cachedHoldingItems.length) {
+                activeTickers = window.cachedHoldingItems.map(it => it.ticker);
+            }
+            if (!activeTickers.length) {
+                activeTickers = Object.keys(globalHoldings || {}).filter(t => (globalHoldings[t]?.shares || 0) > 0.0001);
+            }
+            if (!activeTickers.length) {
+                alert('ยังไม่มีหุ้นในระบบที่สามารถย้ายได้ครับ');
+                return;
+            }
+            if (!ticker) {
+                ticker = activeTickers[0];
+            }
+
             quickMoveCurrentTicker = ticker;
             const modalEl = document.getElementById('quickMoveModal');
 
@@ -2117,6 +2158,19 @@
             }
             if (!curPortId) curPortId = 'core';
             quickMoveSourcePortId = curPortId;
+
+            // อัปเดตรายการตัวเลือกหุ้นใน Select Dropdown
+            const stockSelect = document.getElementById('quickMoveStockSelect');
+            if (stockSelect) {
+                let selHtml = '';
+                activeTickers.forEach(tk => {
+                    let it = (window.cachedHoldingItems || []).find(x => x.ticker === tk);
+                    let pName = it ? it.portName : '';
+                    selHtml += `<option value="${tk}" ${tk === ticker ? 'selected' : ''}>${tk} - ${stockNames[tk] || ''} ${pName ? '(' + pName + ')' : ''}</option>`;
+                });
+                stockSelect.innerHTML = selHtml;
+                stockSelect.value = ticker;
+            }
 
             if (!modalEl) {
                 let pList = portfolios.map((p, idx) => `${idx + 1}. ${p.name}`).join('\n');
@@ -3321,11 +3375,36 @@
 
         // --- STOCK TARGET PRICE & STOP LOSS (TP/SL) ---
         window.openStockTargetModal = function(ticker) {
+            let activeTickers = [];
+            if (window.cachedHoldingItems && window.cachedHoldingItems.length) {
+                activeTickers = window.cachedHoldingItems.map(it => it.ticker);
+            }
+            if (!activeTickers.length) {
+                activeTickers = Object.keys(globalHoldings || {}).filter(t => (globalHoldings[t]?.shares || 0) > 0.0001);
+            }
+            if (!activeTickers.length) {
+                alert('ยังไม่มีหุ้นในระบบเพื่อตั้งเป้าหมายครับ');
+                return;
+            }
+            if (!ticker) {
+                ticker = activeTickers[0];
+            }
+
             currentEditingTargetTicker = ticker;
             const titleEl = document.getElementById('stockTargetTitle');
             const subEl = document.getElementById('stockTargetSubtitle');
             if (titleEl) titleEl.innerText = `🎯 เป้าหมายราคา: ${ticker}`;
             if (subEl) subEl.innerText = stockNames[ticker] || 'ตั้งเป้าหมายราคา Take Profit & Stop Loss';
+
+            const stockSelect = document.getElementById('stockTargetStockSelect');
+            if (stockSelect) {
+                let selHtml = '';
+                activeTickers.forEach(tk => {
+                    selHtml += `<option value="${tk}" ${tk === ticker ? 'selected' : ''}>${tk} - ${stockNames[tk] || ''}</option>`;
+                });
+                stockSelect.innerHTML = selHtml;
+                stockSelect.value = ticker;
+            }
 
             let curPrice = marketPrices[ticker] || 0;
             let avgCost = 0;
@@ -4459,8 +4538,32 @@
         };
 
         window.changeGroup = function(ticker) {
+            let activeTickers = [];
+            if (window.cachedHoldingItems && window.cachedHoldingItems.length) {
+                activeTickers = window.cachedHoldingItems.map(it => it.ticker);
+            }
+            if (!activeTickers.length) {
+                activeTickers = Object.keys(globalHoldings || {}).filter(t => (globalHoldings[t]?.shares || 0) > 0.0001);
+            }
+            if (!ticker) {
+                if (!activeTickers.length) {
+                    alert('ยังไม่มีหุ้นในพอร์ตเพื่อจัดกลุ่มครับ');
+                    return;
+                }
+                let tList = activeTickers.map((t, idx) => `${idx + 1}. ${t} (${portfolioMapping[t] || 'Stock'})`).join('\n');
+                let ans = prompt(`เลือกหุ้นที่ต้องการเปลี่ยนกลุ่ม:\n${tList}\n\nพิมพ์หมายเลข (1 - ${activeTickers.length}) หรือชื่อ Ticker (เช่น VTI):`);
+                if (!ans) return;
+                let num = parseInt(ans.trim());
+                if (!isNaN(num) && num >= 1 && num <= activeTickers.length) {
+                    ticker = activeTickers[num - 1];
+                } else {
+                    let found = activeTickers.find(t => t.toUpperCase() === ans.trim().toUpperCase());
+                    ticker = found || ans.trim().toUpperCase();
+                }
+            }
+
             let currentGroup = portfolioMapping[ticker] || 'Stock';
-            let newGroup = prompt(`จัดกลุ่มพอร์ตให้ ${ticker}\n(เช่น ETF, Core Port, Satellite, Cash):`, currentGroup);
+            let newGroup = prompt(`จัดกลุ่มพอร์ตให้ ${ticker}\n(ตัวอย่าง: ETF, Stock, REIT, Crypto):`, currentGroup);
             if(newGroup !== null && newGroup.trim() !== '') {
                 portfolioMapping[ticker] = newGroup.trim();
                 localStorage.setItem('myPortfolioGroups', JSON.stringify(portfolioMapping));
