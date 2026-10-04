@@ -400,17 +400,31 @@
             border-color: #2563eb !important;
         }
 
-        /* --- Technical Signals & Trend Hub (สไตล์ตามรูปภาพ 3 การ์ด 100%) --- */
+        /* --- Technical Signals & Trend Hub (High Contrast & Clear Typography) --- */
         .tech-panel-card {
-            background: #0b0f19;
+            background: #0f172a;
             color: #f8fafc;
             border: 1px solid #1e293b !important;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
             transition: transform 0.2s, box-shadow 0.2s;
         }
+        /* Ensure text-muted inside tech-panel-card is always bright slate and clearly readable */
+        .tech-panel-card .text-muted,
+        .tech-panel-card small.text-muted,
+        .tech-panel-card p.text-muted,
+        .tech-panel-card span.text-muted,
+        .tech-panel-card div.text-muted {
+            color: #cbd5e1 !important;
+        }
+        .tech-stock-fullname {
+            color: #60a5fa !important;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: -0.1px;
+        }
         .tech-card-header {
-            border-bottom: 1px solid rgba(255,255,255,0.07);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
         .tech-card-title {
             color: #ffffff;
@@ -418,10 +432,10 @@
             line-height: 1.25;
         }
         .tech-watch-item {
-            background: rgba(30, 41, 59, 0.45);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(30, 41, 59, 0.55);
+            border: 1px solid rgba(255,255,255,0.08);
             border-radius: 14px;
-            padding: 10px 14px;
+            padding: 10px 12px;
             margin-bottom: 8px;
             cursor: pointer;
             transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -430,14 +444,14 @@
             justify-content: space-between;
         }
         .tech-watch-item:hover {
-            background: rgba(51, 65, 85, 0.65);
-            border-color: rgba(59, 130, 246, 0.5);
+            background: rgba(51, 65, 85, 0.75);
+            border-color: rgba(96, 165, 250, 0.6);
             transform: translateY(-1px);
         }
         .tech-watch-item.active {
-            background: rgba(30, 58, 138, 0.45) !important;
-            border-color: #3b82f6 !important;
-            box-shadow: 0 0 18px rgba(59, 130, 246, 0.25);
+            background: rgba(30, 58, 138, 0.5) !important;
+            border-color: #60a5fa !important;
+            box-shadow: 0 0 16px rgba(96, 165, 250, 0.3);
         }
         .tech-avatar {
             width: 38px;
@@ -450,36 +464,40 @@
             font-size: 0.85rem;
             flex-shrink: 0;
             color: #ffffff;
+            letter-spacing: -0.5px;
         }
         .tech-badge-watch {
-            background: rgba(245, 158, 11, 0.15);
+            background: rgba(245, 158, 11, 0.18);
             color: #fbbf24;
-            border: 1px solid rgba(245, 158, 11, 0.4);
+            border: 1px solid rgba(245, 158, 11, 0.5);
             font-size: 0.72rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
-            padding: 2px 8px;
+            letter-spacing: 0.3px;
+            padding: 3px 8px;
             border-radius: 6px;
+            white-space: nowrap;
         }
         .tech-badge-buy {
-            background: rgba(16, 185, 129, 0.15);
+            background: rgba(16, 185, 129, 0.18);
             color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.4);
+            border: 1px solid rgba(16, 185, 129, 0.5);
             font-size: 0.72rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
-            padding: 2px 8px;
+            letter-spacing: 0.3px;
+            padding: 3px 8px;
             border-radius: 6px;
+            white-space: nowrap;
         }
         .tech-badge-sell {
-            background: rgba(239, 68, 68, 0.15);
+            background: rgba(239, 68, 68, 0.18);
             color: #f87171;
-            border: 1px solid rgba(239, 68, 68, 0.4);
+            border: 1px solid rgba(239, 68, 68, 0.5);
             font-size: 0.72rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
-            padding: 2px 8px;
+            letter-spacing: 0.3px;
+            padding: 3px 8px;
             border-radius: 6px;
+            white-space: nowrap;
         }
         .tech-filter-btn {
             font-size: 0.74rem;
@@ -1758,12 +1776,15 @@
                         <div class="card h-100 tech-panel-card" style="border-radius: 20px; overflow: hidden;">
                             <!-- Header แบบในรูป -->
                             <div class="p-4 pb-3 tech-card-header">
-                                <span class="text-uppercase fw-bold text-muted" style="font-size: 0.8rem; letter-spacing: 0.5px;">รายการเฝ้าดู</span>
-                                <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.55rem;">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.8px; color: #38bdf8;">📋 รายการเฝ้าดู (WATCHLIST)</span>
+                                    <span class="badge rounded-pill" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; font-size: 0.68rem; border: 1px solid rgba(56,189,248,0.25);">คลิกหุ้นเพื่อดูกราฟ</span>
+                                </div>
+                                <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.45rem;">
                                     สถานะสัญญาณ<br>ของทุกหุ้นที่ติดตาม
                                 </h3>
-                                <p class="text-muted mb-0" style="font-size: 0.85rem; line-height: 1.45;">
-                                    ดูราคา การเปลี่ยนแปลง และสถานะสัญญาณ BUY หรือ WATCH ของหุ้นที่คุณติดตามได้ในรายการเดียว
+                                <p class="text-muted mb-0" style="font-size: 0.82rem; line-height: 1.45;">
+                                    ดูราคาล่าสุด สัญญาณเทคนิค <strong>🟢 BUY (น่าซื้อ)</strong> หรือ <strong>🟡 WATCH (รอดู)</strong> อัปเดตในที่เดียว
                                 </p>
                             </div>
 
@@ -1795,29 +1816,57 @@
                         <div class="card h-100 tech-panel-card" style="border-radius: 20px; overflow: hidden;">
                             <!-- Header แบบในรูป -->
                             <div class="p-4 pb-2 tech-card-header">
-                                <span class="text-uppercase fw-bold text-muted" style="font-size: 0.8rem; letter-spacing: 0.5px;">กราฟวิเคราะห์</span>
-                                <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.55rem;">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.8px; color: #38bdf8;">📈 กราฟวิเคราะห์ (CHART & EMA)</span>
+                                    <span class="badge rounded-pill" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; font-size: 0.68rem; border: 1px solid rgba(56,189,248,0.25);">แท่งเทียน & เส้นแนวโน้ม</span>
+                                </div>
+                                <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.45rem;">
                                     เห็นแนวโน้ม<br>ในกราฟเดียว
                                 </h3>
-                                <p class="text-muted mb-0" style="font-size: 0.85rem; line-height: 1.45;">
+                                <p class="text-muted mb-0" style="font-size: 0.82rem; line-height: 1.45;">
                                     กราฟแท่งเทียนพร้อมเส้น EMA แนวรับ แนวต้าน และจุดตัดขาดทุน ช่วยให้วางแผนการซื้อขายได้ชัดเจน
                                 </p>
                             </div>
 
                             <div class="p-3 pt-2">
-                                <!-- Active Stock Header (e.g. NVDA $225.07 +0.22% แบบในรูป) -->
-                                <div class="d-flex justify-content-between align-items-center mb-2 p-2 px-3 rounded-3" style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255,255,255,0.06);">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <span class="fw-bolder fs-5 text-white" id="activeChartTicker">NVDA</span>
-                                        <span class="fw-bold text-info fs-6" id="activeChartPrice">$225.07</span>
-                                        <span class="badge rounded-pill fw-bold" id="activeChartChange" style="font-size: 0.75rem; background: rgba(16, 185, 129, 0.2); color: #34d399;">+0.22%</span>
+                                <!-- Active Stock Header (แสดงโลโก้, Ticker, สัญญาณ, ชื่อเต็มบริษัท ชัดเจนตรงตามที่ผู้ใช้ต้องการ) -->
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 p-2 px-3 rounded-3" style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.08);">
+                                    <div class="d-flex align-items-center overflow-hidden" style="max-width: 65%;">
+                                        <div class="position-relative me-2.5 flex-shrink-0" style="width: 38px; height: 38px;">
+                                            <img id="activeChartLogoImg" 
+                                                 src="https://assets.parqet.com/logos/symbol/NVDA" 
+                                                 alt="NVDA" 
+                                                 class="rounded-circle border bg-white p-1 shadow-sm" 
+                                                 width="38" height="38" 
+                                                 style="object-fit: contain; width: 38px; height: 38px;" 
+                                                 onerror="this.onerror=null; this.src='https://financialmodelingprep.com/image-stock/NVDA.png'; this.onerror=() => { this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex'; };">
+                                            <div id="activeChartLogoFallback" class="rounded-circle bg-light border text-primary fw-bold justify-content-center align-items-center shadow-sm" 
+                                                 style="width: 38px; height: 38px; font-size: 0.75rem; display: none;">
+                                                NVD
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden">
+                                            <div class="d-flex align-items-center gap-1.5 flex-wrap">
+                                                <span class="fw-bolder fs-5 text-white lh-sm" id="activeChartTicker">NVDA</span>
+                                                <span class="badge rounded-pill fw-bold" id="activeChartSignalBadge" style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4);">🟢 BUY</span>
+                                            </div>
+                                            <div class="text-truncate fw-medium mt-0.5 tech-stock-fullname" id="activeChartFullName" title="NVIDIA Corporation">
+                                                NVIDIA Corporation
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="d-flex gap-1" id="chartTfButtons">
-                                        <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('1D')">1D</button>
-                                        <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('1W')">1W</button>
-                                        <button class="btn btn-xs tech-tf-btn active" onclick="setChartTf('1M')">1M</button>
-                                        <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('3M')">3M</button>
-                                        <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('1Y')">1Y</button>
+                                    <div class="d-flex flex-column align-items-end gap-1 flex-shrink-0">
+                                        <div class="d-flex align-items-center gap-1.5">
+                                            <span class="fw-bold text-white" style="font-size: 1.05rem;" id="activeChartPrice">$225.07</span>
+                                            <span class="badge rounded-pill fw-bold" id="activeChartChange" style="font-size: 0.74rem; background: rgba(16, 185, 129, 0.2); color: #34d399;">+0.22%</span>
+                                        </div>
+                                        <div class="d-flex gap-1" id="chartTfButtons">
+                                            <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('1D')">1D</button>
+                                            <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('1W')">1W</button>
+                                            <button class="btn btn-xs tech-tf-btn active" onclick="setChartTf('1M')">1M</button>
+                                            <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('3M')">3M</button>
+                                            <button class="btn btn-xs tech-tf-btn" onclick="setChartTf('1Y')">1Y</button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -1877,36 +1926,67 @@
                         <div class="card h-100 tech-panel-card" style="border-radius: 20px; overflow: hidden;">
                             <!-- Header แบบในรูป -->
                             <div class="p-4 pb-2 tech-card-header">
-                                <span class="text-uppercase fw-bold text-muted" style="font-size: 0.8rem; letter-spacing: 0.5px;">ความแข็งแรงของแนวโน้ม</span>
-                                <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.55rem;">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.8px; color: #38bdf8;">⚡ ความแข็งแรงของแนวโน้ม (TREND)</span>
+                                    <span class="badge rounded-pill" style="background: rgba(16, 185, 129, 0.15); color: #34d399; font-size: 0.68rem; border: 1px solid rgba(16,185,129,0.25);">มาตรวัดโมเมนตัม</span>
+                                </div>
+                                <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.45rem;">
                                     อ่านโมเมนตัม<br>ทุกกรอบเวลา
                                 </h3>
-                                <p class="text-muted mb-0" style="font-size: 0.85rem; line-height: 1.45;">
-                                    มาตรวัดแนวโน้มตั้งแต่ 1 วันถึง 1 ปี บอกระดับแรงซื้อและแรงขายได้ในพริบตา
+                                <p class="text-muted mb-0" style="font-size: 0.82rem; line-height: 1.45;">
+                                    วัดระดับแรงซื้อ-ขายตั้งแต่ 1 วัน ถึง 1 ปี คะแนนเต็ม 100 ยิ่งสูงแปลว่าขาขึ้นยิ่งแข็งแกร่ง
                                 </p>
                             </div>
 
                             <div class="p-3 pt-2">
-                                <!-- Trend Strength Subtitle & View Mode -->
-                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
-                                    <div>
-                                        <span class="fw-bold text-white" style="font-size: 0.88rem;">Trend Strength</span>
-                                        <div class="text-muted" style="font-size: 0.7rem;">ภาพรวมแนวโน้มตามช่วงเวลา</div>
+                                <!-- Active Stock Identity & View Mode in Card 3 -->
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2 p-2 px-3 rounded-3" style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.08);">
+                                    <div class="d-flex align-items-center overflow-hidden" style="max-width: 65%;">
+                                        <div class="position-relative me-2 flex-shrink-0" style="width: 36px; height: 36px;">
+                                            <img id="activeGaugeLogoImg" 
+                                                 src="https://assets.parqet.com/logos/symbol/NVDA" 
+                                                 alt="NVDA" 
+                                                 class="rounded-circle border bg-white p-1 shadow-sm" 
+                                                 width="36" height="36" 
+                                                 style="object-fit: contain; width: 36px; height: 36px;" 
+                                                 onerror="this.onerror=null; this.src='https://financialmodelingprep.com/image-stock/NVDA.png'; this.onerror=() => { this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex'; };">
+                                            <div id="activeGaugeLogoFallback" class="rounded-circle bg-light border text-primary fw-bold justify-content-center align-items-center shadow-sm" 
+                                                 style="width: 36px; height: 36px; font-size: 0.75rem; display: none;">
+                                                NVD
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden">
+                                            <div class="d-flex align-items-center gap-1.5 flex-wrap">
+                                                <span class="fw-bolder fs-6 text-white lh-sm" id="activeGaugeTicker">NVDA</span>
+                                                <span class="badge rounded-pill fw-bold" id="activeGaugeSignalBadge" style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4);">🟢 BUY</span>
+                                            </div>
+                                            <div class="text-truncate fw-medium mt-0.5 tech-stock-fullname" id="activeGaugeFullName" title="NVIDIA Corporation">
+                                                NVIDIA Corporation
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="btn-group btn-group-sm p-0 rounded-pill border border-secondary border-opacity-25 overflow-hidden">
+                                    <div class="btn-group btn-group-sm p-0 rounded-pill border border-secondary border-opacity-25 overflow-hidden flex-shrink-0">
                                         <button class="btn btn-xs tech-gauge-view-btn active" id="btnGaugeGrid" onclick="setGaugeViewMode('GRID')">ทุกช่วง</button>
                                         <button class="btn btn-xs tech-gauge-view-btn" id="btnGaugeFocus" onclick="setGaugeViewMode('FOCUS')">ช่วงเดียว</button>
                                     </div>
                                 </div>
 
-                                <!-- Timeframe Selector Bar -->
-                                <div class="d-flex gap-1 mb-2.5 overflow-x-auto pb-1" id="gaugeTfPills">
-                                    <button class="btn btn-xs tech-gtf-btn active" onclick="setGaugeTf('1D')">1D</button>
-                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('1W')">1W</button>
-                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('1M')">1M</button>
-                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('3M')">3M</button>
-                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('6M')">6M</button>
-                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('1Y')">1Y</button>
+                                <!-- Quick Score Meaning Legend (อธิบายชัดเจน เข้าใจง่าย 100%) -->
+                                <div class="d-flex align-items-center justify-content-between p-2 mb-2.5 rounded-3 flex-wrap gap-1" style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); font-size: 0.72rem;">
+                                    <span style="color: #cbd5e1; font-weight: 600;">💡 เกณฑ์คะแนน:</span>
+                                    <span class="badge rounded-pill" style="background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239,68,68,0.35);">0-44 ขาย / ขาลง</span>
+                                    <span class="badge rounded-pill" style="background: rgba(234, 179, 8, 0.2); color: #fbbf24; border: 1px solid rgba(234,179,8,0.35);">45-59 พักตัว / ไซด์เวย์</span>
+                                    <span class="badge rounded-pill" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16,185,129,0.35);">60-100 ซื้อ / ขาขึ้น</span>
+                                </div>
+
+                                <!-- Timeframe Selector Bar (แสดงเฉพาะโหมดดูช่วงเดียว FOCUS) -->
+                                <div class="gap-1 mb-2.5 overflow-x-auto pb-1" id="gaugeTfPills" style="display: none;">
+                                    <button class="btn btn-xs tech-gtf-btn active" onclick="setGaugeTf('1D')">1D (1 วัน)</button>
+                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('1W')">1W (1 สัปดาห์)</button>
+                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('1M')">1M (1 เดือน)</button>
+                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('3M')">3M (3 เดือน)</button>
+                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('6M')">6M (6 เดือน)</button>
+                                    <button class="btn btn-xs tech-gtf-btn" onclick="setGaugeTf('1Y')">1Y (1 ปี)</button>
                                 </div>
 
                                 <!-- Gauges Grid Mode (6 เกจเหมือนในรูป: 1D, 1W, 1M, 3M, 6M, 1Y) -->
@@ -1920,22 +2000,29 @@
                                 </div>
 
                                 <!-- Key Indicator Breakdown Card -->
-                                <div class="card border-0 mt-2.5 p-2 px-3 rounded-3" style="background: rgba(30, 41, 59, 0.45); border: 1px solid rgba(255,255,255,0.06) !important; font-size: 0.76rem;">
-                                    <div class="d-flex justify-content-between align-items-center py-1 border-bottom border-secondary border-opacity-25">
-                                        <span class="text-muted">RSI (14 โมเมนตัม):</span>
+                                <div class="card border-0 mt-2.5 p-2 px-3 rounded-3" style="background: rgba(30, 41, 59, 0.55); border: 1px solid rgba(255,255,255,0.08) !important; font-size: 0.76rem;">
+                                    <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-secondary border-opacity-25">
+                                        <span style="color: #cbd5e1; font-weight: 600;">📊 RSI (วัดแรงซื้อ-ขาย):</span>
                                         <span class="fw-bold text-white" id="valTechRsi">61.5 (โซนขาขึ้น)</span>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center py-1 border-bottom border-secondary border-opacity-25">
-                                        <span class="text-muted">MACD Indicator:</span>
+                                    <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-secondary border-opacity-25">
+                                        <span style="color: #cbd5e1; font-weight: 600;">📈 MACD (แนวโน้มราคา):</span>
                                         <span class="fw-bold text-success" id="valTechMacd">Bullish Crossover (+2.40)</span>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center py-1 border-bottom border-secondary border-opacity-25">
-                                        <span class="text-muted">เส้นค่าเฉลี่ย EMA:</span>
+                                    <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-secondary border-opacity-25">
+                                        <span style="color: #cbd5e1; font-weight: 600;">📉 เส้นค่าเฉลี่ย EMA:</span>
                                         <span class="fw-bold text-info" id="valTechEmaTrend">ยืนเหนือ EMA 20 & 50 (Uptrend)</span>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center pt-1">
-                                        <span class="text-muted">สรุปคะแนนความแข็งแรง:</span>
+                                    <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-secondary border-opacity-25">
+                                        <span style="color: #cbd5e1; font-weight: 600;">🏆 สรุปคะแนนโมเมนตัม:</span>
                                         <span class="badge bg-success rounded-pill px-2.5 py-1 fw-bold" id="valTechOverallScore">68 / 100 (BUY)</span>
+                                    </div>
+                                    <!-- Human-friendly takeaway summary -->
+                                    <div class="pt-2 d-flex align-items-start gap-2" style="font-size: 0.76rem; color: #cbd5e1;" id="valTechSummaryHuman">
+                                        <span style="font-size: 1rem;">💡</span>
+                                        <div id="valTechSummaryText">
+                                            <strong>คำแนะนำ:</strong> หุ้นมีโมเมนตัมขาขึ้นแข็งแกร่ง ราคายืนเหนือ EMA ทุกเส้น แนะนำ <strong>ถือต่อ / ทยอยสะสมเมื่อราคาย่อตัว</strong>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -7082,7 +7169,28 @@
             'CIEN': { price: 358.92, changePct: -0.1, signal: 'WATCH', scores: { '1D': 52, '1W': 51, '1M': 55, '3M': 58, '6M': 60, '1Y': 65 } },
             'CRWD': { price: 255.90, changePct: -1.5, signal: 'WATCH', scores: { '1D': 45, '1W': 48, '1M': 52, '3M': 56, '6M': 61, '1Y': 72 } },
             'LLY': { price: 1167.34, changePct: 1.8, signal: 'BUY', scores: { '1D': 78, '1W': 74, '1M': 79, '3M': 82, '6M': 85, '1Y': 88 } },
-            'NVDA': { price: 225.07, changePct: 0.22, signal: 'BUY', scores: { '1D': 61, '1W': 53, '1M': 68, '3M': 74, '6M': 65, '1Y': 82 } }
+            'NVDA': { price: 225.07, changePct: 0.22, signal: 'BUY', scores: { '1D': 61, '1W': 53, '1M': 68, '3M': 74, '6M': 65, '1Y': 82 } },
+            'SPYD': { price: 43.10, changePct: 0.45, signal: 'BUY', scores: { '1D': 65, '1W': 62, '1M': 68, '3M': 72, '6M': 75, '1Y': 78 } }
+        };
+
+        window.getStockLogoElement = function(ticker, size = 38) {
+            ticker = (ticker || '').toUpperCase().trim();
+            const initials = ticker.slice(0, 3);
+            return `
+                <div class="position-relative me-2 flex-shrink-0" style="width: ${size}px; height: ${size}px;">
+                    <img src="https://assets.parqet.com/logos/symbol/${ticker}" 
+                         alt="${ticker}" 
+                         class="rounded-circle border bg-white p-1 shadow-sm" 
+                         width="${size}" height="${size}" 
+                         style="object-fit: contain; width: ${size}px; height: ${size}px;" 
+                         onerror="this.onerror=null; this.src='https://financialmodelingprep.com/image-stock/${ticker}.png'; this.onerror=() => { this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex'; };" 
+                         loading="lazy">
+                    <div class="rounded-circle bg-light border text-primary fw-bold justify-content-center align-items-center shadow-sm" 
+                         style="width: ${size}px; height: ${size}px; font-size: ${Math.round(size * 0.35)}px; display: none;">
+                        ${initials}
+                    </div>
+                </div>
+            `;
         };
 
         window.onSwitchViewTab = function(mode) {
@@ -7250,16 +7358,61 @@
             const data = getTechnicalData(activeTechTicker, activeTechChartTf);
             activeCandleData = data;
 
+            const fullName = stockNames[data.ticker] || data.ticker;
             const elTicker = document.getElementById('activeChartTicker');
+            const elFullName = document.getElementById('activeChartFullName');
             const elPrice = document.getElementById('activeChartPrice');
             const elChange = document.getElementById('activeChartChange');
+            const elLogo = document.getElementById('activeChartLogoImg');
+            const elLogoFb = document.getElementById('activeChartLogoFallback');
+            const elSigBadge = document.getElementById('activeChartSignalBadge');
+
             if (elTicker) elTicker.innerText = data.ticker;
+            if (elFullName) {
+                elFullName.innerText = fullName;
+                elFullName.title = fullName;
+            }
             if (elPrice) elPrice.innerText = `$${data.price.toFixed(2)}`;
             if (elChange) {
                 const sign = data.changePct >= 0 ? '+' : '';
                 elChange.innerText = `${sign}${data.changePct.toFixed(2)}%`;
                 elChange.style.background = data.changePct >= 0 ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)';
                 elChange.style.color = data.changePct >= 0 ? '#34d399' : '#f87171';
+            }
+            if (elLogo) {
+                elLogo.style.display = 'block';
+                elLogo.src = `https://assets.parqet.com/logos/symbol/${data.ticker}`;
+                elLogo.alt = data.ticker;
+                elLogo.onerror = function() {
+                    this.onerror = null;
+                    this.src = `https://financialmodelingprep.com/image-stock/${data.ticker}.png`;
+                    this.onerror = () => {
+                        this.style.display = 'none';
+                        if (elLogoFb) elLogoFb.style.display = 'flex';
+                    };
+                };
+            }
+            if (elLogoFb) {
+                elLogoFb.innerText = data.ticker.slice(0, 3);
+                elLogoFb.style.display = 'none';
+            }
+            if (elSigBadge) {
+                if (data.signal === 'BUY') {
+                    elSigBadge.innerText = '🟢 BUY (น่าซื้อ)';
+                    elSigBadge.style.background = 'rgba(16, 185, 129, 0.2)';
+                    elSigBadge.style.color = '#34d399';
+                    elSigBadge.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+                } else if (data.signal === 'SELL') {
+                    elSigBadge.innerText = '🔴 SELL (ระวัง)';
+                    elSigBadge.style.background = 'rgba(239, 68, 68, 0.2)';
+                    elSigBadge.style.color = '#f87171';
+                    elSigBadge.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+                } else {
+                    elSigBadge.innerText = '🟡 WATCH (รอดู)';
+                    elSigBadge.style.background = 'rgba(245, 158, 11, 0.2)';
+                    elSigBadge.style.color = '#fbbf24';
+                    elSigBadge.style.borderColor = 'rgba(245, 158, 11, 0.4)';
+                }
             }
 
             const elSup = document.getElementById('valSupportLevel');
@@ -7522,53 +7675,187 @@
             const angleDeg = 180 - (score * 1.8);
             const angleRad = (angleDeg * Math.PI) / 180;
             
-            const cx = 80, cy = 75;
-            const strokeWidth = isFocus ? 12 : 9;
-            const needleLen = isFocus ? 45 : 38;
+            // Timeframe description dictionary in plain Thai
+            const tfDescMap = {
+                '1D': '1 วัน (วันนี้)',
+                '1W': '1 สัปดาห์ (สัปดาห์นี้)',
+                '1M': '1 เดือน (ระยะสั้น-กลาง)',
+                '3M': '3 เดือน (ไตรมาส)',
+                '6M': '6 เดือน (ครึ่งปี)',
+                '1Y': '1 ปี (ระยะยาว)'
+            };
+            const tfDesc = tfDescMap[timeframeTitle] || timeframeTitle;
+
+            // Geometry configured so needle NEVER overlaps score or status
+            const cx = isFocus ? 110 : 80;
+            const cy = isFocus ? 85 : 66;
+            const strokeWidth = isFocus ? 11 : 8.5;
+            const arcRadius = isFocus ? 68 : 49;
+            const needleLen = isFocus ? 48 : 34;
+
             const nx = cx + needleLen * Math.cos(angleRad);
             const ny = cy - needleLen * Math.sin(angleRad);
 
             let zoneColor = '#eab308';
-            let statusText = label;
-            if (!statusText) {
-                if (score < 20) { zoneColor = '#ef4444'; statusText = 'ขายแรง'; }
-                else if (score < 40) { zoneColor = '#f97316'; statusText = 'ขาย'; }
-                else if (score < 60) { zoneColor = '#eab308'; statusText = 'กลาง'; }
-                else if (score < 80) { zoneColor = '#84cc16'; statusText = 'ซื้อ'; }
-                else { zoneColor = '#10b981'; statusText = 'ซื้อแรง'; }
+            let statusText = '';
+            let subText = '';
+            if (score < 25) { 
+                zoneColor = '#ef4444'; 
+                statusText = '🔴 ขายแรง (ขาลง)'; 
+                subText = 'หลุดแนวรับสำคัญ';
+            } else if (score < 45) { 
+                zoneColor = '#f97316'; 
+                statusText = '🟠 แนวโน้มขาย (ชะลอ)'; 
+                subText = 'แรงขายเริ่มกดดัน';
+            } else if (score < 60) { 
+                zoneColor = '#fbbf24'; 
+                statusText = '🟡 พักตัว (ไซด์เวย์)'; 
+                subText = 'แกว่งรอเลือกทาง';
+            } else if (score < 75) { 
+                zoneColor = '#34d399'; 
+                statusText = '🟢 น่าซื้อสะสม'; 
+                subText = 'แนวโน้มขาขึ้น';
+            } else { 
+                zoneColor = '#10b981'; 
+                statusText = '🟢 ซื้อแข็งแกร่ง'; 
+                subText = 'ขาขึ้นแรงหนุนสูง';
             }
 
             const uniqueGradId = `grad_${timeframeTitle}_${Math.random().toString(36).substr(2, 5)}`;
 
+            if (isFocus) {
+                // Large Focus Gauge: viewBox 0 0 220 125
+                const leftX = cx - arcRadius;
+                const rightX = cx + arcRadius;
+                return `
+                <div class="tech-gauge-box p-3 text-center" style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;">
+                    <div class="d-flex justify-content-between align-items-center mb-2 px-2">
+                        <span class="fw-bold fs-6 text-white">${timeframeTitle}</span>
+                        <span class="badge rounded-pill" style="background: rgba(56, 189, 248, 0.18); color: #38bdf8; font-size: 0.78rem;">กรอบเวลา ${tfDesc}</span>
+                    </div>
+                    <svg viewBox="0 0 220 125" style="width: 100%; max-width: 250px; display: block; margin: 0 auto; overflow: visible;">
+                        <defs>
+                            <linearGradient id="${uniqueGradId}" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#ef4444" />
+                                <stop offset="35%" stop-color="#f97316" />
+                                <stop offset="50%" stop-color="#eab308" />
+                                <stop offset="70%" stop-color="#10b981" />
+                                <stop offset="100%" stop-color="#34d399" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Background track -->
+                        <path d="M ${leftX} ${cy} A ${arcRadius} ${arcRadius} 0 0 1 ${rightX} ${cy}" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="${strokeWidth}" stroke-linecap="round" />
+                        <!-- Gradient arc -->
+                        <path d="M ${leftX} ${cy} A ${arcRadius} ${arcRadius} 0 0 1 ${rightX} ${cy}" fill="none" stroke="url(#${uniqueGradId})" stroke-width="${strokeWidth}" stroke-linecap="round" />
+                        <!-- Needle -->
+                        <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+                        <circle cx="${cx}" cy="${cy}" r="5" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
+                        <!-- Arc endpoints labels -->
+                        <text x="${leftX - 4}" y="${cy + 16}" font-size="10.5" fill="#f87171" text-anchor="middle" font-weight="700">0 ขาย</text>
+                        <text x="${rightX + 4}" y="${cy + 16}" font-size="10.5" fill="#34d399" text-anchor="middle" font-weight="700">100 ซื้อ</text>
+                        <!-- Score strictly BELOW pivot (y > cy) -->
+                        <text x="${cx}" y="${cy + 26}" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle">${score}<tspan font-size="14" fill="#cbd5e1" font-weight="500"> / 100</tspan></text>
+                    </svg>
+                    <div class="mt-2">
+                        <div class="fw-bold" style="font-size: 1.05rem; color: ${zoneColor};">${statusText}</div>
+                        <div class="mt-1" style="font-size: 0.8rem; color: #cbd5e1;">${subText}</div>
+                    </div>
+                </div>
+                `;
+            }
+
+            // Mini Gauge (Grid Mode): viewBox 0 0 160 106
+            const leftX = cx - arcRadius; // 80 - 49 = 31
+            const rightX = cx + arcRadius; // 80 + 49 = 129
             return `
-            <div class="tech-gauge-box p-2 text-center" style="background: rgba(30, 41, 59, 0.45); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px;">
-                <div class="fw-bold text-muted mb-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">${timeframeTitle}</div>
-                <svg viewBox="0 0 160 95" style="width: 100%; max-width: ${isFocus ? '220px' : '135px'}; display: block; margin: 0 auto; overflow: visible;">
+            <div class="tech-gauge-box p-2 text-center" style="background: rgba(30, 41, 59, 0.55); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px;">
+                <div class="d-flex justify-content-between align-items-center mb-1 px-1">
+                    <span class="fw-bold text-white" style="font-size: 0.82rem;">${timeframeTitle}</span>
+                    <span class="badge rounded-pill" style="font-size: 0.65rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8;">${tfDesc}</span>
+                </div>
+                <svg viewBox="0 0 160 106" style="width: 100%; max-width: 135px; display: block; margin: 0 auto; overflow: visible;">
                     <defs>
                         <linearGradient id="${uniqueGradId}" x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" stop-color="#ef4444" />
-                            <stop offset="25%" stop-color="#f97316" />
+                            <stop offset="35%" stop-color="#f97316" />
                             <stop offset="50%" stop-color="#eab308" />
-                            <stop offset="75%" stop-color="#84cc16" />
-                            <stop offset="100%" stop-color="#10b981" />
+                            <stop offset="70%" stop-color="#10b981" />
+                            <stop offset="100%" stop-color="#34d399" />
                         </linearGradient>
                     </defs>
-                    <path d="M 25 75 A 55 55 0 0 1 135 75" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="${strokeWidth}" stroke-linecap="round" />
-                    <path d="M 25 75 A 55 55 0 0 1 135 75" fill="none" stroke="url(#${uniqueGradId})" stroke-width="${strokeWidth}" stroke-linecap="round" />
-                    <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(2)}" y2="${ny.toFixed(2)}" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-                    <circle cx="${cx}" cy="${cy}" r="4" fill="#ffffff" />
-                    <text x="24" y="90" font-size="8" fill="#94a3b8" text-anchor="middle" font-weight="600">ขาย</text>
-                    <text x="80" y="24" font-size="8" fill="#94a3b8" text-anchor="middle" font-weight="600">กลาง</text>
-                    <text x="136" y="90" font-size="8" fill="#94a3b8" text-anchor="middle" font-weight="600">ซื้อ</text>
-                    <text x="80" y="58" font-size="${isFocus ? '20' : '16'}" font-weight="800" fill="#ffffff" text-anchor="middle">${score}</text>
-                    <text x="80" y="72" font-size="${isFocus ? '12' : '10'}" font-weight="700" fill="${zoneColor}" text-anchor="middle">${statusText}</text>
+                    <!-- Background arc track -->
+                    <path d="M ${leftX} ${cy} A ${arcRadius} ${arcRadius} 0 0 1 ${rightX} ${cy}" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="${strokeWidth}" stroke-linecap="round" />
+                    <!-- Colored gradient arc -->
+                    <path d="M ${leftX} ${cy} A ${arcRadius} ${arcRadius} 0 0 1 ${rightX} ${cy}" fill="none" stroke="url(#${uniqueGradId})" stroke-width="${strokeWidth}" stroke-linecap="round" />
+                    <!-- Needle -->
+                    <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                    <circle cx="${cx}" cy="${cy}" r="3.5" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" />
+                    <!-- Left and Right text -->
+                    <text x="${leftX - 4}" y="${cy + 13}" font-size="8.5" fill="#f87171" text-anchor="middle" font-weight="700">0 ขาย</text>
+                    <text x="${rightX + 4}" y="${cy + 13}" font-size="8.5" fill="#34d399" text-anchor="middle" font-weight="700">100 ซื้อ</text>
+                    <!-- Score strictly below pivot -->
+                    <text x="${cx}" y="${cy + 22}" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">${score}<tspan font-size="10.5" fill="#cbd5e1" font-weight="500"> /100</tspan></text>
                 </svg>
+                <div class="mt-1 pt-0.5">
+                    <div class="fw-bold" style="font-size: 0.76rem; color: ${zoneColor};">${statusText}</div>
+                    <div style="font-size: 0.65rem; color: #cbd5e1; font-weight: 500;">${subText}</div>
+                </div>
             </div>
             `;
         }
 
         window.renderTrendGauges = function(ticker) {
             const data = getTechnicalData(ticker, activeTechGaugeTf);
+            const fullName = stockNames[ticker] || ticker;
+
+            // Update Active Stock Identity Header in Card 3
+            const elGaugeTicker = document.getElementById('activeGaugeTicker');
+            const elGaugeFullName = document.getElementById('activeGaugeFullName');
+            const elGaugeLogo = document.getElementById('activeGaugeLogoImg');
+            const elGaugeLogoFb = document.getElementById('activeGaugeLogoFallback');
+            const elGaugeBadge = document.getElementById('activeGaugeSignalBadge');
+
+            if (elGaugeTicker) elGaugeTicker.innerText = ticker;
+            if (elGaugeFullName) {
+                elGaugeFullName.innerText = fullName;
+                elGaugeFullName.title = fullName;
+            }
+            if (elGaugeLogo) {
+                elGaugeLogo.style.display = 'block';
+                elGaugeLogo.src = `https://assets.parqet.com/logos/symbol/${ticker}`;
+                elGaugeLogo.alt = ticker;
+                elGaugeLogo.onerror = function() {
+                    this.onerror = null;
+                    this.src = `https://financialmodelingprep.com/image-stock/${ticker}.png`;
+                    this.onerror = () => {
+                        this.style.display = 'none';
+                        if (elGaugeLogoFb) elGaugeLogoFb.style.display = 'flex';
+                    };
+                };
+            }
+            if (elGaugeLogoFb) {
+                elGaugeLogoFb.innerText = ticker.slice(0, 3);
+                elGaugeLogoFb.style.display = 'none';
+            }
+            if (elGaugeBadge) {
+                if (data.signal === 'BUY') {
+                    elGaugeBadge.innerText = '🟢 BUY (น่าซื้อ)';
+                    elGaugeBadge.style.background = 'rgba(16, 185, 129, 0.2)';
+                    elGaugeBadge.style.color = '#34d399';
+                    elGaugeBadge.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+                } else if (data.signal === 'SELL') {
+                    elGaugeBadge.innerText = '🔴 SELL (ระวัง)';
+                    elGaugeBadge.style.background = 'rgba(239, 68, 68, 0.2)';
+                    elGaugeBadge.style.color = '#f87171';
+                    elGaugeBadge.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+                } else {
+                    elGaugeBadge.innerText = '🟡 WATCH (รอดู)';
+                    elGaugeBadge.style.background = 'rgba(245, 158, 11, 0.2)';
+                    elGaugeBadge.style.color = '#fbbf24';
+                    elGaugeBadge.style.borderColor = 'rgba(245, 158, 11, 0.4)';
+                }
+            }
+
             const gridContainer = document.getElementById('gaugesGridContainer');
             const focusContainer = document.getElementById('gaugeFocusContainer');
             if (!gridContainer) return;
@@ -7578,16 +7865,9 @@
             let gridHtml = '';
             timeframes.forEach(tf => {
                 let score = data.scores[tf] || 50;
-                let label = '';
-                if (score < 20) label = 'ขายแรง';
-                else if (score < 40) label = 'ขาย';
-                else if (score < 60) label = 'กลาง';
-                else if (score < 80) label = 'ซื้อ';
-                else label = 'ซื้อแรง';
-
                 gridHtml += `
                     <div class="col-6 col-sm-4">
-                        ${renderGaugeSvg(score, label, tf, false)}
+                        ${renderGaugeSvg(score, '', tf, false)}
                     </div>
                 `;
             });
@@ -7597,8 +7877,8 @@
                 let tf = activeTechGaugeTf;
                 let score = data.scores[tf] || 50;
                 focusContainer.innerHTML = `
-                    <div class="p-3">
-                        ${renderGaugeSvg(score, '', `กรอบเวลา ${tf}`, true)}
+                    <div class="p-2">
+                        ${renderGaugeSvg(score, '', tf, true)}
                     </div>
                 `;
             }
@@ -7607,19 +7887,20 @@
             const elMacd = document.getElementById('valTechMacd');
             const elEmaTrend = document.getElementById('valTechEmaTrend');
             const elOverall = document.getElementById('valTechOverallScore');
+            const elSummaryText = document.getElementById('valTechSummaryText');
 
-            let score1D = data.scores['1D'];
-            if (elRsi) elRsi.innerText = `${score1D.toFixed(1)} (${score1D >= 60 ? 'โซนขาขึ้น แข็งแกร่ง' : (score1D <= 40 ? 'โซนขาลง แรงขายเยอะ' : 'ไซด์เวย์ กลางๆ')})`;
+            let score1D = data.scores['1D'] || 50;
+            if (elRsi) elRsi.innerText = `${score1D.toFixed(1)} (${score1D >= 60 ? 'แรงซื้อหนุน โซนขาขึ้น' : (score1D <= 40 ? 'แรงขายกดดัน โซนขาลง' : 'พักตัว ไซด์เวย์')})`;
             if (elMacd) {
                 if (score1D >= 60) {
                     elMacd.className = 'fw-bold text-success';
-                    elMacd.innerText = 'Bullish Crossover (+2.40)';
+                    elMacd.innerText = 'ตัดขึ้น Bullish (+2.40)';
                 } else if (score1D <= 40) {
                     elMacd.className = 'fw-bold text-danger';
-                    elMacd.innerText = 'Bearish Divergence (-1.80)';
+                    elMacd.innerText = 'ตัดลง Bearish (-1.80)';
                 } else {
                     elMacd.className = 'fw-bold text-warning';
-                    elMacd.innerText = 'Consolidating (+0.25)';
+                    elMacd.innerText = 'แกว่งตัวรอเลือกทาง (+0.25)';
                 }
             }
             if (elEmaTrend) {
@@ -7628,15 +7909,25 @@
                     elEmaTrend.innerText = 'ยืนเหนือ EMA 20 & 50 (Uptrend)';
                 } else if (score1D <= 40) {
                     elEmaTrend.className = 'fw-bold text-danger';
-                    elEmaTrend.innerText = 'หลุดต่ำกว่าเส้น EMA (Downtrend)';
+                    elEmaTrend.innerText = 'หลุดต่ำกว่า EMA (Downtrend)';
                 } else {
                     elEmaTrend.className = 'fw-bold text-warning';
                     elEmaTrend.innerText = 'ทดสอบแนวรับเส้น EMA 50';
                 }
             }
             if (elOverall) {
-                elOverall.innerText = `${score1D} / 100 (${data.signal})`;
+                let signalBadge = data.signal === 'BUY' ? '🟢 น่าซื้อ (BUY)' : (data.signal === 'SELL' ? '🔴 ระวังขาย (SELL)' : '🟡 รอดูจังหวะ (WATCH)');
+                elOverall.innerText = `${score1D} / 100 (${signalBadge})`;
                 elOverall.className = `badge rounded-pill px-2.5 py-1 fw-bold ${data.signal === 'BUY' ? 'bg-success' : (data.signal === 'SELL' ? 'bg-danger' : 'bg-warning text-dark')}`;
+            }
+            if (elSummaryText) {
+                if (data.signal === 'BUY') {
+                    elSummaryText.innerHTML = `<strong>คำแนะนำ:</strong> หุ้น <span class="text-white fw-bold">${ticker}</span> (<span style="color: #60a5fa;">${fullName}</span>) มีโมเมนตัมขาขึ้นแข็งแกร่ง (${score1D}/100) ราคายืนเหนือแนวรับ EMA แนะนำ <strong>ถือต่อ / ทยอยสะสมเมื่อราคาย่อตัว</strong>`;
+                } else if (data.signal === 'SELL') {
+                    elSummaryText.innerHTML = `<strong>คำแนะนำ:</strong> หุ้น <span class="text-white fw-bold">${ticker}</span> (<span style="color: #60a5fa;">${fullName}</span>) มีแรงขายกดดันต่อเนื่อง (${score1D}/100) หลุดแนวรับสำคัญ แนะนำ <strong>ชะลอการซื้อ / ตั้งจุด Stop Loss ระวังความเสี่ยง</strong>`;
+                } else {
+                    elSummaryText.innerHTML = `<strong>คำแนะนำ:</strong> หุ้น <span class="text-white fw-bold">${ticker}</span> (<span style="color: #60a5fa;">${fullName}</span>) กำลังพักตัวในกรอบ (Sideway ${score1D}/100) สัญญาณยังก้ำกึ่ง แนะนำ <strong>รอดูจังหวะเบรกเอาท์ (WATCH)</strong> ก่อนเข้าซื้อ`;
+                }
             }
         };
 
@@ -7645,6 +7936,23 @@
             if (!container) return;
 
             let allTickers = Array.from(new Set([...techWatchlist, ...Object.keys(globalHoldings || {})]));
+
+            // Update filter chip counters dynamically
+            let countBuy = 0, countWatch = 0, countPort = 0;
+            allTickers.forEach(t => {
+                let d = getTechnicalData(t, '1D');
+                if (d.signal === 'BUY') countBuy++;
+                if (d.signal === 'WATCH') countWatch++;
+                if (globalHoldings && globalHoldings[t] && globalHoldings[t].shares > 0) countPort++;
+            });
+            const btnAll = document.getElementById('techFilterAll');
+            const btnBuy = document.getElementById('techFilterBuy');
+            const btnWatch = document.getElementById('techFilterWatch');
+            const btnPort = document.getElementById('techFilterPort');
+            if (btnAll) btnAll.innerText = `ทั้งหมด (${allTickers.length})`;
+            if (btnBuy) btnBuy.innerText = `🟢 BUY (${countBuy})`;
+            if (btnWatch) btnWatch.innerText = `🟡 WATCH (${countWatch})`;
+            if (btnPort) btnPort.innerText = `💼 ในพอร์ต (${countPort})`;
 
             let query = (document.getElementById('techWatchSearch')?.value || '').toUpperCase().trim();
             let items = allTickers.filter(t => {
@@ -7658,7 +7966,7 @@
 
             if (items.length === 0) {
                 container.innerHTML = `
-                    <div class="text-center py-4 text-muted">
+                    <div class="text-center py-4" style="color: #94a3b8;">
                         <div style="font-size: 1.5rem;">🔍</div>
                         <div class="mt-2" style="font-size: 0.85rem;">ไม่พบหุ้นตามเงื่อนไขที่เลือก</div>
                     </div>
@@ -7671,32 +7979,38 @@
                 let data = getTechnicalData(ticker, '1D');
                 let fullName = stockNames[ticker] || ticker;
                 let isCurrent = (ticker === activeTechTicker);
-                let sign = data.changePct >= 0 ? '+' : '';
+                let changeSign = data.changePct >= 0 ? '▲ +' : '▼ ';
                 let changeColor = data.changePct >= 0 ? '#34d399' : '#f87171';
 
-                let brand = tickerBrandStyles[ticker] || { bg: '#475569', label: ticker.slice(0, 3) };
-                let badgeClass = data.signal === 'BUY' ? 'tech-badge-buy' : (data.signal === 'SELL' ? 'tech-badge-sell' : 'tech-badge-watch');
+                let logoHtml = getStockLogoElement(ticker, 38);
+
+                let badgeHtml = '';
+                if (data.signal === 'BUY') {
+                    badgeHtml = `<span class="tech-badge-buy">🟢 BUY</span>`;
+                } else if (data.signal === 'SELL') {
+                    badgeHtml = `<span class="tech-badge-sell">🔴 SELL</span>`;
+                } else {
+                    badgeHtml = `<span class="tech-badge-watch">🟡 WATCH</span>`;
+                }
 
                 html += `
                     <div class="tech-watch-item ${isCurrent ? 'active' : ''}" onclick="selectTechTicker('${ticker}')">
-                        <div class="d-flex align-items-center gap-2.5 overflow-hidden" style="max-width: 62%;">
-                            <div class="tech-avatar shadow-sm" style="background-color: ${brand.bg};">
-                                ${brand.label}
-                            </div>
-                            <div class="text-truncate">
-                                <div class="d-flex align-items-center gap-1.5">
-                                    <span class="fw-bold text-white fs-6">${ticker}</span>
-                                    <span class="${badgeClass}">${data.signal}</span>
+                        <div class="d-flex align-items-center overflow-hidden me-2" style="max-width: 68%;">
+                            ${logoHtml}
+                            <div class="text-start overflow-hidden">
+                                <div class="d-flex align-items-center gap-1.5 flex-wrap">
+                                    <span class="fw-bold text-white fs-6 lh-sm" style="letter-spacing: -0.2px;">${ticker}</span>
+                                    ${badgeHtml}
                                 </div>
-                                <div class="text-muted text-truncate" style="font-size: 0.73rem;" title="${fullName}">
+                                <div class="text-truncate lh-sm mt-1 fw-medium tech-stock-fullname" title="${fullName}">
                                     ${fullName}
                                 </div>
                             </div>
                         </div>
-                        <div class="text-end">
+                        <div class="text-end ps-2 flex-shrink-0">
                             <div class="fw-bold text-white" style="font-size: 0.95rem;">$${data.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
-                            <div class="fw-bold" style="font-size: 0.75rem; color: ${changeColor};">
-                                ${sign}${data.changePct.toFixed(1)}%
+                            <div class="fw-bold" style="font-size: 0.78rem; color: ${changeColor};">
+                                ${changeSign}${Math.abs(data.changePct).toFixed(2)}%
                             </div>
                         </div>
                     </div>
@@ -7767,11 +8081,13 @@
             const btnFocus = document.getElementById('btnGaugeFocus');
             const gridCont = document.getElementById('gaugesGridContainer');
             const focusCont = document.getElementById('gaugeFocusContainer');
+            const tfPills = document.getElementById('gaugeTfPills');
             if (btnGrid && btnFocus && gridCont && focusCont) {
                 btnGrid.classList.toggle('active', mode === 'GRID');
                 btnFocus.classList.toggle('active', mode === 'FOCUS');
                 gridCont.style.display = mode === 'GRID' ? 'flex' : 'none';
                 focusCont.style.display = mode === 'FOCUS' ? 'block' : 'none';
+                if (tfPills) tfPills.style.display = mode === 'FOCUS' ? 'flex' : 'none';
             }
             renderTrendGauges(activeTechTicker);
         };
