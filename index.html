@@ -400,40 +400,100 @@
             border-color: #2563eb !important;
         }
 
-        /* --- Technical Signals & Trend Hub (High Contrast & Clear Typography) --- */
+        /* --- Technical Signals & Trend Hub (Fresh, Bright & High Contrast) --- */
         .tech-panel-card {
-            background: #0f172a;
-            color: #f8fafc;
-            border: 1px solid #1e293b !important;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid rgba(0, 0, 0, 0.08) !important;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        /* Ensure text-muted inside tech-panel-card is always bright slate and clearly readable */
+        [data-bs-theme="dark"] .tech-panel-card,
+        body.dark-mode .tech-panel-card {
+            background: #0f172a;
+            color: #f8fafc;
+            border-color: #1e293b !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
         .tech-panel-card .text-muted,
         .tech-panel-card small.text-muted,
         .tech-panel-card p.text-muted,
         .tech-panel-card span.text-muted,
         .tech-panel-card div.text-muted {
+            color: #64748b !important;
+        }
+        [data-bs-theme="dark"] .tech-panel-card .text-muted,
+        [data-bs-theme="dark"] .tech-panel-card small.text-muted,
+        [data-bs-theme="dark"] .tech-panel-card p.text-muted,
+        [data-bs-theme="dark"] .tech-panel-card span.text-muted,
+        [data-bs-theme="dark"] .tech-panel-card div.text-muted,
+        body.dark-mode .tech-panel-card .text-muted,
+        body.dark-mode .tech-panel-card small.text-muted,
+        body.dark-mode .tech-panel-card p.text-muted,
+        body.dark-mode .tech-panel-card span.text-muted,
+        body.dark-mode .tech-panel-card div.text-muted {
             color: #cbd5e1 !important;
         }
+
         .tech-stock-fullname {
-            color: #60a5fa !important;
+            color: #2563eb !important;
             font-size: 0.78rem;
             font-weight: 500;
             letter-spacing: -0.1px;
         }
-        .tech-card-header {
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+        [data-bs-theme="dark"] .tech-stock-fullname,
+        body.dark-mode .tech-stock-fullname {
+            color: #60a5fa !important;
         }
+
+        .tech-card-header {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        [data-bs-theme="dark"] .tech-card-header,
+        body.dark-mode .tech-card-header {
+            border-bottom-color: rgba(255, 255, 255, 0.08);
+        }
+
         .tech-card-title {
-            color: #ffffff;
+            color: #0f172a;
             font-weight: 800;
             line-height: 1.25;
         }
+        [data-bs-theme="dark"] .tech-card-title,
+        body.dark-mode .tech-card-title {
+            color: #ffffff;
+        }
+
+        .tech-card-section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.8px;
+            color: #0284c7;
+            font-weight: 700;
+        }
+        [data-bs-theme="dark"] .tech-card-section-label,
+        body.dark-mode .tech-card-section-label {
+            color: #38bdf8;
+        }
+
+        .tech-card-pill-hint {
+            background: #e0f2fe;
+            color: #0284c7;
+            font-size: 0.68rem;
+            border: 1px solid #bae6fd;
+            font-weight: 600;
+        }
+        [data-bs-theme="dark"] .tech-card-pill-hint,
+        body.dark-mode .tech-card-pill-hint {
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            border-color: rgba(56, 189, 248, 0.25);
+        }
+
         .tech-watch-item {
-            background: rgba(30, 41, 59, 0.55);
-            border: 1px solid rgba(255,255,255,0.08);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
             border-radius: 14px;
             padding: 10px 12px;
             margin-bottom: 8px;
@@ -442,17 +502,50 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
         .tech-watch-item:hover {
-            background: rgba(51, 65, 85, 0.75);
-            border-color: rgba(96, 165, 250, 0.6);
+            background: #f8fafc;
+            border-color: #93c5fd;
             transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .tech-watch-item.active {
+            background: #eff6ff !important;
+            border-color: #3b82f6 !important;
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.18);
+        }
+        [data-bs-theme="dark"] .tech-watch-item,
+        body.dark-mode .tech-watch-item {
+            background: rgba(30, 41, 59, 0.55);
+            border-color: rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+        [data-bs-theme="dark"] .tech-watch-item:hover,
+        body.dark-mode .tech-watch-item:hover {
+            background: rgba(51, 65, 85, 0.75);
+            border-color: rgba(96, 165, 250, 0.6);
+        }
+        [data-bs-theme="dark"] .tech-watch-item.active,
+        body.dark-mode .tech-watch-item.active {
             background: rgba(30, 58, 138, 0.5) !important;
             border-color: #60a5fa !important;
             box-shadow: 0 0 16px rgba(96, 165, 250, 0.3);
         }
+
+        .tech-watch-ticker {
+            color: #0f172a;
+        }
+        .tech-watch-price {
+            color: #0f172a;
+        }
+        [data-bs-theme="dark"] .tech-watch-ticker,
+        body.dark-mode .tech-watch-ticker,
+        [data-bs-theme="dark"] .tech-watch-price,
+        body.dark-mode .tech-watch-price {
+            color: #ffffff;
+        }
+
         .tech-avatar {
             width: 38px;
             height: 38px;
@@ -466,10 +559,11 @@
             color: #ffffff;
             letter-spacing: -0.5px;
         }
+
         .tech-badge-watch {
-            background: rgba(245, 158, 11, 0.18);
-            color: #fbbf24;
-            border: 1px solid rgba(245, 158, 11, 0.5);
+            background: #fef9c3;
+            color: #a16207;
+            border: 1px solid #fef08a;
             font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 0.3px;
@@ -478,9 +572,9 @@
             white-space: nowrap;
         }
         .tech-badge-buy {
-            background: rgba(16, 185, 129, 0.18);
-            color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.5);
+            background: #dcfce7;
+            color: #15803d;
+            border: 1px solid #bbf7d0;
             font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 0.3px;
@@ -489,9 +583,9 @@
             white-space: nowrap;
         }
         .tech-badge-sell {
-            background: rgba(239, 68, 68, 0.18);
-            color: #f87171;
-            border: 1px solid rgba(239, 68, 68, 0.5);
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
             font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 0.3px;
@@ -499,46 +593,109 @@
             border-radius: 6px;
             white-space: nowrap;
         }
+        [data-bs-theme="dark"] .tech-badge-watch,
+        body.dark-mode .tech-badge-watch {
+            background: rgba(245, 158, 11, 0.18);
+            color: #fbbf24;
+            border-color: rgba(245, 158, 11, 0.5);
+        }
+        [data-bs-theme="dark"] .tech-badge-buy,
+        body.dark-mode .tech-badge-buy {
+            background: rgba(16, 185, 129, 0.18);
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.5);
+        }
+        [data-bs-theme="dark"] .tech-badge-sell,
+        body.dark-mode .tech-badge-sell {
+            background: rgba(239, 68, 68, 0.18);
+            color: #f87171;
+            border-color: rgba(239, 68, 68, 0.5);
+        }
+
         .tech-filter-btn {
             font-size: 0.74rem;
             font-weight: 600;
             padding: 3px 12px;
-            border: 1px solid #334155;
-            background: #1e293b;
-            color: #94a3b8;
+            border: 1px solid #e2e8f0;
+            background: #f1f5f9;
+            color: #475569;
             cursor: pointer;
             transition: all 0.15s;
             white-space: nowrap;
         }
         .tech-filter-btn:hover {
+            color: #0f172a;
+            border-color: #cbd5e1;
+            background: #e2e8f0;
+        }
+        .tech-filter-btn.active {
+            background: #2563eb !important;
+            border-color: #2563eb !important;
+            color: #ffffff !important;
+        }
+        [data-bs-theme="dark"] .tech-filter-btn,
+        body.dark-mode .tech-filter-btn {
+            border-color: #334155;
+            background: #1e293b;
+            color: #94a3b8;
+        }
+        [data-bs-theme="dark"] .tech-filter-btn:hover,
+        body.dark-mode .tech-filter-btn:hover {
             color: #ffffff;
             border-color: #64748b;
         }
-        .tech-filter-btn.active {
+        [data-bs-theme="dark"] .tech-filter-btn.active,
+        body.dark-mode .tech-filter-btn.active {
             background: #3b82f6 !important;
             border-color: #3b82f6 !important;
             color: #ffffff !important;
         }
+
         .tech-tf-btn, .tech-gtf-btn {
             font-size: 0.72rem;
             font-weight: 700;
             padding: 2px 10px;
-            border: 1px solid #334155;
-            background: transparent;
-            color: #94a3b8;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            color: #475569;
             border-radius: 20px;
             cursor: pointer;
             transition: all 0.15s;
         }
         .tech-tf-btn:hover, .tech-gtf-btn:hover {
+            color: #0f172a;
+            border-color: #cbd5e1;
+            background: #f1f5f9;
+        }
+        .tech-tf-btn.active, .tech-gtf-btn.active {
+            background: #0f172a !important;
+            color: #ffffff !important;
+            border-color: #0f172a !important;
+        }
+        [data-bs-theme="dark"] .tech-tf-btn,
+        [data-bs-theme="dark"] .tech-gtf-btn,
+        body.dark-mode .tech-tf-btn,
+        body.dark-mode .tech-gtf-btn {
+            border-color: #334155;
+            background: transparent;
+            color: #94a3b8;
+        }
+        [data-bs-theme="dark"] .tech-tf-btn:hover,
+        [data-bs-theme="dark"] .tech-gtf-btn:hover,
+        body.dark-mode .tech-tf-btn:hover,
+        body.dark-mode .tech-gtf-btn:hover {
             color: #ffffff;
             border-color: #64748b;
         }
-        .tech-tf-btn.active, .tech-gtf-btn.active {
+        [data-bs-theme="dark"] .tech-tf-btn.active,
+        [data-bs-theme="dark"] .tech-gtf-btn.active,
+        body.dark-mode .tech-tf-btn.active,
+        body.dark-mode .tech-gtf-btn.active {
             background: #ffffff !important;
             color: #0f172a !important;
             border-color: #ffffff !important;
         }
+
         .tech-layer-badge {
             cursor: pointer;
             user-select: none;
@@ -550,26 +707,43 @@
             opacity: 0.35;
             text-decoration: line-through;
         }
+
         .tech-gauge-view-btn {
-            background: #1e293b;
-            color: #94a3b8;
+            background: #f1f5f9;
+            color: #64748b;
             border: none;
             font-weight: 600;
             padding: 2px 8px;
         }
         .tech-gauge-view-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        [data-bs-theme="dark"] .tech-gauge-view-btn,
+        body.dark-mode .tech-gauge-view-btn {
+            background: #1e293b;
+            color: #94a3b8;
+        }
+        [data-bs-theme="dark"] .tech-gauge-view-btn.active,
+        body.dark-mode .tech-gauge-view-btn.active {
             background: #3b82f6;
             color: white;
         }
+
         .tech-watch-scroll::-webkit-scrollbar {
             width: 5px;
         }
         .tech-watch-scroll::-webkit-scrollbar-thumb {
-            background: #334155;
+            background: #cbd5e1;
             border-radius: 4px;
         }
+        [data-bs-theme="dark"] .tech-watch-scroll::-webkit-scrollbar-thumb,
+        body.dark-mode .tech-watch-scroll::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+
         .tech-card3-mode-btn {
-            color: #94a3b8;
+            color: #64748b;
             background: transparent;
             border: none;
             transition: all 0.2s;
@@ -578,38 +752,310 @@
         .tech-card3-mode-btn.active {
             background: #2563eb !important;
             color: #ffffff !important;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+        }
+        [data-bs-theme="dark"] .tech-card3-mode-btn,
+        body.dark-mode .tech-card3-mode-btn {
+            color: #94a3b8;
+        }
+        [data-bs-theme="dark"] .tech-card3-mode-btn.active,
+        body.dark-mode .tech-card3-mode-btn.active {
             box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
         }
+
+        .tech-mode-pill-bar {
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+        }
+        [data-bs-theme="dark"] .tech-mode-pill-bar,
+        body.dark-mode .tech-mode-pill-bar {
+            background: rgba(15, 23, 42, 0.85);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
         .tech-thesis-item {
-            background: rgba(30, 41, 59, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 11px 13px;
             margin-bottom: 9px;
             transition: background 0.15s, border-color 0.15s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
         .tech-thesis-item:hover {
+            background: #f8fafc;
+            border-color: #93c5fd;
+        }
+        [data-bs-theme="dark"] .tech-thesis-item,
+        body.dark-mode .tech-thesis-item {
+            background: rgba(30, 41, 59, 0.6);
+            border-color: rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+        [data-bs-theme="dark"] .tech-thesis-item:hover,
+        body.dark-mode .tech-thesis-item:hover {
             background: rgba(30, 41, 59, 0.85);
             border-color: rgba(96, 165, 250, 0.35);
         }
+
         .tech-thesis-title {
             font-size: 0.95rem;
             font-weight: 700;
-            color: #ffffff;
+            color: #0f172a;
             letter-spacing: -0.2px;
         }
+        [data-bs-theme="dark"] .tech-thesis-title,
+        body.dark-mode .tech-thesis-title {
+            color: #ffffff;
+        }
+
         .tech-thesis-val {
             font-size: 0.86rem;
             font-weight: 600;
-            color: #60a5fa;
+            color: #1d4ed8;
             letter-spacing: -0.1px;
         }
+        [data-bs-theme="dark"] .tech-thesis-val,
+        body.dark-mode .tech-thesis-val {
+            color: #60a5fa;
+        }
+
         .tech-thesis-desc {
             font-size: 0.78rem;
-            color: #cbd5e1;
+            color: #475569;
             line-height: 1.45;
             margin-top: 3px;
         }
+        [data-bs-theme="dark"] .tech-thesis-desc,
+        body.dark-mode .tech-thesis-desc {
+            color: #cbd5e1;
+        }
+
+        .tech-stock-identity-bar {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+        [data-bs-theme="dark"] .tech-stock-identity-bar,
+        body.dark-mode .tech-stock-identity-bar {
+            background: rgba(30, 41, 59, 0.7);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .tech-canvas-wrapper {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        [data-bs-theme="dark"] .tech-canvas-wrapper,
+        body.dark-mode .tech-canvas-wrapper {
+            background: #060913;
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .tech-search-bar {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0 !important;
+        }
+        .tech-search-addon {
+            background: #f8fafc;
+            color: #64748b;
+        }
+        .tech-search-input {
+            background: #f8fafc;
+            color: #0f172a;
+        }
+        .tech-search-input::placeholder {
+            color: #94a3b8;
+        }
+        [data-bs-theme="dark"] .tech-search-bar,
+        body.dark-mode .tech-search-bar {
+            background: #1e293b;
+            border-color: #334155 !important;
+        }
+        [data-bs-theme="dark"] .tech-search-addon,
+        body.dark-mode .tech-search-addon {
+            background: #1e293b;
+            color: #94a3b8;
+        }
+        [data-bs-theme="dark"] .tech-search-input,
+        body.dark-mode .tech-search-input {
+            background: #1e293b;
+            color: #f8fafc;
+        }
+
+        .tech-metric-support {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+        }
+        .tech-metric-resistance {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        .tech-metric-sl {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+        }
+        .tech-metric-title {
+            font-size: 0.68rem;
+            font-weight: 600;
+            color: #64748b;
+        }
+        [data-bs-theme="dark"] .tech-metric-support,
+        body.dark-mode .tech-metric-support {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.25);
+        }
+        [data-bs-theme="dark"] .tech-metric-resistance,
+        body.dark-mode .tech-metric-resistance {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: rgba(239, 68, 68, 0.25);
+        }
+        [data-bs-theme="dark"] .tech-metric-sl,
+        body.dark-mode .tech-metric-sl {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.25);
+        }
+        [data-bs-theme="dark"] .tech-metric-title,
+        body.dark-mode .tech-metric-title {
+            color: #94a3b8;
+        }
+
+        .tech-strategy-box {
+            background: #eff6ff;
+            border: 1px dashed #bfdbfe;
+            color: #1e40af;
+        }
+        [data-bs-theme="dark"] .tech-strategy-box,
+        body.dark-mode .tech-strategy-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.35);
+            color: #93c5fd;
+        }
+
+        .tech-thesis-header-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+        [data-bs-theme="dark"] .tech-thesis-header-box,
+        body.dark-mode .tech-thesis-header-box {
+            background: rgba(15, 23, 42, 0.65);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .tech-thesis-summary-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+        }
+        [data-bs-theme="dark"] .tech-thesis-summary-box,
+        body.dark-mode .tech-thesis-summary-box {
+            background: rgba(30, 41, 59, 0.75);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+        }
+
+        .tech-gauge-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+            transition: all 0.2s ease;
+        }
+        .tech-gauge-box:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        [data-bs-theme="dark"] .tech-gauge-box,
+        body.dark-mode .tech-gauge-box {
+            background: rgba(30, 41, 59, 0.55);
+            border-color: rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+        [data-bs-theme="dark"] .tech-gauge-box:hover,
+        body.dark-mode .tech-gauge-box:hover {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .tech-legend-bar {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+        }
+        [data-bs-theme="dark"] .tech-legend-bar,
+        body.dark-mode .tech-legend-bar {
+            background: rgba(15, 23, 42, 0.7);
+            border-color: rgba(255, 255, 255, 0.08);
+            color: #cbd5e1;
+        }
+
+        .tech-indicator-breakdown-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0 !important;
+            color: #334155;
+        }
+        [data-bs-theme="dark"] .tech-indicator-breakdown-card,
+        body.dark-mode .tech-indicator-breakdown-card {
+            background: rgba(30, 41, 59, 0.55);
+            border-color: rgba(255, 255, 255, 0.08) !important;
+            color: #cbd5e1;
+        }
+
+        .tech-breakdown-label {
+            color: #475569;
+            font-weight: 600;
+        }
+        [data-bs-theme="dark"] .tech-breakdown-label,
+        body.dark-mode .tech-breakdown-label {
+            color: #cbd5e1;
+        }
+
+        .tech-breakdown-val {
+            color: #0f172a;
+            font-weight: 700;
+        }
+        [data-bs-theme="dark"] .tech-breakdown-val,
+        body.dark-mode .tech-breakdown-val {
+            color: #ffffff;
+        }
+
+        .tech-thesis-badge {
+            background: #ecfdf5;
+            color: #047857;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border: 1px solid #a7f3d0;
+            letter-spacing: 0.5px;
+        }
+        [data-bs-theme="dark"] .tech-thesis-badge,
+        body.dark-mode .tech-thesis-badge {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.28);
+        }
+
+        .tech-thesis-pill {
+            background: #eff6ff;
+            color: #0284c7;
+            border: 1px solid #bae6fd;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        [data-bs-theme="dark"] .tech-thesis-pill,
+        body.dark-mode .tech-thesis-pill {
+            background: rgba(15, 23, 42, 0.7);
+            color: #34d399;
+            border-color: rgba(52, 211, 153, 0.25);
+        }
+
+        .tech-thesis-header-title {
+            color: #0f172a;
+        }
+        [data-bs-theme="dark"] .tech-thesis-header-title,
+        body.dark-mode .tech-thesis-header-title {
+            color: #ffffff;
+        }
+
 
         /* --- Market Overview & Sector Hub Styles --- */
         .market-macro-card {
@@ -2143,8 +2589,8 @@
                             <!-- Header แบบในรูป -->
                             <div class="p-4 pb-3 tech-card-header">
                                 <div class="d-flex align-items-center justify-content-between mb-1">
-                                    <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.8px; color: #38bdf8;">📋 รายการเฝ้าดู (WATCHLIST)</span>
-                                    <span class="badge rounded-pill" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; font-size: 0.68rem; border: 1px solid rgba(56,189,248,0.25);">คลิกหุ้นเพื่อดูกราฟ</span>
+                                    <span class="text-uppercase fw-bold tech-card-section-label">📋 รายการเฝ้าดู (WATCHLIST)</span>
+                                    <span class="badge rounded-pill tech-card-pill-hint">คลิกหุ้นเพื่อดูกราฟ</span>
                                 </div>
                                 <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.45rem;">
                                     สถานะสัญญาณ<br>ของทุกหุ้นที่ติดตาม
@@ -2156,9 +2602,9 @@
 
                             <!-- Search & Filter Controls -->
                             <div class="px-3 pt-2 pb-2">
-                                <div class="input-group input-group-sm mb-2 shadow-sm rounded-pill overflow-hidden border border-secondary border-opacity-25">
-                                    <span class="input-group-text bg-dark border-0 text-muted ps-3">🔍</span>
-                                    <input type="text" id="techWatchSearch" class="form-control bg-dark text-white border-0" placeholder="ค้นหาหุ้น หรือพิมพ์ชื่อเพื่อเพิ่ม..." oninput="filterTechWatchlist(this.value)">
+                                <div class="input-group input-group-sm mb-2 shadow-sm rounded-pill overflow-hidden border tech-search-bar">
+                                    <span class="input-group-text tech-search-addon border-0 ps-3">🔍</span>
+                                    <input type="text" id="techWatchSearch" class="form-control tech-search-input border-0" placeholder="ค้นหาหุ้น หรือพิมพ์ชื่อเพื่อเพิ่ม..." oninput="filterTechWatchlist(this.value)">
                                     <button class="btn btn-primary btn-sm px-3 fw-bold" onclick="addCustomWatchTicker()">+ เพิ่ม</button>
                                 </div>
                                 <!-- Filter Chips -->
@@ -2183,8 +2629,8 @@
                             <!-- Header แบบในรูป -->
                             <div class="p-4 pb-2 tech-card-header">
                                 <div class="d-flex align-items-center justify-content-between mb-1">
-                                    <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.8px; color: #38bdf8;">📈 กราฟวิเคราะห์ (CHART & EMA)</span>
-                                    <span class="badge rounded-pill" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; font-size: 0.68rem; border: 1px solid rgba(56,189,248,0.25);">แท่งเทียน & เส้นแนวโน้ม</span>
+                                    <span class="text-uppercase fw-bold tech-card-section-label">📈 กราฟวิเคราะห์ (CHART & EMA)</span>
+                                    <span class="badge rounded-pill tech-card-pill-hint">แท่งเทียน & เส้นแนวโน้ม</span>
                                 </div>
                                 <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.45rem;">
                                     เห็นแนวโน้ม<br>ในกราฟเดียว
@@ -2196,7 +2642,7 @@
 
                             <div class="p-3 pt-2">
                                 <!-- Active Stock Header (แสดงโลโก้, Ticker, สัญญาณ, ชื่อเต็มบริษัท ชัดเจนตรงตามที่ผู้ใช้ต้องการ) -->
-                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 p-2 px-3 rounded-3" style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.08);">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 p-2 px-3 rounded-3 tech-stock-identity-bar">
                                     <div class="d-flex align-items-center overflow-hidden" style="max-width: 65%;">
                                         <div class="position-relative me-2.5 flex-shrink-0" style="width: 38px; height: 38px;">
                                             <img id="activeChartLogoImg" 
@@ -2213,7 +2659,7 @@
                                         </div>
                                         <div class="overflow-hidden">
                                             <div class="d-flex align-items-center gap-1.5 flex-wrap">
-                                                <span class="fw-bolder fs-5 text-white lh-sm" id="activeChartTicker">NVDA</span>
+                                                <span class="fw-bolder fs-5 text-body lh-sm" id="activeChartTicker">NVDA</span>
                                                 <span class="badge rounded-pill fw-bold" id="activeChartSignalBadge" style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4);">🟢 BUY</span>
                                             </div>
                                             <div class="text-truncate fw-medium mt-0.5 tech-stock-fullname" id="activeChartFullName" title="NVIDIA Corporation">
@@ -2223,7 +2669,7 @@
                                     </div>
                                     <div class="d-flex flex-column align-items-end gap-1 flex-shrink-0">
                                         <div class="d-flex align-items-center gap-1.5">
-                                            <span class="fw-bold text-white" style="font-size: 1.05rem;" id="activeChartPrice">$225.07</span>
+                                            <span class="fw-bold text-body" style="font-size: 1.05rem;" id="activeChartPrice">$225.07</span>
                                             <span class="badge rounded-pill fw-bold" id="activeChartChange" style="font-size: 0.74rem; background: rgba(16, 185, 129, 0.2); color: #34d399;">+0.22%</span>
                                         </div>
                                         <div class="d-flex gap-1" id="chartTfButtons">
@@ -2248,7 +2694,7 @@
                                 </div>
 
                                 <!-- Canvas Candlestick Container -->
-                                <div style="position: relative; width: 100%; height: 260px; border-radius: 14px; overflow: hidden; background: #060913; border: 1px solid rgba(255,255,255,0.06);" id="candlestickCanvasWrapper">
+                                <div style="position: relative; width: 100%; height: 260px; border-radius: 14px; overflow: hidden;" class="tech-canvas-wrapper" id="candlestickCanvasWrapper">
                                     <canvas id="candlestickCanvas" style="width: 100%; height: 100%; display: block;"></canvas>
                                     <!-- Floating Tooltip -->
                                     <div id="chartTooltip" style="display: none; position: absolute; pointer-events: none; z-index: 20; background: rgba(15, 23, 42, 0.95); border: 1px solid #334155; border-radius: 8px; padding: 6px 10px; font-size: 0.72rem; color: #f8fafc; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.5);"></div>
@@ -2257,29 +2703,29 @@
                                 <!-- Support, Resistance & Stop Loss Cards -->
                                 <div class="row g-2 mt-2">
                                     <div class="col-4">
-                                        <div class="p-2 text-center rounded-3" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25);">
-                                            <div class="text-muted" style="font-size: 0.68rem; font-weight: 600;">แนวรับ (Support)</div>
+                                        <div class="p-2 text-center rounded-3 tech-metric-support">
+                                            <div class="tech-metric-title">แนวรับ (Support)</div>
                                             <div class="fw-bold text-success" id="valSupportLevel" style="font-size: 0.88rem;">$218.40</div>
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <div class="p-2 text-center rounded-3" style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.25);">
-                                            <div class="text-muted" style="font-size: 0.68rem; font-weight: 600;">แนวต้าน (Resistance)</div>
+                                        <div class="p-2 text-center rounded-3 tech-metric-resistance">
+                                            <div class="tech-metric-title">แนวต้าน (Resistance)</div>
                                             <div class="fw-bold text-danger" id="valResistanceLevel" style="font-size: 0.88rem;">$238.50</div>
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <div class="p-2 text-center rounded-3" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25);">
-                                            <div class="text-muted" style="font-size: 0.68rem; font-weight: 600;">จุดตัดขาดทุน (SL)</div>
-                                            <div class="fw-bold text-warning" id="valStopLossLevel" style="font-size: 0.88rem;">$212.00</div>
+                                        <div class="p-2 text-center rounded-3 tech-metric-sl">
+                                            <div class="tech-metric-title">จุดตัดขาดทุน (SL)</div>
+                                            <div class="fw-bold text-warning-emphasis" id="valStopLossLevel" style="font-size: 0.88rem;">$212.00</div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Technical Strategy Insight -->
-                                <div class="p-2 px-3 mt-2 rounded-3 d-flex align-items-center gap-2" style="background: rgba(59, 130, 246, 0.1); border: 1px dashed rgba(59, 130, 246, 0.35);">
+                                <div class="p-2 px-3 mt-2 rounded-3 d-flex align-items-center gap-2 tech-strategy-box">
                                     <span style="font-size: 1.1rem;">💡</span>
-                                    <div style="font-size: 0.75rem; line-height: 1.35; color: #cbd5e1;" id="techChartInsight">
+                                    <div style="font-size: 0.75rem; line-height: 1.35;" id="techChartInsight">
                                         <strong>กลยุทธ์:</strong> ราคายืนเหนือ EMA 20 & EMA 50 โมเมนตัมขาขึ้นแข็งแกร่ง แนะนำถือต่อและรอซื้อเพิ่มบริเวณแนวรับ
                                     </div>
                                 </div>
@@ -2293,8 +2739,8 @@
                             <!-- Header แบบในรูป -->
                             <div class="p-4 pb-2 tech-card-header">
                                 <div class="d-flex align-items-center justify-content-between mb-1">
-                                    <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.8px; color: #38bdf8;">⚡ วิเคราะห์เทคนิค & แนวโน้ม (ANALYSIS)</span>
-                                    <span class="badge rounded-pill" style="background: rgba(16, 185, 129, 0.15); color: #34d399; font-size: 0.68rem; border: 1px solid rgba(16,185,129,0.25);">5 มิติเจาะลึก</span>
+                                    <span class="text-uppercase fw-bold tech-card-section-label">⚡ วิเคราะห์เทคนิค & แนวโน้ม (ANALYSIS)</span>
+                                    <span class="badge rounded-pill tech-card-pill-hint">5 มิติเจาะลึก</span>
                                 </div>
                                 <h3 class="fw-bolder mt-1 mb-2 tech-card-title" style="letter-spacing: -0.5px; font-size: 1.45rem;">
                                     บทวิเคราะห์เทคนิค<br>Technical Thesis
@@ -2306,7 +2752,7 @@
 
                             <div class="p-3 pt-2">
                                 <!-- Active Stock Identity Header in Card 3 -->
-                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2.5 p-2 px-3 rounded-3" style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.08);">
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2.5 p-2 px-3 rounded-3 tech-stock-identity-bar">
                                     <div class="d-flex align-items-center overflow-hidden" style="max-width: 62%;">
                                         <div class="position-relative me-2 flex-shrink-0" style="width: 36px; height: 36px;">
                                             <img id="activeGaugeLogoImg" 
@@ -2323,7 +2769,7 @@
                                         </div>
                                         <div class="overflow-hidden">
                                             <div class="d-flex align-items-center gap-1.5 flex-wrap">
-                                                <span class="fw-bolder fs-6 text-white lh-sm" id="activeGaugeTicker">NVDA</span>
+                                                <span class="fw-bolder fs-6 text-body lh-sm" id="activeGaugeTicker">NVDA</span>
                                                 <span class="badge rounded-pill fw-bold" id="activeGaugeSignalBadge" style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4);">🟢 BUY</span>
                                             </div>
                                             <div class="text-truncate fw-medium mt-0.5 tech-stock-fullname" id="activeGaugeFullName" title="NVIDIA Corporation">
@@ -2332,13 +2778,13 @@
                                         </div>
                                     </div>
                                     <div class="text-end">
-                                        <div class="fw-bold text-white fs-6" id="activeGaugePrice">$233.95</div>
-                                        <div class="fw-bold" style="font-size: 0.75rem; color: #34d399;" id="activeGaugeChange">+0.22%</div>
+                                        <div class="fw-bold text-body fs-6" id="activeGaugePrice">$233.95</div>
+                                        <div class="fw-bold" style="font-size: 0.75rem; color: #15803d;" id="activeGaugeChange">+0.22%</div>
                                     </div>
                                 </div>
 
                                 <!-- Card 3 Mode Switcher: [📈 Technical Thesis] vs [⚡ มาตรวัดโมเมนตัม] -->
-                                <div class="d-flex align-items-center justify-content-between p-1 mb-2.5 rounded-pill" style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255,255,255,0.12);">
+                                <div class="d-flex align-items-center justify-content-between p-1 mb-2.5 rounded-pill tech-mode-pill-bar">
                                     <button class="btn btn-xs rounded-pill fw-bold flex-fill active tech-card3-mode-btn" id="btnTechModeThesis" onclick="setTechCard3Mode('THESIS')">
                                         📈 Technical Thesis (ตามรูป)
                                     </button>
@@ -2355,19 +2801,19 @@
                                 <!-- VIEW 2: MULTI-TIMEFRAME GAUGES -->
                                 <div id="techGaugesViewContainer" style="display: none;">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <span style="font-size: 0.75rem; color: #cbd5e1; font-weight: 600;">มุมมองมาตรวัด:</span>
-                                        <div class="btn-group btn-group-sm p-0 rounded-pill border border-secondary border-opacity-25 overflow-hidden">
+                                        <span class="tech-breakdown-label" style="font-size: 0.75rem;">มุมมองมาตรวัด:</span>
+                                        <div class="btn-group btn-group-sm p-0 rounded-pill border overflow-hidden">
                                             <button class="btn btn-xs tech-gauge-view-btn active" id="btnGaugeGrid" onclick="setGaugeViewMode('GRID')">ทุกช่วง</button>
                                             <button class="btn btn-xs tech-gauge-view-btn" id="btnGaugeFocus" onclick="setGaugeViewMode('FOCUS')">ช่วงเดียว</button>
                                         </div>
                                     </div>
 
                                     <!-- Quick Score Meaning Legend -->
-                                    <div class="d-flex align-items-center justify-content-between p-2 mb-2.5 rounded-3 flex-wrap gap-1" style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); font-size: 0.72rem;">
-                                        <span style="color: #cbd5e1; font-weight: 600;">💡 เกณฑ์คะแนน:</span>
-                                        <span class="badge rounded-pill" style="background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239,68,68,0.35);">0-44 ขาย / ขาลง</span>
-                                        <span class="badge rounded-pill" style="background: rgba(234, 179, 8, 0.2); color: #fbbf24; border: 1px solid rgba(234,179,8,0.35);">45-59 พักตัว / ไซด์เวย์</span>
-                                        <span class="badge rounded-pill" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16,185,129,0.35);">60-100 ซื้อ / ขาขึ้น</span>
+                                    <div class="d-flex align-items-center justify-content-between p-2 mb-2.5 rounded-3 flex-wrap gap-1 tech-legend-bar" style="font-size: 0.72rem;">
+                                        <span class="fw-bold">💡 เกณฑ์คะแนน:</span>
+                                        <span class="badge tech-badge-sell">0-44 ขาย / ขาลง</span>
+                                        <span class="badge tech-badge-watch">45-59 พักตัว / ไซด์เวย์</span>
+                                        <span class="badge tech-badge-buy">60-100 ซื้อ / ขาขึ้น</span>
                                     </div>
 
                                     <!-- Timeframe Selector Bar -->
@@ -2391,25 +2837,25 @@
                                     </div>
 
                                     <!-- Key Indicator Breakdown Card -->
-                                    <div class="card border-0 mt-2.5 p-2 px-3 rounded-3" style="background: rgba(30, 41, 59, 0.55); border: 1px solid rgba(255,255,255,0.08) !important; font-size: 0.76rem;">
-                                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-secondary border-opacity-25">
-                                            <span style="color: #cbd5e1; font-weight: 600;">📊 RSI (วัดแรงซื้อ-ขาย):</span>
-                                            <span class="fw-bold text-white" id="valTechRsi">61.5 (โซนขาขึ้น)</span>
+                                    <div class="card border-0 mt-2.5 p-2 px-3 rounded-3 tech-indicator-breakdown-card" style="font-size: 0.76rem;">
+                                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom">
+                                            <span class="tech-breakdown-label">📊 RSI (วัดแรงซื้อ-ขาย):</span>
+                                            <span class="fw-bold tech-breakdown-val" id="valTechRsi">61.5 (โซนขาขึ้น)</span>
                                         </div>
-                                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-secondary border-opacity-25">
-                                            <span style="color: #cbd5e1; font-weight: 600;">📈 MACD (แนวโน้มราคา):</span>
+                                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom">
+                                            <span class="tech-breakdown-label">📈 MACD (แนวโน้มราคา):</span>
                                             <span class="fw-bold text-success" id="valTechMacd">Bullish Crossover (+2.40)</span>
                                         </div>
-                                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-secondary border-opacity-25">
-                                            <span style="color: #cbd5e1; font-weight: 600;">📉 เส้นค่าเฉลี่ย EMA:</span>
+                                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom">
+                                            <span class="tech-breakdown-label">📉 เส้นค่าเฉลี่ย EMA:</span>
                                             <span class="fw-bold text-info" id="valTechEmaTrend">ยืนเหนือ EMA 20 & 50 (Uptrend)</span>
                                         </div>
-                                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-secondary border-opacity-25">
-                                            <span style="color: #cbd5e1; font-weight: 600;">🏆 สรุปคะแนนโมเมนตัม:</span>
+                                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom">
+                                            <span class="tech-breakdown-label">🏆 สรุปคะแนนโมเมนตัม:</span>
                                             <span class="badge bg-success rounded-pill px-2.5 py-1 fw-bold" id="valTechOverallScore">68 / 100 (BUY)</span>
                                         </div>
                                         <!-- Human-friendly takeaway summary -->
-                                        <div class="pt-2 d-flex align-items-start gap-2" style="font-size: 0.76rem; color: #cbd5e1;" id="valTechSummaryHuman">
+                                        <div class="pt-2 d-flex align-items-start gap-2" style="font-size: 0.76rem;" id="valTechSummaryHuman">
                                             <span style="font-size: 1rem;">💡</span>
                                             <div id="valTechSummaryText">
                                                 <strong>คำแนะนำ:</strong> หุ้นมีโมเมนตัมขาขึ้นแข็งแกร่ง ราคายืนเหนือ EMA ทุกเส้น แนะนำ <strong>ถือต่อ / ทยอยสะสมเมื่อราคาย่อตัว</strong>
@@ -3208,6 +3654,9 @@
             localStorage.setItem('myPortfolioTheme', nextTheme);
             updateThemeButton(nextTheme);
             if (perfChartObj) renderPerformanceChart();
+            if (typeof drawCandlestickCanvas === 'function') drawCandlestickCanvas();
+            if (typeof renderTechWatchlist === 'function') renderTechWatchlist();
+            if (typeof renderTrendGauges === 'function' && typeof activeTechTicker !== 'undefined') renderTrendGauges(activeTechTicker);
         };
 
         function updateThemeButton(theme) {
@@ -8625,11 +9074,16 @@
                 elFullName.title = fullName;
             }
             if (elPrice) elPrice.innerText = `$${data.price.toFixed(2)}`;
+            const isDark = document.body.classList.contains('dark-mode') || document.documentElement.getAttribute('data-bs-theme') === 'dark';
             if (elChange) {
                 const sign = data.changePct >= 0 ? '+' : '';
                 elChange.innerText = `${sign}${data.changePct.toFixed(2)}%`;
-                elChange.style.background = data.changePct >= 0 ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)';
-                elChange.style.color = data.changePct >= 0 ? '#34d399' : '#f87171';
+                elChange.style.background = data.changePct >= 0 
+                    ? (isDark ? 'rgba(16, 185, 129, 0.2)' : '#ecfdf5') 
+                    : (isDark ? 'rgba(239, 68, 68, 0.2)' : '#fef2f2');
+                elChange.style.color = data.changePct >= 0 
+                    ? (isDark ? '#34d399' : '#047857') 
+                    : (isDark ? '#f87171' : '#dc2626');
             }
             if (elLogo) {
                 elLogo.style.display = 'block';
@@ -8650,20 +9104,17 @@
             }
             if (elSigBadge) {
                 if (data.signal === 'BUY') {
-                    elSigBadge.innerText = '🟢 BUY (น่าซื้อ)';
-                    elSigBadge.style.background = 'rgba(16, 185, 129, 0.2)';
-                    elSigBadge.style.color = '#34d399';
-                    elSigBadge.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+                    elSigBadge.innerText = '🟢 BUY';
+                    elSigBadge.className = 'badge rounded-pill fw-bold tech-badge-buy';
+                    elSigBadge.style = '';
                 } else if (data.signal === 'SELL') {
-                    elSigBadge.innerText = '🔴 SELL (ระวัง)';
-                    elSigBadge.style.background = 'rgba(239, 68, 68, 0.2)';
-                    elSigBadge.style.color = '#f87171';
-                    elSigBadge.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+                    elSigBadge.innerText = '🔴 SELL';
+                    elSigBadge.className = 'badge rounded-pill fw-bold tech-badge-sell';
+                    elSigBadge.style = '';
                 } else {
-                    elSigBadge.innerText = '🟡 WATCH (รอดู)';
-                    elSigBadge.style.background = 'rgba(245, 158, 11, 0.2)';
-                    elSigBadge.style.color = '#fbbf24';
-                    elSigBadge.style.borderColor = 'rgba(245, 158, 11, 0.4)';
+                    elSigBadge.innerText = '🟡 WATCH';
+                    elSigBadge.className = 'badge rounded-pill fw-bold tech-badge-watch';
+                    elSigBadge.style = '';
                 }
             }
 
@@ -8720,7 +9171,9 @@
             const plotW = width - padLeft - padRight;
             const plotH = height - padTop - padBottom;
 
-            ctx.fillStyle = '#060913';
+            const isDark = document.body.classList.contains('dark-mode') || document.documentElement.getAttribute('data-bs-theme') === 'dark';
+
+            ctx.fillStyle = isDark ? '#060913' : '#ffffff';
             ctx.fillRect(0, 0, width, height);
 
             const candles = activeCandleData.candles;
@@ -8744,7 +9197,7 @@
                 return padLeft + (i / (count - 1)) * plotW;
             }
 
-            ctx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
+            ctx.strokeStyle = isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.06)';
             ctx.lineWidth = 1;
             const numGrids = 4;
             for (let g = 0; g <= numGrids; g++) {
@@ -8755,7 +9208,7 @@
                 ctx.lineTo(width - padRight, y);
                 ctx.stroke();
 
-                ctx.fillStyle = '#64748b';
+                ctx.fillStyle = isDark ? '#94a3b8' : '#64748b';
                 ctx.font = '10px "Segoe UI", sans-serif';
                 ctx.textAlign = 'left';
                 ctx.fillText(`$${priceLevel.toFixed(1)}`, width - padRight + 6, y + 3);
@@ -8822,7 +9275,7 @@
 
             if (techLayers.ema200) drawCurve(activeCandleData.ema200, '#f59e0b', 1.8);
             if (techLayers.ema50) drawCurve(activeCandleData.ema50, '#a855f7', 1.8);
-            if (techLayers.ema20) drawCurve(activeCandleData.ema20, '#06b6d4', 2.0);
+            if (techLayers.ema20) drawCurve(activeCandleData.ema20, isDark ? '#06b6d4' : '#0284c7', 2.0);
 
             const barW = Math.max(3.5, Math.min(10, (plotW / count) * 0.65));
             for (let i = 0; i < count; i++) {
@@ -8848,7 +9301,7 @@
 
                 if (i === hoverCandleIdx) {
                     ctx.save();
-                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
+                    ctx.strokeStyle = isDark ? 'rgba(255, 255, 255, 0.4)' : 'rgba(15, 23, 42, 0.35)';
                     ctx.setLineDash([2, 2]);
                     ctx.beginPath();
                     ctx.moveTo(x, padTop);
@@ -8858,7 +9311,7 @@
                 }
             }
 
-            ctx.fillStyle = '#64748b';
+            ctx.fillStyle = isDark ? '#94a3b8' : '#64748b';
             ctx.font = '9px "Segoe UI", sans-serif';
             ctx.textAlign = 'center';
             const step = Math.ceil(count / 5);
@@ -8927,6 +9380,8 @@
             const angleDeg = 180 - (score * 1.8);
             const angleRad = (angleDeg * Math.PI) / 180;
             
+            const isDark = document.body.classList.contains('dark-mode') || document.documentElement.getAttribute('data-bs-theme') === 'dark';
+
             // Timeframe description dictionary in plain Thai
             const tfDescMap = {
                 '1D': '1 วัน (วันนี้)',
@@ -8948,30 +9403,43 @@
             const nx = cx + needleLen * Math.cos(angleRad);
             const ny = cy - needleLen * Math.sin(angleRad);
 
-            let zoneColor = '#eab308';
+            let zoneColor = isDark ? '#fbbf24' : '#d97706';
             let statusText = '';
             let subText = '';
             if (score < 25) { 
-                zoneColor = '#ef4444'; 
+                zoneColor = isDark ? '#f87171' : '#dc2626'; 
                 statusText = '🔴 ขายแรง (ขาลง)'; 
                 subText = 'หลุดแนวรับสำคัญ';
             } else if (score < 45) { 
-                zoneColor = '#f97316'; 
+                zoneColor = isDark ? '#fb923c' : '#ea580c'; 
                 statusText = '🟠 แนวโน้มขาย (ชะลอ)'; 
                 subText = 'แรงขายเริ่มกดดัน';
             } else if (score < 60) { 
-                zoneColor = '#fbbf24'; 
+                zoneColor = isDark ? '#fbbf24' : '#d97706'; 
                 statusText = '🟡 พักตัว (ไซด์เวย์)'; 
                 subText = 'แกว่งรอเลือกทาง';
             } else if (score < 75) { 
-                zoneColor = '#34d399'; 
+                zoneColor = isDark ? '#34d399' : '#059669'; 
                 statusText = '🟢 น่าซื้อสะสม'; 
                 subText = 'แนวโน้มขาขึ้น';
             } else { 
-                zoneColor = '#10b981'; 
+                zoneColor = isDark ? '#10b981' : '#047857'; 
                 statusText = '🟢 ซื้อแข็งแกร่ง'; 
                 subText = 'ขาขึ้นแรงหนุนสูง';
             }
+
+            const trackColor = isDark ? 'rgba(255, 255, 255, 0.08)' : '#e2e8f0';
+            const needleStroke = isDark ? '#ffffff' : '#0f172a';
+            const pivotFill = isDark ? '#ffffff' : '#0f172a';
+            const pivotStroke = isDark ? '#0f172a' : '#ffffff';
+            const scoreColor = isDark ? '#ffffff' : '#0f172a';
+            const scoreTspanColor = isDark ? '#cbd5e1' : '#64748b';
+            const subTextColor = isDark ? '#cbd5e1' : '#64748b';
+            const titleColor = isDark ? '#ffffff' : '#0f172a';
+            const badgeBg = isDark ? 'rgba(56, 189, 248, 0.18)' : '#e0f2fe';
+            const badgeColor = isDark ? '#38bdf8' : '#0284c7';
+            const endpointLowColor = isDark ? '#f87171' : '#dc2626';
+            const endpointHighColor = isDark ? '#34d399' : '#059669';
 
             const uniqueGradId = `grad_${timeframeTitle}_${Math.random().toString(36).substr(2, 5)}`;
 
@@ -8980,10 +9448,10 @@
                 const leftX = cx - arcRadius;
                 const rightX = cx + arcRadius;
                 return `
-                <div class="tech-gauge-box p-3 text-center" style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;">
+                <div class="tech-gauge-box p-3 text-center">
                     <div class="d-flex justify-content-between align-items-center mb-2 px-2">
-                        <span class="fw-bold fs-6 text-white">${timeframeTitle}</span>
-                        <span class="badge rounded-pill" style="background: rgba(56, 189, 248, 0.18); color: #38bdf8; font-size: 0.78rem;">กรอบเวลา ${tfDesc}</span>
+                        <span class="fw-bold fs-6" style="color: ${titleColor};">${timeframeTitle}</span>
+                        <span class="badge rounded-pill fw-bold" style="background: ${badgeBg}; color: ${badgeColor}; font-size: 0.78rem;">กรอบเวลา ${tfDesc}</span>
                     </div>
                     <svg viewBox="0 0 220 125" style="width: 100%; max-width: 250px; display: block; margin: 0 auto; overflow: visible;">
                         <defs>
@@ -8996,21 +9464,21 @@
                             </linearGradient>
                         </defs>
                         <!-- Background track -->
-                        <path d="M ${leftX} ${cy} A ${arcRadius} ${arcRadius} 0 0 1 ${rightX} ${cy}" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="${strokeWidth}" stroke-linecap="round" />
+                        <path d="M ${leftX} ${cy} A ${arcRadius} ${arcRadius} 0 0 1 ${rightX} ${cy}" fill="none" stroke="${trackColor}" stroke-width="${strokeWidth}" stroke-linecap="round" />
                         <!-- Gradient arc -->
                         <path d="M ${leftX} ${cy} A ${arcRadius} ${arcRadius} 0 0 1 ${rightX} ${cy}" fill="none" stroke="url(#${uniqueGradId})" stroke-width="${strokeWidth}" stroke-linecap="round" />
                         <!-- Needle -->
-                        <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
-                        <circle cx="${cx}" cy="${cy}" r="5" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
+                        <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="${needleStroke}" stroke-width="3" stroke-linecap="round" />
+                        <circle cx="${cx}" cy="${cy}" r="5" fill="${pivotFill}" stroke="${pivotStroke}" stroke-width="2" />
                         <!-- Arc endpoints labels -->
-                        <text x="${leftX - 4}" y="${cy + 16}" font-size="10.5" fill="#f87171" text-anchor="middle" font-weight="700">0 ขาย</text>
-                        <text x="${rightX + 4}" y="${cy + 16}" font-size="10.5" fill="#34d399" text-anchor="middle" font-weight="700">100 ซื้อ</text>
+                        <text x="${leftX - 4}" y="${cy + 16}" font-size="10.5" fill="${endpointLowColor}" text-anchor="middle" font-weight="700">0 ขาย</text>
+                        <text x="${rightX + 4}" y="${cy + 16}" font-size="10.5" fill="${endpointHighColor}" text-anchor="middle" font-weight="700">100 ซื้อ</text>
                         <!-- Score strictly BELOW pivot (y > cy) -->
-                        <text x="${cx}" y="${cy + 26}" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle">${score}<tspan font-size="14" fill="#cbd5e1" font-weight="500"> / 100</tspan></text>
+                        <text x="${cx}" y="${cy + 26}" font-size="28" font-weight="800" fill="${scoreColor}" text-anchor="middle">${score}<tspan font-size="14" fill="${scoreTspanColor}" font-weight="500"> / 100</tspan></text>
                     </svg>
                     <div class="mt-2">
                         <div class="fw-bold" style="font-size: 1.05rem; color: ${zoneColor};">${statusText}</div>
-                        <div class="mt-1" style="font-size: 0.8rem; color: #cbd5e1;">${subText}</div>
+                        <div class="mt-1" style="font-size: 0.8rem; color: ${subTextColor};">${subText}</div>
                     </div>
                 </div>
                 `;
@@ -9020,10 +9488,10 @@
             const leftX = cx - arcRadius; // 80 - 49 = 31
             const rightX = cx + arcRadius; // 80 + 49 = 129
             return `
-            <div class="tech-gauge-box p-2 text-center" style="background: rgba(30, 41, 59, 0.55); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px;">
+            <div class="tech-gauge-box p-2 text-center">
                 <div class="d-flex justify-content-between align-items-center mb-1 px-1">
-                    <span class="fw-bold text-white" style="font-size: 0.82rem;">${timeframeTitle}</span>
-                    <span class="badge rounded-pill" style="font-size: 0.65rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8;">${tfDesc}</span>
+                    <span class="fw-bold" style="font-size: 0.82rem; color: ${titleColor};">${timeframeTitle}</span>
+                    <span class="badge rounded-pill fw-bold" style="font-size: 0.65rem; background: ${badgeBg}; color: ${badgeColor};">${tfDesc}</span>
                 </div>
                 <svg viewBox="0 0 160 106" style="width: 100%; max-width: 135px; display: block; margin: 0 auto; overflow: visible;">
                     <defs>
@@ -9036,21 +9504,21 @@
                         </linearGradient>
                     </defs>
                     <!-- Background arc track -->
-                    <path d="M ${leftX} ${cy} A ${arcRadius} ${arcRadius} 0 0 1 ${rightX} ${cy}" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="${strokeWidth}" stroke-linecap="round" />
+                    <path d="M ${leftX} ${cy} A ${arcRadius} ${arcRadius} 0 0 1 ${rightX} ${cy}" fill="none" stroke="${trackColor}" stroke-width="${strokeWidth}" stroke-linecap="round" />
                     <!-- Colored gradient arc -->
                     <path d="M ${leftX} ${cy} A ${arcRadius} ${arcRadius} 0 0 1 ${rightX} ${cy}" fill="none" stroke="url(#${uniqueGradId})" stroke-width="${strokeWidth}" stroke-linecap="round" />
                     <!-- Needle -->
-                    <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-                    <circle cx="${cx}" cy="${cy}" r="3.5" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" />
+                    <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="${needleStroke}" stroke-width="2.5" stroke-linecap="round" />
+                    <circle cx="${cx}" cy="${cy}" r="3.5" fill="${pivotFill}" stroke="${pivotStroke}" stroke-width="1.5" />
                     <!-- Left and Right text -->
-                    <text x="${leftX - 4}" y="${cy + 13}" font-size="8.5" fill="#f87171" text-anchor="middle" font-weight="700">0 ขาย</text>
-                    <text x="${rightX + 4}" y="${cy + 13}" font-size="8.5" fill="#34d399" text-anchor="middle" font-weight="700">100 ซื้อ</text>
+                    <text x="${leftX - 4}" y="${cy + 13}" font-size="8.5" fill="${endpointLowColor}" text-anchor="middle" font-weight="700">0 ขาย</text>
+                    <text x="${rightX + 4}" y="${cy + 13}" font-size="8.5" fill="${endpointHighColor}" text-anchor="middle" font-weight="700">100 ซื้อ</text>
                     <!-- Score strictly below pivot -->
-                    <text x="${cx}" y="${cy + 22}" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">${score}<tspan font-size="10.5" fill="#cbd5e1" font-weight="500"> /100</tspan></text>
+                    <text x="${cx}" y="${cy + 22}" font-size="19" font-weight="800" fill="${scoreColor}" text-anchor="middle">${score}<tspan font-size="10.5" fill="${scoreTspanColor}" font-weight="500"> /100</tspan></text>
                 </svg>
                 <div class="mt-1 pt-0.5">
                     <div class="fw-bold" style="font-size: 0.76rem; color: ${zoneColor};">${statusText}</div>
-                    <div style="font-size: 0.65rem; color: #cbd5e1; font-weight: 500;">${subText}</div>
+                    <div style="font-size: 0.65rem; color: ${subTextColor}; font-weight: 500;">${subText}</div>
                 </div>
             </div>
             `;
@@ -9225,18 +9693,23 @@
             const container = document.getElementById('techThesisViewContainer');
             if (!container) return;
 
+            const isDark = document.body.classList.contains('dark-mode') || document.documentElement.getAttribute('data-bs-theme') === 'dark';
             const techData = getTechnicalData(ticker, '1D');
             const thesis = getTechnicalThesisData(ticker, techData.price, techData.changePct);
 
             let badgesHtml = thesis.badges.map(b => `
-                <span class="badge rounded-pill" style="background: rgba(16, 185, 129, 0.15); color: #34d399; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border: 1px solid rgba(16, 185, 129, 0.28); letter-spacing: 0.5px;">${b}</span>
+                <span class="badge rounded-pill tech-thesis-badge">${b}</span>
             `).join('');
 
-            let itemsHtml = thesis.items.map(item => `
+            let itemsHtml = thesis.items.map(item => {
+                let badgeStyle = isDark 
+                    ? `background: rgba(15, 23, 42, 0.7); color: ${item.statusColor}; border: 1px solid ${item.statusColor}44;` 
+                    : `background: #f1f5f9; color: ${item.statusColor === '#34d399' ? '#047857' : (item.statusColor === '#f87171' ? '#dc2626' : '#b45309')}; border: 1px solid #e2e8f0;`;
+                return `
                 <div class="tech-thesis-item">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <span class="tech-thesis-title">${item.title}</span>
-                        <span class="badge rounded-pill" style="background: rgba(15, 23, 42, 0.7); color: ${item.statusColor}; font-size: 0.7rem; border: 1px solid ${item.statusColor}44; font-weight: 600;">${item.statusLabel}</span>
+                        <span class="badge rounded-pill" style="${badgeStyle} font-size: 0.7rem; font-weight: 600;">${item.statusLabel}</span>
                     </div>
                     <div class="tech-thesis-val mb-1">
                         ${item.valueStr}
@@ -9245,17 +9718,22 @@
                         ${item.desc}
                     </div>
                 </div>
-            `).join('');
+            `;
+            }).join('');
+
+            let summaryBadgeStyle = isDark
+                ? `background: rgba(16, 185, 129, 0.2); color: ${thesis.summary.verdictColor}; border: 1px solid rgba(16,185,129,0.3);`
+                : `background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0;`;
 
             container.innerHTML = `
-                <div class="p-2.5 mb-2 rounded-3" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255, 255, 255, 0.08);">
+                <div class="p-2.5 mb-2 rounded-3 tech-thesis-header-box">
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center gap-1.5">
-                            <span style="font-size: 1.1rem; color: #38bdf8;">📈</span>
-                            <span class="fw-bold text-white fs-6">Technical Thesis</span>
-                            <span style="font-size: 0.76rem; color: #94a3b8;">• วิเคราะห์เทคนิคปัจจุบัน</span>
+                            <span style="font-size: 1.1rem; color: #0284c7;">📈</span>
+                            <span class="fw-bold fs-6 tech-thesis-header-title">Technical Thesis</span>
+                            <span class="text-muted" style="font-size: 0.76rem;">• วิเคราะห์เทคนิคปัจจุบัน</span>
                         </div>
-                        <span class="badge bg-primary bg-opacity-20 text-info border border-info border-opacity-25" style="font-size: 0.68rem;">เสาหลัก 5 จุด</span>
+                        <span class="badge rounded-pill tech-card-pill-hint" style="font-size: 0.68rem;">เสาหลัก 5 จุด</span>
                     </div>
                     <div class="d-flex flex-wrap gap-1.5 mb-1">
                         ${badgesHtml}
@@ -9266,12 +9744,12 @@
                     ${itemsHtml}
                 </div>
 
-                <div class="p-2.5 mt-2 rounded-3" style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255,255,255,0.1); font-size: 0.78rem;">
+                <div class="p-2.5 mt-2 rounded-3 tech-thesis-summary-box" style="font-size: 0.78rem;">
                     <div class="d-flex justify-content-between align-items-center mb-1">
-                        <span style="color: #cbd5e1; font-weight: 600;">🎯 ผลสรุปการประเมิน Thesis:</span>
-                        <span class="badge rounded-pill fw-bold" style="background: rgba(16, 185, 129, 0.2); color: ${thesis.summary.verdictColor}; border: 1px solid rgba(16,185,129,0.3); font-size: 0.75rem;">${thesis.summary.verdictBadge}</span>
+                        <span class="fw-bold" style="font-size: 0.8rem;">🎯 ผลสรุปการประเมิน Thesis:</span>
+                        <span class="badge rounded-pill fw-bold" style="${summaryBadgeStyle} font-size: 0.75rem;">${thesis.summary.verdictBadge}</span>
                     </div>
-                    <div style="color: #cbd5e1; line-height: 1.45;">
+                    <div style="line-height: 1.45;">
                         ${thesis.summary.note}
                     </div>
                 </div>
@@ -9281,6 +9759,7 @@
         window.renderTrendGauges = function(ticker) {
             const data = getTechnicalData(ticker, activeTechGaugeTf);
             const fullName = stockNames[ticker] || ticker;
+            const isDark = document.body.classList.contains('dark-mode') || document.documentElement.getAttribute('data-bs-theme') === 'dark';
 
             // Update Active Stock Identity Header in Card 3
             const elGaugeTicker = document.getElementById('activeGaugeTicker');
@@ -9300,7 +9779,9 @@
             if (elGaugeChange) {
                 const sign = data.changePct >= 0 ? '+' : '';
                 elGaugeChange.innerText = `${sign}${data.changePct.toFixed(2)}%`;
-                elGaugeChange.style.color = data.changePct >= 0 ? '#34d399' : '#f87171';
+                elGaugeChange.style.color = data.changePct >= 0 
+                    ? (isDark ? '#34d399' : '#047857') 
+                    : (isDark ? '#f87171' : '#dc2626');
             }
             if (elGaugeLogo) {
                 elGaugeLogo.style.display = 'block';
@@ -9321,20 +9802,17 @@
             }
             if (elGaugeBadge) {
                 if (data.signal === 'BUY') {
-                    elGaugeBadge.innerText = '🟢 BUY (น่าซื้อ)';
-                    elGaugeBadge.style.background = 'rgba(16, 185, 129, 0.2)';
-                    elGaugeBadge.style.color = '#34d399';
-                    elGaugeBadge.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+                    elGaugeBadge.innerText = '🟢 BUY';
+                    elGaugeBadge.className = 'badge rounded-pill fw-bold tech-badge-buy';
+                    elGaugeBadge.style = '';
                 } else if (data.signal === 'SELL') {
-                    elGaugeBadge.innerText = '🔴 SELL (ระวัง)';
-                    elGaugeBadge.style.background = 'rgba(239, 68, 68, 0.2)';
-                    elGaugeBadge.style.color = '#f87171';
-                    elGaugeBadge.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+                    elGaugeBadge.innerText = '🔴 SELL';
+                    elGaugeBadge.className = 'badge rounded-pill fw-bold tech-badge-sell';
+                    elGaugeBadge.style = '';
                 } else {
-                    elGaugeBadge.innerText = '🟡 WATCH (รอดู)';
-                    elGaugeBadge.style.background = 'rgba(245, 158, 11, 0.2)';
-                    elGaugeBadge.style.color = '#fbbf24';
-                    elGaugeBadge.style.borderColor = 'rgba(245, 158, 11, 0.4)';
+                    elGaugeBadge.innerText = '🟡 WATCH';
+                    elGaugeBadge.className = 'badge rounded-pill fw-bold tech-badge-watch';
+                    elGaugeBadge.style = '';
                 }
             }
 
@@ -9407,11 +9885,11 @@
             }
             if (elSummaryText) {
                 if (data.signal === 'BUY') {
-                    elSummaryText.innerHTML = `<strong>คำแนะนำ:</strong> หุ้น <span class="text-white fw-bold">${ticker}</span> (<span style="color: #60a5fa;">${fullName}</span>) มีโมเมนตัมขาขึ้นแข็งแกร่ง (${score1D}/100) ราคายืนเหนือแนวรับ EMA แนะนำ <strong>ถือต่อ / ทยอยสะสมเมื่อราคาย่อตัว</strong>`;
+                    elSummaryText.innerHTML = `<strong>คำแนะนำ:</strong> หุ้น <span class="fw-bold tech-watch-ticker">${ticker}</span> (<span class="tech-stock-fullname">${fullName}</span>) มีโมเมนตัมขาขึ้นแข็งแกร่ง (${score1D}/100) ราคายืนเหนือแนวรับ EMA แนะนำ <strong>ถือต่อ / ทยอยสะสมเมื่อราคาย่อตัว</strong>`;
                 } else if (data.signal === 'SELL') {
-                    elSummaryText.innerHTML = `<strong>คำแนะนำ:</strong> หุ้น <span class="text-white fw-bold">${ticker}</span> (<span style="color: #60a5fa;">${fullName}</span>) มีแรงขายกดดันต่อเนื่อง (${score1D}/100) หลุดแนวรับสำคัญ แนะนำ <strong>ชะลอการซื้อ / ตั้งจุด Stop Loss ระวังความเสี่ยง</strong>`;
+                    elSummaryText.innerHTML = `<strong>คำแนะนำ:</strong> หุ้น <span class="fw-bold tech-watch-ticker">${ticker}</span> (<span class="tech-stock-fullname">${fullName}</span>) มีแรงขายกดดันต่อเนื่อง (${score1D}/100) หลุดแนวรับสำคัญ แนะนำ <strong>ชะลอการซื้อ / ตั้งจุด Stop Loss ระวังความเสี่ยง</strong>`;
                 } else {
-                    elSummaryText.innerHTML = `<strong>คำแนะนำ:</strong> หุ้น <span class="text-white fw-bold">${ticker}</span> (<span style="color: #60a5fa;">${fullName}</span>) กำลังพักตัวในกรอบ (Sideway ${score1D}/100) สัญญาณยังก้ำกึ่ง แนะนำ <strong>รอดูจังหวะเบรกเอาท์ (WATCH)</strong> ก่อนเข้าซื้อ`;
+                    elSummaryText.innerHTML = `<strong>คำแนะนำ:</strong> หุ้น <span class="fw-bold tech-watch-ticker">${ticker}</span> (<span class="tech-stock-fullname">${fullName}</span>) กำลังพักตัวในกรอบ (Sideway ${score1D}/100) สัญญาณยังก้ำกึ่ง แนะนำ <strong>รอดูจังหวะเบรกเอาท์ (WATCH)</strong> ก่อนเข้าซื้อ`;
                 }
             }
         };
@@ -9460,12 +9938,15 @@
             }
 
             let html = '';
+            const isDark = document.body.classList.contains('dark-mode') || document.documentElement.getAttribute('data-bs-theme') === 'dark';
             items.forEach(ticker => {
                 let data = getTechnicalData(ticker, '1D');
                 let fullName = stockNames[ticker] || ticker;
                 let isCurrent = (ticker === activeTechTicker);
                 let changeSign = data.changePct >= 0 ? '▲ +' : '▼ ';
-                let changeColor = data.changePct >= 0 ? '#34d399' : '#f87171';
+                let changeColor = data.changePct >= 0 
+                    ? (isDark ? '#34d399' : '#047857') 
+                    : (isDark ? '#f87171' : '#dc2626');
 
                 let logoHtml = getStockLogoElement(ticker, 38);
 
@@ -9484,7 +9965,7 @@
                             ${logoHtml}
                             <div class="text-start overflow-hidden">
                                 <div class="d-flex align-items-center gap-1.5 flex-wrap">
-                                    <span class="fw-bold text-white fs-6 lh-sm" style="letter-spacing: -0.2px;">${ticker}</span>
+                                    <span class="fw-bold tech-watch-ticker fs-6 lh-sm" style="letter-spacing: -0.2px;">${ticker}</span>
                                     ${badgeHtml}
                                 </div>
                                 <div class="text-truncate lh-sm mt-1 fw-medium tech-stock-fullname" title="${fullName}">
@@ -9493,7 +9974,7 @@
                             </div>
                         </div>
                         <div class="text-end ps-2 flex-shrink-0">
-                            <div class="fw-bold text-white" style="font-size: 0.95rem;">$${data.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
+                            <div class="fw-bold tech-watch-price" style="font-size: 0.95rem;">$${data.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
                             <div class="fw-bold" style="font-size: 0.78rem; color: ${changeColor};">
                                 ${changeSign}${Math.abs(data.changePct).toFixed(2)}%
                             </div>
