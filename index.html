@@ -610,6 +610,149 @@
             line-height: 1.45;
             margin-top: 3px;
         }
+
+        /* --- Market Overview & Sector Hub Styles --- */
+        .market-macro-card {
+            background: var(--bs-card-bg, #ffffff);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            padding: 12px 14px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            height: 100%;
+        }
+        [data-bs-theme="dark"] .market-macro-card,
+        body.dark-mode .market-macro-card {
+            background: #0f172a;
+            border-color: #1e293b;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        .market-macro-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+        .market-snapshot-scroller {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding: 6px 2px 12px 2px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+        .market-snapshot-scroller::-webkit-scrollbar {
+            height: 6px;
+        }
+        .market-snapshot-scroller::-webkit-scrollbar-thumb {
+            background: rgba(148, 163, 184, 0.4);
+            border-radius: 4px;
+        }
+        .market-snapshot-card {
+            min-width: 175px;
+            max-width: 175px;
+            background: var(--bs-card-bg, #ffffff);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            padding: 12px;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        [data-bs-theme="dark"] .market-snapshot-card,
+        body.dark-mode .market-snapshot-card {
+            background: #0f172a;
+            border-color: #1e293b;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        .market-snapshot-card:hover {
+            transform: translateY(-3px);
+            border-color: #3b82f6;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.18);
+        }
+        .sector-card {
+            background: var(--bs-card-bg, #ffffff);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 18px;
+            padding: 16px 18px;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        [data-bs-theme="dark"] .sector-card,
+        body.dark-mode .sector-card {
+            background: #0f172a;
+            border-color: #1e293b;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        .sector-card:hover {
+            transform: translateY(-3px);
+            border-color: #3b82f6;
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.16);
+        }
+        .sector-avatar-stack {
+            display: flex;
+            align-items: center;
+        }
+        .sector-avatar-stack img,
+        .sector-avatar-stack .sector-avatar-circle {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            margin-left: -7px;
+            background: #ffffff;
+            object-fit: contain;
+        }
+        [data-bs-theme="dark"] .sector-avatar-stack img,
+        [data-bs-theme="dark"] .sector-avatar-stack .sector-avatar-circle,
+        body.dark-mode .sector-avatar-stack img,
+        body.dark-mode .sector-avatar-stack .sector-avatar-circle {
+            border-color: #0f172a;
+            background: #1e293b;
+        }
+        .sector-avatar-stack img:first-child,
+        .sector-avatar-stack .sector-avatar-circle:first-child {
+            margin-left: 0;
+        }
+        .market-category-pill-box {
+            background: rgba(148, 163, 184, 0.15);
+            padding: 4px;
+            border-radius: 9999px;
+            display: inline-flex;
+            gap: 4px;
+        }
+        .market-cat-btn {
+            border-radius: 9999px;
+            padding: 6px 18px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            border: none;
+            background: transparent;
+            color: #64748b;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .market-cat-btn.active {
+            background: #ffffff;
+            color: #0f172a;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        [data-bs-theme="dark"] .market-cat-btn.active,
+        body.dark-mode .market-cat-btn.active {
+            background: #1e293b;
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+        .market-rank-table tbody tr {
+            cursor: pointer;
+            transition: background-color 0.15s;
+        }
+        .market-rank-table tbody tr:hover {
+            background-color: rgba(59, 130, 246, 0.06);
+        }
     </style>
 </head>
 <body class="p-2 p-md-3">
@@ -1266,6 +1409,53 @@
         </div>
     </div>
 
+    <!-- Modal: Sector Detail Modal (แสดงรายละเอียดและรายชื่อหุ้นในกลุ่มอุตสาหกรรม) -->
+    <div class="modal fade" id="sectorDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content shadow-lg border-0" style="border-radius: 20px;">
+                <div class="modal-header border-0 pb-0 pt-3 px-4 d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-2">
+                        <div id="sectorModalIcon" style="font-size: 1.5rem;">🏢</div>
+                        <div>
+                            <h5 class="modal-title fw-bold m-0" id="sectorModalTitle">Technology</h5>
+                            <small class="text-muted" id="sectorModalSub">156 หุ้น • Market Cap $33.46T</small>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 py-3">
+                    <div class="row g-2 mb-3" id="sectorModalStatsRow">
+                        <!-- Stats pills will be injected dynamically -->
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                        <span class="fw-bold text-muted small">รายชื่อหุ้นชั้นนำในกลุ่มนี้ (Top Constituents):</span>
+                        <input type="text" id="sectorStockSearch" class="form-control form-control-sm rounded-pill px-3" placeholder="🔍 ค้นหาหุ้นในกลุ่ม..." style="max-width: 220px;" oninput="filterSectorModalStocks()">
+                    </div>
+                    <div class="table-responsive rounded-3 border">
+                        <table class="table table-hover align-middle mb-0" style="font-size: 0.85rem;">
+                            <thead class="table-light">
+                                <tr>
+                                    <th class="py-2 px-3">#</th>
+                                    <th class="py-2">หุ้น (Ticker)</th>
+                                    <th class="py-2 text-end">ราคา</th>
+                                    <th class="py-2 text-end">1D Change</th>
+                                    <th class="py-2 text-center">สัญญาณ</th>
+                                    <th class="py-2 text-center">เทคนิค</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sectorModalStocksTableBody">
+                                <!-- Injected by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0 px-4 pb-3">
+                    <button type="button" class="btn btn-sm btn-secondary rounded-pill px-3" data-bs-dismiss="modal">ปิด</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Dashboard -->
     <div class="container-fluid" style="max-width: 98%; margin: 0 auto;">
         
@@ -1275,13 +1465,20 @@
                 <h2 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.5px; font-size: 1.5rem;">My Portfolio</h2>
                 <span id="activePortBadgeHeader" class="badge rounded-pill bg-primary px-3 py-1 shadow-sm" style="font-size: 0.8rem;">พอร์ตทั้งหมด</span>
                 
-                <!-- Main View Tabs (พอร์ตการลงทุน VS สัญญาณเทคนิค & กราฟ) -->
+                <!-- Main View Tabs (Market Over view, พอร์ตการลงทุน, Sector, เทคนิค กราฟ) -->
                 <div class="nav nav-pills ms-2 p-1 rounded-pill border shadow-sm bg-body-tertiary" id="mainViewNav" role="tablist">
-                    <button class="nav-link active rounded-pill fw-bold py-1 px-3" id="tabBtnPortfolio" data-bs-toggle="pill" data-bs-target="#portfolioViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('PORTFOLIO')">
+                    <button class="nav-link rounded-pill fw-bold py-1 px-3 d-flex align-items-center gap-1 active" id="tabBtnMarket" data-bs-toggle="pill" data-bs-target="#marketOverviewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('MARKET')">
+                        🌐 Market Overview
+                    </button>
+                    <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1" id="tabBtnPortfolio" data-bs-toggle="pill" data-bs-target="#portfolioViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('PORTFOLIO')">
                         💼 พอร์ตการลงทุน
                     </button>
+                    <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1" id="tabBtnSector" data-bs-toggle="pill" data-bs-target="#sectorViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('SECTOR')">
+                        🏢 Sector
+                        <span class="badge bg-primary rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">12</span>
+                    </button>
                     <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1" id="tabBtnTechnical" data-bs-toggle="pill" data-bs-target="#technicalViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('TECHNICAL')">
-                        📈 สัญญาณเทคนิค & กราฟ
+                        📈 เทคนิค กราฟ
                         <span class="badge bg-danger rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">NEW</span>
                     </button>
                 </div>
@@ -1321,8 +1518,107 @@
 
         <!-- Main Tab Content Wrapper -->
         <div class="tab-content" id="mainTabContent">
-            <!-- PANE 1: พอร์ตการลงทุน (Default Portfolio View) -->
-            <div class="tab-pane fade show active" id="portfolioViewPane" role="tabpanel">
+            <!-- PANE 1: Market Overview (ภาพรวมตลาดและหุ้นติดเทรนด์ 100 หุ้น) -->
+            <div class="tab-pane fade show active" id="marketOverviewPane" role="tabpanel">
+                <!-- Section Subtitle & Category Filter Bar -->
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
+                    <div>
+                        <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
+                            🌐 ภาพรวมตลาด & หุ้นติดเทรนด์ (Market Overview)
+                        </h4>
+                        <small class="text-muted">
+                            ดัชนีสำคัญ 6 รายการ, โมเมนตัมแบบเรียลไทม์, Top 10 Snapshot, และตารางจัดอันดับ 100 หุ้นสัญญาณแรง
+                        </small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <div class="market-category-pill-box shadow-sm border">
+                            <button class="market-cat-btn active" id="marketCatBtnPremium" onclick="setMarketOverviewCategory('PREMIUM')">💎 Premium</button>
+                            <button class="market-cat-btn" id="marketCatBtnUS" onclick="setMarketOverviewCategory('US')">🇺🇸 US Stocks</button>
+                            <button class="market-cat-btn" id="marketCatBtnETF" onclick="setMarketOverviewCategory('ETF')">📊 ETF</button>
+                            <button class="market-cat-btn" id="marketCatBtnALL" onclick="setMarketOverviewCategory('ALL')">ทั้งหมด</button>
+                        </div>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="refreshMarketOverviewData(true)" title="รีเฟรชข้อมูลภาพรวมตลาด">
+                            🔄 รีเฟรช
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6 Macro Indices Cards (S&P 500, NDX100, VIX, Gold, WTI Crude Oil, DXY) -->
+                <div class="row g-2 mb-3" id="macroIndicesRow">
+                    <!-- Populated by renderMacroIndices() -->
+                </div>
+
+                <!-- Top 10 Snapshot (Horizontal Scroller with high-confidence signals) -->
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-bold" style="font-size: 0.95rem;">🔥 Top 10 Snapshot (สัญญาณความมั่นใจสูง)</span>
+                            <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">HIGH CONFIDENCE</span>
+                        </div>
+                        <small class="text-muted" style="font-size: 0.75rem;">แตะที่การ์ดเพื่อเปิดกราฟวิเคราะห์ ⚡</small>
+                    </div>
+                    <div class="market-snapshot-scroller" id="marketTop10Scroller">
+                        <!-- Populated by renderMarketTop10Scroller() -->
+                    </div>
+                </div>
+
+                <!-- Top 100 Ranked Stocks Table Card -->
+                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                    <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2 p-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-bold" style="font-size: 1rem;">🏆 ตารางจัดอันดับสัญญาณทางเทคนิค (Top Ranked Stocks)</span>
+                            <span class="badge rounded-pill bg-primary px-2 py-1" id="marketTableCountBadge" style="font-size: 0.72rem;">100 รายการ</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <div class="input-group input-group-sm" style="max-width: 220px;">
+                                <span class="input-group-text bg-transparent border-end-0 text-muted">🔍</span>
+                                <input type="text" id="marketTableSearch" class="form-control border-start-0" placeholder="ค้นหา Ticker หรือชื่อหุ้น..." oninput="onMarketTableSearch(this.value)">
+                            </div>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button type="button" class="btn btn-outline-secondary active py-1 px-2 fw-bold" id="marketFilterSignalAll" onclick="setMarketTableSignalFilter('ALL')">ทั้งหมด</button>
+                                <button type="button" class="btn btn-outline-success py-1 px-2 fw-bold" id="marketFilterSignalBuy" onclick="setMarketTableSignalFilter('BUY')">🟢 BUY</button>
+                                <button type="button" class="btn btn-outline-warning py-1 px-2 fw-bold" id="marketFilterSignalWatch" onclick="setMarketTableSignalFilter('WATCH')">🟡 WATCH</button>
+                                <button type="button" class="btn btn-outline-danger py-1 px-2 fw-bold" id="marketFilterSignalSell" onclick="setMarketTableSignalFilter('SELL')">🔴 SELL</button>
+                            </div>
+                            <select id="marketTableSortSelect" class="form-select form-select-sm" style="width: auto; font-size: 0.78rem;" onchange="onMarketTableSortChange(this.value)">
+                                <option value="rank_asc">เรียงตาม Rank (1-100)</option>
+                                <option value="change_desc">เปลี่ยนแปลงสูงสุด (Top Gainers)</option>
+                                <option value="change_asc">เปลี่ยนแปลงต่ำสุด (Top Losers)</option>
+                                <option value="score_desc">คะแนนเทคนิคสูงสุด (Score)</option>
+                                <option value="price_desc">ราคาสูงสุด -> ต่ำสุด</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle market-rank-table mb-0" style="font-size: 0.85rem;">
+                                <thead style="border-bottom: 2px solid rgba(0,0,0,0.06); font-size: 0.75rem;" class="table-light">
+                                    <tr>
+                                        <th class="text-center py-2 px-2" style="width: 45px;">#</th>
+                                        <th class="py-2" style="min-width: 170px;">TICKER</th>
+                                        <th class="text-center py-2" style="width: 100px;">TREND</th>
+                                        <th class="text-center py-2" style="width: 80px;">SIGNAL</th>
+                                        <th class="text-center py-2" style="width: 75px;">CONF</th>
+                                        <th class="text-center py-2" style="width: 90px;">SCORE</th>
+                                        <th class="text-end py-2" style="min-width: 90px;">PRICE</th>
+                                        <th class="text-end py-2" style="min-width: 90px;">CHANGE</th>
+                                        <th class="text-end py-2" style="min-width: 90px;">แนวต้าน</th>
+                                        <th class="text-end py-2" style="min-width: 90px;">แนวรับระยะสั้น</th>
+                                        <th class="text-center py-2" style="min-width: 210px;">MOMENTUM (1D | 1W | 1M | 3M | 6M | 1Y)</th>
+                                        <th class="text-center py-2" style="width: 85px;">ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="marketTableBody">
+                                    <!-- Injected by renderMarketTop100Table() -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end marketOverviewPane -->
+
+            <!-- PANE 2: พอร์ตการลงทุน (Portfolio View) -->
+            <div class="tab-pane fade" id="portfolioViewPane" role="tabpanel">
                 <!-- Multi-Portfolio Selector (สลับพอร์ตการลงทุน - ไม่มีข้อความซ้ำซ้อน) -->
                 <div class="mb-2" id="portfolioSection">
             <div id="portfolioTitleRow" class="d-flex justify-content-between align-items-center mb-1 px-1">
@@ -1788,7 +2084,35 @@
 
             </div><!-- end portfolioViewPane -->
 
-            <!-- PANE 2: ระบบวิเคราะห์กราฟ & สัญญาณเทคนิค (3 การ์ดตรงตามรูปภาพ 100%) -->
+            <!-- PANE 3: Sector (ภาพรวม 12 กลุ่มอุตสาหกรรมในตลาดสหรัฐฯ ตรงตามรูป 100%) -->
+            <div class="tab-pane fade" id="sectorViewPane" role="tabpanel">
+                <!-- Section Subtitle & Filter Bar -->
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
+                    <div>
+                        <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
+                            🏢 ภาพรวมกลุ่มอุตสาหกรรม (Sectors Overview)
+                        </h4>
+                        <small class="text-muted">
+                            วิเคราะห์ภาพรวม 12 กลุ่มอุตสาหกรรมหลักในตลาดหุ้นสหรัฐฯ, มูลค่า Market Cap, การเคลื่อนไหวของราคา, และหุ้นผู้นำในแต่ละกลุ่ม
+                        </small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <span class="badge rounded-pill bg-body-secondary text-body border px-3 py-2 fw-bold" style="font-size: 0.78rem;">
+                            12 กลุ่มอุตสาหกรรม • S&P 500 / US Total Market
+                        </span>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="renderSectorsView()" title="รีเฟรชข้อมูล Sector">
+                            🔄 รีเฟรช
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 12 Sector Cards Grid (3 columns on desktop, exactly like user screenshot) -->
+                <div class="row g-3 mb-4" id="sectorCardsGrid">
+                    <!-- Populated by renderSectorsView() -->
+                </div>
+            </div><!-- end sectorViewPane -->
+
+            <!-- PANE 4: เทคนิค กราฟ (Technical & Trend Hub) -->
             <div class="tab-pane fade" id="technicalViewPane" role="tabpanel">
                 <!-- Section Subtitle Bar -->
                 <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
@@ -7284,22 +7608,849 @@
             `;
         };
 
+        // =====================================================================
+        // MODULE: MARKET OVERVIEW & 12 SECTORS HUB & 100 RANKED STOCKS
+        // =====================================================================
+
+        function generateSvgSparkline(seed, isPositive, width = 80, height = 26) {
+            let points = [];
+            const step = width / 6;
+            let base = isPositive ? (height * 0.65) : (height * 0.35);
+            for (let i = 0; i <= 6; i++) {
+                let x = Math.round(i * step);
+                let rnd = Math.sin(seed + i * 1.7) * 4.5;
+                let trend = isPositive ? (i * -1.8) : (i * 1.8);
+                let y = Math.max(3, Math.min(height - 3, Math.round(base + rnd + trend)));
+                points.push({ x, y });
+            }
+            const pathD = points.map((p, idx) => (idx === 0 ? `M ${p.x} ${p.y}` : `L ${p.x} ${p.y}`)).join(' ');
+            const areaD = `${pathD} L ${width} ${height} L 0 ${height} Z`;
+            const color = isPositive ? '#10b981' : '#ef4444';
+            const gradId = `sparkGrad_${seed}_${Math.floor(Math.random() * 10000)}`;
+
+            return `
+                <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" style="overflow: visible; display: inline-block; vertical-align: middle;">
+                    <defs>
+                        <linearGradient id="${gradId}" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="${color}" stop-opacity="0.3"/>
+                            <stop offset="100%" stop-color="${color}" stop-opacity="0.0"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="${areaD}" fill="url(#${gradId})"/>
+                    <path d="${pathD}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            `;
+        }
+
+        const macroIndicesData = [
+            { id: 'SP500', name: 'S&P 500', symbol: '^GSPC', value: '7,811.54', changePct: 2.80, flag: '🇺🇸', seed: 101 },
+            { id: 'NDX', name: 'NDX100', symbol: '^NDX', value: '30,883.15', changePct: 6.11, flag: '🇺🇸', seed: 202 },
+            { id: 'VIX', name: 'VIX Index', symbol: '^VIX', value: '14.84', changePct: -8.84, flag: '📉', seed: 303 },
+            { id: 'GOLD', name: 'Gold (XAU)', symbol: 'GC=F', value: '$4,220.30', changePct: -5.39, flag: '🪙', seed: 404 },
+            { id: 'WTI', name: 'WTI Crude Oil', symbol: 'CL=F', value: '$91.66', changePct: -4.57, flag: '🛢️', seed: 505 },
+            { id: 'DXY', name: 'DXY Index', symbol: 'DX-Y.NYB', value: '102.23', changePct: 3.50, flag: '💵', seed: 606 }
+        ];
+
+        const top10SnapshotData = [
+            { ticker: 'NVDA', name: 'NVIDIA Corp.', price: 233.95, changePct: 1.80, signal: 'BUY', conf: 'HIGH', seed: 11 },
+            { ticker: 'OXY', name: 'Occidental Petroleum', price: 60.11, changePct: 2.30, signal: 'BUY', conf: 'HIGH', seed: 22 },
+            { ticker: 'EOG', name: 'EOG Resources', price: 148.16, changePct: 1.90, signal: 'BUY', conf: 'HIGH', seed: 33 },
+            { ticker: 'PLTR', name: 'Palantir Tech', price: 209.05, changePct: 4.20, signal: 'BUY', conf: 'HIGH', seed: 44 },
+            { ticker: 'SHOP', name: 'Shopify Inc.', price: 170.85, changePct: 3.10, signal: 'BUY', conf: 'HIGH', seed: 55 },
+            { ticker: 'GDDY', name: 'GoDaddy Inc.', price: 104.37, changePct: 1.20, signal: 'BUY', conf: 'HIGH', seed: 66 },
+            { ticker: 'ADI', name: 'Analog Devices', price: 406.19, changePct: 2.50, signal: 'BUY', conf: 'HIGH', seed: 77 },
+            { ticker: 'LRCX', name: 'Lam Research', price: 318.84, changePct: 3.80, signal: 'BUY', conf: 'HIGH', seed: 88 },
+            { ticker: 'TRV', name: 'Travelers Companies', price: 368.75, changePct: 1.10, signal: 'BUY', conf: 'HIGH', seed: 99 },
+            { ticker: 'LLY', name: 'Eli Lilly & Co.', price: 1142.85, changePct: 2.00, signal: 'BUY', conf: 'HIGH', seed: 110 }
+        ];
+
+        const sectorDefinitions = [
+            {
+                id: 'tech',
+                name: 'Technology',
+                nameTh: 'เทคโนโลยี',
+                rank: 1,
+                stockCount: 156,
+                marketCap: '$33.46T',
+                change1D: -0.97,
+                logos: ['AAPL', 'MSFT', 'NVDA', 'AVGO', 'ORCL'],
+                remainingCount: 151,
+                icon: '💻',
+                topTickers: ['NVDA', 'AAPL', 'MSFT', 'AVGO', 'ORCL', 'CRM', 'ADBE', 'AMD', 'QCOM', 'CSCO', 'INTC', 'LRCX', 'ADI', 'NOW', 'IBM']
+            },
+            {
+                id: 'comm',
+                name: 'Communication Services',
+                nameTh: 'สื่อสาร & มีเดีย',
+                rank: 2,
+                stockCount: 23,
+                marketCap: '$11.82T',
+                change1D: 0.74,
+                logos: ['GOOGL', 'META', 'NFLX', 'DIS', 'CMCSA'],
+                remainingCount: 18,
+                icon: '📡',
+                topTickers: ['GOOGL', 'META', 'NFLX', 'DIS', 'CMCSA', 'TMUS', 'VZ', 'T', 'CHTR', 'EA']
+            },
+            {
+                id: 'fin',
+                name: 'Financial Services',
+                nameTh: 'การเงิน & การธนาคาร',
+                rank: 3,
+                stockCount: 78,
+                marketCap: '$8.42T',
+                change1D: 1.35,
+                logos: ['JPM', 'V', 'MA', 'BAC', 'WFC'],
+                remainingCount: 73,
+                icon: '🏦',
+                topTickers: ['JPM', 'V', 'MA', 'BAC', 'WFC', 'MS', 'GS', 'BLK', 'AXP', 'SPGI', 'C', 'TRV']
+            },
+            {
+                id: 'cyclical',
+                name: 'Consumer Cyclical',
+                nameTh: 'สินค้าฟุ่มเฟือย',
+                rank: null,
+                stockCount: 60,
+                marketCap: '$7.15T',
+                change1D: 1.74,
+                logos: ['AMZN', 'TSLA', 'HD', 'MCD', 'NKE'],
+                remainingCount: 55,
+                icon: '🛍️',
+                topTickers: ['AMZN', 'TSLA', 'HD', 'MCD', 'NKE', 'LOW', 'SBUX', 'BKNG', 'TJX', 'ABNB']
+            },
+            {
+                id: 'health',
+                name: 'Healthcare',
+                nameTh: 'สุขภาพ & การแพทย์',
+                rank: null,
+                stockCount: 73,
+                marketCap: '$6.54T',
+                change1D: 0.13,
+                logos: ['LLY', 'UNH', 'JNJ', 'ABBV', 'MRK'],
+                remainingCount: 68,
+                icon: '🏥',
+                topTickers: ['LLY', 'UNH', 'JNJ', 'ABBV', 'MRK', 'PFE', 'TMO', 'ABT', 'DHR', 'ISRG']
+            },
+            {
+                id: 'ind',
+                name: 'Industrials',
+                nameTh: 'อุตสาหกรรม & การขนส่ง',
+                rank: null,
+                stockCount: 104,
+                marketCap: '$5.29T',
+                change1D: 0.30,
+                logos: ['GE', 'CAT', 'RTX', 'HON', 'UNP'],
+                remainingCount: 99,
+                icon: '🏭',
+                topTickers: ['GE', 'CAT', 'RTX', 'HON', 'UNP', 'BA', 'LMT', 'DE', 'UPS', 'FDX']
+            },
+            {
+                id: 'defensive',
+                name: 'Consumer Defensive',
+                nameTh: 'สินค้าจำเป็น',
+                rank: null,
+                stockCount: 39,
+                marketCap: '$3.55T',
+                change1D: 1.64,
+                logos: ['WMT', 'PG', 'COST', 'KO', 'PEP'],
+                remainingCount: 34,
+                icon: '🛒',
+                topTickers: ['WMT', 'PG', 'COST', 'KO', 'PEP', 'MDLZ', 'PM', 'MO', 'CL', 'KMB']
+            },
+            {
+                id: 'etc',
+                name: 'ETC',
+                nameTh: 'กองทุน ETF & ดัชนี',
+                rank: null,
+                stockCount: 17,
+                marketCap: '$3.49T',
+                change1D: -5.75,
+                logos: ['SPY', 'QQQ', 'VOO', 'DIA', 'IWM'],
+                remainingCount: 12,
+                icon: '📊',
+                topTickers: ['SPY', 'QQQ', 'VOO', 'DIA', 'IWM', 'SMH', 'SCHD', 'TLT', 'VTI', 'SOXX']
+            },
+            {
+                id: 'energy',
+                name: 'Energy',
+                nameTh: 'พลังงาน & น้ำมัน',
+                rank: null,
+                stockCount: 29,
+                marketCap: '$2.50T',
+                change1D: 1.03,
+                logos: ['XOM', 'CVX', 'COP', 'EOG', 'SLB'],
+                remainingCount: 24,
+                icon: '⚡',
+                topTickers: ['XOM', 'CVX', 'COP', 'EOG', 'OXY', 'SLB', 'MPC', 'VLO', 'PSX', 'HAL']
+            },
+            {
+                id: 'util',
+                name: 'Utilities',
+                nameTh: 'สาธารณูปโภค & ไฟฟ้า',
+                rank: null,
+                stockCount: 35,
+                marketCap: '$1.60T',
+                change1D: -0.26,
+                logos: ['NEE', 'SO', 'DUK', 'CEG', 'SRE'],
+                remainingCount: 30,
+                icon: '💡',
+                topTickers: ['NEE', 'SO', 'DUK', 'CEG', 'SRE', 'AEP', 'PEG', 'EXC', 'XEL', 'ED']
+            },
+            {
+                id: 're',
+                name: 'Real Estate',
+                nameTh: 'อสังหาริมทรัพย์ & REITs',
+                rank: null,
+                stockCount: 33,
+                marketCap: '$1.14T',
+                change1D: 1.08,
+                logos: ['PLD', 'AMT', 'EQIX', 'CCI', 'SPG'],
+                remainingCount: 28,
+                icon: '🏢',
+                topTickers: ['PLD', 'AMT', 'EQIX', 'CCI', 'SPG', 'O', 'PSA', 'WELL', 'DLR', 'VICI']
+            },
+            {
+                id: 'mat',
+                name: 'Basic Materials',
+                nameTh: 'วัสดุพื้นฐาน & เคมีภัณฑ์',
+                rank: null,
+                stockCount: 24,
+                marketCap: '$1.03T',
+                change1D: 0.22,
+                logos: ['LIN', 'SHW', 'APD', 'FCX', 'ECL'],
+                remainingCount: 19,
+                icon: '⛏️',
+                topTickers: ['LIN', 'SHW', 'APD', 'FCX', 'ECL', 'NEM', 'CTVA', 'DOW', 'NUE', 'ALB']
+            }
+        ];
+
+        // 100 Ranked Stocks Definition
+        const top100StocksData = [
+            { rank: 1, ticker: 'NVDA', name: 'NVIDIA Corporation', sector: 'tech', type: 'US', isPrem: true, price: 233.95, change: 1.80, signal: 'BUY', conf: 'HIGH', score: 6, res: 245.00, supp: 222.50, mom: { d1: 1.8, w1: 5.4, m1: 14.2, m3: 28.5, m6: 52.1, y1: 145.0 }, seed: 11 },
+            { rank: 2, ticker: 'AAPL', name: 'Apple Inc.', sector: 'tech', type: 'US', isPrem: true, price: 231.50, change: 0.85, signal: 'BUY', conf: 'HIGH', score: 6, res: 238.00, supp: 224.00, mom: { d1: 0.8, w1: 2.1, m1: 5.6, m3: 12.3, m6: 22.4, y1: 34.0 }, seed: 12 },
+            { rank: 3, ticker: 'MSFT', name: 'Microsoft Corporation', sector: 'tech', type: 'US', isPrem: true, price: 432.80, change: 1.15, signal: 'BUY', conf: 'HIGH', score: 6, res: 445.00, supp: 420.00, mom: { d1: 1.2, w1: 3.0, m1: 6.8, m3: 15.2, m6: 25.1, y1: 38.5 }, seed: 13 },
+            { rank: 4, ticker: 'AMZN', name: 'Amazon.com Inc.', sector: 'cyclical', type: 'US', isPrem: true, price: 194.20, change: 2.10, signal: 'BUY', conf: 'HIGH', score: 6, res: 202.00, supp: 186.00, mom: { d1: 2.1, w1: 4.8, m1: 9.5, m3: 18.0, m6: 32.4, y1: 52.0 }, seed: 14 },
+            { rank: 5, ticker: 'GOOGL', name: 'Alphabet Inc. (Class A)', sector: 'comm', type: 'US', isPrem: true, price: 182.50, change: 0.95, signal: 'BUY', conf: 'HIGH', score: 5, res: 190.00, supp: 175.00, mom: { d1: 1.0, w1: 2.5, m1: 7.2, m3: 14.1, m6: 26.5, y1: 41.2 }, seed: 15 },
+            { rank: 6, ticker: 'META', name: 'Meta Platforms Inc.', sector: 'comm', type: 'US', isPrem: true, price: 595.60, change: 1.65, signal: 'BUY', conf: 'HIGH', score: 6, res: 615.00, supp: 575.00, mom: { d1: 1.7, w1: 4.2, m1: 12.0, m3: 26.3, m6: 54.0, y1: 96.5 }, seed: 16 },
+            { rank: 7, ticker: 'TSLA', name: 'Tesla Inc.', sector: 'cyclical', type: 'US', isPrem: true, price: 255.40, change: 3.40, signal: 'BUY', conf: 'HIGH', score: 5, res: 270.00, supp: 238.00, mom: { d1: 3.4, w1: 8.5, m1: 18.2, m3: 35.1, m6: 42.0, y1: 28.0 }, seed: 17 },
+            { rank: 8, ticker: 'AVGO', name: 'Broadcom Inc.', sector: 'tech', type: 'US', isPrem: true, price: 178.60, change: 2.45, signal: 'BUY', conf: 'HIGH', score: 6, res: 188.00, supp: 168.00, mom: { d1: 2.5, w1: 6.2, m1: 15.0, m3: 31.4, m6: 58.2, y1: 98.0 }, seed: 18 },
+            { rank: 9, ticker: 'PLTR', name: 'Palantir Technologies', sector: 'tech', type: 'US', isPrem: true, price: 209.05, change: 4.20, signal: 'BUY', conf: 'HIGH', score: 6, res: 220.00, supp: 195.00, mom: { d1: 4.2, w1: 11.5, m1: 28.4, m3: 65.2, m6: 110.0, y1: 180.0 }, seed: 44 },
+            { rank: 10, ticker: 'LLY', name: 'Eli Lilly & Co.', sector: 'health', type: 'US', isPrem: true, price: 1142.85, change: 2.00, signal: 'BUY', conf: 'HIGH', score: 6, res: 1180.00, supp: 1100.00, mom: { d1: 2.0, w1: 4.5, m1: 8.8, m3: 22.0, m6: 45.0, y1: 82.5 }, seed: 110 },
+            { rank: 11, ticker: 'OXY', name: 'Occidental Petroleum', sector: 'energy', type: 'US', isPrem: true, price: 60.11, change: 2.30, signal: 'BUY', conf: 'HIGH', score: 6, res: 64.50, supp: 57.80, mom: { d1: 2.3, w1: 5.1, m1: 9.2, m3: 14.5, m6: 18.2, y1: 24.0 }, seed: 22 },
+            { rank: 12, ticker: 'EOG', name: 'EOG Resources', sector: 'energy', type: 'US', isPrem: true, price: 148.16, change: 1.90, signal: 'BUY', conf: 'HIGH', score: 6, res: 155.00, supp: 140.00, mom: { d1: 1.9, w1: 4.2, m1: 8.5, m3: 16.0, m6: 22.4, y1: 30.5 }, seed: 33 },
+            { rank: 13, ticker: 'SHOP', name: 'Shopify Inc.', sector: 'tech', type: 'US', isPrem: true, price: 170.85, change: 3.10, signal: 'BUY', conf: 'HIGH', score: 6, res: 182.00, supp: 158.00, mom: { d1: 3.1, w1: 7.8, m1: 16.4, m3: 32.0, m6: 48.5, y1: 65.0 }, seed: 55 },
+            { rank: 14, ticker: 'GDDY', name: 'GoDaddy Inc.', sector: 'tech', type: 'US', isPrem: true, price: 104.37, change: 1.20, signal: 'BUY', conf: 'HIGH', score: 5, res: 112.00, supp: 98.00, mom: { d1: 1.2, w1: 3.4, m1: 7.0, m3: 15.5, m6: 28.0, y1: 42.0 }, seed: 66 },
+            { rank: 15, ticker: 'ADI', name: 'Analog Devices', sector: 'tech', type: 'US', isPrem: true, price: 406.19, change: 2.50, signal: 'BUY', conf: 'HIGH', score: 6, res: 425.00, supp: 388.00, mom: { d1: 2.5, w1: 5.8, m1: 11.2, m3: 24.0, m6: 38.5, y1: 55.0 }, seed: 77 },
+            { rank: 16, ticker: 'LRCX', name: 'Lam Research', sector: 'tech', type: 'US', isPrem: true, price: 318.84, change: 3.80, signal: 'BUY', conf: 'HIGH', score: 6, res: 335.00, supp: 298.00, mom: { d1: 3.8, w1: 8.2, m1: 18.0, m3: 36.4, m6: 54.0, y1: 78.0 }, seed: 88 },
+            { rank: 17, ticker: 'TRV', name: 'Travelers Companies', sector: 'fin', type: 'US', isPrem: true, price: 368.75, change: 1.10, signal: 'BUY', conf: 'HIGH', score: 5, res: 380.00, supp: 355.00, mom: { d1: 1.1, w1: 2.8, m1: 6.4, m3: 12.0, m6: 22.0, y1: 34.0 }, seed: 99 },
+            { rank: 18, ticker: 'JPM', name: 'JPMorgan Chase & Co.', sector: 'fin', type: 'US', isPrem: true, price: 225.80, change: 1.40, signal: 'BUY', conf: 'HIGH', score: 6, res: 234.00, supp: 215.00, mom: { d1: 1.4, w1: 3.6, m1: 8.2, m3: 16.5, m6: 28.0, y1: 46.0 }, seed: 19 },
+            { rank: 19, ticker: 'V', name: 'Visa Inc.', sector: 'fin', type: 'US', isPrem: true, price: 292.40, change: 0.90, signal: 'BUY', conf: 'HIGH', score: 5, res: 302.00, supp: 280.00, mom: { d1: 0.9, w1: 2.4, m1: 5.5, m3: 11.2, m6: 18.0, y1: 26.5 }, seed: 20 },
+            { rank: 20, ticker: 'MA', name: 'Mastercard Incorporated', sector: 'fin', type: 'US', isPrem: true, price: 508.60, change: 1.15, signal: 'BUY', conf: 'HIGH', score: 6, res: 525.00, supp: 490.00, mom: { d1: 1.2, w1: 2.9, m1: 6.2, m3: 13.0, m6: 21.5, y1: 32.0 }, seed: 21 },
+            { rank: 21, ticker: 'WMT', name: 'Walmart Inc.', sector: 'defensive', type: 'US', isPrem: true, price: 82.30, change: 1.65, signal: 'BUY', conf: 'HIGH', score: 6, res: 86.00, supp: 78.50, mom: { d1: 1.7, w1: 3.8, m1: 8.5, m3: 19.2, m6: 35.0, y1: 58.0 }, seed: 23 },
+            { rank: 22, ticker: 'COST', name: 'Costco Wholesale Corp.', sector: 'defensive', type: 'US', isPrem: true, price: 924.50, change: 1.45, signal: 'BUY', conf: 'HIGH', score: 6, res: 955.00, supp: 890.00, mom: { d1: 1.5, w1: 3.2, m1: 7.8, m3: 17.5, m6: 32.0, y1: 61.0 }, seed: 24 },
+            { rank: 23, ticker: 'UNH', name: 'UnitedHealth Group', sector: 'health', type: 'US', isPrem: true, price: 584.20, change: 0.35, signal: 'BUY', conf: 'HIGH', score: 5, res: 605.00, supp: 565.00, mom: { d1: 0.4, w1: 1.5, m1: 4.8, m3: 10.2, m6: 16.5, y1: 22.0 }, seed: 25 },
+            { rank: 24, ticker: 'JNJ', name: 'Johnson & Johnson', sector: 'health', type: 'US', isPrem: false, price: 162.80, change: 0.20, signal: 'WATCH', conf: 'MED', score: 4, res: 168.00, supp: 156.00, mom: { d1: 0.2, w1: 0.8, m1: 2.5, m3: 6.0, m6: 8.2, y1: 12.0 }, seed: 26 },
+            { rank: 25, ticker: 'XOM', name: 'Exxon Mobil Corp.', sector: 'energy', type: 'US', isPrem: true, price: 122.40, change: 1.10, signal: 'BUY', conf: 'HIGH', score: 5, res: 128.00, supp: 116.00, mom: { d1: 1.1, w1: 2.6, m1: 6.0, m3: 12.5, m6: 18.0, y1: 25.0 }, seed: 27 },
+            { rank: 26, ticker: 'CVX', name: 'Chevron Corporation', sector: 'energy', type: 'US', isPrem: false, price: 154.60, change: 0.85, signal: 'BUY', conf: 'MED', score: 5, res: 162.00, supp: 146.00, mom: { d1: 0.9, w1: 2.1, m1: 4.8, m3: 9.5, m6: 14.0, y1: 18.5 }, seed: 28 },
+            { rank: 27, ticker: 'GE', name: 'GE Aerospace', sector: 'ind', type: 'US', isPrem: true, price: 191.20, change: 1.30, signal: 'BUY', conf: 'HIGH', score: 6, res: 202.00, supp: 180.00, mom: { d1: 1.3, w1: 4.0, m1: 9.8, m3: 24.0, m6: 48.0, y1: 85.0 }, seed: 29 },
+            { rank: 28, ticker: 'CAT', name: 'Caterpillar Inc.', sector: 'ind', type: 'US', isPrem: true, price: 402.50, change: 0.75, signal: 'BUY', conf: 'HIGH', score: 5, res: 420.00, supp: 385.00, mom: { d1: 0.8, w1: 2.5, m1: 6.8, m3: 16.0, m6: 30.0, y1: 48.0 }, seed: 30 },
+            { rank: 29, ticker: 'DIS', name: 'The Walt Disney Co.', sector: 'comm', type: 'US', isPrem: false, price: 98.40, change: 0.55, signal: 'WATCH', conf: 'MED', score: 4, res: 105.00, supp: 92.00, mom: { d1: 0.6, w1: 1.8, m1: 3.5, m3: 7.2, m6: 11.0, y1: 15.0 }, seed: 31 },
+            { rank: 30, ticker: 'NFLX', name: 'Netflix Inc.', sector: 'comm', type: 'US', isPrem: true, price: 722.80, change: 1.85, signal: 'BUY', conf: 'HIGH', score: 6, res: 750.00, supp: 690.00, mom: { d1: 1.9, w1: 4.5, m1: 11.0, m3: 25.0, m6: 46.0, y1: 80.0 }, seed: 32 },
+            { rank: 31, ticker: 'SPY', name: 'SPDR S&P 500 ETF Trust', sector: 'etc', type: 'ETF', isPrem: true, price: 574.20, change: 0.65, signal: 'BUY', conf: 'HIGH', score: 6, res: 585.00, supp: 560.00, mom: { d1: 0.7, w1: 1.8, m1: 4.2, m3: 9.8, m6: 16.5, y1: 28.0 }, seed: 34 },
+            { rank: 32, ticker: 'QQQ', name: 'Invesco QQQ Trust', sector: 'etc', type: 'ETF', isPrem: true, price: 492.60, change: 1.10, signal: 'BUY', conf: 'HIGH', score: 6, res: 508.00, supp: 478.00, mom: { d1: 1.1, w1: 2.8, m1: 6.5, m3: 14.2, m6: 22.0, y1: 36.5 }, seed: 35 },
+            { rank: 33, ticker: 'VOO', name: 'Vanguard S&P 500 ETF', sector: 'etc', type: 'ETF', isPrem: true, price: 526.40, change: 0.68, signal: 'BUY', conf: 'HIGH', score: 6, res: 538.00, supp: 512.00, mom: { d1: 0.7, w1: 1.8, m1: 4.3, m3: 9.9, m6: 16.6, y1: 28.2 }, seed: 36 },
+            { rank: 34, ticker: 'AMD', name: 'Advanced Micro Devices', sector: 'tech', type: 'US', isPrem: true, price: 168.40, change: 2.80, signal: 'BUY', conf: 'HIGH', score: 5, res: 180.00, supp: 154.00, mom: { d1: 2.8, w1: 6.5, m1: 14.0, m3: 22.0, m6: 34.0, y1: 52.0 }, seed: 37 },
+            { rank: 35, ticker: 'INTC', name: 'Intel Corporation', sector: 'tech', type: 'US', isPrem: false, price: 23.40, change: -1.20, signal: 'WATCH', conf: 'MED', score: 3, res: 26.00, supp: 21.50, mom: { d1: -1.2, w1: -2.5, m1: -5.0, m3: -12.0, m6: -28.0, y1: -38.0 }, seed: 38 },
+            { rank: 36, ticker: 'QCOM', name: 'QUALCOMM Incorporated', sector: 'tech', type: 'US', isPrem: true, price: 172.50, change: 1.45, signal: 'BUY', conf: 'HIGH', score: 5, res: 182.00, supp: 162.00, mom: { d1: 1.5, w1: 3.5, m1: 8.0, m3: 16.5, m6: 28.0, y1: 45.0 }, seed: 39 },
+            { rank: 37, ticker: 'CRM', name: 'Salesforce Inc.', sector: 'tech', type: 'US', isPrem: true, price: 295.80, change: 1.70, signal: 'BUY', conf: 'HIGH', score: 6, res: 310.00, supp: 280.00, mom: { d1: 1.7, w1: 4.0, m1: 9.5, m3: 18.0, m6: 28.0, y1: 42.0 }, seed: 40 },
+            { rank: 38, ticker: 'ORCL', name: 'Oracle Corporation', sector: 'tech', type: 'US', isPrem: true, price: 178.90, change: 1.85, signal: 'BUY', conf: 'HIGH', score: 6, res: 190.00, supp: 166.00, mom: { d1: 1.9, w1: 5.2, m1: 13.5, m3: 32.0, m6: 55.0, y1: 72.0 }, seed: 41 },
+            { rank: 39, ticker: 'ADBE', name: 'Adobe Inc.', sector: 'tech', type: 'US', isPrem: false, price: 512.40, change: 0.60, signal: 'BUY', conf: 'MED', score: 5, res: 535.00, supp: 490.00, mom: { d1: 0.6, w1: 1.8, m1: 4.5, m3: 9.0, m6: 15.0, y1: 22.0 }, seed: 42 },
+            { rank: 40, ticker: 'NOW', name: 'ServiceNow Inc.', sector: 'tech', type: 'US', isPrem: true, price: 915.20, change: 2.15, signal: 'BUY', conf: 'HIGH', score: 6, res: 950.00, supp: 875.00, mom: { d1: 2.2, w1: 5.0, m1: 11.5, m3: 24.0, m6: 42.0, y1: 65.0 }, seed: 43 },
+            { rank: 41, ticker: 'IBM', name: 'International Business Machines', sector: 'tech', type: 'US', isPrem: true, price: 228.40, change: 1.05, signal: 'BUY', conf: 'HIGH', score: 6, res: 238.00, supp: 216.00, mom: { d1: 1.1, w1: 3.0, m1: 7.5, m3: 18.0, m6: 32.0, y1: 54.0 }, seed: 45 },
+            { rank: 42, ticker: 'CSCO', name: 'Cisco Systems Inc.', sector: 'tech', type: 'US', isPrem: false, price: 54.20, change: 0.40, signal: 'BUY', conf: 'MED', score: 5, res: 57.00, supp: 51.50, mom: { d1: 0.4, w1: 1.5, m1: 3.8, m3: 8.5, m6: 14.0, y1: 18.0 }, seed: 46 },
+            { rank: 43, ticker: 'BAC', name: 'Bank of America Corp.', sector: 'fin', type: 'US', isPrem: true, price: 42.60, change: 1.50, signal: 'BUY', conf: 'HIGH', score: 5, res: 45.00, supp: 40.00, mom: { d1: 1.5, w1: 3.8, m1: 8.2, m3: 15.0, m6: 24.0, y1: 40.0 }, seed: 47 },
+            { rank: 44, ticker: 'WFC', name: 'Wells Fargo & Company', sector: 'fin', type: 'US', isPrem: false, price: 62.80, change: 1.35, signal: 'BUY', conf: 'HIGH', score: 5, res: 66.00, supp: 59.00, mom: { d1: 1.4, w1: 3.2, m1: 7.0, m3: 14.0, m6: 22.0, y1: 38.0 }, seed: 48 },
+            { rank: 45, ticker: 'MS', name: 'Morgan Stanley', sector: 'fin', type: 'US', isPrem: true, price: 114.50, change: 1.80, signal: 'BUY', conf: 'HIGH', score: 6, res: 120.00, supp: 108.00, mom: { d1: 1.8, w1: 4.2, m1: 9.8, m3: 20.0, m6: 32.0, y1: 48.0 }, seed: 49 },
+            { rank: 46, ticker: 'GS', name: 'Goldman Sachs Group Inc.', sector: 'fin', type: 'US', isPrem: true, price: 518.20, change: 1.65, signal: 'BUY', conf: 'HIGH', score: 6, res: 540.00, supp: 492.00, mom: { d1: 1.7, w1: 3.9, m1: 8.9, m3: 18.5, m6: 30.0, y1: 52.0 }, seed: 50 },
+            { rank: 47, ticker: 'BLK', name: 'BlackRock Inc.', sector: 'fin', type: 'US', isPrem: true, price: 988.40, change: 1.25, signal: 'BUY', conf: 'HIGH', score: 6, res: 1025.00, supp: 945.00, mom: { d1: 1.3, w1: 3.2, m1: 7.5, m3: 16.0, m6: 26.0, y1: 42.0 }, seed: 51 },
+            { rank: 48, ticker: 'HD', name: 'Home Depot Inc.', sector: 'cyclical', type: 'US', isPrem: true, price: 412.60, change: 1.10, signal: 'BUY', conf: 'HIGH', score: 5, res: 428.00, supp: 395.00, mom: { d1: 1.1, w1: 2.8, m1: 6.5, m3: 14.0, m6: 22.0, y1: 34.0 }, seed: 52 },
+            { rank: 49, ticker: 'MCD', name: 'McDonald\'s Corp.', sector: 'cyclical', type: 'US', isPrem: false, price: 304.20, change: 0.85, signal: 'BUY', conf: 'MED', score: 5, res: 315.00, supp: 292.00, mom: { d1: 0.9, w1: 2.2, m1: 5.0, m3: 11.0, m6: 18.0, y1: 24.0 }, seed: 53 },
+            { rank: 50, ticker: 'NKE', name: 'NIKE Inc.', sector: 'cyclical', type: 'US', isPrem: false, price: 83.50, change: -0.45, signal: 'WATCH', conf: 'MED', score: 4, res: 90.00, supp: 78.00, mom: { d1: -0.5, w1: -1.2, m1: 1.5, m3: -4.0, m6: -12.0, y1: -22.0 }, seed: 54 },
+            { rank: 51, ticker: 'BKNG', name: 'Booking Holdings Inc.', sector: 'cyclical', type: 'US', isPrem: true, price: 4420.00, change: 1.95, signal: 'BUY', conf: 'HIGH', score: 6, res: 4600.00, supp: 4250.00, mom: { d1: 2.0, w1: 4.8, m1: 10.5, m3: 22.0, m6: 38.0, y1: 56.0 }, seed: 56 },
+            { rank: 52, ticker: 'ABNB', name: 'Airbnb Inc.', sector: 'cyclical', type: 'US', isPrem: false, price: 136.40, change: 1.30, signal: 'BUY', conf: 'MED', score: 5, res: 145.00, supp: 128.00, mom: { d1: 1.3, w1: 3.1, m1: 6.8, m3: 13.5, m6: 20.0, y1: 28.0 }, seed: 57 },
+            { rank: 53, ticker: 'UBER', name: 'Uber Technologies Inc.', sector: 'ind', type: 'US', isPrem: true, price: 79.80, change: 2.20, signal: 'BUY', conf: 'HIGH', score: 6, res: 85.00, supp: 74.00, mom: { d1: 2.2, w1: 5.6, m1: 12.8, m3: 26.0, m6: 44.0, y1: 75.0 }, seed: 58 },
+            { rank: 54, ticker: 'ABBV', name: 'AbbVie Inc.', sector: 'health', type: 'US', isPrem: true, price: 194.50, change: 0.65, signal: 'BUY', conf: 'HIGH', score: 5, res: 202.00, supp: 186.00, mom: { d1: 0.7, w1: 1.9, m1: 4.8, m3: 11.5, m6: 20.0, y1: 32.0 }, seed: 59 },
+            { rank: 55, ticker: 'MRK', name: 'Merck & Co. Inc.', sector: 'health', type: 'US', isPrem: false, price: 112.80, change: 0.30, signal: 'BUY', conf: 'MED', score: 5, res: 118.00, supp: 107.00, mom: { d1: 0.3, w1: 1.2, m1: 3.2, m3: 7.5, m6: 12.0, y1: 18.0 }, seed: 60 },
+            { rank: 56, ticker: 'PFE', name: 'Pfizer Inc.', sector: 'health', type: 'US', isPrem: false, price: 29.20, change: 0.15, signal: 'WATCH', conf: 'MED', score: 3, res: 31.50, supp: 27.50, mom: { d1: 0.2, w1: 0.5, m1: 1.8, m3: 3.0, m6: -2.0, y1: -12.0 }, seed: 61 },
+            { rank: 57, ticker: 'TMO', name: 'Thermo Fisher Scientific', sector: 'health', type: 'US', isPrem: true, price: 588.60, change: 0.80, signal: 'BUY', conf: 'HIGH', score: 5, res: 610.00, supp: 565.00, mom: { d1: 0.8, w1: 2.2, m1: 5.4, m3: 12.0, m6: 19.0, y1: 26.0 }, seed: 62 },
+            { rank: 58, ticker: 'ISRG', name: 'Intuitive Surgical Inc.', sector: 'health', type: 'US', isPrem: true, price: 504.20, change: 1.90, signal: 'BUY', conf: 'HIGH', score: 6, res: 525.00, supp: 480.00, mom: { d1: 1.9, w1: 4.5, m1: 10.8, m3: 24.5, m6: 45.0, y1: 72.0 }, seed: 63 },
+            { rank: 59, ticker: 'RTX', name: 'RTX Corporation', sector: 'ind', type: 'US', isPrem: true, price: 124.60, change: 0.85, signal: 'BUY', conf: 'HIGH', score: 5, res: 130.00, supp: 118.00, mom: { d1: 0.9, w1: 2.4, m1: 6.0, m3: 15.0, m6: 28.0, y1: 45.0 }, seed: 64 },
+            { rank: 60, ticker: 'HON', name: 'Honeywell International', sector: 'ind', type: 'US', isPrem: false, price: 216.50, change: 0.50, signal: 'BUY', conf: 'MED', score: 5, res: 225.00, supp: 206.00, mom: { d1: 0.5, w1: 1.6, m1: 4.0, m3: 9.0, m6: 15.0, y1: 20.0 }, seed: 65 },
+            { rank: 61, ticker: 'UNP', name: 'Union Pacific Corp.', sector: 'ind', type: 'US', isPrem: false, price: 242.80, change: 0.65, signal: 'BUY', conf: 'MED', score: 5, res: 252.00, supp: 232.00, mom: { d1: 0.7, w1: 1.8, m1: 4.5, m3: 10.0, m6: 17.0, y1: 22.0 }, seed: 67 },
+            { rank: 62, ticker: 'BA', name: 'The Boeing Company', sector: 'ind', type: 'US', isPrem: false, price: 154.20, change: -1.80, signal: 'SELL', conf: 'MED', score: 2, res: 170.00, supp: 142.00, mom: { d1: -1.8, w1: -4.5, m1: -8.0, m3: -16.0, m6: -25.0, y1: -32.0 }, seed: 68 },
+            { rank: 63, ticker: 'LMT', name: 'Lockheed Martin Corp.', sector: 'ind', type: 'US', isPrem: true, price: 588.40, change: 1.15, signal: 'BUY', conf: 'HIGH', score: 6, res: 610.00, supp: 565.00, mom: { d1: 1.2, w1: 3.0, m1: 7.2, m3: 18.0, m6: 30.0, y1: 44.0 }, seed: 69 },
+            { rank: 64, ticker: 'DE', name: 'Deere & Company', sector: 'ind', type: 'US', isPrem: false, price: 412.00, change: 0.70, signal: 'BUY', conf: 'MED', score: 5, res: 428.00, supp: 395.00, mom: { d1: 0.7, w1: 2.0, m1: 5.2, m3: 11.0, m6: 18.0, y1: 25.0 }, seed: 70 },
+            { rank: 65, ticker: 'PG', name: 'Procter & Gamble Co.', sector: 'defensive', type: 'US', isPrem: true, price: 174.60, change: 0.95, signal: 'BUY', conf: 'HIGH', score: 5, res: 180.00, supp: 168.00, mom: { d1: 1.0, w1: 2.2, m1: 5.0, m3: 10.5, m6: 16.0, y1: 22.0 }, seed: 71 },
+            { rank: 66, ticker: 'KO', name: 'The Coca-Cola Company', sector: 'defensive', type: 'US', isPrem: true, price: 68.80, change: 0.75, signal: 'BUY', conf: 'HIGH', score: 5, res: 72.00, supp: 65.50, mom: { d1: 0.8, w1: 1.9, m1: 4.5, m3: 9.8, m6: 15.0, y1: 21.0 }, seed: 72 },
+            { rank: 67, ticker: 'PEP', name: 'PepsiCo Inc.', sector: 'defensive', type: 'US', isPrem: false, price: 172.40, change: 0.60, signal: 'BUY', conf: 'MED', score: 5, res: 178.00, supp: 165.00, mom: { d1: 0.6, w1: 1.5, m1: 3.8, m3: 8.0, m6: 12.0, y1: 16.5 }, seed: 73 },
+            { rank: 68, ticker: 'PM', name: 'Philip Morris International', sector: 'defensive', type: 'US', isPrem: true, price: 128.50, change: 1.40, signal: 'BUY', conf: 'HIGH', score: 6, res: 135.00, supp: 122.00, mom: { d1: 1.4, w1: 3.5, m1: 8.0, m3: 18.0, m6: 32.0, y1: 48.0 }, seed: 74 },
+            { rank: 69, ticker: 'COP', name: 'ConocoPhillips', sector: 'energy', type: 'US', isPrem: false, price: 108.60, change: 0.95, signal: 'BUY', conf: 'MED', score: 5, res: 114.00, supp: 102.00, mom: { d1: 1.0, w1: 2.4, m1: 5.5, m3: 11.0, m6: 16.0, y1: 22.0 }, seed: 75 },
+            { rank: 70, ticker: 'SLB', name: 'Schlumberger N.V.', sector: 'energy', type: 'US', isPrem: false, price: 44.80, change: 0.80, signal: 'BUY', conf: 'MED', score: 5, res: 48.00, supp: 41.50, mom: { d1: 0.8, w1: 2.1, m1: 4.8, m3: 9.5, m6: 14.0, y1: 18.0 }, seed: 76 },
+            { rank: 71, ticker: 'NEE', name: 'NextEra Energy Inc.', sector: 'util', type: 'US', isPrem: true, price: 82.40, change: -0.15, signal: 'WATCH', conf: 'HIGH', score: 5, res: 86.00, supp: 78.00, mom: { d1: -0.2, w1: 1.2, m1: 3.8, m3: 12.0, m6: 22.0, y1: 35.0 }, seed: 78 },
+            { rank: 72, ticker: 'SO', name: 'The Southern Company', sector: 'util', type: 'US', isPrem: false, price: 88.60, change: -0.30, signal: 'WATCH', conf: 'MED', score: 4, res: 92.00, supp: 84.00, mom: { d1: -0.3, w1: 0.8, m1: 2.5, m3: 8.0, m6: 15.0, y1: 24.0 }, seed: 79 },
+            { rank: 73, ticker: 'DUK', name: 'Duke Energy Corporation', sector: 'util', type: 'US', isPrem: false, price: 114.20, change: -0.25, signal: 'WATCH', conf: 'MED', score: 4, res: 118.00, supp: 109.00, mom: { d1: -0.3, w1: 0.7, m1: 2.2, m3: 7.5, m6: 14.0, y1: 20.0 }, seed: 80 },
+            { rank: 74, ticker: 'CEG', name: 'Constellation Energy Corp.', sector: 'util', type: 'US', isPrem: true, price: 268.50, change: 2.40, signal: 'BUY', conf: 'HIGH', score: 6, res: 285.00, supp: 250.00, mom: { d1: 2.4, w1: 6.0, m1: 16.5, m3: 42.0, m6: 85.0, y1: 140.0 }, seed: 81 },
+            { rank: 75, ticker: 'PLD', name: 'Prologis Inc.', sector: 're', type: 'US', isPrem: false, price: 122.80, change: 1.10, signal: 'BUY', conf: 'MED', score: 5, res: 128.00, supp: 116.00, mom: { d1: 1.1, w1: 2.6, m1: 5.8, m3: 11.5, m6: 17.0, y1: 22.0 }, seed: 82 },
+            { rank: 76, ticker: 'AMT', name: 'American Tower Corp.', sector: 're', type: 'US', isPrem: false, price: 228.40, change: 0.90, signal: 'BUY', conf: 'MED', score: 5, res: 236.00, supp: 218.00, mom: { d1: 0.9, w1: 2.2, m1: 5.0, m3: 10.0, m6: 15.0, y1: 20.0 }, seed: 83 },
+            { rank: 77, ticker: 'EQIX', name: 'Equinix Inc.', sector: 're', type: 'US', isPrem: true, price: 902.50, change: 1.35, signal: 'BUY', conf: 'HIGH', score: 6, res: 935.00, supp: 865.00, mom: { d1: 1.4, w1: 3.2, m1: 7.5, m3: 16.0, m6: 25.0, y1: 36.0 }, seed: 84 },
+            { rank: 78, ticker: 'O', name: 'Realty Income Corp.', sector: 're', type: 'US', isPrem: true, price: 62.40, change: 0.70, signal: 'BUY', conf: 'HIGH', score: 5, res: 65.50, supp: 59.00, mom: { d1: 0.7, w1: 1.8, m1: 4.2, m3: 9.0, m6: 14.5, y1: 18.0 }, seed: 85 },
+            { rank: 79, ticker: 'LIN', name: 'Linde plc', sector: 'mat', type: 'US', isPrem: true, price: 472.60, change: 0.45, signal: 'BUY', conf: 'HIGH', score: 5, res: 488.00, supp: 455.00, mom: { d1: 0.5, w1: 1.5, m1: 3.8, m3: 8.5, m6: 15.0, y1: 22.0 }, seed: 86 },
+            { rank: 80, ticker: 'SHW', name: 'Sherwin-Williams Co.', sector: 'mat', type: 'US', isPrem: false, price: 388.20, change: 0.60, signal: 'BUY', conf: 'MED', score: 5, res: 402.00, supp: 372.00, mom: { d1: 0.6, w1: 1.8, m1: 4.5, m3: 10.0, m6: 18.0, y1: 26.0 }, seed: 87 },
+            { rank: 81, ticker: 'FCX', name: 'Freeport-McMoRan Inc.', sector: 'mat', type: 'US', isPrem: false, price: 48.60, change: 1.85, signal: 'BUY', conf: 'MED', score: 5, res: 52.00, supp: 44.50, mom: { d1: 1.9, w1: 4.5, m1: 10.2, m3: 20.0, m6: 32.0, y1: 46.0 }, seed: 89 },
+            { rank: 82, ticker: 'NEM', name: 'Newmont Corporation', sector: 'mat', type: 'US', isPrem: false, price: 54.80, change: -1.40, signal: 'WATCH', conf: 'MED', score: 4, res: 58.00, supp: 51.00, mom: { d1: -1.4, w1: 1.8, m1: 6.5, m3: 15.0, m6: 28.0, y1: 38.0 }, seed: 90 },
+            { rank: 83, ticker: 'DIA', name: 'SPDR Dow Jones ETF', sector: 'etc', type: 'ETF', isPrem: true, price: 423.50, change: 0.35, signal: 'BUY', conf: 'HIGH', score: 5, res: 432.00, supp: 414.00, mom: { d1: 0.4, w1: 1.2, m1: 3.5, m3: 7.8, m6: 13.5, y1: 22.0 }, seed: 91 },
+            { rank: 84, ticker: 'IWM', name: 'iShares Russell 2000 ETF', sector: 'etc', type: 'ETF', isPrem: false, price: 221.80, change: 1.25, signal: 'BUY', conf: 'MED', score: 5, res: 228.00, supp: 212.00, mom: { d1: 1.3, w1: 3.0, m1: 6.8, m3: 13.0, m6: 18.0, y1: 26.0 }, seed: 92 },
+            { rank: 85, ticker: 'SMH', name: 'VanEck Semiconductor ETF', sector: 'etc', type: 'ETF', isPrem: true, price: 264.40, change: 2.10, signal: 'BUY', conf: 'HIGH', score: 6, res: 278.00, supp: 248.00, mom: { d1: 2.1, w1: 5.4, m1: 12.8, m3: 26.0, m6: 45.0, y1: 78.0 }, seed: 93 },
+            { rank: 86, ticker: 'SCHD', name: 'Schwab US Dividend Equity ETF', sector: 'etc', type: 'ETF', isPrem: true, price: 84.60, change: 0.45, signal: 'BUY', conf: 'HIGH', score: 5, res: 87.00, supp: 82.00, mom: { d1: 0.5, w1: 1.4, m1: 3.2, m3: 7.5, m6: 12.0, y1: 18.0 }, seed: 94 },
+            { rank: 87, ticker: 'TLT', name: 'iShares 20+ Year Treasury Bond', sector: 'etc', type: 'ETF', isPrem: false, price: 95.80, change: -0.65, signal: 'WATCH', conf: 'MED', score: 3, res: 100.00, supp: 92.50, mom: { d1: -0.7, w1: -1.5, m1: 0.5, m3: 4.2, m6: 6.0, y1: 5.5 }, seed: 95 },
+            { rank: 88, ticker: 'TXN', name: 'Texas Instruments Inc.', sector: 'tech', type: 'US', isPrem: false, price: 206.40, change: 0.70, signal: 'BUY', conf: 'MED', score: 5, res: 215.00, supp: 196.00, mom: { d1: 0.7, w1: 2.0, m1: 4.8, m3: 10.5, m6: 18.0, y1: 28.0 }, seed: 96 },
+            { rank: 89, ticker: 'ACN', name: 'Accenture plc', sector: 'tech', type: 'US', isPrem: false, price: 356.20, change: 0.85, signal: 'BUY', conf: 'MED', score: 5, res: 370.00, supp: 340.00, mom: { d1: 0.9, w1: 2.2, m1: 5.2, m3: 11.0, m6: 17.5, y1: 24.0 }, seed: 97 },
+            { rank: 90, ticker: 'AXP', name: 'American Express Co.', sector: 'fin', type: 'US', isPrem: true, price: 278.50, change: 1.55, signal: 'BUY', conf: 'HIGH', score: 6, res: 290.00, supp: 265.00, mom: { d1: 1.6, w1: 3.8, m1: 8.5, m3: 18.0, m6: 30.0, y1: 52.0 }, seed: 98 },
+            { rank: 91, ticker: 'LOW', name: 'Lowe\'s Companies Inc.', sector: 'cyclical', type: 'US', isPrem: false, price: 268.40, change: 0.90, signal: 'BUY', conf: 'MED', score: 5, res: 278.00, supp: 256.00, mom: { d1: 0.9, w1: 2.4, m1: 5.8, m3: 12.0, m6: 19.0, y1: 28.0 }, seed: 100 },
+            { rank: 92, ticker: 'SBUX', name: 'Starbucks Corporation', sector: 'cyclical', type: 'US', isPrem: false, price: 96.20, change: 0.50, signal: 'WATCH', conf: 'MED', score: 4, res: 102.00, supp: 91.00, mom: { d1: 0.5, w1: 1.8, m1: 4.2, m3: 18.0, m6: 22.0, y1: 15.0 }, seed: 102 },
+            { rank: 93, ticker: 'TJX', name: 'The TJX Companies Inc.', sector: 'cyclical', type: 'US', isPrem: false, price: 118.50, change: 0.80, signal: 'BUY', conf: 'MED', score: 5, res: 124.00, supp: 112.00, mom: { d1: 0.8, w1: 2.1, m1: 5.0, m3: 11.5, m6: 18.0, y1: 26.0 }, seed: 103 },
+            { rank: 94, ticker: 'ABT', name: 'Abbott Laboratories', sector: 'health', type: 'US', isPrem: false, price: 118.20, change: 0.40, signal: 'BUY', conf: 'MED', score: 5, res: 124.00, supp: 112.00, mom: { d1: 0.4, w1: 1.4, m1: 3.5, m3: 7.8, m6: 13.0, y1: 18.5 }, seed: 104 },
+            { rank: 95, ticker: 'DHR', name: 'Danaher Corporation', sector: 'health', type: 'US', isPrem: false, price: 274.60, change: 0.55, signal: 'BUY', conf: 'MED', score: 5, res: 286.00, supp: 262.00, mom: { d1: 0.6, w1: 1.6, m1: 4.0, m3: 9.0, m6: 15.0, y1: 21.0 }, seed: 105 },
+            { rank: 96, ticker: 'FDX', name: 'FedEx Corporation', sector: 'ind', type: 'US', isPrem: false, price: 272.80, change: 0.65, signal: 'BUY', conf: 'MED', score: 5, res: 285.00, supp: 258.00, mom: { d1: 0.7, w1: 1.9, m1: 4.5, m3: 9.5, m6: 16.0, y1: 22.0 }, seed: 106 },
+            { rank: 97, ticker: 'MDLZ', name: 'Mondelez International', sector: 'defensive', type: 'US', isPrem: false, price: 72.40, change: 0.35, signal: 'BUY', conf: 'MED', score: 5, res: 76.00, supp: 69.00, mom: { d1: 0.4, w1: 1.2, m1: 3.0, m3: 6.8, m6: 11.0, y1: 15.0 }, seed: 107 },
+            { rank: 98, ticker: 'MO', name: 'Altria Group Inc.', sector: 'defensive', type: 'US', isPrem: false, price: 52.80, change: 0.90, signal: 'BUY', conf: 'HIGH', score: 5, res: 55.50, supp: 49.50, mom: { d1: 0.9, w1: 2.2, m1: 5.5, m3: 12.0, m6: 22.0, y1: 34.0 }, seed: 108 },
+            { rank: 99, ticker: 'CCI', name: 'Crown Castle Inc.', sector: 're', type: 'US', isPrem: false, price: 114.60, change: 0.75, signal: 'BUY', conf: 'MED', score: 5, res: 120.00, supp: 108.00, mom: { d1: 0.8, w1: 2.0, m1: 4.8, m3: 9.8, m6: 15.0, y1: 19.0 }, seed: 109 },
+            { rank: 100, ticker: 'APD', name: 'Air Products and Chemicals', sector: 'mat', type: 'US', isPrem: false, price: 308.50, change: 0.40, signal: 'BUY', conf: 'MED', score: 5, res: 320.00, supp: 295.00, mom: { d1: 0.4, w1: 1.3, m1: 3.2, m3: 7.0, m6: 12.0, y1: 16.5 }, seed: 111 }
+        ];
+
+        // Active filters state
+        let currentMarketCategory = 'PREMIUM';
+        let currentMarketSignal = 'ALL';
+        let currentMarketSort = 'rank_asc';
+        let currentMarketSearch = '';
+        let activeModalSectorId = 'tech';
+
+        window.renderMacroIndices = function() {
+            const container = document.getElementById('macroIndicesRow');
+            if (!container) return;
+
+            let html = '';
+            macroIndicesData.forEach(item => {
+                const isPos = item.changePct >= 0;
+                const sign = isPos ? '+' : '';
+                const badgeClass = isPos ? 'bg-success-subtle text-success border-success-subtle' : 'bg-danger-subtle text-danger border-danger-subtle';
+                const spark = generateSvgSparkline(item.seed, isPos, 70, 24);
+
+                html += `
+                    <div class="col-xl-2 col-md-4 col-6">
+                        <div class="market-macro-card">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="fw-bold text-muted small text-truncate" title="${item.name}">${item.flag} ${item.name}</span>
+                                <span class="badge border ${badgeClass} fw-bold" style="font-size: 0.68rem; padding: 2px 6px;">
+                                    ${sign}${item.changePct.toFixed(2)}%
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-end mt-1">
+                                <div class="fw-bold" style="font-size: 1.05rem; letter-spacing: -0.3px;">${item.value}</div>
+                                <div class="ms-1 flex-shrink-0">${spark}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        };
+
+        window.renderMarketTop10Scroller = function() {
+            const container = document.getElementById('marketTop10Scroller');
+            if (!container) return;
+
+            let html = '';
+            top10SnapshotData.forEach(item => {
+                const isPos = item.changePct >= 0;
+                const sign = isPos ? '+' : '';
+                const spark = generateSvgSparkline(item.seed, isPos, 60, 22);
+                let curPrice = item.price;
+                if (typeof marketPrices !== 'undefined' && marketPrices[item.ticker] && marketPrices[item.ticker] > 0) {
+                    curPrice = marketPrices[item.ticker];
+                }
+
+                html += `
+                    <div class="market-snapshot-card" onclick="openTechnicalForTicker('${item.ticker}')" title="ดูสัญญาณทางเทคนิคและกราฟของ ${item.ticker}">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <div class="d-flex align-items-center gap-1">
+                                <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border" width="20" height="20" style="object-fit: contain;" onerror="this.style.display='none'">
+                                <span class="fw-bold" style="font-size: 0.88rem;">${item.ticker}</span>
+                            </div>
+                            <span class="badge bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.65rem; padding: 2px 5px;">BUY</span>
+                        </div>
+                        <div class="text-truncate text-muted mb-2" style="font-size: 0.72rem;">${item.name}</div>
+                        <div class="d-flex justify-content-between align-items-end">
+                            <div>
+                                <div class="fw-bold" style="font-size: 0.95rem;">$${curPrice.toFixed(2)}</div>
+                                <div class="${isPos ? 'text-success' : 'text-danger'} fw-bold" style="font-size: 0.72rem;">
+                                    ${sign}${item.changePct.toFixed(2)}%
+                                </div>
+                            </div>
+                            <div>${spark}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        };
+
+        window.renderMarketTop100Table = function() {
+            const tbody = document.getElementById('marketTableBody');
+            const countBadge = document.getElementById('marketTableCountBadge');
+            if (!tbody) return;
+
+            let list = [...top100StocksData];
+
+            // 1. Filter Category
+            if (currentMarketCategory === 'PREMIUM') {
+                list = list.filter(x => x.isPrem);
+            } else if (currentMarketCategory === 'US') {
+                list = list.filter(x => x.type === 'US');
+            } else if (currentMarketCategory === 'ETF') {
+                list = list.filter(x => x.type === 'ETF');
+            }
+
+            // 2. Filter Signal
+            if (currentMarketSignal !== 'ALL') {
+                list = list.filter(x => x.signal === currentMarketSignal);
+            }
+
+            // 3. Search Query
+            if (currentMarketSearch.trim()) {
+                const q = currentMarketSearch.toLowerCase().trim();
+                list = list.filter(x => x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q));
+            }
+
+            // 4. Sort
+            if (currentMarketSort === 'rank_asc') {
+                list.sort((a, b) => a.rank - b.rank);
+            } else if (currentMarketSort === 'change_desc') {
+                list.sort((a, b) => b.change - a.change);
+            } else if (currentMarketSort === 'change_asc') {
+                list.sort((a, b) => a.change - b.change);
+            } else if (currentMarketSort === 'score_desc') {
+                list.sort((a, b) => b.score - a.score || b.change - a.change);
+            } else if (currentMarketSort === 'price_desc') {
+                list.sort((a, b) => b.price - a.price);
+            }
+
+            if (countBadge) {
+                countBadge.innerText = `${list.length} รายการ`;
+            }
+
+            if (list.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="12" class="text-center py-4 text-muted">
+                            🔍 ไม่พบข้อมูลหุ้นตามเงื่อนไขที่เลือก กรุณาลองปรับตัวกรองใหม่
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            let html = '';
+            list.forEach(item => {
+                let curPrice = item.price;
+                if (typeof marketPrices !== 'undefined' && marketPrices[item.ticker] && marketPrices[item.ticker] > 0) {
+                    curPrice = marketPrices[item.ticker];
+                }
+                const isPos = item.change >= 0;
+                const sign = isPos ? '+' : '';
+                const chgColor = isPos ? '#10b981' : '#ef4444';
+                const spark = generateSvgSparkline(item.seed, isPos, 75, 24);
+
+                let sigBadge = `<span class="badge bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">🟢 BUY</span>`;
+                if (item.signal === 'WATCH') {
+                    sigBadge = `<span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle fw-bold" style="font-size: 0.72rem;">🟡 WATCH</span>`;
+                } else if (item.signal === 'SELL') {
+                    sigBadge = `<span class="badge bg-danger-subtle text-danger border border-danger-subtle fw-bold" style="font-size: 0.72rem;">🔴 SELL</span>`;
+                }
+
+                let confBadge = item.conf === 'HIGH' 
+                    ? `<span class="badge bg-success-subtle text-success border border-success-subtle" style="font-size: 0.68rem;">HIGH</span>`
+                    : `<span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle" style="font-size: 0.68rem;">MED</span>`;
+
+                // 6 green score dots
+                let dotsHtml = '';
+                for (let i = 1; i <= 6; i++) {
+                    const dotColor = i <= item.score ? '#10b981' : '#cbd5e1';
+                    dotsHtml += `<span style="display:inline-block; width:6px; height:6px; border-radius:50%; background-color:${dotColor};"></span>`;
+                }
+
+                // Momentum 6 timeframes
+                const m = item.mom;
+                function momPill(val) {
+                    const p = val >= 0;
+                    return `<span class="badge ${p ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger'}" style="font-size: 0.65rem; padding: 2px 4px;">${p ? '+' : ''}${val.toFixed(1)}%</span>`;
+                }
+
+                html += `
+                    <tr onclick="openTechnicalForTicker('${item.ticker}')">
+                        <td class="text-center text-muted fw-bold" style="font-size: 0.75rem;">${item.rank}</td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="position-relative me-2 flex-shrink-0" style="width: 28px; height: 28px;">
+                                    <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border bg-white p-0.5 shadow-sm" width="28" height="28" style="object-fit: contain;" onerror="this.style.display='none'">
+                                </div>
+                                <div class="text-truncate" style="max-width: 170px;">
+                                    <div class="fw-bold" style="font-size: 0.88rem; line-height: 1.1;">${item.ticker}</div>
+                                    <div class="text-muted text-truncate" style="font-size: 0.72rem;" title="${item.name}">${item.name}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">${spark}</td>
+                        <td class="text-center">${sigBadge}</td>
+                        <td class="text-center">${confBadge}</td>
+                        <td class="text-center">
+                            <div class="d-flex align-items-center justify-content-center gap-1" title="คะแนน ${item.score}/6">${dotsHtml}</div>
+                        </td>
+                        <td class="text-end fw-bold" style="font-size: 0.88rem;">$${curPrice.toFixed(2)}</td>
+                        <td class="text-end fw-bold" style="color: ${chgColor}; font-size: 0.88rem;">${sign}${item.change.toFixed(2)}%</td>
+                        <td class="text-end text-muted" style="font-size: 0.82rem;">$${item.res.toFixed(2)}</td>
+                        <td class="text-end text-muted" style="font-size: 0.82rem;">$${item.supp.toFixed(2)}</td>
+                        <td class="text-center">
+                            <div class="d-flex align-items-center justify-content-center gap-1 flex-nowrap">
+                                ${momPill(m.d1)}
+                                ${momPill(m.w1)}
+                                ${momPill(m.m1)}
+                                ${momPill(m.m3)}
+                                ${momPill(m.m6)}
+                                ${momPill(m.y1)}
+                            </div>
+                        </td>
+                        <td class="text-center" onclick="event.stopPropagation();">
+                            <button class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.72rem;" onclick="openTechnicalForTicker('${item.ticker}')">
+                                📈 ดูกราฟ
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = html;
+        };
+
+        window.setMarketOverviewCategory = function(cat) {
+            currentMarketCategory = cat;
+            ['marketCatBtnPremium', 'marketCatBtnUS', 'marketCatBtnETF', 'marketCatBtnALL'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.classList.remove('active');
+            });
+            const activeMap = {
+                'PREMIUM': 'marketCatBtnPremium',
+                'US': 'marketCatBtnUS',
+                'ETF': 'marketCatBtnETF',
+                'ALL': 'marketCatBtnALL'
+            };
+            const activeBtn = document.getElementById(activeMap[cat]);
+            if (activeBtn) activeBtn.classList.add('active');
+            renderMarketTop100Table();
+        };
+
+        window.setMarketTableSignalFilter = function(sig) {
+            currentMarketSignal = sig;
+            ['marketFilterSignalAll', 'marketFilterSignalBuy', 'marketFilterSignalWatch', 'marketFilterSignalSell'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.classList.remove('active');
+            });
+            const activeMap = {
+                'ALL': 'marketFilterSignalAll',
+                'BUY': 'marketFilterSignalBuy',
+                'WATCH': 'marketFilterSignalWatch',
+                'SELL': 'marketFilterSignalSell'
+            };
+            const activeBtn = document.getElementById(activeMap[sig]);
+            if (activeBtn) activeBtn.classList.add('active');
+            renderMarketTop100Table();
+        };
+
+        window.onMarketTableSortChange = function(val) {
+            currentMarketSort = val;
+            renderMarketTop100Table();
+        };
+
+        window.onMarketTableSearch = function(val) {
+            currentMarketSearch = val;
+            renderMarketTop100Table();
+        };
+
+        window.refreshMarketOverviewData = function(showToast) {
+            renderMacroIndices();
+            renderMarketTop10Scroller();
+            renderMarketTop100Table();
+            if (showToast && typeof showNotification === 'function') {
+                showNotification("รีเฟรชข้อมูล Market Overview เรียบร้อยแล้ว 🔄");
+            }
+        };
+
+        window.renderMarketOverview = function() {
+            renderMacroIndices();
+            renderMarketTop10Scroller();
+            renderMarketTop100Table();
+        };
+
+        // =====================================================================
+        // MODULE: 12 SECTOR CARDS ENGINE (GRID & DETAIL MODAL)
+        // =====================================================================
+
+        window.renderSectorsView = function() {
+            const container = document.getElementById('sectorCardsGrid');
+            if (!container) return;
+
+            let html = '';
+            sectorDefinitions.forEach(sec => {
+                const isPos = sec.change1D >= 0;
+                const sign = isPos ? '+' : '';
+                const chgColor = isPos ? '#10b981' : '#ef4444';
+                const badgeBg = isPos ? 'bg-success-subtle text-success border-success-subtle' : 'bg-danger-subtle text-danger border-danger-subtle';
+
+                // Top rank badge
+                let rankBadge = '';
+                if (sec.rank === 1) {
+                    rankBadge = `<span class="badge rounded-pill fw-bold" style="background-color: #fef3c7; color: #b45309; font-size: 0.68rem; border: 1px solid #fde68a;">🥇 TOP 1</span>`;
+                } else if (sec.rank === 2) {
+                    rankBadge = `<span class="badge rounded-pill fw-bold" style="background-color: #f1f5f9; color: #475569; font-size: 0.68rem; border: 1px solid #cbd5e1;">🥈 TOP 2</span>`;
+                } else if (sec.rank === 3) {
+                    rankBadge = `<span class="badge rounded-pill fw-bold" style="background-color: #fff7ed; color: #c2410c; font-size: 0.68rem; border: 1px solid #fed7aa;">🥉 TOP 3</span>`;
+                }
+
+                // Avatar logos stack
+                let logosHtml = '';
+                sec.logos.forEach(tk => {
+                    logosHtml += `
+                        <img src="https://assets.parqet.com/logos/symbol/${tk}" 
+                             alt="${tk}" 
+                             title="${tk}"
+                             onerror="this.onerror=null; this.src='https://financialmodelingprep.com/image-stock/${tk}.png';">
+                    `;
+                });
+
+                html += `
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="sector-card" onclick="openSectorDetailModal('${sec.id}')" title="คลิกเพื่อดูรายละเอียดหุ้นทั้งหมดในกลุ่ม ${sec.name}">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span style="font-size: 1.25rem;">${sec.icon}</span>
+                                    <span class="fw-bold fs-6" style="letter-spacing: -0.2px;">${sec.name}</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-1">
+                                    ${rankBadge}
+                                    <span class="badge rounded-pill border ${badgeBg} fw-bold" style="font-size: 0.72rem;">
+                                        ${sign}${sec.change1D.toFixed(2)}%
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center text-muted mb-3" style="font-size: 0.8rem;">
+                                <span>${sec.nameTh} (${sec.stockCount} หุ้น)</span>
+                                <span class="fw-bold" style="color: inherit;">Market Cap: ${sec.marketCap}</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <div class="sector-avatar-stack">
+                                    ${logosHtml}
+                                    <span class="badge rounded-pill bg-body-secondary text-body border ms-1 fw-bold" style="font-size: 0.68rem; padding: 3px 6px;">
+                                        +${sec.remainingCount}
+                                    </span>
+                                </div>
+                                <span class="text-primary fw-bold" style="font-size: 0.78rem;">
+                                    ดูหุ้นทั้งหมด →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        };
+
+        window.openSectorDetailModal = function(sectorId) {
+            const sec = sectorDefinitions.find(x => x.id === sectorId) || sectorDefinitions[0];
+            activeModalSectorId = sec.id;
+
+            const iconEl = document.getElementById('sectorModalIcon');
+            const titleEl = document.getElementById('sectorModalTitle');
+            const subEl = document.getElementById('sectorModalSub');
+            const statsRow = document.getElementById('sectorModalStatsRow');
+            const searchInput = document.getElementById('sectorStockSearch');
+
+            if (searchInput) searchInput.value = '';
+            if (iconEl) iconEl.innerText = sec.icon;
+            if (titleEl) titleEl.innerText = `${sec.name} (${sec.nameTh})`;
+            if (subEl) subEl.innerText = `${sec.stockCount} หุ้นในกลุ่ม • มูลค่ารวม ${sec.marketCap} • ผลตอบแทน 1 วัน: ${sec.change1D >= 0 ? '+' : ''}${sec.change1D.toFixed(2)}%`;
+
+            if (statsRow) {
+                const isPos = sec.change1D >= 0;
+                statsRow.innerHTML = `
+                    <div class="col-sm-4 col-12">
+                        <div class="p-2 rounded-3 bg-body-secondary border text-center">
+                            <small class="text-muted d-block" style="font-size: 0.72rem;">มูลค่ากลุ่ม (Market Cap)</small>
+                            <span class="fw-bold fs-6">${sec.marketCap}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-6">
+                        <div class="p-2 rounded-3 bg-body-secondary border text-center">
+                            <small class="text-muted d-block" style="font-size: 0.72rem;">การเปลี่ยนแปลง (1D)</small>
+                            <span class="fw-bold fs-6 ${isPos ? 'text-success' : 'text-danger'}">${isPos ? '+' : ''}${sec.change1D.toFixed(2)}%</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-6">
+                        <div class="p-2 rounded-3 bg-body-secondary border text-center">
+                            <small class="text-muted d-block" style="font-size: 0.72rem;">จำนวนหุ้นในกลุ่ม</small>
+                            <span class="fw-bold fs-6">${sec.stockCount} หุ้น</span>
+                        </div>
+                    </div>
+                `;
+            }
+
+            filterSectorModalStocks();
+
+            const modalEl = document.getElementById('sectorDetailModal');
+            if (modalEl) {
+                bootstrap.Modal.getOrCreateInstance(modalEl).show();
+            }
+        };
+
+        window.filterSectorModalStocks = function() {
+            const tbody = document.getElementById('sectorModalStocksTableBody');
+            const searchInput = document.getElementById('sectorStockSearch');
+            if (!tbody) return;
+
+            const sec = sectorDefinitions.find(x => x.id === activeModalSectorId) || sectorDefinitions[0];
+            const q = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+            // Find all stocks in top100 belonging to this sector, or constituents
+            let constituents = top100StocksData.filter(x => x.sector === sec.id);
+            if (constituents.length === 0) {
+                // Fallback for sectors with fewer top100 items: build from topTickers
+                constituents = (sec.topTickers || []).map((tk, idx) => ({
+                    rank: idx + 1,
+                    ticker: tk,
+                    name: stockNames[tk] || `${tk} Corporation`,
+                    price: (marketPrices[tk] || 100),
+                    change: 0.75,
+                    signal: 'BUY',
+                    seed: idx + 50
+                }));
+            }
+
+            if (q) {
+                constituents = constituents.filter(x => x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q));
+            }
+
+            if (constituents.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="text-center py-3 text-muted">ไม่พบหุ้นในกลุ่มที่ตรงกับการค้นหา</td></tr>`;
+                return;
+            }
+
+            let html = '';
+            constituents.forEach((item, idx) => {
+                let curPrice = item.price;
+                if (typeof marketPrices !== 'undefined' && marketPrices[item.ticker] && marketPrices[item.ticker] > 0) {
+                    curPrice = marketPrices[item.ticker];
+                }
+                const isPos = item.change >= 0;
+                const sign = isPos ? '+' : '';
+
+                html += `
+                    <tr>
+                        <td class="text-muted fw-bold px-3">${idx + 1}</td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border me-2" width="24" height="24" style="object-fit: contain;" onerror="this.style.display='none'">
+                                <div>
+                                    <div class="fw-bold" style="font-size: 0.85rem;">${item.ticker}</div>
+                                    <div class="text-muted text-truncate" style="font-size: 0.72rem; max-width: 180px;">${item.name}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-end fw-bold">$${curPrice.toFixed(2)}</td>
+                        <td class="text-end fw-bold ${isPos ? 'text-success' : 'text-danger'}">
+                            ${sign}${item.change.toFixed(2)}%
+                        </td>
+                        <td class="text-center">
+                            <span class="badge ${item.signal === 'BUY' ? 'bg-success-subtle text-success border border-success-subtle' : 'bg-warning-subtle text-warning-emphasis border border-warning-subtle'} fw-bold" style="font-size: 0.68rem;">
+                                ${item.signal || 'BUY'}
+                            </span>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-sm btn-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.72rem;" onclick="bootstrap.Modal.getOrCreateInstance(document.getElementById('sectorDetailModal')).hide(); openTechnicalForTicker('${item.ticker}');">
+                                📈 ดูกราฟ
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = html;
+        };
+
+        // =====================================================================
+        // CONTROLLER: MAIN 4-TAB NAVIGATION SYSTEM
+        // 1. Market Overview  2. พอร์ตการลงทุน  3. Sector  4. เทคนิค กราฟ
+        // =====================================================================
+
         window.onSwitchViewTab = function(mode) {
+            mode = (mode || 'MARKET').toUpperCase();
             localStorage.setItem('myMainViewMode', mode);
+
+            const btnMarket = document.getElementById('tabBtnMarket');
             const btnPort = document.getElementById('tabBtnPortfolio');
+            const btnSector = document.getElementById('tabBtnSector');
             const btnTech = document.getElementById('tabBtnTechnical');
-            if (mode === 'TECHNICAL') {
-                if (btnPort) { btnPort.classList.remove('active'); btnPort.classList.add('text-muted'); }
-                if (btnTech) { btnTech.classList.add('active'); btnTech.classList.remove('text-muted'); }
+
+            const paneMarket = document.getElementById('marketOverviewPane');
+            const panePort = document.getElementById('portfolioViewPane');
+            const paneSector = document.getElementById('sectorViewPane');
+            const paneTech = document.getElementById('technicalViewPane');
+
+            const items = [
+                { key: 'MARKET', btn: btnMarket, pane: paneMarket },
+                { key: 'PORTFOLIO', btn: btnPort, pane: panePort },
+                { key: 'SECTOR', btn: btnSector, pane: paneSector },
+                { key: 'TECHNICAL', btn: btnTech, pane: paneTech }
+            ];
+
+            items.forEach(item => {
+                if (item.btn) {
+                    if (item.key === mode) {
+                        item.btn.classList.add('active');
+                        item.btn.classList.remove('text-muted');
+                    } else {
+                        item.btn.classList.remove('active');
+                        item.btn.classList.add('text-muted');
+                    }
+                }
+                if (item.pane) {
+                    if (item.key === mode) {
+                        item.pane.classList.add('show', 'active');
+                    } else {
+                        item.pane.classList.remove('show', 'active');
+                    }
+                }
+            });
+
+            if (mode === 'MARKET') {
+                renderMarketOverview();
+            } else if (mode === 'SECTOR') {
+                renderSectorsView();
+            } else if (mode === 'TECHNICAL') {
                 setTimeout(() => {
                     initTechnicalHub();
                 }, 50);
                 setTimeout(() => {
                     drawCandlestickCanvas();
                 }, 200);
-            } else {
-                if (btnTech) { btnTech.classList.remove('active'); btnTech.classList.add('text-muted'); }
-                if (btnPort) { btnPort.classList.add('active'); btnPort.classList.remove('text-muted'); }
             }
         };
 
@@ -8467,14 +9618,34 @@
             autoCalculateDimeFees();
             initTechnicalHub();
 
-            if (localStorage.getItem('myMainViewMode') === 'TECHNICAL' || window.location.hash === '#technical') {
-                const triggerEl = document.getElementById('tabBtnTechnical');
-                if (triggerEl) {
-                    const tabInstance = bootstrap.Tab.getOrCreateInstance(triggerEl);
-                    tabInstance.show();
-                    onSwitchViewTab('TECHNICAL');
-                }
+            // Initialize Market Overview and Sectors modules
+            renderMarketOverview();
+            renderSectorsView();
+
+            // Determine active view mode
+            let targetMode = localStorage.getItem('myMainViewMode');
+            const hash = (window.location.hash || '').toLowerCase();
+            if (hash === '#market') targetMode = 'MARKET';
+            else if (hash === '#portfolio') targetMode = 'PORTFOLIO';
+            else if (hash === '#sector') targetMode = 'SECTOR';
+            else if (hash === '#technical') targetMode = 'TECHNICAL';
+
+            if (!targetMode) {
+                targetMode = (typeof transactions !== 'undefined' && transactions.length > 0) ? 'PORTFOLIO' : 'MARKET';
             }
+
+            const btnIdMap = {
+                'MARKET': 'tabBtnMarket',
+                'PORTFOLIO': 'tabBtnPortfolio',
+                'SECTOR': 'tabBtnSector',
+                'TECHNICAL': 'tabBtnTechnical'
+            };
+            const triggerEl = document.getElementById(btnIdMap[targetMode] || 'tabBtnMarket');
+            if (triggerEl) {
+                const tabInstance = bootstrap.Tab.getOrCreateInstance(triggerEl);
+                tabInstance.show();
+            }
+            onSwitchViewTab(targetMode);
 
             // ดึงราคาและเรทเงินแอปอัตโนมัติในเบื้องหลังเมื่อเปิดหน้าเว็บ
             setTimeout(() => {
