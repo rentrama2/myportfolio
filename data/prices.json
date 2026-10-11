@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-10-11T14:22:55Z",
-  "updated_at_thai": "11 ต.ค. 2569 21:22 น.",
+  "updated_at": "2026-10-11T19:05:19Z",
+  "updated_at_thai": "12 ต.ค. 2569 02:05 น.",
   "fx": {
     "USDTHB": 33.48
   },
   "indices": {
     "^DJI": {
       "price": 51654.95,
-      "prevClose": 51231.64,
-      "change": 423.31,
+      "prevClose": 51231.6,
+      "change": 423.35,
       "changePct": 0.83,
       "name": "Dow Jones"
     },
@@ -21,8 +21,8 @@
     },
     "^IXIC": {
       "price": 27366.17,
-      "prevClose": 27193.34,
-      "change": 172.83,
+      "prevClose": 27193.3,
+      "change": 172.87,
       "changePct": 0.64,
       "name": "Nasdaq"
     }
