@@ -2448,6 +2448,36 @@
         </div>
     </div>
 
+    <!-- Modal: Investment News Reader Modal (หน้าต่างอ่านเนื้อหาข่าว & บทวิเคราะห์ฉบับเต็ม) -->
+    <div class="modal fade" id="newsDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content shadow-lg border-0" style="border-radius: 20px;">
+                <div class="modal-header border-bottom pb-2 pt-3 px-4 d-flex justify-content-between align-items-center bg-body-tertiary">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="news-hub-icon-box shadow-sm" style="width: 36px; height: 36px; font-size: 1.1rem;">📰</span>
+                        <div>
+                            <div class="d-flex align-items-center gap-1.5 flex-wrap">
+                                <span id="newsModalSourceBadge"></span>
+                                <span class="badge bg-body-secondary text-secondary border rounded-pill px-2 py-0.5" id="newsModalCategoryBadge" style="font-size:0.68rem;"></span>
+                                <small class="text-muted" id="newsModalTime" style="font-size: 0.72rem;"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 py-3" id="newsModalBody">
+                    <!-- Populated dynamically by openNewsDetailModal(newsId) -->
+                </div>
+                <div class="modal-footer border-top pt-2 px-4 pb-3 d-flex justify-content-between align-items-center bg-body-tertiary">
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+                    <a href="#" target="_blank" id="newsModalExternalLinkBtn" class="btn btn-sm btn-primary rounded-pill px-3 py-1.5 fw-bold text-decoration-none shadow-sm">
+                        🌐 อ่านต้นฉบับภาษาอังกฤษที่สำนักข่าวเต็ม ›
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal: Sector Detail Modal (แสดงรายละเอียดและรายชื่อหุ้นในกลุ่มอุตสาหกรรม) -->
     <div class="modal fade" id="sectorDetailModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -2595,7 +2625,7 @@
                 </div>
 
                 <!-- Breaking News Ribbon / Marquee (เกาะติดข่าวด่วนสำคัญที่สุด) -->
-                <div class="market-breaking-news-bar mb-3 p-2 px-3 rounded-pill d-flex align-items-center justify-content-between gap-2 shadow-sm border" id="marketBreakingNewsBar">
+                <div class="market-breaking-news-bar mb-3 p-2 px-3 rounded-pill d-flex align-items-center justify-content-between gap-2 shadow-sm border" id="marketBreakingNewsBar" style="cursor: pointer;" onclick="openBreakingNewsDetail()" title="คลิกเพื่ออ่านเนื้อหาข่าวและบทวิเคราะห์ฉบับเต็ม">
                     <div class="d-flex align-items-center gap-2 overflow-hidden text-truncate">
                         <span class="badge bg-danger rounded-pill px-2.5 py-1 text-uppercase fw-bold" style="font-size:0.7rem; letter-spacing:0.5px;">
                             ⚡ BREAKING NEWS
@@ -2605,9 +2635,12 @@
                         </span>
                         <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill" id="breakingNewsSourceBadge" style="font-size:0.68rem;">Bloomberg</span>
                     </div>
-                    <a href="https://www.bloomberg.com/markets" target="_blank" id="breakingNewsSourceLink" class="btn btn-sm btn-link p-0 text-decoration-none fw-bold text-nowrap" style="font-size:0.78rem;">
-                        อ่านต้นฉบับ ›
-                    </a>
+                    <div class="d-flex align-items-center gap-2 flex-nowrap">
+                        <span class="badge bg-primary rounded-pill px-2.5 py-1 fw-bold text-nowrap" style="font-size:0.72rem;">อ่านเนื้อข่าว ›</span>
+                        <a href="https://www.bloomberg.com/markets" target="_blank" id="breakingNewsSourceLink" onclick="event.stopPropagation();" class="btn btn-sm btn-link p-0 text-decoration-none fw-bold text-nowrap text-muted" style="font-size:0.75rem;" title="เปิดเว็บต้นฉบับ">
+                            (ต้นฉบับ ↗)
+                        </a>
+                    </div>
                 </div>
 
                 <!-- INVESTMENT NEWS & INTELLIGENCE HUB (ศูนย์รวมข่าว & บทวิเคราะห์การลงทุนสำคัญ) -->
@@ -9586,11 +9619,18 @@
                 category: 'MACRO',
                 tickers: ['SPY', 'QQQ', 'TLT', 'DIA'],
                 sentiment: 'BULLISH',
+                impact: 'เชิงบวกต่อสินทรัพย์เสี่ยงและหุ้นเติบโต',
                 isHero: true,
                 points: [
                     'เงินเฟ้อสหรัฐฯ เข้าสู่ทิศทางชะลอตัวถาวร ผ่อนคลายแรงกดดันด้านอัตราดอกเบี้ยนโยบาย',
                     'บอนด์ยีลด์ 10 ปี ร่วงหลุด 4.0% หนุนกระแสเงินทุนไหลเข้าหุ้นเติบโตและเทคโนโลยี',
                     'นักวิเคราะห์ส่วนใหญ่มองเป็นปัจจัยสนับสนุนแนวโน้มผลประกอบการบริษัทจดทะเบียนใน Q4'
+                ],
+                fullArticle: [
+                    'กระทรวงแรงงานสหรัฐฯ เปิดเผยดัชนีราคาผู้บริโภค (CPI) และดัชนีราคาผู้ผลิต (PPI) ประจำเดือนล่าสุด ซึ่งแสดงให้เห็นว่าอัตราเงินเฟ้อทั่วไปชะลอตัวลงสู่ระดับ 2.4% เมื่อเทียบรายปี นับเป็นระดับต่ำสุดในรอบกว่า 3 ปี และเข้าใกล้กรอบเป้าหมายระยะยาวของธนาคารกลางสหรัฐฯ (FED) ที่ระดับ 2.0% อย่างมีนัยสำคัญ',
+                    'การชะลอตัวของเงินเฟ้อส่งผลให้อัตราผลตอบแทนพันธบัตรรัฐบาลสหรัฐฯ อายุ 10 ปี (US 10-Year Treasury Yield) ปรับตัวลงสู่ 3.98% ส่งผลให้ต้นทุนทางการเงินและการกู้ยืมของภาคธุรกิจลดลง สร้างแรงส่งเชิงบวกอย่างมากต่อหุ้นกลุ่มเติบโต (Growth Stocks) และกลุ่มเทคโนโลยีขนาดใหญ่',
+                    'ประธานเฟดและคณะกรรมการ FOMC หลายท่านได้ส่งสัญญาณผ่านถ้อยแถลงล่าสุดว่า ความเสี่ยงด้านเงินเฟ้อได้ลดลงอย่างเห็นได้ชัด ขณะที่ความเสี่ยงด้านตลาดแรงงานเริ่มมีความสำคัญมากขึ้น ทำให้นักวิเคราะห์ส่วนใหญ่คาดการณ์ว่าเฟดจะเดินหน้าปรับลดดอกเบี้ยต่อเนื่องอีก 25-50 bps ในการประชุมที่เหลือของปีนี้',
+                    'มุมมองด้านกลยุทธ์การลงทุน: ตลาดหุ้นสหรัฐฯ มีแนวโน้มได้แรงหนุนจากสภาพคล่องที่เพิ่มขึ้น (Liquidity Expansion) แนะนำให้นักลงทุนคงสัดส่วนการลงทุนในดัชนีหลักอย่าง S&P 500 (SPY) และ Nasdaq (QQQ) พร้อมจับตาหุ้นกลุ่มเติบโตที่มีกระแสเงินสดแข็งแกร่ง'
                 ]
             },
             {
@@ -9602,7 +9642,19 @@
                 time: '35 นาทีที่แล้ว',
                 category: 'TECH',
                 tickers: ['NVDA', 'TSM', 'AMD', 'MSFT', 'GOOGL', 'AMZN', 'META'],
-                sentiment: 'BULLISH'
+                sentiment: 'BULLISH',
+                impact: 'เชิงบวกอย่างมากต่อห่วงโซ่อุปทานชิป AI และกลุ่ม Cloud Hyperscalers',
+                points: [
+                    'ยอดสั่งซื้อชิป Blackwell B200 เต็มโควตาการผลิตล่วงหน้าไปจนถึงสิ้นปีหน้า',
+                    'ผู้ให้บริการ Cloud ยักษ์ใหญ่ (Microsoft, Meta, AWS, Google) ยังคงเพิ่มงบลงทุน Capex ด้าน AI ต่อเนื่อง',
+                    'TSMC เร่งขยายกำลังการผลิตแพ็กเกจจิ้งขั้นสูง CoWoS เพื่อรองรับคำสั่งซื้อชิป AI มหาศาล'
+                ],
+                fullArticle: [
+                    'Jensen Huang ประธานเจ้าหน้าที่บริหารของ Nvidia (NVDA) ได้เปิดเผยในการให้สัมภาษณ์ล่าสุดว่า ความต้องการชิปประมวลผล AI สถาปัตยกรรมรุ่นใหม่ "Blackwell" กำลังอยู่ในระดับที่สูงจนน่าทึ่ง (Insane Demand) โดยลูกค้าระดับองค์กรและผู้ให้บริการคลาวด์ขนาดใหญ่ทุกรายต่างต้องการได้รับชิปเป็นกลุ่มแรก',
+                    'รายงานระบุว่า บริษัทเทคโนโลยียักษ์ใหญ่ระดับ Hyperscaler เช่น Microsoft, Meta Platforms, Amazon Web Services และ Alphabet ต่างยืนยันการเพิ่มงบลงทุนด้านโครงสร้างพื้นฐาน (Capex) สำหรับ Data Center ต่อเนื่อง เพื่อรองรับการฝึกฝนและประมวลผลโมเดลปัญญาประดิษฐ์ (Generative AI)',
+                    'ด้านห่วงโซ่อุปทาน บริษัทผู้ผลิตชิปชั้นนำอย่าง TSMC (TSM) กำลังเร่งเพิ่มกำลังการผลิตเทคโนโลยีการประกอบชิปขั้นสูง (CoWoS) ขึ้นเป็นสองเท่า เพื่อปลดล็อกปัญหาคอขวดด้านการจัดส่ง ขณะที่คู่แข่งอย่าง AMD ก็ได้รับอานิสงส์จากดีมานด์โดยรวมที่ล้นตลาดเช่นเดียวกัน',
+                    'มุมมองด้านกลยุทธ์การลงทุน: หุ้นกลุ่ม AI Semiconductor ยังคงเป็นผู้นำตลาดที่แข็งแกร่งที่สุด กำไรสุทธิของ Nvidia มีแนวโน้มเติบโตก้าวกระโดดต่อเนื่อง หนุนราคาหุ้นทดสอบระดับสูงสุดใหม่ แนะนำให้นักลงทุนใช้กลยุทธ์ Buy on Dip เมื่อราคาพักตัว'
+                ]
             },
             {
                 id: 'news-3',
@@ -9613,7 +9665,19 @@
                 time: '1 ชั่วโมงที่แล้ว',
                 category: 'TECH',
                 tickers: ['AAPL'],
-                sentiment: 'BULLISH'
+                sentiment: 'BULLISH',
+                impact: 'เชิงบวกต่อยอดขายฮาร์ดแวร์และรายได้ภาคบริการของ Apple',
+                points: [
+                    'การเปิดตัวฟีเจอร์ AI แบบ On-Device คาดว่าจะจุดชนวนรอบการเปลี่ยนเครื่องใหม่ในกลุ่มผู้ใช้ 300 ล้านคน',
+                    'Morgan Stanley และ Bank of America ปรับเป้าหมายราคา AAPL ขึ้นสู่ระดับ $250-$260',
+                    'ระบบนิเวศน์ Services และ App Store คาดว่าจะได้รายได้ค่าคอมมิชชันเพิ่มจากแอปพลิเคชัน AI ภายนอก'
+                ],
+                fullArticle: [
+                    'Apple Inc. (AAPL) เตรียมเปิดตัวฟีเจอร์ Apple Intelligence ชุดแรกอย่างเป็นทางการให้กับผู้ใช้งาน iPhone 16 และ iPhone 15 Pro ทั่วโลก ซึ่งจะเพิ่มขีดความสามารถด้าน Siri อัจฉริยะ, การสร้างสรรค์เนื้อหาอัตโนมัติ, และการผสานการทำงานกับ ChatGPT โดยตรงบนระบบปฏิบัติการ',
+                    'นักวิเคราะห์จาก Morgan Stanley ระบุว่า ฟีเจอร์ AI ชุดนี้จะทำหน้าที่เป็นตัวเร่งสำคัญในการจุดชนวน "Upgrade Supercycle" รอบใหม่ เนื่องจากฐานผู้ใช้งาน iPhone ทั่วโลกที่มีเครื่องอายุมากกว่า 3 ปี มีจำนวนมากกว่า 300 ล้านเครื่อง ซึ่งจำเป็นต้องอัปเกรดเป็นเครื่องรุ่นใหม่เพื่อใช้งานฟังก์ชัน AI เหล่านี้ได้',
+                    'นอกจากนี้ รายได้จากภาคบริการ (Services) ของ Apple ยังคงทำสถิติสูงสุดใหม่อย่างต่อเนื่อง โดยมีสัดส่วนกำไรขั้นต้นที่สูงกว่า 70% ช่วยสร้างเสถียรภาพและกระแสเงินสดที่แข็งแกร่งให้กับบริษัทในทุกสภาวะตลาด',
+                    'มุมมองด้านกลยุทธ์การลงทุน: หุ้น Apple มีความมั่นคงสูงและยังมี Upside จากยอดขายเทศกาลปลายปี การถือครองในพอร์ตระยะยาวช่วยลดความผันผวนโดยรวมได้เป็นอย่างดี'
+                ]
             },
             {
                 id: 'news-4',
@@ -9624,7 +9688,19 @@
                 time: '2 ชั่วโมงที่แล้ว',
                 category: 'EARNINGS',
                 tickers: ['JPM', 'GS', 'C', 'BAC', 'WFC'],
-                sentiment: 'BULLISH'
+                sentiment: 'BULLISH',
+                impact: 'หนุนความเชื่อมั่นภาคการเงินและแนวโน้มการฟื้นตัวของเศรษฐกิจสหรัฐฯ',
+                points: [
+                    'JPMorgan Chase และ Goldman Sachs รายงานกำไรสุทธิโตเด่น ได้แรงหนุนจากดีล M&A และ IPO ที่ฟื้นตัว',
+                    'รายได้ดอกเบี้ยสุทธิ (Net Interest Income) ทรงตัวในระดับสูงแม้ทิศทางดอกเบี้ยจะเริ่มเข้าสู่วัฏจักรขาลง',
+                    'การตั้งสำรองหนี้เสีย (Credit Loss Provisions) ยังคงอยู่ในเกณฑ์ปกติ สะท้อนสุขภาพทางการเงินของผู้บริโภคที่แข็งแกร่ง'
+                ],
+                fullArticle: [
+                    'ธนาคารชั้นนำของสหรัฐฯ นำโดย JPMorgan Chase, Goldman Sachs, Citigroup และ Wells Fargo ได้รายงานผลประกอบการประจำไตรมาสที่ 3 ที่ออกมาดีกว่าที่ตลาดและนักวิเคราะห์ใน Wall Street คาดการณ์ไว้อย่างกว้างขวาง โดยมีรายได้จากสายงานวาณิชธนกิจ (Investment Banking) และการซื้อขายหลักทรัพย์ (Trading) เป็นตัวขับเคลื่อนหลัก',
+                    'Jamie Dimon ซีอีโอของ JPMorgan ระบุว่า ถึงแม้จะมีความท้าทายจากสถานการณ์ภูมิรัฐศาสตร์ แต่เศรษฐกิจสหรัฐฯ ยังคงแสดงความยืดหยุ่นที่น่าประทับใจ การใช้จ่ายของผู้บริโภคยังคงทรงตัวในเกณฑ์ดี และภาคธุรกิจเริ่มกลับมาดำเนินการระดมทุนและควบรวมกิจการเพิ่มขึ้นหลังจากชะลอตัวไปนาน',
+                    'นักลงทุนตอบรับเชิงบวกต่อผลงานของกลุ่มธนาคาร ส่งผลให้ดัชนีกลุ่มการเงิน (XLF) ปรับตัวขึ้นแตะระดับสูงสุดในรอบหลายปี สะท้อนว่าภาคการธนาคารสหรัฐฯ มีความพร้อมในการรับมือกับแนวโน้มดอกเบี้ยขาลงได้อย่างราบรื่น',
+                    'มุมมองด้านกลยุทธ์การลงทุน: หุ้นกลุ่มธนาคารยังคงมีอัตราผลตอบแทนเงินปันผล (Dividend Yield) ที่น่าดึงดูด และค่า P/E ที่ยังไม่แพงเมื่อเทียบกับกลุ่มเทคโนโลยี เหมาะสำหรับพอร์ตการลงทุนที่ต้องการกระจายความเสี่ยง'
+                ]
             },
             {
                 id: 'news-5',
@@ -9635,7 +9711,19 @@
                 time: '3 ชั่วโมงที่แล้ว',
                 category: 'COMMODITIES',
                 tickers: ['XOM', 'CVX', 'USO', 'SLB'],
-                sentiment: 'NEUTRAL'
+                sentiment: 'NEUTRAL',
+                impact: 'ราคาน้ำมันแกว่งตัวแบบจำกัดกรอบ ปัจจัยบวกและลบคานกัน',
+                points: [
+                    'ความเสี่ยงทางภูมิรัฐศาสตร์ในตะวันออกกลางเป็นปัจจัยหนุนราคาไม่ให้หลุดแนวรับ $70',
+                    'ความต้องการใช้น้ำมันจากจีนยังรอการพิสูจน์ประสิทธิผลของมาตรการกระตุ้นเศรษฐกิจและการคลังชุดใหม่',
+                    'กลุ่ม OPEC+ ยังคงยึดมั่นในนโยบายการควบคุมกำลังการผลิตเพื่อรักษาเสถียรภาพของตลาด'
+                ],
+                fullArticle: [
+                    'สัญญาน้ำมันดิบเวสต์เท็กซัส (WTI) ตลาดนิวยอร์กเคลื่อนไหวทรงตัวในกรอบ 74-76 ดอลลาร์ต่อบาร์เรล ขณะที่นักลงทุนประเมินความสมดุลระหว่างความเสี่ยงด้านอุปทานจากสถานการณ์ตึงเครียดในภูมิภาคตะวันออกกลาง กับความกังวลด้านอุปสงค์พลังงานในตลาดโลก',
+                    'ธนาคารกลางจีน (PBOC) และรัฐบาลจีนได้ประกาศชุดมาตรการกระตุ้นเศรษฐกิจ ทั้งการปรับลดอัตราดอกเบี้ยนโยบายและการอัดฉีดสภาพคล่องเข้าสู่ตลาดอสังหาริมทรัพย์ ซึ่งตลาดมองว่าอาจช่วยพยุงความต้องการใช้น้ำมันของจีนที่เป็นผู้นำเข้าน้ำมันรายใหญ่ที่สุดของโลกได้ในระยะถัดไป',
+                    'ขณะเดียวกัน กลุ่มประเทศผู้ส่งออกน้ำมันและพันธมิตร (OPEC+) ได้ย้ำเตือนว่าพร้อมที่จะชะลอแผนการเพิ่มกำลังการผลิตออกไป หากสภาวะตลาดมีความผันผวนหรืออุปสงค์ชะลอตัวลง',
+                    'มุมมองด้านกลยุทธ์การลงทุน: หุ้นกลุ่มพลังงานขนาดใหญ่อย่าง ExxonMobil (XOM) และ Chevron (CVX) ยังคงเป็นตัวเลือกที่ดีสำหรับการรับเงินปันผลที่สม่ำเสมอ แต่อาจมี Upside ด้านราคาที่จำกัดกว่าหุ้นกลุ่มเติบโต'
+                ]
             },
             {
                 id: 'news-6',
@@ -9646,7 +9734,19 @@
                 time: '3 ชั่วโมงที่แล้ว',
                 category: 'TECH',
                 tickers: ['TSLA'],
-                sentiment: 'NEUTRAL'
+                sentiment: 'NEUTRAL',
+                impact: 'ความผันผวนสูงในระยะสั้น แต่มีศักยภาพการเติบโตเชิงโครงสร้างระยะยาว',
+                points: [
+                    'Tesla เปิดตัวต้นแบบ Cybercab และ Robovan โดยตั้งเป้าต้นทุนการเดินทางต่อไมล์ต่ำกว่า 20 เซนต์',
+                    'เทคโนโลยี Full Self-Driving (FSD) เวอร์ชันใหม่แสดงความสามารถในการขับขี่ที่ราบรื่นและปลอดภัยยิ่งขึ้น',
+                    'นักวิเคราะห์รอความชัดเจนด้านการอนุมัติใบอนุญาตจากหน่วยงานกำกับดูแลด้านการจราจร'
+                ],
+                fullArticle: [
+                    'Tesla Inc. (TSLA) จัดงานแถลงวิสัยทัศน์ด้านปัญญาประดิษฐ์และยานยนต์ไร้คนขับ โดย Elon Musk ได้นำเสนอรถแท็กซี่ไร้คนขับต้นแบบ "Cybercab" ที่ไม่มีพวงมาลัยและแป้นเหยียบ พร้อมด้วย "Robovan" สำหรับการขนส่งผู้โดยสารกลุ่มใหญ่ และความคืบหน้าของหุ่นยนต์ฮิวแมนนอยด์ Optimus',
+                    'Elon Musk ระบุว่า สถาปัตยกรรม AI แบบ End-to-End Neural Networks ทำให้ซอฟต์แวร์ FSD มีพัฒนาการแบบก้าวกระโดด และคาดว่าจะสามารถเริ่มให้บริการรถยนต์ไร้คนขับเชิงพาณิชย์ในรัฐเท็กซัสและแคลิฟอร์เนียได้ในปีหน้า หากได้รับความเห็นชอบจากหน่วยงานกำกับดูแล',
+                    'อย่างไรก็ตาม นักวิเคราะห์ในวอลล์สตรีทบางส่วนยังคงมีมุมมองระมัดระวัง เนื่องจากไทม์ไลน์การผลิตเชิงพาณิชย์ยังต้องใช้เวลาอีก 1-2 ปี และการเติบโตของยอดส่งมอบรถยนต์ไฟฟ้าทั่วไปในระยะสั้นยังเผชิญการแข่งขันด้านราคาที่ดุเดือด',
+                    'มุมมองด้านกลยุทธ์การลงทุน: หุ้น TSLA เหมาะสำหรับนักลงทุนที่ยอมรับความผันผวนสูงได้และมีมุมมองระยะยาวต่อการปฏิวัติเทคโนโลยี AI และ Autonomous Driving แนะนำให้ทยอยสะสมตามแนวรับสำคัญ'
+                ]
             },
             {
                 id: 'news-7',
@@ -9657,7 +9757,19 @@
                 time: '4 ชั่วโมงที่แล้ว',
                 category: 'EARNINGS',
                 tickers: ['LLY', 'NVO'],
-                sentiment: 'BULLISH'
+                sentiment: 'BULLISH',
+                impact: 'เชิงบวกอย่างมากต่อกลุ่มชีวเภสัชกรรมและการเติบโตของผลกำไร LLY / NVO',
+                points: [
+                    'Eli Lilly ปรับเพิ่มคาดการณ์รายได้ทั้งปีขึ้นกว่า 3 พันล้านดอลลาร์ จากยอดขายถล่มทลายของ Mounjaro และ Zepbound',
+                    'ทั้งสองบริษัทยื่นขออนุมัติข้อบ่งใช้ใหม่ของยา GLP-1 เช่น การรักษาภาวะหยุดหายใจขณะหลับและโรคหัวใจ',
+                    'การลงทุนขยายโรงงานผลิตในสหรัฐฯ และยุโรปช่วยคลี่คลายภาวะสินค้าขาดตลาดได้เร็วกว่าคาด'
+                ],
+                fullArticle: [
+                    'Eli Lilly (LLY) และ Novo Nordisk (NVO) สองบริษัทยาชั้นนำของโลกได้ประกาศการลงทุนหลายพันล้านดอลลาร์เพื่อสร้างและขยายโรงงานผลิตยาฉีดรักษาโรคอ้วนและเบาหวานกลุ่ม GLP-1 Receptor Agonist เพื่อตอบสนองต่อกระแสความต้องการของผู้ป่วยทั่วโลกที่ยังคงเพิ่มขึ้นอย่างไม่หยุดยั้ง',
+                    'ข้อมูลการทดลองทางคลินิกล่าสุดแสดงให้เห็นว่า ยากลุ่มนี้ไม่เพียงแต่ช่วยลดน้ำหนักได้อย่างมีนัยสำคัญ แต่ยังมีประโยชน์อย่างมากต่อการลดความเสี่ยงของโรคหลอดเลือดหัวใจ, โรคไตเรื้อรัง, และภาวะหยุดหายใจขณะหลับ (Sleep Apnea) ซึ่งจะช่วยให้บริษัทสามารถขยายการเบิกจ่ายจากระบบประกันสุขภาพได้กว้างขวางยิ่งขึ้น',
+                    'นักวิเคราะห์ประเมินว่า มูลค่าตลาดยารักษาโรคอ้วนทั่วโลกอาจพุ่งสูงเกินกว่า 100,000 ล้านดอลลาร์ต่อปีภายในปี 2030 โดย Eli Lilly และ Novo Nordisk จะยังคงครองส่วนแบ่งตลาดส่วนใหญ่ไว้ได้อย่างเหนียวแน่น',
+                    'มุมมองด้านกลยุทธ์การลงทุน: Eli Lilly ยังคงเป็นหนึ่งในหุ้นเติบโตชั้นนำนอกกลุ่มเทคโนโลยีที่มีการเติบโตของกำไรที่ชัดเจนและแน่นอนที่สุด แนะนำถือครองเป็นหุ้นแกนนำ (Core Holding) ในพอร์ตการลงทุนระยะยาว'
+                ]
             },
             {
                 id: 'news-8',
@@ -9668,7 +9780,19 @@
                 time: '5 ชั่วโมงที่แล้ว',
                 category: 'MACRO',
                 tickers: ['SPY', 'QQQ', 'DXY', 'EEM'],
-                sentiment: 'NEUTRAL'
+                sentiment: 'NEUTRAL',
+                impact: 'ตลาดการเงินมีเสถียรภาพ แต่ต้องระวังปัจจัยเสี่ยงด้านภูมิรัฐศาสตร์และภาระหนี้',
+                points: [
+                    'IMF คาดการณ์การเติบโตของเศรษฐกิจโลกที่ 3.2% ในปีนี้ โดยเศรษฐกิจสหรัฐฯ มีแนวโน้มขยายตัวแข็งแกร่งที่สุดในกลุ่ม G7',
+                    'เตือนความเสี่ยงจากระดับหนี้สาธารณะทั่วโลกที่คาดว่าจะแตะ 100 ล้านล้านดอลลาร์ภายในสิ้นปีนี้',
+                    'เน้นย้ำให้ธนาคารกลางดำเนินนโยบายการเงินอย่างรอบคอบ เพื่อป้องกันไม่ให้เงินเฟ้อภาคบริการกลับมาเร่งตัว'
+                ],
+                fullArticle: [
+                    'กองทุนการเงินระหว่างประเทศ (IMF) ได้เผยแพร่รายงานแนวโน้มเศรษฐกิจโลก (World Economic Outlook) ประจำฤดูใบไม้ร่วง โดยยังคงคาดการณ์ว่าเศรษฐกิจโลกจะขยายตัว 3.2% ในปีนี้ และ 3.2% ในปีหน้า ซึ่งสะท้อนว่าเศรษฐกิจโลกกำลังประสบความสำเร็จในการรับมือกับภาวะเงินเฟ้อโดยไม่เกิดภาวะเศรษฐกิจถดถอยรุนแรง (Soft Landing)',
+                    'IMF ได้ปรับเพิ่มประมาณการการเติบโตของเศรษฐกิจสหรัฐฯ ขึ้นสู่ระดับ 2.8% โดยได้แรงหนุนจากการบริโภคภาคเอกชนและการลงทุนในภาคเทคโนโลยีที่ยังคงแข็งแกร่งอย่างต่อเนื่อง ตรงกันข้ามกับกลุ่มประเทศยูโรโซนและจีนที่ยังคงเผชิญกับการฟื้นตัวที่ค่อนข้างเปราะบาง',
+                    'อย่างไรก็ตาม IMF ได้ออกคำเตือนถึงความเสี่ยงระยะกลางจากยอดหนี้สาธารณะทั่วโลกที่พุ่งสูงขึ้นอย่างรวดเร็ว รวมถึงความตึงเครียดด้านภูมิรัฐศาสตร์และการแบ่งขั้วทางการค้า (Geoeconomic Fragmentation) ที่อาจส่งผลกระทบต่อห่วงโซ่อุปทานโลก',
+                    'มุมมองด้านกลยุทธ์การลงทุน: สินทรัพย์สหรัฐฯ ยังคงเป็นตลาดที่น่าดึงดูดใจที่สุดในแง่ของปัจจัยพื้นฐาน แนะนำกระจายการลงทุนในหุ้นคุณภาพสูง (Quality Stocks) ที่มีหนี้ต่ำและผลตอบแทนจากส่วนของผู้ถือหุ้น (ROE) สูง'
+                ]
             }
         ];
 
@@ -9698,6 +9822,120 @@
             }
             return `<span class="news-sentiment-neutral">⚪ เกาะติดสถานการณ์</span>`;
         }
+
+        window.openBreakingNewsDetail = function() {
+            const hero = marketNewsData.find(x => x.isHero) || marketNewsData[0];
+            if (hero) openNewsDetailModal(hero.id);
+        };
+
+        window.openNewsDetailModal = function(newsId) {
+            const item = marketNewsData.find(x => x.id === newsId) || marketNewsData[0];
+            if (!item) return;
+
+            const modalSourceBadge = document.getElementById('newsModalSourceBadge');
+            const modalCatBadge = document.getElementById('newsModalCategoryBadge');
+            const modalTime = document.getElementById('newsModalTime');
+            const modalExternalLink = document.getElementById('newsModalExternalLinkBtn');
+            const modalBody = document.getElementById('newsModalBody');
+
+            if (modalSourceBadge) modalSourceBadge.innerHTML = getNewsSourceBadgeHtml(item.source);
+            
+            const catMap = {
+                'ALL': '🌐 ข่าวทั่วไป',
+                'PORTFOLIO': '💼 หุ้นในพอร์ต',
+                'MACRO': '🏛️ เศรษฐกิจ & ดอกเบี้ย FED',
+                'TECH': '🤖 กลุ่มเทคฯ & AI',
+                'EARNINGS': '📊 ผลประกอบการ',
+                'COMMODITIES': '🛢️ สินค้าโภคภัณฑ์'
+            };
+            if (modalCatBadge) modalCatBadge.textContent = catMap[item.category] || item.category;
+            if (modalTime) modalTime.textContent = item.time;
+            
+            if (modalExternalLink) {
+                modalExternalLink.href = item.sourceUrl || '#';
+                modalExternalLink.innerHTML = `🌐 อ่านต้นฉบับภาษาอังกฤษที่ ${item.source} ↗`;
+            }
+
+            const myPortfolioTickers = (typeof getUserPortfolioTickers === 'function') ? getUserPortfolioTickers() : new Set();
+
+            // Build detailed ticker badges with chart button
+            let tickersDetailedHtml = '';
+            if (item.tickers && Array.isArray(item.tickers)) {
+                item.tickers.forEach(tk => {
+                    const isOwned = myPortfolioTickers.has(tk.toUpperCase());
+                    tickersDetailedHtml += `
+                        <div class="d-flex align-items-center justify-content-between p-2 px-3 rounded-pill ${isOwned ? 'bg-primary bg-opacity-10 border border-primary border-opacity-25' : 'bg-body-secondary border'} gap-2" style="font-size:0.8rem;">
+                            <div class="d-flex align-items-center gap-1.5">
+                                <span class="fw-bold">${isOwned ? '💼 ' : ''}#${tk}</span>
+                                ${isOwned ? '<span class="badge bg-primary text-white rounded-pill px-1.5 py-0.5" style="font-size:0.6rem;">ในพอร์ตของคุณ</span>' : ''}
+                            </div>
+                            <button class="btn btn-sm btn-outline-success py-0 px-2 rounded-pill fw-bold" style="font-size:0.7rem;" onclick="bootstrap.Modal.getInstance(document.getElementById('newsDetailModal')).hide(); openTechnicalForTicker('${tk}');">
+                                📈 ดูกราฟ
+                            </button>
+                        </div>
+                    `;
+                });
+            }
+
+            const paragraphs = item.fullArticle || [item.summary];
+            const bulletPoints = item.points || [item.summary];
+
+            if (modalBody) {
+                modalBody.innerHTML = `
+                    <div class="mb-2">
+                        <h4 class="fw-bold mb-2 text-body" style="line-height: 1.45; letter-spacing: -0.3px;">
+                            ${item.title}
+                        </h4>
+
+                        <div class="d-flex align-items-center gap-2 mb-3 flex-wrap">
+                            ${getNewsSentimentBadgeHtml(item.sentiment)}
+                            <span class="badge rounded-pill bg-body-secondary text-secondary border px-2.5 py-1" style="font-size: 0.72rem;">
+                                📊 ผลกระทบ: ${item.impact || 'เฝ้าระวังความผันผวน'}
+                            </span>
+                            <span class="badge rounded-pill bg-body-secondary text-secondary border px-2.5 py-1" style="font-size: 0.72rem;">
+                                ⏱️ อัปเดต: ${item.time}
+                            </span>
+                        </div>
+
+                        <!-- Key Takeaways Highlight Box -->
+                        <div class="p-3 rounded-4 mb-3" style="background: rgba(59, 130, 246, 0.06); border: 1px solid rgba(59, 130, 246, 0.2);">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span style="font-size: 1.15rem;">🎯</span>
+                                <span class="fw-bold" style="font-size: 0.88rem; color: #2563eb;">สรุปประเด็นสำคัญที่นักลงทุนต้องรู้ (Key Takeaways):</span>
+                            </div>
+                            <ul class="mb-0 ps-3 text-muted" style="font-size: 0.85rem; line-height: 1.6;">
+                                ${bulletPoints.map(pt => `<li class="mb-1 text-body">${pt}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <!-- Full Article Story / เนื้อข่าวและบทวิเคราะห์เจาะลึก -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span style="font-size: 1.1rem;">📄</span>
+                                <span class="fw-bold" style="font-size: 0.88rem;">เนื้อหาข่าว & บทวิเคราะห์สถานการณ์ (Full Story):</span>
+                            </div>
+                            <div class="news-article-paragraphs text-body-secondary" style="font-size: 0.92rem; line-height: 1.8;">
+                                ${paragraphs.map(para => `<p class="mb-2.5 text-body" style="text-indent: 1.5rem;">${para}</p>`).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Affected Stocks Card -->
+                        <div class="p-3 rounded-4 bg-body-tertiary border">
+                            <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-1">
+                                <span class="fw-bold text-muted small">📈 หุ้นที่ได้รับผลกระทบ & ตรวจสอบพอร์ตของคุณ:</span>
+                                <small class="text-muted" style="font-size:0.75rem;">แตะปุ่มเพื่อเปิดกราฟเทคนิค Candlestick ⚡</small>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                ${tickersDetailedHtml || '<span class="text-muted small">ไม่มีหุ้นรายตัวที่เกี่ยวข้องโดยตรง</span>'}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('newsDetailModal'));
+            modal.show();
+        };
 
         window.renderMarketBreakingNews = function() {
             const titleEl = document.getElementById('breakingNewsTitle');
@@ -9729,7 +9967,7 @@
                 item.tickers.forEach(tk => {
                     const isOwned = myPortfolioTickers.has(tk.toUpperCase());
                     tickersHtml += `
-                        <span class="badge ${isOwned ? 'bg-primary' : 'bg-body-secondary text-secondary'} border rounded-pill px-2 py-1" style="font-size:0.72rem; cursor:pointer;" onclick="if(typeof openTechnicalForTicker==='function') openTechnicalForTicker('${tk}')" title="คลิกเพื่อดูกราฟเทคนิค ${tk}">
+                        <span class="badge ${isOwned ? 'bg-primary' : 'bg-body-secondary text-secondary'} border rounded-pill px-2 py-1" style="font-size:0.72rem; cursor:pointer;" onclick="event.stopPropagation(); if(typeof openTechnicalForTicker==='function') openTechnicalForTicker('${tk}')" title="คลิกเพื่อดูกราฟเทคนิค ${tk}">
                             ${isOwned ? '💼 ' : ''}#${tk}
                         </span>
                     `;
@@ -9749,7 +9987,7 @@
             }
 
             col.innerHTML = `
-                <div class="news-hero-container shadow-sm">
+                <div class="news-hero-container shadow-sm" style="cursor: pointer;" onclick="openNewsDetailModal('${item.id}')" title="คลิกเพื่ออ่านเนื้อหาข่าวและบทวิเคราะห์ฉบับเต็ม">
                     <div>
                         <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
                             <div class="d-flex align-items-center gap-2">
@@ -9764,10 +10002,8 @@
                             </div>
                         </div>
 
-                        <h5 class="fw-bold mb-2 mt-1" style="letter-spacing:-0.3px; line-height:1.45;">
-                            <a href="${item.sourceUrl}" target="_blank" class="text-decoration-none" style="color:inherit;">
-                                ${item.title}
-                            </a>
+                        <h5 class="fw-bold mb-2 mt-1" style="letter-spacing:-0.3px; line-height:1.45; color: inherit;">
+                            ${item.title}
                         </h5>
 
                         ${pointsHtml}
@@ -9777,9 +10013,14 @@
                         <div class="d-flex align-items-center gap-1.5 flex-wrap">
                             ${tickersHtml}
                         </div>
-                        <a href="${item.sourceUrl}" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold text-decoration-none" style="font-size:0.78rem;">
-                            อ่านข่าวต้นฉบับเต็ม (${item.source}) ›
-                        </a>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn btn-sm btn-primary rounded-pill px-3 py-1 fw-bold shadow-sm" style="font-size:0.78rem;" onclick="event.stopPropagation(); openNewsDetailModal('${item.id}')">
+                                📖 อ่านเนื้อข่าวฉบับเต็ม ›
+                            </button>
+                            <a href="${item.sourceUrl}" target="_blank" onclick="event.stopPropagation();" class="btn btn-sm btn-outline-secondary rounded-pill px-2.5 py-1 fw-bold text-decoration-none" style="font-size:0.76rem;" title="เปิดเว็บต้นฉบับสำนักข่าว">
+                                ต้นฉบับ (${item.source}) ↗
+                            </a>
+                        </div>
                     </div>
                 </div>
             `;
@@ -9814,7 +10055,7 @@
                         const isOwned = myPortfolioTickers.has(tk.toUpperCase());
                         if (isOwned) hasPortfolioStock = true;
                         tickersHtml += `
-                            <span class="badge ${isOwned ? 'bg-primary' : 'bg-body-secondary text-secondary'} border rounded-pill px-2 py-0.5" style="font-size:0.68rem; cursor:pointer;" onclick="if(typeof openTechnicalForTicker==='function') openTechnicalForTicker('${tk}')" title="คลิกเพื่อดูกราฟเทคนิค ${tk}">
+                            <span class="badge ${isOwned ? 'bg-primary' : 'bg-body-secondary text-secondary'} border rounded-pill px-2 py-0.5" style="font-size:0.68rem; cursor:pointer;" onclick="event.stopPropagation(); if(typeof openTechnicalForTicker==='function') openTechnicalForTicker('${tk}')" title="คลิกเพื่อดูกราฟเทคนิค ${tk}">
                                 #${tk}
                             </span>
                         `;
@@ -9822,7 +10063,7 @@
                 }
 
                 html += `
-                    <div class="news-feed-item-card">
+                    <div class="news-feed-item-card" style="cursor: pointer;" onclick="openNewsDetailModal('${item.id}')" title="คลิกเพื่ออ่านเนื้อหาข่าวและบทวิเคราะห์ฉบับเต็ม">
                         <div class="d-flex justify-content-between align-items-center mb-1.5">
                             <div class="d-flex align-items-center gap-1.5">
                                 ${getNewsSourceBadgeHtml(item.source)}
@@ -9834,10 +10075,8 @@
                             </div>
                         </div>
 
-                        <div class="fw-bold mb-1" style="font-size:0.88rem; line-height:1.4;">
-                            <a href="${item.sourceUrl}" target="_blank" class="text-decoration-none" style="color:inherit;">
-                                ${item.title}
-                            </a>
+                        <div class="fw-bold mb-1" style="font-size:0.88rem; line-height:1.4; color:inherit;">
+                            ${item.title}
                         </div>
 
                         <p class="text-muted mb-2 text-truncate-2" style="font-size:0.78rem; line-height:1.45; margin-bottom: 6px;">
@@ -9848,9 +10087,14 @@
                             <div class="d-flex align-items-center gap-1 flex-wrap">
                                 ${tickersHtml}
                             </div>
-                            <a href="${item.sourceUrl}" target="_blank" class="text-decoration-none fw-bold" style="font-size:0.74rem; color: #2563eb;">
-                                แหล่งข่าว (${item.source}) ›
-                            </a>
+                            <div class="d-flex align-items-center gap-1.5">
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill px-2.5 py-1 fw-bold" style="font-size:0.72rem;">
+                                    อ่านเนื้อข่าว ›
+                                </span>
+                                <a href="${item.sourceUrl}" target="_blank" onclick="event.stopPropagation();" class="text-decoration-none fw-bold text-muted small" style="font-size:0.72rem;" title="เปิดเว็บต้นฉบับภายนอก">
+                                    (${item.source} ↗)
+                                </a>
+                            </div>
                         </div>
                     </div>
                 `;
