@@ -1199,6 +1199,13 @@
         .market-rank-table tbody tr:hover {
             background-color: rgba(59, 130, 246, 0.06);
         }
+        #mainViewNav::-webkit-scrollbar {
+            display: none;
+        }
+        #mainViewNav {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
         /* =====================================================================
            EARNINGS CALENDAR MODULE STYLES (ปฏิทินประกาศงบการเงิน)
@@ -2237,32 +2244,11 @@
     <div class="container-fluid" style="max-width: 98%; margin: 0 auto;">
         
         <!-- Header & Quick Actions -->
+        <!-- TOP ROW: Title & Global Quick Actions -->
         <div class="d-flex justify-content-between align-items-center mb-2 mt-1 flex-wrap gap-2">
             <div class="d-flex align-items-center gap-2">
-                <h2 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.5px; font-size: 1.5rem;">My Portfolio</h2>
+                <h2 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.5px; font-size: 1.45rem;">My Portfolio</h2>
                 <span id="activePortBadgeHeader" class="badge rounded-pill bg-primary px-3 py-1 shadow-sm" style="font-size: 0.8rem;">พอร์ตทั้งหมด</span>
-                
-                <!-- Main View Tabs (Market Over view, พอร์ตการลงทุน, Sector, เทคนิค กราฟ) -->
-                <div class="nav nav-pills ms-2 p-1 rounded-pill border shadow-sm bg-body-tertiary" id="mainViewNav" role="tablist">
-                    <button class="nav-link rounded-pill fw-bold py-1 px-3 d-flex align-items-center gap-1 active" id="tabBtnMarket" data-bs-toggle="pill" data-bs-target="#marketOverviewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('MARKET')">
-                        🌐 Market Overview
-                    </button>
-                    <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1" id="tabBtnPortfolio" data-bs-toggle="pill" data-bs-target="#portfolioViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('PORTFOLIO')">
-                        💼 พอร์ตการลงทุน
-                    </button>
-                    <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1" id="tabBtnSector" data-bs-toggle="pill" data-bs-target="#sectorViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('SECTOR')">
-                        🏢 Sector
-                        <span class="badge bg-primary rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">12</span>
-                    </button>
-                    <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1" id="tabBtnTechnical" data-bs-toggle="pill" data-bs-target="#technicalViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('TECHNICAL')">
-                        📈 เทคนิค กราฟ
-                        <span class="badge bg-danger rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">NEW</span>
-                    </button>
-                    <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1" id="tabBtnCalendar" data-bs-toggle="pill" data-bs-target="#earningsCalendarPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('CALENDAR')">
-                        📅 ปฏิทินประกาศงบ
-                        <span class="badge bg-success rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">NEW</span>
-                    </button>
-                </div>
             </div>
             <div class="d-flex align-items-center gap-1 gap-md-2 flex-wrap justify-content-end">
                 <button id="btnPrivacyToggle" class="btn btn-sm btn-outline-secondary rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="togglePrivacyMode()" title="ซ่อน/แสดงตัวเลขเงิน เหมาะสำหรับแคปหน้าจอหรือเปิดในที่สาธารณะ (ชี้เมาส์เพื่อแอบดูได้)" style="font-size: 0.78rem;">
@@ -2294,6 +2280,35 @@
                 <button class="btn btn-sm btn-outline-primary rounded-pill px-2 px-md-3 py-1 fw-bold" onclick="openPortfolioModal()" style="font-size: 0.78rem;">
                     + เพิ่มพอร์ต
                 </button>
+            </div>
+        </div>
+
+        <!-- NAVIGATION BAR: 5 Main Views (Orderly, Spacious, Non-colliding) -->
+        <div class="d-flex justify-content-between align-items-center mb-3 pt-1 pb-1 flex-wrap gap-2">
+            <div class="nav nav-pills p-1 rounded-pill border shadow-sm bg-body-tertiary flex-nowrap overflow-x-auto" id="mainViewNav" role="tablist" style="max-width: 100%;">
+                <button class="nav-link rounded-pill fw-bold py-1 px-3 d-flex align-items-center gap-1 active text-nowrap" id="tabBtnMarket" data-bs-toggle="pill" data-bs-target="#marketOverviewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('MARKET')">
+                    🌐 Market Overview
+                </button>
+                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnPortfolio" data-bs-toggle="pill" data-bs-target="#portfolioViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('PORTFOLIO')">
+                    💼 พอร์ตการลงทุน
+                </button>
+                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnSector" data-bs-toggle="pill" data-bs-target="#sectorViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('SECTOR')">
+                    🏢 Sector
+                    <span class="badge bg-primary rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">12</span>
+                </button>
+                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnTechnical" data-bs-toggle="pill" data-bs-target="#technicalViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('TECHNICAL')">
+                    📈 เทคนิค กราฟ
+                    <span class="badge bg-danger rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">NEW</span>
+                </button>
+                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnCalendar" data-bs-toggle="pill" data-bs-target="#earningsCalendarPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('CALENDAR')">
+                    📅 ปฏิทินประกาศงบ
+                    <span class="badge bg-success rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">NEW</span>
+                </button>
+            </div>
+            <div class="d-none d-lg-flex align-items-center gap-2 text-muted" style="font-size: 0.78rem;">
+                <span class="badge rounded-pill bg-body-secondary text-secondary border px-2.5 py-1">
+                    5 มุมมองการลงทุนครบวงจร
+                </span>
             </div>
         </div>
 
