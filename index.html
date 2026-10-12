@@ -2538,10 +2538,13 @@
             </div>
         </div>
 
-        <!-- NAVIGATION BAR: 5 Main Views (Orderly, Spacious, Non-colliding) -->
+        <!-- NAVIGATION BAR: 6 Main Views (Orderly, Spacious, Non-colliding) -->
         <div class="d-flex justify-content-between align-items-center mb-3 pt-1 pb-1 flex-wrap gap-2">
             <div class="nav nav-pills p-1 rounded-pill border shadow-sm bg-body-tertiary flex-nowrap overflow-x-auto" id="mainViewNav" role="tablist" style="max-width: 100%;">
-                <button class="nav-link rounded-pill fw-bold py-1 px-3 d-flex align-items-center gap-1 active text-nowrap" id="tabBtnMarket" data-bs-toggle="pill" data-bs-target="#marketOverviewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('MARKET')">
+                <button class="nav-link rounded-pill fw-bold py-1 px-3 d-flex align-items-center gap-1 active text-nowrap" id="tabBtnHomeNews" data-bs-toggle="pill" data-bs-target="#homeNewsPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('HOME_NEWS')">
+                    📰 ข่าว & ภาพรวม
+                </button>
+                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnMarket" data-bs-toggle="pill" data-bs-target="#marketOverviewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('MARKET')">
                     🌐 Market Overview
                 </button>
                 <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnPortfolio" data-bs-toggle="pill" data-bs-target="#portfolioViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('PORTFOLIO')">
@@ -2562,34 +2565,31 @@
             </div>
             <div class="d-none d-lg-flex align-items-center gap-2 text-muted" style="font-size: 0.78rem;">
                 <span class="badge rounded-pill bg-body-secondary text-secondary border px-2.5 py-1">
-                    5 มุมมองการลงทุนครบวงจร
+                    6 มุมมองการลงทุนครบวงจร
                 </span>
             </div>
         </div>
 
         <!-- Main Tab Content Wrapper -->
         <div class="tab-content" id="mainTabContent">
-            <!-- PANE 1: Market Overview (ภาพรวมตลาดและหุ้นติดเทรนด์ 100 หุ้น) -->
-            <div class="tab-pane fade show active" id="marketOverviewPane" role="tabpanel">
-                <!-- Section Subtitle & Category Filter Bar -->
+            <!-- PANE 1: ข่าว & ภาพรวม (Home / Investment News & Intelligence Landing Page) -->
+            <div class="tab-pane fade show active" id="homeNewsPane" role="tabpanel">
+                <!-- Section Subtitle & Quick Actions Bar -->
                 <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
                     <div>
                         <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
-                            🌐 ภาพรวมตลาด & หุ้นติดเทรนด์ (Market Overview)
+                            📰 ข่าวสำคัญ & เกาะติดสถานการณ์ตลาด (Market News & Intelligence)
                         </h4>
                         <small class="text-muted">
-                            ดัชนีสำคัญ 6 รายการ, โมเมนตัมแบบเรียลไทม์, Top 10 Snapshot, และตารางจัดอันดับ 100 หุ้นสัญญาณแรง
+                            ศูนย์รวมข่าวสารและการเงินระดับโลก พร้อมบทวิเคราะห์ภาษาไทย และระบบแท็กหุ้นที่ส่งผลต่อพอร์ตลงทุน
                         </small>
                     </div>
                     <div class="d-flex align-items-center gap-2 flex-wrap">
-                        <div class="market-category-pill-box shadow-sm border">
-                            <button class="market-cat-btn active" id="marketCatBtnALL" onclick="setMarketOverviewCategory('ALL')">🌐 ทั้งหมด (100 อันดับ)</button>
-                            <button class="market-cat-btn" id="marketCatBtnPremium" onclick="setMarketOverviewCategory('PREMIUM')">💎 Premium</button>
-                            <button class="market-cat-btn" id="marketCatBtnUS" onclick="setMarketOverviewCategory('US')">🇺🇸 US Stocks</button>
-                            <button class="market-cat-btn" id="marketCatBtnETF" onclick="setMarketOverviewCategory('ETF')">📊 ETF</button>
-                        </div>
-                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="refreshMarketOverviewData(true)" title="รีเฟรชข้อมูลภาพรวมตลาด">
-                            🔄 รีเฟรช
+                        <button class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('MARKET')" title="ดูภาพรวมตลาด ดัชนีหลัก และตารางจัดอันดับ 100 หุ้น">
+                            🌐 ไปที่ Market Overview ›
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="refreshMarketNewsData(true)" title="รีเฟรชข้อมูลข่าวสาร">
+                            🔄 รีเฟรชข่าว
                         </button>
                     </div>
                 </div>
@@ -2610,11 +2610,6 @@
                     </a>
                 </div>
 
-                <!-- 6 Macro Indices Cards (S&P 500, NDX100, VIX, Gold, WTI Crude Oil, DXY) -->
-                <div class="row g-2 mb-3" id="macroIndicesRow">
-                    <!-- Populated by renderMacroIndices() -->
-                </div>
-
                 <!-- INVESTMENT NEWS & INTELLIGENCE HUB (ศูนย์รวมข่าว & บทวิเคราะห์การลงทุนสำคัญ) -->
                 <div class="card border-0 shadow-sm rounded-4 mb-4 news-hub-card overflow-hidden" id="marketNewsHubSection">
                     <div class="p-3 p-md-4 border-bottom bg-body-tertiary">
@@ -2623,7 +2618,7 @@
                                 <span class="news-hub-icon-box shadow-sm">📰</span>
                                 <div>
                                     <h5 class="fw-bold m-0" style="letter-spacing: -0.3px;">
-                                        ข่าวสำคัญ & เกาะติดสถานการณ์ตลาด (Market News & Intelligence)
+                                        คัดกรองข่าวสาร & สรุปสาระสำคัญ (Curated Market Intelligence)
                                     </h5>
                                     <small class="text-muted">
                                         คัดสรรจากสำนักข่าวการเงินระดับโลก: Bloomberg, Reuters, CNBC, WSJ, Yahoo Finance พร้อมสรุปบทวิเคราะห์ภาษาไทย
@@ -2678,6 +2673,60 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Quick Jump Bar to Other Views -->
+                <div class="d-flex justify-content-between align-items-center p-3 rounded-4 bg-body-tertiary border mb-4 flex-wrap gap-2 shadow-sm">
+                    <div class="d-flex align-items-center gap-2">
+                        <span style="font-size: 1.2rem;">💡</span>
+                        <span class="fw-bold" style="font-size: 0.85rem;">เครื่องมือวิเคราะห์เพิ่มเติม:</span>
+                        <span class="text-muted" style="font-size: 0.8rem;">สำรวจข้อมูลเชิงลึกผ่านมุมมองอื่นๆ ได้ทันที</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('MARKET')" style="font-size: 0.78rem;">
+                            🌐 100 หุ้นสัญญาณแรง
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('SECTOR')" style="font-size: 0.78rem;">
+                            🏢 12 Sector Cards
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('TECHNICAL')" style="font-size: 0.78rem;">
+                            📈 กราฟเทคนิค Candlestick
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('CALENDAR')" style="font-size: 0.78rem;">
+                            📅 ปฏิทินประกาศงบ
+                        </button>
+                    </div>
+                </div>
+            </div><!-- end homeNewsPane -->
+
+            <!-- PANE 2: Market Overview (ภาพรวมตลาดและหุ้นติดเทรนด์ 100 หุ้น) -->
+            <div class="tab-pane fade" id="marketOverviewPane" role="tabpanel">
+                <!-- Section Subtitle & Category Filter Bar -->
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
+                    <div>
+                        <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
+                            🌐 ภาพรวมตลาด & หุ้นติดเทรนด์ (Market Overview)
+                        </h4>
+                        <small class="text-muted">
+                            ดัชนีสำคัญ 6 รายการ, โมเมนตัมแบบเรียลไทม์, Top 10 Snapshot, และตารางจัดอันดับ 100 หุ้นสัญญาณแรง
+                        </small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <div class="market-category-pill-box shadow-sm border">
+                            <button class="market-cat-btn active" id="marketCatBtnALL" onclick="setMarketOverviewCategory('ALL')">🌐 ทั้งหมด (100 อันดับ)</button>
+                            <button class="market-cat-btn" id="marketCatBtnPremium" onclick="setMarketOverviewCategory('PREMIUM')">💎 Premium</button>
+                            <button class="market-cat-btn" id="marketCatBtnUS" onclick="setMarketOverviewCategory('US')">🇺🇸 US Stocks</button>
+                            <button class="market-cat-btn" id="marketCatBtnETF" onclick="setMarketOverviewCategory('ETF')">📊 ETF</button>
+                        </div>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="refreshMarketOverviewData(true)" title="รีเฟรชข้อมูลภาพรวมตลาด">
+                            🔄 รีเฟรช
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6 Macro Indices Cards (S&P 500, NDX100, VIX, Gold, WTI Crude Oil, DXY) -->
+                <div class="row g-2 mb-3" id="macroIndicesRow">
+                    <!-- Populated by renderMacroIndices() -->
                 </div>
 
                 <!-- Top 10 Snapshot (Horizontal Scroller with high-confidence signals) -->
@@ -9875,20 +9924,16 @@
         };
 
         window.refreshMarketOverviewData = function(showToast) {
-            renderMarketBreakingNews();
             renderMacroIndices();
-            renderMarketNewsHub();
             renderMarketTop10Scroller();
             renderMarketTop100Table();
             if (showToast && typeof showNotification === 'function') {
-                showNotification("รีเฟรชข้อมูล Market Overview & ข่าวสารเรียบร้อยแล้ว 🔄");
+                showNotification("รีเฟรชข้อมูลภาพรวมตลาดเรียบร้อยแล้ว 🔄");
             }
         };
 
         window.renderMarketOverview = function() {
-            renderMarketBreakingNews();
             renderMacroIndices();
-            renderMarketNewsHub();
             renderMarketTop10Scroller();
             renderMarketTop100Table();
         };
@@ -10869,20 +10914,22 @@
         };
 
         // =====================================================================
-        // CONTROLLER: MAIN 5-TAB NAVIGATION SYSTEM
-        // 1. Market Overview  2. พอร์ตการลงทุน  3. Sector  4. เทคนิค กราฟ  5. ปฏิทินประกาศงบ
+        // CONTROLLER: MAIN 6-TAB NAVIGATION SYSTEM
+        // 1. ข่าว & ภาพรวม (Home)  2. Market Overview  3. พอร์ตการลงทุน  4. Sector  5. เทคนิค กราฟ  6. ปฏิทินประกาศงบ
         // =====================================================================
 
         window.onSwitchViewTab = function(mode) {
-            mode = (mode || 'MARKET').toUpperCase();
+            mode = (mode || 'HOME_NEWS').toUpperCase();
             localStorage.setItem('myMainViewMode', mode);
 
+            const btnHomeNews = document.getElementById('tabBtnHomeNews');
             const btnMarket = document.getElementById('tabBtnMarket');
             const btnPort = document.getElementById('tabBtnPortfolio');
             const btnSector = document.getElementById('tabBtnSector');
             const btnTech = document.getElementById('tabBtnTechnical');
             const btnCalendar = document.getElementById('tabBtnCalendar');
 
+            const paneHomeNews = document.getElementById('homeNewsPane');
             const paneMarket = document.getElementById('marketOverviewPane');
             const panePort = document.getElementById('portfolioViewPane');
             const paneSector = document.getElementById('sectorViewPane');
@@ -10890,6 +10937,7 @@
             const paneCalendar = document.getElementById('earningsCalendarPane');
 
             const items = [
+                { key: 'HOME_NEWS', btn: btnHomeNews, pane: paneHomeNews },
                 { key: 'MARKET', btn: btnMarket, pane: paneMarket },
                 { key: 'PORTFOLIO', btn: btnPort, pane: panePort },
                 { key: 'SECTOR', btn: btnSector, pane: paneSector },
@@ -10916,7 +10964,10 @@
                 }
             });
 
-            if (mode === 'MARKET') {
+            if (mode === 'HOME_NEWS') {
+                renderMarketBreakingNews();
+                renderMarketNewsHub();
+            } else if (mode === 'MARKET') {
                 renderMarketOverview();
             } else if (mode === 'SECTOR') {
                 renderSectorsView();
@@ -12128,7 +12179,9 @@
             autoCalculateDimeFees();
             initTechnicalHub();
 
-            // Initialize Market Overview, Sectors, and Earnings Calendar modules
+            // Initialize Home News, Market Overview, Sectors, and Earnings Calendar modules
+            renderMarketBreakingNews();
+            renderMarketNewsHub();
             renderMarketOverview();
             renderSectorsView();
             initEarningsCalendar();
@@ -12136,24 +12189,26 @@
             // Determine active view mode
             let targetMode = localStorage.getItem('myMainViewMode');
             const hash = (window.location.hash || '').toLowerCase();
-            if (hash === '#market') targetMode = 'MARKET';
+            if (hash === '#home' || hash === '#news') targetMode = 'HOME_NEWS';
+            else if (hash === '#market') targetMode = 'MARKET';
             else if (hash === '#portfolio') targetMode = 'PORTFOLIO';
             else if (hash === '#sector') targetMode = 'SECTOR';
             else if (hash === '#technical') targetMode = 'TECHNICAL';
             else if (hash === '#calendar') targetMode = 'CALENDAR';
 
             if (!targetMode) {
-                targetMode = (typeof transactions !== 'undefined' && transactions.length > 0) ? 'PORTFOLIO' : 'MARKET';
+                targetMode = 'HOME_NEWS';
             }
 
             const btnIdMap = {
+                'HOME_NEWS': 'tabBtnHomeNews',
                 'MARKET': 'tabBtnMarket',
                 'PORTFOLIO': 'tabBtnPortfolio',
                 'SECTOR': 'tabBtnSector',
                 'TECHNICAL': 'tabBtnTechnical',
                 'CALENDAR': 'tabBtnCalendar'
             };
-            const triggerEl = document.getElementById(btnIdMap[targetMode] || 'tabBtnMarket');
+            const triggerEl = document.getElementById(btnIdMap[targetMode] || 'tabBtnHomeNews');
             if (triggerEl) {
                 const tabInstance = bootstrap.Tab.getOrCreateInstance(triggerEl);
                 tabInstance.show();
