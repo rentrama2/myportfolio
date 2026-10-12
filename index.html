@@ -1199,6 +1199,337 @@
         .market-rank-table tbody tr:hover {
             background-color: rgba(59, 130, 246, 0.06);
         }
+
+        /* =====================================================================
+           EARNINGS CALENDAR MODULE STYLES (ปฏิทินประกาศงบการเงิน)
+           ===================================================================== */
+        .earnings-header-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: #ecfdf5;
+            color: #059669;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        [data-bs-theme="dark"] .earnings-header-icon,
+        body.dark-mode .earnings-header-icon {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .earnings-search-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 9999px;
+            padding: 4px 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+        [data-bs-theme="dark"] .earnings-search-box,
+        body.dark-mode .earnings-search-box {
+            background: #1e293b;
+            border-color: #334155;
+        }
+        .earnings-search-box:focus-within {
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+        }
+        .earnings-search-input {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 0.85rem;
+            width: 220px;
+            color: inherit;
+        }
+        .earnings-view-switcher {
+            background: rgba(148, 163, 184, 0.15);
+            padding: 4px;
+            border-radius: 9999px;
+            display: inline-flex;
+            gap: 4px;
+        }
+        .earnings-view-btn {
+            border-radius: 9999px;
+            padding: 6px 16px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            border: none;
+            background: transparent;
+            color: #64748b;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .earnings-view-btn.active {
+            background: #ffffff;
+            color: #0f172a;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        [data-bs-theme="dark"] .earnings-view-btn.active,
+        body.dark-mode .earnings-view-btn.active {
+            background: #1e293b;
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+        .earnings-calendar-card {
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            background: #ffffff;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+        [data-bs-theme="dark"] .earnings-calendar-card,
+        body.dark-mode .earnings-calendar-card {
+            background: #1e293b;
+            border-color: #334155;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.25);
+        }
+        .earnings-calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            width: 100%;
+        }
+        .earnings-day-header {
+            text-align: center;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #64748b;
+            padding: 12px 6px;
+            border-bottom: 1px solid #e2e8f0;
+            background: rgba(248, 250, 252, 0.6);
+        }
+        [data-bs-theme="dark"] .earnings-day-header,
+        body.dark-mode .earnings-day-header {
+            border-bottom-color: #334155;
+            background: rgba(15, 23, 42, 0.4);
+            color: #94a3b8;
+        }
+        .earnings-day-cell {
+            min-height: 106px;
+            padding: 8px 6px;
+            border-right: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+            position: relative;
+            transition: all 0.15s ease;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            background: transparent;
+        }
+        [data-bs-theme="dark"] .earnings-day-cell,
+        body.dark-mode .earnings-day-cell {
+            border-right-color: rgba(255, 255, 255, 0.05);
+            border-bottom-color: rgba(255, 255, 255, 0.05);
+        }
+        .earnings-day-cell:nth-child(7n) {
+            border-right: none;
+        }
+        .earnings-day-cell:hover {
+            background-color: rgba(16, 185, 129, 0.04);
+        }
+        [data-bs-theme="dark"] .earnings-day-cell:hover,
+        body.dark-mode .earnings-day-cell:hover {
+            background-color: rgba(16, 185, 129, 0.08);
+        }
+        .earnings-day-cell.is-other-month {
+            opacity: 0.35;
+            background-color: rgba(248, 250, 252, 0.3);
+        }
+        [data-bs-theme="dark"] .earnings-day-cell.is-other-month,
+        body.dark-mode .earnings-day-cell.is-other-month {
+            background-color: rgba(15, 23, 42, 0.2);
+        }
+        .earnings-day-cell.is-selected {
+            border: 2px solid #10b981 !important;
+            background-color: rgba(16, 185, 129, 0.07) !important;
+            border-radius: 10px;
+            z-index: 2;
+        }
+        .earnings-day-num {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .earnings-today-circle {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #10b981;
+            color: #ffffff;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            box-shadow: 0 2px 6px rgba(16, 185, 129, 0.4);
+        }
+        .earnings-stock-pill {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin: 2px 1.5px;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            flex-shrink: 0;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+        [data-bs-theme="dark"] .earnings-stock-pill,
+        body.dark-mode .earnings-stock-pill {
+            background: #0f172a;
+            border-color: rgba(255,255,255,0.18);
+        }
+        .earnings-stock-pill:hover {
+            transform: scale(1.28);
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+        .earnings-more-badge {
+            font-size: 0.65rem;
+            font-weight: 700;
+            background: #f1f5f9;
+            color: #475569;
+            border-radius: 999px;
+            padding: 1px 5px;
+            margin: 2px 1.5px;
+            border: 1px solid #e2e8f0;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        [data-bs-theme="dark"] .earnings-more-badge,
+        body.dark-mode .earnings-more-badge {
+            background: #334155;
+            color: #e2e8f0;
+            border-color: #475569;
+        }
+        .earnings-more-badge:hover {
+            background: #10b981;
+            color: #ffffff;
+            border-color: #10b981;
+        }
+        .earnings-sidebar-card {
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            background: #ffffff;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+        [data-bs-theme="dark"] .earnings-sidebar-card,
+        body.dark-mode .earnings-sidebar-card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+        .earnings-item-card {
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            padding: 13px 14px;
+            margin-bottom: 10px;
+            transition: all 0.2s ease;
+            background: #ffffff;
+        }
+        [data-bs-theme="dark"] .earnings-item-card,
+        body.dark-mode .earnings-item-card {
+            background: #182234;
+            border-color: #2e3e54;
+        }
+        .earnings-item-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+        .earnings-item-card.is-neg-react {
+            background: linear-gradient(180deg, rgba(239, 68, 68, 0.05) 0%, rgba(255, 255, 255, 0.7) 100%);
+            border-color: rgba(239, 68, 68, 0.25);
+        }
+        [data-bs-theme="dark"] .earnings-item-card.is-neg-react,
+        body.dark-mode .earnings-item-card.is-neg-react {
+            background: linear-gradient(180deg, rgba(239, 68, 68, 0.1) 0%, rgba(24, 34, 52, 0.8) 100%);
+            border-color: rgba(239, 68, 68, 0.35);
+        }
+        .earnings-item-card.is-pos-react {
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, rgba(255, 255, 255, 0.7) 100%);
+            border-color: rgba(16, 185, 129, 0.25);
+        }
+        [data-bs-theme="dark"] .earnings-item-card.is-pos-react,
+        body.dark-mode .earnings-item-card.is-pos-react {
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.1) 0%, rgba(24, 34, 52, 0.8) 100%);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .earnings-react-pill-neg {
+            background: #fee2e2;
+            color: #b91c1c;
+            font-size: 0.74rem;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        [data-bs-theme="dark"] .earnings-react-pill-neg,
+        body.dark-mode .earnings-react-pill-neg {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+        .earnings-react-pill-pos {
+            background: #dcfce7;
+            color: #15803d;
+            font-size: 0.74rem;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        [data-bs-theme="dark"] .earnings-react-pill-pos,
+        body.dark-mode .earnings-react-pill-pos {
+            background: rgba(16, 185, 129, 0.2);
+            color: #4ade80;
+        }
+        .earnings-metric-beat {
+            background: rgba(16, 185, 129, 0.12);
+            color: #059669;
+            font-weight: 700;
+            font-size: 0.72rem;
+            padding: 2px 7px;
+            border-radius: 999px;
+        }
+        [data-bs-theme="dark"] .earnings-metric-beat,
+        body.dark-mode .earnings-metric-beat {
+            background: rgba(16, 185, 129, 0.2);
+            color: #4ade80;
+        }
+        .earnings-metric-miss {
+            background: rgba(239, 68, 68, 0.12);
+            color: #dc2626;
+            font-weight: 700;
+            font-size: 0.72rem;
+            padding: 2px 7px;
+            border-radius: 999px;
+        }
+        [data-bs-theme="dark"] .earnings-metric-miss,
+        body.dark-mode .earnings-metric-miss {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
     </style>
 </head>
 <body class="p-2 p-md-3">
@@ -1926,6 +2257,10 @@
                     <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1" id="tabBtnTechnical" data-bs-toggle="pill" data-bs-target="#technicalViewPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('TECHNICAL')">
                         📈 เทคนิค กราฟ
                         <span class="badge bg-danger rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">NEW</span>
+                    </button>
+                    <button class="nav-link rounded-pill fw-bold text-muted py-1 px-3 d-flex align-items-center gap-1" id="tabBtnCalendar" data-bs-toggle="pill" data-bs-target="#earningsCalendarPane" type="button" role="tab" style="font-size: 0.82rem;" onclick="onSwitchViewTab('CALENDAR')">
+                        📅 ปฏิทินประกาศงบ
+                        <span class="badge bg-success rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">NEW</span>
                     </button>
                 </div>
             </div>
@@ -2869,6 +3204,209 @@
 
                 </div>
             </div><!-- end technicalViewPane -->
+
+            <!-- PANE 5: ปฏิทินประกาศงบการเงิน (Earnings Calendar Hub) -->
+            <div class="tab-pane fade" id="earningsCalendarPane" role="tabpanel">
+                <!-- Section Header & Controls -->
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="earnings-header-icon shadow-sm">
+                            <span>📅</span>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
+                                ปฏิทินประกาศงบการเงิน
+                            </h4>
+                            <small class="text-muted">
+                                ติดตามวันประกาศผลประกอบการ, ผลลัพธ์ REV & EPS (Actual vs Est.), และปฏิกิริยาราคาหุ้น
+                            </small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <!-- Search Box -->
+                        <div class="earnings-search-box shadow-sm">
+                            <span style="font-size: 0.85rem; color: #94a3b8;">🔍</span>
+                            <input type="text" id="earningsSearchInput" class="earnings-search-input" placeholder="ค้นหาหุ้นเพื่อไปยังวันประกาศงบ..." oninput="handleEarningsSearch(this.value)">
+                            <button id="earningsSearchClearBtn" class="btn btn-sm btn-link text-muted p-0 border-0" style="display:none; font-size: 0.8rem; text-decoration: none;" onclick="clearEarningsSearch()">✕</button>
+                        </div>
+
+                        <!-- View Mode Switcher: Calendar vs List -->
+                        <div class="earnings-view-switcher shadow-sm border">
+                            <button class="earnings-view-btn active" id="earningsViewBtnCalendar" onclick="switchEarningsViewMode('CALENDAR')">
+                                📅 ปฏิทิน
+                            </button>
+                            <button class="earnings-view-btn" id="earningsViewBtnList" onclick="switchEarningsViewMode('LIST')">
+                                📋 รายการ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. CALENDAR VIEW MODE -->
+                <div id="earningsCalendarViewContainer">
+                    <div class="row g-3">
+                        <!-- Calendar Main Grid (Left) -->
+                        <div class="col-xl-8 col-lg-7 col-12">
+                            <div class="earnings-calendar-card p-3 p-md-4">
+                                <!-- Month Navigation Header -->
+                                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="goEarningsToToday()" style="font-size: 0.8rem;">
+                                            วันนี้
+                                        </button>
+                                        <div class="btn-group shadow-sm border rounded-pill overflow-hidden">
+                                            <button class="btn btn-sm btn-light py-1 px-2 border-0 fw-bold" onclick="changeEarningsMonth(-1)" title="เดือนก่อนหน้า">
+                                                ‹
+                                            </button>
+                                            <button class="btn btn-sm btn-light py-1 px-2 border-0 fw-bold" onclick="changeEarningsMonth(1)" title="เดือนถัดไป">
+                                                ›
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <h5 class="fw-bold m-0" id="earningsMonthTitle" style="letter-spacing: -0.3px;">
+                                            ตุลาคม 2569
+                                        </h5>
+                                    </div>
+                                    <div>
+                                        <span class="badge rounded-pill bg-body-secondary text-secondary border px-3 py-1.5 fw-bold" id="earningsDateRangeBadge" style="font-size: 0.76rem;">
+                                            2026-10-01 - 2026-10-31
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- 7 Days Header -->
+                                <div class="earnings-calendar-grid">
+                                    <div class="earnings-day-header text-danger">อา.</div>
+                                    <div class="earnings-day-header">จ.</div>
+                                    <div class="earnings-day-header">อ.</div>
+                                    <div class="earnings-day-header">พ.</div>
+                                    <div class="earnings-day-header">พฤ.</div>
+                                    <div class="earnings-day-header">ศ.</div>
+                                    <div class="earnings-day-header text-primary">ส.</div>
+                                </div>
+
+                                <!-- Dynamic Calendar Days Grid -->
+                                <div class="earnings-calendar-grid" id="earningsDaysGrid">
+                                    <!-- Rendered dynamically by renderEarningsCalendar() -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings Sidebar (Right) -->
+                        <div class="col-xl-4 col-lg-5 col-12">
+                            <div class="earnings-sidebar-card p-3 p-md-4 h-100 d-flex flex-column">
+                                <!-- Sidebar Top Tabs / Filter -->
+                                <div class="d-flex justify-content-between align-items-center mb-3 gap-2">
+                                    <div class="earnings-view-switcher shadow-sm border w-100">
+                                        <button class="earnings-view-btn active w-50" id="earningsSideTabRecent" onclick="setEarningsSidebarMode('RECENT')">
+                                            📢 ประกาศงบล่าสุด
+                                        </button>
+                                        <div class="dropdown w-50">
+                                            <button class="earnings-view-btn w-100 dropdown-toggle" id="earningsSideTabFilterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                🔍 ตัวกรอง
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.85rem; min-width: 200px;">
+                                                <li><a class="dropdown-item py-2 fw-bold" href="javascript:void(0)" onclick="setEarningsFilter('ALL')">🌐 ทั้งหมด</a></li>
+                                                <li><a class="dropdown-item py-2 text-primary fw-bold" href="javascript:void(0)" onclick="setEarningsFilter('PORTFOLIO')">💼 เฉพาะหุ้นในพอร์ตของฉัน</a></li>
+                                                <li><hr class="dropdown-divider my-1"></li>
+                                                <li><a class="dropdown-item py-2 text-success fw-bold" href="javascript:void(0)" onclick="setEarningsFilter('BEAT')">🚀 Beat คาดการณ์ (REV & EPS)</a></li>
+                                                <li><a class="dropdown-item py-2 text-danger fw-bold" href="javascript:void(0)" onclick="setEarningsFilter('MISS')">⚠️ Miss คาดการณ์</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Filter Active Tag (if filtered) -->
+                                <div id="earningsActiveFilterTag" class="mb-2" style="display:none;"></div>
+
+                                <!-- Subtitle / Count -->
+                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                    <h6 class="fw-bold m-0" id="earningsSidebarHeaderTitle" style="font-size: 0.88rem; color: inherit;">
+                                        ประกาศงบล่าสุด
+                                    </h6>
+                                    <span class="badge rounded-pill bg-body-secondary text-secondary border px-2.5 py-1" id="earningsSidebarCountBadge" style="font-size: 0.74rem;">
+                                        0 ตัว
+                                    </span>
+                                </div>
+
+                                <!-- Scrollable Cards List -->
+                                <div id="earningsCardsList" class="flex-grow-1" style="max-height: 680px; overflow-y: auto; padding-right: 2px;">
+                                    <!-- Rendered dynamically by renderEarningsSidebar() -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. LIST VIEW MODE -->
+                <div id="earningsListViewContainer" style="display: none;">
+                    <div class="card border-0 shadow-sm" style="border-radius: 20px; overflow: hidden;">
+                        <div class="card-body p-3 p-md-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                                <div>
+                                    <h5 class="fw-bold m-0" style="color: inherit;">
+                                        📋 รายการประกาศงบการเงินทั้งหมด (List View)
+                                    </h5>
+                                    <small class="text-muted">ตารางแสดงรายละเอียดผลประกอบการ เรียงตามวันที่</small>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <select id="earningsListSortSelect" class="form-select form-select-sm rounded-pill px-3" style="font-size: 0.82rem; width: 180px;" onchange="renderEarningsList()">
+                                        <option value="date_desc">📅 วันที่ล่าสุดก่อน</option>
+                                        <option value="date_asc">📅 วันที่เก่าไปใหม่</option>
+                                        <option value="price_desc">📈 ปฏิกิริยาราคาสูงสุด</option>
+                                        <option value="rev_desc">💰 รายได้เซอร์ไพรส์สูงสุด</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0" id="earningsListTable" style="font-size: 0.85rem;">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>วันที่</th>
+                                            <th>เวลา</th>
+                                            <th>หุ้น / บริษัท</th>
+                                            <th class="text-end">REV จริง vs คาด</th>
+                                            <th class="text-center">% Beat REV</th>
+                                            <th class="text-end">EPS จริง vs คาด</th>
+                                            <th class="text-center">% Beat EPS</th>
+                                            <th class="text-center">ปฏิกิริยาราคา</th>
+                                            <th class="text-center">กราฟเทคนิค</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="earningsListTableBody">
+                                        <!-- Rendered dynamically by renderEarningsList() -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end earningsCalendarPane -->
+
+            <!-- Modal: Day Detail Modal (for +N more stocks) -->
+            <div class="modal fade" id="earningsDayDetailModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
+                        <div class="modal-header border-bottom px-4 py-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <span style="font-size: 1.3rem;">📅</span>
+                                <div>
+                                    <h5 class="fw-bold m-0" id="earningsDayModalTitle">ประกาศงบประจำวัน</h5>
+                                    <small class="text-muted" id="earningsDayModalSubtitle">รายชื่อบริษัททั้งหมดที่ประกาศงบในวันนี้</small>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-4" style="max-height: 520px; overflow-y: auto;">
+                            <div class="row g-2" id="earningsDayModalGrid">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div><!-- end mainTabContent -->
     </div>
 
@@ -8845,8 +9383,787 @@
         };
 
         // =====================================================================
-        // CONTROLLER: MAIN 4-TAB NAVIGATION SYSTEM
-        // 1. Market Overview  2. พอร์ตการลงทุน  3. Sector  4. เทคนิค กราฟ
+        // MODULE: EARNINGS CALENDAR & RESULTS (ปฏิทินประกาศงบการเงิน)
+        // =====================================================================
+
+        const earningsCalendarData = [
+            // 1 ต.ค.
+            { date: '2026-10-01', ticker: 'V', name: 'Visa Inc.', time: 'AMC', sector: 'fin', revAct: 8.90, revEst: 8.80, revSurprise: 1.14, epsAct: 2.45, epsEst: 2.40, epsSurprise: 2.08, priceChange: 1.5, status: 'ANNOUNCED' },
+            { date: '2026-10-01', ticker: 'LMT', name: 'Lockheed Martin', time: 'BMO', sector: 'ind', revAct: 17.20, revEst: 17.00, revSurprise: 1.18, epsAct: 6.85, epsEst: 6.70, epsSurprise: 2.24, priceChange: 1.8, status: 'ANNOUNCED' },
+            { date: '2026-10-01', ticker: 'NKE', name: 'Nike, Inc.', time: 'AMC', sector: 'cyclical', revAct: 11.59, revEst: 11.65, revSurprise: -0.51, epsAct: 0.70, epsEst: 0.52, epsSurprise: 34.62, priceChange: -6.8, status: 'ANNOUNCED' },
+
+            // 6 ต.ค.
+            { date: '2026-10-06', ticker: 'STZ', name: 'Constellation Brands', time: 'BMO', sector: 'defensive', revAct: 2.88, revEst: 2.50, revSurprise: 3.50, epsAct: 3.09, epsEst: 2.95, epsSurprise: 4.75, priceChange: 3.3, status: 'ANNOUNCED' },
+            { date: '2026-10-06', ticker: 'SGH', name: 'SMART Global Holdings', time: 'AMC', sector: 'tech', revAct: 0.32, revEst: 0.31, revSurprise: 3.23, epsAct: 0.38, epsEst: 0.35, epsSurprise: 8.57, priceChange: 4.2, status: 'ANNOUNCED' },
+
+            // 7 ต.ค.
+            { date: '2026-10-07', ticker: 'APLD', name: 'Applied Digital Corp.', time: 'AMC', sector: 'tech', revAct: 0.342, revEst: 0.118, revSurprise: 194.0, epsAct: -0.01, epsEst: -0.03, epsSurprise: 66.6, priceChange: 96.6, status: 'ANNOUNCED' },
+
+            // 8 ต.ค.
+            { date: '2026-10-08', ticker: 'PEP', name: 'PepsiCo, Inc.', time: 'BMO', sector: 'defensive', revAct: 25.30, revEst: 25.00, revSurprise: 1.30, epsAct: 2.34, epsEst: 2.29, epsSurprise: 2.18, priceChange: 2.2, status: 'ANNOUNCED' },
+
+            // 9 ต.ค.
+            { date: '2026-10-09', ticker: 'DAL', name: 'Delta Air Lines, Inc.', time: 'BMO', sector: 'ind', revAct: 20.28, revEst: 17.75, revSurprise: 14.40, epsAct: 1.72, epsEst: 1.77, epsSurprise: -2.82, priceChange: -2.8, status: 'ANNOUNCED' },
+
+            // 13 ต.ค.
+            { date: '2026-10-13', ticker: 'C', name: 'Citigroup Inc.', time: 'BMO', sector: 'fin', revAct: 20.32, revEst: 19.80, revSurprise: 2.63, epsAct: 1.51, epsEst: 1.31, epsSurprise: 15.27, priceChange: 1.2, status: 'UPCOMING' },
+            { date: '2026-10-13', ticker: 'DPZ', name: 'Domino\'s Pizza', time: 'BMO', sector: 'cyclical', revAct: 1.08, revEst: 1.10, revSurprise: -1.82, epsAct: 4.19, epsEst: 3.65, epsSurprise: 14.79, priceChange: -1.1, status: 'UPCOMING' },
+            { date: '2026-10-13', ticker: 'GS', name: 'Goldman Sachs', time: 'BMO', sector: 'fin', revAct: 12.70, revEst: 11.80, revSurprise: 7.63, epsAct: 8.40, epsEst: 6.89, epsSurprise: 21.92, priceChange: 3.2, status: 'UPCOMING' },
+            { date: '2026-10-13', ticker: 'BAC', name: 'Bank of America', time: 'BMO', sector: 'fin', revAct: 25.50, revEst: 25.20, revSurprise: 1.19, epsAct: 0.81, epsEst: 0.77, epsSurprise: 5.19, priceChange: 1.6, status: 'UPCOMING' },
+            { date: '2026-10-13', ticker: 'WFC', name: 'Wells Fargo & Co.', time: 'BMO', sector: 'fin', revAct: 20.37, revEst: 20.42, revSurprise: -0.24, epsAct: 1.42, epsEst: 1.28, epsSurprise: 10.94, priceChange: 5.6, status: 'UPCOMING' },
+            { date: '2026-10-13', ticker: 'UNH', name: 'UnitedHealth Group', time: 'BMO', sector: 'health', revAct: 100.8, revEst: 99.20, revSurprise: 1.61, epsAct: 7.15, epsEst: 7.00, epsSurprise: 2.14, priceChange: -8.1, status: 'UPCOMING' },
+
+            // 14 ต.ค.
+            { date: '2026-10-14', ticker: 'ASML', name: 'ASML Holding N.V.', time: 'BMO', sector: 'tech', revAct: 7.50, revEst: 7.10, revSurprise: 5.63, epsAct: 5.28, epsEst: 4.88, epsSurprise: 8.20, priceChange: -16.3, status: 'UPCOMING' },
+            { date: '2026-10-14', ticker: 'BK', name: 'BNY Mellon', time: 'BMO', sector: 'fin', revAct: 4.65, revEst: 4.55, revSurprise: 2.20, epsAct: 1.50, epsEst: 1.41, epsSurprise: 6.38, priceChange: 2.1, status: 'UPCOMING' },
+            { date: '2026-10-14', ticker: 'BLK', name: 'BlackRock, Inc.', time: 'BMO', sector: 'fin', revAct: 5.20, revEst: 5.00, revSurprise: 4.00, epsAct: 11.46, epsEst: 10.38, epsSurprise: 10.40, priceChange: 3.6, status: 'UPCOMING' },
+            { date: '2026-10-14', ticker: 'MS', name: 'Morgan Stanley', time: 'BMO', sector: 'fin', revAct: 15.38, revEst: 14.30, revSurprise: 7.55, epsAct: 1.88, epsEst: 1.58, epsSurprise: 18.99, priceChange: 6.5, status: 'UPCOMING' },
+            { date: '2026-10-14', ticker: 'PYPL', name: 'PayPal Holdings', time: 'AMC', sector: 'tech', revAct: 7.85, revEst: 7.80, revSurprise: 0.64, epsAct: 1.20, epsEst: 1.07, epsSurprise: 12.15, priceChange: 2.4, status: 'UPCOMING' },
+
+            // 15 ต.ค.
+            { date: '2026-10-15', ticker: 'TSM', name: 'Taiwan Semiconductor', time: 'BMO', sector: 'tech', revAct: 23.50, revEst: 22.80, revSurprise: 3.07, epsAct: 1.94, epsEst: 1.79, epsSurprise: 8.38, priceChange: 9.8, status: 'UPCOMING' },
+            { date: '2026-10-15', ticker: 'USB', name: 'U.S. Bancorp', time: 'BMO', sector: 'fin', revAct: 6.90, revEst: 6.85, revSurprise: 0.73, epsAct: 1.03, epsEst: 0.99, epsSurprise: 4.04, priceChange: 1.1, status: 'UPCOMING' },
+            { date: '2026-10-15', ticker: 'JNJ', name: 'Johnson & Johnson', time: 'BMO', sector: 'health', revAct: 22.50, revEst: 22.10, revSurprise: 1.81, epsAct: 2.42, epsEst: 2.21, epsSurprise: 9.50, priceChange: 1.5, status: 'UPCOMING' },
+            { date: '2026-10-15', ticker: 'ABT', name: 'Abbott Laboratories', time: 'BMO', sector: 'health', revAct: 10.64, revEst: 10.55, revSurprise: 0.85, epsAct: 1.21, epsEst: 1.20, epsSurprise: 0.83, priceChange: 1.4, status: 'UPCOMING' },
+            { date: '2026-10-15', ticker: 'ELV', name: 'Elevance Health', time: 'BMO', sector: 'health', revAct: 44.70, revEst: 44.20, revSurprise: 1.13, epsAct: 8.34, epsEst: 8.20, epsSurprise: 1.71, priceChange: -4.5, status: 'UPCOMING' },
+            { date: '2026-10-15', ticker: 'SCHW', name: 'Charles Schwab Corp.', time: 'BMO', sector: 'fin', revAct: 4.84, revEst: 4.79, revSurprise: 1.04, epsAct: 0.77, epsEst: 0.75, epsSurprise: 2.67, priceChange: 2.8, status: 'UPCOMING' },
+            { date: '2026-10-15', ticker: 'PGR', name: 'Progressive Corp.', time: 'BMO', sector: 'fin', revAct: 19.46, revEst: 19.10, revSurprise: 1.88, epsAct: 3.97, epsEst: 3.50, epsSurprise: 13.43, priceChange: 1.9, status: 'UPCOMING' },
+
+            // 16 ต.ค.
+            { date: '2026-10-16', ticker: 'NFLX', name: 'Netflix, Inc.', time: 'AMC', sector: 'comm', revAct: 9.83, revEst: 9.77, revSurprise: 0.61, epsAct: 5.40, epsEst: 5.12, epsSurprise: 5.47, priceChange: 11.1, status: 'UPCOMING' },
+            { date: '2026-10-16', ticker: 'MCO', name: 'Moody\'s Corp.', time: 'BMO', sector: 'fin', revAct: 1.81, revEst: 1.75, revSurprise: 3.43, epsAct: 3.21, epsEst: 2.88, epsSurprise: 11.46, priceChange: 3.5, status: 'UPCOMING' },
+            { date: '2026-10-16', ticker: 'CAT', name: 'Caterpillar Inc.', time: 'BMO', sector: 'ind', revAct: 16.11, revEst: 16.05, revSurprise: 0.37, epsAct: 5.17, epsEst: 5.34, epsSurprise: -3.18, priceChange: -2.3, status: 'UPCOMING' },
+            { date: '2026-10-16', ticker: 'TFC', name: 'Truist Financial Corp.', time: 'BMO', sector: 'fin', revAct: 5.14, revEst: 5.09, revSurprise: 0.98, epsAct: 0.97, epsEst: 0.91, epsSurprise: 6.59, priceChange: 1.8, status: 'UPCOMING' },
+            { date: '2026-10-16', ticker: 'ISRG', name: 'Intuitive Surgical', time: 'AMC', sector: 'health', revAct: 2.04, revEst: 2.00, revSurprise: 2.00, epsAct: 1.84, epsEst: 1.63, epsSurprise: 12.88, priceChange: 10.0, status: 'UPCOMING' },
+
+            // 20 ต.ค.
+            { date: '2026-10-20', ticker: 'AXP', name: 'American Express', time: 'BMO', sector: 'fin', revAct: 16.64, revEst: 16.67, revSurprise: -0.18, epsAct: 3.49, epsEst: 3.28, epsSurprise: 6.40, priceChange: -2.2, status: 'UPCOMING' },
+            { date: '2026-10-20', ticker: 'KO', name: 'The Coca-Cola Co.', time: 'BMO', sector: 'defensive', revAct: 11.95, revEst: 11.60, revSurprise: 3.02, epsAct: 0.77, epsEst: 0.74, epsSurprise: 4.05, priceChange: -0.7, status: 'UPCOMING' },
+            { date: '2026-10-20', ticker: 'GE', name: 'GE Aerospace', time: 'BMO', sector: 'ind', revAct: 8.94, revEst: 9.02, revSurprise: -0.89, epsAct: 1.15, epsEst: 1.14, epsSurprise: 0.88, priceChange: -9.0, status: 'UPCOMING' },
+            { date: '2026-10-20', ticker: 'PM', name: 'Philip Morris Int.', time: 'BMO', sector: 'defensive', revAct: 9.91, revEst: 9.69, revSurprise: 2.27, epsAct: 1.91, epsEst: 1.82, epsSurprise: 4.95, priceChange: 10.5, status: 'UPCOMING' },
+            { date: '2026-10-20', ticker: 'GM', name: 'General Motors', time: 'BMO', sector: 'cyclical', revAct: 48.76, revEst: 44.59, revSurprise: 9.35, epsAct: 2.96, epsEst: 2.43, epsSurprise: 21.81, priceChange: 9.8, status: 'UPCOMING' },
+
+            // 21 ต.ค.
+            { date: '2026-10-21', ticker: 'VZ', name: 'Verizon Communications', time: 'BMO', sector: 'comm', revAct: 33.30, revEst: 33.43, revSurprise: -0.39, epsAct: 1.19, epsEst: 1.18, epsSurprise: 0.85, priceChange: -5.0, status: 'UPCOMING' },
+            { date: '2026-10-21', ticker: 'RTX', name: 'RTX Corporation', time: 'BMO', sector: 'ind', revAct: 20.09, revEst: 19.85, revSurprise: 1.21, epsAct: 1.45, epsEst: 1.34, epsSurprise: 8.21, priceChange: -0.8, status: 'UPCOMING' },
+            { date: '2026-10-21', ticker: 'LRCX', name: 'Lam Research Corp.', time: 'AMC', sector: 'tech', revAct: 4.17, revEst: 4.05, revSurprise: 2.96, epsAct: 0.86, epsEst: 0.80, epsSurprise: 7.50, priceChange: 5.1, status: 'UPCOMING' },
+            { date: '2026-10-21', ticker: 'CSX', name: 'CSX Corp.', time: 'AMC', sector: 'ind', revAct: 3.62, revEst: 3.67, revSurprise: -1.36, epsAct: 0.46, epsEst: 0.48, epsSurprise: -4.17, priceChange: -6.7, status: 'UPCOMING' },
+            { date: '2026-10-21', ticker: 'A', name: 'Agilent Technologies', time: 'AMC', sector: 'health', revAct: 1.70, revEst: 1.66, revSurprise: 2.41, epsAct: 1.40, epsEst: 1.36, epsSurprise: 2.94, priceChange: 3.4, status: 'UPCOMING' },
+
+            // 22 ต.ค.
+            { date: '2026-10-22', ticker: 'IBM', name: 'International Business Machines', time: 'AMC', sector: 'tech', revAct: 14.97, revEst: 15.07, revSurprise: -0.66, epsAct: 2.30, epsEst: 2.23, epsSurprise: 3.14, priceChange: -6.2, status: 'UPCOMING' },
+            { date: '2026-10-22', ticker: 'NOW', name: 'ServiceNow, Inc.', time: 'AMC', sector: 'tech', revAct: 2.80, revEst: 2.74, revSurprise: 2.19, epsAct: 3.72, epsEst: 3.45, epsSurprise: 7.83, priceChange: 5.4, status: 'UPCOMING' },
+            { date: '2026-10-22', ticker: 'TMUS', name: 'T-Mobile US, Inc.', time: 'AMC', sector: 'comm', revAct: 20.16, revEst: 20.01, revSurprise: 0.75, epsAct: 2.61, epsEst: 2.42, epsSurprise: 7.85, priceChange: 5.7, status: 'UPCOMING' },
+            { date: '2026-10-22', ticker: 'BA', name: 'The Boeing Company', time: 'BMO', sector: 'ind', revAct: 17.84, revEst: 17.93, revSurprise: -0.50, epsAct: -10.44, epsEst: -10.52, epsSurprise: 0.76, priceChange: -1.8, status: 'UPCOMING' },
+            { date: '2026-10-22', ticker: 'NEE', name: 'NextEra Energy, Inc.', time: 'BMO', sector: 'util', revAct: 7.57, revEst: 8.10, revSurprise: -6.54, epsAct: 1.03, epsEst: 0.98, epsSurprise: 5.10, priceChange: 1.2, status: 'UPCOMING' },
+
+            // 23 ต.ค.
+            { date: '2026-10-23', ticker: 'HON', name: 'Honeywell International', time: 'BMO', sector: 'ind', revAct: 9.73, revEst: 9.90, revSurprise: -1.72, epsAct: 2.58, epsEst: 2.50, epsSurprise: 3.20, priceChange: -5.1, status: 'UPCOMING' },
+            { date: '2026-10-23', ticker: 'SLB', name: 'Schlumberger N.V.', time: 'BMO', sector: 'energy', revAct: 9.16, revEst: 8.99, revSurprise: 1.89, epsAct: 0.89, epsEst: 0.88, epsSurprise: 1.14, priceChange: -2.1, status: 'UPCOMING' },
+
+            // 26 ต.ค.
+            { date: '2026-10-26', ticker: 'ON', name: 'ON Semiconductor', time: 'BMO', sector: 'tech', revAct: 1.76, revEst: 1.75, revSurprise: 0.57, epsAct: 0.99, epsEst: 0.97, epsSurprise: 2.06, priceChange: 3.8, status: 'UPCOMING' },
+            { date: '2026-10-26', ticker: 'WDC', name: 'Western Digital Corp.', time: 'AMC', sector: 'tech', revAct: 4.10, revEst: 4.02, revSurprise: 1.99, epsAct: 1.78, epsEst: 1.71, epsSurprise: 4.09, priceChange: 4.7, status: 'UPCOMING' },
+            { date: '2026-10-26', ticker: 'CL', name: 'Colgate-Palmolive', time: 'BMO', sector: 'defensive', revAct: 5.03, revEst: 5.01, revSurprise: 0.40, epsAct: 0.91, epsEst: 0.88, epsSurprise: 3.41, priceChange: 1.1, status: 'UPCOMING' },
+
+            // 27 ต.ค.
+            { date: '2026-10-27', ticker: 'MSFT', name: 'Microsoft Corporation', time: 'AMC', sector: 'tech', revAct: 65.59, revEst: 64.51, revSurprise: 1.67, epsAct: 3.30, epsEst: 3.10, epsSurprise: 6.45, priceChange: 1.5, status: 'UPCOMING' },
+            { date: '2026-10-27', ticker: 'GOOGL', name: 'Alphabet Inc.', time: 'AMC', sector: 'comm', revAct: 88.27, revEst: 86.30, revSurprise: 2.28, epsAct: 2.12, epsEst: 1.85, epsSurprise: 14.59, priceChange: 2.8, status: 'UPCOMING' },
+            { date: '2026-10-27', ticker: 'AMD', name: 'Advanced Micro Devices', time: 'AMC', sector: 'tech', revAct: 6.82, revEst: 6.71, revSurprise: 1.64, epsAct: 0.92, epsEst: 0.92, epsSurprise: 0.00, priceChange: -10.6, status: 'UPCOMING' },
+            { date: '2026-10-27', ticker: 'MCD', name: 'McDonald\'s Corp.', time: 'BMO', sector: 'cyclical', revAct: 6.87, revEst: 6.82, revSurprise: 0.73, epsAct: 3.23, epsEst: 3.20, epsSurprise: 0.94, priceChange: -0.6, status: 'UPCOMING' },
+            { date: '2026-10-27', ticker: 'BXP', name: 'Boston Properties', time: 'AMC', sector: 're', revAct: 0.86, revEst: 0.84, revSurprise: 2.38, epsAct: 1.81, epsEst: 1.78, epsSurprise: 1.69, priceChange: 1.4, status: 'UPCOMING' },
+            { date: '2026-10-27', ticker: 'CMS', name: 'CMS Energy Corp.', time: 'BMO', sector: 'util', revAct: 1.95, revEst: 1.90, revSurprise: 2.63, epsAct: 0.84, epsEst: 0.80, epsSurprise: 5.00, priceChange: 0.9, status: 'UPCOMING' },
+
+            // 28 ต.ค.
+            { date: '2026-10-28', ticker: 'META', name: 'Meta Platforms, Inc.', time: 'AMC', sector: 'comm', revAct: 40.59, revEst: 40.29, revSurprise: 0.74, epsAct: 6.03, epsEst: 5.25, epsSurprise: 14.86, priceChange: -4.1, status: 'UPCOMING' },
+            { date: '2026-10-28', ticker: 'AMZN', name: 'Amazon.com, Inc.', time: 'AMC', sector: 'cyclical', revAct: 158.88, revEst: 157.20, revSurprise: 1.07, epsAct: 1.43, epsEst: 1.14, epsSurprise: 25.44, priceChange: 6.2, status: 'UPCOMING' },
+            { date: '2026-10-28', ticker: 'LLY', name: 'Eli Lilly and Co.', time: 'BMO', sector: 'health', revAct: 11.44, revEst: 12.11, revSurprise: -5.53, epsAct: 1.18, epsEst: 1.47, epsSurprise: -19.73, priceChange: -6.3, status: 'UPCOMING' },
+            { date: '2026-10-28', ticker: 'QCOM', name: 'QUALCOMM Inc.', time: 'AMC', sector: 'tech', revAct: 10.24, revEst: 9.91, revSurprise: 3.33, epsAct: 2.69, epsEst: 2.56, epsSurprise: 5.08, priceChange: 4.3, status: 'UPCOMING' },
+            { date: '2026-10-28', ticker: 'ADP', name: 'Automatic Data Processing', time: 'BMO', sector: 'tech', revAct: 4.83, revEst: 4.77, revSurprise: 1.26, epsAct: 2.33, epsEst: 2.29, epsSurprise: 1.75, priceChange: 1.9, status: 'UPCOMING' },
+            { date: '2026-10-28', ticker: 'ALGN', name: 'Align Technology', time: 'AMC', sector: 'health', revAct: 0.98, revEst: 0.99, revSurprise: -1.01, epsAct: 2.35, epsEst: 2.31, epsSurprise: 1.73, priceChange: 2.1, status: 'UPCOMING' },
+
+            // 29 ต.ค.
+            { date: '2026-10-29', ticker: 'AAPL', name: 'Apple Inc.', time: 'AMC', sector: 'tech', revAct: 94.93, revEst: 94.58, revSurprise: 0.37, epsAct: 1.64, epsEst: 1.60, epsSurprise: 2.50, priceChange: -1.8, status: 'UPCOMING' },
+            { date: '2026-10-29', ticker: 'INTC', name: 'Intel Corporation', time: 'AMC', sector: 'tech', revAct: 13.28, revEst: 13.02, revSurprise: 2.00, epsAct: -0.46, epsEst: -0.24, epsSurprise: -91.67, priceChange: 7.8, status: 'UPCOMING' },
+            { date: '2026-10-29', ticker: 'SBUX', name: 'Starbucks Corp.', time: 'AMC', sector: 'cyclical', revAct: 9.07, revEst: 9.18, revSurprise: -1.20, epsAct: 0.80, epsEst: 1.03, epsSurprise: -22.33, priceChange: 0.2, status: 'UPCOMING' },
+            { date: '2026-10-29', ticker: 'MA', name: 'Mastercard Inc.', time: 'BMO', sector: 'fin', revAct: 7.37, revEst: 7.26, revSurprise: 1.52, epsAct: 3.89, epsEst: 3.74, epsSurprise: 4.01, priceChange: -2.3, status: 'UPCOMING' },
+            { date: '2026-10-29', ticker: 'ACN', name: 'Accenture plc', time: 'BMO', sector: 'tech', revAct: 16.41, revEst: 16.35, revSurprise: 0.37, epsAct: 2.79, epsEst: 2.77, epsSurprise: 0.72, priceChange: 1.2, status: 'UPCOMING' },
+            { date: '2026-10-29', ticker: 'SO', name: 'The Southern Company', time: 'BMO', sector: 'util', revAct: 7.28, revEst: 7.15, revSurprise: 1.82, epsAct: 1.45, epsEst: 1.34, epsSurprise: 8.21, priceChange: 1.6, status: 'UPCOMING' },
+
+            // 30 ต.ค.
+            { date: '2026-10-30', ticker: 'XOM', name: 'Exxon Mobil Corp.', time: 'BMO', sector: 'energy', revAct: 90.02, revEst: 93.98, revSurprise: -4.21, epsAct: 1.92, epsEst: 1.88, epsSurprise: 2.13, priceChange: -0.5, status: 'UPCOMING' },
+            { date: '2026-10-30', ticker: 'CVX', name: 'Chevron Corporation', time: 'BMO', sector: 'energy', revAct: 50.67, revEst: 48.99, revSurprise: 3.43, epsAct: 2.51, epsEst: 2.43, epsSurprise: 3.29, priceChange: 2.8, status: 'UPCOMING' },
+            { date: '2026-10-30', ticker: 'ABBV', name: 'AbbVie Inc.', time: 'BMO', sector: 'health', revAct: 14.46, revEst: 14.28, revSurprise: 1.26, epsAct: 3.00, epsEst: 2.91, epsSurprise: 3.09, priceChange: -0.2, status: 'UPCOMING' },
+            { date: '2026-10-30', ticker: 'CBOE', name: 'Cboe Global Markets', time: 'BMO', sector: 'fin', revAct: 0.53, revEst: 0.52, revSurprise: 1.92, epsAct: 2.22, epsEst: 2.18, epsSurprise: 1.83, priceChange: 1.4, status: 'UPCOMING' },
+            { date: '2026-10-30', ticker: 'AON', name: 'Aon plc', time: 'BMO', sector: 'fin', revAct: 3.72, revEst: 3.65, revSurprise: 1.92, epsAct: 2.72, epsEst: 2.68, epsSurprise: 1.49, priceChange: 1.8, status: 'UPCOMING' }
+        ];
+
+        // State variables for Earnings Calendar
+        let currentEarningsYear = 2026;
+        let currentEarningsMonth = 9; // 0-indexed: 9 = October
+        let selectedEarningsDate = '2026-10-12';
+        let currentEarningsViewMode = 'CALENDAR'; // 'CALENDAR' | 'LIST'
+        let currentEarningsFilter = 'ALL'; // 'ALL' | 'PORTFOLIO' | 'BEAT' | 'MISS'
+        let currentEarningsSidebarMode = 'RECENT'; // 'RECENT' | 'DATE'
+        let earningsSearchQuery = '';
+
+        const THAI_MONTH_NAMES = [
+            'มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน',
+            'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'
+        ];
+        const THAI_DAY_SHORT = ['อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.'];
+
+        function getUserPortfolioTickers() {
+            const set = new Set();
+            try {
+                if (typeof transactions !== 'undefined' && Array.isArray(transactions)) {
+                    transactions.forEach(t => {
+                        if (t && t.ticker) set.add(t.ticker.toUpperCase().trim());
+                    });
+                }
+                if (typeof globalHoldings === 'object' && globalHoldings) {
+                    Object.keys(globalHoldings).forEach(k => {
+                        if (k) set.add(k.toUpperCase().trim());
+                    });
+                }
+            } catch (e) {}
+            return set;
+        }
+
+        function formatEarningsThaiDate(dateStr) {
+            if (!dateStr) return '';
+            const parts = dateStr.split('-');
+            if (parts.length < 3) return dateStr;
+            const y = parseInt(parts[0], 10);
+            const m = parseInt(parts[1], 10) - 1;
+            const d = parseInt(parts[2], 10);
+            const dt = new Date(y, m, d);
+            const dayName = THAI_DAY_SHORT[dt.getDay()];
+            const monthName = THAI_MONTH_NAMES[m];
+            const thaiYear = y + 543;
+            return `${dayName} ${d} ${monthName.substring(0, 4)}. ${thaiYear}`;
+        }
+
+        function formatEarningsRev(val) {
+            if (val === undefined || val === null || isNaN(val)) return '-';
+            if (Math.abs(val) < 1) {
+                return `$${(val * 1000).toFixed(1)}M`;
+            }
+            return `$${val.toFixed(2)}B`;
+        }
+
+        function formatEarningsEPS(val) {
+            if (val === undefined || val === null || isNaN(val)) return '-';
+            return `$${val.toFixed(2)}`;
+        }
+
+        window.initEarningsCalendar = function() {
+            // Set default date
+            const today = new Date();
+            // Default to October 2026 matching screenshot if year is 2026, or current date
+            if (today.getFullYear() === 2026 && today.getMonth() === 9) {
+                currentEarningsYear = 2026;
+                currentEarningsMonth = 9;
+                selectedEarningsDate = '2026-10-12';
+            } else {
+                currentEarningsYear = 2026;
+                currentEarningsMonth = 9;
+                selectedEarningsDate = '2026-10-12';
+            }
+            renderEarningsCalendarView();
+        };
+
+        window.renderEarningsCalendarView = function() {
+            if (currentEarningsViewMode === 'CALENDAR') {
+                renderEarningsCalendar();
+                renderEarningsSidebar();
+            } else {
+                renderEarningsList();
+            }
+        };
+
+        window.renderEarningsCalendar = function() {
+            const gridEl = document.getElementById('earningsDaysGrid');
+            const titleEl = document.getElementById('earningsMonthTitle');
+            const badgeEl = document.getElementById('earningsDateRangeBadge');
+            if (!gridEl) return;
+
+            const year = currentEarningsYear;
+            const month = currentEarningsMonth;
+            const thaiYear = year + 543;
+            if (titleEl) {
+                titleEl.textContent = `${THAI_MONTH_NAMES[month]} ${thaiYear} (${year})`;
+            }
+
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const firstDayIndex = new Date(year, month, 1).getDay(); // 0 = Sun
+            const prevMonthDays = new Date(year, month, 0).getDate();
+
+            if (badgeEl) {
+                const startStr = `${year}-${String(month + 1).padStart(2, '0')}-01`;
+                const endStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(daysInMonth).padStart(2, '0')}`;
+                badgeEl.textContent = `${startStr} - ${endStr}`;
+            }
+
+            const myPortfolioTickers = getUserPortfolioTickers();
+
+            // Filter calendar items by search or filter
+            const filterEarnings = (items) => {
+                return items.filter(item => {
+                    if (earningsSearchQuery) {
+                        const q = earningsSearchQuery;
+                        const match = item.ticker.includes(q) || item.name.toUpperCase().includes(q);
+                        if (!match) return false;
+                    }
+                    if (currentEarningsFilter === 'PORTFOLIO') {
+                        if (!myPortfolioTickers.has(item.ticker.toUpperCase())) return false;
+                    } else if (currentEarningsFilter === 'BEAT') {
+                        if (item.revSurprise <= 0 || item.epsSurprise <= 0) return false;
+                    } else if (currentEarningsFilter === 'MISS') {
+                        if (item.revSurprise >= 0 && item.epsSurprise >= 0) return false;
+                    }
+                    return true;
+                });
+            };
+
+            let html = '';
+
+            // 1. Previous month leading days
+            for (let i = firstDayIndex - 1; i >= 0; i--) {
+                const prevD = prevMonthDays - i;
+                html += `
+                    <div class="earnings-day-cell is-other-month">
+                        <div class="earnings-day-num">${prevD}</div>
+                    </div>
+                `;
+            }
+
+            // 2. Current month days
+            for (let d = 1; d <= daysInMonth; d++) {
+                const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+                const isSelected = (dateStr === selectedEarningsDate);
+                const isToday = (d === 12 && month === 9 && year === 2026); // Oct 12, 2026 as in screenshot
+
+                const rawStocks = earningsCalendarData.filter(x => x.date === dateStr);
+                const stocks = filterEarnings(rawStocks);
+
+                let dayNumberHtml = `<span class="earnings-day-num">${d}</span>`;
+                if (isToday) {
+                    dayNumberHtml = `<span class="earnings-today-circle" title="วันนี้">${d}</span>`;
+                }
+
+                let stocksHtml = '';
+                if (stocks.length > 0) {
+                    stocksHtml += `<div class="d-flex flex-wrap align-items-center mt-1" style="gap: 2px;">`;
+                    const maxDisplay = 4;
+                    const displayStocks = stocks.slice(0, maxDisplay);
+                    displayStocks.forEach(stk => {
+                        const isOwned = myPortfolioTickers.has(stk.ticker.toUpperCase());
+                        const borderStyle = isOwned ? 'border: 2px solid #3b82f6;' : '';
+                        stocksHtml += `
+                            <span class="earnings-stock-pill" style="${borderStyle}" onclick="event.stopPropagation(); selectEarningsStock('${stk.ticker}', '${dateStr}')" title="${stk.ticker}: ${stk.name} (${stk.time === 'BMO' ? 'ก่อนเปิดตลาด' : 'หลังปิดตลาด'})${isOwned ? ' [ในพอร์ตของคุณ]' : ''}">
+                                <img src="https://assets.parqet.com/logos/symbol/${stk.ticker}" 
+                                     alt="${stk.ticker}" 
+                                     style="width:100%; height:100%; object-fit:contain; padding:2px;" 
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\\'font-size:9px; font-weight:800; color:#64748b;\\'>${stk.ticker.substring(0,2)}</span>';" />
+                            </span>
+                        `;
+                    });
+
+                    if (stocks.length > maxDisplay) {
+                        const moreCount = stocks.length - maxDisplay;
+                        stocksHtml += `
+                            <span class="earnings-more-badge" onclick="event.stopPropagation(); openEarningsDayDetailModal('${dateStr}')" title="คลิกเพื่อดูทั้งหมด ${stocks.length} ตัว">
+                                +${moreCount}
+                            </span>
+                        `;
+                    }
+                    stocksHtml += `</div>`;
+                }
+
+                html += `
+                    <div class="earnings-day-cell ${isSelected ? 'is-selected' : ''}" onclick="selectEarningsDate('${dateStr}')">
+                        <div class="d-flex justify-content-between align-items-center">
+                            ${dayNumberHtml}
+                            ${rawStocks.length > 0 ? `<small class="text-muted fw-bold" style="font-size:0.68rem;">${rawStocks.length}</small>` : ''}
+                        </div>
+                        ${stocksHtml}
+                    </div>
+                `;
+            }
+
+            // 3. Next month trailing days to complete grid
+            const totalCells = firstDayIndex + daysInMonth;
+            const remaining = (7 - (totalCells % 7)) % 7;
+            for (let nextD = 1; nextD <= remaining; nextD++) {
+                html += `
+                    <div class="earnings-day-cell is-other-month">
+                        <div class="earnings-day-num">${nextD}</div>
+                    </div>
+                `;
+            }
+
+            gridEl.innerHTML = html;
+        };
+
+        window.selectEarningsDate = function(dateStr) {
+            selectedEarningsDate = dateStr;
+            currentEarningsSidebarMode = 'DATE';
+            renderEarningsCalendar();
+            renderEarningsSidebar();
+        };
+
+        window.selectEarningsStock = function(ticker, dateStr) {
+            selectedEarningsDate = dateStr;
+            currentEarningsSidebarMode = 'DATE';
+            renderEarningsCalendar();
+            renderEarningsSidebar(ticker);
+        };
+
+        window.renderEarningsSidebar = function(highlightTicker = null) {
+            const listEl = document.getElementById('earningsCardsList');
+            const titleEl = document.getElementById('earningsSidebarHeaderTitle');
+            const badgeEl = document.getElementById('earningsSidebarCountBadge');
+            const activeFilterEl = document.getElementById('earningsActiveFilterTag');
+            if (!listEl) return;
+
+            const myPortfolioTickers = getUserPortfolioTickers();
+
+            // Display active filter tag if any
+            if (activeFilterEl) {
+                if (currentEarningsFilter !== 'ALL') {
+                    let label = 'ทั้งหมด';
+                    if (currentEarningsFilter === 'PORTFOLIO') label = '💼 เฉพาะหุ้นในพอร์ต';
+                    else if (currentEarningsFilter === 'BEAT') label = '🚀 Beat คาดการณ์';
+                    else if (currentEarningsFilter === 'MISS') label = '⚠️ Miss คาดการณ์';
+                    activeFilterEl.style.display = 'block';
+                    activeFilterEl.innerHTML = `
+                        <div class="d-flex align-items-center justify-content-between p-1.5 px-3 rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25" style="font-size:0.75rem; font-weight:700;">
+                            <span>🎯 ตัวกรอง: ${label}</span>
+                            <span style="cursor:pointer;" onclick="setEarningsFilter('ALL')" title="ล้างตัวกรอง">✕ ล้าง</span>
+                        </div>
+                    `;
+                } else {
+                    activeFilterEl.style.display = 'none';
+                    activeFilterEl.innerHTML = '';
+                }
+            }
+
+            let candidateList = [];
+
+            if (currentEarningsFilter === 'PORTFOLIO') {
+                titleEl.textContent = `หุ้นในพอร์ตของคุณที่ประกาศงบ`;
+                candidateList = earningsCalendarData.filter(x => myPortfolioTickers.has(x.ticker.toUpperCase()));
+            } else if (currentEarningsFilter === 'BEAT') {
+                titleEl.textContent = `หุ้นที่ผลประกอบการ Beat คาดการณ์`;
+                candidateList = earningsCalendarData.filter(x => x.revSurprise > 0 && x.epsSurprise > 0);
+            } else if (currentEarningsFilter === 'MISS') {
+                titleEl.textContent = `หุ้นที่ผลประกอบการ Miss คาดการณ์`;
+                candidateList = earningsCalendarData.filter(x => x.revSurprise < 0 || x.epsSurprise < 0);
+            } else if (currentEarningsSidebarMode === 'DATE' && selectedEarningsDate) {
+                titleEl.textContent = `ประกาศงบประจำวัน ${formatEarningsThaiDate(selectedEarningsDate)}`;
+                candidateList = earningsCalendarData.filter(x => x.date === selectedEarningsDate);
+                // If this specific date has no stocks, fall back to recent
+                if (candidateList.length === 0) {
+                    titleEl.textContent = `ไม่มีหุ้นประกาศงบในวันที่เลือก (แสดงงบล่าสุด)`;
+                    candidateList = earningsCalendarData.filter(x => x.date <= selectedEarningsDate).slice(-10).reverse();
+                }
+            } else {
+                titleEl.textContent = `ประกาศงบล่าสุด ศ. 9 ต.ค. - ส. 12 ต.ค.`;
+                candidateList = earningsCalendarData.filter(x => x.date <= '2026-10-12').slice(-10).reverse();
+            }
+
+            // Apply search query if present
+            if (earningsSearchQuery) {
+                const q = earningsSearchQuery;
+                candidateList = candidateList.filter(x => x.ticker.includes(q) || x.name.toUpperCase().includes(q));
+            }
+
+            // Put highlight ticker at top if requested
+            if (highlightTicker) {
+                const idx = candidateList.findIndex(x => x.ticker.toUpperCase() === highlightTicker.toUpperCase());
+                if (idx > -1) {
+                    const item = candidateList.splice(idx, 1)[0];
+                    candidateList.unshift(item);
+                }
+            }
+
+            badgeEl.textContent = `${candidateList.length} ตัว`;
+
+            if (candidateList.length === 0) {
+                listEl.innerHTML = `
+                    <div class="text-center py-5 text-muted">
+                        <span style="font-size: 2.2rem; display:block; margin-bottom: 8px;">📭</span>
+                        <div class="fw-bold" style="font-size:0.9rem;">ไม่พบข้อมูลประกาศงบในช่วงนี้</div>
+                        <small>ลองเลือกวันอื่นในปฏิทิน หรือคลิก "แสดงทั้งหมด"</small>
+                        <div class="mt-3">
+                            <button class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="setEarningsSidebarMode('RECENT')">
+                                🔄 ดูกลุ่มประกาศงบล่าสุด
+                            </button>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            candidateList.forEach(stk => {
+                const isOwned = myPortfolioTickers.has(stk.ticker.toUpperCase());
+                const isNeg = (stk.priceChange < 0);
+                const reactClass = isNeg ? 'is-neg-react' : 'is-pos-react';
+                const pillClass = isNeg ? 'earnings-react-pill-neg' : 'earnings-react-pill-pos';
+                const reactIcon = isNeg ? '📉' : '📈';
+                const reactSign = stk.priceChange >= 0 ? '+' : '';
+
+                const revBeatClass = stk.revSurprise >= 0 ? 'earnings-metric-beat' : 'earnings-metric-miss';
+                const revSign = stk.revSurprise >= 0 ? '+' : '';
+                const epsBeatClass = stk.epsSurprise >= 0 ? 'earnings-metric-beat' : 'earnings-metric-miss';
+                const epsSign = stk.epsSurprise >= 0 ? '+' : '';
+
+                const timeLabel = stk.time === 'BMO' ? 'ก่อนเปิดตลาด' : 'หลังปิดตลาด';
+                const thaiDateStr = formatEarningsThaiDate(stk.date);
+
+                html += `
+                    <div class="earnings-item-card ${reactClass}">
+                        <!-- Card Header -->
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="earnings-stock-pill shadow-sm" style="width:34px; height:34px;">
+                                    <img src="https://assets.parqet.com/logos/symbol/${stk.ticker}" 
+                                         alt="${stk.ticker}" 
+                                         style="width:100%; height:100%; object-fit:contain; padding:2px;" 
+                                         onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\\'font-size:11px; font-weight:800; color:#475569;\\'>${stk.ticker.substring(0,2)}</span>';" />
+                                </span>
+                                <div>
+                                    <div class="d-flex align-items-center gap-1.5">
+                                        <span class="fw-bold" style="font-size: 1rem; letter-spacing: -0.2px;">${stk.ticker}</span>
+                                        ${isOwned ? `<span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill" style="font-size:0.65rem; padding: 2px 6px;">💼 ในพอร์ต</span>` : ''}
+                                    </div>
+                                    <small class="text-muted d-block text-truncate" style="font-size: 0.72rem; max-width: 150px;" title="${stk.name}">
+                                        ${thaiDateStr} • ${timeLabel}
+                                    </small>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="${pillClass}">
+                                    ${reactIcon} ${reactSign}${stk.priceChange.toFixed(1)}%
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Card Metrics: REV & EPS -->
+                        <div class="d-flex flex-column gap-1.5 py-1" style="font-size: 0.8rem;">
+                            <!-- REV Row -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center gap-1.5">
+                                    <span class="text-muted fw-bold" style="font-size: 0.76rem;">• REV</span>
+                                    <span class="fw-bold" style="color: inherit;">${formatEarningsRev(stk.revAct)}</span>
+                                    <small class="text-muted" style="font-size: 0.72rem;">(Est. ${formatEarningsRev(stk.revEst)})</small>
+                                </div>
+                                <div>
+                                    <span class="${revBeatClass}">
+                                        ${revSign}${stk.revSurprise.toFixed(1)}%
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- EPS Row -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center gap-1.5">
+                                    <span class="text-muted fw-bold" style="font-size: 0.76rem;">• EPS</span>
+                                    <span class="fw-bold" style="color: inherit;">${formatEarningsEPS(stk.epsAct)}</span>
+                                    <small class="text-muted" style="font-size: 0.72rem;">(Est. ${formatEarningsEPS(stk.epsEst)})</small>
+                                </div>
+                                <div>
+                                    <span class="${epsBeatClass}">
+                                        ${epsSign}${stk.epsSurprise.toFixed(1)}%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Actions -->
+                        <div class="d-flex justify-content-end align-items-center gap-2 mt-2 pt-1 border-top border-opacity-10">
+                            <button class="btn btn-sm btn-link text-decoration-none p-0 fw-bold" style="font-size: 0.76rem; color: #10b981;" onclick="openTechnicalForTicker('${stk.ticker}')">
+                                📈 ดูกราฟเทคนิค ›
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            listEl.innerHTML = html;
+        };
+
+        window.renderEarningsList = function() {
+            const tbody = document.getElementById('earningsListTableBody');
+            const sortSelect = document.getElementById('earningsListSortSelect');
+            if (!tbody) return;
+
+            const myPortfolioTickers = getUserPortfolioTickers();
+            let items = [...earningsCalendarData];
+
+            if (earningsSearchQuery) {
+                const q = earningsSearchQuery;
+                items = items.filter(x => x.ticker.includes(q) || x.name.toUpperCase().includes(q));
+            }
+            if (currentEarningsFilter === 'PORTFOLIO') {
+                items = items.filter(x => myPortfolioTickers.has(x.ticker.toUpperCase()));
+            } else if (currentEarningsFilter === 'BEAT') {
+                items = items.filter(x => x.revSurprise > 0 && x.epsSurprise > 0);
+            } else if (currentEarningsFilter === 'MISS') {
+                items = items.filter(x => x.revSurprise < 0 || x.epsSurprise < 0);
+            }
+
+            const sortVal = sortSelect ? sortSelect.value : 'date_desc';
+            if (sortVal === 'date_desc') {
+                items.sort((a, b) => b.date.localeCompare(a.date));
+            } else if (sortVal === 'date_asc') {
+                items.sort((a, b) => a.date.localeCompare(b.date));
+            } else if (sortVal === 'price_desc') {
+                items.sort((a, b) => b.priceChange - a.priceChange);
+            } else if (sortVal === 'rev_desc') {
+                items.sort((a, b) => b.revSurprise - a.revSurprise);
+            }
+
+            if (items.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="9" class="text-center py-4 text-muted">ไม่พบข้อมูลประกาศงบตามเงื่อนไข</td></tr>`;
+                return;
+            }
+
+            let html = '';
+            items.forEach(stk => {
+                const isOwned = myPortfolioTickers.has(stk.ticker.toUpperCase());
+                const isNeg = (stk.priceChange < 0);
+                const pillClass = isNeg ? 'earnings-react-pill-neg' : 'earnings-react-pill-pos';
+                const reactIcon = isNeg ? '📉' : '📈';
+                const reactSign = stk.priceChange >= 0 ? '+' : '';
+
+                const revBeatClass = stk.revSurprise >= 0 ? 'earnings-metric-beat' : 'earnings-metric-miss';
+                const revSign = stk.revSurprise >= 0 ? '+' : '';
+                const epsBeatClass = stk.epsSurprise >= 0 ? 'earnings-metric-beat' : 'earnings-metric-miss';
+                const epsSign = stk.epsSurprise >= 0 ? '+' : '';
+
+                const timeBadge = stk.time === 'BMO' 
+                    ? `<span class="badge bg-warning bg-opacity-10 text-warning border border-warning border-opacity-25 rounded-pill" style="font-size:0.68rem;">ก่อนเปิด</span>`
+                    : `<span class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25 rounded-pill" style="font-size:0.68rem;">หลังปิด</span>`;
+
+                html += `
+                    <tr>
+                        <td class="fw-bold">${formatEarningsThaiDate(stk.date)}</td>
+                        <td>${timeBadge}</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="earnings-stock-pill" style="width:26px; height:26px;">
+                                    <img src="https://assets.parqet.com/logos/symbol/${stk.ticker}" 
+                                         alt="${stk.ticker}" 
+                                         style="width:100%; height:100%; object-fit:contain; padding:2px;" 
+                                         onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\\'font-size:9px; font-weight:800; color:#64748b;\\'>${stk.ticker.substring(0,2)}</span>';" />
+                                </span>
+                                <div>
+                                    <span class="fw-bold">${stk.ticker}</span>
+                                    ${isOwned ? `<span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill ms-1" style="font-size:0.62rem;">ในพอร์ต</span>` : ''}
+                                    <small class="text-muted d-block" style="font-size:0.7rem;">${stk.name}</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-end">
+                            <span class="fw-bold">${formatEarningsRev(stk.revAct)}</span>
+                            <small class="text-muted d-block" style="font-size:0.72rem;">Est. ${formatEarningsRev(stk.revEst)}</small>
+                        </td>
+                        <td class="text-center">
+                            <span class="${revBeatClass}">${revSign}${stk.revSurprise.toFixed(1)}%</span>
+                        </td>
+                        <td class="text-end">
+                            <span class="fw-bold">${formatEarningsEPS(stk.epsAct)}</span>
+                            <small class="text-muted d-block" style="font-size:0.72rem;">Est. ${formatEarningsEPS(stk.epsEst)}</small>
+                        </td>
+                        <td class="text-center">
+                            <span class="${epsBeatClass}">${epsSign}${stk.epsSurprise.toFixed(1)}%</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="${pillClass}">${reactIcon} ${reactSign}${stk.priceChange.toFixed(1)}%</span>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-sm btn-outline-success rounded-pill px-2.5 py-0.5 fw-bold" style="font-size:0.75rem;" onclick="openTechnicalForTicker('${stk.ticker}')">
+                                📈 กราฟ
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html;
+        };
+
+        window.changeEarningsMonth = function(delta) {
+            currentEarningsMonth += delta;
+            if (currentEarningsMonth < 0) {
+                currentEarningsMonth = 11;
+                currentEarningsYear -= 1;
+            } else if (currentEarningsMonth > 11) {
+                currentEarningsMonth = 0;
+                currentEarningsYear += 1;
+            }
+            renderEarningsCalendar();
+        };
+
+        window.goEarningsToToday = function() {
+            currentEarningsYear = 2026;
+            currentEarningsMonth = 9;
+            selectedEarningsDate = '2026-10-12';
+            currentEarningsSidebarMode = 'RECENT';
+            renderEarningsCalendar();
+            renderEarningsSidebar();
+        };
+
+        window.switchEarningsViewMode = function(mode) {
+            currentEarningsViewMode = mode;
+            const btnCal = document.getElementById('earningsViewBtnCalendar');
+            const btnList = document.getElementById('earningsViewBtnList');
+            const calCont = document.getElementById('earningsCalendarViewContainer');
+            const listCont = document.getElementById('earningsListViewContainer');
+
+            if (mode === 'CALENDAR') {
+                if (btnCal) btnCal.classList.add('active');
+                if (btnList) btnList.classList.remove('active');
+                if (calCont) calCont.style.display = 'block';
+                if (listCont) listCont.style.display = 'none';
+                renderEarningsCalendar();
+                renderEarningsSidebar();
+            } else {
+                if (btnCal) btnCal.classList.remove('active');
+                if (btnList) btnList.classList.add('active');
+                if (calCont) calCont.style.display = 'none';
+                if (listCont) listCont.style.display = 'block';
+                renderEarningsList();
+            }
+        };
+
+        window.setEarningsSidebarMode = function(mode) {
+            currentEarningsSidebarMode = mode;
+            currentEarningsFilter = 'ALL';
+            renderEarningsCalendar();
+            renderEarningsSidebar();
+        };
+
+        window.setEarningsFilter = function(filterKey) {
+            currentEarningsFilter = filterKey;
+            renderEarningsCalendar();
+            if (currentEarningsViewMode === 'CALENDAR') {
+                renderEarningsSidebar();
+            } else {
+                renderEarningsList();
+            }
+        };
+
+        window.handleEarningsSearch = function(val) {
+            earningsSearchQuery = (val || '').trim().toUpperCase();
+            const clearBtn = document.getElementById('earningsSearchClearBtn');
+            if (clearBtn) {
+                clearBtn.style.display = earningsSearchQuery ? 'inline-block' : 'none';
+            }
+
+            if (earningsSearchQuery) {
+                const matched = earningsCalendarData.find(x => x.ticker.includes(earningsSearchQuery) || x.name.toUpperCase().includes(earningsSearchQuery));
+                if (matched) {
+                    selectedEarningsDate = matched.date;
+                    const parts = matched.date.split('-');
+                    currentEarningsYear = parseInt(parts[0], 10);
+                    currentEarningsMonth = parseInt(parts[1], 10) - 1;
+                }
+            }
+
+            renderEarningsCalendarView();
+        };
+
+        window.clearEarningsSearch = function() {
+            const input = document.getElementById('earningsSearchInput');
+            if (input) input.value = '';
+            earningsSearchQuery = '';
+            const clearBtn = document.getElementById('earningsSearchClearBtn');
+            if (clearBtn) clearBtn.style.display = 'none';
+            renderEarningsCalendarView();
+        };
+
+        window.openEarningsDayDetailModal = function(dateStr) {
+            const titleEl = document.getElementById('earningsDayModalTitle');
+            const subEl = document.getElementById('earningsDayModalSubtitle');
+            const gridEl = document.getElementById('earningsDayModalGrid');
+            if (!titleEl || !gridEl) return;
+
+            const myPortfolioTickers = getUserPortfolioTickers();
+            const stocks = earningsCalendarData.filter(x => x.date === dateStr);
+
+            titleEl.textContent = `ประกาศงบประจำวัน ${formatEarningsThaiDate(dateStr)}`;
+            subEl.textContent = `พบทั้งหมด ${stocks.length} บริษัท ที่ประกาศผลประกอบการในวันนี้`;
+
+            let html = '';
+            stocks.forEach(stk => {
+                const isOwned = myPortfolioTickers.has(stk.ticker.toUpperCase());
+                const isNeg = (stk.priceChange < 0);
+                const pillClass = isNeg ? 'earnings-react-pill-neg' : 'earnings-react-pill-pos';
+                const reactIcon = isNeg ? '📉' : '📈';
+                const reactSign = stk.priceChange >= 0 ? '+' : '';
+
+                const revBeatClass = stk.revSurprise >= 0 ? 'earnings-metric-beat' : 'earnings-metric-miss';
+                const revSign = stk.revSurprise >= 0 ? '+' : '';
+                const epsBeatClass = stk.epsSurprise >= 0 ? 'earnings-metric-beat' : 'earnings-metric-miss';
+                const epsSign = stk.epsSurprise >= 0 ? '+' : '';
+
+                html += `
+                    <div class="col-md-6 col-12">
+                        <div class="p-3 border rounded-4 bg-body-tertiary h-100 shadow-sm d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="earnings-stock-pill shadow-sm" style="width:32px; height:32px;">
+                                            <img src="https://assets.parqet.com/logos/symbol/${stk.ticker}" 
+                                                 alt="${stk.ticker}" 
+                                                 style="width:100%; height:100%; object-fit:contain; padding:2px;" 
+                                                 onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\\'font-size:10px; font-weight:800; color:#64748b;\\'>${stk.ticker.substring(0,2)}</span>';" />
+                                        </span>
+                                        <div>
+                                            <div class="d-flex align-items-center gap-1">
+                                                <strong style="font-size:0.95rem;">${stk.ticker}</strong>
+                                                ${isOwned ? `<span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill" style="font-size:0.65rem;">ในพอร์ต</span>` : ''}
+                                            </div>
+                                            <small class="text-muted d-block text-truncate" style="font-size:0.72rem; max-width:160px;">${stk.name}</small>
+                                        </div>
+                                    </div>
+                                    <span class="${pillClass}">
+                                        ${reactIcon} ${reactSign}${stk.priceChange.toFixed(1)}%
+                                    </span>
+                                </div>
+                                <div class="d-flex flex-column gap-1 my-2" style="font-size:0.78rem;">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">• REV: <strong>${formatEarningsRev(stk.revAct)}</strong> (Est. ${formatEarningsRev(stk.revEst)})</span>
+                                        <span class="${revBeatClass}">${revSign}${stk.revSurprise.toFixed(1)}%</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">• EPS: <strong>${formatEarningsEPS(stk.epsAct)}</strong> (Est. ${formatEarningsEPS(stk.epsEst)})</span>
+                                        <span class="${epsBeatClass}">${epsSign}${stk.epsSurprise.toFixed(1)}%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mt-2 pt-2 border-top">
+                                <button class="btn btn-sm btn-outline-success rounded-pill px-3 py-1 fw-bold" style="font-size:0.75rem;" onclick="bootstrap.Modal.getInstance(document.getElementById('earningsDayDetailModal')).hide(); openTechnicalForTicker('${stk.ticker}');">
+                                    📈 ดูกราฟเทคนิค
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            gridEl.innerHTML = html;
+
+            const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('earningsDayDetailModal'));
+            modal.show();
+        };
+
+        // =====================================================================
+        // CONTROLLER: MAIN 5-TAB NAVIGATION SYSTEM
+        // 1. Market Overview  2. พอร์ตการลงทุน  3. Sector  4. เทคนิค กราฟ  5. ปฏิทินประกาศงบ
         // =====================================================================
 
         window.onSwitchViewTab = function(mode) {
@@ -8857,17 +10174,20 @@
             const btnPort = document.getElementById('tabBtnPortfolio');
             const btnSector = document.getElementById('tabBtnSector');
             const btnTech = document.getElementById('tabBtnTechnical');
+            const btnCalendar = document.getElementById('tabBtnCalendar');
 
             const paneMarket = document.getElementById('marketOverviewPane');
             const panePort = document.getElementById('portfolioViewPane');
             const paneSector = document.getElementById('sectorViewPane');
             const paneTech = document.getElementById('technicalViewPane');
+            const paneCalendar = document.getElementById('earningsCalendarPane');
 
             const items = [
                 { key: 'MARKET', btn: btnMarket, pane: paneMarket },
                 { key: 'PORTFOLIO', btn: btnPort, pane: panePort },
                 { key: 'SECTOR', btn: btnSector, pane: paneSector },
-                { key: 'TECHNICAL', btn: btnTech, pane: paneTech }
+                { key: 'TECHNICAL', btn: btnTech, pane: paneTech },
+                { key: 'CALENDAR', btn: btnCalendar, pane: paneCalendar }
             ];
 
             items.forEach(item => {
@@ -8900,6 +10220,8 @@
                 setTimeout(() => {
                     drawCandlestickCanvas();
                 }, 200);
+            } else if (mode === 'CALENDAR') {
+                renderEarningsCalendarView();
             }
         };
 
@@ -10099,9 +11421,10 @@
             autoCalculateDimeFees();
             initTechnicalHub();
 
-            // Initialize Market Overview and Sectors modules
+            // Initialize Market Overview, Sectors, and Earnings Calendar modules
             renderMarketOverview();
             renderSectorsView();
+            initEarningsCalendar();
 
             // Determine active view mode
             let targetMode = localStorage.getItem('myMainViewMode');
@@ -10110,6 +11433,7 @@
             else if (hash === '#portfolio') targetMode = 'PORTFOLIO';
             else if (hash === '#sector') targetMode = 'SECTOR';
             else if (hash === '#technical') targetMode = 'TECHNICAL';
+            else if (hash === '#calendar') targetMode = 'CALENDAR';
 
             if (!targetMode) {
                 targetMode = (typeof transactions !== 'undefined' && transactions.length > 0) ? 'PORTFOLIO' : 'MARKET';
@@ -10119,7 +11443,8 @@
                 'MARKET': 'tabBtnMarket',
                 'PORTFOLIO': 'tabBtnPortfolio',
                 'SECTOR': 'tabBtnSector',
-                'TECHNICAL': 'tabBtnTechnical'
+                'TECHNICAL': 'tabBtnTechnical',
+                'CALENDAR': 'tabBtnCalendar'
             };
             const triggerEl = document.getElementById(btnIdMap[targetMode] || 'tabBtnMarket');
             if (triggerEl) {
