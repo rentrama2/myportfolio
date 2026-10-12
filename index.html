@@ -6669,6 +6669,10 @@
                 try {
                     await refreshMarketIndices(false);
                 } catch(e) {}
+                // อัปเดตข่าวสารตลาดสดล่าสุด (Live Market News)
+                try {
+                    if (typeof loadLiveMarketNews === 'function') await loadLiveMarketNews(false);
+                } catch(e) {}
                 updateUSMarketStatusUI();
 
                 localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
@@ -9608,7 +9612,7 @@
         // MODULE: INVESTMENT NEWS & INTELLIGENCE HUB (ศูนย์รวมข่าว & สรุปสถานการณ์)
         // =====================================================================
 
-        const marketNewsData = [
+        let marketNewsData = [
             {
                 id: 'news-1',
                 title: 'เฟดส่งสัญญาณทิศทางดอกเบี้ยผ่อนคลาย หลังตัวเลขเงินเฟ้อชะลอตัวต่อเนื่อง หนุน S&P 500 และ Nasdaq ทำระดับสูงสุดใหม่',
@@ -9808,7 +9812,12 @@
                 'cnbc': 'news-badge-cnbc',
                 'wsj': 'news-badge-wsj',
                 'yahoofinance': 'news-badge-yahoofinance',
-                'marketwatch': 'news-badge-marketwatch'
+                'marketwatch': 'news-badge-marketwatch',
+                'quartz': 'news-badge-bloomberg',
+                'benzinga': 'news-badge-marketwatch',
+                'motleyfool': 'news-badge-cnbc',
+                'investingcom': 'news-badge-marketwatch',
+                'zacks': 'news-badge-wsj'
             };
             const cls = classMap[lower] || 'badge bg-secondary';
             return `<span class="${cls}">[${s}]</span>`;
@@ -10159,11 +10168,102 @@
             renderMarketNewsHub();
         };
 
-        window.refreshMarketNewsData = function(showToast) {
+        function formatNewsTimeAgo(isoString) {
+            if (!isoString) return 'เมื่อสักครู่';
+            const date = new Date(isoString);
+            if (isNaN(date.getTime())) return 'เมื่อสักครู่';
+            const diffMs = Date.now() - date.getTime();
+            if (diffMs < 0) return 'เมื่อสักครู่';
+            const diffSec = Math.floor(diffMs / 1000);
+            if (diffSec < 60) return `${diffSec} วินาทีที่แล้ว`;
+            const diffMin = Math.floor(diffSec / 60);
+            if (diffMin < 60) return `${diffMin} นาทีที่แล้ว`;
+            const diffHour = Math.floor(diffMin / 60);
+            if (diffHour < 24) return `${diffHour} ชั่วโมงที่แล้ว`;
+            const diffDay = Math.floor(diffHour / 24);
+            if (diffDay < 7) return `${diffDay} วันที่แล้ว`;
+            return date.toLocaleDateString('th-TH', { day: 'numeric', month: 'short' });
+        }
+
+        let isFetchingLiveMarketNews = false;
+
+        window.loadLiveMarketNews = async function(showToast = false) {
+            if (isFetchingLiveMarketNews) return;
+            isFetchingLiveMarketNews = true;
+
+            const urls = [
+                `./data/news.json?t=${Date.now()}`,
+                `https://rentrama2.github.io/myportfolio/data/news.json?t=${Date.now()}`
+            ];
+
+            let loaded = false;
+            let loadedUpdatedAt = '';
+
+            for (let url of urls) {
+                try {
+                    let res = await fetchWithTimeout(url, { cache: 'no-store' }, 4000);
+                    if (res.ok) {
+                        let data = await res.json();
+                        if (data && Array.isArray(data.news) && data.news.length > 0) {
+                            data.news.forEach(item => {
+                                if (item.publishedAt) {
+                                    item.time = formatNewsTimeAgo(item.publishedAt);
+                                }
+                            });
+                            marketNewsData = data.news;
+                            localStorage.setItem('myMarketNewsData', JSON.stringify(data.news));
+                            if (data.updated_at_thai) {
+                                loadedUpdatedAt = data.updated_at_thai;
+                                localStorage.setItem('myMarketNewsUpdatedAt', data.updated_at_thai);
+                            }
+                            loaded = true;
+                            break;
+                        }
+                    }
+                } catch(e) {}
+            }
+
+            if (!loaded) {
+                const cached = localStorage.getItem('myMarketNewsData');
+                if (cached) {
+                    try {
+                        const parsed = JSON.parse(cached);
+                        if (Array.isArray(parsed) && parsed.length > 0) {
+                            parsed.forEach(item => {
+                                if (item.publishedAt) {
+                                    item.time = formatNewsTimeAgo(item.publishedAt);
+                                }
+                            });
+                            marketNewsData = parsed;
+                        }
+                    } catch(e) {}
+                }
+            }
+
+            isFetchingLiveMarketNews = false;
             renderMarketBreakingNews();
             renderMarketNewsHub();
+
             if (showToast && typeof showNotification === 'function') {
-                showNotification("อัปเดตข่าวสารการลงทุนล่าสุดเรียบร้อยแล้ว 📰");
+                const updatedTime = loadedUpdatedAt || localStorage.getItem('myMarketNewsUpdatedAt') || 'ล่าสุด';
+                showNotification(`อัปเดตข่าวสารการลงทุนล่าสุดเรียบร้อยแล้ว 📰 (${updatedTime})`);
+            }
+        };
+
+        window.refreshMarketNewsData = async function(showToast) {
+            const btns = document.querySelectorAll('[onclick*="refreshMarketNewsData"]');
+            btns.forEach(b => {
+                b.disabled = true;
+                b.innerHTML = '🔄 กำลังดึงข่าว...';
+            });
+
+            try {
+                await window.loadLiveMarketNews(showToast);
+            } finally {
+                btns.forEach(b => {
+                    b.disabled = false;
+                    b.innerHTML = '🔄 รีเฟรชข่าว';
+                });
             }
         };
 
@@ -12426,6 +12526,9 @@
             // Initialize Home News, Market Overview, Sectors, and Earnings Calendar modules
             renderMarketBreakingNews();
             renderMarketNewsHub();
+            if (typeof loadLiveMarketNews === 'function') {
+                loadLiveMarketNews(false);
+            }
             renderMarketOverview();
             renderSectorsView();
             initEarningsCalendar();

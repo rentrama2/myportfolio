@@ -25,18 +25,19 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run Price Updater
+      - name: Run Updaters
         run: |
           python scripts/update_prices.py
+          python scripts/update_news.py
 
       - name: Commit and Push Changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/prices.json
+          git add data/prices.json data/news.json
           if git diff --staged --quiet; then
-            echo "No price changes to commit."
+            echo "No price or news changes to commit."
           else
-            git commit -m "Auto-update stock prices & FX [skip ci]"
+            git commit -m "Auto-update stock prices, FX & news [skip ci]"
             git push
           fi

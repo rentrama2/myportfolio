@@ -1,0 +1,340 @@
+﻿{
+    "updated_at":  "2026-10-12T14:04:10Z",
+    "updated_at_thai":  "12 ต.ค. 2569 21:04 น.",
+    "news_count":  12,
+    "news":  [
+                 {
+                     "id":  "news-1",
+                     "title":  "ตลาดหุ้นวันนี้: Dow และ S\u0026P 500 เพิ่มขึ้น Nasdaq ร่วงลงเนื่องจากราคาน้ำมันสูงขึ้น",
+                     "title_en":  "Stock market today: Dow and S\u0026P 500 gain, Nasdaq slips as oil prices rise",
+                     "summary":  "ตลาดหุ้นวันนี้: Dow และ S\u0026P 500 เพิ่มขึ้น Nasdaq ร่วงลงเนื่องจากราคาน้ำมันสูงขึ้น",
+                     "source":  "Yahoo Finance",
+                     "sourceUrl":  "https://finance.yahoo.com/markets/live/stock-market-today-monday-october-12-dow-sp-500-nasdaq-080321571.html",
+                     "time":  "2 นาทีที่แล้ว",
+                     "publishedAt":  "2026-10-12T14:01:33Z",
+                     "category":  "COMMODITIES",
+                     "tickers":  [
+                                     "SPY",
+                                     "QQQ",
+                                     "DIA"
+                                 ],
+                     "sentiment":  "BULLISH",
+                     "impact":  "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+                     "isHero":  true,
+                     "points":  [
+                                    "ตลาดหุ้นวันนี้: Dow และ S\u0026P 500 เพิ่มขึ้น Nasdaq ร่วงลงเนื่องจากราคาน้ำมันสูงขึ้น",
+                                    "แหล่งข่าวอ้างอิง: Yahoo Finance (12/10/2026 14:01 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
+                                ],
+                     "fullArticle":  [
+                                         "ตลาดหุ้นวันนี้: Dow และ S\u0026P 500 เพิ่มขึ้น Nasdaq ร่วงลงเนื่องจากราคาน้ำมันสูงขึ้น",
+                                         "ตลาดหุ้นวันนี้: Dow และ S\u0026P 500 เพิ่มขึ้น Nasdaq ร่วงลงเนื่องจากราคาน้ำมันสูงขึ้น",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow and S\u0026P 500 gain, Nasdaq slips as oil prices rise\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-2",
+                     "title":  "ตลาดหุ้นวันนี้ (12 ต.ค. 2569): S\u0026P 500 พุ่งขึ้นขณะที่ Wall Street เตรียมพร้อมสำหรับสัปดาห์ที่วุ่นวาย",
+                     "title_en":  "Stock Market Today (Oct. 12, 2026): S\u0026P 500 climbs as Wall Street gears up for busy week",
+                     "summary":  "ตลาดหุ้นวันนี้ (12 ต.ค. 2569): S\u0026P 500 พุ่งขึ้นขณะที่ Wall Street เตรียมพร้อมสำหรับสัปดาห์ที่วุ่นวาย",
+                     "source":  "TheStreet",
+                     "sourceUrl":  "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-12-135107789.html",
+                     "time":  "13 นาทีที่แล้ว",
+                     "publishedAt":  "2026-10-12T13:51:07Z",
+                     "category":  "ALL",
+                     "tickers":  [
+                                     "SPY"
+                                 ],
+                     "sentiment":  "BULLISH",
+                     "impact":  "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+                     "isHero":  false,
+                     "points":  [
+                                    "ตลาดหุ้นวันนี้ (12 ต.ค. 2569): S\u0026P 500 พุ่งขึ้นขณะที่ Wall Street เตรียมพร้อมสำหรับสัปดาห์ที่วุ่นวาย",
+                                    "แหล่งข่าวอ้างอิง: TheStreet (12/10/2026 13:51 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY"
+                                ],
+                     "fullArticle":  [
+                                         "ตลาดหุ้นวันนี้ (12 ต.ค. 2569): S\u0026P 500 พุ่งขึ้นขณะที่ Wall Street เตรียมพร้อมสำหรับสัปดาห์ที่วุ่นวาย",
+                                         "ตลาดหุ้นวันนี้ (12 ต.ค. 2569): S\u0026P 500 พุ่งขึ้นขณะที่ Wall Street เตรียมพร้อมสำหรับสัปดาห์ที่วุ่นวาย",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today (Oct. 12, 2026): S\u0026P 500 climbs as Wall Street gears up for busy week\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-3",
+                     "title":  "Wall Street เปิดตัวแบบผสมผสานก่อนรายได้ของธนาคารและข้อมูล CPI",
+                     "title_en":  "Wall Street opens mixed ahead of bank earnings, CPI data",
+                     "summary":  "Wall Street เปิดตัวแบบผสมผสานก่อนรายได้ของธนาคารและข้อมูล CPI",
+                     "source":  "Quartz",
+                     "sourceUrl":  "https://finance.yahoo.com/markets/articles/wall-street-opens-mixed-ahead-134549268.html",
+                     "time":  "18 นาทีที่แล้ว",
+                     "publishedAt":  "2026-10-12T13:45:49Z",
+                     "category":  "EARNINGS",
+                     "tickers":  [
+                                     "SPY",
+                                     "DIA"
+                                 ],
+                     "sentiment":  "NEUTRAL",
+                     "impact":  "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+                     "isHero":  false,
+                     "points":  [
+                                    "Wall Street เปิดตัวแบบผสมผสานก่อนรายได้ของธนาคารและข้อมูล CPI",
+                                    "แหล่งข่าวอ้างอิง: Quartz (12/10/2026 13:45 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+                                ],
+                     "fullArticle":  [
+                                         "Wall Street เปิดตัวแบบผสมผสานก่อนรายได้ของธนาคารและข้อมูล CPI",
+                                         "Wall Street เปิดตัวแบบผสมผสานก่อนรายได้ของธนาคารและข้อมูล CPI",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wall Street opens mixed ahead of bank earnings, CPI data\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-4",
+                     "title":  "ตลาดหุ้นวันนี้: S\u0026P 500 Futures หยุดทำระดับสูงสุดเป็นประวัติการณ์ เนื่องจากน้ำมันพุ่งขึ้นนำหน้ารายได้ของธนาคาร",
+                     "title_en":  "Stock Market Today: S\u0026P 500 Futures Pause Near Record Highs as Oil Rises Ahead of Bank Earnings",
+                     "summary":  "ตลาดหุ้นวันนี้: S\u0026P 500 Futures หยุดทำระดับสูงสุดเป็นประวัติการณ์ เนื่องจากน้ำมันพุ่งขึ้นนำหน้ารายได้ของธนาคาร",
+                     "source":  "24/7 Wall St.",
+                     "sourceUrl":  "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-p-500-134445777.html",
+                     "time":  "19 นาทีที่แล้ว",
+                     "publishedAt":  "2026-10-12T13:44:45Z",
+                     "category":  "COMMODITIES",
+                     "tickers":  [
+                                     "SPY"
+                                 ],
+                     "sentiment":  "BULLISH",
+                     "impact":  "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+                     "isHero":  false,
+                     "points":  [
+                                    "ตลาดหุ้นวันนี้: S\u0026P 500 Futures หยุดทำระดับสูงสุดเป็นประวัติการณ์ เนื่องจากน้ำมันพุ่งขึ้นนำหน้ารายได้ของธนาคาร",
+                                    "แหล่งข่าวอ้างอิง: 24/7 Wall St. (12/10/2026 13:44 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY"
+                                ],
+                     "fullArticle":  [
+                                         "ตลาดหุ้นวันนี้: S\u0026P 500 Futures หยุดทำระดับสูงสุดเป็นประวัติการณ์ เนื่องจากน้ำมันพุ่งขึ้นนำหน้ารายได้ของธนาคาร",
+                                         "ตลาดหุ้นวันนี้: S\u0026P 500 Futures หยุดทำระดับสูงสุดเป็นประวัติการณ์ เนื่องจากน้ำมันพุ่งขึ้นนำหน้ารายได้ของธนาคาร",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: S\u0026P 500 Futures Pause Near Record Highs as Oil Rises Ahead of Bank Earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-5",
+                     "title":  "ราคาน้ำมันพุ่งขึ้นขณะที่ทรัมป์แสดงความคิดเห็นว่าตลาดพลังงานปั่นป่วน",
+                     "title_en":  "Oil rises as Trump comments roil energy markets",
+                     "summary":  "ราคาน้ำมันพุ่งขึ้นขณะที่ทรัมป์แสดงความคิดเห็นว่าตลาดพลังงานปั่นป่วน",
+                     "source":  "AFP",
+                     "sourceUrl":  "https://finance.yahoo.com/markets/articles/stocks-rise-oil-prices-tumble-023050308.html",
+                     "time":  "21 นาทีที่แล้ว",
+                     "publishedAt":  "2026-10-12T13:43:02Z",
+                     "category":  "COMMODITIES",
+                     "tickers":  [
+                                     "XOM",
+                                     "CVX"
+                                 ],
+                     "sentiment":  "BULLISH",
+                     "impact":  "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+                     "isHero":  false,
+                     "points":  [
+                                    "ราคาน้ำมันพุ่งขึ้นขณะที่ทรัมป์แสดงความคิดเห็นว่าตลาดพลังงานปั่นป่วน",
+                                    "แหล่งข่าวอ้างอิง: AFP (12/10/2026 13:43 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+                                ],
+                     "fullArticle":  [
+                                         "ราคาน้ำมันพุ่งขึ้นขณะที่ทรัมป์แสดงความคิดเห็นว่าตลาดพลังงานปั่นป่วน",
+                                         "ราคาน้ำมันพุ่งขึ้นขณะที่ทรัมป์แสดงความคิดเห็นว่าตลาดพลังงานปั่นป่วน",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil rises as Trump comments roil energy markets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-6",
+                     "title":  "Intel และ CEO ของ Broadcom เตือนวิกฤติเงินทุนอาจกลายเป็นปัญหาคอขวดที่ใหญ่ที่สุดของ AI",
+                     "title_en":  "Intel, Broadcom CEOs warn capital crunch could become AI\u0027s biggest bottleneck",
+                     "summary":  "ซีอีโอของ Intel และ Broadcom เตือนว่าการเข้าถึงเงินทุนอาจเป็นอุปสรรคสำคัญต่อการเติบโตของปัญญาประดิษฐ์",
+                     "source":  "CNBC",
+                     "sourceUrl":  "https://www.cnbc.com/2026/10/12/intel-broadcom-ceos-warn-capital-crunch-could-become-ai-bottleneck.html",
+                     "time":  "59 นาทีที่แล้ว",
+                     "publishedAt":  "2026-10-12T13:04:31Z",
+                     "category":  "TECH",
+                     "tickers":  [
+                                     "INTC"
+                                 ],
+                     "sentiment":  "BEARISH",
+                     "impact":  "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+                     "isHero":  false,
+                     "points":  [
+                                    "ซีอีโอของ Intel และ Broadcom เตือนว่าการเข้าถึงเงินทุนอาจเป็นอุปสรรคสำคัญต่อการเติบโตของปัญญาประดิษฐ์",
+                                    "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 13:04 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #INTC"
+                                ],
+                     "fullArticle":  [
+                                         "Intel และ CEO ของ Broadcom เตือนวิกฤติเงินทุนอาจกลายเป็นปัญหาคอขวดที่ใหญ่ที่สุดของ AI",
+                                         "ซีอีโอของ Intel และ Broadcom เตือนว่าการเข้าถึงเงินทุนอาจเป็นอุปสรรคสำคัญต่อการเติบโตของปัญญาประดิษฐ์",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Intel, Broadcom CEOs warn capital crunch could become AI\u0027s biggest bottleneck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-7",
+                     "title":  "Microsoft พึ่งพาชิป AI ที่ผลิตเองมากขึ้น ลดการพึ่งพา Nvidia",
+                     "title_en":  "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
+                     "summary":  "ด้วยการพึ่งพาชิปของตัวเองมากขึ้น Microsoft ยืนหยัดที่จะขยายระยะขอบและสนับสนุนสแต็ค AI ของตน",
+                     "source":  "CNBC",
+                     "sourceUrl":  "https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html",
+                     "time":  "1 ชั่วโมงที่แล้ว",
+                     "publishedAt":  "2026-10-12T13:00:01Z",
+                     "category":  "TECH",
+                     "tickers":  [
+                                     "NVDA",
+                                     "MSFT"
+                                 ],
+                     "sentiment":  "NEUTRAL",
+                     "impact":  "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+                     "isHero":  false,
+                     "points":  [
+                                    "ด้วยการพึ่งพาชิปของตัวเองมากขึ้น Microsoft ยืนหยัดที่จะขยายระยะขอบและสนับสนุนสแต็ค AI ของตน",
+                                    "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 13:00 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #MSFT"
+                                ],
+                     "fullArticle":  [
+                                         "Microsoft พึ่งพาชิป AI ที่ผลิตเองมากขึ้น ลดการพึ่งพา Nvidia",
+                                         "ด้วยการพึ่งพาชิปของตัวเองมากขึ้น Microsoft ยืนหยัดที่จะขยายระยะขอบและสนับสนุนสแต็ค AI ของตน",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-8",
+                     "title":  "ความพยายามด้านพลังงานของทรัมป์ พันธบัตรยุโรป การดำเนินการปรับสมดุลสินค้าคงคลังของผู้ค้าปลีก และอื่นๆ ใน Morning Squawk",
+                     "title_en":  "Trump\u0027s energy efforts, European bonds, retailers\u0027 inventory balancing act and more in Morning Squawk",
+                     "summary":  "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+                     "source":  "CNBC",
+                     "sourceUrl":  "https://www.cnbc.com/2026/10/12/5-things-to-know-before-the-stock-market-opens.html",
+                     "time":  "1 ชั่วโมงที่แล้ว",
+                     "publishedAt":  "2026-10-12T12:40:34Z",
+                     "category":  "TECH",
+                     "tickers":  [
+                                     "TLT"
+                                 ],
+                     "sentiment":  "NEUTRAL",
+                     "impact":  "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+                     "isHero":  false,
+                     "points":  [
+                                    "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+                                    "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 12:40 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+                                ],
+                     "fullArticle":  [
+                                         "ความพยายามด้านพลังงานของทรัมป์ พันธบัตรยุโรป การดำเนินการปรับสมดุลสินค้าคงคลังของผู้ค้าปลีก และอื่นๆ ใน Morning Squawk",
+                                         "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Trump\u0027s energy efforts, European bonds, retailers\u0027 inventory balancing act and more in Morning Squawk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-9",
+                     "title":  "รางวัลโนเบลสาขาเศรษฐศาสตร์ ได้แก่ Robert E. Hall และ Michael Woodford",
+                     "title_en":  "Nobel prize in economics awarded to Robert E. Hall and Michael Woodford",
+                     "summary":  "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
+                     "source":  "CNBC",
+                     "sourceUrl":  "https://www.cnbc.com/2026/10/12/nobel-economics-prize-winner-woodford-hall.html",
+                     "time":  "1 ชั่วโมงที่แล้ว",
+                     "publishedAt":  "2026-10-12T12:38:25Z",
+                     "category":  "MACRO",
+                     "tickers":  [
+                                     "SPY",
+                                     "QQQ",
+                                     "TLT"
+                                 ],
+                     "sentiment":  "NEUTRAL",
+                     "impact":  "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+                     "isHero":  false,
+                     "points":  [
+                                    "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
+                                    "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 12:38 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+                                ],
+                     "fullArticle":  [
+                                         "รางวัลโนเบลสาขาเศรษฐศาสตร์ ได้แก่ Robert E. Hall และ Michael Woodford",
+                                         "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nobel prize in economics awarded to Robert E. Hall and Michael Woodford\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-10",
+                     "title":  "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Salesforce, First Solar, Biogen และอีกมากมาย",
+                     "title_en":  "Stocks making the biggest moves premarket: Salesforce, First Solar, Biogen \u0026 more",
+                     "summary":  "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
+                     "source":  "CNBC",
+                     "sourceUrl":  "https://www.cnbc.com/2026/10/12/stocks-making-the-biggest-moves-premarket-crm-fslr-biib.html",
+                     "time":  "1 ชั่วโมงที่แล้ว",
+                     "publishedAt":  "2026-10-12T12:20:13Z",
+                     "category":  "MACRO",
+                     "tickers":  [
+                                     "CRM"
+                                 ],
+                     "sentiment":  "NEUTRAL",
+                     "impact":  "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+                     "isHero":  false,
+                     "points":  [
+                                    "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
+                                    "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 12:20 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CRM"
+                                ],
+                     "fullArticle":  [
+                                         "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Salesforce, First Solar, Biogen และอีกมากมาย",
+                                         "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: Salesforce, First Solar, Biogen \u0026 more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-11",
+                     "title":  "เป็นเจ้าของทั้ง VOO และ QQQM หรือไม่ คุณอาจซื้อหุ้นเดิมสองครั้ง",
+                     "title_en":  "Own Both VOO and QQQM? You May Be Buying the Same Stocks Twice.",
+                     "summary":  "เป็นเจ้าของทั้ง VOO และ QQQM หรือไม่ คุณอาจซื้อหุ้นเดิมสองครั้ง",
+                     "source":  "Motley Fool",
+                     "sourceUrl":  "https://finance.yahoo.com/markets/stocks/articles/own-both-voo-qqqm-may-115500532.html",
+                     "time":  "2 ชั่วโมงที่แล้ว",
+                     "publishedAt":  "2026-10-12T11:55:00Z",
+                     "category":  "ALL",
+                     "tickers":  [
+                                     "VOO"
+                                 ],
+                     "sentiment":  "NEUTRAL",
+                     "impact":  "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+                     "isHero":  false,
+                     "points":  [
+                                    "เป็นเจ้าของทั้ง VOO และ QQQM หรือไม่ คุณอาจซื้อหุ้นเดิมสองครั้ง",
+                                    "แหล่งข่าวอ้างอิง: Motley Fool (12/10/2026 11:55 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #VOO"
+                                ],
+                     "fullArticle":  [
+                                         "เป็นเจ้าของทั้ง VOO และ QQQM หรือไม่ คุณอาจซื้อหุ้นเดิมสองครั้ง",
+                                         "เป็นเจ้าของทั้ง VOO และ QQQM หรือไม่ คุณอาจซื้อหุ้นเดิมสองครั้ง",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Own Both VOO and QQQM? You May Be Buying the Same Stocks Twice.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 },
+                 {
+                     "id":  "news-12",
+                     "title":  "อัตราเงินเฟ้อค้าปลีกของอินเดียเพิ่มขึ้นเป็น 5.54% ในเดือนกันยายน ซึ่งสูงกว่าที่ประมาณการไว้",
+                     "title_en":  "Indiaâs retail inflation jumps to 5.54% in September, above estimates",
+                     "summary":  "อัตราเงินเฟ้อของอินเดียพุ่งขึ้นเป็นเดือนที่ 11 ติดต่อกัน ส่งผลให้มีแนวโน้มขึ้นอัตราดอกเบี้ยต่อไป",
+                     "source":  "CNBC",
+                     "sourceUrl":  "https://www.cnbc.com/2026/10/12/india-inflation-oil-energy-iran-war.html",
+                     "time":  "3 ชั่วโมงที่แล้ว",
+                     "publishedAt":  "2026-10-12T10:49:24Z",
+                     "category":  "MACRO",
+                     "tickers":  [
+                                     "SPY",
+                                     "QQQ",
+                                     "TLT"
+                                 ],
+                     "sentiment":  "BULLISH",
+                     "impact":  "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+                     "isHero":  false,
+                     "points":  [
+                                    "อัตราเงินเฟ้อของอินเดียพุ่งขึ้นเป็นเดือนที่ 11 ติดต่อกัน ส่งผลให้มีแนวโน้มขึ้นอัตราดอกเบี้ยต่อไป",
+                                    "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 10:49 UTC)",
+                                    "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+                                ],
+                     "fullArticle":  [
+                                         "อัตราเงินเฟ้อค้าปลีกของอินเดียเพิ่มขึ้นเป็น 5.54% ในเดือนกันยายน ซึ่งสูงกว่าที่ประมาณการไว้",
+                                         "อัตราเงินเฟ้อของอินเดียพุ่งขึ้นเป็นเดือนที่ 11 ติดต่อกัน ส่งผลให้มีแนวโน้มขึ้นอัตราดอกเบี้ยต่อไป",
+                                         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Indiaâs retail inflation jumps to 5.54% in September, above estimates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+                                     ]
+                 }
+             ]
+}
