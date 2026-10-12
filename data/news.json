@@ -1,16 +1,188 @@
 {
-  "updated_at": "2026-10-12T14:05:45Z",
-  "updated_at_thai": "12 ต.ค. 2569 21:05 น.",
+  "updated_at": "2026-10-12T14:38:04Z",
+  "updated_at_thai": "12 ต.ค. 2569 21:38 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "ตลาดการเคลือบโพลียูเรียจะมีมูลค่าถึง 1.98 พันล้านดอลลาร์สหรัฐภายในปี 2574 ขับเคลื่อนด้วยโครงสร้างพื้นฐานและอุปสงค์ทางอุตสาหกรรม Mordor Intelligence กล่าว",
+      "title_en": "Polyurea Coatings Market to Reach USD 1.98 Bn by 2031 Driven by Infrastructure and Industrial Demand, Says Mordor Intelligence",
+      "summary": "ตลาดการเคลือบโพลียูเรียจะมีมูลค่าถึง 1.98 พันล้านดอลลาร์สหรัฐภายในปี 2574 ขับเคลื่อนด้วยโครงสร้างพื้นฐานและอุปสงค์ทางอุตสาหกรรม Mordor Intelligence กล่าว",
+      "source": "PR Newswire",
+      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/polyurea-coatings-market-reach-usd-142700620.html",
+      "time": "11 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T14:27:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "ตลาดการเคลือบโพลียูเรียจะมีมูลค่าถึง 1.98 พันล้านดอลลาร์สหรัฐภายในปี 2574 ขับเคลื่อนด้วยโครงสร้างพื้นฐานและอุปสงค์ทางอุตสาหกรรม Mordor Intelligence กล่าว",
+        "แหล่งข่าวอ้างอิง: PR Newswire (12/10/2026 14:27 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "ตลาดการเคลือบโพลียูเรียจะมีมูลค่าถึง 1.98 พันล้านดอลลาร์สหรัฐภายในปี 2574 ขับเคลื่อนด้วยโครงสร้างพื้นฐานและอุปสงค์ทางอุตสาหกรรม Mordor Intelligence กล่าว",
+        "ตลาดการเคลือบโพลียูเรียจะมีมูลค่าถึง 1.98 พันล้านดอลลาร์สหรัฐภายในปี 2574 ขับเคลื่อนด้วยโครงสร้างพื้นฐานและอุปสงค์ทางอุตสาหกรรม Mordor Intelligence กล่าว",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Polyurea Coatings Market to Reach USD 1.98 Bn by 2031 Driven by Infrastructure and Industrial Demand, Says Mordor Intelligence\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์เพิ่มขึ้นในการค้าแบบผสมผสาน; ExxonMobil ใกล้ถึงจุดซื้อเนื่องจากราคาน้ำมันพุ่งสูงขึ้น (รายงานสด)",
+      "title_en": "Stock Market Today: Dow Rises In Mixed Trade; ExxonMobil Nears Buy Point As Oil Prices Climb (Live Coverage)",
+      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์เพิ่มขึ้นในการค้าแบบผสมผสาน; ExxonMobil ใกล้ถึงจุดซื้อเนื่องจากราคาน้ำมันพุ่งสูงขึ้น (รายงานสด)",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/f6194faa-ca8b-383a-a9ab-a53b13d91fd1/stock-market-today%3A-dow-rises.html",
+      "time": "13 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T14:24:38Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "DIA",
+        "XOM"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ตลาดหุ้นวันนี้: ดาวโจนส์เพิ่มขึ้นในการค้าแบบผสมผสาน; ExxonMobil ใกล้ถึงจุดซื้อเนื่องจากราคาน้ำมันพุ่งสูงขึ้น (รายงานสด)",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (12/10/2026 14:24 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #DIA #XOM"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: ดาวโจนส์เพิ่มขึ้นในการค้าแบบผสมผสาน; ExxonMobil ใกล้ถึงจุดซื้อเนื่องจากราคาน้ำมันพุ่งสูงขึ้น (รายงานสด)",
+        "ตลาดหุ้นวันนี้: ดาวโจนส์เพิ่มขึ้นในการค้าแบบผสมผสาน; ExxonMobil ใกล้ถึงจุดซื้อเนื่องจากราคาน้ำมันพุ่งสูงขึ้น (รายงานสด)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Dow Rises In Mixed Trade; ExxonMobil Nears Buy Point As Oil Prices Climb (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "3 หุ้นพลังงานที่มีปัจจัยพื้นฐานที่น่าสงสัย",
+      "title_en": "3 Energy Stocks with Questionable Fundamentals",
+      "summary": "3 หุ้นพลังงานที่มีปัจจัยพื้นฐานที่น่าสงสัย",
+      "source": "StockStory",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/3-energy-stocks-questionable-fundamentals-142303398.html",
+      "time": "15 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T14:23:03Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "3 หุ้นพลังงานที่มีปัจจัยพื้นฐานที่น่าสงสัย",
+        "แหล่งข่าวอ้างอิง: StockStory (12/10/2026 14:23 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "3 หุ้นพลังงานที่มีปัจจัยพื้นฐานที่น่าสงสัย",
+        "3 หุ้นพลังงานที่มีปัจจัยพื้นฐานที่น่าสงสัย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Energy Stocks with Questionable Fundamentals\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
+      "title_en": "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
+      "summary": "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
+      "source": "Insider Monkey",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/arm-holdings-arm-helping-reshape-141558206.html",
+      "time": "22 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T14:15:58Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
+        "แหล่งข่าวอ้างอิง: Insider Monkey (12/10/2026 14:15 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
+        "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "Advanced Micro Devices (AMD) พบวิธีท้าทายการครอบงำของ Intel",
+      "title_en": "Advanced Micro Devices (AMD) Found a Way to Challenge Intel’s Dominance",
+      "summary": "Advanced Micro Devices (AMD) พบวิธีท้าทายการครอบงำของ Intel",
+      "source": "Insider Monkey",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/advanced-micro-devices-amd-found-141546534.html",
+      "time": "22 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T14:15:46Z",
+      "category": "MACRO",
+      "tickers": [
+        "AMD",
+        "INTC"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Advanced Micro Devices (AMD) พบวิธีท้าทายการครอบงำของ Intel",
+        "แหล่งข่าวอ้างอิง: Insider Monkey (12/10/2026 14:15 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AMD #INTC"
+      ],
+      "fullArticle": [
+        "Advanced Micro Devices (AMD) พบวิธีท้าทายการครอบงำของ Intel",
+        "Advanced Micro Devices (AMD) พบวิธีท้าทายการครอบงำของ Intel",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Advanced Micro Devices (AMD) Found a Way to Challenge Intel’s Dominance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "รางวัลโนเบลสาขาเศรษฐศาสตร์ ได้แก่ Robert E. Hall และ Michael Woodford",
+      "title_en": "Nobel prize in economics awarded to Robert E. Hall and Michael Woodford",
+      "summary": "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/12/nobel-economics-prize-winner-woodford-hall.html",
+      "time": "29 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T14:09:02Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
+        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 14:09 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "รางวัลโนเบลสาขาเศรษฐศาสตร์ ได้แก่ Robert E. Hall และ Michael Woodford",
+        "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nobel prize in economics awarded to Robert E. Hall and Michael Woodford\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
       "title": "Microsoft พึ่งพาชิป AI ที่ผลิตเองมากขึ้น ลดการพึ่งพา Nvidia",
       "title_en": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
       "summary": "ด้วยการพึ่งพาชิปของตัวเองมากขึ้น Microsoft ยืนหยัดที่จะขยายระยะขอบและสนับสนุนสแต็ค AI ของตน",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html",
-      "time": "1 นาทีที่แล้ว",
+      "time": "33 นาทีที่แล้ว",
       "publishedAt": "2026-10-12T14:04:16Z",
       "category": "TECH",
       "tickers": [
@@ -19,7 +191,7 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "ด้วยการพึ่งพาชิปของตัวเองมากขึ้น Microsoft ยืนหยัดที่จะขยายระยะขอบและสนับสนุนสแต็ค AI ของตน",
         "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 14:04 UTC)",
@@ -32,146 +204,7 @@
       ]
     },
     {
-      "id": "news-2",
-      "title": "ตลาดหุ้นวันนี้: Dow และ S&P 500 เพิ่มขึ้น Nasdaq ร่วงลงเนื่องจากราคาน้ำมันสูงขึ้น",
-      "title_en": "Stock market today: Dow and S&P 500 gain, Nasdaq slips as oil prices rise",
-      "summary": "ตลาดหุ้นวันนี้: Dow และ S&P 500 เพิ่มขึ้น Nasdaq ร่วงลงเนื่องจากราคาน้ำมันสูงขึ้น",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-monday-october-12-dow-sp-500-nasdaq-080321571.html",
-      "time": "4 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T14:01:33Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้: Dow และ S&P 500 เพิ่มขึ้น Nasdaq ร่วงลงเนื่องจากราคาน้ำมันสูงขึ้น",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (12/10/2026 14:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: Dow และ S&P 500 เพิ่มขึ้น Nasdaq ร่วงลงเนื่องจากราคาน้ำมันสูงขึ้น",
-        "ตลาดหุ้นวันนี้: Dow และ S&P 500 เพิ่มขึ้น Nasdaq ร่วงลงเนื่องจากราคาน้ำมันสูงขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow and S&P 500 gain, Nasdaq slips as oil prices rise\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "ตลาดหุ้นวันนี้ (12 ต.ค. 2569): S&P 500 พุ่งขึ้นขณะที่ Wall Street เตรียมพร้อมสำหรับสัปดาห์ที่วุ่นวาย",
-      "title_en": "Stock Market Today (Oct. 12, 2026): S&P 500 climbs as Wall Street gears up for busy week",
-      "summary": "ตลาดหุ้นวันนี้ (12 ต.ค. 2569): S&P 500 พุ่งขึ้นขณะที่ Wall Street เตรียมพร้อมสำหรับสัปดาห์ที่วุ่นวาย",
-      "source": "TheStreet",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-12-135107789.html",
-      "time": "14 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T13:51:07Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้ (12 ต.ค. 2569): S&P 500 พุ่งขึ้นขณะที่ Wall Street เตรียมพร้อมสำหรับสัปดาห์ที่วุ่นวาย",
-        "แหล่งข่าวอ้างอิง: TheStreet (12/10/2026 13:51 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้ (12 ต.ค. 2569): S&P 500 พุ่งขึ้นขณะที่ Wall Street เตรียมพร้อมสำหรับสัปดาห์ที่วุ่นวาย",
-        "ตลาดหุ้นวันนี้ (12 ต.ค. 2569): S&P 500 พุ่งขึ้นขณะที่ Wall Street เตรียมพร้อมสำหรับสัปดาห์ที่วุ่นวาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today (Oct. 12, 2026): S&P 500 climbs as Wall Street gears up for busy week\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "Wall Street เปิดตัวแบบผสมผสานก่อนรายได้ของธนาคารและข้อมูล CPI",
-      "title_en": "Wall Street opens mixed ahead of bank earnings, CPI data",
-      "summary": "Wall Street เปิดตัวแบบผสมผสานก่อนรายได้ของธนาคารและข้อมูล CPI",
-      "source": "Quartz",
-      "sourceUrl": "https://finance.yahoo.com/markets/articles/wall-street-opens-mixed-ahead-134549268.html",
-      "time": "19 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T13:45:49Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Wall Street เปิดตัวแบบผสมผสานก่อนรายได้ของธนาคารและข้อมูล CPI",
-        "แหล่งข่าวอ้างอิง: Quartz (12/10/2026 13:45 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "Wall Street เปิดตัวแบบผสมผสานก่อนรายได้ของธนาคารและข้อมูล CPI",
-        "Wall Street เปิดตัวแบบผสมผสานก่อนรายได้ของธนาคารและข้อมูล CPI",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wall Street opens mixed ahead of bank earnings, CPI data\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "ตลาดหุ้นวันนี้: S&P 500 Futures หยุดทำระดับสูงสุดเป็นประวัติการณ์ เนื่องจากน้ำมันพุ่งขึ้นนำหน้ารายได้ของธนาคาร",
-      "title_en": "Stock Market Today: S&P 500 Futures Pause Near Record Highs as Oil Rises Ahead of Bank Earnings",
-      "summary": "ตลาดหุ้นวันนี้: S&P 500 Futures หยุดทำระดับสูงสุดเป็นประวัติการณ์ เนื่องจากน้ำมันพุ่งขึ้นนำหน้ารายได้ของธนาคาร",
-      "source": "24/7 Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-p-500-134445777.html",
-      "time": "21 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T13:44:45Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "SPY"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้: S&P 500 Futures หยุดทำระดับสูงสุดเป็นประวัติการณ์ เนื่องจากน้ำมันพุ่งขึ้นนำหน้ารายได้ของธนาคาร",
-        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (12/10/2026 13:44 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: S&P 500 Futures หยุดทำระดับสูงสุดเป็นประวัติการณ์ เนื่องจากน้ำมันพุ่งขึ้นนำหน้ารายได้ของธนาคาร",
-        "ตลาดหุ้นวันนี้: S&P 500 Futures หยุดทำระดับสูงสุดเป็นประวัติการณ์ เนื่องจากน้ำมันพุ่งขึ้นนำหน้ารายได้ของธนาคาร",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: S&P 500 Futures Pause Near Record Highs as Oil Rises Ahead of Bank Earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "ราคาน้ำมันพุ่งขึ้นขณะที่ทรัมป์แสดงความคิดเห็นว่าตลาดพลังงานปั่นป่วน",
-      "title_en": "Oil rises as Trump comments roil energy markets",
-      "summary": "ราคาน้ำมันพุ่งขึ้นขณะที่ทรัมป์แสดงความคิดเห็นว่าตลาดพลังงานปั่นป่วน",
-      "source": "AFP",
-      "sourceUrl": "https://finance.yahoo.com/markets/articles/stocks-rise-oil-prices-tumble-023050308.html",
-      "time": "22 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T13:43:02Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ราคาน้ำมันพุ่งขึ้นขณะที่ทรัมป์แสดงความคิดเห็นว่าตลาดพลังงานปั่นป่วน",
-        "แหล่งข่าวอ้างอิง: AFP (12/10/2026 13:43 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ราคาน้ำมันพุ่งขึ้นขณะที่ทรัมป์แสดงความคิดเห็นว่าตลาดพลังงานปั่นป่วน",
-        "ราคาน้ำมันพุ่งขึ้นขณะที่ทรัมป์แสดงความคิดเห็นว่าตลาดพลังงานปั่นป่วน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil rises as Trump comments roil energy markets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
+      "id": "news-8",
       "title": "Intel และ CEO ของ Broadcom เตือนวิกฤติเงินทุนอาจกลายเป็นปัญหาคอขวดที่ใหญ่ที่สุดของ AI",
       "title_en": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
       "summary": "ซีอีโอของ Intel และ Broadcom เตือนว่าการเข้าถึงเงินทุนอาจเป็นอุปสรรคสำคัญต่อการเติบโตของปัญญาประดิษฐ์",
@@ -198,7 +231,7 @@
       ]
     },
     {
-      "id": "news-8",
+      "id": "news-9",
       "title": "ความพยายามด้านพลังงานของทรัมป์ พันธบัตรยุโรป การดำเนินการปรับสมดุลสินค้าคงคลังของผู้ค้าปลีก และอื่นๆ ใน Morning Squawk",
       "title_en": "Trump's energy efforts, European bonds, retailers' inventory balancing act and more in Morning Squawk",
       "summary": "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
@@ -225,42 +258,13 @@
       ]
     },
     {
-      "id": "news-9",
-      "title": "รางวัลโนเบลสาขาเศรษฐศาสตร์ ได้แก่ Robert E. Hall และ Michael Woodford",
-      "title_en": "Nobel prize in economics awarded to Robert E. Hall and Michael Woodford",
-      "summary": "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/nobel-economics-prize-winner-woodford-hall.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-12T12:38:25Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
-        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 12:38 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "รางวัลโนเบลสาขาเศรษฐศาสตร์ ได้แก่ Robert E. Hall และ Michael Woodford",
-        "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nobel prize in economics awarded to Robert E. Hall and Michael Woodford\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
       "id": "news-10",
       "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Salesforce, First Solar, Biogen และอีกมากมาย",
       "title_en": "Stocks making the biggest moves premarket: Salesforce, First Solar, Biogen & more",
       "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/12/stocks-making-the-biggest-moves-premarket-crm-fslr-biib.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-12T12:20:13Z",
       "category": "MACRO",
       "tickers": [
