@@ -1537,6 +1537,261 @@
             background: rgba(239, 68, 68, 0.2);
             color: #f87171;
         }
+
+        /* =====================================================================
+           MARKET NEWS & INTELLIGENCE HUB STYLES (ศูนย์รวมข่าว & สรุปสถานการณ์)
+           ===================================================================== */
+        .news-hub-card {
+            border: 1px solid #e2e8f0;
+            background: #ffffff;
+            transition: all 0.2s ease;
+        }
+        [data-bs-theme="dark"] .news-hub-card,
+        body.dark-mode .news-hub-card {
+            border-color: #334155;
+            background: #1e293b;
+        }
+        .news-hub-icon-box {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: #eff6ff;
+            color: #2563eb;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(37, 99, 235, 0.25);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        [data-bs-theme="dark"] .news-hub-icon-box,
+        body.dark-mode .news-hub-icon-box {
+            background: rgba(37, 99, 235, 0.15);
+            color: #60a5fa;
+            border-color: rgba(37, 99, 235, 0.35);
+        }
+        .market-breaking-news-bar {
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.08) 0%, rgba(255, 255, 255, 0.8) 100%);
+            border-color: rgba(239, 68, 68, 0.25) !important;
+        }
+        [data-bs-theme="dark"] .market-breaking-news-bar,
+        body.dark-mode .market-breaking-news-bar {
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.15) 0%, rgba(30, 41, 59, 0.8) 100%);
+            border-color: rgba(239, 68, 68, 0.35) !important;
+        }
+        .news-search-box {
+            background: #ffffff;
+            border-radius: 9999px;
+            padding: 4px 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+        }
+        [data-bs-theme="dark"] .news-search-box,
+        body.dark-mode .news-search-box {
+            background: #0f172a;
+            border-color: #334155;
+        }
+        .news-search-input {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 0.8rem;
+            width: 190px;
+            color: inherit;
+        }
+        .news-cat-pill {
+            border-radius: 9999px;
+            padding: 5px 14px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            border: 1px solid #e2e8f0;
+            background: #ffffff;
+            color: #64748b;
+            transition: all 0.15s ease;
+            cursor: pointer;
+        }
+        [data-bs-theme="dark"] .news-cat-pill,
+        body.dark-mode .news-cat-pill {
+            background: #0f172a;
+            border-color: #334155;
+            color: #94a3b8;
+        }
+        .news-cat-pill:hover {
+            border-color: #3b82f6;
+            color: #3b82f6;
+        }
+        .news-cat-pill.active {
+            background: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
+            box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+        }
+        .news-hero-container {
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+        [data-bs-theme="dark"] .news-hero-container,
+        body.dark-mode .news-hero-container {
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            border-color: #334155;
+        }
+        .news-hero-container:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+        .news-feed-item-card {
+            border-radius: 14px;
+            border: 1px solid #f1f5f9;
+            background: #ffffff;
+            padding: 12px 14px;
+            margin-bottom: 8px;
+            transition: all 0.15s ease;
+        }
+        [data-bs-theme="dark"] .news-feed-item-card,
+        body.dark-mode .news-feed-item-card {
+            background: #182234;
+            border-color: #2e3e54;
+        }
+        .news-feed-item-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .news-badge-bloomberg {
+            background: rgba(0, 102, 255, 0.12);
+            color: #0052cc;
+            font-weight: 800;
+            font-size: 0.68rem;
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+        [data-bs-theme="dark"] .news-badge-bloomberg,
+        body.dark-mode .news-badge-bloomberg {
+            background: rgba(0, 102, 255, 0.25);
+            color: #60a5fa;
+        }
+        .news-badge-reuters {
+            background: rgba(255, 128, 0, 0.12);
+            color: #d96d00;
+            font-weight: 800;
+            font-size: 0.68rem;
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+        [data-bs-theme="dark"] .news-badge-reuters,
+        body.dark-mode .news-badge-reuters {
+            background: rgba(255, 128, 0, 0.25);
+            color: #fb923c;
+        }
+        .news-badge-cnbc {
+            background: rgba(0, 51, 153, 0.12);
+            color: #003399;
+            font-weight: 800;
+            font-size: 0.68rem;
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+        [data-bs-theme="dark"] .news-badge-cnbc,
+        body.dark-mode .news-badge-cnbc {
+            background: rgba(0, 51, 153, 0.25);
+            color: #93c5fd;
+        }
+        .news-badge-wsj {
+            background: rgba(17, 24, 39, 0.12);
+            color: #111827;
+            font-weight: 800;
+            font-size: 0.68rem;
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+        [data-bs-theme="dark"] .news-badge-wsj,
+        body.dark-mode .news-badge-wsj {
+            background: rgba(255, 255, 255, 0.15);
+            color: #f1f5f9;
+        }
+        .news-badge-yahoofinance {
+            background: rgba(123, 31, 162, 0.12);
+            color: #7b1fa2;
+            font-weight: 800;
+            font-size: 0.68rem;
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+        [data-bs-theme="dark"] .news-badge-yahoofinance,
+        body.dark-mode .news-badge-yahoofinance {
+            background: rgba(123, 31, 162, 0.25);
+            color: #c084fc;
+        }
+        .news-badge-marketwatch {
+            background: rgba(16, 185, 129, 0.12);
+            color: #059669;
+            font-weight: 800;
+            font-size: 0.68rem;
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+        [data-bs-theme="dark"] .news-badge-marketwatch,
+        body.dark-mode .news-badge-marketwatch {
+            background: rgba(16, 185, 129, 0.25);
+            color: #34d399;
+        }
+        .news-sentiment-bullish {
+            background: #dcfce7;
+            color: #15803d;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        [data-bs-theme="dark"] .news-sentiment-bullish,
+        body.dark-mode .news-sentiment-bullish {
+            background: rgba(16, 185, 129, 0.2);
+            color: #4ade80;
+        }
+        .news-sentiment-bearish {
+            background: #fee2e2;
+            color: #b91c1c;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        [data-bs-theme="dark"] .news-sentiment-bearish,
+        body.dark-mode .news-sentiment-bearish {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+        .news-sentiment-neutral {
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        [data-bs-theme="dark"] .news-sentiment-neutral,
+        body.dark-mode .news-sentiment-neutral {
+            background: rgba(148, 163, 184, 0.2);
+            color: #cbd5e1;
+        }
     </style>
 </head>
 <body class="p-2 p-md-3">
@@ -2339,9 +2594,90 @@
                     </div>
                 </div>
 
+                <!-- Breaking News Ribbon / Marquee (เกาะติดข่าวด่วนสำคัญที่สุด) -->
+                <div class="market-breaking-news-bar mb-3 p-2 px-3 rounded-pill d-flex align-items-center justify-content-between gap-2 shadow-sm border" id="marketBreakingNewsBar">
+                    <div class="d-flex align-items-center gap-2 overflow-hidden text-truncate">
+                        <span class="badge bg-danger rounded-pill px-2.5 py-1 text-uppercase fw-bold" style="font-size:0.7rem; letter-spacing:0.5px;">
+                            ⚡ BREAKING NEWS
+                        </span>
+                        <span class="fw-bold text-truncate" id="breakingNewsTitle" style="font-size:0.83rem;">
+                            เฟดส่งสัญญาณดอกเบี้ยผ่อนคลาย หลังตัวเลขเงินเฟ้อชะลอตัวต่อเนื่อง หนุน S&P 500 ทำสถิติใหม่
+                        </span>
+                        <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill" id="breakingNewsSourceBadge" style="font-size:0.68rem;">Bloomberg</span>
+                    </div>
+                    <a href="https://www.bloomberg.com/markets" target="_blank" id="breakingNewsSourceLink" class="btn btn-sm btn-link p-0 text-decoration-none fw-bold text-nowrap" style="font-size:0.78rem;">
+                        อ่านต้นฉบับ ›
+                    </a>
+                </div>
+
                 <!-- 6 Macro Indices Cards (S&P 500, NDX100, VIX, Gold, WTI Crude Oil, DXY) -->
                 <div class="row g-2 mb-3" id="macroIndicesRow">
                     <!-- Populated by renderMacroIndices() -->
+                </div>
+
+                <!-- INVESTMENT NEWS & INTELLIGENCE HUB (ศูนย์รวมข่าว & บทวิเคราะห์การลงทุนสำคัญ) -->
+                <div class="card border-0 shadow-sm rounded-4 mb-4 news-hub-card overflow-hidden" id="marketNewsHubSection">
+                    <div class="p-3 p-md-4 border-bottom bg-body-tertiary">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="news-hub-icon-box shadow-sm">📰</span>
+                                <div>
+                                    <h5 class="fw-bold m-0" style="letter-spacing: -0.3px;">
+                                        ข่าวสำคัญ & เกาะติดสถานการณ์ตลาด (Market News & Intelligence)
+                                    </h5>
+                                    <small class="text-muted">
+                                        คัดสรรจากสำนักข่าวการเงินระดับโลก: Bloomberg, Reuters, CNBC, WSJ, Yahoo Finance พร้อมสรุปบทวิเคราะห์ภาษาไทย
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                <!-- Search News Input -->
+                                <div class="news-search-box shadow-sm border">
+                                    <span>🔍</span>
+                                    <input type="text" id="marketNewsSearchInput" class="news-search-input" placeholder="ค้นหาข่าวหรือชื่อหุ้น..." oninput="handleMarketNewsSearch(this.value)">
+                                </div>
+                                <!-- Refresh Button -->
+                                <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="refreshMarketNewsData(true)" title="รีเฟรชข่าวสารล่าสุด">
+                                    🔄 รีเฟรชข่าว
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Category Filter Pills -->
+                        <div class="d-flex align-items-center gap-1.5 flex-wrap pt-1" id="newsCategoryPillsContainer">
+                            <button class="news-cat-pill active" id="newsCatBtnALL" onclick="setMarketNewsCategory('ALL')">🌐 ทั้งหมด (All)</button>
+                            <button class="news-cat-pill" id="newsCatBtnPORTFOLIO" onclick="setMarketNewsCategory('PORTFOLIO')">💼 หุ้นในพอร์ตของฉัน</button>
+                            <button class="news-cat-pill" id="newsCatBtnMACRO" onclick="setMarketNewsCategory('MACRO')">🏛️ เศรษฐกิจ & ดอกเบี้ย FED</button>
+                            <button class="news-cat-pill" id="newsCatBtnTECH" onclick="setMarketNewsCategory('TECH')">🤖 กลุ่มเทคฯ & AI</button>
+                            <button class="news-cat-pill" id="newsCatBtnEARNINGS" onclick="setMarketNewsCategory('EARNINGS')">📊 ผลประกอบการ Q3-Q4</button>
+                            <button class="news-cat-pill" id="newsCatBtnCOMMODITIES" onclick="setMarketNewsCategory('COMMODITIES')">🛢️ น้ำมัน & สินค้าโภคภัณฑ์</button>
+                        </div>
+                    </div>
+
+                    <!-- News Hub Content (Hero Card on Left + Live Feed on Right) -->
+                    <div class="card-body p-3 p-md-4">
+                        <div class="row g-3">
+                            <!-- Left: Featured Story (Hero Card) -->
+                            <div class="col-xl-6 col-lg-6 col-12" id="newsHeroColumn">
+                                <!-- Populated dynamically by renderMarketNewsHero() -->
+                            </div>
+
+                            <!-- Right: News Feed List (Scrollable Cards) -->
+                            <div class="col-xl-6 col-lg-6 col-12">
+                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                    <span class="fw-bold text-muted text-uppercase" style="font-size:0.75rem; letter-spacing:0.5px;">
+                                        ⚡ สายข่าวอัปเดตล่าสุด (LIVE STREAM)
+                                    </span>
+                                    <span class="badge rounded-pill bg-body-secondary text-secondary border px-2 py-0.5" id="newsStreamCountBadge" style="font-size:0.7rem;">
+                                        8 ข่าว
+                                    </span>
+                                </div>
+                                <div id="newsFeedList" style="max-height: 480px; overflow-y: auto; padding-right: 4px;">
+                                    <!-- Populated dynamically by renderMarketNewsList() -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Top 10 Snapshot (Horizontal Scroller with high-confidence signals) -->
@@ -9186,17 +9522,373 @@
             renderMarketTop100Table();
         };
 
+        // =====================================================================
+        // MODULE: INVESTMENT NEWS & INTELLIGENCE HUB (ศูนย์รวมข่าว & สรุปสถานการณ์)
+        // =====================================================================
+
+        const marketNewsData = [
+            {
+                id: 'news-1',
+                title: 'เฟดส่งสัญญาณทิศทางดอกเบี้ยผ่อนคลาย หลังตัวเลขเงินเฟ้อชะลอตัวต่อเนื่อง หนุน S&P 500 และ Nasdaq ทำระดับสูงสุดใหม่',
+                summary: 'ดัชนีราคาผู้บริโภค (CPI) และดัชนีราคาผู้ผลิต (PPI) สหรัฐฯ ล่าสุดชะลอตัวลงสู่กรอบเป้าหมาย 2% ส่งผลให้อัตราผลตอบแทนพันธบัตรรัฐบาล 10 ปี (10Y Yield) ปรับตัวลงสู่ 3.98% หนุนสินทรัพย์เสี่ยงและดัชนีหุ้นทั่วโลกปรับตัวขึ้นอย่างแข็งแกร่ง',
+                source: 'Bloomberg',
+                sourceUrl: 'https://www.bloomberg.com/markets',
+                time: '18 นาทีที่แล้ว',
+                category: 'MACRO',
+                tickers: ['SPY', 'QQQ', 'TLT', 'DIA'],
+                sentiment: 'BULLISH',
+                isHero: true,
+                points: [
+                    'เงินเฟ้อสหรัฐฯ เข้าสู่ทิศทางชะลอตัวถาวร ผ่อนคลายแรงกดดันด้านอัตราดอกเบี้ยนโยบาย',
+                    'บอนด์ยีลด์ 10 ปี ร่วงหลุด 4.0% หนุนกระแสเงินทุนไหลเข้าหุ้นเติบโตและเทคโนโลยี',
+                    'นักวิเคราะห์ส่วนใหญ่มองเป็นปัจจัยสนับสนุนแนวโน้มผลประกอบการบริษัทจดทะเบียนใน Q4'
+                ]
+            },
+            {
+                id: 'news-2',
+                title: 'Nvidia เผยสถาปัตยกรรมชิป Blackwell ดีมานด์ทะลัก ลูกค้าคลาวด์ยักษ์ใหญ่จองคิวยาวตลอดปี',
+                summary: 'Jensen Huang ซีอีโอ Nvidia ยืนยันความต้องการชิปประมวลผล AI รุ่นใหม่สูงเป็นประวัติการณ์ โดยได้รับคำสั่งซื้อล่วงหน้าจาก Microsoft, Meta, AWS และ Google สะท้อนการลงทุน Data Center ยังอยู่ในช่วงเติบโตสูง',
+                source: 'Reuters',
+                sourceUrl: 'https://www.reuters.com/technology',
+                time: '35 นาทีที่แล้ว',
+                category: 'TECH',
+                tickers: ['NVDA', 'TSM', 'AMD', 'MSFT', 'GOOGL', 'AMZN', 'META'],
+                sentiment: 'BULLISH'
+            },
+            {
+                id: 'news-3',
+                title: 'Apple เตรียมปล่อยอัปเดต Apple Intelligence เต็มรูปแบบ หนุนยอดเปลี่ยนเครื่อง iPhone ทั่วโลก',
+                summary: 'นักวิเคราะห์จาก Morgan Stanley ระบุว่าฟีเจอร์ AI ชุดใหม่บนระบบปฏิบัติการ iOS จะจุดชนวน Supercycle รอบใหม่ของการเปลี่ยนเครื่องในกลุ่มผู้ใช้งานกว่า 300 ล้านเครื่องที่ยังใช้รุ่นเก่า',
+                source: 'CNBC',
+                sourceUrl: 'https://www.cnbc.com/technology',
+                time: '1 ชั่วโมงที่แล้ว',
+                category: 'TECH',
+                tickers: ['AAPL'],
+                sentiment: 'BULLISH'
+            },
+            {
+                id: 'news-4',
+                title: 'กลุ่มธนาคารยักษ์ใหญ่วอลล์สตรีทเปิดงบไตรมาส 3 สูงกว่าคาด รายได้วาณิชธนกิจและการเทรดฟื้นเด่น',
+                summary: 'JPMorgan Chase, Goldman Sachs, Citigroup และ Wells Fargo รายงานกำไรสุทธิดีกว่าที่นักวิเคราะห์คาดการณ์อย่างมีนัยสำคัญ ได้แรงหนุนจากการฟื้นตัวของดีลควบรวมกิจการ (M&A) และค่าธรรมเนียมจัดจำหน่ายหลักทรัพย์',
+                source: 'WSJ',
+                sourceUrl: 'https://www.wsj.com/market-data',
+                time: '2 ชั่วโมงที่แล้ว',
+                category: 'EARNINGS',
+                tickers: ['JPM', 'GS', 'C', 'BAC', 'WFC'],
+                sentiment: 'BULLISH'
+            },
+            {
+                id: 'news-5',
+                title: 'ราคาน้ำมันดิบ WTI ทรงตัวในกรอบ $74-$76 จับตาสถานการณ์ตะวันออกกลางและมาตรการกระตุ้นเศรษฐกิจจีน',
+                summary: 'ราคาน้ำมันโลกยังคงแกว่งตัวผันผวนจากความกังวลด้านอุปทานในภูมิภาคตะวันออกกลาง ขณะที่นักลงทุนประเมินผลกระทบของแพ็กเกจกระตุ้นเศรษฐกิจและการเงินชุดใหญ่จากธนาคารกลางจีน',
+                source: 'MarketWatch',
+                sourceUrl: 'https://www.marketwatch.com/investing/future/crude%20oil%20-%20electronic',
+                time: '3 ชั่วโมงที่แล้ว',
+                category: 'COMMODITIES',
+                tickers: ['XOM', 'CVX', 'USO', 'SLB'],
+                sentiment: 'NEUTRAL'
+            },
+            {
+                id: 'news-6',
+                title: 'Tesla มุ่งเน้นการขยายขีดความสามารถ AI และเครือข่ายรถยนต์ไร้คนขับ มั่นใจต้นทุนลดลงต่อเนื่อง',
+                summary: 'Elon Musk ตอกย้ำวิสัยทัศน์เปลี่ยนผ่านสู่บริษัท AI และหุ่นยนต์อัจฉริยะ โดยชี้ว่าเทคโนโลยี FSD และแพลตฟอร์มรถยนต์ไฟฟ้ารุ่นถัดไปจะเป็นหัวใจสำคัญในการทำกำไรระยะยาว',
+                source: 'Yahoo Finance',
+                sourceUrl: 'https://finance.yahoo.com/quote/TSLA',
+                time: '3 ชั่วโมงที่แล้ว',
+                category: 'TECH',
+                tickers: ['TSLA'],
+                sentiment: 'NEUTRAL'
+            },
+            {
+                id: 'news-7',
+                title: 'Eli Lilly และ Novo Nordisk เร่งทุ่มงบขยายโรงงานผลิตยา GLP-1 ตอบสนองอุปสงค์ทั่วโลก',
+                summary: 'ตลาดยารักษาโรคอ้วนและเบาหวานยังคงเติบโตอย่างก้าวกระโดด บริษัทเพิ่มเป้าหมายรายได้ทั้งปีหลังสามารถคลี่คลายปัญหาคอขวดด้านบรรจุภัณฑ์และห่วงโซ่อุปทาน',
+                source: 'Bloomberg',
+                sourceUrl: 'https://www.bloomberg.com/healthcare',
+                time: '4 ชั่วโมงที่แล้ว',
+                category: 'EARNINGS',
+                tickers: ['LLY', 'NVO'],
+                sentiment: 'BULLISH'
+            },
+            {
+                id: 'news-8',
+                title: 'IMF คงมุมมองเศรษฐกิจโลกเติบโตแบบ Soft Landing แต่เตือนความเสี่ยงเงินเฟ้อภาคบริการและหนี้สาธารณะ',
+                summary: 'รายงาน World Economic Outlook ระบุว่าเศรษฐกิจโลกมีแนวโน้มขยายตัว 3.2% ในปีนี้ โดยเศรษฐกิจสหรัฐฯ ยังคงเป็นหัวหอกสำคัญในการขับเคลื่อนการเติบโตทั่วโลก',
+                source: 'Reuters',
+                sourceUrl: 'https://www.reuters.com/markets',
+                time: '5 ชั่วโมงที่แล้ว',
+                category: 'MACRO',
+                tickers: ['SPY', 'QQQ', 'DXY', 'EEM'],
+                sentiment: 'NEUTRAL'
+            }
+        ];
+
+        let currentMarketNewsCategory = 'ALL';
+        let currentMarketNewsSearch = '';
+
+        function getNewsSourceBadgeHtml(source) {
+            const s = (source || 'News').trim();
+            const lower = s.toLowerCase().replace(/[^a-z]/g, '');
+            const classMap = {
+                'bloomberg': 'news-badge-bloomberg',
+                'reuters': 'news-badge-reuters',
+                'cnbc': 'news-badge-cnbc',
+                'wsj': 'news-badge-wsj',
+                'yahoofinance': 'news-badge-yahoofinance',
+                'marketwatch': 'news-badge-marketwatch'
+            };
+            const cls = classMap[lower] || 'badge bg-secondary';
+            return `<span class="${cls}">[${s}]</span>`;
+        }
+
+        function getNewsSentimentBadgeHtml(sentiment) {
+            if (sentiment === 'BULLISH') {
+                return `<span class="news-sentiment-bullish">🟢 หนุนตลาด (Bullish)</span>`;
+            } else if (sentiment === 'BEARISH') {
+                return `<span class="news-sentiment-bearish">🔴 ปัจจัยเสี่ยง (Bearish)</span>`;
+            }
+            return `<span class="news-sentiment-neutral">⚪ เกาะติดสถานการณ์</span>`;
+        }
+
+        window.renderMarketBreakingNews = function() {
+            const titleEl = document.getElementById('breakingNewsTitle');
+            const badgeEl = document.getElementById('breakingNewsSourceBadge');
+            const linkEl = document.getElementById('breakingNewsSourceLink');
+            if (!titleEl) return;
+
+            const hero = marketNewsData.find(x => x.isHero) || marketNewsData[0];
+            if (hero) {
+                titleEl.textContent = hero.title;
+                if (badgeEl) badgeEl.textContent = hero.source;
+                if (linkEl && hero.sourceUrl) linkEl.href = hero.sourceUrl;
+            }
+        };
+
+        window.renderMarketNewsHero = function(item) {
+            const col = document.getElementById('newsHeroColumn');
+            if (!col) return;
+            if (!item) {
+                col.innerHTML = `<div class="p-4 text-center text-muted">ไม่พบข่าวเด่นในหมวดนี้</div>`;
+                return;
+            }
+
+            const myPortfolioTickers = (typeof getUserPortfolioTickers === 'function') ? getUserPortfolioTickers() : new Set();
+            
+            // Build ticker badges
+            let tickersHtml = '';
+            if (item.tickers && Array.isArray(item.tickers)) {
+                item.tickers.forEach(tk => {
+                    const isOwned = myPortfolioTickers.has(tk.toUpperCase());
+                    tickersHtml += `
+                        <span class="badge ${isOwned ? 'bg-primary' : 'bg-body-secondary text-secondary'} border rounded-pill px-2 py-1" style="font-size:0.72rem; cursor:pointer;" onclick="if(typeof openTechnicalForTicker==='function') openTechnicalForTicker('${tk}')" title="คลิกเพื่อดูกราฟเทคนิค ${tk}">
+                            ${isOwned ? '💼 ' : ''}#${tk}
+                        </span>
+                    `;
+                });
+            }
+
+            // Build bullet points
+            let pointsHtml = '';
+            if (item.points && Array.isArray(item.points)) {
+                pointsHtml = `
+                    <ul class="mb-3 ps-3 text-muted" style="font-size:0.83rem; line-height:1.55;">
+                        ${item.points.map(pt => `<li class="mb-1">${pt}</li>`).join('')}
+                    </ul>
+                `;
+            } else {
+                pointsHtml = `<p class="text-muted mb-3" style="font-size:0.84rem; line-height:1.55;">${item.summary}</p>`;
+            }
+
+            col.innerHTML = `
+                <div class="news-hero-container shadow-sm">
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge bg-danger rounded-pill px-2.5 py-1 text-uppercase fw-bold" style="font-size:0.68rem; letter-spacing:0.5px;">
+                                    🔥 ข่าวเด่นประเด็นร้อน
+                                </span>
+                                ${getNewsSourceBadgeHtml(item.source)}
+                                <small class="text-muted" style="font-size:0.75rem;">${item.time}</small>
+                            </div>
+                            <div>
+                                ${getNewsSentimentBadgeHtml(item.sentiment)}
+                            </div>
+                        </div>
+
+                        <h5 class="fw-bold mb-2 mt-1" style="letter-spacing:-0.3px; line-height:1.45;">
+                            <a href="${item.sourceUrl}" target="_blank" class="text-decoration-none" style="color:inherit;">
+                                ${item.title}
+                            </a>
+                        </h5>
+
+                        ${pointsHtml}
+                    </div>
+
+                    <div class="pt-2 border-top border-opacity-10 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                        <div class="d-flex align-items-center gap-1.5 flex-wrap">
+                            ${tickersHtml}
+                        </div>
+                        <a href="${item.sourceUrl}" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold text-decoration-none" style="font-size:0.78rem;">
+                            อ่านข่าวต้นฉบับเต็ม (${item.source}) ›
+                        </a>
+                    </div>
+                </div>
+            `;
+        };
+
+        window.renderMarketNewsList = function(items) {
+            const listEl = document.getElementById('newsFeedList');
+            const countEl = document.getElementById('newsStreamCountBadge');
+            if (!listEl) return;
+
+            if (countEl) countEl.textContent = `${items.length} ข่าว`;
+
+            if (items.length === 0) {
+                listEl.innerHTML = `
+                    <div class="text-center py-5 text-muted">
+                        <span style="font-size: 2rem; display:block; margin-bottom: 6px;">📭</span>
+                        <div class="fw-bold" style="font-size:0.88rem;">ไม่พบข่าวสารในหมวดหมู่นี้</div>
+                        <small>ลองเปลี่ยนตัวกรอง หรือค้นหาคำอื่น</small>
+                    </div>
+                `;
+                return;
+            }
+
+            const myPortfolioTickers = (typeof getUserPortfolioTickers === 'function') ? getUserPortfolioTickers() : new Set();
+
+            let html = '';
+            items.forEach(item => {
+                let tickersHtml = '';
+                let hasPortfolioStock = false;
+                if (item.tickers && Array.isArray(item.tickers)) {
+                    item.tickers.forEach(tk => {
+                        const isOwned = myPortfolioTickers.has(tk.toUpperCase());
+                        if (isOwned) hasPortfolioStock = true;
+                        tickersHtml += `
+                            <span class="badge ${isOwned ? 'bg-primary' : 'bg-body-secondary text-secondary'} border rounded-pill px-2 py-0.5" style="font-size:0.68rem; cursor:pointer;" onclick="if(typeof openTechnicalForTicker==='function') openTechnicalForTicker('${tk}')" title="คลิกเพื่อดูกราฟเทคนิค ${tk}">
+                                #${tk}
+                            </span>
+                        `;
+                    });
+                }
+
+                html += `
+                    <div class="news-feed-item-card">
+                        <div class="d-flex justify-content-between align-items-center mb-1.5">
+                            <div class="d-flex align-items-center gap-1.5">
+                                ${getNewsSourceBadgeHtml(item.source)}
+                                <small class="text-muted" style="font-size:0.72rem;">${item.time}</small>
+                                ${hasPortfolioStock ? `<span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill" style="font-size:0.65rem; padding:2px 6px;">💼 ในพอร์ต</span>` : ''}
+                            </div>
+                            <div>
+                                ${getNewsSentimentBadgeHtml(item.sentiment)}
+                            </div>
+                        </div>
+
+                        <div class="fw-bold mb-1" style="font-size:0.88rem; line-height:1.4;">
+                            <a href="${item.sourceUrl}" target="_blank" class="text-decoration-none" style="color:inherit;">
+                                ${item.title}
+                            </a>
+                        </div>
+
+                        <p class="text-muted mb-2 text-truncate-2" style="font-size:0.78rem; line-height:1.45; margin-bottom: 6px;">
+                            ${item.summary}
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-1 pt-1">
+                            <div class="d-flex align-items-center gap-1 flex-wrap">
+                                ${tickersHtml}
+                            </div>
+                            <a href="${item.sourceUrl}" target="_blank" class="text-decoration-none fw-bold" style="font-size:0.74rem; color: #2563eb;">
+                                แหล่งข่าว (${item.source}) ›
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            listEl.innerHTML = html;
+        };
+
+        window.renderMarketNewsHub = function() {
+            const myPortfolioTickers = (typeof getUserPortfolioTickers === 'function') ? getUserPortfolioTickers() : new Set();
+            
+            // Filter news
+            let filtered = marketNewsData.filter(item => {
+                if (currentMarketNewsSearch) {
+                    const q = currentMarketNewsSearch;
+                    const matchTitle = item.title.toUpperCase().includes(q);
+                    const matchSummary = item.summary.toUpperCase().includes(q);
+                    const matchSource = item.source.toUpperCase().includes(q);
+                    const matchTickers = item.tickers && item.tickers.some(t => t.toUpperCase().includes(q));
+                    if (!matchTitle && !matchSummary && !matchSource && !matchTickers) return false;
+                }
+
+                if (currentMarketNewsCategory === 'PORTFOLIO') {
+                    if (!item.tickers || !item.tickers.some(t => myPortfolioTickers.has(t.toUpperCase()))) {
+                        return false;
+                    }
+                } else if (currentMarketNewsCategory !== 'ALL') {
+                    if (item.category !== currentMarketNewsCategory) return false;
+                }
+
+                return true;
+            });
+
+            // Hero item: pick first hero or first available
+            const heroItem = filtered.find(x => x.isHero) || filtered[0];
+            renderMarketNewsHero(heroItem);
+
+            // Feed items: remaining items (or all items if list is short)
+            const feedItems = filtered.filter(x => x.id !== (heroItem ? heroItem.id : null));
+            renderMarketNewsList(feedItems.length > 0 ? feedItems : filtered);
+        };
+
+        window.setMarketNewsCategory = function(cat) {
+            currentMarketNewsCategory = cat;
+            const container = document.getElementById('newsCategoryPillsContainer');
+            if (container) {
+                const buttons = container.querySelectorAll('.news-cat-pill');
+                buttons.forEach(btn => {
+                    const id = btn.id || '';
+                    if (id === `newsCatBtn${cat}`) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            }
+            renderMarketNewsHub();
+        };
+
+        window.handleMarketNewsSearch = function(val) {
+            currentMarketNewsSearch = (val || '').trim().toUpperCase();
+            renderMarketNewsHub();
+        };
+
+        window.refreshMarketNewsData = function(showToast) {
+            renderMarketBreakingNews();
+            renderMarketNewsHub();
+            if (showToast && typeof showNotification === 'function') {
+                showNotification("อัปเดตข่าวสารการลงทุนล่าสุดเรียบร้อยแล้ว 📰");
+            }
+        };
+
         window.refreshMarketOverviewData = function(showToast) {
+            renderMarketBreakingNews();
             renderMacroIndices();
+            renderMarketNewsHub();
             renderMarketTop10Scroller();
             renderMarketTop100Table();
             if (showToast && typeof showNotification === 'function') {
-                showNotification("รีเฟรชข้อมูล Market Overview เรียบร้อยแล้ว 🔄");
+                showNotification("รีเฟรชข้อมูล Market Overview & ข่าวสารเรียบร้อยแล้ว 🔄");
             }
         };
 
         window.renderMarketOverview = function() {
+            renderMarketBreakingNews();
             renderMacroIndices();
+            renderMarketNewsHub();
             renderMarketTop10Scroller();
             renderMarketTop100Table();
         };
