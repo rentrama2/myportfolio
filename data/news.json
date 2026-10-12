@@ -1,103 +1,240 @@
 {
-  "updated_at": "2026-10-12T14:38:04Z",
-  "updated_at_thai": "12 ต.ค. 2569 21:38 น.",
+  "updated_at": "2026-10-12T18:45:59Z",
+  "updated_at_thai": "13 ต.ค. 2569 01:45 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ตลาดการเคลือบโพลียูเรียจะมีมูลค่าถึง 1.98 พันล้านดอลลาร์สหรัฐภายในปี 2574 ขับเคลื่อนด้วยโครงสร้างพื้นฐานและอุปสงค์ทางอุตสาหกรรม Mordor Intelligence กล่าว",
-      "title_en": "Polyurea Coatings Market to Reach USD 1.98 Bn by 2031 Driven by Infrastructure and Industrial Demand, Says Mordor Intelligence",
-      "summary": "ตลาดการเคลือบโพลียูเรียจะมีมูลค่าถึง 1.98 พันล้านดอลลาร์สหรัฐภายในปี 2574 ขับเคลื่อนด้วยโครงสร้างพื้นฐานและอุปสงค์ทางอุตสาหกรรม Mordor Intelligence กล่าว",
-      "source": "PR Newswire",
-      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/polyurea-coatings-market-reach-usd-142700620.html",
-      "time": "11 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T14:27:00Z",
-      "category": "MACRO",
+      "title": "วอลล์สตรีทปะปนกับราคาน้ำมันที่พุ่งสูงขึ้น นักลงทุนรอผลประกอบการ ข้อมูลเศรษฐกิจ",
+      "title_en": "Wall Street mixed as oil prices surge, investors await earnings, economic data",
+      "summary": "วอลล์สตรีทปะปนกับราคาน้ำมันที่พุ่งสูงขึ้น นักลงทุนรอผลประกอบการ ข้อมูลเศรษฐกิจ",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-stock-futures-steady-oil-113404683.html",
+      "time": "5 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T18:40:14Z",
+      "category": "COMMODITIES",
       "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
+        "XOM",
+        "CVX"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": true,
       "points": [
-        "ตลาดการเคลือบโพลียูเรียจะมีมูลค่าถึง 1.98 พันล้านดอลลาร์สหรัฐภายในปี 2574 ขับเคลื่อนด้วยโครงสร้างพื้นฐานและอุปสงค์ทางอุตสาหกรรม Mordor Intelligence กล่าว",
-        "แหล่งข่าวอ้างอิง: PR Newswire (12/10/2026 14:27 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+        "วอลล์สตรีทปะปนกับราคาน้ำมันที่พุ่งสูงขึ้น นักลงทุนรอผลประกอบการ ข้อมูลเศรษฐกิจ",
+        "แหล่งข่าวอ้างอิง: Reuters (12/10/2026 18:40 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "ตลาดการเคลือบโพลียูเรียจะมีมูลค่าถึง 1.98 พันล้านดอลลาร์สหรัฐภายในปี 2574 ขับเคลื่อนด้วยโครงสร้างพื้นฐานและอุปสงค์ทางอุตสาหกรรม Mordor Intelligence กล่าว",
-        "ตลาดการเคลือบโพลียูเรียจะมีมูลค่าถึง 1.98 พันล้านดอลลาร์สหรัฐภายในปี 2574 ขับเคลื่อนด้วยโครงสร้างพื้นฐานและอุปสงค์ทางอุตสาหกรรม Mordor Intelligence กล่าว",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Polyurea Coatings Market to Reach USD 1.98 Bn by 2031 Driven by Infrastructure and Industrial Demand, Says Mordor Intelligence\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "วอลล์สตรีทปะปนกับราคาน้ำมันที่พุ่งสูงขึ้น นักลงทุนรอผลประกอบการ ข้อมูลเศรษฐกิจ",
+        "วอลล์สตรีทปะปนกับราคาน้ำมันที่พุ่งสูงขึ้น นักลงทุนรอผลประกอบการ ข้อมูลเศรษฐกิจ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wall Street mixed as oil prices surge, investors await earnings, economic data\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์เพิ่มขึ้นในการค้าแบบผสมผสาน; ExxonMobil ใกล้ถึงจุดซื้อเนื่องจากราคาน้ำมันพุ่งสูงขึ้น (รายงานสด)",
-      "title_en": "Stock Market Today: Dow Rises In Mixed Trade; ExxonMobil Nears Buy Point As Oil Prices Climb (Live Coverage)",
-      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์เพิ่มขึ้นในการค้าแบบผสมผสาน; ExxonMobil ใกล้ถึงจุดซื้อเนื่องจากราคาน้ำมันพุ่งสูงขึ้น (รายงานสด)",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/f6194faa-ca8b-383a-a9ab-a53b13d91fd1/stock-market-today%3A-dow-rises.html",
-      "time": "13 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T14:24:38Z",
+      "title": "อัปเดต: ดัชนีหุ้นสหรัฐผสมผสานกับน้ำหนักของเทคโนโลยี น้ำมันดิบพุ่งขึ้นท่ามกลางการโจมตีสินทรัพย์พลังงานของยูเครน",
+      "title_en": "Update: US Equity Indexes Mixed as Technology Weighs, Crude Oil Jumps Amid Strikes on Ukraine's Energy Assets",
+      "summary": "อัปเดต: ดัชนีหุ้นสหรัฐผสมผสานกับน้ำหนักของเทคโนโลยี น้ำมันดิบพุ่งขึ้นท่ามกลางการโจมตีสินทรัพย์พลังงานของยูเครน",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-technology-182620674.html",
+      "time": "19 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T18:26:20Z",
       "category": "COMMODITIES",
       "tickers": [
-        "DIA",
-        "XOM"
+        "XOM",
+        "CVX"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ตลาดหุ้นวันนี้: ดาวโจนส์เพิ่มขึ้นในการค้าแบบผสมผสาน; ExxonMobil ใกล้ถึงจุดซื้อเนื่องจากราคาน้ำมันพุ่งสูงขึ้น (รายงานสด)",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (12/10/2026 14:24 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #DIA #XOM"
+        "อัปเดต: ดัชนีหุ้นสหรัฐผสมผสานกับน้ำหนักของเทคโนโลยี น้ำมันดิบพุ่งขึ้นท่ามกลางการโจมตีสินทรัพย์พลังงานของยูเครน",
+        "แหล่งข่าวอ้างอิง: MT Newswires (12/10/2026 18:26 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "ตลาดหุ้นวันนี้: ดาวโจนส์เพิ่มขึ้นในการค้าแบบผสมผสาน; ExxonMobil ใกล้ถึงจุดซื้อเนื่องจากราคาน้ำมันพุ่งสูงขึ้น (รายงานสด)",
-        "ตลาดหุ้นวันนี้: ดาวโจนส์เพิ่มขึ้นในการค้าแบบผสมผสาน; ExxonMobil ใกล้ถึงจุดซื้อเนื่องจากราคาน้ำมันพุ่งสูงขึ้น (รายงานสด)",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Dow Rises In Mixed Trade; ExxonMobil Nears Buy Point As Oil Prices Climb (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "อัปเดต: ดัชนีหุ้นสหรัฐผสมผสานกับน้ำหนักของเทคโนโลยี น้ำมันดิบพุ่งขึ้นท่ามกลางการโจมตีสินทรัพย์พลังงานของยูเครน",
+        "อัปเดต: ดัชนีหุ้นสหรัฐผสมผสานกับน้ำหนักของเทคโนโลยี น้ำมันดิบพุ่งขึ้นท่ามกลางการโจมตีสินทรัพย์พลังงานของยูเครน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Indexes Mixed as Technology Weighs, Crude Oil Jumps Amid Strikes on Ukraine's Energy Assets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-3",
-      "title": "3 หุ้นพลังงานที่มีปัจจัยพื้นฐานที่น่าสงสัย",
-      "title_en": "3 Energy Stocks with Questionable Fundamentals",
-      "summary": "3 หุ้นพลังงานที่มีปัจจัยพื้นฐานที่น่าสงสัย",
-      "source": "StockStory",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/3-energy-stocks-questionable-fundamentals-142303398.html",
-      "time": "15 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T14:23:03Z",
+      "title": "ตลาดกระทิงมีอายุครบ 4 ปีในวันจันทร์ นักลงทุนกล่าวว่าการมีอายุครบ 5 ปีอาจเป็นเรื่องท้าทาย",
+      "title_en": "The bull market turned 4 years old on Monday. Investors say reaching a fifth birthday could be challenging",
+      "summary": "S&P 500 เพิ่มขึ้นเกือบ 120% นับตั้งแต่ปิดต่ำสุดในวันที่ 12 ต.ค. 2022",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/12/the-bull-market-just-turned-four-after-climbing-a-wall-of-worry.html",
+      "time": "27 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T18:18:39Z",
       "category": "MACRO",
       "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
+        "SPY"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "3 หุ้นพลังงานที่มีปัจจัยพื้นฐานที่น่าสงสัย",
-        "แหล่งข่าวอ้างอิง: StockStory (12/10/2026 14:23 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+        "S&P 500 เพิ่มขึ้นเกือบ 120% นับตั้งแต่ปิดต่ำสุดในวันที่ 12 ต.ค. 2022",
+        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 18:18 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY"
       ],
       "fullArticle": [
-        "3 หุ้นพลังงานที่มีปัจจัยพื้นฐานที่น่าสงสัย",
-        "3 หุ้นพลังงานที่มีปัจจัยพื้นฐานที่น่าสงสัย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Energy Stocks with Questionable Fundamentals\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตลาดกระทิงมีอายุครบ 4 ปีในวันจันทร์ นักลงทุนกล่าวว่าการมีอายุครบ 5 ปีอาจเป็นเรื่องท้าทาย",
+        "S&P 500 เพิ่มขึ้นเกือบ 120% นับตั้งแต่ปิดต่ำสุดในวันที่ 12 ต.ค. 2022",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"The bull market turned 4 years old on Monday. Investors say reaching a fifth birthday could be challenging\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-4",
-      "title": "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
-      "title_en": "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
-      "summary": "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
-      "source": "Insider Monkey",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/arm-holdings-arm-helping-reshape-141558206.html",
-      "time": "22 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T14:15:58Z",
+      "title": "IonQ เข้าซื้อกิจการ Elisity บริษัทรักษาความปลอดภัยทางไซเบอร์ด้วยข้อตกลงมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
+      "title_en": "IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion",
+      "summary": "แพลตฟอร์มคอมพิวเตอร์ควอนตัมกำลังซื้อบริษัทรักษาความปลอดภัยทางไซเบอร์ Elisity ในข้อตกลงหุ้นทั้งหมดมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/12/ionq-elisity-acquisition-cybersecurity.html",
+      "time": "31 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T18:14:45Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "แพลตฟอร์มคอมพิวเตอร์ควอนตัมกำลังซื้อบริษัทรักษาความปลอดภัยทางไซเบอร์ Elisity ในข้อตกลงหุ้นทั้งหมดมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
+        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 18:14 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "IonQ เข้าซื้อกิจการ Elisity บริษัทรักษาความปลอดภัยทางไซเบอร์ด้วยข้อตกลงมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
+        "แพลตฟอร์มคอมพิวเตอร์ควอนตัมกำลังซื้อบริษัทรักษาความปลอดภัยทางไซเบอร์ Elisity ในข้อตกลงหุ้นทั้งหมดมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "Wall Street มีการซื้อขายใกล้ระดับสูงสุดเป็นประวัติการณ์ คนรวยที่สุด 1% เป็นเจ้าของความมั่งคั่งในหุ้นของอเมริกามากกว่าครึ่งหนึ่ง",
+      "title_en": "Wall Street Is Trading Near Record Highs. The Richest 1% Own More Than Half Of America's Stock Wealth.",
+      "summary": "Wall Street มีการซื้อขายใกล้ระดับสูงสุดเป็นประวัติการณ์ คนรวยที่สุด 1% เป็นเจ้าของความมั่งคั่งในหุ้นของอเมริกามากกว่าครึ่งหนึ่ง",
+      "source": "International Business Times",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/wall-street-trading-near-record-180638937.html",
+      "time": "39 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T18:06:38Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Wall Street มีการซื้อขายใกล้ระดับสูงสุดเป็นประวัติการณ์ คนรวยที่สุด 1% เป็นเจ้าของความมั่งคั่งในหุ้นของอเมริกามากกว่าครึ่งหนึ่ง",
+        "แหล่งข่าวอ้างอิง: International Business Times (12/10/2026 18:06 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Wall Street มีการซื้อขายใกล้ระดับสูงสุดเป็นประวัติการณ์ คนรวยที่สุด 1% เป็นเจ้าของความมั่งคั่งในหุ้นของอเมริกามากกว่าครึ่งหนึ่ง",
+        "Wall Street มีการซื้อขายใกล้ระดับสูงสุดเป็นประวัติการณ์ คนรวยที่สุด 1% เป็นเจ้าของความมั่งคั่งในหุ้นของอเมริกามากกว่าครึ่งหนึ่ง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wall Street Is Trading Near Record Highs. The Richest 1% Own More Than Half Of America's Stock Wealth.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "Exxon และ Oil Giants มีคะแนนซื้อสูงสุดหลังเหตุโจมตีสนามบินซาอุดีอาระเบีย",
+      "title_en": "Exxon, Oil Giants Top Buy Points After Deadly Saudi Airport Attacks",
+      "summary": "Exxon และ Oil Giants มีคะแนนซื้อสูงสุดหลังเหตุโจมตีสนามบินซาอุดีอาระเบีย",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/74b3cc80-b63c-34db-8188-25b254ce30d7/exxon%2C-oil-giants-top-buy.html",
+      "time": "39 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T18:06:35Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Exxon และ Oil Giants มีคะแนนซื้อสูงสุดหลังเหตุโจมตีสนามบินซาอุดีอาระเบีย",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (12/10/2026 18:06 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM"
+      ],
+      "fullArticle": [
+        "Exxon และ Oil Giants มีคะแนนซื้อสูงสุดหลังเหตุโจมตีสนามบินซาอุดีอาระเบีย",
+        "Exxon และ Oil Giants มีคะแนนซื้อสูงสุดหลังเหตุโจมตีสนามบินซาอุดีอาระเบีย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Exxon, Oil Giants Top Buy Points After Deadly Saudi Airport Attacks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "อัปเดต: หุ้นส่วนใหญ่ร่วงลงในระหว่างวัน นำหน้ารายรับของธนาคารยักษ์ใหญ่",
+      "title_en": "Update: Equities Mostly Down Intraday Ahead of Big Bank Earnings",
+      "summary": "อัปเดต: หุ้นส่วนใหญ่ร่วงลงในระหว่างวัน นำหน้ารายรับของธนาคารยักษ์ใหญ่",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/equities-mostly-down-intraday-ahead-175906983.html",
+      "time": "46 นาทีที่แล้ว",
+      "publishedAt": "2026-10-12T17:59:06Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "อัปเดต: หุ้นส่วนใหญ่ร่วงลงในระหว่างวัน นำหน้ารายรับของธนาคารยักษ์ใหญ่",
+        "แหล่งข่าวอ้างอิง: MT Newswires (12/10/2026 17:59 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "อัปเดต: หุ้นส่วนใหญ่ร่วงลงในระหว่างวัน นำหน้ารายรับของธนาคารยักษ์ใหญ่",
+        "อัปเดต: หุ้นส่วนใหญ่ร่วงลงในระหว่างวัน นำหน้ารายรับของธนาคารยักษ์ใหญ่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: Equities Mostly Down Intraday Ahead of Big Bank Earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "Meta เปิดตัวโมเดล Muse Wonder AI ในการทดสอบความเต็มใจที่จะจ่ายเงินของผู้ใช้ครั้งล่าสุด",
+      "title_en": "Meta debuts Muse Wonder AI model in latest test of users' willingness to pay",
+      "summary": "Meta เปิดตัว Muse Wonder ซึ่งเป็นโมเดล AI ล่าสุด แต่ผู้ใช้ต้องชำระค่าสมัครสมาชิกแอป Muse เพื่อเข้าถึง",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/12/meta-muse-wonder-ai-model-agent.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-12T17:34:35Z",
+      "category": "TECH",
+      "tickers": [
+        "META"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Meta เปิดตัว Muse Wonder ซึ่งเป็นโมเดล AI ล่าสุด แต่ผู้ใช้ต้องชำระค่าสมัครสมาชิกแอป Muse เพื่อเข้าถึง",
+        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 17:34 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
+      ],
+      "fullArticle": [
+        "Meta เปิดตัวโมเดล Muse Wonder AI ในการทดสอบความเต็มใจที่จะจ่ายเงินของผู้ใช้ครั้งล่าสุด",
+        "Meta เปิดตัว Muse Wonder ซึ่งเป็นโมเดล AI ล่าสุด แต่ผู้ใช้ต้องชำระค่าสมัครสมาชิกแอป Muse เพื่อเข้าถึง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta debuts Muse Wonder AI model in latest test of users' willingness to pay\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "อาจจำเป็นต้องมีอัตราที่สูงขึ้นเพื่อหลีกเลี่ยง 'กรอบความคิดเงินเฟ้อ' ที่ครอบงำ Hammack ของเฟดกล่าว",
+      "title_en": "Higher rates could be needed to avoid 'inflationary mindset' taking hold, says Fed's Hammack",
+      "summary": "ประธานเฟดคลีฟแลนด์กล่าวว่าจำเป็นต้องมีนโยบายการเงินที่เข้มงวดมากขึ้นเพื่อลดอัตราเงินเฟ้อ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/12/beth-hammack-fed-inflation-policy.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-12T17:15:21Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -108,52 +245,53 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
-        "แหล่งข่าวอ้างอิง: Insider Monkey (12/10/2026 14:15 UTC)",
+        "ประธานเฟดคลีฟแลนด์กล่าวว่าจำเป็นต้องมีนโยบายการเงินที่เข้มงวดมากขึ้นเพื่อลดอัตราเงินเฟ้อ",
+        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 17:15 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
-        "Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Arm Holdings (ARM) Is Helping Reshape the Future of Computing: Here’s Why\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "อาจจำเป็นต้องมีอัตราที่สูงขึ้นเพื่อหลีกเลี่ยง 'กรอบความคิดเงินเฟ้อ' ที่ครอบงำ Hammack ของเฟดกล่าว",
+        "ประธานเฟดคลีฟแลนด์กล่าวว่าจำเป็นต้องมีนโยบายการเงินที่เข้มงวดมากขึ้นเพื่อลดอัตราเงินเฟ้อ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Higher rates could be needed to avoid 'inflationary mindset' taking hold, says Fed's Hammack\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-5",
-      "title": "Advanced Micro Devices (AMD) พบวิธีท้าทายการครอบงำของ Intel",
-      "title_en": "Advanced Micro Devices (AMD) Found a Way to Challenge Intel’s Dominance",
-      "summary": "Advanced Micro Devices (AMD) พบวิธีท้าทายการครอบงำของ Intel",
-      "source": "Insider Monkey",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/advanced-micro-devices-amd-found-141546534.html",
-      "time": "22 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T14:15:46Z",
+      "id": "news-10",
+      "title": "อัตราเงินเฟ้อมีแนวโน้มที่จะถึงจุดสูงสุดในปี 2569 แต่จะยังคงเหนียวแน่นตามการคาดการณ์ของตลาด",
+      "title_en": "Inflation likely peaked for 2026 but will remain sticky, according to prediction markets",
+      "summary": "ผู้ค้าคิดว่ามีโอกาสเพียงเล็กน้อยที่อัตราเงินเฟ้อพื้นฐานซึ่งไม่รวมราคาอาหารและพลังงานจะลดลงเหลือ 2.2% ในปีนี้",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/12/inflation-will-remain-sticky-in-2026-according-to-prediction-markets.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-12T15:37:26Z",
       "category": "MACRO",
       "tickers": [
-        "AMD",
-        "INTC"
+        "SPY",
+        "QQQ",
+        "TLT"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "Advanced Micro Devices (AMD) พบวิธีท้าทายการครอบงำของ Intel",
-        "แหล่งข่าวอ้างอิง: Insider Monkey (12/10/2026 14:15 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AMD #INTC"
+        "ผู้ค้าคิดว่ามีโอกาสเพียงเล็กน้อยที่อัตราเงินเฟ้อพื้นฐานซึ่งไม่รวมราคาอาหารและพลังงานจะลดลงเหลือ 2.2% ในปีนี้",
+        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 15:37 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "Advanced Micro Devices (AMD) พบวิธีท้าทายการครอบงำของ Intel",
-        "Advanced Micro Devices (AMD) พบวิธีท้าทายการครอบงำของ Intel",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Advanced Micro Devices (AMD) Found a Way to Challenge Intel’s Dominance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "อัตราเงินเฟ้อมีแนวโน้มที่จะถึงจุดสูงสุดในปี 2569 แต่จะยังคงเหนียวแน่นตามการคาดการณ์ของตลาด",
+        "ผู้ค้าคิดว่ามีโอกาสเพียงเล็กน้อยที่อัตราเงินเฟ้อพื้นฐานซึ่งไม่รวมราคาอาหารและพลังงานจะลดลงเหลือ 2.2% ในปีนี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Inflation likely peaked for 2026 but will remain sticky, according to prediction markets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-6",
+      "id": "news-11",
       "title": "รางวัลโนเบลสาขาเศรษฐศาสตร์ ได้แก่ Robert E. Hall และ Michael Woodford",
       "title_en": "Nobel prize in economics awarded to Robert E. Hall and Michael Woodford",
       "summary": "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/12/nobel-economics-prize-winner-woodford-hall.html",
-      "time": "29 นาทีที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-12T14:09:02Z",
       "category": "MACRO",
       "tickers": [
@@ -176,13 +314,13 @@
       ]
     },
     {
-      "id": "news-7",
+      "id": "news-12",
       "title": "Microsoft พึ่งพาชิป AI ที่ผลิตเองมากขึ้น ลดการพึ่งพา Nvidia",
       "title_en": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
       "summary": "ด้วยการพึ่งพาชิปของตัวเองมากขึ้น Microsoft ยืนหยัดที่จะขยายระยะขอบและสนับสนุนสแต็ค AI ของตน",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html",
-      "time": "33 นาทีที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-12T14:04:16Z",
       "category": "TECH",
       "tickers": [
@@ -201,143 +339,6 @@
         "Microsoft พึ่งพาชิป AI ที่ผลิตเองมากขึ้น ลดการพึ่งพา Nvidia",
         "ด้วยการพึ่งพาชิปของตัวเองมากขึ้น Microsoft ยืนหยัดที่จะขยายระยะขอบและสนับสนุนสแต็ค AI ของตน",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "Intel และ CEO ของ Broadcom เตือนวิกฤติเงินทุนอาจกลายเป็นปัญหาคอขวดที่ใหญ่ที่สุดของ AI",
-      "title_en": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
-      "summary": "ซีอีโอของ Intel และ Broadcom เตือนว่าการเข้าถึงเงินทุนอาจเป็นอุปสรรคสำคัญต่อการเติบโตของปัญญาประดิษฐ์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/intel-broadcom-ceos-warn-capital-crunch-could-become-ai-bottleneck.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-12T13:04:31Z",
-      "category": "TECH",
-      "tickers": [
-        "INTC"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "ซีอีโอของ Intel และ Broadcom เตือนว่าการเข้าถึงเงินทุนอาจเป็นอุปสรรคสำคัญต่อการเติบโตของปัญญาประดิษฐ์",
-        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 13:04 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #INTC"
-      ],
-      "fullArticle": [
-        "Intel และ CEO ของ Broadcom เตือนวิกฤติเงินทุนอาจกลายเป็นปัญหาคอขวดที่ใหญ่ที่สุดของ AI",
-        "ซีอีโอของ Intel และ Broadcom เตือนว่าการเข้าถึงเงินทุนอาจเป็นอุปสรรคสำคัญต่อการเติบโตของปัญญาประดิษฐ์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "ความพยายามด้านพลังงานของทรัมป์ พันธบัตรยุโรป การดำเนินการปรับสมดุลสินค้าคงคลังของผู้ค้าปลีก และอื่นๆ ใน Morning Squawk",
-      "title_en": "Trump's energy efforts, European bonds, retailers' inventory balancing act and more in Morning Squawk",
-      "summary": "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/5-things-to-know-before-the-stock-market-opens.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-12T12:40:34Z",
-      "category": "TECH",
-      "tickers": [
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 12:40 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
-      ],
-      "fullArticle": [
-        "ความพยายามด้านพลังงานของทรัมป์ พันธบัตรยุโรป การดำเนินการปรับสมดุลสินค้าคงคลังของผู้ค้าปลีก และอื่นๆ ใน Morning Squawk",
-        "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Trump's energy efforts, European bonds, retailers' inventory balancing act and more in Morning Squawk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Salesforce, First Solar, Biogen และอีกมากมาย",
-      "title_en": "Stocks making the biggest moves premarket: Salesforce, First Solar, Biogen & more",
-      "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/stocks-making-the-biggest-moves-premarket-crm-fslr-biib.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-12T12:20:13Z",
-      "category": "MACRO",
-      "tickers": [
-        "CRM"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
-        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 12:20 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CRM"
-      ],
-      "fullArticle": [
-        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Salesforce, First Solar, Biogen และอีกมากมาย",
-        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: Salesforce, First Solar, Biogen & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "เป็นเจ้าของทั้ง VOO และ QQQM หรือไม่ คุณอาจซื้อหุ้นเดิมสองครั้ง",
-      "title_en": "Own Both VOO and QQQM? You May Be Buying the Same Stocks Twice.",
-      "summary": "เป็นเจ้าของทั้ง VOO และ QQQM หรือไม่ คุณอาจซื้อหุ้นเดิมสองครั้ง",
-      "source": "Motley Fool",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/own-both-voo-qqqm-may-115500532.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-12T11:55:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "VOO"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "เป็นเจ้าของทั้ง VOO และ QQQM หรือไม่ คุณอาจซื้อหุ้นเดิมสองครั้ง",
-        "แหล่งข่าวอ้างอิง: Motley Fool (12/10/2026 11:55 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #VOO"
-      ],
-      "fullArticle": [
-        "เป็นเจ้าของทั้ง VOO และ QQQM หรือไม่ คุณอาจซื้อหุ้นเดิมสองครั้ง",
-        "เป็นเจ้าของทั้ง VOO และ QQQM หรือไม่ คุณอาจซื้อหุ้นเดิมสองครั้ง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Own Both VOO and QQQM? You May Be Buying the Same Stocks Twice.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "อัตราเงินเฟ้อค้าปลีกของอินเดียเพิ่มขึ้นเป็น 5.54% ในเดือนกันยายน ซึ่งสูงกว่าการคาดการณ์",
-      "title_en": "India’s retail inflation jumps to 5.54% in September, above estimates",
-      "summary": "India inflations jumps for the 11-straight month, raising prospects of a further interest rate hike",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/india-inflation-oil-energy-iran-war.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-12T10:49:24Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "India inflations jumps for the 11-straight month, raising prospects of a further interest rate hike",
-        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 10:49 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "อัตราเงินเฟ้อค้าปลีกของอินเดียเพิ่มขึ้นเป็น 5.54% ในเดือนกันยายน ซึ่งสูงกว่าการคาดการณ์",
-        "India inflations jumps for the 11-straight month, raising prospects of a further interest rate hike",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"India’s retail inflation jumps to 5.54% in September, above estimates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
