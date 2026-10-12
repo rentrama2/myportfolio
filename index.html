@@ -2751,7 +2751,7 @@
                             <button class="market-cat-btn" id="marketCatBtnUS" onclick="setMarketOverviewCategory('US')">🇺🇸 US Stocks</button>
                             <button class="market-cat-btn" id="marketCatBtnETF" onclick="setMarketOverviewCategory('ETF')">📊 ETF</button>
                         </div>
-                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="refreshMarketOverviewData(true)" title="รีเฟรชข้อมูลภาพรวมตลาด">
+                        <button id="btnRefreshMarketOverview" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="refreshMarketOverviewData(true)" title="รีเฟรชข้อมูลภาพรวมตลาด">
                             🔄 รีเฟรช
                         </button>
                     </div>
@@ -6364,6 +6364,9 @@
                                 }
                                 localStorage.setItem('myMarketIndices', JSON.stringify(marketIndices));
                                 renderMarketIndicesUI();
+                                if (typeof renderMacroIndices === 'function') {
+                                    renderMacroIndices();
+                                }
                             }
                             localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
                             if (typeof renderTechWatchlist === 'function') {
@@ -6412,11 +6415,16 @@
             return null;
         }
 
-        // --- US Market Indices (^DJI, ^GSPC, ^IXIC) ---
+        // --- US Market & Macro Indices (^DJI, ^GSPC, ^IXIC, ^NDX, ^VIX, GC=F, CL=F, DX-Y.NYB) ---
         let marketIndices = {
             "^DJI": { name: "Dow Jones", price: 42313.0, prevClose: 42175.09, change: 137.91, changePct: 0.33, updatedAt: "ล่าสุด" },
-            "^GSPC": { name: "S&P 500", price: 5738.17, prevClose: 5712.37, change: 25.8, changePct: 0.45, updatedAt: "ล่าสุด" },
-            "^IXIC": { name: "Nasdaq", price: 18179.98, prevClose: 18062.78, change: 117.2, changePct: 0.65, updatedAt: "ล่าสุด" }
+            "^GSPC": { name: "S&P 500", price: 5815.03, prevClose: 5790.20, change: 24.83, changePct: 0.43, updatedAt: "ล่าสุด" },
+            "^IXIC": { name: "Nasdaq", price: 18179.98, prevClose: 18062.78, change: 117.2, changePct: 0.65, updatedAt: "ล่าสุด" },
+            "^NDX": { name: "NDX100", price: 20248.50, prevClose: 20120.10, change: 128.40, changePct: 0.64, updatedAt: "ล่าสุด" },
+            "^VIX": { name: "VIX Index", price: 15.20, prevClose: 15.65, change: -0.45, changePct: -2.88, updatedAt: "ล่าสุด" },
+            "GC=F": { name: "Gold (XAU)", price: 2657.40, prevClose: 2648.20, change: 9.20, changePct: 0.35, updatedAt: "ล่าสุด" },
+            "CL=F": { name: "WTI Crude Oil", price: 71.35, prevClose: 72.10, change: -0.75, changePct: -1.04, updatedAt: "ล่าสุด" },
+            "DX-Y.NYB": { name: "DXY Index", price: 102.90, prevClose: 102.65, change: 0.25, changePct: 0.24, updatedAt: "ล่าสุด" }
         };
 
         window.initMarketIndices = function() {
@@ -6587,12 +6595,14 @@
             const now = new Date();
             const timeStr = now.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' }) + ' น.';
 
-            await Promise.all(['^DJI', '^GSPC', '^IXIC'].map(async sym => {
+            const symbols = ['^DJI', '^GSPC', '^IXIC', '^NDX', '^VIX', 'GC=F', 'CL=F', 'DX-Y.NYB'];
+            await Promise.all(symbols.map(async sym => {
                 try {
                     const res = await fetchMarketIndexFromYahoo(sym);
                     if (res) {
                         res.updatedAt = timeStr;
-                        marketIndices[sym] = { ...marketIndices[sym], ...res };
+                        res.isLive = true;
+                        marketIndices[sym] = { ...(marketIndices[sym] || {}), ...res };
                         updatedCount++;
                     }
                 } catch(e) {}
@@ -6601,10 +6611,17 @@
             if (updatedCount > 0) {
                 localStorage.setItem('myMarketIndices', JSON.stringify(marketIndices));
                 renderMarketIndicesUI();
+                if (typeof renderMacroIndices === 'function') {
+                    renderMacroIndices();
+                }
             } else if (isManual && timeEl) {
                 renderMarketIndicesUI();
+                if (typeof renderMacroIndices === 'function') {
+                    renderMacroIndices();
+                }
             }
             updateUSMarketStatusUI();
+            return updatedCount;
         };
 
         window.updateAllPricesAndFx = async function(isManual = true) {
@@ -9067,12 +9084,12 @@
         }
 
         const macroIndicesData = [
-            { id: 'SP500', name: 'S&P 500', symbol: '^GSPC', value: '7,811.54', changePct: 2.80, flag: '🇺🇸', seed: 101 },
-            { id: 'NDX', name: 'NDX100', symbol: '^NDX', value: '30,883.15', changePct: 6.11, flag: '🇺🇸', seed: 202 },
-            { id: 'VIX', name: 'VIX Index', symbol: '^VIX', value: '14.84', changePct: -8.84, flag: '📉', seed: 303 },
-            { id: 'GOLD', name: 'Gold (XAU)', symbol: 'GC=F', value: '$4,220.30', changePct: -5.39, flag: '🪙', seed: 404 },
-            { id: 'WTI', name: 'WTI Crude Oil', symbol: 'CL=F', value: '$91.66', changePct: -4.57, flag: '🛢️', seed: 505 },
-            { id: 'DXY', name: 'DXY Index', symbol: 'DX-Y.NYB', value: '102.23', changePct: 3.50, flag: '💵', seed: 606 }
+            { id: 'SP500', name: 'S&P 500', symbol: '^GSPC', value: '5,815.03', changePct: 0.43, flag: '🇺🇸', seed: 101, prefix: '' },
+            { id: 'NDX', name: 'NDX100', symbol: '^NDX', value: '20,248.50', changePct: 0.64, flag: '🇺🇸', seed: 202, prefix: '' },
+            { id: 'VIX', name: 'VIX Index', symbol: '^VIX', value: '15.20', changePct: -2.88, flag: '📉', seed: 303, prefix: '' },
+            { id: 'GOLD', name: 'Gold (XAU)', symbol: 'GC=F', value: '$2,657.40', changePct: 0.35, flag: '🪙', seed: 404, prefix: '$' },
+            { id: 'WTI', name: 'WTI Crude Oil', symbol: 'CL=F', value: '$71.35', changePct: -1.04, flag: '🛢️', seed: 505, prefix: '$' },
+            { id: 'DXY', name: 'DXY Index', symbol: 'DX-Y.NYB', value: '102.90', changePct: 0.24, flag: '💵', seed: 606, prefix: '' }
         ];
 
         const top10SnapshotData = [
@@ -9364,22 +9381,41 @@
 
             let html = '';
             macroIndicesData.forEach(item => {
-                const isPos = item.changePct >= 0;
+                const liveObj = (typeof marketIndices !== 'undefined' && marketIndices[item.symbol]) ? marketIndices[item.symbol] : null;
+
+                let displayVal = item.value;
+                let changePct = item.changePct;
+                let isLive = false;
+
+                if (liveObj && liveObj.price) {
+                    const prefix = item.prefix || (item.id === 'GOLD' || item.id === 'WTI' ? '$' : '');
+                    displayVal = prefix + Number(liveObj.price).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                    if (typeof liveObj.changePct === 'number') {
+                        changePct = liveObj.changePct;
+                    }
+                    isLive = true;
+                }
+
+                const isPos = changePct >= 0;
                 const sign = isPos ? '+' : '';
                 const badgeClass = isPos ? 'bg-success-subtle text-success border-success-subtle' : 'bg-danger-subtle text-danger border-danger-subtle';
                 const spark = generateSvgSparkline(item.seed, isPos, 70, 24);
+                const livePill = isLive ? `<span class="badge bg-success text-white py-0 px-1" style="font-size: 0.58rem; letter-spacing: 0.5px;">LIVE</span>` : '';
 
                 html += `
                     <div class="col-xl-2 col-md-4 col-6">
                         <div class="market-macro-card">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <span class="fw-bold text-muted small text-truncate" title="${item.name}">${item.flag} ${item.name}</span>
-                                <span class="badge border ${badgeClass} fw-bold" style="font-size: 0.68rem; padding: 2px 6px;">
-                                    ${sign}${item.changePct.toFixed(2)}%
-                                </span>
+                                <div class="d-flex align-items-center gap-1">
+                                    ${livePill}
+                                    <span class="badge border ${badgeClass} fw-bold" style="font-size: 0.68rem; padding: 2px 6px;">
+                                        ${sign}${changePct.toFixed(2)}%
+                                    </span>
+                                </div>
                             </div>
                             <div class="d-flex justify-content-between align-items-end mt-1">
-                                <div class="fw-bold" style="font-size: 1.05rem; letter-spacing: -0.3px;">${item.value}</div>
+                                <div class="fw-bold" style="font-size: 1.05rem; letter-spacing: -0.3px;">${displayVal}</div>
                                 <div class="ms-1 flex-shrink-0">${spark}</div>
                             </div>
                         </div>
@@ -10267,12 +10303,32 @@
             }
         };
 
-        window.refreshMarketOverviewData = function(showToast) {
-            renderMacroIndices();
-            renderMarketTop10Scroller();
-            renderMarketTop100Table();
-            if (showToast && typeof showNotification === 'function') {
-                showNotification("รีเฟรชข้อมูลภาพรวมตลาดเรียบร้อยแล้ว 🔄");
+        window.refreshMarketOverviewData = async function(showToast) {
+            const btn = document.getElementById('btnRefreshMarketOverview');
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = '⏳ กำลังดึงสด...';
+            }
+            try {
+                if (typeof loadStaticPrices === 'function') {
+                    await loadStaticPrices();
+                }
+                if (typeof refreshMarketIndices === 'function') {
+                    await refreshMarketIndices(false);
+                }
+            } catch(e) {
+                console.warn("Market overview refresh error:", e);
+            } finally {
+                renderMacroIndices();
+                renderMarketTop10Scroller();
+                renderMarketTop100Table();
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = '🔄 รีเฟรช';
+                }
+                if (showToast && typeof showNotification === 'function') {
+                    showNotification("อัปเดตข้อมูลดัชนีภาพรวมตลาดแบบ Real-time เรียบร้อยแล้ว ⚡");
+                }
             }
         };
 

@@ -125,11 +125,16 @@ def main():
     usd_thb = fetch_usd_thb() or existing_data.get("fx", {}).get("USDTHB", 33.40)
     print(f"  USD/THB: {usd_thb}")
 
-    print("Fetching US Market Indices (^DJI, ^GSPC, ^IXIC)...")
+    print("Fetching US & Global Market Indices (^DJI, ^GSPC, ^IXIC, ^NDX, ^VIX, GC=F, CL=F, DX-Y.NYB)...")
     indices_config = {
         "^DJI": "Dow Jones",
         "^GSPC": "S&P 500",
-        "^IXIC": "Nasdaq"
+        "^IXIC": "Nasdaq",
+        "^NDX": "NDX 100",
+        "^VIX": "VIX Index",
+        "GC=F": "Gold (XAU)",
+        "CL=F": "WTI Crude Oil",
+        "DX-Y.NYB": "DXY Index"
     }
     indices = existing_data.get("indices", {})
     for sym, name in indices_config.items():

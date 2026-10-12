@@ -25,6 +25,41 @@
       "change": -56.22,
       "changePct": -0.21,
       "name": "Nasdaq"
+    },
+    "^NDX": {
+      "price": 20248.50,
+      "prevClose": 20117.80,
+      "change": 130.70,
+      "changePct": 0.65,
+      "name": "NDX 100"
+    },
+    "^VIX": {
+      "price": 15.20,
+      "prevClose": 15.75,
+      "change": -0.55,
+      "changePct": -3.49,
+      "name": "VIX Index"
+    },
+    "GC=F": {
+      "price": 2657.40,
+      "prevClose": 2636.30,
+      "change": 21.10,
+      "changePct": 0.80,
+      "name": "Gold (XAU)"
+    },
+    "CL=F": {
+      "price": 71.35,
+      "prevClose": 72.22,
+      "change": -0.87,
+      "changePct": -1.20,
+      "name": "WTI Crude Oil"
+    },
+    "DX-Y.NYB": {
+      "price": 102.90,
+      "prevClose": 102.75,
+      "change": 0.15,
+      "changePct": 0.15,
+      "name": "DXY Index"
     }
   },
   "prices": {
