@@ -1057,31 +1057,65 @@
         }
 
 
-        /* --- Market Overview & Sector Hub Styles --- */
+        /* --- Market Overview & Sector Hub Styles (Crisp, High-Contrast Borders & Modern Cards) --- */
         .market-macro-card {
-            background: var(--bs-card-bg, #ffffff);
-            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
             border-radius: 16px;
-            padding: 12px 14px;
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 13px 15px;
+            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
             height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
         }
         [data-bs-theme="dark"] .market-macro-card,
         body.dark-mode .market-macro-card {
-            background: #0f172a;
-            border-color: #1e293b;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            background: #1e293b;
+            border-color: #475569;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
         }
         .market-macro-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+            border-color: #94a3b8;
         }
+        [data-bs-theme="dark"] .market-macro-card:hover,
+        body.dark-mode .market-macro-card:hover {
+            border-color: #64748b;
+        }
+
+        .live-pulse-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #10b981;
+            display: inline-block;
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            animation: livePulseAnim 1.8s infinite;
+        }
+        @keyframes livePulseAnim {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 5px rgba(16, 185, 129, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
         .market-snapshot-scroller {
             display: flex;
             gap: 12px;
             overflow-x: auto;
-            padding: 6px 2px 12px 2px;
+            padding: 8px 4px 14px 4px;
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
         }
@@ -1089,49 +1123,50 @@
             height: 6px;
         }
         .market-snapshot-scroller::-webkit-scrollbar-thumb {
-            background: rgba(148, 163, 184, 0.4);
+            background: rgba(148, 163, 184, 0.5);
             border-radius: 4px;
         }
         .market-snapshot-card {
-            min-width: 175px;
-            max-width: 175px;
-            background: var(--bs-card-bg, #ffffff);
-            border: 1px solid rgba(0, 0, 0, 0.08);
+            min-width: 178px;
+            max-width: 178px;
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
             border-radius: 16px;
-            padding: 12px;
+            padding: 12px 14px;
             cursor: pointer;
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
             flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
         }
         [data-bs-theme="dark"] .market-snapshot-card,
         body.dark-mode .market-snapshot-card {
-            background: #0f172a;
-            border-color: #1e293b;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            background: #1e293b;
+            border-color: #475569;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
         }
         .market-snapshot-card:hover {
             transform: translateY(-3px);
-            border-color: #3b82f6;
-            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.18);
+            border-color: #2563eb !important;
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.18) !important;
         }
+
         .sector-card {
-            background: var(--bs-card-bg, #ffffff);
-            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
             border-radius: 18px;
             padding: 16px 18px;
             cursor: pointer;
             transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
             position: relative;
             overflow: hidden;
             height: 100%;
         }
         [data-bs-theme="dark"] .sector-card,
         body.dark-mode .sector-card {
-            background: #0f172a;
-            border-color: #1e293b;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            background: #1e293b;
+            border-color: #475569;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
         .sector-card:hover {
             transform: translateY(-3px);
@@ -9074,12 +9109,12 @@
         }
 
         const macroIndicesData = [
-            { id: 'SP500', name: 'S&P 500', symbol: '^GSPC', value: '5,815.03', changePct: 0.43, flag: '🇺🇸', seed: 101, prefix: '' },
-            { id: 'NDX', name: 'NDX100', symbol: '^NDX', value: '20,248.50', changePct: 0.64, flag: '🇺🇸', seed: 202, prefix: '' },
-            { id: 'VIX', name: 'VIX Index', symbol: '^VIX', value: '15.20', changePct: -2.88, flag: '📉', seed: 303, prefix: '' },
-            { id: 'GOLD', name: 'Gold (XAU)', symbol: 'GC=F', value: '$2,657.40', changePct: 0.35, flag: '🪙', seed: 404, prefix: '$' },
-            { id: 'WTI', name: 'WTI Crude Oil', symbol: 'CL=F', value: '$71.35', changePct: -1.04, flag: '🛢️', seed: 505, prefix: '$' },
-            { id: 'DXY', name: 'DXY Index', symbol: 'DX-Y.NYB', value: '102.90', changePct: 0.24, flag: '💵', seed: 606, prefix: '' }
+            { id: 'SP500', name: 'S&P 500', symbol: '^GSPC', value: '7,802.18', changePct: 0.43, icon: '📊', seed: 101, prefix: '', sub: 'U.S. 500' },
+            { id: 'NDX', name: 'Nasdaq 100', symbol: '^NDX', value: '30,654.88', changePct: 0.64, icon: '💻', seed: 202, prefix: '', sub: 'Tech 100' },
+            { id: 'VIX', name: 'VIX Index', symbol: '^VIX', value: '15.25', changePct: -2.88, icon: '⚡', seed: 303, prefix: '', sub: 'Volatility' },
+            { id: 'GOLD', name: 'Gold (XAU)', symbol: 'GC=F', value: '$4,194.60', changePct: 0.35, icon: '🪙', seed: 404, prefix: '$', sub: 'Commodity' },
+            { id: 'WTI', name: 'WTI Crude Oil', symbol: 'CL=F', value: '$93.81', changePct: -1.04, icon: '🛢️', seed: 505, prefix: '$', sub: 'Oil Futures' },
+            { id: 'DXY', name: 'DXY Index', symbol: 'DX-Y.NYB', value: '102.58', changePct: 0.24, icon: '💵', seed: 606, prefix: '', sub: 'US Dollar' }
         ];
 
         const top10SnapshotData = [
@@ -9388,24 +9423,36 @@
 
                 const isPos = changePct >= 0;
                 const sign = isPos ? '+' : '';
-                const badgeClass = isPos ? 'bg-success-subtle text-success border-success-subtle' : 'bg-danger-subtle text-danger border-danger-subtle';
-                const spark = generateSvgSparkline(item.seed, isPos, 70, 24);
-                const livePill = isLive ? `<span class="badge bg-success text-white py-0 px-1" style="font-size: 0.58rem; letter-spacing: 0.5px;">LIVE</span>` : '';
+                const spark = generateSvgSparkline(item.seed, isPos, 68, 26);
+
+                const accentColor = isPos ? '#10b981' : '#ef4444';
+                const badgeBg = isPos ? 'rgba(16, 185, 129, 0.12)' : 'rgba(239, 68, 68, 0.12)';
+                const badgeColor = isPos ? '#059669' : '#dc2626';
+                const badgeBorder = isPos ? 'rgba(16, 185, 129, 0.35)' : 'rgba(239, 68, 68, 0.35)';
 
                 html += `
                     <div class="col-xl-2 col-md-4 col-6">
-                        <div class="market-macro-card">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <span class="fw-bold text-muted small text-truncate" title="${item.name}">${item.flag} ${item.name}</span>
-                                <div class="d-flex align-items-center gap-1">
-                                    ${livePill}
-                                    <span class="badge border ${badgeClass} fw-bold" style="font-size: 0.68rem; padding: 2px 6px;">
-                                        ${sign}${changePct.toFixed(2)}%
-                                    </span>
+                        <div class="market-macro-card" style="border-top: 3.5px solid ${accentColor} !important;">
+                            <!-- Top: Icon, Title, and Unified Live % Badge -->
+                            <div class="d-flex justify-content-between align-items-center mb-1 gap-1">
+                                <div class="d-flex align-items-center gap-1.5 text-truncate" title="${item.name} (${item.symbol})">
+                                    <span style="font-size: 1rem; flex-shrink: 0;">${item.icon || '📈'}</span>
+                                    <span class="fw-bold text-truncate" style="font-size: 0.85rem; color: var(--bs-heading-color, #1e293b);">${item.name}</span>
                                 </div>
+                                <span class="badge fw-bold flex-shrink-0 d-inline-flex align-items-center gap-1" style="font-size: 0.70rem; padding: 2.5px 7px; background: ${badgeBg}; color: ${badgeColor}; border: 1px solid ${badgeBorder}; border-radius: 9999px;">
+                                    ${isLive ? '<span class="live-pulse-dot"></span>' : ''}
+                                    ${sign}${changePct.toFixed(2)}%
+                                </span>
                             </div>
-                            <div class="d-flex justify-content-between align-items-end mt-1">
-                                <div class="fw-bold" style="font-size: 1.05rem; letter-spacing: -0.3px;">${displayVal}</div>
+
+                            <!-- Bottom: Bold Price + Sparkline with divider -->
+                            <div class="d-flex justify-content-between align-items-end mt-2 pt-1 border-top" style="border-color: rgba(226, 232, 240, 0.7) !important;">
+                                <div>
+                                    <div class="fw-bolder" style="font-size: 1.15rem; letter-spacing: -0.4px; color: var(--bs-body-color, #0f172a); line-height: 1.2;">${displayVal}</div>
+                                    <div class="text-muted" style="font-size: 0.68rem; margin-top: 2px;">
+                                        ${item.symbol} ${isLive ? '• <span class="text-success fw-bold">Live</span>' : ''}
+                                    </div>
+                                </div>
                                 <div class="ms-1 flex-shrink-0">${spark}</div>
                             </div>
                         </div>
@@ -9423,30 +9470,36 @@
             top10SnapshotData.forEach(item => {
                 const isPos = item.changePct >= 0;
                 const sign = isPos ? '+' : '';
-                const spark = generateSvgSparkline(item.seed, isPos, 60, 22);
+                const spark = generateSvgSparkline(item.seed, isPos, 62, 24);
                 let curPrice = item.price;
                 if (typeof marketPrices !== 'undefined' && marketPrices[item.ticker] && marketPrices[item.ticker] > 0) {
                     curPrice = marketPrices[item.ticker];
                 }
 
+                const accentColor = isPos ? '#10b981' : '#ef4444';
+                const badgeColor = isPos ? '#059669' : '#dc2626';
+
                 html += `
-                    <div class="market-snapshot-card" onclick="openTechnicalForTicker('${item.ticker}')" title="ดูสัญญาณทางเทคนิคและกราฟของ ${item.ticker}">
+                    <div class="market-snapshot-card" style="border-top: 3.5px solid ${accentColor} !important;" onclick="openTechnicalForTicker('${item.ticker}')" title="ดูสัญญาณทางเทคนิคและกราฟของ ${item.ticker}">
+                        <!-- Top Row: Logo + Ticker on left, Signal on right -->
                         <div class="d-flex justify-content-between align-items-center mb-1">
-                            <div class="d-flex align-items-center gap-1">
-                                <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border" width="20" height="20" style="object-fit: contain;" onerror="this.style.display='none'">
-                                <span class="fw-bold" style="font-size: 0.88rem;">${item.ticker}</span>
+                            <div class="d-flex align-items-center gap-1.5">
+                                <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border" width="22" height="22" style="object-fit: contain; background: #fff; padding: 1px;" onerror="this.style.display='none'">
+                                <span class="fw-bold" style="font-size: 0.90rem; color: var(--bs-heading-color, #0f172a);">${item.ticker}</span>
                             </div>
-                            <span class="badge bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.65rem; padding: 2px 5px;">BUY</span>
+                            <span class="badge fw-bold" style="font-size: 0.65rem; padding: 2px 6px; background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 9999px;">BUY</span>
                         </div>
-                        <div class="text-truncate text-muted mb-2" style="font-size: 0.72rem;">${item.name}</div>
-                        <div class="d-flex justify-content-between align-items-end">
+                        <div class="text-truncate text-muted mb-2" style="font-size: 0.72rem; min-height: 17px;" title="${item.name}">${item.name}</div>
+                        
+                        <!-- Bottom Row: Price & % on left, Sparkline on right -->
+                        <div class="d-flex justify-content-between align-items-end pt-1 border-top" style="border-color: rgba(226, 232, 240, 0.7) !important;">
                             <div>
-                                <div class="fw-bold" style="font-size: 0.95rem;">$${curPrice.toFixed(2)}</div>
-                                <div class="${isPos ? 'text-success' : 'text-danger'} fw-bold" style="font-size: 0.72rem;">
-                                    ${sign}${item.changePct.toFixed(2)}%
+                                <div class="fw-bolder" style="font-size: 1.02rem; letter-spacing: -0.3px; color: var(--bs-body-color, #0f172a); line-height: 1.2;">$${curPrice.toFixed(2)}</div>
+                                <div class="fw-bold" style="font-size: 0.72rem; color: ${badgeColor}; margin-top: 2px;">
+                                    ${isPos ? '▲' : '▼'} ${sign}${item.changePct.toFixed(2)}%
                                 </div>
                             </div>
-                            <div>${spark}</div>
+                            <div class="ms-1 flex-shrink-0">${spark}</div>
                         </div>
                     </div>
                 `;
