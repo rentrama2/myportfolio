@@ -5687,8 +5687,9 @@
         if (storedPrices['MU'] === 1077.77) delete storedPrices['MU'];
         if (storedPrices['CIEN'] === 358.92) delete storedPrices['CIEN'];
         if (storedPrices['CRWD'] === 255.90) delete storedPrices['CRWD'];
-        if (storedPrices['LLY'] === 1167.34) delete storedPrices['LLY'];
         let marketPrices = Object.assign({}, defaultInitialPrices, storedPrices);
+        let storedExtendedPrices = JSON.parse(localStorage.getItem('myExtendedHoursPrices')) || {};
+        let extendedHoursPrices = Object.assign({}, storedExtendedPrices);
         
         let liveFxRate = parseFloat(localStorage.getItem('myLiveFxRate'));
         if(isNaN(liveFxRate) || liveFxRate <= 0) liveFxRate = 33.46;
@@ -6414,6 +6415,10 @@
                                     renderMacroIndices();
                                 }
                             }
+                            if (data.extended_hours && typeof data.extended_hours === 'object') {
+                                extendedHoursPrices = Object.assign({}, extendedHoursPrices, data.extended_hours);
+                                localStorage.setItem('myExtendedHoursPrices', JSON.stringify(extendedHoursPrices));
+                            }
                             localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
                             if (typeof renderTechWatchlist === 'function') {
                                 try {
@@ -6436,27 +6441,89 @@
                 return marketPrices[ticker];
             }
 
-            const encodedUrl = encodeURIComponent(`https://query2.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`);
-            const proxies = [
-                `https://api.allorigins.win/raw?url=${encodedUrl}`,
-                `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`,
-                `https://corsproxy.io/?url=${encodedUrl}`
+            const sym = ticker.replace('.', '-');
+            const endpoints = [
+                `https://query2.finance.yahoo.com/v8/finance/chart/${sym}?range=1d&interval=5m&includePrePost=true`,
+                `https://query2.finance.yahoo.com/v8/finance/chart/${sym}?interval=1d`
             ];
 
-            for (let proxyUrl of proxies) {
-                try {
-                    let res = await fetchWithTimeout(proxyUrl, {}, 3000);
-                    if (res.ok) {
-                        let data = await res.json();
-                        if (data && data.chart && data.chart.result && data.chart.result.length > 0) {
-                            let meta = data.chart.result[0].meta;
-                            let price = meta.regularMarketPrice || meta.chartPreviousClose || meta.previousClose;
-                            if (price && typeof price === 'number' && price > 0) {
-                                return price;
+            for (let rawUrl of endpoints) {
+                const encodedUrl = encodeURIComponent(rawUrl);
+                const proxies = [
+                    `https://api.allorigins.win/raw?url=${encodedUrl}`,
+                    `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`,
+                    `https://corsproxy.io/?url=${encodedUrl}`
+                ];
+
+                for (let proxyUrl of proxies) {
+                    try {
+                        let res = await fetchWithTimeout(proxyUrl, {}, 3200);
+                        if (res.ok) {
+                            let data = await res.json();
+                            if (data && data.chart && data.chart.result && data.chart.result.length > 0) {
+                                let result = data.chart.result[0];
+                                let meta = result.meta;
+                                let regPrice = meta.regularMarketPrice || meta.chartPreviousClose || meta.previousClose;
+                                
+                                // Parse Pre-Market / After-Hours extended data if present
+                                try {
+                                    const periods = meta.currentTradingPeriod || {};
+                                    const prePeriod = periods.pre || {};
+                                    const regPeriod = periods.regular || {};
+                                    const postPeriod = periods.post || {};
+                                    
+                                    const timestamps = result.timestamp || [];
+                                    const quoteClose = (result.indicators && result.indicators.quote && result.indicators.quote[0]) ? result.indicators.quote[0].close || [] : [];
+                                    
+                                    let extPrice = meta.fulldayPrice;
+                                    let lastTs = null;
+                                    if (quoteClose.length > 0) {
+                                        for (let i = quoteClose.length - 1; i >= 0; i--) {
+                                            if (quoteClose[i] !== null && quoteClose[i] !== undefined) {
+                                                if (!extPrice) extPrice = quoteClose[i];
+                                                lastTs = timestamps[i];
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    if (!lastTs && timestamps.length > 0) lastTs = timestamps[timestamps.length - 1];
+
+                                    const curTs = Math.floor(Date.now() / 1000);
+                                    if (regPrice && extPrice && Math.abs(extPrice - regPrice) > 0.0001) {
+                                        let session = null;
+                                        if (regPeriod.start && (lastTs < regPeriod.start || (curTs >= prePeriod.start && curTs < regPeriod.start))) {
+                                            session = 'PRE';
+                                        } else if (regPeriod.end && (lastTs > regPeriod.end || (curTs > regPeriod.end && curTs <= postPeriod.end))) {
+                                            session = 'POST';
+                                        }
+
+                                        if (session) {
+                                            const diff = Number((extPrice - regPrice).toFixed(2));
+                                            const pct = Number(((diff / regPrice) * 100).toFixed(2));
+                                            const extObj = {
+                                                session: session,
+                                                price: Number(extPrice.toFixed(2)),
+                                                regularPrice: Number(regPrice.toFixed(2)),
+                                                change: diff,
+                                                changePct: pct,
+                                                time: Date.now()
+                                            };
+                                            extendedHoursPrices[ticker] = extObj;
+                                            if (sym !== ticker) extendedHoursPrices[sym] = extObj;
+                                            try {
+                                                localStorage.setItem('myExtendedHoursPrices', JSON.stringify(extendedHoursPrices));
+                                            } catch(e) {}
+                                        }
+                                    }
+                                } catch(errExt) {}
+
+                                if (regPrice && typeof regPrice === 'number' && regPrice > 0) {
+                                    return regPrice;
+                                }
                             }
                         }
-                    }
-                } catch(e) {}
+                    } catch(e) {}
+                }
             }
             return null;
         }
@@ -6561,21 +6628,25 @@
                 const nyDate = new Date(nyStr);
                 const day = nyDate.getDay(); // 0 Sun, 6 Sat
                 if (day === 0 || day === 6) {
-                    return { isOpen: false, text: "ตลาดปิด (วันหยุด)", badgeClass: "bg-secondary" };
+                    return { isOpen: false, session: 'WEEKEND', text: "ตลาดปิด (วันหยุด)", badgeClass: "bg-secondary text-white" };
                 }
                 const mins = nyDate.getHours() * 60 + nyDate.getMinutes();
                 // Regular market: 9:30 AM (570) to 4:00 PM (960)
                 if (mins >= 570 && mins < 960) {
-                    return { isOpen: true, text: "ตลาดเปิด (LIVE)", badgeClass: "bg-success" };
+                    return { isOpen: true, session: 'REGULAR', text: "🟢 ตลาดเปิด (LIVE)", badgeClass: "bg-success text-white shadow-xs" };
                 } else if (mins >= 240 && mins < 570) {
-                    return { isOpen: false, text: "Pre-Market", badgeClass: "bg-warning text-dark" };
+                    const remMins = 570 - mins;
+                    const remH = Math.floor(remMins / 60);
+                    const remM = remMins % 60;
+                    const countdown = remH > 0 ? `${remH}ชม. ${remM}น.` : `${remM}น.`;
+                    return { isOpen: false, session: 'PRE', text: `🌅 Pre-Market (เปิดใน ${countdown})`, badgeClass: "bg-warning text-dark border border-warning shadow-xs" };
                 } else if (mins >= 960 && mins < 1200) {
-                    return { isOpen: false, text: "After-Hours", badgeClass: "bg-info text-dark" };
+                    return { isOpen: false, session: 'POST', text: "🌙 After-Hours", badgeClass: "bg-info text-dark border border-info shadow-xs" };
                 } else {
-                    return { isOpen: false, text: "ตลาดปิด", badgeClass: "bg-secondary" };
+                    return { isOpen: false, session: 'CLOSED', text: "⚪ ตลาดปิด", badgeClass: "bg-secondary text-white" };
                 }
             } catch(e) {
-                return { isOpen: false, text: "ตลาดสหรัฐฯ", badgeClass: "bg-secondary" };
+                return { isOpen: false, session: 'CLOSED', text: "ตลาดสหรัฐฯ", badgeClass: "bg-secondary text-white" };
             }
         }
 
@@ -6583,8 +6654,8 @@
             const status = getUSMarketStatus();
             const badge = document.getElementById('usMarketStatusBadge');
             if (badge) {
-                badge.innerText = status.isOpen ? '🟢 ตลาดเปิด (LIVE)' : `⚪ ${status.text}`;
-                badge.className = `badge rounded-pill px-2 py-1 ${status.badgeClass}`;
+                badge.innerText = status.text;
+                badge.className = `badge rounded-pill px-2 py-1 fw-bold ${status.badgeClass}`;
             }
         };
 
@@ -8222,6 +8293,27 @@
                     }
                 }
 
+                let extBadgeHtml = '';
+                const ext = (typeof extendedHoursPrices !== 'undefined' && extendedHoursPrices) ? extendedHoursPrices[item.ticker] : null;
+                const mktStatus = (typeof getUSMarketStatus === 'function') ? getUSMarketStatus() : { isOpen: false };
+                if (ext && ext.price && ext.price > 0 && (ext.session === 'PRE' || ext.session === 'POST') && !mktStatus.isOpen) {
+                    const isPre = ext.session === 'PRE';
+                    const isUp = ext.changePct >= 0;
+                    const sign = isUp ? '+' : '';
+                    const badgeClass = isUp ? 'text-success bg-success-subtle border-success-subtle' : 'text-danger bg-danger-subtle border-danger-subtle';
+                    const icon = isPre ? '🌅 Pre' : '🌙 Post';
+                    const tooltip = `${isPre ? 'ราคาช่วง Pre-Market' : 'ราคาช่วง After-Hours'}: $${ext.price.toFixed(2)} (${sign}${ext.changePct.toFixed(2)}% เทียบราคาปิดปกติ $${(ext.regularPrice || item.currentPriceUSD).toFixed(2)})`;
+                    
+                    extBadgeHtml = `
+                        <div class="mt-1 d-flex justify-content-center" title="${tooltip}">
+                            <span class="badge ${badgeClass} border fw-bold text-nowrap shadow-xs" 
+                                  style="font-size: 0.68rem; padding: 2px 6px; cursor: help; letter-spacing: -0.2px;">
+                                ${icon}: $${ext.price.toFixed(2)} (${sign}${ext.changePct.toFixed(2)}%)
+                            </span>
+                        </div>
+                    `;
+                }
+
                 return `
                 <tr>
                     <td class="border-end-0 py-3 text-start">
@@ -8289,6 +8381,7 @@
                                    onblur="updateMarketPrice('${item.ticker}', this.value)"
                                    onclick="this.select()">
                         </div>
+                        ${extBadgeHtml}
                     </td>
                     <td class="border-0 py-3">
                         $${item.mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}<br>
