@@ -1,159 +1,46 @@
 {
-  "updated_at": "2026-10-13T07:41:20Z",
-  "updated_at_thai": "13 ต.ค. 2569 14:41 น.",
+  "updated_at": "2026-10-13T13:19:21Z",
+  "updated_at_thai": "13 ต.ค. 2569 20:19 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "หุ้นกลุ่มเทคโนโลยีร่วงลงเนื่องจากเส้นทางชิปของ Wall Street แพร่กระจาย SK Hynix, SoftBank และ ASML ตกต่ำ",
-      "title_en": "Tech stocks slide as Wall Street chip rout spreads. SK Hynix, SoftBank and ASML slump",
-      "summary": "หุ้นเทคโนโลยีร่วงลงเมื่อวันอังคารเนื่องจากการเทขายหุ้นเซมิคอนดักเตอร์ของสหรัฐทะลักเข้าสู่ตลาดเอเชียและยุโรป",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/sk-hynix-softbank-samsung-electronics-shares-tech-stocks-fall.html",
-      "time": "19 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T07:22:07Z",
-      "category": "TECH",
+      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, การซื้อขายฟิวเจอร์ส Nasdaq ผสมกับรายได้ของธนาคารบนดาดฟ้า",
+      "title_en": "Stock market today: Dow, S&P 500, Nasdaq futures trade mixed with bank earnings on deck",
+      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, การซื้อขายฟิวเจอร์ส Nasdaq ผสมกับรายได้ของธนาคารบนดาดฟ้า",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-13-dow-sp-500-nasdaq-080236234.html",
+      "time": "1 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T13:18:07Z",
+      "category": "EARNINGS",
       "tickers": [
-        "QQQ"
+        "SPY",
+        "QQQ",
+        "DIA"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": true,
       "points": [
-        "หุ้นเทคโนโลยีร่วงลงเมื่อวันอังคารเนื่องจากการเทขายหุ้นเซมิคอนดักเตอร์ของสหรัฐทะลักเข้าสู่ตลาดเอเชียและยุโรป",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 07:22 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, การซื้อขายฟิวเจอร์ส Nasdaq ผสมกับรายได้ของธนาคารบนดาดฟ้า",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (13/10/2026 13:18 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
       ],
       "fullArticle": [
-        "หุ้นกลุ่มเทคโนโลยีร่วงลงเนื่องจากเส้นทางชิปของ Wall Street แพร่กระจาย SK Hynix, SoftBank และ ASML ตกต่ำ",
-        "หุ้นเทคโนโลยีร่วงลงเมื่อวันอังคารเนื่องจากการเทขายหุ้นเซมิคอนดักเตอร์ของสหรัฐทะลักเข้าสู่ตลาดเอเชียและยุโรป",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tech stocks slide as Wall Street chip rout spreads. SK Hynix, SoftBank and ASML slump\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, การซื้อขายฟิวเจอร์ส Nasdaq ผสมกับรายได้ของธนาคารบนดาดฟ้า",
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, การซื้อขายฟิวเจอร์ส Nasdaq ผสมกับรายได้ของธนาคารบนดาดฟ้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq futures trade mixed with bank earnings on deck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "ข่าวประชาสัมพันธ์: อัปเดตกองเรือ CMB.TECH",
-      "title_en": "Press release: CMB.TECH fleet update",
-      "summary": "ข่าวประชาสัมพันธ์: อัปเดตกองเรือ CMB.TECH",
-      "source": "GlobeNewswire",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/press-release-cmb-tech-fleet-070800631.html",
-      "time": "33 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T07:08:00Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ข่าวประชาสัมพันธ์: อัปเดตกองเรือ CMB.TECH",
-        "แหล่งข่าวอ้างอิง: GlobeNewswire (13/10/2026 07:08 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "ข่าวประชาสัมพันธ์: อัปเดตกองเรือ CMB.TECH",
-        "ข่าวประชาสัมพันธ์: อัปเดตกองเรือ CMB.TECH",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Press release: CMB.TECH fleet update\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "การโจมตีทางไซเบอร์โจมตีซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่ง ทำให้ตู้เย็นร้อนถึง 122°F และเกิดประกายไฟ",
-      "title_en": "Cyber attack hits hundreds of French supermarkets, heating fridges to 122°F and sparking fires",
-      "summary": "แฮกเกอร์มุ่งเป้าไปที่ซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่งในการโจมตีทางไซเบอร์ขนาดใหญ่ ส่งผลให้ตู้เย็นร้อนเกินไป อาหารเน่าเสีย และเกิดประกายไฟ",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/france-supermarket-hack-cyberattack-fridges-fires.html",
-      "time": "57 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T06:44:00Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "แฮกเกอร์มุ่งเป้าไปที่ซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่งในการโจมตีทางไซเบอร์ขนาดใหญ่ ส่งผลให้ตู้เย็นร้อนเกินไป อาหารเน่าเสีย และเกิดประกายไฟ",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 06:44 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "การโจมตีทางไซเบอร์โจมตีซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่ง ทำให้ตู้เย็นร้อนถึง 122°F และเกิดประกายไฟ",
-        "แฮกเกอร์มุ่งเป้าไปที่ซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่งในการโจมตีทางไซเบอร์ขนาดใหญ่ ส่งผลให้ตู้เย็นร้อนเกินไป อาหารเน่าเสีย และเกิดประกายไฟ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Cyber attack hits hundreds of French supermarkets, heating fridges to 122°F and sparking fires\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "BP ตั้งค่าสถานะการด้อยค่าสูงถึง 4.5 พันล้านดอลลาร์ในขณะที่อัตรากำไรขั้นต้นการกลั่นพุ่งสูงขึ้น",
-      "title_en": "BP Flags Up to $4.5 Billion in Impairments as Refining Margins Jump",
-      "summary": "BP ตั้งค่าสถานะการด้อยค่าสูงถึง 4.5 พันล้านดอลลาร์ในขณะที่อัตรากำไรขั้นต้นการกลั่นพุ่งสูงขึ้น",
-      "source": "Oilprice.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/bp-flags-4-5-billion-063600505.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T06:36:00Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "BP ตั้งค่าสถานะการด้อยค่าสูงถึง 4.5 พันล้านดอลลาร์ในขณะที่อัตรากำไรขั้นต้นการกลั่นพุ่งสูงขึ้น",
-        "แหล่งข่าวอ้างอิง: Oilprice.com (13/10/2026 06:36 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "BP ตั้งค่าสถานะการด้อยค่าสูงถึง 4.5 พันล้านดอลลาร์ในขณะที่อัตรากำไรขั้นต้นการกลั่นพุ่งสูงขึ้น",
-        "BP ตั้งค่าสถานะการด้อยค่าสูงถึง 4.5 พันล้านดอลลาร์ในขณะที่อัตรากำไรขั้นต้นการกลั่นพุ่งสูงขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BP Flags Up to $4.5 Billion in Impairments as Refining Margins Jump\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "Visa ได้รับไฟเขียวให้ปักกิ่งสำหรับธุรกิจบัตรธนาคาร หลังจากทำงานร่วมกับจีนมาเป็นเวลา 40 ปี",
-      "title_en": "Visa gets Beijing's green light for bank card business after 40 years of working with China",
-      "summary": "การอนุมัติที่เพิ่มขึ้นนี้เกิดขึ้นในขณะที่ประธานาธิบดีสหรัฐฯ และจีนมีกำหนดพบกันเป็นครั้งที่ 3 ในปีนี้ในเดือนหน้า",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/visa-china-green-light-bank-card-business-.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T06:20:55Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "การอนุมัติที่เพิ่มขึ้นนี้เกิดขึ้นในขณะที่ประธานาธิบดีสหรัฐฯ และจีนมีกำหนดพบกันเป็นครั้งที่ 3 ในปีนี้ในเดือนหน้า",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 06:20 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "Visa ได้รับไฟเขียวให้ปักกิ่งสำหรับธุรกิจบัตรธนาคาร หลังจากทำงานร่วมกับจีนมาเป็นเวลา 40 ปี",
-        "การอนุมัติที่เพิ่มขึ้นนี้เกิดขึ้นในขณะที่ประธานาธิบดีสหรัฐฯ และจีนมีกำหนดพบกันเป็นครั้งที่ 3 ในปีนี้ในเดือนหน้า",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Visa gets Beijing's green light for bank card business after 40 years of working with China\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
       "title": "สภางานธนาคารโลกเรียกร้องมาตรการสนับสนุนการจ้างงาน 'ยุควิกฤติ' ขณะที่ IMF เตือนเรื่อง 'สึนามิ' ของ AI",
       "title_en": "World Bank jobs council urges 'crisis-era' employment support measures as IMF warns of AI ‘tsunami’",
       "summary": "Kristalina Georgieva หัวหน้า IMF เตือนว่า AI กำลังโจมตีตลาดแรงงานทั่วโลก เช่น “สึนามิที่เคลื่อนตัวช้า” โดยคนงานรุ่นใหม่ที่เข้าสู่ตลาดงานมีความเสี่ยงมากที่สุด",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/12/imf-world-bank-ai-jobs-inflation-.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T05:24:17Z",
+      "time": "9 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T13:09:55Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -165,7 +52,7 @@
       "isHero": false,
       "points": [
         "Kristalina Georgieva หัวหน้า IMF เตือนว่า AI กำลังโจมตีตลาดแรงงานทั่วโลก เช่น “สึนามิที่เคลื่อนตัวช้า” โดยคนงานรุ่นใหม่ที่เข้าสู่ตลาดงานมีความเสี่ยงมากที่สุด",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 05:24 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 13:09 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
@@ -175,176 +62,285 @@
       ]
     },
     {
-      "id": "news-7",
-      "title": "IMF เตือนอัตราผลตอบแทนพันธบัตรอาจเพิ่มขึ้น 'ผิดปกติ' เนื่องจากหนี้และความเสี่ยงเงินเฟ้อแย่ลง",
-      "title_en": "IMF warns bond yields could see a 'disorderly' spike as debt, inflation risks worsen",
-      "summary": "IMF กล่าวว่าความเสี่ยงในตลาดพันธบัตรรัฐบาลแย่ลง และอัตราผลตอบแทนอาจเพิ่มขึ้นอย่างรวดเร็วและไม่เป็นระเบียบ",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/treasury-yields-imf-debt-inflation-.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T04:54:07Z",
+      "id": "news-3",
+      "title": "อัพเดตภาคส่วน: พลังงาน",
+      "title_en": "Sector Update: Energy",
+      "summary": "อัพเดตภาคส่วน: พลังงาน",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/sector-energy-130639445.html",
+      "time": "12 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T13:06:39Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
         "QQQ",
         "TLT"
       ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "อัพเดตภาคส่วน: พลังงาน",
+        "แหล่งข่าวอ้างอิง: MT Newswires (13/10/2026 13:06 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "อัพเดตภาคส่วน: พลังงาน",
+        "อัพเดตภาคส่วน: พลังงาน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Sector Update: Energy\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "การอัปเดตสดรายได้ของธนาคาร: การเรียกรายได้ของ JPMorgan กำลังดำเนินการอยู่หลังจากพลาดรายได้ที่หายาก",
+      "title_en": "Bank earnings live updates: JPMorgan’s earnings call is underway after rare earnings miss",
+      "summary": "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/bank-earnings-live-updates.html",
+      "time": "13 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T13:06:10Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "JPM",
+        "GS",
+        "WFC"
+      ],
       "sentiment": "BEARISH",
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "IMF กล่าวว่าความเสี่ยงในตลาดพันธบัตรรัฐบาลแย่ลง และอัตราผลตอบแทนอาจเพิ่มขึ้นอย่างรวดเร็วและไม่เป็นระเบียบ",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 04:54 UTC)",
+        "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 13:06 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM #GS #WFC"
+      ],
+      "fullArticle": [
+        "การอัปเดตสดรายได้ของธนาคาร: การเรียกรายได้ของ JPMorgan กำลังดำเนินการอยู่หลังจากพลาดรายได้ที่หายาก",
+        "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank earnings live updates: JPMorgan’s earnings call is underway after rare earnings miss\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "ประวัติศาสตร์กล่าวว่าการแก้ไขตลาดหุ้นกำลังจะมาถึงในที่สุด นี่เป็นข่าวดีสำหรับนักลงทุน",
+      "title_en": "History Says a Stock Market Correction Is Coming Eventually. Here's the Good News for Investors.",
+      "summary": "ประวัติศาสตร์กล่าวว่าการแก้ไขตลาดหุ้นกำลังจะมาถึงในที่สุด นี่เป็นข่าวดีสำหรับนักลงทุน",
+      "source": "Motley Fool",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/history-says-stock-market-correction-130500919.html",
+      "time": "14 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T13:05:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ประวัติศาสตร์กล่าวว่าการแก้ไขตลาดหุ้นกำลังจะมาถึงในที่สุด นี่เป็นข่าวดีสำหรับนักลงทุน",
+        "แหล่งข่าวอ้างอิง: Motley Fool (13/10/2026 13:05 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "IMF เตือนอัตราผลตอบแทนพันธบัตรอาจเพิ่มขึ้น 'ผิดปกติ' เนื่องจากหนี้และความเสี่ยงเงินเฟ้อแย่ลง",
-        "IMF กล่าวว่าความเสี่ยงในตลาดพันธบัตรรัฐบาลแย่ลง และอัตราผลตอบแทนอาจเพิ่มขึ้นอย่างรวดเร็วและไม่เป็นระเบียบ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"IMF warns bond yields could see a 'disorderly' spike as debt, inflation risks worsen\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ประวัติศาสตร์กล่าวว่าการแก้ไขตลาดหุ้นกำลังจะมาถึงในที่สุด นี่เป็นข่าวดีสำหรับนักลงทุน",
+        "ประวัติศาสตร์กล่าวว่าการแก้ไขตลาดหุ้นกำลังจะมาถึงในที่สุด นี่เป็นข่าวดีสำหรับนักลงทุน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"History Says a Stock Market Correction Is Coming Eventually. Here's the Good News for Investors.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "Intercontinental Exchange สร้างสถิติไตรมาส 3 สำหรับการซื้อขายตัวเลือก Brent",
+      "title_en": "Intercontinental Exchange Sets Q3 Record for Brent Options Trading",
+      "summary": "Intercontinental Exchange สร้างสถิติไตรมาส 3 สำหรับการซื้อขายตัวเลือก Brent",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/options/articles/intercontinental-exchange-sets-q3-record-125237919.html",
+      "time": "26 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T12:52:37Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Intercontinental Exchange สร้างสถิติไตรมาส 3 สำหรับการซื้อขายตัวเลือก Brent",
+        "แหล่งข่าวอ้างอิง: MT Newswires (13/10/2026 12:52 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "Intercontinental Exchange สร้างสถิติไตรมาส 3 สำหรับการซื้อขายตัวเลือก Brent",
+        "Intercontinental Exchange สร้างสถิติไตรมาส 3 สำหรับการซื้อขายตัวเลือก Brent",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Intercontinental Exchange Sets Q3 Record for Brent Options Trading\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "อัปเดต: US Equity Futures ผสม Pre-Bell เนื่องจากผู้ค้าประเมินรายได้หลักของธนาคาร",
+      "title_en": "Update: US Equity Futures Mixed Pre-Bell as Traders Assess Major Bank Earnings",
+      "summary": "อัปเดต: US Equity Futures ผสม Pre-Bell เนื่องจากผู้ค้าประเมินรายได้หลักของธนาคาร",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-futures-mixed-pre-124855756.html",
+      "time": "30 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T12:48:55Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "อัปเดต: US Equity Futures ผสม Pre-Bell เนื่องจากผู้ค้าประเมินรายได้หลักของธนาคาร",
+        "แหล่งข่าวอ้างอิง: MT Newswires (13/10/2026 12:48 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "อัปเดต: US Equity Futures ผสม Pre-Bell เนื่องจากผู้ค้าประเมินรายได้หลักของธนาคาร",
+        "อัปเดต: US Equity Futures ผสม Pre-Bell เนื่องจากผู้ค้าประเมินรายได้หลักของธนาคาร",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Futures Mixed Pre-Bell as Traders Assess Major Bank Earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-8",
-      "title": "IMF มองว่าการชะลอตัวทั่วโลกลดลงเล็กน้อยเนื่องจากความเจริญของ AI ชดเชยสงคราม - เตือนว่าความยืดหยุ่นใกล้จะถึงขีดจำกัดแล้ว",
-      "title_en": "IMF sees milder global slowdown as AI boom offsets war hit — warns resilience is nearing limits",
-      "summary": "IMF เพิ่มการคาดการณ์การเติบโตทั่วโลกในปี 2569 เป็น 3.1% โดยเตือนว่าความยืดหยุ่นได้รับการทดสอบโดยข้อจำกัดด้านพลังงานและความเสี่ยงทางการเงินที่กำลังปรากฏ",
+      "title": "รายได้ของ JPMorgan พลาดไป, Delta ชะลอเส้นทางริยาด, แผนไก่ของ McDonald และอีกมากมายใน Morning Squawk",
+      "title_en": "JPMorgan's earnings miss, Delta delays Riyadh route, McDonald's chicken plans and more in Morning Squawk",
+      "summary": "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/imf-world-bank-annual-meetings-october-bangkok-asia-.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T04:10:49Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/5-things-to-know-before-the-stock-market-opens.html",
+      "time": "36 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T12:42:33Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "JPM"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 12:42 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM"
+      ],
+      "fullArticle": [
+        "รายได้ของ JPMorgan พลาดไป, Delta ชะลอเส้นทางริยาด, แผนไก่ของ McDonald และอีกมากมายใน Morning Squawk",
+        "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"JPMorgan's earnings miss, Delta delays Riyadh route, McDonald's chicken plans and more in Morning Squawk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "เหตุใดผู้ผลิตชิปชาวจีนที่ไม่ค่อยมีใครรู้จักรายนี้จึงทำให้สต็อกสินค้าทั่วโลกเสียหาย",
+      "title_en": "Why this little known Chinese chipmaker has caused a global stock rout",
+      "summary": "มีรายงานว่า CXMT ผู้ผลิตชิปหน่วยความจำชั้นนำของจีนมีความคืบหน้าในการออกแบบใหม่",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/cxmt-memory-chip-stock-rout.html",
+      "time": "37 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T12:41:56Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
         "AAPL",
         "MSFT"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "IMF เพิ่มการคาดการณ์การเติบโตทั่วโลกในปี 2569 เป็น 3.1% โดยเตือนว่าความยืดหยุ่นได้รับการทดสอบโดยข้อจำกัดด้านพลังงานและความเสี่ยงทางการเงินที่กำลังปรากฏ",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 04:10 UTC)",
+        "มีรายงานว่า CXMT ผู้ผลิตชิปหน่วยความจำชั้นนำของจีนมีความคืบหน้าในการออกแบบใหม่",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 12:41 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "IMF มองว่าการชะลอตัวทั่วโลกลดลงเล็กน้อยเนื่องจากความเจริญของ AI ชดเชยสงคราม - เตือนว่าความยืดหยุ่นใกล้จะถึงขีดจำกัดแล้ว",
-        "IMF เพิ่มการคาดการณ์การเติบโตทั่วโลกในปี 2569 เป็น 3.1% โดยเตือนว่าความยืดหยุ่นได้รับการทดสอบโดยข้อจำกัดด้านพลังงานและความเสี่ยงทางการเงินที่กำลังปรากฏ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"IMF sees milder global slowdown as AI boom offsets war hit — warns resilience is nearing limits\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "เหตุใดผู้ผลิตชิปชาวจีนที่ไม่ค่อยมีใครรู้จักรายนี้จึงทำให้สต็อกสินค้าทั่วโลกเสียหาย",
+        "มีรายงานว่า CXMT ผู้ผลิตชิปหน่วยความจำชั้นนำของจีนมีความคืบหน้าในการออกแบบใหม่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why this little known Chinese chipmaker has caused a global stock rout\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-9",
-      "title": "ดอลลาร์อ่อนค่าเนื่องจากราคาน้ำมันตกต่ำ อัตราผลตอบแทนพันธบัตรทรงตัว",
-      "title_en": "Dollar slips as oil prices sink, bond yields stabilise",
-      "summary": "ดอลลาร์อ่อนค่าเนื่องจากราคาน้ำมันตกต่ำ อัตราผลตอบแทนพันธบัตรทรงตัว",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/currencies/articles/dollar-holds-near-18-month-014716820.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T03:50:38Z",
+      "id": "news-10",
+      "title": "J&J สูงกว่าประมาณการกำไร และคาดว่าจะมีการผลิตหน่วยลงทุนระดับสะโพก-เข่าภายในกลางปี ​​2570",
+      "title_en": "J&J beats earnings estimates, eyes hip-knee unit spinoff by mid-2027",
+      "summary": "ยอดขายยาเพิ่มขึ้น 7.7% ในไตรมาสนี้ เป็น 16.76 พันล้านดอลลาร์ แต่ยอดขายแผนกเทคโนโลยีการแพทย์เพิ่มขึ้นเพียง 2.5% เป็น 8.6 พันล้านดอลลาร์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/jnj-earnings-q3-2026.html",
+      "time": "48 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T12:31:10Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ยอดขายยาเพิ่มขึ้น 7.7% ในไตรมาสนี้ เป็น 16.76 พันล้านดอลลาร์ แต่ยอดขายแผนกเทคโนโลยีการแพทย์เพิ่มขึ้นเพียง 2.5% เป็น 8.6 พันล้านดอลลาร์",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 12:31 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "J&J สูงกว่าประมาณการกำไร และคาดว่าจะมีการผลิตหน่วยลงทุนระดับสะโพก-เข่าภายในกลางปี ​​2570",
+        "ยอดขายยาเพิ่มขึ้น 7.7% ในไตรมาสนี้ เป็น 16.76 พันล้านดอลลาร์ แต่ยอดขายแผนกเทคโนโลยีการแพทย์เพิ่มขึ้นเพียง 2.5% เป็น 8.6 พันล้านดอลลาร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"J&J beats earnings estimates, eyes hip-knee unit spinoff by mid-2027\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
+      "title": "ตู้เย็นซูเปอร์มาร์เก็ตในฝรั่งเศสถูกแฮ็ก ทำอุณหภูมิได้ถึง 122°F และเกิดประกายไฟ",
+      "title_en": "French supermarket fridges get hacked, heating to 122°F and sparking fires",
+      "summary": "แฮกเกอร์มุ่งเป้าไปที่ซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่งในการโจมตีทางไซเบอร์ขนาดใหญ่ ส่งผลให้ตู้เย็นร้อนเกินไป อาหารเน่าเสีย และเกิดประกายไฟ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/france-supermarket-hack-cyberattack-fridges-fires.html",
+      "time": "56 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T12:22:59Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
         "CVX"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ดอลลาร์อ่อนค่าเนื่องจากราคาน้ำมันตกต่ำ อัตราผลตอบแทนพันธบัตรทรงตัว",
-        "แหล่งข่าวอ้างอิง: Reuters (13/10/2026 03:50 UTC)",
+        "แฮกเกอร์มุ่งเป้าไปที่ซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่งในการโจมตีทางไซเบอร์ขนาดใหญ่ ส่งผลให้ตู้เย็นร้อนเกินไป อาหารเน่าเสีย และเกิดประกายไฟ",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 12:22 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "ดอลลาร์อ่อนค่าเนื่องจากราคาน้ำมันตกต่ำ อัตราผลตอบแทนพันธบัตรทรงตัว",
-        "ดอลลาร์อ่อนค่าเนื่องจากราคาน้ำมันตกต่ำ อัตราผลตอบแทนพันธบัตรทรงตัว",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dollar slips as oil prices sink, bond yields stabilise\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "หุ้นเอเชียร่วงลงเนื่องจากเส้นทางชิปมีความลึกมากขึ้น ผู้ผลิตรถยนต์จีนได้รับผลกระทบจากมาตรการควบคุมการค้าของสหภาพยุโรป",
-      "title_en": "Asia stocks slide as chip rout deepens, Chinese automakers hit by EU trade curbs",
-      "summary": "หุ้นเอเชียร่วงลงเนื่องจากเส้นทางชิปมีความลึกมากขึ้น ผู้ผลิตรถยนต์จีนได้รับผลกระทบจากมาตรการควบคุมการค้าของสหภาพยุโรป",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/asia-stocks-slide-china-chip-034712009.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T03:47:12Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "หุ้นเอเชียร่วงลงเนื่องจากเส้นทางชิปมีความลึกมากขึ้น ผู้ผลิตรถยนต์จีนได้รับผลกระทบจากมาตรการควบคุมการค้าของสหภาพยุโรป",
-        "แหล่งข่าวอ้างอิง: Investing.com (13/10/2026 03:47 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "หุ้นเอเชียร่วงลงเนื่องจากเส้นทางชิปมีความลึกมากขึ้น ผู้ผลิตรถยนต์จีนได้รับผลกระทบจากมาตรการควบคุมการค้าของสหภาพยุโรป",
-        "หุ้นเอเชียร่วงลงเนื่องจากเส้นทางชิปมีความลึกมากขึ้น ผู้ผลิตรถยนต์จีนได้รับผลกระทบจากมาตรการควบคุมการค้าของสหภาพยุโรป",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asia stocks slide as chip rout deepens, Chinese automakers hit by EU trade curbs\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "อาจจำเป็นต้องมีอัตราที่สูงขึ้นเพื่อหลีกเลี่ยง 'กรอบความคิดเงินเฟ้อ' ที่ครอบงำ Hammack ของเฟดกล่าว",
-      "title_en": "Higher rates could be needed to avoid 'inflationary mindset' taking hold, says Fed's Hammack",
-      "summary": "ประธานเฟดคลีฟแลนด์กล่าวว่าจำเป็นต้องมีนโยบายการเงินที่เข้มงวดมากขึ้นเพื่อลดอัตราเงินเฟ้อ",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/beth-hammack-fed-inflation-policy.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T02:58:11Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ประธานเฟดคลีฟแลนด์กล่าวว่าจำเป็นต้องมีนโยบายการเงินที่เข้มงวดมากขึ้นเพื่อลดอัตราเงินเฟ้อ",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 02:58 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "อาจจำเป็นต้องมีอัตราที่สูงขึ้นเพื่อหลีกเลี่ยง 'กรอบความคิดเงินเฟ้อ' ที่ครอบงำ Hammack ของเฟดกล่าว",
-        "ประธานเฟดคลีฟแลนด์กล่าวว่าจำเป็นต้องมีนโยบายการเงินที่เข้มงวดมากขึ้นเพื่อลดอัตราเงินเฟ้อ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Higher rates could be needed to avoid 'inflationary mindset' taking hold, says Fed's Hammack\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตู้เย็นซูเปอร์มาร์เก็ตในฝรั่งเศสถูกแฮ็ก ทำอุณหภูมิได้ถึง 122°F และเกิดประกายไฟ",
+        "แฮกเกอร์มุ่งเป้าไปที่ซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่งในการโจมตีทางไซเบอร์ขนาดใหญ่ ส่งผลให้ตู้เย็นร้อนเกินไป อาหารเน่าเสีย และเกิดประกายไฟ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"French supermarket fridges get hacked, heating to 122°F and sparking fires\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-12",
-      "title": "ดัชนี Kospi ของเกาหลีใต้ร่วงลงกว่า 7% จากการขายหุ้นเซมิคอนดักเตอร์ เนื่องจากความกังวลเรื่อง AI ที่เฟื่องฟู",
-      "title_en": "South Korea's Kospi index sinks more than 7% on semiconductor share sell-off over AI boom worries",
-      "summary": "ดัชนี Kospi ของเกาหลีใต้ร่วงลงกว่า 7% จากการขายหุ้นเซมิคอนดักเตอร์ เนื่องจากความกังวลเรื่อง AI ที่เฟื่องฟู",
-      "source": "Associated Press",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/south-koreas-kospi-index-sinks-025606179.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T02:56:06Z",
-      "category": "TECH",
+      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: JPMorgan Chase, Micron, UnitedHealth และอีกมากมาย",
+      "title_en": "Stocks making the biggest moves premarket: JPMorgan Chase, Micron, UnitedHealth & more",
+      "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดก่อนระฆัง",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/stocks-making-the-biggest-moves-premarket-jpm-mu-unh.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-13T11:49:04Z",
+      "category": "MACRO",
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
+        "JPM"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ดัชนี Kospi ของเกาหลีใต้ร่วงลงกว่า 7% จากการขายหุ้นเซมิคอนดักเตอร์ เนื่องจากความกังวลเรื่อง AI ที่เฟื่องฟู",
-        "แหล่งข่าวอ้างอิง: Associated Press (13/10/2026 02:56 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดก่อนระฆัง",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 11:49 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM"
       ],
       "fullArticle": [
-        "ดัชนี Kospi ของเกาหลีใต้ร่วงลงกว่า 7% จากการขายหุ้นเซมิคอนดักเตอร์ เนื่องจากความกังวลเรื่อง AI ที่เฟื่องฟู",
-        "ดัชนี Kospi ของเกาหลีใต้ร่วงลงกว่า 7% จากการขายหุ้นเซมิคอนดักเตอร์ เนื่องจากความกังวลเรื่อง AI ที่เฟื่องฟู",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"South Korea's Kospi index sinks more than 7% on semiconductor share sell-off over AI boom worries\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: JPMorgan Chase, Micron, UnitedHealth และอีกมากมาย",
+        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดก่อนระฆัง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: JPMorgan Chase, Micron, UnitedHealth & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
