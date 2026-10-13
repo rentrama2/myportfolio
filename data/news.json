@@ -1,45 +1,161 @@
 {
-  "updated_at": "2026-10-12T18:45:59Z",
-  "updated_at_thai": "13 ต.ค. 2569 01:45 น.",
+  "updated_at": "2026-10-13T01:04:26Z",
+  "updated_at_thai": "13 ต.ค. 2569 08:04 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "วอลล์สตรีทปะปนกับราคาน้ำมันที่พุ่งสูงขึ้น นักลงทุนรอผลประกอบการ ข้อมูลเศรษฐกิจ",
-      "title_en": "Wall Street mixed as oil prices surge, investors await earnings, economic data",
-      "summary": "วอลล์สตรีทปะปนกับราคาน้ำมันที่พุ่งสูงขึ้น นักลงทุนรอผลประกอบการ ข้อมูลเศรษฐกิจ",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-stock-futures-steady-oil-113404683.html",
-      "time": "5 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T18:40:14Z",
+      "title": "ก๊าซหายากพิเศษนี้อาจกลายเป็นเอซในมือของแคนาดา",
+      "title_en": "This Ultra-Rare Gas Could Become An Ace In Canada’s Hands",
+      "summary": "ก๊าซหายากพิเศษนี้อาจกลายเป็นเอซในมือของแคนาดา",
+      "source": "Oilprice.com",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/ultra-rare-gas-could-become-000000924.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-13T00:00:00Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
         "CVX"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": true,
       "points": [
-        "วอลล์สตรีทปะปนกับราคาน้ำมันที่พุ่งสูงขึ้น นักลงทุนรอผลประกอบการ ข้อมูลเศรษฐกิจ",
-        "แหล่งข่าวอ้างอิง: Reuters (12/10/2026 18:40 UTC)",
+        "ก๊าซหายากพิเศษนี้อาจกลายเป็นเอซในมือของแคนาดา",
+        "แหล่งข่าวอ้างอิง: Oilprice.com (13/10/2026 00:00 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "วอลล์สตรีทปะปนกับราคาน้ำมันที่พุ่งสูงขึ้น นักลงทุนรอผลประกอบการ ข้อมูลเศรษฐกิจ",
-        "วอลล์สตรีทปะปนกับราคาน้ำมันที่พุ่งสูงขึ้น นักลงทุนรอผลประกอบการ ข้อมูลเศรษฐกิจ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wall Street mixed as oil prices surge, investors await earnings, economic data\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ก๊าซหายากพิเศษนี้อาจกลายเป็นเอซในมือของแคนาดา",
+        "ก๊าซหายากพิเศษนี้อาจกลายเป็นเอซในมือของแคนาดา",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"This Ultra-Rare Gas Could Become An Ace In Canada’s Hands\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "อัปเดต: ดัชนีหุ้นสหรัฐผสมผสานกับน้ำหนักของเทคโนโลยี น้ำมันดิบพุ่งขึ้นท่ามกลางการโจมตีสินทรัพย์พลังงานของยูเครน",
-      "title_en": "Update: US Equity Indexes Mixed as Technology Weighs, Crude Oil Jumps Amid Strikes on Ukraine's Energy Assets",
-      "summary": "อัปเดต: ดัชนีหุ้นสหรัฐผสมผสานกับน้ำหนักของเทคโนโลยี น้ำมันดิบพุ่งขึ้นท่ามกลางการโจมตีสินทรัพย์พลังงานของยูเครน",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-technology-182620674.html",
-      "time": "19 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T18:26:20Z",
+      "title": "เหตุใดหุ้น DHT Holdings (DHT) จึงขึ้นในวันนี้",
+      "title_en": "Why DHT Holdings (DHT) Stock Is Up Today",
+      "summary": "เหตุใดหุ้น DHT Holdings (DHT) จึงขึ้นในวันนี้",
+      "source": "StockStory",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/why-dht-holdings-dht-stock-231903253.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-12T23:19:03Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "เหตุใดหุ้น DHT Holdings (DHT) จึงขึ้นในวันนี้",
+        "แหล่งข่าวอ้างอิง: StockStory (12/10/2026 23:19 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "เหตุใดหุ้น DHT Holdings (DHT) จึงขึ้นในวันนี้",
+        "เหตุใดหุ้น DHT Holdings (DHT) จึงขึ้นในวันนี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why DHT Holdings (DHT) Stock Is Up Today\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "คุณสามารถสูญเสียปลั๊กไฟได้มากแค่ไหน?",
+      "title_en": "How Much Could You Lose In Plug Power Stock?",
+      "summary": "คุณสามารถสูญเสียปลั๊กไฟได้มากแค่ไหน?",
+      "source": "Trefis",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/much-could-lose-plug-power-230309318.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-12T23:03:09Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "คุณสามารถสูญเสียปลั๊กไฟได้มากแค่ไหน?",
+        "แหล่งข่าวอ้างอิง: Trefis (12/10/2026 23:03 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "คุณสามารถสูญเสียปลั๊กไฟได้มากแค่ไหน?",
+        "คุณสามารถสูญเสียปลั๊กไฟได้มากแค่ไหน?",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"How Much Could You Lose In Plug Power Stock?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "Jim Cramer กล่าวว่าการดำเนินงาน 4 ปีอันน่าทึ่งของตลาดกระทิงถือเป็นบทเรียนที่สำคัญสำหรับนักลงทุน",
+      "title_en": "Jim Cramer says the bull market's remarkable 4-year run offers a crucial lesson for investors",
+      "summary": "Jim Cramer จาก CNBC กล่าวว่าการดำเนินงานสี่ปีที่น่าทึ่งของตลาดแสดงให้เห็นว่าเหตุใดนักลงทุนจึงควรลงทุนต่อไปแทนที่จะพยายามจับเวลาของตลาด",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/12/cramer-sp-500-bull-market-stay-invested.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-12T22:16:12Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Jim Cramer จาก CNBC กล่าวว่าการดำเนินงานสี่ปีที่น่าทึ่งของตลาดแสดงให้เห็นว่าเหตุใดนักลงทุนจึงควรลงทุนต่อไปแทนที่จะพยายามจับเวลาของตลาด",
+        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 22:16 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "Jim Cramer กล่าวว่าการดำเนินงาน 4 ปีอันน่าทึ่งของตลาดกระทิงถือเป็นบทเรียนที่สำคัญสำหรับนักลงทุน",
+        "Jim Cramer จาก CNBC กล่าวว่าการดำเนินงานสี่ปีที่น่าทึ่งของตลาดแสดงให้เห็นว่าเหตุใดนักลงทุนจึงควรลงทุนต่อไปแทนที่จะพยายามจับเวลาของตลาด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer says the bull market's remarkable 4-year run offers a crucial lesson for investors\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "ความต้องการถ่านหินทั่วโลกเพิ่มขึ้นเนื่องจากการขาดแคลน LNG ที่เพิ่มมากขึ้น",
+      "title_en": "Global Coal Demand Rises as LNG Shortage Deepens",
+      "summary": "ความต้องการถ่านหินทั่วโลกเพิ่มขึ้นเนื่องจากการขาดแคลน LNG ที่เพิ่มมากขึ้น",
+      "source": "Oilprice.com",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/global-coal-demand-rises-lng-220000465.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-12T22:00:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ความต้องการถ่านหินทั่วโลกเพิ่มขึ้นเนื่องจากการขาดแคลน LNG ที่เพิ่มมากขึ้น",
+        "แหล่งข่าวอ้างอิง: Oilprice.com (12/10/2026 22:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "ความต้องการถ่านหินทั่วโลกเพิ่มขึ้นเนื่องจากการขาดแคลน LNG ที่เพิ่มมากขึ้น",
+        "ความต้องการถ่านหินทั่วโลกเพิ่มขึ้นเนื่องจากการขาดแคลน LNG ที่เพิ่มมากขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Global Coal Demand Rises as LNG Shortage Deepens\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "หุ้นพลังงานพุ่งขึ้นเนื่องจากความขัดแย้งทั่วโลกผลักดันราคาน้ำมันให้สูงขึ้น",
+      "title_en": "Energy Stocks Rise as Global Conflicts Push Up Oil Prices",
+      "summary": "หุ้นพลังงานพุ่งขึ้นเนื่องจากความขัดแย้งทั่วโลกผลักดันราคาน้ำมันให้สูงขึ้น",
+      "source": "The Wall Street Journal",
+      "sourceUrl": "https://finance.yahoo.com/m/d183c75a-e9ea-39b3-8e8f-7327ec0655eb/energy-stocks-rise-as-global.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-12T21:19:00Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
@@ -49,24 +165,80 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "อัปเดต: ดัชนีหุ้นสหรัฐผสมผสานกับน้ำหนักของเทคโนโลยี น้ำมันดิบพุ่งขึ้นท่ามกลางการโจมตีสินทรัพย์พลังงานของยูเครน",
-        "แหล่งข่าวอ้างอิง: MT Newswires (12/10/2026 18:26 UTC)",
+        "หุ้นพลังงานพุ่งขึ้นเนื่องจากความขัดแย้งทั่วโลกผลักดันราคาน้ำมันให้สูงขึ้น",
+        "แหล่งข่าวอ้างอิง: The Wall Street Journal (12/10/2026 21:19 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "อัปเดต: ดัชนีหุ้นสหรัฐผสมผสานกับน้ำหนักของเทคโนโลยี น้ำมันดิบพุ่งขึ้นท่ามกลางการโจมตีสินทรัพย์พลังงานของยูเครน",
-        "อัปเดต: ดัชนีหุ้นสหรัฐผสมผสานกับน้ำหนักของเทคโนโลยี น้ำมันดิบพุ่งขึ้นท่ามกลางการโจมตีสินทรัพย์พลังงานของยูเครน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Indexes Mixed as Technology Weighs, Crude Oil Jumps Amid Strikes on Ukraine's Energy Assets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้นพลังงานพุ่งขึ้นเนื่องจากความขัดแย้งทั่วโลกผลักดันราคาน้ำมันให้สูงขึ้น",
+        "หุ้นพลังงานพุ่งขึ้นเนื่องจากความขัดแย้งทั่วโลกผลักดันราคาน้ำมันให้สูงขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Energy Stocks Rise as Global Conflicts Push Up Oil Prices\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-7",
+      "title": "Elon Musk บริจาคเงิน 276 ล้านดอลลาร์ให้กับกลุ่มรีพับลิกัน กลายเป็นผู้บริจาคมิดเทอมรายใหญ่ที่สุดในปี 2569",
+      "title_en": "Elon Musk gives $276 million to Republican groups, becomes biggest known 2026 midterm donor",
+      "summary": "การใช้จ่ายในการเลือกตั้งกลางภาคของ Musk เกิดขึ้นในขณะที่ CEO ของ Tesla และ SpaceX สร้างความสัมพันธ์ใหม่กับ Trump และมีความสัมพันธ์ทางธุรกิจกับรัฐบาลกลาง",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/12/elon-musk-republican-donations-2026-midterm-election.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-12T21:17:58Z",
+      "category": "MACRO",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "การใช้จ่ายในการเลือกตั้งกลางภาคของ Musk เกิดขึ้นในขณะที่ CEO ของ Tesla และ SpaceX สร้างความสัมพันธ์ใหม่กับ Trump และมีความสัมพันธ์ทางธุรกิจกับรัฐบาลกลาง",
+        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 21:17 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "Elon Musk บริจาคเงิน 276 ล้านดอลลาร์ให้กับกลุ่มรีพับลิกัน กลายเป็นผู้บริจาคมิดเทอมรายใหญ่ที่สุดในปี 2569",
+        "การใช้จ่ายในการเลือกตั้งกลางภาคของ Musk เกิดขึ้นในขณะที่ CEO ของ Tesla และ SpaceX สร้างความสัมพันธ์ใหม่กับ Trump และมีความสัมพันธ์ทางธุรกิจกับรัฐบาลกลาง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Elon Musk gives $276 million to Republican groups, becomes biggest known 2026 midterm donor\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "IonQ เข้าซื้อกิจการ Elisity บริษัทรักษาความปลอดภัยทางไซเบอร์ด้วยข้อตกลงมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
+      "title_en": "IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion",
+      "summary": "แพลตฟอร์มคอมพิวเตอร์ควอนตัมกำลังซื้อบริษัทรักษาความปลอดภัยทางไซเบอร์ Elisity ในข้อตกลงหุ้นทั้งหมดมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/12/ionq-elisity-acquisition-cybersecurity.html",
+      "time": "5 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-12T19:35:48Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "แพลตฟอร์มคอมพิวเตอร์ควอนตัมกำลังซื้อบริษัทรักษาความปลอดภัยทางไซเบอร์ Elisity ในข้อตกลงหุ้นทั้งหมดมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
+        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 19:35 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "IonQ เข้าซื้อกิจการ Elisity บริษัทรักษาความปลอดภัยทางไซเบอร์ด้วยข้อตกลงมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
+        "แพลตฟอร์มคอมพิวเตอร์ควอนตัมกำลังซื้อบริษัทรักษาความปลอดภัยทางไซเบอร์ Elisity ในข้อตกลงหุ้นทั้งหมดมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
       "title": "ตลาดกระทิงมีอายุครบ 4 ปีในวันจันทร์ นักลงทุนกล่าวว่าการมีอายุครบ 5 ปีอาจเป็นเรื่องท้าทาย",
       "title_en": "The bull market turned 4 years old on Monday. Investors say reaching a fifth birthday could be challenging",
       "summary": "S&P 500 เพิ่มขึ้นเกือบ 120% นับตั้งแต่ปิดต่ำสุดในวันที่ 12 ต.ค. 2022",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/12/the-bull-market-just-turned-four-after-climbing-a-wall-of-worry.html",
-      "time": "27 นาทีที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-12T18:18:39Z",
       "category": "MACRO",
       "tickers": [
@@ -87,126 +259,13 @@
       ]
     },
     {
-      "id": "news-4",
-      "title": "IonQ เข้าซื้อกิจการ Elisity บริษัทรักษาความปลอดภัยทางไซเบอร์ด้วยข้อตกลงมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
-      "title_en": "IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion",
-      "summary": "แพลตฟอร์มคอมพิวเตอร์ควอนตัมกำลังซื้อบริษัทรักษาความปลอดภัยทางไซเบอร์ Elisity ในข้อตกลงหุ้นทั้งหมดมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/ionq-elisity-acquisition-cybersecurity.html",
-      "time": "31 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T18:14:45Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "แพลตฟอร์มคอมพิวเตอร์ควอนตัมกำลังซื้อบริษัทรักษาความปลอดภัยทางไซเบอร์ Elisity ในข้อตกลงหุ้นทั้งหมดมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
-        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 18:14 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "IonQ เข้าซื้อกิจการ Elisity บริษัทรักษาความปลอดภัยทางไซเบอร์ด้วยข้อตกลงมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
-        "แพลตฟอร์มคอมพิวเตอร์ควอนตัมกำลังซื้อบริษัทรักษาความปลอดภัยทางไซเบอร์ Elisity ในข้อตกลงหุ้นทั้งหมดมูลค่าสูงสุด 1.3 พันล้านดอลลาร์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "Wall Street มีการซื้อขายใกล้ระดับสูงสุดเป็นประวัติการณ์ คนรวยที่สุด 1% เป็นเจ้าของความมั่งคั่งในหุ้นของอเมริกามากกว่าครึ่งหนึ่ง",
-      "title_en": "Wall Street Is Trading Near Record Highs. The Richest 1% Own More Than Half Of America's Stock Wealth.",
-      "summary": "Wall Street มีการซื้อขายใกล้ระดับสูงสุดเป็นประวัติการณ์ คนรวยที่สุด 1% เป็นเจ้าของความมั่งคั่งในหุ้นของอเมริกามากกว่าครึ่งหนึ่ง",
-      "source": "International Business Times",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/wall-street-trading-near-record-180638937.html",
-      "time": "39 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T18:06:38Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Wall Street มีการซื้อขายใกล้ระดับสูงสุดเป็นประวัติการณ์ คนรวยที่สุด 1% เป็นเจ้าของความมั่งคั่งในหุ้นของอเมริกามากกว่าครึ่งหนึ่ง",
-        "แหล่งข่าวอ้างอิง: International Business Times (12/10/2026 18:06 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "Wall Street มีการซื้อขายใกล้ระดับสูงสุดเป็นประวัติการณ์ คนรวยที่สุด 1% เป็นเจ้าของความมั่งคั่งในหุ้นของอเมริกามากกว่าครึ่งหนึ่ง",
-        "Wall Street มีการซื้อขายใกล้ระดับสูงสุดเป็นประวัติการณ์ คนรวยที่สุด 1% เป็นเจ้าของความมั่งคั่งในหุ้นของอเมริกามากกว่าครึ่งหนึ่ง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wall Street Is Trading Near Record Highs. The Richest 1% Own More Than Half Of America's Stock Wealth.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "Exxon และ Oil Giants มีคะแนนซื้อสูงสุดหลังเหตุโจมตีสนามบินซาอุดีอาระเบีย",
-      "title_en": "Exxon, Oil Giants Top Buy Points After Deadly Saudi Airport Attacks",
-      "summary": "Exxon และ Oil Giants มีคะแนนซื้อสูงสุดหลังเหตุโจมตีสนามบินซาอุดีอาระเบีย",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/74b3cc80-b63c-34db-8188-25b254ce30d7/exxon%2C-oil-giants-top-buy.html",
-      "time": "39 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T18:06:35Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Exxon และ Oil Giants มีคะแนนซื้อสูงสุดหลังเหตุโจมตีสนามบินซาอุดีอาระเบีย",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (12/10/2026 18:06 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM"
-      ],
-      "fullArticle": [
-        "Exxon และ Oil Giants มีคะแนนซื้อสูงสุดหลังเหตุโจมตีสนามบินซาอุดีอาระเบีย",
-        "Exxon และ Oil Giants มีคะแนนซื้อสูงสุดหลังเหตุโจมตีสนามบินซาอุดีอาระเบีย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Exxon, Oil Giants Top Buy Points After Deadly Saudi Airport Attacks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "อัปเดต: หุ้นส่วนใหญ่ร่วงลงในระหว่างวัน นำหน้ารายรับของธนาคารยักษ์ใหญ่",
-      "title_en": "Update: Equities Mostly Down Intraday Ahead of Big Bank Earnings",
-      "summary": "อัปเดต: หุ้นส่วนใหญ่ร่วงลงในระหว่างวัน นำหน้ารายรับของธนาคารยักษ์ใหญ่",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/equities-mostly-down-intraday-ahead-175906983.html",
-      "time": "46 นาทีที่แล้ว",
-      "publishedAt": "2026-10-12T17:59:06Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "อัปเดต: หุ้นส่วนใหญ่ร่วงลงในระหว่างวัน นำหน้ารายรับของธนาคารยักษ์ใหญ่",
-        "แหล่งข่าวอ้างอิง: MT Newswires (12/10/2026 17:59 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "อัปเดต: หุ้นส่วนใหญ่ร่วงลงในระหว่างวัน นำหน้ารายรับของธนาคารยักษ์ใหญ่",
-        "อัปเดต: หุ้นส่วนใหญ่ร่วงลงในระหว่างวัน นำหน้ารายรับของธนาคารยักษ์ใหญ่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: Equities Mostly Down Intraday Ahead of Big Bank Earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
+      "id": "news-10",
       "title": "Meta เปิดตัวโมเดล Muse Wonder AI ในการทดสอบความเต็มใจที่จะจ่ายเงินของผู้ใช้ครั้งล่าสุด",
       "title_en": "Meta debuts Muse Wonder AI model in latest test of users' willingness to pay",
       "summary": "Meta เปิดตัว Muse Wonder ซึ่งเป็นโมเดล AI ล่าสุด แต่ผู้ใช้ต้องชำระค่าสมัครสมาชิกแอป Muse เพื่อเข้าถึง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/12/meta-muse-wonder-ai-model-agent.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-12T17:34:35Z",
       "category": "TECH",
       "tickers": [
@@ -227,13 +286,13 @@
       ]
     },
     {
-      "id": "news-9",
+      "id": "news-11",
       "title": "อาจจำเป็นต้องมีอัตราที่สูงขึ้นเพื่อหลีกเลี่ยง 'กรอบความคิดเงินเฟ้อ' ที่ครอบงำ Hammack ของเฟดกล่าว",
       "title_en": "Higher rates could be needed to avoid 'inflationary mindset' taking hold, says Fed's Hammack",
       "summary": "ประธานเฟดคลีฟแลนด์กล่าวว่าจำเป็นต้องมีนโยบายการเงินที่เข้มงวดมากขึ้นเพื่อลดอัตราเงินเฟ้อ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/12/beth-hammack-fed-inflation-policy.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-12T17:15:21Z",
       "category": "MACRO",
       "tickers": [
@@ -256,13 +315,13 @@
       ]
     },
     {
-      "id": "news-10",
+      "id": "news-12",
       "title": "อัตราเงินเฟ้อมีแนวโน้มที่จะถึงจุดสูงสุดในปี 2569 แต่จะยังคงเหนียวแน่นตามการคาดการณ์ของตลาด",
       "title_en": "Inflation likely peaked for 2026 but will remain sticky, according to prediction markets",
       "summary": "ผู้ค้าคิดว่ามีโอกาสเพียงเล็กน้อยที่อัตราเงินเฟ้อพื้นฐานซึ่งไม่รวมราคาอาหารและพลังงานจะลดลงเหลือ 2.2% ในปีนี้",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/12/inflation-will-remain-sticky-in-2026-according-to-prediction-markets.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-12T15:37:26Z",
       "category": "MACRO",
       "tickers": [
@@ -282,63 +341,6 @@
         "อัตราเงินเฟ้อมีแนวโน้มที่จะถึงจุดสูงสุดในปี 2569 แต่จะยังคงเหนียวแน่นตามการคาดการณ์ของตลาด",
         "ผู้ค้าคิดว่ามีโอกาสเพียงเล็กน้อยที่อัตราเงินเฟ้อพื้นฐานซึ่งไม่รวมราคาอาหารและพลังงานจะลดลงเหลือ 2.2% ในปีนี้",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Inflation likely peaked for 2026 but will remain sticky, according to prediction markets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "รางวัลโนเบลสาขาเศรษฐศาสตร์ ได้แก่ Robert E. Hall และ Michael Woodford",
-      "title_en": "Nobel prize in economics awarded to Robert E. Hall and Michael Woodford",
-      "summary": "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/nobel-economics-prize-winner-woodford-hall.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-12T14:09:02Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
-        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 14:09 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "รางวัลโนเบลสาขาเศรษฐศาสตร์ ได้แก่ Robert E. Hall และ Michael Woodford",
-        "นักเศรษฐศาสตร์สหรัฐฯ ได้รับรางวัลจากผลงานที่เป็นรากฐานของแบบจำลองที่ธนาคารกลางและรัฐบาลใช้เพื่อสร้างเสถียรภาพทางเศรษฐกิจ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nobel prize in economics awarded to Robert E. Hall and Michael Woodford\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "Microsoft พึ่งพาชิป AI ที่ผลิตเองมากขึ้น ลดการพึ่งพา Nvidia",
-      "title_en": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
-      "summary": "ด้วยการพึ่งพาชิปของตัวเองมากขึ้น Microsoft ยืนหยัดที่จะขยายระยะขอบและสนับสนุนสแต็ค AI ของตน",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-12T14:04:16Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ด้วยการพึ่งพาชิปของตัวเองมากขึ้น Microsoft ยืนหยัดที่จะขยายระยะขอบและสนับสนุนสแต็ค AI ของตน",
-        "แหล่งข่าวอ้างอิง: CNBC (12/10/2026 14:04 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #MSFT"
-      ],
-      "fullArticle": [
-        "Microsoft พึ่งพาชิป AI ที่ผลิตเองมากขึ้น ลดการพึ่งพา Nvidia",
-        "ด้วยการพึ่งพาชิปของตัวเองมากขึ้น Microsoft ยืนหยัดที่จะขยายระยะขอบและสนับสนุนสแต็ค AI ของตน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
