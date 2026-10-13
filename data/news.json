@@ -1,327 +1,187 @@
 {
-  "updated_at": "2026-10-13T15:16:41Z",
-  "updated_at_thai": "13 ต.ค. 2569 22:16 น.",
+  "updated_at": "2026-10-13T20:45:55Z",
+  "updated_at_thai": "14 ต.ค. 2569 03:45 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "UnitedHealth Group ติดอันดับประมาณการ เพิ่มแนวโน้มกำไร เนื่องจากบริษัทประกันภัยจัดการค่ารักษาพยาบาลที่สูง",
-      "title_en": "UnitedHealth Group tops estimates, hikes profit outlook as insurer manages high medical costs",
-      "summary": "UnitedHealth Group กล่าวว่าคาดว่ากำไรสุทธิในปี 2569 จะปรับแล้วอย่างน้อย 20.50 ดอลลาร์ต่อหุ้น เพิ่มขึ้นจากแนวโน้มเดิมที่ 19.50 ดอลลาร์เป็น 20.00 ดอลลาร์ต่อหุ้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/unitedhealth-group-unh-earnings-q3-2026.html",
-      "time": "12 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T15:04:35Z",
-      "category": "EARNINGS",
+      "title": "ตลาดหุ้นสหรัฐปิดตัวลงท่ามกลางการลดลงของ Mega-Cap Semiconductor และหุ้นธนาคาร",
+      "title_en": "US Equity Markets End Lower Amid Declines in Mega-Cap Semiconductor, Bank Stocks",
+      "summary": "ตลาดหุ้นสหรัฐปิดตัวลงท่ามกลางการลดลงของ Mega-Cap Semiconductor และหุ้นธนาคาร",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-end-lower-203836253.html",
+      "time": "7 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T20:38:36Z",
+      "category": "TECH",
       "tickers": [
-        "SPY",
-        "DIA"
+        "NVDA",
+        "AAPL",
+        "MSFT"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": true,
       "points": [
-        "UnitedHealth Group กล่าวว่าคาดว่ากำไรสุทธิในปี 2569 จะปรับแล้วอย่างน้อย 20.50 ดอลลาร์ต่อหุ้น เพิ่มขึ้นจากแนวโน้มเดิมที่ 19.50 ดอลลาร์เป็น 20.00 ดอลลาร์ต่อหุ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 15:04 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+        "ตลาดหุ้นสหรัฐปิดตัวลงท่ามกลางการลดลงของ Mega-Cap Semiconductor และหุ้นธนาคาร",
+        "แหล่งข่าวอ้างอิง: MT Newswires (13/10/2026 20:38 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "UnitedHealth Group ติดอันดับประมาณการ เพิ่มแนวโน้มกำไร เนื่องจากบริษัทประกันภัยจัดการค่ารักษาพยาบาลที่สูง",
-        "UnitedHealth Group กล่าวว่าคาดว่ากำไรสุทธิในปี 2569 จะปรับแล้วอย่างน้อย 20.50 ดอลลาร์ต่อหุ้น เพิ่มขึ้นจากแนวโน้มเดิมที่ 19.50 ดอลลาร์เป็น 20.00 ดอลลาร์ต่อหุ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"UnitedHealth Group tops estimates, hikes profit outlook as insurer manages high medical costs\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตลาดหุ้นสหรัฐปิดตัวลงท่ามกลางการลดลงของ Mega-Cap Semiconductor และหุ้นธนาคาร",
+        "ตลาดหุ้นสหรัฐปิดตัวลงท่ามกลางการลดลงของ Mega-Cap Semiconductor และหุ้นธนาคาร",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"US Equity Markets End Lower Amid Declines in Mega-Cap Semiconductor, Bank Stocks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "ข้อมูลอัปเดตสดเกี่ยวกับรายได้ของธนาคาร: AI ครอบงำการโทรของนักวิเคราะห์จาก JPMorgan, Goldman และ Wells Fargo",
-      "title_en": "Bank earnings live updates: AI dominates analyst calls from JPMorgan, Goldman and Wells Fargo",
-      "summary": "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
+      "title": "ผู้พิพากษากล่าวว่า Musk มีส่วนร่วมในการข่มขู่อดีต CFO ของ FEMA Mary Comans ทำให้ชื่อเสียงของเธอหมดไป",
+      "title_en": "Judge says Musk engaged in intimidation of ex-FEMA CFO Mary Comans, clears her name",
+      "summary": "แมรี่ โคมานส์ อดีตซีเอฟโอของ FEMA ถูกล้างโดยผู้พิพากษาของรัฐบาลกลาง หลังจากที่อีลอน มัสก์และเจ้าหน้าที่ของรัฐคนอื่นๆ กล่าวหาเธออย่างผิดๆ ว่ากระทำผิดทางอาญาในปี 2568",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/bank-earnings-live-updates.html",
-      "time": "12 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T15:03:53Z",
-      "category": "COMMODITIES",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/judge-says-elon-musk-engaged-intimidation-of-ex-fema-cfo-mary-comans.html",
+      "time": "15 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T20:30:08Z",
+      "category": "MACRO",
       "tickers": [
-        "JPM",
-        "GS",
-        "WFC"
+        "TSLA"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 15:03 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM #GS #WFC"
+        "แมรี่ โคมานส์ อดีตซีเอฟโอของ FEMA ถูกล้างโดยผู้พิพากษาของรัฐบาลกลาง หลังจากที่อีลอน มัสก์และเจ้าหน้าที่ของรัฐคนอื่นๆ กล่าวหาเธออย่างผิดๆ ว่ากระทำผิดทางอาญาในปี 2568",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 20:30 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
       ],
       "fullArticle": [
-        "ข้อมูลอัปเดตสดเกี่ยวกับรายได้ของธนาคาร: AI ครอบงำการโทรของนักวิเคราะห์จาก JPMorgan, Goldman และ Wells Fargo",
-        "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank earnings live updates: AI dominates analyst calls from JPMorgan, Goldman and Wells Fargo\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ผู้พิพากษากล่าวว่า Musk มีส่วนร่วมในการข่มขู่อดีต CFO ของ FEMA Mary Comans ทำให้ชื่อเสียงของเธอหมดไป",
+        "แมรี่ โคมานส์ อดีตซีเอฟโอของ FEMA ถูกล้างโดยผู้พิพากษาของรัฐบาลกลาง หลังจากที่อีลอน มัสก์และเจ้าหน้าที่ของรัฐคนอื่นๆ กล่าวหาเธออย่างผิดๆ ว่ากระทำผิดทางอาญาในปี 2568",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Judge says Musk engaged in intimidation of ex-FEMA CFO Mary Comans, clears her name\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-3",
-      "title": "ตลาดหุ้นวันนี้: Dow Fizzles, Nasdaq ลดขาดทุน; Apple, Salesforce Surge (การรายงานสด)",
-      "title_en": "Stock Market Today: Dow Fizzles, Nasdaq Cuts Losses; Apple, Salesforce Surge (Live Coverage)",
-      "summary": "ตลาดหุ้นวันนี้: Dow Fizzles, Nasdaq ลดขาดทุน; Apple, Salesforce Surge (การรายงานสด)",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/53f0b0da-d3c5-3ed1-b95b-353bb359f22f/stock-market-today%3A-dow.html",
-      "time": "17 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T14:58:42Z",
-      "category": "TECH",
-      "tickers": [
-        "AAPL",
-        "QQQ",
-        "DIA",
-        "CRM"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้: Dow Fizzles, Nasdaq ลดขาดทุน; Apple, Salesforce Surge (การรายงานสด)",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (13/10/2026 14:58 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL #QQQ #DIA #CRM"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: Dow Fizzles, Nasdaq ลดขาดทุน; Apple, Salesforce Surge (การรายงานสด)",
-        "ตลาดหุ้นวันนี้: Dow Fizzles, Nasdaq ลดขาดทุน; Apple, Salesforce Surge (การรายงานสด)",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Dow Fizzles, Nasdaq Cuts Losses; Apple, Salesforce Surge (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "Anthropic เตรียมเปิดเผยตัวเลขรายได้ใหม่ เนื่องจากการเงินในห้องปฏิบัติการ AI กลายเป็นศูนย์กลางของการค้าเทคโนโลยี",
-      "title_en": "Anthropic to disclose new revenue numbers as AI lab financials become central to tech trade",
-      "summary": "Anthropic จะเผยแพร่ข้อมูลทางการเงินที่อัปเดตให้กับกลุ่มนักลงทุนที่มารวมตัวกันที่สำนักงานใหญ่ในสัปดาห์นี้ ตามที่ผู้คนคุ้นเคยกับเรื่องนี้",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/anthropic-q3-financials-ipo.html",
-      "time": "20 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T14:55:51Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Anthropic จะเผยแพร่ข้อมูลทางการเงินที่อัปเดตให้กับกลุ่มนักลงทุนที่มารวมตัวกันที่สำนักงานใหญ่ในสัปดาห์นี้ ตามที่ผู้คนคุ้นเคยกับเรื่องนี้",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 14:55 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "Anthropic เตรียมเปิดเผยตัวเลขรายได้ใหม่ เนื่องจากการเงินในห้องปฏิบัติการ AI กลายเป็นศูนย์กลางของการค้าเทคโนโลยี",
-        "Anthropic จะเผยแพร่ข้อมูลทางการเงินที่อัปเดตให้กับกลุ่มนักลงทุนที่มารวมตัวกันที่สำนักงานใหญ่ในสัปดาห์นี้ ตามที่ผู้คนคุ้นเคยกับเรื่องนี้",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic to disclose new revenue numbers as AI lab financials become central to tech trade\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, การค้า Nasdaq ผสมปนเปกันเมื่อฤดูกาลผลประกอบการเริ่มต้นขึ้น",
-      "title_en": "Stock market today: Dow, S&P 500, Nasdaq trade mixed as earnings season kicks off",
-      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, การค้า Nasdaq ผสมปนเปกันเมื่อฤดูกาลผลประกอบการเริ่มต้นขึ้น",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-13-dow-sp-500-nasdaq-080236234.html",
-      "time": "24 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T14:52:19Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, การค้า Nasdaq ผสมปนเปกันเมื่อฤดูกาลผลประกอบการเริ่มต้นขึ้น",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (13/10/2026 14:52 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, การค้า Nasdaq ผสมปนเปกันเมื่อฤดูกาลผลประกอบการเริ่มต้นขึ้น",
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, การค้า Nasdaq ผสมปนเปกันเมื่อฤดูกาลผลประกอบการเริ่มต้นขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq trade mixed as earnings season kicks off\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "EON Resources รายงานรายได้เพิ่มขึ้น 19% และต้นทุนที่ลดลงสำหรับไตรมาสแรกของปี 2026 ความก้าวหน้าของการขุดเจาะแนวนอนของ San Andres เป็นการทดสอบเบื้องต้นยืนยันการผลิตน้ำมันเชิงพาณิชย์",
-      "title_en": "EON Resources Reports A 19% Increase in Revenues and Lower Costs for the First Quarter of 2026, Advances San Andres Horizontal Drilling as Early Tests Confirm Commercial Oil Production",
-      "summary": "EON Resources รายงานรายได้เพิ่มขึ้น 19% และต้นทุนที่ลดลงสำหรับไตรมาสแรกของปี 2026 ความก้าวหน้าของการขุดเจาะแนวนอนของ San Andres เป็นการทดสอบเบื้องต้นยืนยันการผลิตน้ำมันเชิงพาณิชย์",
-      "source": "ACCESS Newswire",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/eon-resources-reports-19-increase-144000814.html",
-      "time": "36 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T14:40:00Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "EON Resources รายงานรายได้เพิ่มขึ้น 19% และต้นทุนที่ลดลงสำหรับไตรมาสแรกของปี 2026 ความก้าวหน้าของการขุดเจาะแนวนอนของ San Andres เป็นการทดสอบเบื้องต้นยืนยันการผลิตน้ำมันเชิงพาณิชย์",
-        "แหล่งข่าวอ้างอิง: ACCESS Newswire (13/10/2026 14:40 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "EON Resources รายงานรายได้เพิ่มขึ้น 19% และต้นทุนที่ลดลงสำหรับไตรมาสแรกของปี 2026 ความก้าวหน้าของการขุดเจาะแนวนอนของ San Andres เป็นการทดสอบเบื้องต้นยืนยันการผลิตน้ำมันเชิงพาณิชย์",
-        "EON Resources รายงานรายได้เพิ่มขึ้น 19% และต้นทุนที่ลดลงสำหรับไตรมาสแรกของปี 2026 ความก้าวหน้าของการขุดเจาะแนวนอนของ San Andres เป็นการทดสอบเบื้องต้นยืนยันการผลิตน้ำมันเชิงพาณิชย์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"EON Resources Reports A 19% Increase in Revenues and Lower Costs for the First Quarter of 2026, Advances San Andres Horizontal Drilling as Early Tests Confirm Commercial Oil Production\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "เชฟรอนกับปิโตรเลียมภาคตะวันตก: หุ้นพลังงานใดน่าซื้อกว่ากันในปี 2569",
-      "title_en": "Chevron vs. Occidental Petroleum: Which Energy Stock Is a Better Buy in 2026?",
-      "summary": "เชฟรอนกับปิโตรเลียมภาคตะวันตก: หุ้นพลังงานใดน่าซื้อกว่ากันในปี 2569",
-      "source": "Motley Fool",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/chevron-vs-occidental-petroleum-energy-143501721.html",
-      "time": "41 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T14:35:01Z",
-      "category": "MACRO",
-      "tickers": [
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "เชฟรอนกับปิโตรเลียมภาคตะวันตก: หุ้นพลังงานใดน่าซื้อกว่ากันในปี 2569",
-        "แหล่งข่าวอ้างอิง: Motley Fool (13/10/2026 14:35 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX"
-      ],
-      "fullArticle": [
-        "เชฟรอนกับปิโตรเลียมภาคตะวันตก: หุ้นพลังงานใดน่าซื้อกว่ากันในปี 2569",
-        "เชฟรอนกับปิโตรเลียมภาคตะวันตก: หุ้นพลังงานใดน่าซื้อกว่ากันในปี 2569",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Chevron vs. Occidental Petroleum: Which Energy Stock Is a Better Buy in 2026?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "รัสเซียไม่บรรลุเป้าหมายพลังงานของยูเครนเมื่อวันอังคาร ราคาน้ำมันปรับตัวลดลง",
-      "title_en": "Russia Didn't Hit Any Ukrainian Energy Targets on Tuesday. Oil Prices Retreated.",
-      "summary": "รัสเซียไม่บรรลุเป้าหมายพลังงานของยูเครนเมื่อวันอังคาร ราคาน้ำมันปรับตัวลดลง",
-      "source": "International Business Times",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/russia-didnt-hit-ukrainian-energy-140834259.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T14:08:34Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "รัสเซียไม่บรรลุเป้าหมายพลังงานของยูเครนเมื่อวันอังคาร ราคาน้ำมันปรับตัวลดลง",
-        "แหล่งข่าวอ้างอิง: International Business Times (13/10/2026 14:08 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "รัสเซียไม่บรรลุเป้าหมายพลังงานของยูเครนเมื่อวันอังคาร ราคาน้ำมันปรับตัวลดลง",
-        "รัสเซียไม่บรรลุเป้าหมายพลังงานของยูเครนเมื่อวันอังคาร ราคาน้ำมันปรับตัวลดลง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Russia Didn't Hit Any Ukrainian Energy Targets on Tuesday. Oil Prices Retreated.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "Apple เปิดตัว HomeView smart home hub พร้อมหน้าจอเพื่อแสดง Siri AI",
-      "title_en": "Apple releases HomeView smart home hub with screen as showcase for Siri AI",
-      "summary": "ผู้ผลิต iPhone ยังประกาศ Apple TV 4K และ HomePod Mini ใหม่",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/apple-homeview-smart-home-siri-ai.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T13:40:00Z",
-      "category": "TECH",
-      "tickers": [
-        "AAPL"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ผู้ผลิต iPhone ยังประกาศ Apple TV 4K และ HomePod Mini ใหม่",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 13:40 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
-      ],
-      "fullArticle": [
-        "Apple เปิดตัว HomeView smart home hub พร้อมหน้าจอเพื่อแสดง Siri AI",
-        "ผู้ผลิต iPhone ยังประกาศ Apple TV 4K และ HomePod Mini ใหม่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple releases HomeView smart home hub with screen as showcase for Siri AI\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "สภางานธนาคารโลกเรียกร้องมาตรการสนับสนุนการจ้างงาน 'ยุควิกฤติ' ขณะที่ IMF เตือนเรื่อง 'สึนามิ' ของ AI",
-      "title_en": "World Bank jobs council urges 'crisis-era' employment support measures as IMF warns of AI ‘tsunami’",
-      "summary": "Kristalina Georgieva หัวหน้า IMF เตือนว่า AI กำลังโจมตีตลาดแรงงานทั่วโลก เช่น “สึนามิที่เคลื่อนตัวช้า” โดยคนงานรุ่นใหม่ที่เข้าสู่ตลาดงานมีความเสี่ยงมากที่สุด",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/12/imf-world-bank-ai-jobs-inflation-.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T13:09:55Z",
+      "title": "TSX Closer: ดัชนีปิดขึ้น 319 จุด ขณะที่หุ้นพลังงานและโทรคมนาคมล่วงหน้า",
+      "title_en": "TSX Closer: Index Closes Up 319 Points as Energy, Telecom Stocks Advance",
+      "summary": "TSX Closer: ดัชนีปิดขึ้น 319 จุด ขณะที่หุ้นพลังงานและโทรคมนาคมล่วงหน้า",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/tsx-closer-index-closes-319-202359214.html",
+      "time": "21 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T20:23:59Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
         "QQQ",
         "TLT"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Kristalina Georgieva หัวหน้า IMF เตือนว่า AI กำลังโจมตีตลาดแรงงานทั่วโลก เช่น “สึนามิที่เคลื่อนตัวช้า” โดยคนงานรุ่นใหม่ที่เข้าสู่ตลาดงานมีความเสี่ยงมากที่สุด",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 13:09 UTC)",
+        "TSX Closer: ดัชนีปิดขึ้น 319 จุด ขณะที่หุ้นพลังงานและโทรคมนาคมล่วงหน้า",
+        "แหล่งข่าวอ้างอิง: MT Newswires (13/10/2026 20:23 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "สภางานธนาคารโลกเรียกร้องมาตรการสนับสนุนการจ้างงาน 'ยุควิกฤติ' ขณะที่ IMF เตือนเรื่อง 'สึนามิ' ของ AI",
-        "Kristalina Georgieva หัวหน้า IMF เตือนว่า AI กำลังโจมตีตลาดแรงงานทั่วโลก เช่น “สึนามิที่เคลื่อนตัวช้า” โดยคนงานรุ่นใหม่ที่เข้าสู่ตลาดงานมีความเสี่ยงมากที่สุด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"World Bank jobs council urges 'crisis-era' employment support measures as IMF warns of AI ‘tsunami’\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "TSX Closer: ดัชนีปิดขึ้น 319 จุด ขณะที่หุ้นพลังงานและโทรคมนาคมล่วงหน้า",
+        "TSX Closer: ดัชนีปิดขึ้น 319 จุด ขณะที่หุ้นพลังงานและโทรคมนาคมล่วงหน้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"TSX Closer: Index Closes Up 319 Points as Energy, Telecom Stocks Advance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-11",
-      "title": "รายได้ของ JPMorgan พลาดไป, Delta ชะลอเส้นทางริยาด, แผนไก่ของ McDonald และอีกมากมายใน Morning Squawk",
-      "title_en": "JPMorgan's earnings miss, Delta delays Riyadh route, McDonald's chicken plans and more in Morning Squawk",
-      "summary": "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/5-things-to-know-before-the-stock-market-opens.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T12:42:33Z",
-      "category": "EARNINGS",
+      "id": "news-4",
+      "title": "ดัชนีหุ้นสหรัฐฯ สำคัญๆ ปรับตัวอย่างไรในวันอังคารที่ 13/10/2569",
+      "title_en": "How major US stock indexes fared Tuesday 10/13/2026",
+      "summary": "ดัชนีหุ้นสหรัฐฯ สำคัญๆ ปรับตัวอย่างไรในวันอังคารที่ 13/10/2569",
+      "source": "Associated Press",
+      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-202026407.html",
+      "time": "25 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T20:20:26Z",
+      "category": "MACRO",
       "tickers": [
-        "JPM"
+        "SPY",
+        "QQQ",
+        "TLT"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 12:42 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM"
+        "ดัชนีหุ้นสหรัฐฯ สำคัญๆ ปรับตัวอย่างไรในวันอังคารที่ 13/10/2569",
+        "แหล่งข่าวอ้างอิง: Associated Press (13/10/2026 20:20 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "รายได้ของ JPMorgan พลาดไป, Delta ชะลอเส้นทางริยาด, แผนไก่ของ McDonald และอีกมากมายใน Morning Squawk",
-        "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"JPMorgan's earnings miss, Delta delays Riyadh route, McDonald's chicken plans and more in Morning Squawk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ดัชนีหุ้นสหรัฐฯ สำคัญๆ ปรับตัวอย่างไรในวันอังคารที่ 13/10/2569",
+        "ดัชนีหุ้นสหรัฐฯ สำคัญๆ ปรับตัวอย่างไรในวันอังคารที่ 13/10/2569",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"How major US stock indexes fared Tuesday 10/13/2026\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-12",
+      "id": "news-5",
+      "title": "ปริมาณสำรองน้ำมันของสหรัฐฯ ทรงตัวในสัปดาห์ที่แล้ว แต่การถอนตัวที่เกี่ยวข้องกับพายุเฮอริเคนและอิหร่านยังดำเนินอยู่",
+      "title_en": "The US oil reserve stayed steady last week, but hurricane- and Iran-related withdrawals are on tap",
+      "summary": "ปริมาณสำรองน้ำมันของสหรัฐฯ ทรงตัวในสัปดาห์ที่แล้ว แต่การถอนตัวที่เกี่ยวข้องกับพายุเฮอริเคนและอิหร่านยังดำเนินอยู่",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/economy/article/the-us-oil-reserve-stayed-steady-last-week-but-hurricane--and-iran-related-withdrawals-are-on-tap-201811648.html",
+      "time": "27 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T20:18:11Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ปริมาณสำรองน้ำมันของสหรัฐฯ ทรงตัวในสัปดาห์ที่แล้ว แต่การถอนตัวที่เกี่ยวข้องกับพายุเฮอริเคนและอิหร่านยังดำเนินอยู่",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (13/10/2026 20:18 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ปริมาณสำรองน้ำมันของสหรัฐฯ ทรงตัวในสัปดาห์ที่แล้ว แต่การถอนตัวที่เกี่ยวข้องกับพายุเฮอริเคนและอิหร่านยังดำเนินอยู่",
+        "ปริมาณสำรองน้ำมันของสหรัฐฯ ทรงตัวในสัปดาห์ที่แล้ว แต่การถอนตัวที่เกี่ยวข้องกับพายุเฮอริเคนและอิหร่านยังดำเนินอยู่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"The US oil reserve stayed steady last week, but hurricane- and Iran-related withdrawals are on tap\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "นักวิเคราะห์พบเหตุการณ์ซ้ำซากน่าขนลุกสำหรับคู่แข่งรายใหญ่ที่สุดของทองคำ",
+      "title_en": "Analyst spots an eerie repeat for gold's biggest rival",
+      "summary": "นักวิเคราะห์พบเหตุการณ์ซ้ำซากน่าขนลุกสำหรับคู่แข่งรายใหญ่ที่สุดของทองคำ",
+      "source": "TheStreet",
+      "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/analyst-spots-eerie-repeat-golds-201643070.html",
+      "time": "29 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T20:16:43Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "นักวิเคราะห์พบเหตุการณ์ซ้ำซากน่าขนลุกสำหรับคู่แข่งรายใหญ่ที่สุดของทองคำ",
+        "แหล่งข่าวอ้างอิง: TheStreet (13/10/2026 20:16 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "นักวิเคราะห์พบเหตุการณ์ซ้ำซากน่าขนลุกสำหรับคู่แข่งรายใหญ่ที่สุดของทองคำ",
+        "นักวิเคราะห์พบเหตุการณ์ซ้ำซากน่าขนลุกสำหรับคู่แข่งรายใหญ่ที่สุดของทองคำ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Analyst spots an eerie repeat for gold's biggest rival\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
       "title": "เหตุใดผู้ผลิตชิปชาวจีนที่ไม่ค่อยมีใครรู้จักรายนี้จึงทำให้เกิดปัญหาสต็อกสินค้าทั่วโลก",
       "title_en": "Why this little known Chinese chipmaker has caused a global stock rout",
       "summary": "มีรายงานว่า CXMT ผู้ผลิตชิปหน่วยความจำชั้นนำของจีนมีความคืบหน้าในการออกแบบใหม่",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/13/cxmt-memory-chip-stock-rout.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T12:41:56Z",
+      "time": "39 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T20:05:58Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -333,13 +193,154 @@
       "isHero": false,
       "points": [
         "มีรายงานว่า CXMT ผู้ผลิตชิปหน่วยความจำชั้นนำของจีนมีความคืบหน้าในการออกแบบใหม่",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 12:41 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 20:05 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
         "เหตุใดผู้ผลิตชิปชาวจีนที่ไม่ค่อยมีใครรู้จักรายนี้จึงทำให้เกิดปัญหาสต็อกสินค้าทั่วโลก",
         "มีรายงานว่า CXMT ผู้ผลิตชิปหน่วยความจำชั้นนำของจีนมีความคืบหน้าในการออกแบบใหม่",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why this little known Chinese chipmaker has caused a global stock rout\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "คุณมีงานเก่า 401(k) สามงานจากงานสามงาน และไม่มีงานใดเลยที่พูดคุยกัน ETF ทั้ง 4 นี้เป็นบัญชีเดียวที่พวกเขารวมเข้า",
+      "title_en": "You Have Three Old 401(k)s From Three Jobs and None of Them Talk to Each Other. These 4 ETFs Are the One Account They Roll Into",
+      "summary": "คุณมีงานเก่า 401(k) สามงานจากงานสามงาน และไม่มีงานใดเลยที่พูดคุยกัน ETF ทั้ง 4 นี้เป็นบัญชีเดียวที่พวกเขารวมเข้า",
+      "source": "24/7 Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/options/articles/three-old-401-k-three-200332224.html",
+      "time": "42 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T20:03:32Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "คุณมีงานเก่า 401(k) สามงานจากงานสามงาน และไม่มีงานใดเลยที่พูดคุยกัน ETF ทั้ง 4 นี้เป็นบัญชีเดียวที่พวกเขารวมเข้า",
+        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (13/10/2026 20:03 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "คุณมีงานเก่า 401(k) สามงานจากงานสามงาน และไม่มีงานใดเลยที่พูดคุยกัน ETF ทั้ง 4 นี้เป็นบัญชีเดียวที่พวกเขารวมเข้า",
+        "คุณมีงานเก่า 401(k) สามงานจากงานสามงาน และไม่มีงานใดเลยที่พูดคุยกัน ETF ทั้ง 4 นี้เป็นบัญชีเดียวที่พวกเขารวมเข้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"You Have Three Old 401(k)s From Three Jobs and None of Them Talk to Each Other. These 4 ETFs Are the One Account They Roll Into\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "เรากำลังอัพเกรดอันดับเครดิตของ Wells Fargo เนื่องจากการกลับตัวของหุ้นเป็นจุดเริ่มต้นที่ดี",
+      "title_en": "We're upgrading our rating on Wells Fargo as the stock's pullback offers a nice entry point",
+      "summary": "ผลประกอบการไตรมาสสามของ Wells Fargo ยังไม่สมบูรณ์แบบ แต่การฟื้นตัวของ CEO Charlie Scharf น่าจะให้ผลมากกว่านี้",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/13/were-upgrading-our-rating-on-wells-fargo-as-the-stocks-pullback-offers-a-nice-entry-point.html",
+      "time": "54 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T19:51:06Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "WFC"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "ผลประกอบการไตรมาสสามของ Wells Fargo ยังไม่สมบูรณ์แบบ แต่การฟื้นตัวของ CEO Charlie Scharf น่าจะให้ผลมากกว่านี้",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 19:51 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #WFC"
+      ],
+      "fullArticle": [
+        "เรากำลังอัพเกรดอันดับเครดิตของ Wells Fargo เนื่องจากการกลับตัวของหุ้นเป็นจุดเริ่มต้นที่ดี",
+        "ผลประกอบการไตรมาสสามของ Wells Fargo ยังไม่สมบูรณ์แบบ แต่การฟื้นตัวของ CEO Charlie Scharf น่าจะให้ผลมากกว่านี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"We're upgrading our rating on Wells Fargo as the stock's pullback offers a nice entry point\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
+      "title": "วิลเลียมส์กล่าวว่าเฟดอาจไม่ต้องขึ้นอัตราดอกเบี้ยในปี 2570 ซึ่งขัดแย้งกับเทรดเดอร์",
+      "title_en": "Williams says Fed may not have to hike rates in 2027, at odds with traders",
+      "summary": "จอห์น วิลเลียมส์ ประธานเฟดนิวยอร์ก มองว่าการปรับขึ้นอัตราดอกเบี้ยอีกครั้งในปี 2569 แต่จะไม่มีการเพิ่มขึ้นเพิ่มเติมในปี 2570 เนื่องจากแรงกดดันด้านเงินเฟ้อผ่อนคลายลง",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/john-williams-fed-rate-hikes-2027.html",
+      "time": "59 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T19:46:12Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "จอห์น วิลเลียมส์ ประธานเฟดนิวยอร์ก มองว่าการปรับขึ้นอัตราดอกเบี้ยอีกครั้งในปี 2569 แต่จะไม่มีการเพิ่มขึ้นเพิ่มเติมในปี 2570 เนื่องจากแรงกดดันด้านเงินเฟ้อผ่อนคลายลง",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 19:46 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "วิลเลียมส์กล่าวว่าเฟดอาจไม่ต้องขึ้นอัตราดอกเบี้ยในปี 2570 ซึ่งขัดแย้งกับเทรดเดอร์",
+        "จอห์น วิลเลียมส์ ประธานเฟดนิวยอร์ก มองว่าการปรับขึ้นอัตราดอกเบี้ยอีกครั้งในปี 2569 แต่จะไม่มีการเพิ่มขึ้นเพิ่มเติมในปี 2570 เนื่องจากแรงกดดันด้านเงินเฟ้อผ่อนคลายลง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Williams says Fed may not have to hike rates in 2027, at odds with traders\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
+      "title": "Apple เปิดตัว HomeView smart home hub พร้อมหน้าจอเพื่อแสดง Siri AI",
+      "title_en": "Apple releases HomeView smart home hub with screen as showcase for Siri AI",
+      "summary": "ผู้ผลิต iPhone ยังประกาศ Apple TV 4K และ HomePod Mini ใหม่",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/apple-homeview-smart-home-siri-ai.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-13T19:23:39Z",
+      "category": "TECH",
+      "tickers": [
+        "AAPL"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ผู้ผลิต iPhone ยังประกาศ Apple TV 4K และ HomePod Mini ใหม่",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 19:23 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
+      ],
+      "fullArticle": [
+        "Apple เปิดตัว HomeView smart home hub พร้อมหน้าจอเพื่อแสดง Siri AI",
+        "ผู้ผลิต iPhone ยังประกาศ Apple TV 4K และ HomePod Mini ใหม่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple releases HomeView smart home hub with screen as showcase for Siri AI\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-12",
+      "title": "ประเด็นรายได้ของธนาคาร: นี่คือวิธีที่ JPMorgan, Goldman, Wells Fargo และ Citi ดำเนินการในไตรมาสที่ 3",
+      "title_en": "Bank earnings takeaways: Here's how JPMorgan, Goldman, Wells Fargo and Citi performed in Q3",
+      "summary": "JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup รายงานผลประกอบการไตรมาสสามเมื่อวันอังคาร โดยมีผลประกอบการที่หลากหลาย",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/bank-earnings-live-updates.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-13T19:12:04Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "JPM",
+        "GS",
+        "WFC"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup รายงานผลประกอบการไตรมาสสามเมื่อวันอังคาร โดยมีผลประกอบการที่หลากหลาย",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 19:12 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM #GS #WFC"
+      ],
+      "fullArticle": [
+        "ประเด็นรายได้ของธนาคาร: นี่คือวิธีที่ JPMorgan, Goldman, Wells Fargo และ Citi ดำเนินการในไตรมาสที่ 3",
+        "JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup รายงานผลประกอบการไตรมาสสามเมื่อวันอังคาร โดยมีผลประกอบการที่หลากหลาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank earnings takeaways: Here's how JPMorgan, Goldman, Wells Fargo and Citi performed in Q3\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
