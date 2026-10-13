@@ -1,17 +1,132 @@
 {
-  "updated_at": "2026-10-13T13:19:21Z",
-  "updated_at_thai": "13 ต.ค. 2569 20:19 น.",
+  "updated_at": "2026-10-13T15:16:41Z",
+  "updated_at_thai": "13 ต.ค. 2569 22:16 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, การซื้อขายฟิวเจอร์ส Nasdaq ผสมกับรายได้ของธนาคารบนดาดฟ้า",
-      "title_en": "Stock market today: Dow, S&P 500, Nasdaq futures trade mixed with bank earnings on deck",
-      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, การซื้อขายฟิวเจอร์ส Nasdaq ผสมกับรายได้ของธนาคารบนดาดฟ้า",
+      "title": "UnitedHealth Group ติดอันดับประมาณการ เพิ่มแนวโน้มกำไร เนื่องจากบริษัทประกันภัยจัดการค่ารักษาพยาบาลที่สูง",
+      "title_en": "UnitedHealth Group tops estimates, hikes profit outlook as insurer manages high medical costs",
+      "summary": "UnitedHealth Group กล่าวว่าคาดว่ากำไรสุทธิในปี 2569 จะปรับแล้วอย่างน้อย 20.50 ดอลลาร์ต่อหุ้น เพิ่มขึ้นจากแนวโน้มเดิมที่ 19.50 ดอลลาร์เป็น 20.00 ดอลลาร์ต่อหุ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/unitedhealth-group-unh-earnings-q3-2026.html",
+      "time": "12 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T15:04:35Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": true,
+      "points": [
+        "UnitedHealth Group กล่าวว่าคาดว่ากำไรสุทธิในปี 2569 จะปรับแล้วอย่างน้อย 20.50 ดอลลาร์ต่อหุ้น เพิ่มขึ้นจากแนวโน้มเดิมที่ 19.50 ดอลลาร์เป็น 20.00 ดอลลาร์ต่อหุ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 15:04 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "UnitedHealth Group ติดอันดับประมาณการ เพิ่มแนวโน้มกำไร เนื่องจากบริษัทประกันภัยจัดการค่ารักษาพยาบาลที่สูง",
+        "UnitedHealth Group กล่าวว่าคาดว่ากำไรสุทธิในปี 2569 จะปรับแล้วอย่างน้อย 20.50 ดอลลาร์ต่อหุ้น เพิ่มขึ้นจากแนวโน้มเดิมที่ 19.50 ดอลลาร์เป็น 20.00 ดอลลาร์ต่อหุ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"UnitedHealth Group tops estimates, hikes profit outlook as insurer manages high medical costs\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "ข้อมูลอัปเดตสดเกี่ยวกับรายได้ของธนาคาร: AI ครอบงำการโทรของนักวิเคราะห์จาก JPMorgan, Goldman และ Wells Fargo",
+      "title_en": "Bank earnings live updates: AI dominates analyst calls from JPMorgan, Goldman and Wells Fargo",
+      "summary": "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/bank-earnings-live-updates.html",
+      "time": "12 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T15:03:53Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "JPM",
+        "GS",
+        "WFC"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 15:03 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM #GS #WFC"
+      ],
+      "fullArticle": [
+        "ข้อมูลอัปเดตสดเกี่ยวกับรายได้ของธนาคาร: AI ครอบงำการโทรของนักวิเคราะห์จาก JPMorgan, Goldman และ Wells Fargo",
+        "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank earnings live updates: AI dominates analyst calls from JPMorgan, Goldman and Wells Fargo\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "ตลาดหุ้นวันนี้: Dow Fizzles, Nasdaq ลดขาดทุน; Apple, Salesforce Surge (การรายงานสด)",
+      "title_en": "Stock Market Today: Dow Fizzles, Nasdaq Cuts Losses; Apple, Salesforce Surge (Live Coverage)",
+      "summary": "ตลาดหุ้นวันนี้: Dow Fizzles, Nasdaq ลดขาดทุน; Apple, Salesforce Surge (การรายงานสด)",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/53f0b0da-d3c5-3ed1-b95b-353bb359f22f/stock-market-today%3A-dow.html",
+      "time": "17 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T14:58:42Z",
+      "category": "TECH",
+      "tickers": [
+        "AAPL",
+        "QQQ",
+        "DIA",
+        "CRM"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ตลาดหุ้นวันนี้: Dow Fizzles, Nasdaq ลดขาดทุน; Apple, Salesforce Surge (การรายงานสด)",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (13/10/2026 14:58 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL #QQQ #DIA #CRM"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: Dow Fizzles, Nasdaq ลดขาดทุน; Apple, Salesforce Surge (การรายงานสด)",
+        "ตลาดหุ้นวันนี้: Dow Fizzles, Nasdaq ลดขาดทุน; Apple, Salesforce Surge (การรายงานสด)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Dow Fizzles, Nasdaq Cuts Losses; Apple, Salesforce Surge (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "Anthropic เตรียมเปิดเผยตัวเลขรายได้ใหม่ เนื่องจากการเงินในห้องปฏิบัติการ AI กลายเป็นศูนย์กลางของการค้าเทคโนโลยี",
+      "title_en": "Anthropic to disclose new revenue numbers as AI lab financials become central to tech trade",
+      "summary": "Anthropic จะเผยแพร่ข้อมูลทางการเงินที่อัปเดตให้กับกลุ่มนักลงทุนที่มารวมตัวกันที่สำนักงานใหญ่ในสัปดาห์นี้ ตามที่ผู้คนคุ้นเคยกับเรื่องนี้",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/anthropic-q3-financials-ipo.html",
+      "time": "20 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T14:55:51Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Anthropic จะเผยแพร่ข้อมูลทางการเงินที่อัปเดตให้กับกลุ่มนักลงทุนที่มารวมตัวกันที่สำนักงานใหญ่ในสัปดาห์นี้ ตามที่ผู้คนคุ้นเคยกับเรื่องนี้",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 14:55 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "Anthropic เตรียมเปิดเผยตัวเลขรายได้ใหม่ เนื่องจากการเงินในห้องปฏิบัติการ AI กลายเป็นศูนย์กลางของการค้าเทคโนโลยี",
+        "Anthropic จะเผยแพร่ข้อมูลทางการเงินที่อัปเดตให้กับกลุ่มนักลงทุนที่มารวมตัวกันที่สำนักงานใหญ่ในสัปดาห์นี้ ตามที่ผู้คนคุ้นเคยกับเรื่องนี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic to disclose new revenue numbers as AI lab financials become central to tech trade\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, การค้า Nasdaq ผสมปนเปกันเมื่อฤดูกาลผลประกอบการเริ่มต้นขึ้น",
+      "title_en": "Stock market today: Dow, S&P 500, Nasdaq trade mixed as earnings season kicks off",
+      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, การค้า Nasdaq ผสมปนเปกันเมื่อฤดูกาลผลประกอบการเริ่มต้นขึ้น",
       "source": "Yahoo Finance",
       "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-13-dow-sp-500-nasdaq-080236234.html",
-      "time": "1 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T13:18:07Z",
+      "time": "24 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T14:52:19Z",
       "category": "EARNINGS",
       "tickers": [
         "SPY",
@@ -20,26 +135,136 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, การซื้อขายฟิวเจอร์ส Nasdaq ผสมกับรายได้ของธนาคารบนดาดฟ้า",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (13/10/2026 13:18 UTC)",
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, การค้า Nasdaq ผสมปนเปกันเมื่อฤดูกาลผลประกอบการเริ่มต้นขึ้น",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (13/10/2026 14:52 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
       ],
       "fullArticle": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, การซื้อขายฟิวเจอร์ส Nasdaq ผสมกับรายได้ของธนาคารบนดาดฟ้า",
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, การซื้อขายฟิวเจอร์ส Nasdaq ผสมกับรายได้ของธนาคารบนดาดฟ้า",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq futures trade mixed with bank earnings on deck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, การค้า Nasdaq ผสมปนเปกันเมื่อฤดูกาลผลประกอบการเริ่มต้นขึ้น",
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, การค้า Nasdaq ผสมปนเปกันเมื่อฤดูกาลผลประกอบการเริ่มต้นขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq trade mixed as earnings season kicks off\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-6",
+      "title": "EON Resources รายงานรายได้เพิ่มขึ้น 19% และต้นทุนที่ลดลงสำหรับไตรมาสแรกของปี 2026 ความก้าวหน้าของการขุดเจาะแนวนอนของ San Andres เป็นการทดสอบเบื้องต้นยืนยันการผลิตน้ำมันเชิงพาณิชย์",
+      "title_en": "EON Resources Reports A 19% Increase in Revenues and Lower Costs for the First Quarter of 2026, Advances San Andres Horizontal Drilling as Early Tests Confirm Commercial Oil Production",
+      "summary": "EON Resources รายงานรายได้เพิ่มขึ้น 19% และต้นทุนที่ลดลงสำหรับไตรมาสแรกของปี 2026 ความก้าวหน้าของการขุดเจาะแนวนอนของ San Andres เป็นการทดสอบเบื้องต้นยืนยันการผลิตน้ำมันเชิงพาณิชย์",
+      "source": "ACCESS Newswire",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/eon-resources-reports-19-increase-144000814.html",
+      "time": "36 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T14:40:00Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "EON Resources รายงานรายได้เพิ่มขึ้น 19% และต้นทุนที่ลดลงสำหรับไตรมาสแรกของปี 2026 ความก้าวหน้าของการขุดเจาะแนวนอนของ San Andres เป็นการทดสอบเบื้องต้นยืนยันการผลิตน้ำมันเชิงพาณิชย์",
+        "แหล่งข่าวอ้างอิง: ACCESS Newswire (13/10/2026 14:40 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "EON Resources รายงานรายได้เพิ่มขึ้น 19% และต้นทุนที่ลดลงสำหรับไตรมาสแรกของปี 2026 ความก้าวหน้าของการขุดเจาะแนวนอนของ San Andres เป็นการทดสอบเบื้องต้นยืนยันการผลิตน้ำมันเชิงพาณิชย์",
+        "EON Resources รายงานรายได้เพิ่มขึ้น 19% และต้นทุนที่ลดลงสำหรับไตรมาสแรกของปี 2026 ความก้าวหน้าของการขุดเจาะแนวนอนของ San Andres เป็นการทดสอบเบื้องต้นยืนยันการผลิตน้ำมันเชิงพาณิชย์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"EON Resources Reports A 19% Increase in Revenues and Lower Costs for the First Quarter of 2026, Advances San Andres Horizontal Drilling as Early Tests Confirm Commercial Oil Production\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "เชฟรอนกับปิโตรเลียมภาคตะวันตก: หุ้นพลังงานใดน่าซื้อกว่ากันในปี 2569",
+      "title_en": "Chevron vs. Occidental Petroleum: Which Energy Stock Is a Better Buy in 2026?",
+      "summary": "เชฟรอนกับปิโตรเลียมภาคตะวันตก: หุ้นพลังงานใดน่าซื้อกว่ากันในปี 2569",
+      "source": "Motley Fool",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/chevron-vs-occidental-petroleum-energy-143501721.html",
+      "time": "41 นาทีที่แล้ว",
+      "publishedAt": "2026-10-13T14:35:01Z",
+      "category": "MACRO",
+      "tickers": [
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "เชฟรอนกับปิโตรเลียมภาคตะวันตก: หุ้นพลังงานใดน่าซื้อกว่ากันในปี 2569",
+        "แหล่งข่าวอ้างอิง: Motley Fool (13/10/2026 14:35 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX"
+      ],
+      "fullArticle": [
+        "เชฟรอนกับปิโตรเลียมภาคตะวันตก: หุ้นพลังงานใดน่าซื้อกว่ากันในปี 2569",
+        "เชฟรอนกับปิโตรเลียมภาคตะวันตก: หุ้นพลังงานใดน่าซื้อกว่ากันในปี 2569",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Chevron vs. Occidental Petroleum: Which Energy Stock Is a Better Buy in 2026?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "รัสเซียไม่บรรลุเป้าหมายพลังงานของยูเครนเมื่อวันอังคาร ราคาน้ำมันปรับตัวลดลง",
+      "title_en": "Russia Didn't Hit Any Ukrainian Energy Targets on Tuesday. Oil Prices Retreated.",
+      "summary": "รัสเซียไม่บรรลุเป้าหมายพลังงานของยูเครนเมื่อวันอังคาร ราคาน้ำมันปรับตัวลดลง",
+      "source": "International Business Times",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/russia-didnt-hit-ukrainian-energy-140834259.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-13T14:08:34Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "รัสเซียไม่บรรลุเป้าหมายพลังงานของยูเครนเมื่อวันอังคาร ราคาน้ำมันปรับตัวลดลง",
+        "แหล่งข่าวอ้างอิง: International Business Times (13/10/2026 14:08 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "รัสเซียไม่บรรลุเป้าหมายพลังงานของยูเครนเมื่อวันอังคาร ราคาน้ำมันปรับตัวลดลง",
+        "รัสเซียไม่บรรลุเป้าหมายพลังงานของยูเครนเมื่อวันอังคาร ราคาน้ำมันปรับตัวลดลง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Russia Didn't Hit Any Ukrainian Energy Targets on Tuesday. Oil Prices Retreated.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "Apple เปิดตัว HomeView smart home hub พร้อมหน้าจอเพื่อแสดง Siri AI",
+      "title_en": "Apple releases HomeView smart home hub with screen as showcase for Siri AI",
+      "summary": "ผู้ผลิต iPhone ยังประกาศ Apple TV 4K และ HomePod Mini ใหม่",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/apple-homeview-smart-home-siri-ai.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-13T13:40:00Z",
+      "category": "TECH",
+      "tickers": [
+        "AAPL"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ผู้ผลิต iPhone ยังประกาศ Apple TV 4K และ HomePod Mini ใหม่",
+        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 13:40 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
+      ],
+      "fullArticle": [
+        "Apple เปิดตัว HomeView smart home hub พร้อมหน้าจอเพื่อแสดง Siri AI",
+        "ผู้ผลิต iPhone ยังประกาศ Apple TV 4K และ HomePod Mini ใหม่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple releases HomeView smart home hub with screen as showcase for Siri AI\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
       "title": "สภางานธนาคารโลกเรียกร้องมาตรการสนับสนุนการจ้างงาน 'ยุควิกฤติ' ขณะที่ IMF เตือนเรื่อง 'สึนามิ' ของ AI",
       "title_en": "World Bank jobs council urges 'crisis-era' employment support measures as IMF warns of AI ‘tsunami’",
       "summary": "Kristalina Georgieva หัวหน้า IMF เตือนว่า AI กำลังโจมตีตลาดแรงงานทั่วโลก เช่น “สึนามิที่เคลื่อนตัวช้า” โดยคนงานรุ่นใหม่ที่เข้าสู่ตลาดงานมีความเสี่ยงมากที่สุด",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/12/imf-world-bank-ai-jobs-inflation-.html",
-      "time": "9 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-13T13:09:55Z",
       "category": "MACRO",
       "tickers": [
@@ -62,156 +287,13 @@
       ]
     },
     {
-      "id": "news-3",
-      "title": "อัพเดตภาคส่วน: พลังงาน",
-      "title_en": "Sector Update: Energy",
-      "summary": "อัพเดตภาคส่วน: พลังงาน",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/sector-energy-130639445.html",
-      "time": "12 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T13:06:39Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "อัพเดตภาคส่วน: พลังงาน",
-        "แหล่งข่าวอ้างอิง: MT Newswires (13/10/2026 13:06 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "อัพเดตภาคส่วน: พลังงาน",
-        "อัพเดตภาคส่วน: พลังงาน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Sector Update: Energy\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "การอัปเดตสดรายได้ของธนาคาร: การเรียกรายได้ของ JPMorgan กำลังดำเนินการอยู่หลังจากพลาดรายได้ที่หายาก",
-      "title_en": "Bank earnings live updates: JPMorgan’s earnings call is underway after rare earnings miss",
-      "summary": "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/bank-earnings-live-updates.html",
-      "time": "13 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T13:06:10Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "JPM",
-        "GS",
-        "WFC"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 13:06 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM #GS #WFC"
-      ],
-      "fullArticle": [
-        "การอัปเดตสดรายได้ของธนาคาร: การเรียกรายได้ของ JPMorgan กำลังดำเนินการอยู่หลังจากพลาดรายได้ที่หายาก",
-        "ติดตามการรายงานข่าวรายได้ของธนาคารแบบเรียลไทม์สำหรับ JPMorgan, Wells Fargo, Goldman Sachs และ Citigroup พร้อมผลประกอบการไตรมาสสาม การโทรติดต่อ และการเคลื่อนไหวของหุ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank earnings live updates: JPMorgan’s earnings call is underway after rare earnings miss\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "ประวัติศาสตร์กล่าวว่าการแก้ไขตลาดหุ้นกำลังจะมาถึงในที่สุด นี่เป็นข่าวดีสำหรับนักลงทุน",
-      "title_en": "History Says a Stock Market Correction Is Coming Eventually. Here's the Good News for Investors.",
-      "summary": "ประวัติศาสตร์กล่าวว่าการแก้ไขตลาดหุ้นกำลังจะมาถึงในที่สุด นี่เป็นข่าวดีสำหรับนักลงทุน",
-      "source": "Motley Fool",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/history-says-stock-market-correction-130500919.html",
-      "time": "14 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T13:05:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ประวัติศาสตร์กล่าวว่าการแก้ไขตลาดหุ้นกำลังจะมาถึงในที่สุด นี่เป็นข่าวดีสำหรับนักลงทุน",
-        "แหล่งข่าวอ้างอิง: Motley Fool (13/10/2026 13:05 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "ประวัติศาสตร์กล่าวว่าการแก้ไขตลาดหุ้นกำลังจะมาถึงในที่สุด นี่เป็นข่าวดีสำหรับนักลงทุน",
-        "ประวัติศาสตร์กล่าวว่าการแก้ไขตลาดหุ้นกำลังจะมาถึงในที่สุด นี่เป็นข่าวดีสำหรับนักลงทุน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"History Says a Stock Market Correction Is Coming Eventually. Here's the Good News for Investors.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "Intercontinental Exchange สร้างสถิติไตรมาส 3 สำหรับการซื้อขายตัวเลือก Brent",
-      "title_en": "Intercontinental Exchange Sets Q3 Record for Brent Options Trading",
-      "summary": "Intercontinental Exchange สร้างสถิติไตรมาส 3 สำหรับการซื้อขายตัวเลือก Brent",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/options/articles/intercontinental-exchange-sets-q3-record-125237919.html",
-      "time": "26 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T12:52:37Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Intercontinental Exchange สร้างสถิติไตรมาส 3 สำหรับการซื้อขายตัวเลือก Brent",
-        "แหล่งข่าวอ้างอิง: MT Newswires (13/10/2026 12:52 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "Intercontinental Exchange สร้างสถิติไตรมาส 3 สำหรับการซื้อขายตัวเลือก Brent",
-        "Intercontinental Exchange สร้างสถิติไตรมาส 3 สำหรับการซื้อขายตัวเลือก Brent",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Intercontinental Exchange Sets Q3 Record for Brent Options Trading\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "อัปเดต: US Equity Futures ผสม Pre-Bell เนื่องจากผู้ค้าประเมินรายได้หลักของธนาคาร",
-      "title_en": "Update: US Equity Futures Mixed Pre-Bell as Traders Assess Major Bank Earnings",
-      "summary": "อัปเดต: US Equity Futures ผสม Pre-Bell เนื่องจากผู้ค้าประเมินรายได้หลักของธนาคาร",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-futures-mixed-pre-124855756.html",
-      "time": "30 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T12:48:55Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "อัปเดต: US Equity Futures ผสม Pre-Bell เนื่องจากผู้ค้าประเมินรายได้หลักของธนาคาร",
-        "แหล่งข่าวอ้างอิง: MT Newswires (13/10/2026 12:48 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "อัปเดต: US Equity Futures ผสม Pre-Bell เนื่องจากผู้ค้าประเมินรายได้หลักของธนาคาร",
-        "อัปเดต: US Equity Futures ผสม Pre-Bell เนื่องจากผู้ค้าประเมินรายได้หลักของธนาคาร",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Futures Mixed Pre-Bell as Traders Assess Major Bank Earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
+      "id": "news-11",
       "title": "รายได้ของ JPMorgan พลาดไป, Delta ชะลอเส้นทางริยาด, แผนไก่ของ McDonald และอีกมากมายใน Morning Squawk",
       "title_en": "JPMorgan's earnings miss, Delta delays Riyadh route, McDonald's chicken plans and more in Morning Squawk",
       "summary": "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/13/5-things-to-know-before-the-stock-market-opens.html",
-      "time": "36 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-13T12:42:33Z",
       "category": "EARNINGS",
       "tickers": [
@@ -232,13 +314,13 @@
       ]
     },
     {
-      "id": "news-9",
-      "title": "เหตุใดผู้ผลิตชิปชาวจีนที่ไม่ค่อยมีใครรู้จักรายนี้จึงทำให้สต็อกสินค้าทั่วโลกเสียหาย",
+      "id": "news-12",
+      "title": "เหตุใดผู้ผลิตชิปชาวจีนที่ไม่ค่อยมีใครรู้จักรายนี้จึงทำให้เกิดปัญหาสต็อกสินค้าทั่วโลก",
       "title_en": "Why this little known Chinese chipmaker has caused a global stock rout",
       "summary": "มีรายงานว่า CXMT ผู้ผลิตชิปหน่วยความจำชั้นนำของจีนมีความคืบหน้าในการออกแบบใหม่",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/13/cxmt-memory-chip-stock-rout.html",
-      "time": "37 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-13T12:41:56Z",
       "category": "TECH",
       "tickers": [
@@ -255,92 +337,9 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "เหตุใดผู้ผลิตชิปชาวจีนที่ไม่ค่อยมีใครรู้จักรายนี้จึงทำให้สต็อกสินค้าทั่วโลกเสียหาย",
+        "เหตุใดผู้ผลิตชิปชาวจีนที่ไม่ค่อยมีใครรู้จักรายนี้จึงทำให้เกิดปัญหาสต็อกสินค้าทั่วโลก",
         "มีรายงานว่า CXMT ผู้ผลิตชิปหน่วยความจำชั้นนำของจีนมีความคืบหน้าในการออกแบบใหม่",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why this little known Chinese chipmaker has caused a global stock rout\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "J&J สูงกว่าประมาณการกำไร และคาดว่าจะมีการผลิตหน่วยลงทุนระดับสะโพก-เข่าภายในกลางปี ​​2570",
-      "title_en": "J&J beats earnings estimates, eyes hip-knee unit spinoff by mid-2027",
-      "summary": "ยอดขายยาเพิ่มขึ้น 7.7% ในไตรมาสนี้ เป็น 16.76 พันล้านดอลลาร์ แต่ยอดขายแผนกเทคโนโลยีการแพทย์เพิ่มขึ้นเพียง 2.5% เป็น 8.6 พันล้านดอลลาร์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/jnj-earnings-q3-2026.html",
-      "time": "48 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T12:31:10Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ยอดขายยาเพิ่มขึ้น 7.7% ในไตรมาสนี้ เป็น 16.76 พันล้านดอลลาร์ แต่ยอดขายแผนกเทคโนโลยีการแพทย์เพิ่มขึ้นเพียง 2.5% เป็น 8.6 พันล้านดอลลาร์",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 12:31 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "J&J สูงกว่าประมาณการกำไร และคาดว่าจะมีการผลิตหน่วยลงทุนระดับสะโพก-เข่าภายในกลางปี ​​2570",
-        "ยอดขายยาเพิ่มขึ้น 7.7% ในไตรมาสนี้ เป็น 16.76 พันล้านดอลลาร์ แต่ยอดขายแผนกเทคโนโลยีการแพทย์เพิ่มขึ้นเพียง 2.5% เป็น 8.6 พันล้านดอลลาร์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"J&J beats earnings estimates, eyes hip-knee unit spinoff by mid-2027\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "ตู้เย็นซูเปอร์มาร์เก็ตในฝรั่งเศสถูกแฮ็ก ทำอุณหภูมิได้ถึง 122°F และเกิดประกายไฟ",
-      "title_en": "French supermarket fridges get hacked, heating to 122°F and sparking fires",
-      "summary": "แฮกเกอร์มุ่งเป้าไปที่ซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่งในการโจมตีทางไซเบอร์ขนาดใหญ่ ส่งผลให้ตู้เย็นร้อนเกินไป อาหารเน่าเสีย และเกิดประกายไฟ",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/france-supermarket-hack-cyberattack-fridges-fires.html",
-      "time": "56 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T12:22:59Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "แฮกเกอร์มุ่งเป้าไปที่ซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่งในการโจมตีทางไซเบอร์ขนาดใหญ่ ส่งผลให้ตู้เย็นร้อนเกินไป อาหารเน่าเสีย และเกิดประกายไฟ",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 12:22 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ตู้เย็นซูเปอร์มาร์เก็ตในฝรั่งเศสถูกแฮ็ก ทำอุณหภูมิได้ถึง 122°F และเกิดประกายไฟ",
-        "แฮกเกอร์มุ่งเป้าไปที่ซูเปอร์มาร์เก็ตในฝรั่งเศสหลายร้อยแห่งในการโจมตีทางไซเบอร์ขนาดใหญ่ ส่งผลให้ตู้เย็นร้อนเกินไป อาหารเน่าเสีย และเกิดประกายไฟ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"French supermarket fridges get hacked, heating to 122°F and sparking fires\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: JPMorgan Chase, Micron, UnitedHealth และอีกมากมาย",
-      "title_en": "Stocks making the biggest moves premarket: JPMorgan Chase, Micron, UnitedHealth & more",
-      "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดก่อนระฆัง",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/stocks-making-the-biggest-moves-premarket-jpm-mu-unh.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T11:49:04Z",
-      "category": "MACRO",
-      "tickers": [
-        "JPM"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดก่อนระฆัง",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 11:49 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM"
-      ],
-      "fullArticle": [
-        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: JPMorgan Chase, Micron, UnitedHealth และอีกมากมาย",
-        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดก่อนระฆัง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: JPMorgan Chase, Micron, UnitedHealth & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
