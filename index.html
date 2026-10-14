@@ -2823,14 +2823,15 @@
                 </div>
 
                 <!-- Top 100 Ranked Stocks Table Card -->
-                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <!-- Top 100 Ranked Stocks Table Card -->
+                <div class="card border-0 shadow-sm rounded-4 mb-4" id="marketTopRankedCard">
                     <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2 p-3">
                         <div class="d-flex align-items-center gap-2">
                             <span class="fw-bold" style="font-size: 1rem;">🏆 ตารางจัดอันดับสัญญาณทางเทคนิค (Top Ranked Stocks)</span>
                             <span class="badge rounded-pill bg-primary px-2 py-1" id="marketTableCountBadge" style="font-size: 0.72rem;">100 รายการ</span>
                         </div>
                         <div class="d-flex align-items-center gap-2 flex-wrap">
-                            <div class="input-group input-group-sm" style="max-width: 220px;">
+                            <div class="input-group input-group-sm" style="max-width: 200px;">
                                 <span class="input-group-text bg-transparent border-end-0 text-muted">🔍</span>
                                 <input type="text" id="marketTableSearch" class="form-control border-start-0" placeholder="ค้นหา Ticker หรือชื่อหุ้น..." oninput="onMarketTableSearch(this.value)">
                             </div>
@@ -2847,6 +2848,15 @@
                                 <option value="score_desc">คะแนนเทคนิคสูงสุด (Score)</option>
                                 <option value="price_desc">ราคาสูงสุด -> ต่ำสุด</option>
                             </select>
+                            <div class="d-flex align-items-center gap-1">
+                                <span class="text-muted fw-bold" style="font-size: 0.78rem;">หน้าละ:</span>
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <button type="button" class="btn btn-sm btn-dark py-1 px-2 fw-bold" id="btnMarketPageSize_10" onclick="setMarketTablePageSize(10)">10</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_20" onclick="setMarketTablePageSize(20)">20</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_50" onclick="setMarketTablePageSize(50)">50</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_ALL" onclick="setMarketTablePageSize('ALL')">ทั้งหมด</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card-body p-0">
@@ -2872,6 +2882,14 @@
                                     <!-- Injected by renderMarketTop100Table() -->
                                 </tbody>
                             </table>
+                        </div>
+
+                        <!-- Pagination Footer for Top Ranked Stocks -->
+                        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-top flex-wrap gap-2" id="marketTablePaginationContainer" style="background-color: var(--bs-card-bg, #ffffff);">
+                            <span class="text-muted fw-bold" style="font-size: 0.8rem;" id="marketTablePaginationInfo"></span>
+                            <nav aria-label="Market Table Pagination">
+                                <ul class="pagination pagination-sm m-0" id="marketTablePaginationList"></ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
@@ -9513,6 +9531,8 @@
         let currentMarketSignal = 'ALL';
         let currentMarketSort = 'rank_asc';
         let currentMarketSearch = '';
+        let currentMarketPage = 1;
+        let currentMarketPageSize = localStorage.getItem('myMarketPageSize') || '10';
         let activeModalSectorId = 'tech';
 
         window.renderMacroIndices = function() {
@@ -9620,10 +9640,46 @@
             container.innerHTML = html;
         };
 
+        function updateMarketPageSizeUI() {
+            ['10', '20', '50', 'ALL'].forEach(sz => {
+                const btn = document.getElementById(`btnMarketPageSize_${sz}`);
+                if (btn) {
+                    if (currentMarketPageSize === sz) {
+                        btn.className = 'btn btn-sm btn-dark py-1 px-2 fw-bold';
+                    } else {
+                        btn.className = 'btn btn-sm btn-outline-secondary py-1 px-2 fw-bold';
+                    }
+                }
+            });
+        }
+
+        window.setMarketTablePageSize = function(size) {
+            currentMarketPageSize = size.toString();
+            try {
+                localStorage.setItem('myMarketPageSize', currentMarketPageSize);
+            } catch(e) {}
+            currentMarketPage = 1;
+            renderMarketTop100Table();
+        };
+
+        window.changeMarketTablePage = function(page) {
+            currentMarketPage = page;
+            renderMarketTop100Table();
+            const tableCard = document.getElementById('marketTopRankedCard');
+            if (tableCard) {
+                tableCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+
         window.renderMarketTop100Table = function() {
             const tbody = document.getElementById('marketTableBody');
             const countBadge = document.getElementById('marketTableCountBadge');
+            const infoEl = document.getElementById('marketTablePaginationInfo');
+            const listEl = document.getElementById('marketTablePaginationList');
+            const containerEl = document.getElementById('marketTablePaginationContainer');
             if (!tbody) return;
+
+            updateMarketPageSizeUI();
 
             let list = [...top100StocksData];
 
@@ -9660,11 +9716,12 @@
                 list.sort((a, b) => b.price - a.price);
             }
 
+            const totalFiltered = list.length;
             if (countBadge) {
-                countBadge.innerText = `${list.length} รายการ`;
+                countBadge.innerText = `${totalFiltered} รายการ`;
             }
 
-            if (list.length === 0) {
+            if (totalFiltered === 0) {
                 tbody.innerHTML = `
                     <tr>
                         <td colspan="12" class="text-center py-4 text-muted">
@@ -9672,11 +9729,23 @@
                         </td>
                     </tr>
                 `;
+                if (infoEl) infoEl.innerText = 'ไม่พบข้อมูลหุ้น';
+                if (listEl) listEl.innerHTML = '';
                 return;
             }
 
+            // 5. Pagination Calculations
+            let pageSize = (currentMarketPageSize === 'ALL') ? totalFiltered : (parseInt(currentMarketPageSize) || 10);
+            let totalPages = Math.max(1, Math.ceil(totalFiltered / pageSize));
+            if (currentMarketPage > totalPages) currentMarketPage = totalPages;
+            if (currentMarketPage < 1) currentMarketPage = 1;
+
+            let startIndex = (currentMarketPage - 1) * pageSize;
+            let endIndex = Math.min(startIndex + pageSize, totalFiltered);
+            let pageItems = list.slice(startIndex, endIndex);
+
             let html = '';
-            list.forEach(item => {
+            pageItems.forEach(item => {
                 let curPrice = item.price;
                 if (typeof marketPrices !== 'undefined' && marketPrices[item.ticker] && marketPrices[item.ticker] > 0) {
                     curPrice = marketPrices[item.ticker];
@@ -9754,10 +9823,65 @@
                 `;
             });
             tbody.innerHTML = html;
+
+            // 6. Render Pagination Footer
+            if (infoEl) {
+                if (currentMarketPageSize === 'ALL' || totalFiltered <= pageSize) {
+                    infoEl.innerHTML = `แสดงทั้งหมด <strong>${totalFiltered}</strong> รายการ`;
+                } else {
+                    infoEl.innerHTML = `กำลังแสดง <strong>${startIndex + 1} - ${endIndex}</strong> จากทั้งหมด <strong>${totalFiltered}</strong> รายการ <span class="text-muted ms-1">(หน้า ${currentMarketPage}/${totalPages})</span>`;
+                }
+            }
+
+            if (listEl) {
+                if (currentMarketPageSize === 'ALL' || totalPages <= 1) {
+                    listEl.innerHTML = '';
+                    if (containerEl) containerEl.classList.add('justify-content-center');
+                } else {
+                    if (containerEl) containerEl.classList.remove('justify-content-center');
+                    let pagesHtml = '';
+
+                    pagesHtml += `
+                        <li class="page-item ${currentMarketPage === 1 ? 'disabled' : ''}">
+                            <button class="page-link py-1 px-2.5" onclick="changeMarketTablePage(${currentMarketPage - 1})" title="หน้าก่อนหน้า" style="font-size: 0.8rem;">‹ ก่อนหน้า</button>
+                        </li>
+                    `;
+
+                    let startP = Math.max(1, currentMarketPage - 2);
+                    let endP = Math.min(totalPages, currentMarketPage + 2);
+
+                    if (startP > 1) {
+                        pagesHtml += `<li class="page-item"><button class="page-link py-1 px-2.5" onclick="changeMarketTablePage(1)" style="font-size: 0.8rem;">1</button></li>`;
+                        if (startP > 2) pagesHtml += `<li class="page-item disabled"><span class="page-link py-1 px-1 border-0 text-muted" style="font-size: 0.8rem;">...</span></li>`;
+                    }
+
+                    for (let p = startP; p <= endP; p++) {
+                        pagesHtml += `
+                            <li class="page-item ${p === currentMarketPage ? 'active' : ''}">
+                                <button class="page-link py-1 px-2.5 fw-bold" onclick="changeMarketTablePage(${p})" style="font-size: 0.8rem;">${p}</button>
+                            </li>
+                        `;
+                    }
+
+                    if (endP < totalPages) {
+                        if (endP < totalPages - 1) pagesHtml += `<li class="page-item disabled"><span class="page-link py-1 px-1 border-0 text-muted" style="font-size: 0.8rem;">...</span></li>`;
+                        pagesHtml += `<li class="page-item"><button class="page-link py-1 px-2.5" onclick="changeMarketTablePage(${totalPages})" style="font-size: 0.8rem;">${totalPages}</button></li>`;
+                    }
+
+                    pagesHtml += `
+                        <li class="page-item ${currentMarketPage === totalPages ? 'disabled' : ''}">
+                            <button class="page-link py-1 px-2.5" onclick="changeMarketTablePage(${currentMarketPage + 1})" title="หน้าถัดไป" style="font-size: 0.8rem;">ถัดไป ›</button>
+                        </li>
+                    `;
+
+                    listEl.innerHTML = pagesHtml;
+                }
+            }
         };
 
         window.setMarketOverviewCategory = function(cat) {
             currentMarketCategory = cat;
+            currentMarketPage = 1;
             ['marketCatBtnPremium', 'marketCatBtnUS', 'marketCatBtnETF', 'marketCatBtnALL'].forEach(id => {
                 const btn = document.getElementById(id);
                 if (btn) btn.classList.remove('active');
@@ -9775,6 +9899,7 @@
 
         window.setMarketTableSignalFilter = function(sig) {
             currentMarketSignal = sig;
+            currentMarketPage = 1;
             ['marketFilterSignalAll', 'marketFilterSignalBuy', 'marketFilterSignalWatch', 'marketFilterSignalSell'].forEach(id => {
                 const btn = document.getElementById(id);
                 if (btn) btn.classList.remove('active');
@@ -9792,11 +9917,13 @@
 
         window.onMarketTableSortChange = function(val) {
             currentMarketSort = val;
+            currentMarketPage = 1;
             renderMarketTop100Table();
         };
 
         window.onMarketTableSearch = function(val) {
             currentMarketSearch = val;
+            currentMarketPage = 1;
             renderMarketTop100Table();
         };
 
