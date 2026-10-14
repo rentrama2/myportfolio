@@ -1,17 +1,130 @@
 {
-  "updated_at": "2026-10-14T00:04:01Z",
-  "updated_at_thai": "14 ต.ค. 2569 07:04 น.",
+  "updated_at": "2026-10-14T04:49:51Z",
+  "updated_at_thai": "14 ต.ค. 2569 11:49 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "FBI จับกุมพนักงาน Saudi OpenAI ที่ถูกกล่าวหาว่าปลูกอุปกรณ์บันทึกเสียงในห้องประชุม",
-      "title_en": "FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room",
-      "summary": "เหตุการณ์ในวันอังคารเกิดขึ้นในขณะที่ผู้สร้าง ChatGPT พร้อมด้วยคู่แข่ง เผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับหลักปฏิบัติด้านความปลอดภัย",
+      "title": "Teekay Tankers (TNK) อาจมีมูลค่าสูงเกินไปถึง 13% เนื่องจากการหยุดชะงักของเส้นทางการขนส่ง อัตราการยกระดับ",
+      "title_en": "Teekay Tankers (TNK) Could Be 13% Overvalued As Shipping Route Disruptions Lift Rates",
+      "summary": "Teekay Tankers (TNK) อาจมีมูลค่าสูงเกินไปถึง 13% เนื่องจากการหยุดชะงักของเส้นทางการขนส่ง อัตราการยกระดับ",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/teekay-tankers-tnk-could-13-042844014.html",
+      "time": "21 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T04:28:44Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "Teekay Tankers (TNK) อาจมีมูลค่าสูงเกินไปถึง 13% เนื่องจากการหยุดชะงักของเส้นทางการขนส่ง อัตราการยกระดับ",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (14/10/2026 04:28 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Teekay Tankers (TNK) อาจมีมูลค่าสูงเกินไปถึง 13% เนื่องจากการหยุดชะงักของเส้นทางการขนส่ง อัตราการยกระดับ",
+        "Teekay Tankers (TNK) อาจมีมูลค่าสูงเกินไปถึง 13% เนื่องจากการหยุดชะงักของเส้นทางการขนส่ง อัตราการยกระดับ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Teekay Tankers (TNK) Could Be 13% Overvalued As Shipping Route Disruptions Lift Rates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "อิหร่านต้องการน้ำมันที่สูงขึ้นก่อนมิดเทอม: ทรัมป์สามารถหยุดน้ำมันดิบ 100 ดอลลาร์ได้หรือไม่?",
+      "title_en": "Iran Wants Higher Oil Before the Midterms: Can Trump Stop $100 Crude?",
+      "summary": "อิหร่านต้องการน้ำมันที่สูงขึ้นก่อนมิดเทอม: ทรัมป์สามารถหยุดน้ำมันดิบ 100 ดอลลาร์ได้หรือไม่?",
+      "source": "BeInCrypto",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/iran-wants-higher-oil-midterms-042521795.html",
+      "time": "24 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T04:25:21Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "อิหร่านต้องการน้ำมันที่สูงขึ้นก่อนมิดเทอม: ทรัมป์สามารถหยุดน้ำมันดิบ 100 ดอลลาร์ได้หรือไม่?",
+        "แหล่งข่าวอ้างอิง: BeInCrypto (14/10/2026 04:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "อิหร่านต้องการน้ำมันที่สูงขึ้นก่อนมิดเทอม: ทรัมป์สามารถหยุดน้ำมันดิบ 100 ดอลลาร์ได้หรือไม่?",
+        "อิหร่านต้องการน้ำมันที่สูงขึ้นก่อนมิดเทอม: ทรัมป์สามารถหยุดน้ำมันดิบ 100 ดอลลาร์ได้หรือไม่?",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Iran Wants Higher Oil Before the Midterms: Can Trump Stop $100 Crude?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "ราคาน้ำมันพุ่งสูงขึ้นในขณะที่อิหร่านใช้กลยุทธ์ใหม่เพื่อกำหนดเป้าหมายเรือที่ผ่านฮอร์มุซ",
+      "title_en": "Oil prices climb as Iran deploys new tactics to target ships transiting Hormuz",
+      "summary": "ราคาน้ำมันพุ่งสูงขึ้นในขณะที่อิหร่านใช้กลยุทธ์ใหม่เพื่อกำหนดเป้าหมายเรือที่ผ่านฮอร์มุซ",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-climb-traders-weigh-012735546.html",
+      "time": "24 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T04:25:06Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ราคาน้ำมันพุ่งสูงขึ้นในขณะที่อิหร่านใช้กลยุทธ์ใหม่เพื่อกำหนดเป้าหมายเรือที่ผ่านฮอร์มุซ",
+        "แหล่งข่าวอ้างอิง: Reuters (14/10/2026 04:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ราคาน้ำมันพุ่งสูงขึ้นในขณะที่อิหร่านใช้กลยุทธ์ใหม่เพื่อกำหนดเป้าหมายเรือที่ผ่านฮอร์มุซ",
+        "ราคาน้ำมันพุ่งสูงขึ้นในขณะที่อิหร่านใช้กลยุทธ์ใหม่เพื่อกำหนดเป้าหมายเรือที่ผ่านฮอร์มุซ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices climb as Iran deploys new tactics to target ships transiting Hormuz\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "'Godzilla El Niño' สร้างความเสียหายให้กับการคาดการณ์เงินเฟ้อของธนาคารกลางฟิลิปปินส์",
+      "title_en": "'Godzilla El Niño' is wreaking havoc with Philippine central bank's inflation forecasts",
+      "summary": "ธนาคารกลางฟิลิปปินส์กำลังดำเนินนโยบายสถานการณ์สำหรับปรากฏการณ์เอลนีโญที่รุนแรง นอกเหนือจากเหตุการณ์น้ำมันตกตะลึง โดยอัตราเงินเฟ้อพุ่งสูงสุดในรอบสามปี",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/openai-employee-arrested-recording-device.html",
-      "time": "7 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T23:56:04Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/godzilla-el-nino-asia-inflation-philippines.html",
+      "time": "25 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T04:24:28Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ธนาคารกลางฟิลิปปินส์กำลังดำเนินนโยบายสถานการณ์สำหรับปรากฏการณ์เอลนีโญที่รุนแรง นอกเหนือจากเหตุการณ์น้ำมันตกตะลึง โดยอัตราเงินเฟ้อพุ่งสูงสุดในรอบสามปี",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 04:24 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "'Godzilla El Niño' สร้างความเสียหายให้กับการคาดการณ์เงินเฟ้อของธนาคารกลางฟิลิปปินส์",
+        "ธนาคารกลางฟิลิปปินส์กำลังดำเนินนโยบายสถานการณ์สำหรับปรากฏการณ์เอลนีโญที่รุนแรง นอกเหนือจากเหตุการณ์น้ำมันตกตะลึง โดยอัตราเงินเฟ้อพุ่งสูงสุดในรอบสามปี",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"'Godzilla El Niño' is wreaking havoc with Philippine central bank's inflation forecasts\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "หุ้นเอเชียปรับตัวสูงขึ้นเมื่อผู้ผลิตชิปดีดตัวขึ้น การค้าจีนแซงหน้าการคาดการณ์",
+      "title_en": "Asia stocks edge higher as chipmakers rebound; China trade beats forecasts",
+      "summary": "หุ้นเอเชียปรับตัวสูงขึ้นเมื่อผู้ผลิตชิปดีดตัวขึ้น การค้าจีนแซงหน้าการคาดการณ์",
+      "source": "Investing.com",
+      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asia-stocks-edge-higher-chipmakers-040717554.html",
+      "time": "42 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T04:07:17Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -20,10 +133,124 @@
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
+      "isHero": false,
+      "points": [
+        "หุ้นเอเชียปรับตัวสูงขึ้นเมื่อผู้ผลิตชิปดีดตัวขึ้น การค้าจีนแซงหน้าการคาดการณ์",
+        "แหล่งข่าวอ้างอิง: Investing.com (14/10/2026 04:07 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "หุ้นเอเชียปรับตัวสูงขึ้นเมื่อผู้ผลิตชิปดีดตัวขึ้น การค้าจีนแซงหน้าการคาดการณ์",
+        "หุ้นเอเชียปรับตัวสูงขึ้นเมื่อผู้ผลิตชิปดีดตัวขึ้น การค้าจีนแซงหน้าการคาดการณ์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asia stocks edge higher as chipmakers rebound; China trade beats forecasts\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "การส่งออกและนำเข้าของจีนพุ่งเกินคาดในเดือนกันยายน",
+      "title_en": "China's exports and imports surge past expectations in September",
+      "summary": "หน่วยงานศุลกากรของประเทศเปิดเผยข้อมูลการค้าเดือนกันยายนเมื่อวันพุธ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/chinas-exports-likely-grew-by-double-digits-in-september.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T03:41:36Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "หน่วยงานศุลกากรของประเทศเปิดเผยข้อมูลการค้าเดือนกันยายนเมื่อวันพุธ",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 03:41 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "การส่งออกและนำเข้าของจีนพุ่งเกินคาดในเดือนกันยายน",
+        "หน่วยงานศุลกากรของประเทศเปิดเผยข้อมูลการค้าเดือนกันยายนเมื่อวันพุธ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"China's exports and imports surge past expectations in September\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "เหตุใดหุ้น AAPL, BMBL, BP จึงขึ้นสู่ระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
+      "title_en": "Why Did AAPL, BMBL, BP Stocks Rise To 52-Week Highs Today?",
+      "summary": "เหตุใดหุ้น AAPL, BMBL, BP จึงขึ้นสู่ระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
+      "source": "Stocktwits",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/why-did-aapl-bmbl-bp-025733172.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T02:57:33Z",
+      "category": "MACRO",
+      "tickers": [
+        "AAPL"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "เหตุใดหุ้น AAPL, BMBL, BP จึงขึ้นสู่ระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
+        "แหล่งข่าวอ้างอิง: Stocktwits (14/10/2026 02:57 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
+      ],
+      "fullArticle": [
+        "เหตุใดหุ้น AAPL, BMBL, BP จึงขึ้นสู่ระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
+        "เหตุใดหุ้น AAPL, BMBL, BP จึงขึ้นสู่ระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why Did AAPL, BMBL, BP Stocks Rise To 52-Week Highs Today?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "Anthropic เรียกร้องให้ศาลในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์การขึ้นบัญชีดำของกระทรวงกลาโหม",
+      "title_en": "Anthropic urges court in Washington, D.C. to rehear appeal of Pentagon blacklisting",
+      "summary": "Anthropic กำลังขอให้ศาลรัฐบาลกลางในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์ในคดีที่เกี่ยวข้องกับการขึ้นบัญชีดำโมเดล AI ของบริษัท Pentagon",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/anthropic-wants-court-in-dc-to-rehear-appeal-of-pentagon-blacklist-.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T01:35:51Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Anthropic กำลังขอให้ศาลรัฐบาลกลางในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์ในคดีที่เกี่ยวข้องกับการขึ้นบัญชีดำโมเดล AI ของบริษัท Pentagon",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 01:35 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Anthropic เรียกร้องให้ศาลในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์การขึ้นบัญชีดำของกระทรวงกลาโหม",
+        "Anthropic กำลังขอให้ศาลรัฐบาลกลางในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์ในคดีที่เกี่ยวข้องกับการขึ้นบัญชีดำโมเดล AI ของบริษัท Pentagon",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic urges court in Washington, D.C. to rehear appeal of Pentagon blacklisting\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "FBI จับกุมพนักงาน Saudi OpenAI ที่ถูกกล่าวหาว่าปลูกอุปกรณ์บันทึกเสียงในห้องประชุม",
+      "title_en": "FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room",
+      "summary": "เหตุการณ์ในวันอังคารเกิดขึ้นในขณะที่ผู้สร้าง ChatGPT พร้อมด้วยคู่แข่ง เผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับหลักปฏิบัติด้านความปลอดภัย",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/13/openai-employee-arrested-recording-device.html",
+      "time": "4 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T00:13:45Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
       "points": [
         "เหตุการณ์ในวันอังคารเกิดขึ้นในขณะที่ผู้สร้าง ChatGPT พร้อมด้วยคู่แข่ง เผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับหลักปฏิบัติด้านความปลอดภัย",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 23:56 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 00:13 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
@@ -33,42 +260,13 @@
       ]
     },
     {
-      "id": "news-2",
-      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงเนื่องจากหุ้นชิปร่วงลง, ผลประกอบการเข้ามา",
-      "title_en": "Stock market today: Dow, S&P 500, Nasdaq slip as chip stocks fall, earnings roll in",
-      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงเนื่องจากหุ้นชิปร่วงลง, ผลประกอบการเข้ามา",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-13-dow-sp-500-nasdaq-chip-stocks-192419999.html",
-      "time": "36 นาทีที่แล้ว",
-      "publishedAt": "2026-10-13T23:27:32Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงเนื่องจากหุ้นชิปร่วงลง, ผลประกอบการเข้ามา",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (13/10/2026 23:27 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงเนื่องจากหุ้นชิปร่วงลง, ผลประกอบการเข้ามา",
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงเนื่องจากหุ้นชิปร่วงลง, ผลประกอบการเข้ามา",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq slip as chip stocks fall, earnings roll in\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
+      "id": "news-10",
       "title": "โกลด์แมนกล่าวว่านักลงทุนกำลังมองหาการเติบโตของธุรกิจจีนในต่างประเทศที่ 'มีกำไร'",
       "title_en": "Goldman says investors are looking for 'profitable' Chinese business growth overseas",
       "summary": "ความต้องการของผู้บริโภคที่ซบเซาในจีนได้ผลักดันให้บริษัทหลายแห่ง เช่น แบรนด์รถยนต์ไฟฟ้า เร่งแผนการเข้าสู่ประเทศอื่น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/14/goldman-says-investors-seek-profitable-chinese-business-growth-abroad.html",
-      "time": "58 นาทีที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-13T23:05:12Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -90,70 +288,13 @@
       ]
     },
     {
-      "id": "news-4",
-      "title": "บันทึกอัตราเรือบรรทุกน้ำมันทิ้งน้ำมันดิบจำนวนมากติดค้างในอเมริกา",
-      "title_en": "Record Tanker Rates Leave Heavy Crude Stranded in the Americas",
-      "summary": "บันทึกอัตราเรือบรรทุกน้ำมันทิ้งน้ำมันดิบจำนวนมากติดค้างในอเมริกา",
-      "source": "Oilprice.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/record-tanker-rates-leave-heavy-230000211.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T23:00:00Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "บันทึกอัตราเรือบรรทุกน้ำมันทิ้งน้ำมันดิบจำนวนมากติดค้างในอเมริกา",
-        "แหล่งข่าวอ้างอิง: Oilprice.com (13/10/2026 23:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "บันทึกอัตราเรือบรรทุกน้ำมันทิ้งน้ำมันดิบจำนวนมากติดค้างในอเมริกา",
-        "บันทึกอัตราเรือบรรทุกน้ำมันทิ้งน้ำมันดิบจำนวนมากติดค้างในอเมริกา",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Record Tanker Rates Leave Heavy Crude Stranded in the Americas\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "Anthropic เรียกร้องให้ศาลในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์การขึ้นบัญชีดำของกระทรวงกลาโหม",
-      "title_en": "Anthropic urges court in Washington, D.C. to rehear appeal of Pentagon blacklisting",
-      "summary": "Anthropic กำลังขอให้ศาลรัฐบาลกลางในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์ในคดีที่เกี่ยวข้องกับการขึ้นบัญชีดำโมเดล AI ของบริษัท Pentagon",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/anthropic-wants-court-in-dc-to-rehear-appeal-of-pentagon-blacklist-.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T22:54:21Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Anthropic กำลังขอให้ศาลรัฐบาลกลางในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์ในคดีที่เกี่ยวข้องกับการขึ้นบัญชีดำโมเดล AI ของบริษัท Pentagon",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 22:54 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "Anthropic เรียกร้องให้ศาลในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์การขึ้นบัญชีดำของกระทรวงกลาโหม",
-        "Anthropic กำลังขอให้ศาลรัฐบาลกลางในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์ในคดีที่เกี่ยวข้องกับการขึ้นบัญชีดำโมเดล AI ของบริษัท Pentagon",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic urges court in Washington, D.C. to rehear appeal of Pentagon blacklisting\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
+      "id": "news-11",
       "title": "นี่คือจุดที่ Jim Cramer ยืนอยู่บนหุ้นโครงสร้างพื้นฐาน AI สาธารณะที่เพิ่งเปิดใหม่นี้",
       "title_en": "Here's where Jim Cramer stands on this newly public AI infrastructure stock",
       "summary": "Jim Cramer จาก CNBC กล่าวว่านักลงทุนควรระงับการซื้อบริษัทโครงสร้างพื้นฐาน AI สาธารณะแห่งใหม่ Accelevation Holdings",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/13/jim-cramer-accelevation-stock.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-13T22:47:07Z",
       "category": "TECH",
       "tickers": [
@@ -176,13 +317,13 @@
       ]
     },
     {
-      "id": "news-7",
+      "id": "news-12",
       "title": "Jim Cramer ไม่ยอมแพ้กับหุ้นเซมิคอนดักเตอร์แม้จะถูกขายออกไปก็ตาม นี่คือเหตุผล",
       "title_en": "Jim Cramer isn't giving up on semiconductor stocks despite the sell off. Here's why",
       "summary": "Jim Cramer จาก CNBC กล่าวว่านักลงทุนไม่ควรยอมแพ้กับหุ้นเซมิคอนดักเตอร์ แม้ว่าจะมีการขายหุ้นออกไปเมื่อเร็วๆ นี้ก็ตาม",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/13/jim-cramer-semiconductor-stocks-sell-off.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-13T22:19:29Z",
       "category": "TECH",
       "tickers": [
@@ -202,144 +343,6 @@
         "Jim Cramer ไม่ยอมแพ้กับหุ้นเซมิคอนดักเตอร์แม้จะถูกขายออกไปก็ตาม นี่คือเหตุผล",
         "Jim Cramer จาก CNBC กล่าวว่านักลงทุนไม่ควรยอมแพ้กับหุ้นเซมิคอนดักเตอร์ แม้ว่าจะมีการขายหุ้นออกไปเมื่อเร็วๆ นี้ก็ตาม",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer isn't giving up on semiconductor stocks despite the sell off. Here's why\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "หุ้นโลกร่วงจากความกังวลเรื่องการใช้จ่ายด้าน AI เบรนท์ปักหลักต่ำลง",
-      "title_en": "World stocks dip on AI spending concerns; Brent settles lower",
-      "summary": "หุ้นโลกร่วงจากความกังวลเรื่องการใช้จ่ายด้าน AI เบรนท์ปักหลักต่ำลง",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-dive-focus-earnings-015003210.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T21:29:37Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "หุ้นโลกร่วงจากความกังวลเรื่องการใช้จ่ายด้าน AI เบรนท์ปักหลักต่ำลง",
-        "แหล่งข่าวอ้างอิง: Reuters (13/10/2026 21:29 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "หุ้นโลกร่วงจากความกังวลเรื่องการใช้จ่ายด้าน AI เบรนท์ปักหลักต่ำลง",
-        "หุ้นโลกร่วงจากความกังวลเรื่องการใช้จ่ายด้าน AI เบรนท์ปักหลักต่ำลง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"World stocks dip on AI spending concerns; Brent settles lower\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "ผู้พิพากษากล่าวว่า Musk มีส่วนร่วมในการข่มขู่อดีต CFO ของ FEMA Mary Comans ทำให้ชื่อเสียงของเธอหมดไป",
-      "title_en": "Judge says Musk engaged in intimidation of ex-FEMA CFO Mary Comans, clears her name",
-      "summary": "แมรี่ โคมานส์ อดีตซีเอฟโอของ FEMA ถูกล้างโดยผู้พิพากษาของรัฐบาลกลาง หลังจากที่อีลอน มัสก์และเจ้าหน้าที่ของรัฐคนอื่นๆ กล่าวหาเธออย่างผิดๆ ว่ากระทำผิดทางอาญาในปี 2568",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/judge-says-elon-musk-engaged-intimidation-of-ex-fema-cfo-mary-comans.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T21:15:32Z",
-      "category": "MACRO",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "แมรี่ โคมานส์ อดีตซีเอฟโอของ FEMA ถูกล้างโดยผู้พิพากษาของรัฐบาลกลาง หลังจากที่อีลอน มัสก์และเจ้าหน้าที่ของรัฐคนอื่นๆ กล่าวหาเธออย่างผิดๆ ว่ากระทำผิดทางอาญาในปี 2568",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 21:15 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "ผู้พิพากษากล่าวว่า Musk มีส่วนร่วมในการข่มขู่อดีต CFO ของ FEMA Mary Comans ทำให้ชื่อเสียงของเธอหมดไป",
-        "แมรี่ โคมานส์ อดีตซีเอฟโอของ FEMA ถูกล้างโดยผู้พิพากษาของรัฐบาลกลาง หลังจากที่อีลอน มัสก์และเจ้าหน้าที่ของรัฐคนอื่นๆ กล่าวหาเธออย่างผิดๆ ว่ากระทำผิดทางอาญาในปี 2568",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Judge says Musk engaged in intimidation of ex-FEMA CFO Mary Comans, clears her name\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "หุ้นสหรัฐฯ ร่วงลงเนื่องจากผลประกอบการของธนาคารไม่น่าตื่นเต้น",
-      "title_en": "U.S. Stocks Tick Down as Bank Earnings Don’t Excite",
-      "summary": "หุ้นสหรัฐฯ ร่วงลงเนื่องจากผลประกอบการของธนาคารไม่น่าตื่นเต้น",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/4c6a39d6-ca52-3e5d-836c-35fb9313401c/u.s.-stocks-tick-down-as-bank.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T21:07:00Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "หุ้นสหรัฐฯ ร่วงลงเนื่องจากผลประกอบการของธนาคารไม่น่าตื่นเต้น",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (13/10/2026 21:07 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "หุ้นสหรัฐฯ ร่วงลงเนื่องจากผลประกอบการของธนาคารไม่น่าตื่นเต้น",
-        "หุ้นสหรัฐฯ ร่วงลงเนื่องจากผลประกอบการของธนาคารไม่น่าตื่นเต้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. Stocks Tick Down as Bank Earnings Don’t Excite\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "Cardinal Energy Ltd. ประกาศจ่ายเงินปันผลรายเดือนสำหรับเดือนตุลาคม",
-      "title_en": "Cardinal Energy Ltd. Announces Monthly Dividend for October",
-      "summary": "Cardinal Energy Ltd. ประกาศจ่ายเงินปันผลรายเดือนสำหรับเดือนตุลาคม",
-      "source": "TMX Newsfile",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/cardinal-energy-ltd-announces-monthly-210100741.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T21:01:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SCHD"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Cardinal Energy Ltd. ประกาศจ่ายเงินปันผลรายเดือนสำหรับเดือนตุลาคม",
-        "แหล่งข่าวอ้างอิง: TMX Newsfile (13/10/2026 21:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SCHD"
-      ],
-      "fullArticle": [
-        "Cardinal Energy Ltd. ประกาศจ่ายเงินปันผลรายเดือนสำหรับเดือนตุลาคม",
-        "Cardinal Energy Ltd. ประกาศจ่ายเงินปันผลรายเดือนสำหรับเดือนตุลาคม",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Cardinal Energy Ltd. Announces Monthly Dividend for October\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "JPMorgan Chase บล็อกตัวแทน AI ภายนอกเช่น Muse, Instinct ไม่ให้เข้าถึงบัญชีโดยตรง",
-      "title_en": "JPMorgan Chase blocks outside AI agents like Muse, Instinct from directly accessing accounts",
-      "summary": "Jamie Dimon ซีอีโอของ JPMorgan Chase เตือนถึงตัวแทนอันธพาลที่ดำเนินงานในวงกว้าง และกล่าวว่าธนาคารกำลังสร้างเครื่องมือป้องกัน",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/jpmorgan-ai-agents-account-access.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T20:48:37Z",
-      "category": "TECH",
-      "tickers": [
-        "JPM"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "Jamie Dimon ซีอีโอของ JPMorgan Chase เตือนถึงตัวแทนอันธพาลที่ดำเนินงานในวงกว้าง และกล่าวว่าธนาคารกำลังสร้างเครื่องมือป้องกัน",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 20:48 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM"
-      ],
-      "fullArticle": [
-        "JPMorgan Chase บล็อกตัวแทน AI ภายนอกเช่น Muse, Instinct ไม่ให้เข้าถึงบัญชีโดยตรง",
-        "Jamie Dimon ซีอีโอของ JPMorgan Chase เตือนถึงตัวแทนอันธพาลที่ดำเนินงานในวงกว้าง และกล่าวว่าธนาคารกำลังสร้างเครื่องมือป้องกัน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"JPMorgan Chase blocks outside AI agents like Muse, Instinct from directly accessing accounts\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
