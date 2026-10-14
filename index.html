@@ -1058,23 +1058,27 @@
 
 
         /* --- Market Overview & Sector Hub Styles (Crisp, High-Contrast Borders & Modern Cards) --- */
-        #macroIndicesRow {
+        #macroIndicesRow,
+        #etfMacroIndicesRow {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
         }
         @media (min-width: 576px) {
-            #macroIndicesRow {
+            #macroIndicesRow,
+            #etfMacroIndicesRow {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
         @media (min-width: 992px) {
-            #macroIndicesRow {
+            #macroIndicesRow,
+            #etfMacroIndicesRow {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
         @media (min-width: 1300px) {
-            #macroIndicesRow {
+            #macroIndicesRow,
+            #etfMacroIndicesRow {
                 grid-template-columns: repeat(7, 1fr);
             }
         }
@@ -1082,10 +1086,10 @@
         .market-macro-card {
             background: #ffffff;
             border: 1.5px solid #cbd5e1;
-            border-radius: 16px;
-            padding: 13px 15px;
+            border-radius: 14px;
+            padding: 10px 13px;
             transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -9800,7 +9804,7 @@
 
                 const isPos = changePct >= 0;
                 const sign = isPos ? '+' : '';
-                const spark = generateSvgSparkline(item.seed, isPos, 68, 26);
+                const spark = generateSvgSparkline(item.seed, isPos, 56, 22);
 
                 const accentColor = isPos ? '#10b981' : '#ef4444';
                 const badgeBg = isPos ? 'rgba(16, 185, 129, 0.12)' : 'rgba(239, 68, 68, 0.12)';
@@ -9812,20 +9816,20 @@
                         <!-- Top: Icon, Title, and Unified Live % Badge -->
                         <div class="d-flex justify-content-between align-items-center mb-1 gap-1">
                             <div class="d-flex align-items-center gap-1.5 text-truncate" title="${item.name} (${item.symbol})">
-                                <span style="font-size: 1rem; flex-shrink: 0;">${item.icon || '📈'}</span>
-                                <span class="fw-bold text-truncate" style="font-size: 0.85rem; color: var(--bs-heading-color, #1e293b);">${item.name}</span>
+                                <span style="font-size: 0.95rem; flex-shrink: 0;">${item.icon || '📈'}</span>
+                                <span class="fw-bold text-truncate" style="font-size: 0.80rem; color: var(--bs-heading-color, #1e293b);">${item.name}</span>
                             </div>
-                            <span class="badge fw-bold flex-shrink-0 d-inline-flex align-items-center gap-1" style="font-size: 0.70rem; padding: 2.5px 7px; background: ${badgeBg}; color: ${badgeColor}; border: 1px solid ${badgeBorder}; border-radius: 9999px;">
+                            <span class="badge fw-bold flex-shrink-0 d-inline-flex align-items-center gap-1" style="font-size: 0.68rem; padding: 2px 6px; background: ${badgeBg}; color: ${badgeColor}; border: 1px solid ${badgeBorder}; border-radius: 9999px;">
                                 ${isLive ? '<span class="live-pulse-dot"></span>' : ''}
                                 ${sign}${changePct.toFixed(2)}%
                             </span>
                         </div>
 
                         <!-- Bottom: Bold Price + Sparkline with divider -->
-                        <div class="d-flex justify-content-between align-items-end mt-2 pt-1 border-top" style="border-color: rgba(226, 232, 240, 0.7) !important;">
+                        <div class="d-flex justify-content-between align-items-end mt-1 pt-1 border-top" style="border-color: rgba(226, 232, 240, 0.7) !important;">
                             <div>
-                                <div class="fw-bolder" style="font-size: 1.10rem; letter-spacing: -0.4px; color: var(--bs-body-color, #0f172a); line-height: 1.2;">${displayVal}</div>
-                                <div class="text-muted" style="font-size: 0.68rem; margin-top: 2px;">
+                                <div class="fw-bolder" style="font-size: 1.02rem; letter-spacing: -0.3px; color: var(--bs-body-color, #0f172a); line-height: 1.2;">${displayVal}</div>
+                                <div class="text-muted" style="font-size: 0.66rem; margin-top: 2px;">
                                     ${item.symbol} ${isLive ? '• <span class="text-success fw-bold">Live</span>' : ''}
                                 </div>
                             </div>
@@ -10195,7 +10199,7 @@
 
                 const isPos = changePct >= 0;
                 const sign = isPos ? '+' : '';
-                const spark = generateSvgSparkline(item.seed, isPos, 68, 26);
+                const spark = generateSvgSparkline(item.seed, isPos, 56, 22);
                 const accentColor = isPos ? '#10b981' : '#ef4444';
                 const badgeBg = isPos ? 'rgba(16, 185, 129, 0.12)' : 'rgba(239, 68, 68, 0.12)';
                 const badgeColor = isPos ? '#059669' : '#dc2626';
@@ -10206,20 +10210,20 @@
                         <!-- Top: Logo + Name + Change Badge -->
                         <div class="d-flex justify-content-between align-items-center mb-1 gap-1">
                             <div class="d-flex align-items-center gap-1.5 text-truncate">
-                                <img src="https://assets.parqet.com/logos/symbol/${item.symbol}" alt="${item.symbol}" class="rounded-circle border" width="20" height="20" style="object-fit: contain; background: #fff; padding: 1px;" onerror="this.style.display='none'">
-                                <span class="fw-bold text-truncate" style="font-size: 0.85rem; color: var(--bs-heading-color, #1e293b);">${item.name}</span>
+                                <img src="https://assets.parqet.com/logos/symbol/${item.symbol}" alt="${item.symbol}" class="rounded-circle border" width="18" height="18" style="object-fit: contain; background: #fff; padding: 1px;" onerror="this.style.display='none'">
+                                <span class="fw-bold text-truncate" style="font-size: 0.80rem; color: var(--bs-heading-color, #1e293b);">${item.name}</span>
                             </div>
-                            <span class="badge fw-bold flex-shrink-0 d-inline-flex align-items-center gap-1" style="font-size: 0.70rem; padding: 2.5px 7px; background: ${badgeBg}; color: ${badgeColor}; border: 1px solid ${badgeBorder}; border-radius: 9999px;">
+                            <span class="badge fw-bold flex-shrink-0 d-inline-flex align-items-center gap-1" style="font-size: 0.68rem; padding: 2px 6px; background: ${badgeBg}; color: ${badgeColor}; border: 1px solid ${badgeBorder}; border-radius: 9999px;">
                                 ${isLive ? '<span class="live-pulse-dot"></span>' : ''}
                                 ${sign}${changePct.toFixed(2)}%
                             </span>
                         </div>
 
                         <!-- Bottom: Bold Price + Sparkline with category & expense info -->
-                        <div class="d-flex justify-content-between align-items-end mt-2 pt-1 border-top" style="border-color: rgba(226, 232, 240, 0.7) !important;">
+                        <div class="d-flex justify-content-between align-items-end mt-1 pt-1 border-top" style="border-color: rgba(226, 232, 240, 0.7) !important;">
                             <div>
-                                <div class="fw-bolder" style="font-size: 1.10rem; letter-spacing: -0.4px; color: var(--bs-body-color, #0f172a); line-height: 1.2;">$${Number(curPrice).toFixed(2)}</div>
-                                <div class="text-muted d-flex align-items-center gap-1" style="font-size: 0.68rem; margin-top: 2px;">
+                                <div class="fw-bolder" style="font-size: 1.02rem; letter-spacing: -0.3px; color: var(--bs-body-color, #0f172a); line-height: 1.2;">$${Number(curPrice).toFixed(2)}</div>
+                                <div class="text-muted d-flex align-items-center gap-1" style="font-size: 0.66rem; margin-top: 2px;">
                                     <span class="badge bg-secondary-subtle text-secondary px-1 py-0" style="font-size: 0.62rem;">${item.category}</span>
                                     <span>Fee: ${item.exp}</span>
                                 </div>
