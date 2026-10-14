@@ -1255,6 +1255,59 @@
         .market-rank-table tbody tr:hover {
             background-color: rgba(59, 130, 246, 0.06);
         }
+
+        /* Market Overview Sub-nav Switcher (Stock Market Overview vs ETF Market Overview) */
+        .market-subnav-pills {
+            display: inline-flex;
+            background: #f1f5f9;
+            padding: 4px;
+            border-radius: 9999px;
+            gap: 4px;
+        }
+        .market-subnav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 9999px;
+            padding: 7px 20px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            border: none;
+            background: transparent;
+            color: #64748b;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .market-subnav-btn:hover {
+            color: #0f172a;
+            background: rgba(255, 255, 255, 0.6);
+        }
+        .market-subnav-btn.active {
+            background: #ffffff;
+            color: #0f172a;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        [data-bs-theme="dark"] .market-subnav-pills,
+        body.dark-mode .market-subnav-pills {
+            background: #0f172a;
+            border-color: #334155 !important;
+        }
+        [data-bs-theme="dark"] .market-subnav-btn,
+        body.dark-mode .market-subnav-btn {
+            color: #94a3b8;
+        }
+        [data-bs-theme="dark"] .market-subnav-btn:hover,
+        body.dark-mode .market-subnav-btn:hover {
+            color: #ffffff;
+            background: rgba(30, 41, 59, 0.7);
+        }
+        [data-bs-theme="dark"] .market-subnav-btn.active,
+        body.dark-mode .market-subnav-btn.active {
+            background: #1e293b;
+            color: #38bdf8;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
         #mainViewNav::-webkit-scrollbar {
             display: none;
         }
@@ -2778,121 +2831,249 @@
                 </div>
             </div><!-- end homeNewsPane -->
 
-            <!-- PANE 2: Market Overview (ภาพรวมตลาดและหุ้นติดเทรนด์ 100 หุ้น) -->
+            <!-- PANE 2: Market Overview (แบ่งเป็น Stock Market Overview 1 หน้า และ ETF Market Overview 1 หน้า) -->
             <div class="tab-pane fade" id="marketOverviewPane" role="tabpanel">
-                <!-- Section Subtitle & Category Filter Bar -->
-                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
-                    <div>
-                        <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
-                            🌐 ภาพรวมตลาด & หุ้นติดเทรนด์ (Market Overview)
-                        </h4>
-                        <small class="text-muted">
-                            ดัชนีสำคัญ 7 รายการ (Dow Jones, S&P 500, Nasdaq 100, VIX, Gold, WTI, DXY), โมเมนตัมแบบเรียลไทม์, Top 10 Snapshot, และตารางจัดอันดับ 100 หุ้นสัญญาณแรง
-                        </small>
+                <!-- Sub-Page Switcher Pills: Stock Market Overview vs ETF Market Overview -->
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1 border-bottom pb-2">
+                    <div class="market-subnav-pills shadow-sm border" role="tablist">
+                        <button type="button" class="market-subnav-btn active" id="subtabBtnStockMarket" onclick="switchMarketSubView('STOCK')">
+                            <span>📈 Stock Market Overview</span>
+                            <span class="badge rounded-pill bg-primary" id="stockMarketCountBadge">100 หุ้น</span>
+                        </button>
+                        <button type="button" class="market-subnav-btn" id="subtabBtnEtfMarket" onclick="switchMarketSubView('ETF')">
+                            <span>📦 ETF Market Overview</span>
+                            <span class="badge rounded-pill bg-success" id="etfMarketCountBadge">36 กองทุน</span>
+                        </button>
                     </div>
-                    <div class="d-flex align-items-center gap-2 flex-wrap">
-                        <div class="market-category-pill-box shadow-sm border">
-                            <button class="market-cat-btn active" id="marketCatBtnALL" onclick="setMarketOverviewCategory('ALL')">🌐 ทั้งหมด (100 อันดับ)</button>
-                            <button class="market-cat-btn" id="marketCatBtnPremium" onclick="setMarketOverviewCategory('PREMIUM')">💎 Premium</button>
-                            <button class="market-cat-btn" id="marketCatBtnUS" onclick="setMarketOverviewCategory('US')">🇺🇸 US Stocks</button>
-                            <button class="market-cat-btn" id="marketCatBtnETF" onclick="setMarketOverviewCategory('ETF')">📊 ETF</button>
-                        </div>
+                    <div class="d-flex align-items-center gap-2">
                         <button id="btnRefreshMarketOverview" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="refreshMarketOverviewData(true)" title="รีเฟรชข้อมูลภาพรวมตลาด">
-                            🔄 รีเฟรช
+                            🔄 รีเฟรชข้อมูล
                         </button>
                     </div>
                 </div>
 
-                <!-- 7 Macro Indices Cards (Dow Jones, S&P 500, Nasdaq 100, VIX, Gold, WTI Crude Oil, DXY) -->
-                <div class="mb-3" id="macroIndicesRow">
-                    <!-- Populated by renderMacroIndices() -->
-                </div>
-
-                <!-- Top 10 Snapshot (Horizontal Scroller with high-confidence signals) -->
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between align-items-center mb-2 px-1">
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="fw-bold" style="font-size: 0.95rem;">🔥 Top 10 Snapshot (สัญญาณความมั่นใจสูง)</span>
-                            <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">HIGH CONFIDENCE</span>
+                <!-- SUB-PAGE 1: Stock Market Overview (100 หุ้นเดี่ยว) -->
+                <div id="stockMarketSubView">
+                    <!-- Title & Stock Category Filter Bar -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                        <div>
+                            <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
+                                📈 ภาพรวมหุ้นสหรัฐฯ (Stock Market Overview)
+                            </h4>
+                            <small class="text-muted">
+                                7 ดัชนีหลักสำคัญ, สัญญาณหุ้นรายตัวชั้นนำ 100 ตัว, Top 10 High-Confidence, และตารางจัดอันดับทางเทคนิค
+                            </small>
                         </div>
-                        <small class="text-muted" style="font-size: 0.75rem;">แตะที่การ์ดเพื่อเปิดกราฟวิเคราะห์ ⚡</small>
-                    </div>
-                    <div class="market-snapshot-scroller" id="marketTop10Scroller">
-                        <!-- Populated by renderMarketTop10Scroller() -->
-                    </div>
-                </div>
-
-                <!-- Top 100 Ranked Stocks Table Card -->
-                <!-- Top 100 Ranked Stocks Table Card -->
-                <div class="card border-0 shadow-sm rounded-4 mb-4" id="marketTopRankedCard">
-                    <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2 p-3">
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="fw-bold" style="font-size: 1rem;">🏆 ตารางจัดอันดับสัญญาณทางเทคนิค (Top Ranked Stocks)</span>
-                            <span class="badge rounded-pill bg-primary px-2 py-1" id="marketTableCountBadge" style="font-size: 0.72rem;">100 รายการ</span>
+                        <div class="market-category-pill-box shadow-sm border">
+                            <button class="market-cat-btn active" id="marketCatBtnALL" onclick="setMarketOverviewCategory('ALL')">🌐 ทั้งหมด (100 หุ้น)</button>
+                            <button class="market-cat-btn" id="marketCatBtnPremium" onclick="setMarketOverviewCategory('PREMIUM')">💎 Premium</button>
+                            <button class="market-cat-btn" id="marketCatBtnUS" onclick="setMarketOverviewCategory('US')">🇺🇸 US Leaders</button>
                         </div>
-                        <div class="d-flex align-items-center gap-2 flex-wrap">
-                            <div class="input-group input-group-sm" style="max-width: 200px;">
-                                <span class="input-group-text bg-transparent border-end-0 text-muted">🔍</span>
-                                <input type="text" id="marketTableSearch" class="form-control border-start-0" placeholder="ค้นหา Ticker หรือชื่อหุ้น..." oninput="onMarketTableSearch(this.value)">
+                    </div>
+
+                    <!-- 7 Macro Indices Cards (Dow Jones, S&P 500, Nasdaq 100, VIX, Gold, WTI Crude Oil, DXY) -->
+                    <div class="mb-3" id="macroIndicesRow">
+                        <!-- Populated by renderMacroIndices() -->
+                    </div>
+
+                    <!-- Top 10 Snapshot (Horizontal Scroller with high-confidence signals) -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="fw-bold" style="font-size: 0.95rem;">🔥 Top 10 Stocks Snapshot (สัญญาณความมั่นใจสูง)</span>
+                                <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">HIGH CONFIDENCE</span>
                             </div>
-                            <div class="btn-group btn-group-sm" role="group">
-                                <button type="button" class="btn btn-outline-secondary active py-1 px-2 fw-bold" id="marketFilterSignalAll" onclick="setMarketTableSignalFilter('ALL')">ทั้งหมด</button>
-                                <button type="button" class="btn btn-outline-success py-1 px-2 fw-bold" id="marketFilterSignalBuy" onclick="setMarketTableSignalFilter('BUY')">🟢 BUY</button>
-                                <button type="button" class="btn btn-outline-warning py-1 px-2 fw-bold" id="marketFilterSignalWatch" onclick="setMarketTableSignalFilter('WATCH')">🟡 WATCH</button>
-                                <button type="button" class="btn btn-outline-danger py-1 px-2 fw-bold" id="marketFilterSignalSell" onclick="setMarketTableSignalFilter('SELL')">🔴 SELL</button>
+                            <small class="text-muted" style="font-size: 0.75rem;">แตะที่การ์ดเพื่อเปิดกราฟวิเคราะห์ ⚡</small>
+                        </div>
+                        <div class="market-snapshot-scroller" id="marketTop10Scroller">
+                            <!-- Populated by renderMarketTop10Scroller() -->
+                        </div>
+                    </div>
+
+                    <!-- Top 100 Ranked Stocks Table Card -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-4" id="marketTopRankedCard">
+                        <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2 p-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="fw-bold" style="font-size: 1rem;">🏆 ตารางจัดอันดับหุ้นรายตัว (Top Ranked Stocks)</span>
+                                <span class="badge rounded-pill bg-primary px-2 py-1" id="marketTableCountBadge" style="font-size: 0.72rem;">100 รายการ</span>
                             </div>
-                            <select id="marketTableSortSelect" class="form-select form-select-sm" style="width: auto; font-size: 0.78rem;" onchange="onMarketTableSortChange(this.value)">
-                                <option value="rank_asc">เรียงตาม Rank (1-100)</option>
-                                <option value="change_desc">เปลี่ยนแปลงสูงสุด (Top Gainers)</option>
-                                <option value="change_asc">เปลี่ยนแปลงต่ำสุด (Top Losers)</option>
-                                <option value="score_desc">คะแนนเทคนิคสูงสุด (Score)</option>
-                                <option value="price_desc">ราคาสูงสุด -> ต่ำสุด</option>
-                            </select>
-                            <div class="d-flex align-items-center gap-1">
-                                <span class="text-muted fw-bold" style="font-size: 0.78rem;">หน้าละ:</span>
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                <div class="input-group input-group-sm" style="max-width: 200px;">
+                                    <span class="input-group-text bg-transparent border-end-0 text-muted">🔍</span>
+                                    <input type="text" id="marketTableSearch" class="form-control border-start-0" placeholder="ค้นหา Ticker หรือชื่อหุ้น..." oninput="onMarketTableSearch(this.value)">
+                                </div>
                                 <div class="btn-group btn-group-sm" role="group">
-                                    <button type="button" class="btn btn-sm btn-dark py-1 px-2 fw-bold" id="btnMarketPageSize_10" onclick="setMarketTablePageSize(10)">10</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_20" onclick="setMarketTablePageSize(20)">20</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_50" onclick="setMarketTablePageSize(50)">50</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_ALL" onclick="setMarketTablePageSize('ALL')">ทั้งหมด</button>
+                                    <button type="button" class="btn btn-outline-secondary active py-1 px-2 fw-bold" id="marketFilterSignalAll" onclick="setMarketTableSignalFilter('ALL')">ทั้งหมด</button>
+                                    <button type="button" class="btn btn-outline-success py-1 px-2 fw-bold" id="marketFilterSignalBuy" onclick="setMarketTableSignalFilter('BUY')">🟢 BUY</button>
+                                    <button type="button" class="btn btn-outline-warning py-1 px-2 fw-bold" id="marketFilterSignalWatch" onclick="setMarketTableSignalFilter('WATCH')">🟡 WATCH</button>
+                                    <button type="button" class="btn btn-outline-danger py-1 px-2 fw-bold" id="marketFilterSignalSell" onclick="setMarketTableSignalFilter('SELL')">🔴 SELL</button>
+                                </div>
+                                <select id="marketTableSortSelect" class="form-select form-select-sm" style="width: auto; font-size: 0.78rem;" onchange="onMarketTableSortChange(this.value)">
+                                    <option value="rank_asc">เรียงตาม Rank (1-100)</option>
+                                    <option value="change_desc">เปลี่ยนแปลงสูงสุด (Top Gainers)</option>
+                                    <option value="change_asc">เปลี่ยนแปลงต่ำสุด (Top Losers)</option>
+                                    <option value="score_desc">คะแนนเทคนิคสูงสุด (Score)</option>
+                                    <option value="price_desc">ราคาสูงสุด -> ต่ำสุด</option>
+                                </select>
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="text-muted fw-bold" style="font-size: 0.78rem;">หน้าละ:</span>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-sm btn-dark py-1 px-2 fw-bold" id="btnMarketPageSize_10" onclick="setMarketTablePageSize(10)">10</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_20" onclick="setMarketTablePageSize(20)">20</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_50" onclick="setMarketTablePageSize(50)">50</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_ALL" onclick="setMarketTablePageSize('ALL')">ทั้งหมด</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle market-rank-table mb-0" style="font-size: 0.85rem;">
-                                <thead style="border-bottom: 2px solid rgba(0,0,0,0.06); font-size: 0.75rem;" class="table-light">
-                                    <tr>
-                                        <th class="text-center py-2 px-2" style="width: 45px;">#</th>
-                                        <th class="py-2" style="min-width: 170px;">TICKER</th>
-                                        <th class="text-center py-2" style="width: 100px;">TREND</th>
-                                        <th class="text-center py-2" style="width: 80px;">SIGNAL</th>
-                                        <th class="text-center py-2" style="width: 75px;">CONF</th>
-                                        <th class="text-center py-2" style="width: 90px;">SCORE</th>
-                                        <th class="text-end py-2" style="min-width: 90px;">PRICE</th>
-                                        <th class="text-end py-2" style="min-width: 90px;">CHANGE</th>
-                                        <th class="text-end py-2" style="min-width: 90px;">แนวต้าน</th>
-                                        <th class="text-end py-2" style="min-width: 90px;">แนวรับระยะสั้น</th>
-                                        <th class="text-center py-2" style="min-width: 210px;">MOMENTUM (1D | 1W | 1M | 3M | 6M | 1Y)</th>
-                                        <th class="text-center py-2" style="width: 85px;">ACTION</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="marketTableBody">
-                                    <!-- Injected by renderMarketTop100Table() -->
-                                </tbody>
-                            </table>
-                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle market-rank-table mb-0" style="font-size: 0.85rem;">
+                                    <thead style="border-bottom: 2px solid rgba(0,0,0,0.06); font-size: 0.75rem;" class="table-light">
+                                        <tr>
+                                            <th class="text-center py-2 px-2" style="width: 45px;">#</th>
+                                            <th class="py-2" style="min-width: 170px;">TICKER</th>
+                                            <th class="text-center py-2" style="width: 100px;">TREND</th>
+                                            <th class="text-center py-2" style="width: 80px;">SIGNAL</th>
+                                            <th class="text-center py-2" style="width: 75px;">CONF</th>
+                                            <th class="text-center py-2" style="width: 90px;">SCORE</th>
+                                            <th class="text-end py-2" style="min-width: 90px;">PRICE</th>
+                                            <th class="text-end py-2" style="min-width: 90px;">CHANGE</th>
+                                            <th class="text-end py-2" style="min-width: 90px;">แนวต้าน</th>
+                                            <th class="text-end py-2" style="min-width: 90px;">แนวรับระยะสั้น</th>
+                                            <th class="text-center py-2" style="min-width: 210px;">MOMENTUM (1D | 1W | 1M | 3M | 6M | 1Y)</th>
+                                            <th class="text-center py-2" style="width: 85px;">ACTION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="marketTableBody">
+                                        <!-- Injected by renderMarketTop100Table() -->
+                                    </tbody>
+                                </table>
+                            </div>
 
-                        <!-- Pagination Footer for Top Ranked Stocks -->
-                        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-top flex-wrap gap-2" id="marketTablePaginationContainer" style="background-color: var(--bs-card-bg, #ffffff);">
-                            <span class="text-muted fw-bold" style="font-size: 0.8rem;" id="marketTablePaginationInfo"></span>
-                            <nav aria-label="Market Table Pagination">
-                                <ul class="pagination pagination-sm m-0" id="marketTablePaginationList"></ul>
-                            </nav>
+                            <!-- Pagination Footer for Top Ranked Stocks -->
+                            <div class="d-flex justify-content-between align-items-center px-3 py-2 border-top flex-wrap gap-2" id="marketTablePaginationContainer" style="background-color: var(--bs-card-bg, #ffffff);">
+                                <span class="text-muted fw-bold" style="font-size: 0.8rem;" id="marketTablePaginationInfo"></span>
+                                <nav aria-label="Market Table Pagination">
+                                    <ul class="pagination pagination-sm m-0" id="marketTablePaginationList"></ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div><!-- end stockMarketSubView -->
+
+                <!-- SUB-PAGE 2: ETF Market Overview (36 กองทุนยอดนิยม) -->
+                <div id="etfMarketSubView" style="display: none;">
+                    <!-- Title & ETF Category Pills -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                        <div>
+                            <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
+                                📦 ภาพรวมกองทุน ETF (ETF Market Overview)
+                            </h4>
+                            <small class="text-muted">
+                                คัดสรร 36 กองทุน ETF ยอดนิยม: ดัชนีหลัก, เทคโนโลยี AI, ปันผลสูง, รายอุตสาหกรรม (SPDR) และพันธบัตร
+                            </small>
+                        </div>
+                        <div class="market-category-pill-box shadow-sm border">
+                            <button class="market-cat-btn active" id="etfCatBtnALL" onclick="setEtfCategory('ALL')">🌐 ทั้งหมด (36)</button>
+                            <button class="market-cat-btn" id="etfCatBtnINDEX" onclick="setEtfCategory('INDEX')">🏛️ ดัชนีหลัก</button>
+                            <button class="market-cat-btn" id="etfCatBtnTECH" onclick="setEtfCategory('TECH')">🚀 Tech & Growth</button>
+                            <button class="market-cat-btn" id="etfCatBtnDIVIDEND" onclick="setEtfCategory('DIVIDEND')">💰 ปันผลสูง</button>
+                            <button class="market-cat-btn" id="etfCatBtnSECTOR" onclick="setEtfCategory('SECTOR')">🏢 Sector SPDR</button>
+                            <button class="market-cat-btn" id="etfCatBtnDEFENSIVE" onclick="setEtfCategory('DEFENSIVE')">🛡️ พันธบัตร/ทอง</button>
+                        </div>
+                    </div>
+
+                    <!-- 7 Major ETF Index Cards (SPY, QQQ, DIA, IWM, SMH, SCHD, TLT) -->
+                    <div class="mb-3" id="etfMacroIndicesRow">
+                        <!-- Populated by renderEtfMacroIndices() -->
+                    </div>
+
+                    <!-- Top ETF Snapshot Scroller -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="fw-bold" style="font-size: 0.95rem;">🔥 Top ETF Snapshot (กองทุนไฮไลท์น่าจับตา)</span>
+                                <span class="badge rounded-pill bg-primary-subtle text-primary border border-primary-subtle fw-bold" style="font-size: 0.72rem;">TOP PICKS</span>
+                            </div>
+                            <small class="text-muted" style="font-size: 0.75rem;">แตะที่การ์ดเพื่อเปิดกราฟวิเคราะห์ ⚡</small>
+                        </div>
+                        <div class="market-snapshot-scroller" id="etfTopSnapshotScroller">
+                            <!-- Populated by renderEtfTopSnapshotScroller() -->
+                        </div>
+                    </div>
+
+                    <!-- Top Ranked ETFs Table Card -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-4" id="etfTopRankedCard">
+                        <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2 p-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="fw-bold" style="font-size: 1rem;">🏆 ตารางจัดอันดับกองทุน ETF (Top Ranked ETFs)</span>
+                                <span class="badge rounded-pill bg-success px-2 py-1" id="etfTableCountBadge" style="font-size: 0.72rem;">36 รายการ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                <div class="input-group input-group-sm" style="max-width: 200px;">
+                                    <span class="input-group-text bg-transparent border-end-0 text-muted">🔍</span>
+                                    <input type="text" id="etfTableSearch" class="form-control border-start-0" placeholder="ค้นหา Ticker หรือชื่อกองทุน..." oninput="onEtfTableSearch(this.value)">
+                                </div>
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <button type="button" class="btn btn-outline-secondary active py-1 px-2 fw-bold" id="etfFilterSignalAll" onclick="setEtfTableSignalFilter('ALL')">ทั้งหมด</button>
+                                    <button type="button" class="btn btn-outline-success py-1 px-2 fw-bold" id="etfFilterSignalBuy" onclick="setEtfTableSignalFilter('BUY')">🟢 BUY</button>
+                                    <button type="button" class="btn btn-outline-warning py-1 px-2 fw-bold" id="etfFilterSignalWatch" onclick="setEtfTableSignalFilter('WATCH')">🟡 WATCH</button>
+                                    <button type="button" class="btn btn-outline-danger py-1 px-2 fw-bold" id="etfFilterSignalSell" onclick="setEtfTableSignalFilter('SELL')">🔴 SELL</button>
+                                </div>
+                                <select id="etfTableSortSelect" class="form-select form-select-sm" style="width: auto; font-size: 0.78rem;" onchange="onEtfTableSortChange(this.value)">
+                                    <option value="rank_asc">เรียงตาม Rank (1-36)</option>
+                                    <option value="change_desc">เปลี่ยนแปลงสูงสุด (Top Gainers)</option>
+                                    <option value="change_asc">เปลี่ยนแปลงต่ำสุด (Top Losers)</option>
+                                    <option value="score_desc">คะแนนเทคนิคสูงสุด (Score)</option>
+                                    <option value="price_desc">ราคาสูงสุด -> ต่ำสุด</option>
+                                </select>
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="text-muted fw-bold" style="font-size: 0.78rem;">หน้าละ:</span>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-sm btn-dark py-1 px-2 fw-bold" id="btnEtfPageSize_10" onclick="setEtfTablePageSize(10)">10</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnEtfPageSize_20" onclick="setEtfTablePageSize(20)">20</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnEtfPageSize_50" onclick="setEtfTablePageSize(50)">50</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnEtfPageSize_ALL" onclick="setEtfTablePageSize('ALL')">ทั้งหมด</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle market-rank-table mb-0" style="font-size: 0.85rem;">
+                                    <thead style="border-bottom: 2px solid rgba(0,0,0,0.06); font-size: 0.75rem;" class="table-light">
+                                        <tr>
+                                            <th class="text-center py-2 px-2" style="width: 45px;">#</th>
+                                            <th class="py-2" style="min-width: 190px;">TICKER & FUND NAME</th>
+                                            <th class="text-center py-2" style="width: 115px;">หมวดหมู่</th>
+                                            <th class="text-center py-2" style="width: 100px;">TREND</th>
+                                            <th class="text-center py-2" style="width: 80px;">SIGNAL</th>
+                                            <th class="text-center py-2" style="width: 90px;">SCORE</th>
+                                            <th class="text-center py-2" style="width: 75px;">EXPENSE</th>
+                                            <th class="text-end py-2" style="min-width: 90px;">PRICE</th>
+                                            <th class="text-end py-2" style="min-width: 90px;">CHANGE</th>
+                                            <th class="text-end py-2" style="min-width: 90px;">AUM</th>
+                                            <th class="text-center py-2" style="min-width: 210px;">MOMENTUM (1D | 1W | 1M | 3M | 6M | 1Y)</th>
+                                            <th class="text-center py-2" style="width: 85px;">ACTION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="etfTableBody">
+                                        <!-- Injected by renderEtfTopRankedTable() -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Pagination Footer for Top Ranked ETFs -->
+                            <div class="d-flex justify-content-between align-items-center px-3 py-2 border-top flex-wrap gap-2" id="etfTablePaginationContainer" style="background-color: var(--bs-card-bg, #ffffff);">
+                                <span class="text-muted fw-bold" style="font-size: 0.8rem;" id="etfTablePaginationInfo"></span>
+                                <nav aria-label="ETF Table Pagination">
+                                    <ul class="pagination pagination-sm m-0" id="etfTablePaginationList"></ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end etfMarketSubView -->
             </div><!-- end marketOverviewPane -->
 
             <!-- PANE 2: พอร์ตการลงทุน (Portfolio View) -->
@@ -9454,9 +9635,9 @@
             { rank: 28, ticker: 'CAT', name: 'Caterpillar Inc.', sector: 'ind', type: 'US', isPrem: true, price: 402.50, change: 0.75, signal: 'BUY', conf: 'HIGH', score: 5, res: 420.00, supp: 385.00, mom: { d1: 0.8, w1: 2.5, m1: 6.8, m3: 16.0, m6: 30.0, y1: 48.0 }, seed: 30 },
             { rank: 29, ticker: 'DIS', name: 'The Walt Disney Co.', sector: 'comm', type: 'US', isPrem: false, price: 98.40, change: 0.55, signal: 'WATCH', conf: 'MED', score: 4, res: 105.00, supp: 92.00, mom: { d1: 0.6, w1: 1.8, m1: 3.5, m3: 7.2, m6: 11.0, y1: 15.0 }, seed: 31 },
             { rank: 30, ticker: 'NFLX', name: 'Netflix Inc.', sector: 'comm', type: 'US', isPrem: true, price: 722.80, change: 1.85, signal: 'BUY', conf: 'HIGH', score: 6, res: 750.00, supp: 690.00, mom: { d1: 1.9, w1: 4.5, m1: 11.0, m3: 25.0, m6: 46.0, y1: 80.0 }, seed: 32 },
-            { rank: 31, ticker: 'SPY', name: 'SPDR S&P 500 ETF Trust', sector: 'etc', type: 'ETF', isPrem: true, price: 574.20, change: 0.65, signal: 'BUY', conf: 'HIGH', score: 6, res: 585.00, supp: 560.00, mom: { d1: 0.7, w1: 1.8, m1: 4.2, m3: 9.8, m6: 16.5, y1: 28.0 }, seed: 34 },
-            { rank: 32, ticker: 'QQQ', name: 'Invesco QQQ Trust', sector: 'etc', type: 'ETF', isPrem: true, price: 492.60, change: 1.10, signal: 'BUY', conf: 'HIGH', score: 6, res: 508.00, supp: 478.00, mom: { d1: 1.1, w1: 2.8, m1: 6.5, m3: 14.2, m6: 22.0, y1: 36.5 }, seed: 35 },
-            { rank: 33, ticker: 'VOO', name: 'Vanguard S&P 500 ETF', sector: 'etc', type: 'ETF', isPrem: true, price: 526.40, change: 0.68, signal: 'BUY', conf: 'HIGH', score: 6, res: 538.00, supp: 512.00, mom: { d1: 0.7, w1: 1.8, m1: 4.3, m3: 9.9, m6: 16.6, y1: 28.2 }, seed: 36 },
+            { rank: 31, ticker: 'MU', name: 'Micron Technology Inc.', sector: 'tech', type: 'US', isPrem: true, price: 104.50, change: 2.75, signal: 'BUY', conf: 'HIGH', score: 6, res: 112.00, supp: 96.00, mom: { d1: 2.8, w1: 6.2, m1: 14.5, m3: 28.0, m6: 45.0, y1: 68.0 }, seed: 34 },
+            { rank: 32, ticker: 'CRWD', name: 'CrowdStrike Holdings Inc.', sector: 'tech', type: 'US', isPrem: true, price: 312.40, change: 2.15, signal: 'BUY', conf: 'HIGH', score: 6, res: 328.00, supp: 295.00, mom: { d1: 2.2, w1: 5.4, m1: 12.0, m3: 24.5, m6: 38.0, y1: 72.0 }, seed: 35 },
+            { rank: 33, ticker: 'VRT', name: 'Vertiv Holdings Co.', sector: 'ind', type: 'US', isPrem: true, price: 115.80, change: 3.40, signal: 'BUY', conf: 'HIGH', score: 6, res: 124.00, supp: 105.00, mom: { d1: 3.4, w1: 8.5, m1: 20.0, m3: 45.0, m6: 85.0, y1: 155.0 }, seed: 36 },
             { rank: 34, ticker: 'AMD', name: 'Advanced Micro Devices', sector: 'tech', type: 'US', isPrem: true, price: 168.40, change: 2.80, signal: 'BUY', conf: 'HIGH', score: 5, res: 180.00, supp: 154.00, mom: { d1: 2.8, w1: 6.5, m1: 14.0, m3: 22.0, m6: 34.0, y1: 52.0 }, seed: 37 },
             { rank: 35, ticker: 'INTC', name: 'Intel Corporation', sector: 'tech', type: 'US', isPrem: false, price: 23.40, change: -1.20, signal: 'WATCH', conf: 'MED', score: 3, res: 26.00, supp: 21.50, mom: { d1: -1.2, w1: -2.5, m1: -5.0, m3: -12.0, m6: -28.0, y1: -38.0 }, seed: 38 },
             { rank: 36, ticker: 'QCOM', name: 'QUALCOMM Incorporated', sector: 'tech', type: 'US', isPrem: true, price: 172.50, change: 1.45, signal: 'BUY', conf: 'HIGH', score: 5, res: 182.00, supp: 162.00, mom: { d1: 1.5, w1: 3.5, m1: 8.0, m3: 16.5, m6: 28.0, y1: 45.0 }, seed: 39 },
@@ -9506,11 +9687,11 @@
             { rank: 80, ticker: 'SHW', name: 'Sherwin-Williams Co.', sector: 'mat', type: 'US', isPrem: true, price: 388.20, change: 0.60, signal: 'BUY', conf: 'MED', score: 5, res: 402.00, supp: 372.00, mom: { d1: 0.6, w1: 1.8, m1: 4.5, m3: 10.0, m6: 18.0, y1: 26.0 }, seed: 87 },
             { rank: 81, ticker: 'FCX', name: 'Freeport-McMoRan Inc.', sector: 'mat', type: 'US', isPrem: false, price: 48.60, change: 1.85, signal: 'BUY', conf: 'MED', score: 5, res: 52.00, supp: 44.50, mom: { d1: 1.9, w1: 4.5, m1: 10.2, m3: 20.0, m6: 32.0, y1: 46.0 }, seed: 89 },
             { rank: 82, ticker: 'NEM', name: 'Newmont Corporation', sector: 'mat', type: 'US', isPrem: false, price: 54.80, change: -1.40, signal: 'WATCH', conf: 'MED', score: 4, res: 58.00, supp: 51.00, mom: { d1: -1.4, w1: 1.8, m1: 6.5, m3: 15.0, m6: 28.0, y1: 38.0 }, seed: 90 },
-            { rank: 83, ticker: 'DIA', name: 'SPDR Dow Jones ETF', sector: 'etc', type: 'ETF', isPrem: true, price: 423.50, change: 0.35, signal: 'BUY', conf: 'HIGH', score: 5, res: 432.00, supp: 414.00, mom: { d1: 0.4, w1: 1.2, m1: 3.5, m3: 7.8, m6: 13.5, y1: 22.0 }, seed: 91 },
-            { rank: 84, ticker: 'IWM', name: 'iShares Russell 2000 ETF', sector: 'etc', type: 'ETF', isPrem: true, price: 221.80, change: 1.25, signal: 'BUY', conf: 'MED', score: 5, res: 228.00, supp: 212.00, mom: { d1: 1.3, w1: 3.0, m1: 6.8, m3: 13.0, m6: 18.0, y1: 26.0 }, seed: 92 },
-            { rank: 85, ticker: 'SMH', name: 'VanEck Semiconductor ETF', sector: 'etc', type: 'ETF', isPrem: true, price: 264.40, change: 2.10, signal: 'BUY', conf: 'HIGH', score: 6, res: 278.00, supp: 248.00, mom: { d1: 2.1, w1: 5.4, m1: 12.8, m3: 26.0, m6: 45.0, y1: 78.0 }, seed: 93 },
-            { rank: 86, ticker: 'SCHD', name: 'Schwab US Dividend Equity ETF', sector: 'etc', type: 'ETF', isPrem: true, price: 84.60, change: 0.45, signal: 'BUY', conf: 'HIGH', score: 5, res: 87.00, supp: 82.00, mom: { d1: 0.5, w1: 1.4, m1: 3.2, m3: 7.5, m6: 12.0, y1: 18.0 }, seed: 94 },
-            { rank: 87, ticker: 'TLT', name: 'iShares 20+ Year Treasury Bond', sector: 'etc', type: 'ETF', isPrem: false, price: 95.80, change: -0.65, signal: 'WATCH', conf: 'MED', score: 3, res: 100.00, supp: 92.50, mom: { d1: -0.7, w1: -1.5, m1: 0.5, m3: 4.2, m6: 6.0, y1: 5.5 }, seed: 95 },
+            { rank: 83, ticker: 'CIEN', name: 'Ciena Corporation', sector: 'tech', type: 'US', isPrem: false, price: 68.40, change: 1.60, signal: 'BUY', conf: 'MED', score: 5, res: 73.00, supp: 63.00, mom: { d1: 1.6, w1: 4.0, m1: 9.5, m3: 18.0, m6: 28.0, y1: 42.0 }, seed: 91 },
+            { rank: 84, ticker: 'COIN', name: 'Coinbase Global Inc.', sector: 'fin', type: 'US', isPrem: true, price: 218.60, change: 3.85, signal: 'BUY', conf: 'HIGH', score: 5, res: 235.00, supp: 198.00, mom: { d1: 3.9, w1: 9.2, m1: 22.0, m3: 35.0, m6: 52.0, y1: 115.0 }, seed: 92 },
+            { rank: 85, ticker: 'PANW', name: 'Palo Alto Networks Inc.', sector: 'tech', type: 'US', isPrem: true, price: 368.20, change: 1.45, signal: 'BUY', conf: 'HIGH', score: 6, res: 382.00, supp: 350.00, mom: { d1: 1.5, w1: 3.8, m1: 8.5, m3: 17.0, m6: 28.0, y1: 46.0 }, seed: 93 },
+            { rank: 86, ticker: 'AMAT', name: 'Applied Materials Inc.', sector: 'tech', type: 'US', isPrem: true, price: 212.50, change: 2.10, signal: 'BUY', conf: 'HIGH', score: 6, res: 225.00, supp: 198.00, mom: { d1: 2.1, w1: 5.0, m1: 11.5, m3: 22.0, m6: 36.0, y1: 58.0 }, seed: 94 },
+            { rank: 87, ticker: 'KLAC', name: 'KLA Corporation', sector: 'tech', type: 'US', isPrem: true, price: 745.20, change: 1.95, signal: 'BUY', conf: 'HIGH', score: 6, res: 780.00, supp: 705.00, mom: { d1: 2.0, w1: 4.8, m1: 10.5, m3: 20.0, m6: 34.0, y1: 62.0 }, seed: 95 },
             { rank: 88, ticker: 'TXN', name: 'Texas Instruments Inc.', sector: 'tech', type: 'US', isPrem: true, price: 206.40, change: 0.70, signal: 'BUY', conf: 'MED', score: 5, res: 215.00, supp: 196.00, mom: { d1: 0.7, w1: 2.0, m1: 4.8, m3: 10.5, m6: 18.0, y1: 28.0 }, seed: 96 },
             { rank: 89, ticker: 'ACN', name: 'Accenture plc', sector: 'tech', type: 'US', isPrem: true, price: 356.20, change: 0.85, signal: 'BUY', conf: 'MED', score: 5, res: 370.00, supp: 340.00, mom: { d1: 0.9, w1: 2.2, m1: 5.2, m3: 11.0, m6: 17.5, y1: 24.0 }, seed: 97 },
             { rank: 90, ticker: 'AXP', name: 'American Express Co.', sector: 'fin', type: 'US', isPrem: true, price: 278.50, change: 1.55, signal: 'BUY', conf: 'HIGH', score: 6, res: 290.00, supp: 265.00, mom: { d1: 1.6, w1: 3.8, m1: 8.5, m3: 18.0, m6: 30.0, y1: 52.0 }, seed: 98 },
@@ -9526,13 +9707,74 @@
             { rank: 100, ticker: 'APD', name: 'Air Products and Chemicals', sector: 'mat', type: 'US', isPrem: true, price: 308.50, change: 0.40, signal: 'BUY', conf: 'MED', score: 5, res: 320.00, supp: 295.00, mom: { d1: 0.4, w1: 1.3, m1: 3.2, m3: 7.0, m6: 12.0, y1: 16.5 }, seed: 111 }
         ];
 
+        // 36 Curated Premier ETFs Definition (ETF Market Overview)
+        const topEtfsData = [
+            { rank: 1, ticker: 'SPY', name: 'SPDR S&P 500 ETF Trust', category: 'INDEX', categoryTh: 'ดัชนี S&P 500', exp: '0.09%', aum: '$585B', yield: '1.24%', price: 574.20, change: 0.65, signal: 'BUY', conf: 'HIGH', score: 6, res: 585.00, supp: 560.00, mom: { d1: 0.7, w1: 1.8, m1: 4.2, m3: 9.8, m6: 16.5, y1: 28.0 }, seed: 34 },
+            { rank: 2, ticker: 'QQQ', name: 'Invesco QQQ Trust (Nasdaq-100)', category: 'INDEX', categoryTh: 'ดัชนี Nasdaq 100', exp: '0.20%', aum: '$295B', yield: '0.62%', price: 492.60, change: 1.10, signal: 'BUY', conf: 'HIGH', score: 6, res: 508.00, supp: 478.00, mom: { d1: 1.1, w1: 2.8, m1: 6.5, m3: 14.2, m6: 22.0, y1: 36.5 }, seed: 35 },
+            { rank: 3, ticker: 'VOO', name: 'Vanguard S&P 500 ETF', category: 'INDEX', categoryTh: 'ดัชนี S&P 500', exp: '0.03%', aum: '$490B', yield: '1.25%', price: 526.40, change: 0.68, signal: 'BUY', conf: 'HIGH', score: 6, res: 538.00, supp: 512.00, mom: { d1: 0.7, w1: 1.8, m1: 4.3, m3: 9.9, m6: 16.6, y1: 28.2 }, seed: 36 },
+            { rank: 4, ticker: 'DIA', name: 'SPDR Dow Jones Industrial ETF', category: 'INDEX', categoryTh: 'ดัชนี Dow Jones 30', exp: '0.16%', aum: '$34B', yield: '1.75%', price: 423.50, change: 0.35, signal: 'BUY', conf: 'HIGH', score: 5, res: 432.00, supp: 414.00, mom: { d1: 0.4, w1: 1.2, m1: 3.5, m3: 7.8, m6: 13.5, y1: 22.0 }, seed: 91 },
+            { rank: 5, ticker: 'IWM', name: 'iShares Russell 2000 ETF', category: 'INDEX', categoryTh: 'ดัชนี Small-Cap', exp: '0.19%', aum: '$68B', yield: '1.20%', price: 221.80, change: 1.25, signal: 'BUY', conf: 'MED', score: 5, res: 228.00, supp: 212.00, mom: { d1: 1.3, w1: 3.0, m1: 6.8, m3: 13.0, m6: 18.0, y1: 26.0 }, seed: 92 },
+            { rank: 6, ticker: 'VTI', name: 'Vanguard Total Stock Market ETF', category: 'INDEX', categoryTh: 'หุ้นสหรัฐฯ ทั้งหมด', exp: '0.03%', aum: '$410B', yield: '1.30%', price: 278.40, change: 0.70, signal: 'BUY', conf: 'HIGH', score: 6, res: 285.00, supp: 270.00, mom: { d1: 0.7, w1: 1.9, m1: 4.5, m3: 10.2, m6: 17.0, y1: 27.5 }, seed: 93 },
+            { rank: 7, ticker: 'SMH', name: 'VanEck Semiconductor ETF', category: 'TECH', categoryTh: 'เซมิคอนดักเตอร์ & ชิป AI', exp: '0.35%', aum: '$26B', yield: '0.45%', price: 264.40, change: 2.10, signal: 'BUY', conf: 'HIGH', score: 6, res: 278.00, supp: 248.00, mom: { d1: 2.1, w1: 5.4, m1: 12.8, m3: 26.0, m6: 45.0, y1: 78.0 }, seed: 94 },
+            { rank: 8, ticker: 'SOXX', name: 'iShares Semiconductor ETF', category: 'TECH', categoryTh: 'ชิป & เซมิคอนดักเตอร์', exp: '0.35%', aum: '$15B', yield: '0.68%', price: 238.50, change: 1.95, signal: 'BUY', conf: 'HIGH', score: 6, res: 250.00, supp: 224.00, mom: { d1: 2.0, w1: 5.1, m1: 11.5, m3: 23.5, m6: 40.0, y1: 68.0 }, seed: 95 },
+            { rank: 9, ticker: 'XLK', name: 'Technology Select Sector SPDR', category: 'SECTOR', categoryTh: 'กลุ่มเทคโนโลยี', exp: '0.09%', aum: '$72B', yield: '0.70%', price: 228.60, change: 1.45, signal: 'BUY', conf: 'HIGH', score: 6, res: 238.00, supp: 218.00, mom: { d1: 1.5, w1: 3.6, m1: 8.2, m3: 17.0, m6: 27.0, y1: 42.0 }, seed: 96 },
+            { rank: 10, ticker: 'SCHD', name: 'Schwab US Dividend Equity ETF', category: 'DIVIDEND', categoryTh: 'หุ้นปันผลคุณภาพสูง', exp: '0.06%', aum: '$60B', yield: '3.45%', price: 84.60, change: 0.45, signal: 'BUY', conf: 'HIGH', score: 5, res: 87.00, supp: 82.00, mom: { d1: 0.5, w1: 1.4, m1: 3.2, m3: 7.5, m6: 12.0, y1: 18.0 }, seed: 97 },
+            { rank: 11, ticker: 'JEPI', name: 'JPMorgan Equity Premium Income', category: 'DIVIDEND', categoryTh: 'ปันผลสูง Covered Call', exp: '0.35%', aum: '$36B', yield: '7.12%', price: 58.20, change: 0.25, signal: 'BUY', conf: 'HIGH', score: 5, res: 59.80, supp: 56.50, mom: { d1: 0.3, w1: 0.8, m1: 2.1, m3: 4.8, m6: 8.5, y1: 12.5 }, seed: 98 },
+            { rank: 12, ticker: 'JEPQ', name: 'JPMorgan Nasdaq Equity Premium', category: 'DIVIDEND', categoryTh: 'ปันผล Nasdaq Covered Call', exp: '0.35%', aum: '$18B', yield: '9.35%', price: 55.40, change: 0.75, signal: 'BUY', conf: 'HIGH', score: 6, res: 57.50, supp: 53.20, mom: { d1: 0.8, w1: 1.9, m1: 4.8, m3: 9.5, m6: 15.0, y1: 24.0 }, seed: 99 },
+            { rank: 13, ticker: 'TLT', name: 'iShares 20+ Year Treasury Bond', category: 'DEFENSIVE', categoryTh: 'พันธบัตรรัฐบาล 20Y+', exp: '0.15%', aum: '$54B', yield: '3.92%', price: 95.80, change: -0.65, signal: 'WATCH', conf: 'MED', score: 3, res: 100.00, supp: 92.50, mom: { d1: -0.7, w1: -1.5, m1: 0.5, m3: 4.2, m6: 6.0, y1: 5.5 }, seed: 100 },
+            { rank: 14, ticker: 'GLD', name: 'SPDR Gold Shares', category: 'DEFENSIVE', categoryTh: 'ทองคำแท่ง (Gold)', exp: '0.40%', aum: '$75B', yield: '0.00%', price: 246.20, change: 0.85, signal: 'BUY', conf: 'HIGH', score: 6, res: 255.00, supp: 236.00, mom: { d1: 0.9, w1: 2.5, m1: 6.8, m3: 15.5, m6: 28.0, y1: 42.0 }, seed: 101 },
+            { rank: 15, ticker: 'XLF', name: 'Financial Select Sector SPDR', category: 'SECTOR', categoryTh: 'กลุ่มการเงิน & ธนาคาร', exp: '0.09%', aum: '$44B', yield: '1.45%', price: 47.80, change: 1.25, signal: 'BUY', conf: 'HIGH', score: 6, res: 49.50, supp: 45.20, mom: { d1: 1.3, w1: 3.2, m1: 7.5, m3: 15.0, m6: 24.0, y1: 40.0 }, seed: 102 },
+            { rank: 16, ticker: 'XLV', name: 'Health Care Select Sector SPDR', category: 'SECTOR', categoryTh: 'กลุ่มสุขภาพ & การแพทย์', exp: '0.09%', aum: '$42B', yield: '1.55%', price: 152.40, change: 0.40, signal: 'BUY', conf: 'MED', score: 5, res: 158.00, supp: 146.00, mom: { d1: 0.4, w1: 1.2, m1: 3.5, m3: 7.8, m6: 12.5, y1: 18.0 }, seed: 103 },
+            { rank: 17, ticker: 'XLE', name: 'Energy Select Sector SPDR', category: 'SECTOR', categoryTh: 'กลุ่มพลังงาน & น้ำมัน', exp: '0.09%', aum: '$35B', yield: '3.10%', price: 92.50, change: 1.15, signal: 'BUY', conf: 'MED', score: 5, res: 96.50, supp: 87.00, mom: { d1: 1.2, w1: 2.6, m1: 5.8, m3: 10.5, m6: 14.0, y1: 20.0 }, seed: 104 },
+            { rank: 18, ticker: 'XLI', name: 'Industrial Select Sector SPDR', category: 'SECTOR', categoryTh: 'กลุ่มอุตสาหกรรม', exp: '0.09%', aum: '$21B', yield: '1.38%', price: 134.80, change: 0.85, signal: 'BUY', conf: 'HIGH', score: 5, res: 140.00, supp: 128.00, mom: { d1: 0.9, w1: 2.4, m1: 5.8, m3: 12.5, m6: 22.0, y1: 32.0 }, seed: 105 },
+            { rank: 19, ticker: 'XLC', name: 'Communication Services SPDR', category: 'SECTOR', categoryTh: 'กลุ่มสื่อสาร & มีเดีย', exp: '0.09%', aum: '$19B', yield: '0.78%', price: 91.20, change: 1.10, signal: 'BUY', conf: 'HIGH', score: 6, res: 95.00, supp: 86.50, mom: { d1: 1.1, w1: 2.9, m1: 7.2, m3: 15.0, m6: 25.0, y1: 38.0 }, seed: 106 },
+            { rank: 20, ticker: 'XLP', name: 'Consumer Staples Select SPDR', category: 'SECTOR', categoryTh: 'สินค้าจำเป็นต่อชีวิต', exp: '0.09%', aum: '$18B', yield: '2.62%', price: 81.40, change: 0.60, signal: 'BUY', conf: 'HIGH', score: 5, res: 84.50, supp: 78.00, mom: { d1: 0.6, w1: 1.6, m1: 4.0, m3: 8.5, m6: 13.0, y1: 17.5 }, seed: 107 },
+            { rank: 21, ticker: 'XLY', name: 'Consumer Discretionary SPDR', category: 'SECTOR', categoryTh: 'สินค้าฟุ่มเฟือย & ค้าปลีก', exp: '0.09%', aum: '$22B', yield: '0.75%', price: 204.60, change: 1.60, signal: 'BUY', conf: 'HIGH', score: 6, res: 214.00, supp: 192.00, mom: { d1: 1.6, w1: 3.8, m1: 8.5, m3: 16.0, m6: 26.0, y1: 35.0 }, seed: 108 },
+            { rank: 22, ticker: 'XLU', name: 'Utilities Select Sector SPDR', category: 'SECTOR', categoryTh: 'กลุ่มสาธารณูปโภค', exp: '0.09%', aum: '$16B', yield: '2.85%', price: 82.10, change: -0.20, signal: 'WATCH', conf: 'MED', score: 4, res: 86.00, supp: 78.00, mom: { d1: -0.2, w1: 0.9, m1: 3.2, m3: 10.5, m6: 18.0, y1: 28.0 }, seed: 109 },
+            { rank: 23, ticker: 'XLRE', name: 'Real Estate Select Sector SPDR', category: 'SECTOR', categoryTh: 'กลุ่มอสังหาริมทรัพย์', exp: '0.09%', aum: '$6B', yield: '3.15%', price: 43.80, change: 0.70, signal: 'BUY', conf: 'MED', score: 5, res: 46.00, supp: 41.50, mom: { d1: 0.7, w1: 1.8, m1: 4.5, m3: 9.8, m6: 14.0, y1: 19.0 }, seed: 110 },
+            { rank: 24, ticker: 'XLB', name: 'Materials Select Sector SPDR', category: 'SECTOR', categoryTh: 'กลุ่มวัสดุพื้นฐาน', exp: '0.09%', aum: '$6B', yield: '1.82%', price: 92.40, change: 0.50, signal: 'BUY', conf: 'MED', score: 5, res: 96.00, supp: 88.00, mom: { d1: 0.5, w1: 1.5, m1: 3.8, m3: 8.0, m6: 12.0, y1: 16.0 }, seed: 111 },
+            { rank: 25, ticker: 'QQQM', name: 'Invesco NASDAQ 100 ETF (Low Cost)', category: 'TECH', categoryTh: 'ดัชนี Nasdaq ค่าฟีต่ำ', exp: '0.15%', aum: '$32B', yield: '0.62%', price: 202.80, change: 1.12, signal: 'BUY', conf: 'HIGH', score: 6, res: 210.00, supp: 195.00, mom: { d1: 1.1, w1: 2.8, m1: 6.6, m3: 14.3, m6: 22.1, y1: 36.8 }, seed: 112 },
+            { rank: 26, ticker: 'VGT', name: 'Vanguard Information Tech ETF', category: 'TECH', categoryTh: 'เทคโนโลยี Vanguard', exp: '0.10%', aum: '$78B', yield: '0.58%', price: 598.40, change: 1.50, signal: 'BUY', conf: 'HIGH', score: 6, res: 620.00, supp: 570.00, mom: { d1: 1.5, w1: 3.7, m1: 8.6, m3: 18.0, m6: 28.5, y1: 44.0 }, seed: 113 },
+            { rank: 27, ticker: 'VYM', name: 'Vanguard High Dividend Yield ETF', category: 'DIVIDEND', categoryTh: 'หุ้นปันผลสูง Vanguard', exp: '0.06%', aum: '$55B', yield: '2.85%', price: 128.60, change: 0.55, signal: 'BUY', conf: 'HIGH', score: 5, res: 133.00, supp: 124.00, mom: { d1: 0.6, w1: 1.6, m1: 3.8, m3: 8.2, m6: 13.5, y1: 19.0 }, seed: 114 },
+            { rank: 28, ticker: 'DGRO', name: 'iShares Core Dividend Growth ETF', category: 'DIVIDEND', categoryTh: 'หุ้นปันผลเติบโตสม่ำเสมอ', exp: '0.08%', aum: '$29B', yield: '2.30%', price: 60.20, change: 0.60, signal: 'BUY', conf: 'HIGH', score: 5, res: 62.50, supp: 57.80, mom: { d1: 0.6, w1: 1.7, m1: 4.0, m3: 8.8, m6: 14.0, y1: 21.0 }, seed: 115 },
+            { rank: 29, ticker: 'SPYD', name: 'SPDR S&P Dividend ETF', category: 'DIVIDEND', categoryTh: 'ปันผลสูง Top 80 S&P', exp: '0.07%', aum: '$7B', yield: '4.20%', price: 43.10, change: 0.40, signal: 'BUY', conf: 'MED', score: 5, res: 45.00, supp: 41.20, mom: { d1: 0.4, w1: 1.3, m1: 3.1, m3: 7.0, m6: 11.0, y1: 15.5 }, seed: 116 },
+            { rank: 30, ticker: 'VXUS', name: 'Vanguard Total International Stock', category: 'INDEX', categoryTh: 'หุ้นนอกสหรัฐฯ ทั่วโลก', exp: '0.07%', aum: '$75B', yield: '3.10%', price: 64.80, change: 0.35, signal: 'BUY', conf: 'MED', score: 5, res: 67.50, supp: 62.00, mom: { d1: 0.4, w1: 1.1, m1: 2.8, m3: 6.2, m6: 9.5, y1: 14.0 }, seed: 117 },
+            { rank: 31, ticker: 'ARKK', name: 'ARK Innovation ETF', category: 'TECH', categoryTh: 'นวัตกรรมล้ำสมัย Disruptive', exp: '0.75%', aum: '$6B', yield: '0.00%', price: 49.50, change: 2.80, signal: 'WATCH', conf: 'MED', score: 4, res: 55.00, supp: 44.00, mom: { d1: 2.8, w1: 6.5, m1: 11.0, m3: 18.0, m6: 22.0, y1: 25.0 }, seed: 118 },
+            { rank: 32, ticker: 'BOTZ', name: 'Global X Robotics & AI ETF', category: 'TECH', categoryTh: 'หุ่นยนต์ & AI ปัญญาประดิษฐ์', exp: '0.68%', aum: '$3B', yield: '0.22%', price: 32.80, change: 1.85, signal: 'BUY', conf: 'HIGH', score: 6, res: 35.00, supp: 30.50, mom: { d1: 1.9, w1: 4.5, m1: 9.8, m3: 20.0, m6: 32.0, y1: 48.0 }, seed: 119 },
+            { rank: 33, ticker: 'BND', name: 'Vanguard Total Bond Market ETF', category: 'DEFENSIVE', categoryTh: 'พันธบัตรและตราสารหนี้รวม', exp: '0.03%', aum: '$115B', yield: '3.65%', price: 73.40, change: -0.15, signal: 'WATCH', conf: 'MED', score: 4, res: 75.50, supp: 71.50, mom: { d1: -0.2, w1: -0.4, m1: 0.8, m3: 2.5, m6: 4.2, y1: 6.5 }, seed: 120 },
+            { rank: 34, ticker: 'AGG', name: 'iShares Core US Aggregate Bond', category: 'DEFENSIVE', categoryTh: 'ตราสารหนี้สหรัฐฯ คัดเกรด', exp: '0.03%', aum: '$112B', yield: '3.68%', price: 98.70, change: -0.18, signal: 'WATCH', conf: 'MED', score: 4, res: 101.50, supp: 96.00, mom: { d1: -0.2, w1: -0.5, m1: 0.7, m3: 2.4, m6: 4.1, y1: 6.4 }, seed: 121 },
+            { rank: 35, ticker: 'SHY', name: 'iShares 1-3 Year Treasury Bond', category: 'DEFENSIVE', categoryTh: 'พันธบัตรระยะสั้น 1-3 ปี', exp: '0.15%', aum: '$24B', yield: '4.25%', price: 82.20, change: 0.05, signal: 'BUY', conf: 'HIGH', score: 5, res: 83.00, supp: 81.50, mom: { d1: 0.1, w1: 0.2, m1: 0.5, m3: 1.5, m6: 2.8, y1: 4.8 }, seed: 122 },
+            { rank: 36, ticker: 'IGV', name: 'iShares Expanded Tech-Software ETF', category: 'TECH', categoryTh: 'ซอฟต์แวร์คลาวด์และ AI', exp: '0.41%', aum: '$6B', yield: '0.00%', price: 93.60, change: 1.75, signal: 'BUY', conf: 'HIGH', score: 6, res: 98.50, supp: 88.00, mom: { d1: 1.8, w1: 4.2, m1: 10.0, m3: 21.0, m6: 35.0, y1: 52.0 }, seed: 123 }
+        ];
+
+        // 7 Major ETF Index Cards Data
+        const etfMacroIndicesData = [
+            { symbol: 'SPY', name: 'SPY (S&P 500)', category: 'ดัชนีหลัก', value: 574.20, changePct: 0.65, exp: '0.09%', seed: 34 },
+            { symbol: 'QQQ', name: 'QQQ (Nasdaq 100)', category: 'เทคโนโลยี', value: 492.60, changePct: 1.10, exp: '0.20%', seed: 35 },
+            { symbol: 'DIA', name: 'DIA (Dow Jones)', category: 'บูลชิป', value: 423.50, changePct: 0.35, exp: '0.16%', seed: 91 },
+            { symbol: 'IWM', name: 'IWM (Russell 2000)', category: 'หุ้นเล็ก', value: 221.80, changePct: 1.25, exp: '0.19%', seed: 92 },
+            { symbol: 'SMH', name: 'SMH (Semiconductor)', category: 'ชิป & AI', value: 264.40, changePct: 2.10, exp: '0.35%', seed: 94 },
+            { symbol: 'SCHD', name: 'SCHD (US Dividend)', category: 'ปันผลสูง', value: 84.60, changePct: 0.45, exp: '0.06%', seed: 97 },
+            { symbol: 'TLT', name: 'TLT (20+ Yr Treasury)', category: 'พันธบัตร 20Y+', value: 95.80, changePct: -0.65, exp: '0.15%', seed: 100 }
+        ];
+
         // Active filters state
+        let currentMarketSubView = localStorage.getItem('myMarketSubView') || 'STOCK';
         let currentMarketCategory = 'ALL';
         let currentMarketSignal = 'ALL';
         let currentMarketSort = 'rank_asc';
         let currentMarketSearch = '';
         let currentMarketPage = 1;
         let currentMarketPageSize = localStorage.getItem('myMarketPageSize') || '10';
+
+        // ETF filters state
+        let currentEtfCategory = 'ALL';
+        let currentEtfSignal = 'ALL';
+        let currentEtfSort = 'rank_asc';
+        let currentEtfSearch = '';
+        let currentEtfPage = 1;
+        let currentEtfPageSize = localStorage.getItem('myEtfPageSize') || '10';
+
         let activeModalSectorId = 'tech';
 
         window.renderMacroIndices = function() {
@@ -9882,14 +10124,13 @@
         window.setMarketOverviewCategory = function(cat) {
             currentMarketCategory = cat;
             currentMarketPage = 1;
-            ['marketCatBtnPremium', 'marketCatBtnUS', 'marketCatBtnETF', 'marketCatBtnALL'].forEach(id => {
+            ['marketCatBtnPremium', 'marketCatBtnUS', 'marketCatBtnALL'].forEach(id => {
                 const btn = document.getElementById(id);
                 if (btn) btn.classList.remove('active');
             });
             const activeMap = {
                 'PREMIUM': 'marketCatBtnPremium',
                 'US': 'marketCatBtnUS',
-                'ETF': 'marketCatBtnETF',
                 'ALL': 'marketCatBtnALL'
             };
             const activeBtn = document.getElementById(activeMap[cat]);
@@ -9925,6 +10166,446 @@
             currentMarketSearch = val;
             currentMarketPage = 1;
             renderMarketTop100Table();
+        };
+
+        // =====================================================================
+        // MODULE: ETF MARKET OVERVIEW ENGINE (36 กองทุน ETF ยอดนิยม)
+        // =====================================================================
+
+        window.renderEtfMacroIndices = function() {
+            const container = document.getElementById('etfMacroIndicesRow');
+            if (!container) return;
+
+            let html = '';
+            etfMacroIndicesData.forEach(item => {
+                let curPrice = item.value;
+                let changePct = item.changePct;
+                let isLive = false;
+
+                if (typeof marketPrices !== 'undefined' && marketPrices[item.symbol] && marketPrices[item.symbol] > 0) {
+                    curPrice = marketPrices[item.symbol];
+                    isLive = true;
+                } else if (typeof marketIndices !== 'undefined' && marketIndices[item.symbol] && marketIndices[item.symbol].price) {
+                    curPrice = marketIndices[item.symbol].price;
+                    if (typeof marketIndices[item.symbol].changePct === 'number') {
+                        changePct = marketIndices[item.symbol].changePct;
+                    }
+                    isLive = true;
+                }
+
+                const isPos = changePct >= 0;
+                const sign = isPos ? '+' : '';
+                const spark = generateSvgSparkline(item.seed, isPos, 68, 26);
+                const accentColor = isPos ? '#10b981' : '#ef4444';
+                const badgeBg = isPos ? 'rgba(16, 185, 129, 0.12)' : 'rgba(239, 68, 68, 0.12)';
+                const badgeColor = isPos ? '#059669' : '#dc2626';
+                const badgeBorder = isPos ? 'rgba(16, 185, 129, 0.35)' : 'rgba(239, 68, 68, 0.35)';
+
+                html += `
+                    <div class="market-macro-card" style="border-top: 3.5px solid ${accentColor} !important; cursor: pointer;" onclick="openTechnicalForTicker('${item.symbol}')" title="คลิกเพื่อดูกราฟเทคนิคของ ${item.symbol}">
+                        <!-- Top: Logo + Name + Change Badge -->
+                        <div class="d-flex justify-content-between align-items-center mb-1 gap-1">
+                            <div class="d-flex align-items-center gap-1.5 text-truncate">
+                                <img src="https://assets.parqet.com/logos/symbol/${item.symbol}" alt="${item.symbol}" class="rounded-circle border" width="20" height="20" style="object-fit: contain; background: #fff; padding: 1px;" onerror="this.style.display='none'">
+                                <span class="fw-bold text-truncate" style="font-size: 0.85rem; color: var(--bs-heading-color, #1e293b);">${item.name}</span>
+                            </div>
+                            <span class="badge fw-bold flex-shrink-0 d-inline-flex align-items-center gap-1" style="font-size: 0.70rem; padding: 2.5px 7px; background: ${badgeBg}; color: ${badgeColor}; border: 1px solid ${badgeBorder}; border-radius: 9999px;">
+                                ${isLive ? '<span class="live-pulse-dot"></span>' : ''}
+                                ${sign}${changePct.toFixed(2)}%
+                            </span>
+                        </div>
+
+                        <!-- Bottom: Bold Price + Sparkline with category & expense info -->
+                        <div class="d-flex justify-content-between align-items-end mt-2 pt-1 border-top" style="border-color: rgba(226, 232, 240, 0.7) !important;">
+                            <div>
+                                <div class="fw-bolder" style="font-size: 1.10rem; letter-spacing: -0.4px; color: var(--bs-body-color, #0f172a); line-height: 1.2;">$${Number(curPrice).toFixed(2)}</div>
+                                <div class="text-muted d-flex align-items-center gap-1" style="font-size: 0.68rem; margin-top: 2px;">
+                                    <span class="badge bg-secondary-subtle text-secondary px-1 py-0" style="font-size: 0.62rem;">${item.category}</span>
+                                    <span>Fee: ${item.exp}</span>
+                                </div>
+                            </div>
+                            <div class="ms-1 flex-shrink-0">${spark}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        };
+
+        const topEtfSnapshotTickers = ['SPY', 'QQQ', 'SMH', 'SCHD', 'JEPI', 'JEPQ', 'XLK', 'XLF', 'TLT', 'GLD'];
+
+        window.renderEtfTopSnapshotScroller = function() {
+            const container = document.getElementById('etfTopSnapshotScroller');
+            if (!container) return;
+
+            let html = '';
+            topEtfSnapshotTickers.forEach(tk => {
+                const item = topEtfsData.find(x => x.ticker === tk);
+                if (!item) return;
+
+                const isPos = item.change >= 0;
+                const sign = isPos ? '+' : '';
+                const spark = generateSvgSparkline(item.seed, isPos, 62, 24);
+                let curPrice = item.price;
+                if (typeof marketPrices !== 'undefined' && marketPrices[item.ticker] && marketPrices[item.ticker] > 0) {
+                    curPrice = marketPrices[item.ticker];
+                }
+
+                const accentColor = isPos ? '#10b981' : '#ef4444';
+                const badgeColor = isPos ? '#059669' : '#dc2626';
+
+                let sigBg = 'rgba(16, 185, 129, 0.15)';
+                let sigColor = '#059669';
+                let sigBorder = 'rgba(16, 185, 129, 0.35)';
+                if (item.signal === 'WATCH') {
+                    sigBg = 'rgba(234, 179, 8, 0.15)';
+                    sigColor = '#b45309';
+                    sigBorder = 'rgba(234, 179, 8, 0.35)';
+                } else if (item.signal === 'SELL') {
+                    sigBg = 'rgba(239, 68, 68, 0.15)';
+                    sigColor = '#dc2626';
+                    sigBorder = 'rgba(239, 68, 68, 0.35)';
+                }
+
+                html += `
+                    <div class="market-snapshot-card" style="border-top: 3.5px solid ${accentColor} !important;" onclick="openTechnicalForTicker('${item.ticker}')" title="ดูสัญญาณทางเทคนิคและกราฟของ ${item.ticker}">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <div class="d-flex align-items-center gap-1.5">
+                                <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border" width="22" height="22" style="object-fit: contain; background: #fff; padding: 1px;" onerror="this.style.display='none'">
+                                <span class="fw-bold" style="font-size: 0.90rem; color: var(--bs-heading-color, #0f172a);">${item.ticker}</span>
+                            </div>
+                            <span class="badge fw-bold" style="font-size: 0.65rem; padding: 2px 6px; background: ${sigBg}; color: ${sigColor}; border: 1px solid ${sigBorder}; border-radius: 9999px;">${item.signal}</span>
+                        </div>
+                        <div class="text-truncate text-muted mb-2" style="font-size: 0.72rem; min-height: 17px;" title="${item.name}">${item.name}</div>
+                        <div class="d-flex justify-content-between align-items-end pt-1 border-top" style="border-color: rgba(226, 232, 240, 0.7) !important;">
+                            <div>
+                                <div class="fw-bolder" style="font-size: 1.02rem; letter-spacing: -0.3px; color: var(--bs-body-color, #0f172a); line-height: 1.2;">$${curPrice.toFixed(2)}</div>
+                                <div class="fw-bold" style="font-size: 0.72rem; color: ${badgeColor}; margin-top: 2px;">
+                                    ${isPos ? '▲' : '▼'} ${sign}${item.change.toFixed(2)}%
+                                </div>
+                            </div>
+                            <div class="ms-1 flex-shrink-0">${spark}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        };
+
+        function updateEtfPageSizeUI() {
+            ['10', '20', '50', 'ALL'].forEach(sz => {
+                const btn = document.getElementById(`btnEtfPageSize_${sz}`);
+                if (btn) {
+                    if (currentEtfPageSize === sz) {
+                        btn.className = 'btn btn-sm btn-dark py-1 px-2 fw-bold';
+                    } else {
+                        btn.className = 'btn btn-sm btn-outline-secondary py-1 px-2 fw-bold';
+                    }
+                }
+            });
+        }
+
+        window.setEtfTablePageSize = function(size) {
+            currentEtfPageSize = size.toString();
+            try {
+                localStorage.setItem('myEtfPageSize', currentEtfPageSize);
+            } catch(e) {}
+            currentEtfPage = 1;
+            renderEtfTopRankedTable();
+        };
+
+        window.changeEtfTablePage = function(page) {
+            currentEtfPage = page;
+            renderEtfTopRankedTable();
+            const tableCard = document.getElementById('etfTopRankedCard');
+            if (tableCard) {
+                tableCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+
+        window.renderEtfTopRankedTable = function() {
+            const tbody = document.getElementById('etfTableBody');
+            const countBadge = document.getElementById('etfTableCountBadge');
+            const infoEl = document.getElementById('etfTablePaginationInfo');
+            const listEl = document.getElementById('etfTablePaginationList');
+            const containerEl = document.getElementById('etfTablePaginationContainer');
+            if (!tbody) return;
+
+            updateEtfPageSizeUI();
+
+            let list = [...topEtfsData];
+
+            // 1. Filter Category
+            if (currentEtfCategory !== 'ALL') {
+                list = list.filter(x => x.category === currentEtfCategory);
+            }
+
+            // 2. Filter Signal
+            if (currentEtfSignal !== 'ALL') {
+                list = list.filter(x => x.signal === currentEtfSignal);
+            }
+
+            // 3. Search Query
+            if (currentEtfSearch.trim()) {
+                const q = currentEtfSearch.toLowerCase().trim();
+                list = list.filter(x => x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q) || (x.categoryTh && x.categoryTh.toLowerCase().includes(q)));
+            }
+
+            // 4. Sort
+            if (currentEtfSort === 'rank_asc') {
+                list.sort((a, b) => a.rank - b.rank);
+            } else if (currentEtfSort === 'change_desc') {
+                list.sort((a, b) => b.change - a.change);
+            } else if (currentEtfSort === 'change_asc') {
+                list.sort((a, b) => a.change - b.change);
+            } else if (currentEtfSort === 'score_desc') {
+                list.sort((a, b) => b.score - a.score || b.change - a.change);
+            } else if (currentEtfSort === 'price_desc') {
+                list.sort((a, b) => b.price - a.price);
+            }
+
+            const totalFiltered = list.length;
+            if (countBadge) {
+                countBadge.innerText = `${totalFiltered} รายการ`;
+            }
+
+            if (totalFiltered === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="12" class="text-center py-4 text-muted">
+                            🔍 ไม่พบข้อมูลกองทุน ETF ตามเงื่อนไขที่เลือก กรุณาลองปรับตัวกรองใหม่
+                        </td>
+                    </tr>
+                `;
+                if (infoEl) infoEl.innerText = 'ไม่พบข้อมูลกองทุน ETF';
+                if (listEl) listEl.innerHTML = '';
+                return;
+            }
+
+            // 5. Pagination
+            let pageSize = (currentEtfPageSize === 'ALL') ? totalFiltered : (parseInt(currentEtfPageSize) || 10);
+            let totalPages = Math.max(1, Math.ceil(totalFiltered / pageSize));
+            if (currentEtfPage > totalPages) currentEtfPage = totalPages;
+            if (currentEtfPage < 1) currentEtfPage = 1;
+
+            let startIndex = (currentEtfPage - 1) * pageSize;
+            let endIndex = Math.min(startIndex + pageSize, totalFiltered);
+            let pageItems = list.slice(startIndex, endIndex);
+
+            let html = '';
+            pageItems.forEach(item => {
+                let curPrice = item.price;
+                if (typeof marketPrices !== 'undefined' && marketPrices[item.ticker] && marketPrices[item.ticker] > 0) {
+                    curPrice = marketPrices[item.ticker];
+                }
+                const isPos = item.change >= 0;
+                const sign = isPos ? '+' : '';
+                const chgColor = isPos ? '#10b981' : '#ef4444';
+                const spark = generateSvgSparkline(item.seed, isPos, 75, 24);
+
+                let sigBadge = `<span class="badge bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">🟢 BUY</span>`;
+                if (item.signal === 'WATCH') {
+                    sigBadge = `<span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle fw-bold" style="font-size: 0.72rem;">🟡 WATCH</span>`;
+                } else if (item.signal === 'SELL') {
+                    sigBadge = `<span class="badge bg-danger-subtle text-danger border border-danger-subtle fw-bold" style="font-size: 0.72rem;">🔴 SELL</span>`;
+                }
+
+                // Category Badge
+                let catClass = 'bg-primary-subtle text-primary border border-primary-subtle';
+                if (item.category === 'TECH') catClass = 'bg-info-subtle text-info-emphasis border border-info-subtle';
+                else if (item.category === 'DIVIDEND') catClass = 'bg-success-subtle text-success border border-success-subtle';
+                else if (item.category === 'SECTOR') catClass = 'bg-warning-subtle text-warning-emphasis border border-warning-subtle';
+                else if (item.category === 'DEFENSIVE') catClass = 'bg-secondary-subtle text-secondary border border-secondary-subtle';
+
+                // 6 score dots
+                let dotsHtml = '';
+                for (let i = 1; i <= 6; i++) {
+                    const dotColor = i <= item.score ? '#10b981' : '#cbd5e1';
+                    dotsHtml += `<span style="display:inline-block; width:6px; height:6px; border-radius:50%; background-color:${dotColor};"></span>`;
+                }
+
+                // Momentum 6 timeframes
+                const m = item.mom;
+                function momPill(val) {
+                    const p = val >= 0;
+                    return `<span class="badge ${p ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger'}" style="font-size: 0.65rem; padding: 2px 4px;">${p ? '+' : ''}${val.toFixed(1)}%</span>`;
+                }
+
+                html += `
+                    <tr onclick="openTechnicalForTicker('${item.ticker}')">
+                        <td class="text-center text-muted fw-bold" style="font-size: 0.75rem;">${item.rank}</td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="position-relative me-2 flex-shrink-0" style="width: 28px; height: 28px;">
+                                    <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border bg-white p-0.5 shadow-sm" width="28" height="28" style="object-fit: contain;" onerror="this.style.display='none'">
+                                </div>
+                                <div class="text-truncate" style="max-width: 190px;">
+                                    <div class="fw-bold" style="font-size: 0.88rem; line-height: 1.1;">${item.ticker}</div>
+                                    <div class="text-muted text-truncate" style="font-size: 0.72rem;" title="${item.name}">${item.name}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span class="badge ${catClass}" style="font-size: 0.70rem;">${item.categoryTh || item.category}</span>
+                        </td>
+                        <td class="text-center">${spark}</td>
+                        <td class="text-center">${sigBadge}</td>
+                        <td class="text-center">
+                            <div class="d-flex align-items-center justify-content-center gap-1" title="คะแนน ${item.score}/6">${dotsHtml}</div>
+                        </td>
+                        <td class="text-center fw-bold" style="font-size: 0.78rem; color: #475569;">${item.exp}</td>
+                        <td class="text-end fw-bold" style="font-size: 0.88rem;">$${curPrice.toFixed(2)}</td>
+                        <td class="text-end fw-bold" style="color: ${chgColor}; font-size: 0.88rem;">${sign}${item.change.toFixed(2)}%</td>
+                        <td class="text-end" style="font-size: 0.82rem;">
+                            <div class="fw-bold">${item.aum}</div>
+                            <div class="text-muted" style="font-size: 0.68rem;">Yield: ${item.yield}</div>
+                        </td>
+                        <td class="text-center">
+                            <div class="d-flex align-items-center justify-content-center gap-1 flex-nowrap">
+                                ${momPill(m.d1)}
+                                ${momPill(m.w1)}
+                                ${momPill(m.m1)}
+                                ${momPill(m.m3)}
+                                ${momPill(m.m6)}
+                                ${momPill(m.y1)}
+                            </div>
+                        </td>
+                        <td class="text-center" onclick="event.stopPropagation();">
+                            <button class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.72rem;" onclick="openTechnicalForTicker('${item.ticker}')">
+                                📈 ดูกราฟ
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = html;
+
+            // 6. Pagination Footer
+            if (infoEl) {
+                if (currentEtfPageSize === 'ALL' || totalFiltered <= pageSize) {
+                    infoEl.innerHTML = `แสดงทั้งหมด <strong>${totalFiltered}</strong> รายการ`;
+                } else {
+                    infoEl.innerHTML = `กำลังแสดง <strong>${startIndex + 1} - ${endIndex}</strong> จากทั้งหมด <strong>${totalFiltered}</strong> รายการ <span class="text-muted ms-1">(หน้า ${currentEtfPage}/${totalPages})</span>`;
+                }
+            }
+
+            if (listEl) {
+                if (currentEtfPageSize === 'ALL' || totalPages <= 1) {
+                    listEl.innerHTML = '';
+                    if (containerEl) containerEl.classList.add('justify-content-center');
+                } else {
+                    if (containerEl) containerEl.classList.remove('justify-content-center');
+                    let pagesHtml = '';
+
+                    pagesHtml += `
+                        <li class="page-item ${currentEtfPage === 1 ? 'disabled' : ''}">
+                            <button class="page-link py-1 px-2.5" onclick="changeEtfTablePage(${currentEtfPage - 1})" title="หน้าก่อนหน้า" style="font-size: 0.8rem;">‹ ก่อนหน้า</button>
+                        </li>
+                    `;
+
+                    let startP = Math.max(1, currentEtfPage - 2);
+                    let endP = Math.min(totalPages, currentEtfPage + 2);
+
+                    if (startP > 1) {
+                        pagesHtml += `<li class="page-item"><button class="page-link py-1 px-2.5" onclick="changeEtfTablePage(1)" style="font-size: 0.8rem;">1</button></li>`;
+                        if (startP > 2) pagesHtml += `<li class="page-item disabled"><span class="page-link py-1 px-1 border-0 text-muted" style="font-size: 0.8rem;">...</span></li>`;
+                    }
+
+                    for (let p = startP; p <= endP; p++) {
+                        pagesHtml += `
+                            <li class="page-item ${p === currentEtfPage ? 'active' : ''}">
+                                <button class="page-link py-1 px-2.5 fw-bold" onclick="changeEtfTablePage(${p})" style="font-size: 0.8rem;">${p}</button>
+                            </li>
+                        `;
+                    }
+
+                    if (endP < totalPages) {
+                        if (endP < totalPages - 1) pagesHtml += `<li class="page-item disabled"><span class="page-link py-1 px-1 border-0 text-muted" style="font-size: 0.8rem;">...</span></li>`;
+                        pagesHtml += `<li class="page-item"><button class="page-link py-1 px-2.5" onclick="changeEtfTablePage(${totalPages})" style="font-size: 0.8rem;">${totalPages}</button></li>`;
+                    }
+
+                    pagesHtml += `
+                        <li class="page-item ${currentEtfPage === totalPages ? 'disabled' : ''}">
+                            <button class="page-link py-1 px-2.5" onclick="changeEtfTablePage(${currentEtfPage + 1})" title="หน้าถัดไป" style="font-size: 0.8rem;">ถัดไป ›</button>
+                        </li>
+                    `;
+
+                    listEl.innerHTML = pagesHtml;
+                }
+            }
+        };
+
+        window.setEtfCategory = function(cat) {
+            currentEtfCategory = cat;
+            currentEtfPage = 1;
+            ['etfCatBtnALL', 'etfCatBtnINDEX', 'etfCatBtnTECH', 'etfCatBtnDIVIDEND', 'etfCatBtnSECTOR', 'etfCatBtnDEFENSIVE'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.classList.remove('active');
+            });
+            const activeBtn = document.getElementById(`etfCatBtn${cat}`);
+            if (activeBtn) activeBtn.classList.add('active');
+            renderEtfTopRankedTable();
+        };
+
+        window.setEtfTableSignalFilter = function(sig) {
+            currentEtfSignal = sig;
+            currentEtfPage = 1;
+            ['etfFilterSignalAll', 'etfFilterSignalBuy', 'etfFilterSignalWatch', 'etfFilterSignalSell'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.classList.remove('active');
+            });
+            const activeMap = {
+                'ALL': 'etfFilterSignalAll',
+                'BUY': 'etfFilterSignalBuy',
+                'WATCH': 'etfFilterSignalWatch',
+                'SELL': 'etfFilterSignalSell'
+            };
+            const activeBtn = document.getElementById(activeMap[sig]);
+            if (activeBtn) activeBtn.classList.add('active');
+            renderEtfTopRankedTable();
+        };
+
+        window.onEtfTableSortChange = function(val) {
+            currentEtfSort = val;
+            currentEtfPage = 1;
+            renderEtfTopRankedTable();
+        };
+
+        window.onEtfTableSearch = function(val) {
+            currentEtfSearch = val;
+            currentEtfPage = 1;
+            renderEtfTopRankedTable();
+        };
+
+        // Sub-view switcher for Market Overview (Stock vs ETF)
+        window.switchMarketSubView = function(mode) {
+            currentMarketSubView = mode || 'STOCK';
+            try {
+                localStorage.setItem('myMarketSubView', currentMarketSubView);
+            } catch(e) {}
+
+            const stockSubView = document.getElementById('stockMarketSubView');
+            const etfSubView = document.getElementById('etfMarketSubView');
+            const stockBtn = document.getElementById('subtabBtnStockMarket');
+            const etfBtn = document.getElementById('subtabBtnEtfMarket');
+
+            if (currentMarketSubView === 'STOCK') {
+                if (stockSubView) stockSubView.style.display = 'block';
+                if (etfSubView) etfSubView.style.display = 'none';
+                if (stockBtn) stockBtn.classList.add('active');
+                if (etfBtn) etfBtn.classList.remove('active');
+                renderMacroIndices();
+                renderMarketTop10Scroller();
+                renderMarketTop100Table();
+            } else {
+                if (stockSubView) stockSubView.style.display = 'none';
+                if (etfSubView) etfSubView.style.display = 'block';
+                if (stockBtn) stockBtn.classList.remove('active');
+                if (etfBtn) etfBtn.classList.add('active');
+                renderEtfMacroIndices();
+                renderEtfTopSnapshotScroller();
+                renderEtfTopRankedTable();
+            }
         };
 
         // =====================================================================
@@ -10602,23 +11283,19 @@
             } catch(e) {
                 console.warn("Market overview refresh error:", e);
             } finally {
-                renderMacroIndices();
-                renderMarketTop10Scroller();
-                renderMarketTop100Table();
+                switchMarketSubView(currentMarketSubView);
                 if (btn) {
                     btn.disabled = false;
-                    btn.innerHTML = '🔄 รีเฟรช';
+                    btn.innerHTML = '🔄 รีเฟรชข้อมูล';
                 }
                 if (showToast && typeof showNotification === 'function') {
-                    showNotification("อัปเดตข้อมูลดัชนีภาพรวมตลาดแบบ Real-time เรียบร้อยแล้ว ⚡");
+                    showNotification("อัปเดตข้อมูลภาพรวมตลาดแบบ Real-time เรียบร้อยแล้ว ⚡");
                 }
             }
         };
 
         window.renderMarketOverview = function() {
-            renderMacroIndices();
-            renderMarketTop10Scroller();
-            renderMarketTop100Table();
+            switchMarketSubView(currentMarketSubView);
         };
 
         // =====================================================================
