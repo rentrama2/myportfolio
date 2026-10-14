@@ -3925,7 +3925,7 @@
                         <button type="button" id="btnCancelEdit" class="btn btn-sm btn-outline-secondary d-none" onclick="cancelEdit()">ยกเลิกการแก้ไข</button>
                     </div>
                     <div class="card-body">
-                        <form id="txnForm">
+                        <form id="txnForm" novalidate>
                             <div class="row g-3 mb-3 align-items-start">
                                 <div class="col-lg-2 col-md-4 col-6">
                                     <label class="form-label text-muted fw-bold" style="font-size:0.8rem;">วันที่</label>
@@ -4615,6 +4615,11 @@
         let editingIndex = -1; 
         
         let transactions = JSON.parse(localStorage.getItem('myPortfolioTxns')) || [];
+        Object.defineProperty(window, 'transactions', {
+            get() { return transactions; },
+            set(v) { transactions = v; },
+            configurable: true
+        });
 
         // --- MULTI-PORTFOLIO SYSTEM (จัดพอร์ตได้เหมือน App ฟรีไม่จำกัด) ---
         const defaultPortfolios = [
@@ -5657,9 +5662,14 @@
 
             const selType = document.getElementById('txnType');
             const inpTicker = document.getElementById('txnTicker');
-            if (selType) selType.value = 'BUY';
+            if (selType) {
+                selType.value = 'BUY';
+                selType.dispatchEvent(new Event('change'));
+            }
             if (inpTicker) {
                 inpTicker.value = ticker;
+                inpTicker.dispatchEvent(new Event('input'));
+                inpTicker.dispatchEvent(new Event('blur'));
                 if (typeof handleTickerChange === 'function') handleTickerChange();
             }
 
@@ -5667,6 +5677,7 @@
             const inpPrice = document.getElementById('txnPrice');
             if (inpShares && shares) inpShares.value = shares;
             if (inpPrice && price) inpPrice.value = Number(price).toFixed(2);
+            if (typeof autoCalculateDimeFees === 'function') autoCalculateDimeFees();
             if (typeof calculateTxnTotal === 'function') calculateTxnTotal();
 
             const formCard = document.getElementById('txnFormCard') || document.getElementById('txnType');
@@ -5977,9 +5988,14 @@
 
             const selType = document.getElementById('txnType');
             const inpTicker = document.getElementById('txnTicker');
-            if (selType) selType.value = 'BUY';
+            if (selType) {
+                selType.value = 'BUY';
+                selType.dispatchEvent(new Event('change'));
+            }
             if (inpTicker) {
                 inpTicker.value = targetTicker;
+                inpTicker.dispatchEvent(new Event('input'));
+                inpTicker.dispatchEvent(new Event('blur'));
                 if (typeof handleTickerChange === 'function') handleTickerChange();
             }
 
@@ -5991,6 +6007,7 @@
                 if (inpShares) inpShares.value = shares;
                 if (inpPrice) inpPrice.value = price.toFixed(2);
             }
+            if (typeof autoCalculateDimeFees === 'function') autoCalculateDimeFees();
             if (typeof calculateTxnTotal === 'function') calculateTxnTotal();
 
             const formCard = document.getElementById('txnFormCard') || document.getElementById('txnType');
@@ -7684,6 +7701,15 @@
                 document.getElementById('txnTotalTHB').placeholder = `ประมาณ ฿${(estNetUSD * liveFxRate).toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             }
         }
+        window.autoCalculateDimeFees = autoCalculateDimeFees;
+        window.calculateTxnTotal = autoCalculateDimeFees;
+        window.handleTickerChange = function() {
+            const inp = document.getElementById('txnTicker');
+            if (inp) {
+                inp.dispatchEvent(new Event('input'));
+                inp.dispatchEvent(new Event('blur'));
+            }
+        };
 
         document.getElementById('txnType').addEventListener('change', function() {
             const type = this.value;
@@ -7710,17 +7736,26 @@
                 document.getElementById('txnShares').value = '0';
                 document.getElementById('txnPrice').value = '0';
                 document.getElementById('txnComm').value = '0';
-                document.getElementById('lblTotalTHB').innerText = type === 'DEPOSIT' ? 'ยอดเงินที่ฝาก (THB) *บังคับกรอก' : 'ยอดเงินที่ถอน (THB) *บังคับกรอก';
+                document.getElementById('txnTicker').required = false;
+                document.getElementById('txnShares').required = false;
+                document.getElementById('txnPrice').required = false;
+                document.getElementById('txnComm').required = false;
+                document.getElementById('lblTotalTHB').innerText = type === 'DEPOSIT' ? 'ยอดเงินที่ฝาก (THB) *จำเป็น' : 'ยอดเงินที่ถอน (THB) *จำเป็น';
                 document.getElementById('txnTotalTHB').required = true;
-                document.getElementById('txnTotalTHB').placeholder = 'กรอกเงินบาท';
+                document.getElementById('txnTotalTHB').placeholder = 'กรอกยอดเงินบาท';
             } else {
                 if(document.getElementById('txnTicker').value === 'CASH') document.getElementById('txnTicker').value = '';
+                document.getElementById('txnTicker').required = true;
                 document.getElementById('lblShares').innerText = isDiv ? 'จำนวนหุ้น (ข้ามได้)' : 'จำนวนหุ้น';
                 document.getElementById('txnShares').readOnly = isDiv;
+                document.getElementById('txnShares').required = !isDiv;
                 document.getElementById('lblPrice').innerText = isDiv ? 'ยอดปันผลสุทธิ (Net USD)' : 'ราคา (USD)';
+                document.getElementById('txnPrice').required = true;
                 document.getElementById('lblComm').innerText = isDiv ? 'ค่าธรรมเนียม / ภาษี' : 'ค่าคอมฯ Dime (USD)';
+                document.getElementById('txnComm').required = !isDiv;
                 document.getElementById('lblTotalTHB').innerText = isDiv ? 'เงินบาทสุทธิที่เข้าบัญชี (ข้ามได้)' : 'เงินบาทที่จ่ายจริง (THB) - ข้ามได้';
                 document.getElementById('txnTotalTHB').required = false;
+                document.getElementById('txnTotalTHB').placeholder = 'เว้นว่างได้';
 
                 if (isDiv) {
                     document.getElementById('txnComm').value = 0;
@@ -7731,6 +7766,9 @@
                 
                 if(editingIndex === -1) {
                     document.getElementById('txnShares').value = isDiv ? 0 : '';
+                    if (!isDiv && document.getElementById('txnPrice').value === '0') {
+                        document.getElementById('txnPrice').value = '';
+                    }
                     delete document.getElementById('dimePromo').dataset.userOverridden;
                     autoCalculateDimeFees();
                 }
@@ -8585,27 +8623,53 @@
 
         function sortTransactions() { transactions.sort((a, b) => new Date(a.date) - new Date(b.date)); }
 
+        const _fxHistoryCache = {};
         async function getHistoricalFx(dateStr) {
+            const fallbackRate = (typeof liveFxRate === 'number' && liveFxRate > 0) ? liveFxRate : 33.50;
+            if (!dateStr) return fallbackRate;
+            if (_fxHistoryCache[dateStr]) return _fxHistoryCache[dateStr];
+
+            const todayStr = new Date().toISOString().split('T')[0];
+            // If date is today or recent (within 5 days), use current liveFxRate immediately (zero latency)
+            if (dateStr >= todayStr || Math.abs(new Date(todayStr) - new Date(dateStr)) < 5 * 86400000) {
+                _fxHistoryCache[dateStr] = fallbackRate;
+                return fallbackRate;
+            }
+
             try {
-                let res = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${dateStr}/v1/currencies/usd.json`);
-                if (!res.ok) return liveFxRate; 
-                const data = await res.json(); return data.usd.thb;
-            } catch(e) { return liveFxRate; }
+                // Strict 1.2s timeout prevents submit freeze
+                let res = await fetchWithTimeout(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${dateStr}/v1/currencies/usd.json`, {}, 1200);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data && data.usd && data.usd.thb) {
+                        const parsed = parseFloat(data.usd.thb);
+                        if (!isNaN(parsed) && parsed > 0) {
+                            _fxHistoryCache[dateStr] = parsed;
+                            return parsed;
+                        }
+                    }
+                }
+            } catch(e) {}
+
+            _fxHistoryCache[dateStr] = fallbackRate;
+            return fallbackRate;
         }
 
         async function autoRepairTransactions() {
             let hasChanged = false;
-            for(let i = 0; i < transactions.length; i++) {
-                let txn = transactions[i];
-                if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') continue;
+            const currentFx = (typeof liveFxRate === 'number' && liveFxRate > 0) ? liveFxRate : 33.50;
 
-                // แก้ไขรายการปันผลเดิมที่เคยถูกระบบหักค่าธรรมเนียม/ภาษี 15% ซ้ำ (เนื่องจากยอดที่ผู้ใช้ใส่คือยอดสุทธิแล้ว)
+            for (let i = 0; i < transactions.length; i++) {
+                let txn = transactions[i];
+                if (!txn || txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') continue;
+
+                // Fix dividends that had duplicate commission/tax deductions
                 if (txn.type === 'DIVIDEND' && txn.comm > 0) {
                     txn.comm = 0;
                     txn.commTHB = 0;
                     txn.commCurr = 'USD';
-                    let historicalRate = await getHistoricalFx(txn.date);
-                    txn.totalTHB = Number((txn.price * historicalRate).toFixed(2));
+                    let rate = _fxHistoryCache[txn.date] || currentFx;
+                    txn.totalTHB = Number(((txn.price || 0) * rate).toFixed(2));
                     hasChanged = true;
                 }
 
@@ -8616,15 +8680,22 @@
                 }
 
                 let parsedTHB = parseFloat(txn.totalTHB);
-                if(isNaN(parsedTHB) || parsedTHB <= 0) {
-                    let usdAmount = Number((txn.shares * txn.price).toFixed(2));
-                    let totalUSD = txn.type === 'DIVIDEND' ? txn.price : (txn.type === 'BUY' ? usdAmount + txn.comm : usdAmount - txn.comm);
-                    let historicalRate = await getHistoricalFx(txn.date);
-                    txn.totalTHB = Number((totalUSD * historicalRate).toFixed(2));
+                if (isNaN(parsedTHB) || parsedTHB <= 0) {
+                    let price = parseFloat(txn.price) || 0;
+                    let shares = parseFloat(txn.shares) || 0;
+                    let comm = parseFloat(txn.comm) || 0;
+                    let usdAmount = Number((shares * price).toFixed(2));
+                    let totalUSD = txn.type === 'DIVIDEND' ? price : (txn.type === 'BUY' ? usdAmount + comm : Math.max(0, usdAmount - comm));
+                    let rate = _fxHistoryCache[txn.date] || currentFx;
+                    txn.totalTHB = Number((totalUSD * rate).toFixed(2));
                     hasChanged = true;
                 }
             }
-            if(hasChanged) localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
+            if (hasChanged) {
+                try {
+                    localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
+                } catch(e) {}
+            }
             return hasChanged;
         }
 
@@ -10545,23 +10616,30 @@
         }
 
         window.editTxn = function(index) {
-            const txn = transactions[index]; editingIndex = index;
+            const txn = transactions[index]; 
+            if (!txn) return;
+            editingIndex = index;
             document.getElementById('dimePromo').dataset.userOverridden = 'true';
             document.getElementById('txnDate').value = txn.date; 
             document.getElementById('txnType').value = txn.type;
             document.getElementById('txnType').dispatchEvent(new Event('change'));
-            document.getElementById('txnTicker').value = txn.ticker; 
+            document.getElementById('txnTicker').value = txn.ticker || ''; 
 
             const portSel = document.getElementById('txnPortfolio');
             if (portSel) portSel.value = txn.portfolio || 'core'; 
             
             if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') {
-                document.getElementById('txnTotalTHB').value = txn.totalTHB;
+                document.getElementById('txnTotalTHB').value = txn.totalTHB || '';
+                document.getElementById('txnShares').value = 0;
+                document.getElementById('txnPrice').value = 0;
+                document.getElementById('txnComm').value = 0;
             } else if(txn.type === 'DIVIDEND') {
-                document.getElementById('txnPrice').value = txn.price; 
+                document.getElementById('txnShares').value = txn.shares || 0;
+                document.getElementById('txnPrice').value = txn.price || ''; 
                 document.getElementById('txnComm').value = 0;
             } else {
-                document.getElementById('txnShares').value = txn.shares; document.getElementById('txnPrice').value = txn.price;
+                document.getElementById('txnShares').value = txn.shares || ''; 
+                document.getElementById('txnPrice').value = txn.price || '';
                 
                 document.getElementById('txnCommCurr').value = txn.commCurr || 'USD';
                 document.getElementById('txnCommCurr').dispatchEvent(new Event('change'));
@@ -10572,28 +10650,46 @@
                 } else { 
                     document.getElementById('dimePromo').checked = false; 
                     if(txn.commCurr === 'THB') {
-                        document.getElementById('txnComm').value = txn.commTHB;
+                        document.getElementById('txnComm').value = txn.commTHB || 0;
                     } else {
                         document.getElementById('txnVat').checked = false; 
-                        document.getElementById('txnComm').value = txn.comm; 
+                        document.getElementById('txnComm').value = txn.comm || 0; 
                     }
                 }
                 document.getElementById('dimePromo').dispatchEvent(new Event('change'));
             }
             
-            if(txn.type !== 'DEPOSIT' && txn.type !== 'WITHDRAW') document.getElementById('txnTotalTHB').value = txn.totalTHB > 0 ? txn.totalTHB : ''; 
+            if(txn.type !== 'DEPOSIT' && txn.type !== 'WITHDRAW') {
+                document.getElementById('txnTotalTHB').value = (txn.totalTHB && txn.totalTHB > 0) ? txn.totalTHB : ''; 
+            }
             
-            const btn = document.getElementById('btnSubmitTxn'); btn.innerText = 'บันทึกแก้ไข'; btn.classList.replace('btn-dark', 'btn-warning'); btn.classList.replace('w-25', 'w-50');
+            const btn = document.getElementById('btnSubmitTxn'); 
+            btn.innerText = 'บันทึกแก้ไข'; 
+            btn.classList.replace('btn-dark', 'btn-warning'); 
+            btn.classList.replace('w-25', 'w-50');
             document.getElementById('btnCancelEdit').classList.remove('d-none');
             
             document.getElementById('formTitleText').innerText = '✏️ กำลังแก้ไขรายการ...';
             document.getElementById('formHeader').classList.add('text-warning');
             
-            window.scrollTo({ top: document.getElementById('transactionFormSection').offsetTop - 20, behavior: 'smooth' });
+            const targetSection = document.getElementById('transactionFormSection');
+            if (targetSection) {
+                window.scrollTo({ top: targetSection.offsetTop - 20, behavior: 'smooth' });
+            }
             const formCard = document.getElementById('formCardHighlight');
-            formCard.classList.add('form-highlight');
-            setTimeout(() => { formCard.classList.remove('form-highlight'); }, 1500);
+            if (formCard) {
+                formCard.classList.add('form-highlight');
+                setTimeout(() => { formCard.classList.remove('form-highlight'); }, 1500);
+            }
         };
+
+        function getLocalDateString() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
 
         window.cancelEdit = function() {
             editingIndex = -1;
@@ -10602,9 +10698,14 @@
             document.getElementById('txnComm').readOnly = false;
             document.getElementById('txnType').value = 'BUY';
             document.getElementById('txnType').dispatchEvent(new Event('change'));
-            const btn = document.getElementById('btnSubmitTxn'); btn.innerText = 'บันทึก'; btn.classList.replace('btn-warning', 'btn-dark'); btn.classList.replace('w-50', 'w-25');
+            const btn = document.getElementById('btnSubmitTxn'); 
+            btn.innerText = 'บันทึก'; 
+            btn.classList.replace('btn-warning', 'btn-dark'); 
+            btn.classList.replace('w-50', 'w-25');
             document.getElementById('btnCancelEdit').classList.add('d-none');
-            document.getElementById('txnDate').valueAsDate = new Date();
+            
+            const dateInput = document.getElementById('txnDate');
+            if (dateInput) dateInput.value = getLocalDateString();
             
             document.getElementById('formTitleText').innerText = 'บันทึกรายการใหม่ (Transaction)';
             document.getElementById('formHeader').classList.remove('text-warning');
@@ -10612,62 +10713,149 @@
 
         document.getElementById('txnForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            const btn = document.getElementById('btnSubmitTxn');
-            const originalText = btn.innerHTML; btn.innerHTML = '⏳ รอ...'; btn.disabled = true;
 
-            const dateVal = document.getElementById('txnDate').value;
+            // 1. ตรวจสอบและเตรียมค่าอินพุตทั้งหมด (Input Sanitation & Validation)
+            const dateInput = document.getElementById('txnDate');
+            let dateVal = dateInput ? dateInput.value : '';
+            if (!dateVal) {
+                dateVal = getLocalDateString();
+                if (dateInput) dateInput.value = dateVal;
+            }
+
             const typeVal = document.getElementById('txnType').value;
-            const tickerVal = document.getElementById('txnTicker').value.toUpperCase();
-            const priceVal = parseFloat(document.getElementById('txnPrice').value) || 0;
-            const sharesVal = parseFloat(document.getElementById('txnShares').value) || 0;
-            
-            const commCurrVal = document.getElementById('txnCommCurr').value;
-            const inputComm = parseFloat(document.getElementById('txnComm').value) || 0;
-            let actualCommUSD = 0;
-            let savedCommTHB = inputComm;
-            
+            const isCash = (typeVal === 'DEPOSIT' || typeVal === 'WITHDRAW');
+            const isDiv = (typeVal === 'DIVIDEND');
+            let tickerVal = document.getElementById('txnTicker').value.trim().toUpperCase();
+
+            let priceVal = parseFloat(document.getElementById('txnPrice').value) || 0;
+            let sharesVal = parseFloat(document.getElementById('txnShares').value) || 0;
             let totalTHB = parseFloat(document.getElementById('txnTotalTHB').value);
-            let baseUSD = Number((priceVal * sharesVal).toFixed(2));
 
-            if (typeVal === 'BUY' || typeVal === 'SELL') {
-                if (commCurrVal === 'THB') {
-                    if (!isNaN(totalTHB) && totalTHB > 0 && baseUSD > 0) {
-                        let implicitFx = typeVal === 'BUY' ? (totalTHB - inputComm) / baseUSD : (totalTHB + inputComm) / baseUSD;
-                        actualCommUSD = inputComm / implicitFx;
-                    } else {
-                        let historicalRate = await getHistoricalFx(dateVal);
-                        actualCommUSD = inputComm / historicalRate;
-                        totalTHB = typeVal === 'BUY' ? (baseUSD * historicalRate) + inputComm : (baseUSD * historicalRate) - inputComm;
-                    }
-                } else {
-                    actualCommUSD = (document.getElementById('txnVat').checked) ? inputComm * 1.07 : inputComm;
-                    savedCommTHB = 0; 
+            // แจ้งเตือนข้อผิดพลาดก่อนบันทึกแบบชัดเจน (Friendly User Feedback)
+            if (isCash) {
+                tickerVal = 'CASH';
+                priceVal = 0;
+                sharesVal = 0;
+                if (isNaN(totalTHB) || totalTHB <= 0) {
+                    alert(`กรุณาระบุยอดเงิน (บาท) ที่ต้องการ${typeVal === 'DEPOSIT' ? 'ฝาก' : 'ถอน'} ให้ถูกต้องครับ`);
+                    document.getElementById('txnTotalTHB').focus();
+                    return;
                 }
-            } else if (typeVal === 'DIVIDEND') {
-                actualCommUSD = 0; 
-                savedCommTHB = 0;
+            } else if (isDiv) {
+                if (!tickerVal) {
+                    alert('กรุณากรอกชื่อหุ้น (Ticker) ที่ได้รับเงินปันผลครับ');
+                    document.getElementById('txnTicker').focus();
+                    return;
+                }
+                if (priceVal <= 0) {
+                    alert('กรุณากรอกยอดเงินปันผลสุทธิที่ได้รับ (Net USD) ครับ');
+                    document.getElementById('txnPrice').focus();
+                    return;
+                }
+            } else { // BUY or SELL
+                if (!tickerVal) {
+                    alert('กรุณากรอกชื่อหุ้น (Ticker) ครับ');
+                    document.getElementById('txnTicker').focus();
+                    return;
+                }
+                if (sharesVal <= 0) {
+                    alert('กรุณาระบุจำนวนหุ้นที่ถูกต้อง (มากกว่า 0) ครับ');
+                    document.getElementById('txnShares').focus();
+                    return;
+                }
+                if (priceVal <= 0) {
+                    alert('กรุณาระบุราคาต่อหุ้น (USD) ให้ถูกต้องครับ');
+                    document.getElementById('txnPrice').focus();
+                    return;
+                }
             }
 
-            if (typeVal !== 'DEPOSIT' && typeVal !== 'WITHDRAW' && (isNaN(totalTHB) || totalTHB <= 0)) {
-                let totalUSD = typeVal === 'DIVIDEND' ? priceVal : (typeVal === 'BUY' ? baseUSD + actualCommUSD : baseUSD - actualCommUSD);
-                let historicalRate = await getHistoricalFx(dateVal);
-                totalTHB = Number((totalUSD * historicalRate).toFixed(2));
+            const btn = document.getElementById('btnSubmitTxn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '⏳ กำลังบันทึก...';
+            btn.disabled = true;
+
+            try {
+                const commCurrVal = document.getElementById('txnCommCurr').value || 'USD';
+                const inputComm = parseFloat(document.getElementById('txnComm').value) || 0;
+                let actualCommUSD = 0;
+                let savedCommTHB = 0;
+                let baseUSD = Number((priceVal * sharesVal).toFixed(2));
+
+                if (typeVal === 'BUY' || typeVal === 'SELL') {
+                    if (commCurrVal === 'THB') {
+                        savedCommTHB = inputComm;
+                        if (!isNaN(totalTHB) && totalTHB > 0 && baseUSD > 0) {
+                            let implicitFx = typeVal === 'BUY' ? (totalTHB - inputComm) / baseUSD : (totalTHB + inputComm) / baseUSD;
+                            actualCommUSD = implicitFx > 0 ? (inputComm / implicitFx) : (inputComm / (liveFxRate || 33.50));
+                        } else {
+                            let historicalRate = await getHistoricalFx(dateVal);
+                            actualCommUSD = inputComm / historicalRate;
+                            totalTHB = typeVal === 'BUY' ? (baseUSD * historicalRate) + inputComm : Math.max(0, (baseUSD * historicalRate) - inputComm);
+                        }
+                    } else { // USD
+                        actualCommUSD = (document.getElementById('txnVat').checked) ? inputComm * 1.07 : inputComm;
+                        savedCommTHB = 0; 
+                    }
+                } else if (isDiv || isCash) {
+                    actualCommUSD = 0; 
+                    savedCommTHB = 0;
+                }
+
+                // หากเว้นช่องเงินบาทไว้ ให้คำนวณเงินบาทอัตโนมัติจากเรทแลกเปลี่ยน
+                if (!isCash && (isNaN(totalTHB) || totalTHB <= 0)) {
+                    let totalUSD = isDiv ? priceVal : (typeVal === 'BUY' ? baseUSD + actualCommUSD : Math.max(0, baseUSD - actualCommUSD));
+                    let historicalRate = await getHistoricalFx(dateVal);
+                    totalTHB = Number((totalUSD * historicalRate).toFixed(2));
+                }
+
+                totalTHB = Number(parseFloat(totalTHB).toFixed(2));
+                if (isNaN(totalTHB) || totalTHB < 0) totalTHB = 0;
+                
+                const portVal = document.getElementById('txnPortfolio') ? document.getElementById('txnPortfolio').value : 'core';
+                const newTxn = { 
+                    date: dateVal, 
+                    ticker: tickerVal, 
+                    type: typeVal, 
+                    shares: isCash ? 0 : (isDiv ? (parseFloat(document.getElementById('txnShares').value) || 0) : sharesVal), 
+                    price: isCash ? 0 : priceVal, 
+                    comm: (isDiv || isCash) ? 0 : Number(actualCommUSD.toFixed(4)), 
+                    commTHB: (isDiv || isCash) ? 0 : Number(savedCommTHB.toFixed(2)), 
+                    commCurr: (isDiv || isCash) ? 'USD' : commCurrVal, 
+                    totalTHB: totalTHB,
+                    portfolio: portVal || 'core'
+                };
+
+                if (editingIndex > -1) { 
+                    transactions[editingIndex] = newTxn; 
+                    cancelEdit(); 
+                } else { 
+                    transactions.push(newTxn); 
+                    const curDate = document.getElementById('txnDate').value; 
+                    document.getElementById('txnForm').reset(); 
+                    document.getElementById('txnDate').value = curDate; 
+                    document.getElementById('txnType').value = 'BUY'; 
+                    document.getElementById('txnType').dispatchEvent(new Event('change')); 
+                    if (document.getElementById('txnPortfolio')) document.getElementById('txnPortfolio').value = portVal; 
+                }
+
+                localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions)); 
+                await renderTable(); 
+
+                // แสดงข้อความตอบรับการบันทึกสำเร็จ (Success Visual Feedback)
+                const headerTitle = document.getElementById('formTitleText');
+                if (headerTitle) {
+                    const prevTitle = headerTitle.innerText;
+                    headerTitle.innerHTML = '<span class="text-success fw-bold">✓ บันทึกรายการสำเร็จเรียบร้อย!</span>';
+                    setTimeout(() => { if (headerTitle) headerTitle.innerText = prevTitle; }, 2500);
+                }
+            } catch (err) {
+                console.error('Error saving transaction:', err);
+                alert('เกิดข้อผิดพลาดในการบันทึกรายการ: ' + (err.message || err));
+            } finally {
+                btn.innerHTML = originalText; 
+                btn.disabled = false;
             }
-            
-            const portVal = document.getElementById('txnPortfolio') ? document.getElementById('txnPortfolio').value : 'core';
-            const newTxn = { 
-                date: dateVal, ticker: tickerVal, type: typeVal, shares: sharesVal, 
-                price: priceVal, comm: (typeVal === 'DIVIDEND' ? 0 : actualCommUSD), commTHB: savedCommTHB, commCurr: commCurrVal, 
-                totalTHB: totalTHB,
-                portfolio: portVal || 'core'
-            };
-
-            if (editingIndex > -1) { transactions[editingIndex] = newTxn; cancelEdit(); } 
-            else { transactions.push(newTxn); const td = document.getElementById('txnDate').value; this.reset(); document.getElementById('txnDate').value = td; document.getElementById('txnType').value = 'BUY'; document.getElementById('txnType').dispatchEvent(new Event('change')); if(document.getElementById('txnPortfolio')) document.getElementById('txnPortfolio').value = portVal; }
-
-            localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions)); 
-            await renderTable(); 
-            btn.innerHTML = originalText; btn.disabled = false;
         });
 
         window.deleteTxn = function(index) {
@@ -15375,6 +15563,16 @@
         }
 
         async function initializeApp() { 
+            // Initialize Transaction Form date and field states
+            const txnDateInp = document.getElementById('txnDate');
+            if (txnDateInp && !txnDateInp.value) {
+                txnDateInp.value = (typeof getLocalDateString === 'function') ? getLocalDateString() : new Date().toISOString().split('T')[0];
+            }
+            const txnTypeSelect = document.getElementById('txnType');
+            if (txnTypeSelect) {
+                txnTypeSelect.dispatchEvent(new Event('change'));
+            }
+
             syncPortfolioNamesWithDime();
             initTheme();
             initPrivacyMode();
