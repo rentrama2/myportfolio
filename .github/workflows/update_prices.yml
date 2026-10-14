@@ -2,8 +2,8 @@ name: Update Stock Prices & FX
 
 on:
   schedule:
-    # Run every 15 minutes
-    - cron: '*/15 * * * *'
+    # Run every 10 minutes
+    - cron: '*/10 * * * *'
   workflow_dispatch:
   push:
     paths:
@@ -39,5 +39,7 @@ jobs:
             echo "No price or news changes to commit."
           else
             git commit -m "Auto-update stock prices, FX & news [skip ci]"
+            git pull --rebase origin main || true
             git push
           fi
+

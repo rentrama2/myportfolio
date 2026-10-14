@@ -7870,7 +7870,7 @@
                                 }
                             }
                             if (data.extended_hours && typeof data.extended_hours === 'object') {
-                                extendedHoursPrices = Object.assign({}, extendedHoursPrices, data.extended_hours);
+                                extendedHoursPrices = Object.assign({}, data.extended_hours);
                                 localStorage.setItem('myExtendedHoursPrices', JSON.stringify(extendedHoursPrices));
                             }
                             localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
@@ -7897,16 +7897,16 @@
 
             const sym = ticker.replace('.', '-');
             const endpoints = [
-                `https://query2.finance.yahoo.com/v8/finance/chart/${sym}?range=1d&interval=5m&includePrePost=true`,
-                `https://query2.finance.yahoo.com/v8/finance/chart/${sym}?interval=1d`
+                `https://query1.finance.yahoo.com/v8/finance/chart/${sym}?range=1d&interval=1m&includePrePost=true&_nocache=${Date.now()}`,
+                `https://query2.finance.yahoo.com/v8/finance/chart/${sym}?range=1d&interval=1m&includePrePost=true&_nocache=${Date.now()}`,
+                `https://query1.finance.yahoo.com/v8/finance/chart/${sym}?interval=1d&_nocache=${Date.now()}`
             ];
 
             for (let rawUrl of endpoints) {
                 const encodedUrl = encodeURIComponent(rawUrl);
                 const proxies = [
                     `https://api.allorigins.win/raw?url=${encodedUrl}`,
-                    `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`,
-                    `https://corsproxy.io/?url=${encodedUrl}`
+                    `https://corsproxy.org/?url=${encodedUrl}`
                 ];
 
                 for (let proxyUrl of proxies) {
@@ -7919,7 +7919,7 @@
                                 let meta = result.meta;
                                 let regPrice = meta.regularMarketPrice || meta.chartPreviousClose || meta.previousClose;
                                 
-                                // Parse Pre-Market / After-Hours extended data if present
+                                // Parse Pre-Market / After-Hours extended data accurately
                                 try {
                                     const periods = meta.currentTradingPeriod || {};
                                     const prePeriod = periods.pre || {};
@@ -7929,29 +7929,34 @@
                                     const timestamps = result.timestamp || [];
                                     const quoteClose = (result.indicators && result.indicators.quote && result.indicators.quote[0]) ? result.indicators.quote[0].close || [] : [];
                                     
-                                    let extPrice = meta.fulldayPrice;
-                                    let lastTs = null;
-                                    if (quoteClose.length > 0) {
-                                        for (let i = quoteClose.length - 1; i >= 0; i--) {
-                                            if (quoteClose[i] !== null && quoteClose[i] !== undefined) {
-                                                if (!extPrice) extPrice = quoteClose[i];
-                                                lastTs = timestamps[i];
-                                                break;
+                                    const curTs = Math.floor(Date.now() / 1000);
+                                    let session = null;
+                                    if (prePeriod.start && regPeriod.start && curTs >= prePeriod.start && curTs < regPeriod.start) {
+                                        session = 'PRE';
+                                    } else if (regPeriod.end && postPeriod.end && curTs >= regPeriod.end && curTs <= postPeriod.end) {
+                                        session = 'POST';
+                                    }
+
+                                    if (session) {
+                                        let extPrice = null;
+                                        if (quoteClose.length > 0 && timestamps.length > 0) {
+                                            for (let i = quoteClose.length - 1; i >= 0; i--) {
+                                                if (quoteClose[i] !== null && quoteClose[i] !== undefined) {
+                                                    const ts = timestamps[i];
+                                                    if (session === 'PRE' && prePeriod.start && ts >= prePeriod.start) {
+                                                        extPrice = quoteClose[i];
+                                                        break;
+                                                    } else if (session === 'POST' && regPeriod.end && ts >= regPeriod.end) {
+                                                        extPrice = quoteClose[i];
+                                                        break;
+                                                    }
+                                                }
                                             }
                                         }
-                                    }
-                                    if (!lastTs && timestamps.length > 0) lastTs = timestamps[timestamps.length - 1];
+                                        if (!extPrice && session === 'PRE') extPrice = meta.preMarketPrice || meta.fulldayPrice;
+                                        if (!extPrice && session === 'POST') extPrice = meta.postMarketPrice || meta.fulldayPrice;
 
-                                    const curTs = Math.floor(Date.now() / 1000);
-                                    if (regPrice && extPrice && Math.abs(extPrice - regPrice) > 0.0001) {
-                                        let session = null;
-                                        if (regPeriod.start && (lastTs < regPeriod.start || (curTs >= prePeriod.start && curTs < regPeriod.start))) {
-                                            session = 'PRE';
-                                        } else if (regPeriod.end && (lastTs > regPeriod.end || (curTs > regPeriod.end && curTs <= postPeriod.end))) {
-                                            session = 'POST';
-                                        }
-
-                                        if (session) {
+                                        if (regPrice && extPrice && Math.abs(extPrice - regPrice) > 0.0001) {
                                             const diff = Number((extPrice - regPrice).toFixed(2));
                                             const pct = Number(((diff / regPrice) * 100).toFixed(2));
                                             const extObj = {
@@ -7968,6 +7973,12 @@
                                                 localStorage.setItem('myExtendedHoursPrices', JSON.stringify(extendedHoursPrices));
                                             } catch(e) {}
                                         }
+                                    } else {
+                                        delete extendedHoursPrices[ticker];
+                                        delete extendedHoursPrices[sym];
+                                        try {
+                                            localStorage.setItem('myExtendedHoursPrices', JSON.stringify(extendedHoursPrices));
+                                        } catch(e) {}
                                     }
                                 } catch(errExt) {}
 
@@ -8287,7 +8298,8 @@
                 let chgPct = 0;
                 let isExt = false;
 
-                if (ext && ext.price && ext.price > 0) {
+                const mktStatus = (typeof getUSMarketStatus === 'function') ? getUSMarketStatus() : { isOpen: false, session: 'CLOSED' };
+                if (ext && ext.price && ext.price > 0 && !mktStatus.isOpen && ext.session === mktStatus.session) {
                     openPrice = ext.price;
                     chg = ext.change !== undefined ? ext.change : (ext.price - (ext.regularPrice || regP));
                     chgPct = ext.changePct !== undefined ? ext.changePct : (regP > 0 ? (chg / regP) * 100 : 0);

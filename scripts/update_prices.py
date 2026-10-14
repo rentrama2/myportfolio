@@ -43,9 +43,9 @@ def fetch_yahoo_price(ticker):
 def fetch_yahoo_stock(ticker):
     sym = ticker.replace('.', '-')
     endpoints = [
-        f"https://query2.finance.yahoo.com/v8/finance/chart/{sym}?range=1d&interval=5m&includePrePost=true",
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range=1d&interval=1m&includePrePost=true",
+        f"https://query2.finance.yahoo.com/v8/finance/chart/{sym}?range=1d&interval=1m&includePrePost=true",
         f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range=1d&interval=5m&includePrePost=true",
-        f"https://query2.finance.yahoo.com/v8/finance/chart/{sym}?interval=1d",
         f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?interval=1d"
     ]
     for url in endpoints:
@@ -65,48 +65,52 @@ def fetch_yahoo_stock(ticker):
             reg_p = periods.get("regular", {})
             post_p = periods.get("post", {})
 
-            timestamps = data["chart"]["result"][0].get("timestamp", [])
-            quotes_list = []
-            indicators = data["chart"]["result"][0].get("indicators", {})
-            if indicators and "quote" in indicators and indicators["quote"]:
-                quotes_list = indicators["quote"][0].get("close", [])
-
-            last_close = meta.get("fulldayPrice")
-            last_ts = None
-            if quotes_list:
-                for ts, cl in zip(reversed(timestamps), reversed(quotes_list)):
-                    if cl is not None:
-                        if not last_close:
-                            last_close = cl
-                        last_ts = ts
-                        break
-            if not last_ts and timestamps:
-                last_ts = timestamps[-1]
-
             now_ts = int(datetime.datetime.now(datetime.timezone.utc).timestamp())
 
-            if last_close and reg_price and abs(last_close - reg_price) > 0.0001:
-                session = None
-                if reg_p.get("start") and (
-                    (last_ts and last_ts < reg_p["start"]) or
-                    (pre_p.get("start") and pre_p["start"] <= now_ts < reg_p["start"])
-                ):
-                    session = "PRE"
-                elif reg_p.get("end") and (
-                    (last_ts and last_ts > reg_p["end"]) or
-                    (post_p.get("end") and reg_p["end"] < now_ts <= post_p["end"])
-                ):
-                    session = "POST"
+            # Detect current active trading session strictly based on timestamps
+            session = None
+            if pre_p.get("start") and reg_p.get("start") and pre_p["start"] <= now_ts < reg_p["start"]:
+                session = "PRE"
+            elif reg_p.get("end") and post_p.get("end") and reg_p["end"] <= now_ts <= post_p["end"]:
+                session = "POST"
 
-                if session:
-                    diff = round(float(last_close) - float(reg_price), 2)
+            # Only extract extended hours data if market is currently in an active PRE or POST session
+            if session:
+                timestamps = data["chart"]["result"][0].get("timestamp", [])
+                quotes_list = []
+                indicators = data["chart"]["result"][0].get("indicators", {})
+                if indicators and "quote" in indicators and indicators["quote"]:
+                    quotes_list = indicators["quote"][0].get("close", [])
+
+                # Find the most recent non-null quote tick traded within the active session
+                session_price = None
+                if quotes_list and timestamps:
+                    for ts, cl in zip(reversed(timestamps), reversed(quotes_list)):
+                        if cl is not None:
+                            if session == "PRE" and pre_p.get("start") and ts >= pre_p["start"]:
+                                session_price = cl
+                                break
+                            elif session == "POST" and reg_p.get("end") and ts >= reg_p["end"]:
+                                session_price = cl
+                                break
+
+                # Fallback to meta prices if quote series is empty
+                if session_price is None:
+                    if session == "PRE":
+                        session_price = meta.get("preMarketPrice") or meta.get("fulldayPrice")
+                    elif session == "POST":
+                        session_price = meta.get("postMarketPrice") or meta.get("fulldayPrice")
+
+                if session_price and reg_price and abs(float(session_price) - float(reg_price)) > 0.0001:
+                    diff = round(float(session_price) - float(reg_price), 2)
                     pct = round((diff / float(reg_price)) * 100, 2)
                     ext_info = {
                         "session": session,
-                        "price": round(float(last_close), 2),
+                        "price": round(float(session_price), 2),
                         "regularPrice": round(float(reg_price), 2),
                         "change": diff,
-                        "changePct": pct
+                        "changePct": pct,
+                        "time": int(now_ts)
                     }
 
             return reg_price, ext_info
