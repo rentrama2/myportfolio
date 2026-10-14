@@ -1,74 +1,72 @@
 {
-  "updated_at": "2026-10-14T09:52:37Z",
-  "updated_at_thai": "14 ต.ค. 2569 16:52 น.",
+  "updated_at": "2026-10-14T13:32:07Z",
+  "updated_at_thai": "14 ต.ค. 2569 20:32 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ราคาน้ำมันพุ่งสูงขึ้นเมื่ออิหร่านใช้กลยุทธ์ใหม่เพื่อกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
-      "title_en": "Oil prices rise as Iran deploys new tactics to target tankers",
-      "summary": "ราคาน้ำมันพุ่งสูงขึ้นเมื่ออิหร่านใช้กลยุทธ์ใหม่เพื่อกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-climb-traders-weigh-012735546.html",
-      "time": "6 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T09:45:52Z",
+      "title": "Consumer prices rose at 3.7% annual rate in September as gas costs skyrocket",
+      "title_en": "Consumer prices rose at 3.7% annual rate in September as gas costs skyrocket",
+      "summary": "The consumer price index was expected to increase 0.6% in September on a monthly basis and 3.6% from a year ago, according to the Dow Jones consensus forecast.",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html",
+      "time": "เมื่อสักครู่",
+      "publishedAt": "2026-10-14T13:31:46Z",
       "category": "COMMODITIES",
       "tickers": [
-        "XOM",
-        "CVX"
+        "DIA"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": true,
       "points": [
-        "ราคาน้ำมันพุ่งสูงขึ้นเมื่ออิหร่านใช้กลยุทธ์ใหม่เพื่อกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
-        "แหล่งข่าวอ้างอิง: Reuters (14/10/2026 09:45 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "The consumer price index was expected to increase 0.6% in September on a monthly basis and 3.6% from a year ago, according to the Dow Jones consensus forecast.",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 13:31 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #DIA"
       ],
       "fullArticle": [
-        "ราคาน้ำมันพุ่งสูงขึ้นเมื่ออิหร่านใช้กลยุทธ์ใหม่เพื่อกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
-        "ราคาน้ำมันพุ่งสูงขึ้นเมื่ออิหร่านใช้กลยุทธ์ใหม่เพื่อกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices rise as Iran deploys new tactics to target tankers\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Consumer prices rose at 3.7% annual rate in September as gas costs skyrocket",
+        "The consumer price index was expected to increase 0.6% in September on a monthly basis and 3.6% from a year ago, according to the Dow Jones consensus forecast.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Consumer prices rose at 3.7% annual rate in September as gas costs skyrocket\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "ดอลลาร์อ่อนค่าลงเนื่องจากนักลงทุนรอข้อมูล CPI วิทยากรของเฟด",
-      "title_en": "Dollar eases as investors await CPI data, Fed speakers",
-      "summary": "ดอลลาร์อ่อนค่าลงเนื่องจากนักลงทุนรอข้อมูล CPI วิทยากรของเฟด",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/currencies/articles/dollar-languishes-focus-turns-cpi-051448461.html",
-      "time": "37 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T09:14:51Z",
-      "category": "MACRO",
+      "title": "Bank of America shares open 7% lower after third-quarter revenue miss and Treasury penalty",
+      "title_en": "Bank of America shares open 7% lower after third-quarter revenue miss and Treasury penalty",
+      "summary": "Bank of America shares fell Wednesday after the company posted weaker-than-expected trading revenue and the impact of a $1.2 billion Treasury fine.",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html",
+      "time": "เมื่อสักครู่",
+      "publishedAt": "2026-10-14T13:31:33Z",
+      "category": "EARNINGS",
       "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
+        "TLT",
+        "BAC"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "ดอลลาร์อ่อนค่าลงเนื่องจากนักลงทุนรอข้อมูล CPI วิทยากรของเฟด",
-        "แหล่งข่าวอ้างอิง: Reuters (14/10/2026 09:14 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+        "Bank of America shares fell Wednesday after the company posted weaker-than-expected trading revenue and the impact of a $1.2 billion Treasury fine.",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 13:31 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT #BAC"
       ],
       "fullArticle": [
-        "ดอลลาร์อ่อนค่าลงเนื่องจากนักลงทุนรอข้อมูล CPI วิทยากรของเฟด",
-        "ดอลลาร์อ่อนค่าลงเนื่องจากนักลงทุนรอข้อมูล CPI วิทยากรของเฟด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dollar eases as investors await CPI data, Fed speakers\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Bank of America shares open 7% lower after third-quarter revenue miss and Treasury penalty",
+        "Bank of America shares fell Wednesday after the company posted weaker-than-expected trading revenue and the impact of a $1.2 billion Treasury fine.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank of America shares open 7% lower after third-quarter revenue miss and Treasury penalty\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-3",
-      "title": "IEA ปรับลดแนวโน้มอุปสงค์น้ำมันในปี 2569 เนื่องจากวิกฤตดีเซล สงครามตะวันออกกลางกระทบต่อตลาด",
-      "title_en": "IEA cuts 2026 oil demand outlook as diesel crisis, Mideast war disrupt markets",
-      "summary": "IEA ปรับลดแนวโน้มอุปสงค์น้ำมันในปี 2569 เนื่องจากวิกฤตดีเซล สงครามตะวันออกกลางกระทบต่อตลาด",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/iea-cuts-2026-oil-demand-085128580.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T08:51:28Z",
+      "title": "Energy agency lowers world oil demand forecast for the year",
+      "title_en": "Energy agency lowers world oil demand forecast for the year",
+      "summary": "Energy agency lowers world oil demand forecast for the year",
+      "source": "Associated Press",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/energy-agency-lowers-world-oil-131330617.html",
+      "time": "18 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T13:13:30Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
@@ -78,25 +76,53 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "IEA ปรับลดแนวโน้มอุปสงค์น้ำมันในปี 2569 เนื่องจากวิกฤตดีเซล สงครามตะวันออกกลางกระทบต่อตลาด",
-        "แหล่งข่าวอ้างอิง: Investing.com (14/10/2026 08:51 UTC)",
+        "Energy agency lowers world oil demand forecast for the year",
+        "แหล่งข่าวอ้างอิง: Associated Press (14/10/2026 13:13 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "IEA ปรับลดแนวโน้มอุปสงค์น้ำมันในปี 2569 เนื่องจากวิกฤตดีเซล สงครามตะวันออกกลางกระทบต่อตลาด",
-        "IEA ปรับลดแนวโน้มอุปสงค์น้ำมันในปี 2569 เนื่องจากวิกฤตดีเซล สงครามตะวันออกกลางกระทบต่อตลาด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"IEA cuts 2026 oil demand outlook as diesel crisis, Mideast war disrupt markets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Energy agency lowers world oil demand forecast for the year",
+        "Energy agency lowers world oil demand forecast for the year",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Energy agency lowers world oil demand forecast for the year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-4",
-      "title": "หุ้นทรงตัวเนื่องจากผู้ผลิตชิปฟื้นตัวก่อนข้อมูลเงินเฟ้อของสหรัฐฯ",
-      "title_en": "Stocks steady as chipmakers recover ahead of US inflation data",
-      "summary": "หุ้นทรงตัวเนื่องจากผู้ผลิตชิปฟื้นตัวก่อนข้อมูลเงินเฟ้อของสหรัฐฯ",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/asia-shares-edge-chip-selloff-015610496.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T08:51:11Z",
+      "title": "Stock Market Today: Dow Falls On Surprise CPI Inflation Data; Bank Of America Dives On Results (Live Coverage)",
+      "title_en": "Stock Market Today: Dow Falls On Surprise CPI Inflation Data; Bank Of America Dives On Results (Live Coverage)",
+      "summary": "Stock Market Today: Dow Falls On Surprise CPI Inflation Data; Bank Of America Dives On Results (Live Coverage)",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/a9aa7eaa-2df2-3f6f-b548-5269d49f67bc/stock-market-today%3A-dow-falls.html",
+      "time": "19 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T13:12:16Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "DIA",
+        "BAC"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Stock Market Today: Dow Falls On Surprise CPI Inflation Data; Bank Of America Dives On Results (Live Coverage)",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (14/10/2026 13:12 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #DIA #BAC"
+      ],
+      "fullArticle": [
+        "Stock Market Today: Dow Falls On Surprise CPI Inflation Data; Bank Of America Dives On Results (Live Coverage)",
+        "Stock Market Today: Dow Falls On Surprise CPI Inflation Data; Bank Of America Dives On Results (Live Coverage)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Dow Falls On Surprise CPI Inflation Data; Bank Of America Dives On Results (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "Sector Update: Energy",
+      "title_en": "Sector Update: Energy",
+      "summary": "Sector Update: Energy",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/sector-energy-131116423.html",
+      "time": "20 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T13:11:16Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -107,53 +133,25 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "หุ้นทรงตัวเนื่องจากผู้ผลิตชิปฟื้นตัวก่อนข้อมูลเงินเฟ้อของสหรัฐฯ",
-        "แหล่งข่าวอ้างอิง: Reuters (14/10/2026 08:51 UTC)",
+        "Sector Update: Energy",
+        "แหล่งข่าวอ้างอิง: MT Newswires (14/10/2026 13:11 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "หุ้นทรงตัวเนื่องจากผู้ผลิตชิปฟื้นตัวก่อนข้อมูลเงินเฟ้อของสหรัฐฯ",
-        "หุ้นทรงตัวเนื่องจากผู้ผลิตชิปฟื้นตัวก่อนข้อมูลเงินเฟ้อของสหรัฐฯ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks steady as chipmakers recover ahead of US inflation data\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "ปริมาณสำรองน้ำมันของสหรัฐฯ ทรงตัวในสัปดาห์ที่แล้ว แต่การถอนตัวที่เกี่ยวข้องกับพายุเฮอริเคนและอิหร่านยังดำเนินอยู่",
-      "title_en": "The US oil reserve stayed steady last week, but hurricane- and Iran-related withdrawals are on tap",
-      "summary": "ปริมาณสำรองน้ำมันของสหรัฐฯ ทรงตัวในสัปดาห์ที่แล้ว แต่การถอนตัวที่เกี่ยวข้องกับพายุเฮอริเคนและอิหร่านยังดำเนินอยู่",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/economy/article/the-us-oil-reserve-stayed-steady-last-week-but-hurricane--and-iran-related-withdrawals-are-on-tap-201811648.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T08:48:54Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ปริมาณสำรองน้ำมันของสหรัฐฯ ทรงตัวในสัปดาห์ที่แล้ว แต่การถอนตัวที่เกี่ยวข้องกับพายุเฮอริเคนและอิหร่านยังดำเนินอยู่",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (14/10/2026 08:48 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ปริมาณสำรองน้ำมันของสหรัฐฯ ทรงตัวในสัปดาห์ที่แล้ว แต่การถอนตัวที่เกี่ยวข้องกับพายุเฮอริเคนและอิหร่านยังดำเนินอยู่",
-        "ปริมาณสำรองน้ำมันของสหรัฐฯ ทรงตัวในสัปดาห์ที่แล้ว แต่การถอนตัวที่เกี่ยวข้องกับพายุเฮอริเคนและอิหร่านยังดำเนินอยู่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"The US oil reserve stayed steady last week, but hurricane- and Iran-related withdrawals are on tap\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Sector Update: Energy",
+        "Sector Update: Energy",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Sector Update: Energy\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-6",
-      "title": "ASML กล่าวว่าจะได้รับดอกเบี้ยคำสั่งซื้อจนถึงปี 2573 เนื่องจากกำไรทำลายความคาดหวัง",
-      "title_en": "ASML says it's getting order interest through 2030 as profit smashes expectations",
-      "summary": "ASML กล่าวว่าลูกค้าบางราย \"แสดงความสนใจ\" ในการสั่งซื้อกับบริษัทในปี 2572 และ 2573 ทำให้นักลงทุนมองเห็นความต้องการในระยะยาว",
+      "title": "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
+      "title_en": "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
+      "summary": "Morgan Stanley topped expectations on the top and bottom lines for the third quarter.",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/asml-3q-earnings-ai-demand-orders-capacity.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T08:45:13Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/morgan-stanley-ms-q3-2026-earnings.html",
+      "time": "21 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T13:11:07Z",
       "category": "EARNINGS",
       "tickers": [
         "SPY",
@@ -163,184 +161,185 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ASML กล่าวว่าลูกค้าบางราย \"แสดงความสนใจ\" ในการสั่งซื้อกับบริษัทในปี 2572 และ 2573 ทำให้นักลงทุนมองเห็นความต้องการในระยะยาว",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 08:45 UTC)",
+        "Morgan Stanley topped expectations on the top and bottom lines for the third quarter.",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 13:11 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "ASML กล่าวว่าจะได้รับดอกเบี้ยคำสั่งซื้อจนถึงปี 2573 เนื่องจากกำไรทำลายความคาดหวัง",
-        "ASML กล่าวว่าลูกค้าบางราย \"แสดงความสนใจ\" ในการสั่งซื้อกับบริษัทในปี 2572 และ 2573 ทำให้นักลงทุนมองเห็นความต้องการในระยะยาว",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"ASML says it's getting order interest through 2030 as profit smashes expectations\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
+        "Morgan Stanley topped expectations on the top and bottom lines for the third quarter.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-7",
-      "title": "หัวหน้า Crypto, CEO และ F1: กิจกรรมทางธุรกิจของสิงคโปร์กำลังเติบโตอย่างรวดเร็ว",
-      "title_en": "Crypto bosses, CEOs and F1: Singapore's business events boom gathers pace",
-      "summary": "สัปดาห์การแข่งขัน Formula 1 ของสิงคโปร์เป็นประเด็นทางธุรกิจที่สำคัญ เนื่องจากมีการประชุมจำนวนมากขึ้นในช่วงเดียวกับรายการกรังด์ปรีซ์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/crypto-bosses-ceos-and-f1-singapore-events-boom-gathers-pace-.html",
-      "time": "5 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T04:41:29Z",
-      "category": "TECH",
+      "title": "Update: US Equity Futures Slightly Lower as Traders Assess Corporate Earnings, Key Inflation Data",
+      "title_en": "Update: US Equity Futures Slightly Lower as Traders Assess Corporate Earnings, Key Inflation Data",
+      "summary": "Update: US Equity Futures Slightly Lower as Traders Assess Corporate Earnings, Key Inflation Data",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-futures-slightly-lower-130141217.html",
+      "time": "30 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T13:01:41Z",
+      "category": "EARNINGS",
       "tickers": [
-        "COIN"
+        "SPY",
+        "DIA"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "สัปดาห์การแข่งขัน Formula 1 ของสิงคโปร์เป็นประเด็นทางธุรกิจที่สำคัญ เนื่องจากมีการประชุมจำนวนมากขึ้นในช่วงเดียวกับรายการกรังด์ปรีซ์",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 04:41 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #COIN"
+        "Update: US Equity Futures Slightly Lower as Traders Assess Corporate Earnings, Key Inflation Data",
+        "แหล่งข่าวอ้างอิง: MT Newswires (14/10/2026 13:01 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "หัวหน้า Crypto, CEO และ F1: กิจกรรมทางธุรกิจของสิงคโปร์กำลังเติบโตอย่างรวดเร็ว",
-        "สัปดาห์การแข่งขัน Formula 1 ของสิงคโปร์เป็นประเด็นทางธุรกิจที่สำคัญ เนื่องจากมีการประชุมจำนวนมากขึ้นในช่วงเดียวกับรายการกรังด์ปรีซ์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Crypto bosses, CEOs and F1: Singapore's business events boom gathers pace\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Update: US Equity Futures Slightly Lower as Traders Assess Corporate Earnings, Key Inflation Data",
+        "Update: US Equity Futures Slightly Lower as Traders Assess Corporate Earnings, Key Inflation Data",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Futures Slightly Lower as Traders Assess Corporate Earnings, Key Inflation Data\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-8",
-      "title": "'Godzilla El Niño' สร้างความเสียหายให้กับการคาดการณ์เงินเฟ้อของธนาคารกลางฟิลิปปินส์",
-      "title_en": "'Godzilla El Niño' is wreaking havoc with Philippine central bank's inflation forecasts",
-      "summary": "ธนาคารกลางฟิลิปปินส์กำลังดำเนินนโยบายสถานการณ์สำหรับปรากฏการณ์เอลนีโญที่รุนแรง นอกเหนือจากเหตุการณ์น้ำมันตกตะลึง โดยอัตราเงินเฟ้อพุ่งสูงสุดในรอบสามปี",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/godzilla-el-nino-asia-inflation-philippines.html",
-      "time": "5 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T04:24:28Z",
-      "category": "COMMODITIES",
+      "title": "ATB Cormark Capital Markets Survey Finds Canadian Energy Sector Shifting Toward Growth",
+      "title_en": "ATB Cormark Capital Markets Survey Finds Canadian Energy Sector Shifting Toward Growth",
+      "summary": "ATB Cormark Capital Markets Survey Finds Canadian Energy Sector Shifting Toward Growth",
+      "source": "CNW Group",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/atb-cormark-capital-markets-survey-130000166.html",
+      "time": "32 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T13:00:00Z",
+      "category": "MACRO",
       "tickers": [
-        "XOM",
-        "CVX"
+        "SPY",
+        "QQQ",
+        "TLT"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ธนาคารกลางฟิลิปปินส์กำลังดำเนินนโยบายสถานการณ์สำหรับปรากฏการณ์เอลนีโญที่รุนแรง นอกเหนือจากเหตุการณ์น้ำมันตกตะลึง โดยอัตราเงินเฟ้อพุ่งสูงสุดในรอบสามปี",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 04:24 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "ATB Cormark Capital Markets Survey Finds Canadian Energy Sector Shifting Toward Growth",
+        "แหล่งข่าวอ้างอิง: CNW Group (14/10/2026 13:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "'Godzilla El Niño' สร้างความเสียหายให้กับการคาดการณ์เงินเฟ้อของธนาคารกลางฟิลิปปินส์",
-        "ธนาคารกลางฟิลิปปินส์กำลังดำเนินนโยบายสถานการณ์สำหรับปรากฏการณ์เอลนีโญที่รุนแรง นอกเหนือจากเหตุการณ์น้ำมันตกตะลึง โดยอัตราเงินเฟ้อพุ่งสูงสุดในรอบสามปี",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"'Godzilla El Niño' is wreaking havoc with Philippine central bank's inflation forecasts\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ATB Cormark Capital Markets Survey Finds Canadian Energy Sector Shifting Toward Growth",
+        "ATB Cormark Capital Markets Survey Finds Canadian Energy Sector Shifting Toward Growth",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"ATB Cormark Capital Markets Survey Finds Canadian Energy Sector Shifting Toward Growth\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-9",
-      "title": "การส่งออกและนำเข้าของจีนพุ่งเกินคาดในเดือนกันยายน",
-      "title_en": "China's exports and imports surge past expectations in September",
-      "summary": "หน่วยงานศุลกากรของประเทศเปิดเผยข้อมูลการค้าเดือนกันยายนเมื่อวันพุธ",
+      "title": "Inflation data, Bank of America's penalty, Apple's new home hub and more in Morning Squawk",
+      "title_en": "Inflation data, Bank of America's penalty, Apple's new home hub and more in Morning Squawk",
+      "summary": "Here are five key things investors need to know to start the trading day.",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/chinas-exports-likely-grew-by-double-digits-in-september.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T03:41:36Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/5-things-to-know-before-the-stock-market-opens.html",
+      "time": "46 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T12:45:09Z",
       "category": "MACRO",
       "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "หน่วยงานศุลกากรของประเทศเปิดเผยข้อมูลการค้าเดือนกันยายนเมื่อวันพุธ",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 03:41 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "การส่งออกและนำเข้าของจีนพุ่งเกินคาดในเดือนกันยายน",
-        "หน่วยงานศุลกากรของประเทศเปิดเผยข้อมูลการค้าเดือนกันยายนเมื่อวันพุธ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"China's exports and imports surge past expectations in September\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "Anthropic เรียกร้องให้ศาลในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์การขึ้นบัญชีดำของกระทรวงกลาโหม",
-      "title_en": "Anthropic urges court in Washington, D.C. to rehear appeal of Pentagon blacklisting",
-      "summary": "Anthropic กำลังขอให้ศาลรัฐบาลกลางในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์ในคดีที่เกี่ยวข้องกับการขึ้นบัญชีดำโมเดล AI ของบริษัท Pentagon",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/anthropic-wants-court-in-dc-to-rehear-appeal-of-pentagon-blacklist-.html",
-      "time": "8 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T01:35:51Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
+        "AAPL",
+        "BAC"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Anthropic กำลังขอให้ศาลรัฐบาลกลางในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์ในคดีที่เกี่ยวข้องกับการขึ้นบัญชีดำโมเดล AI ของบริษัท Pentagon",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 01:35 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+        "Here are five key things investors need to know to start the trading day.",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 12:45 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL #BAC"
       ],
       "fullArticle": [
-        "Anthropic เรียกร้องให้ศาลในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์การขึ้นบัญชีดำของกระทรวงกลาโหม",
-        "Anthropic กำลังขอให้ศาลรัฐบาลกลางในกรุงวอชิงตัน ดี.ซี. ซักซ้อมการอุทธรณ์ในคดีที่เกี่ยวข้องกับการขึ้นบัญชีดำโมเดล AI ของบริษัท Pentagon",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic urges court in Washington, D.C. to rehear appeal of Pentagon blacklisting\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Inflation data, Bank of America's penalty, Apple's new home hub and more in Morning Squawk",
+        "Here are five key things investors need to know to start the trading day.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Inflation data, Bank of America's penalty, Apple's new home hub and more in Morning Squawk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-11",
-      "title": "FBI จับกุมพนักงาน Saudi OpenAI ที่ถูกกล่าวหาว่าปลูกอุปกรณ์บันทึกเสียงในห้องประชุม",
-      "title_en": "FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room",
-      "summary": "เหตุการณ์ในวันอังคารเกิดขึ้นในขณะที่ผู้สร้าง ChatGPT พร้อมด้วยคู่แข่ง เผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับหลักปฏิบัติด้านความปลอดภัย",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/13/openai-employee-arrested-recording-device.html",
-      "time": "9 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T00:13:45Z",
+      "id": "news-10",
+      "title": "AITX's RAD Adds Another Municipal Customer with Seven ROSA Unit Order",
+      "title_en": "AITX's RAD Adds Another Municipal Customer with Seven ROSA Unit Order",
+      "summary": "AITX's RAD Adds Another Municipal Customer with Seven ROSA Unit Order",
+      "source": "TMX Newsfile",
+      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitxs-rad-adds-another-municipal-124000580.html",
+      "time": "52 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T12:40:00Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
         "AAPL",
         "MSFT"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "เหตุการณ์ในวันอังคารเกิดขึ้นในขณะที่ผู้สร้าง ChatGPT พร้อมด้วยคู่แข่ง เผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับหลักปฏิบัติด้านความปลอดภัย",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 00:13 UTC)",
+        "AITX's RAD Adds Another Municipal Customer with Seven ROSA Unit Order",
+        "แหล่งข่าวอ้างอิง: TMX Newsfile (14/10/2026 12:40 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "FBI จับกุมพนักงาน Saudi OpenAI ที่ถูกกล่าวหาว่าปลูกอุปกรณ์บันทึกเสียงในห้องประชุม",
-        "เหตุการณ์ในวันอังคารเกิดขึ้นในขณะที่ผู้สร้าง ChatGPT พร้อมด้วยคู่แข่ง เผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับหลักปฏิบัติด้านความปลอดภัย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "AITX's RAD Adds Another Municipal Customer with Seven ROSA Unit Order",
+        "AITX's RAD Adds Another Municipal Customer with Seven ROSA Unit Order",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX's RAD Adds Another Municipal Customer with Seven ROSA Unit Order\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
+      "title": "Global X Launches Asia Semiconductor ETF to Harness Region’s Industry Leadership",
+      "title_en": "Global X Launches Asia Semiconductor ETF to Harness Region’s Industry Leadership",
+      "summary": "Global X Launches Asia Semiconductor ETF to Harness Region’s Industry Leadership",
+      "source": "Business Wire",
+      "sourceUrl": "https://finance.yahoo.com/technology/articles/global-x-launches-asia-semiconductor-123000992.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T12:30:00Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Global X Launches Asia Semiconductor ETF to Harness Region’s Industry Leadership",
+        "แหล่งข่าวอ้างอิง: Business Wire (14/10/2026 12:30 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "Global X Launches Asia Semiconductor ETF to Harness Region’s Industry Leadership",
+        "Global X Launches Asia Semiconductor ETF to Harness Region’s Industry Leadership",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Global X Launches Asia Semiconductor ETF to Harness Region’s Industry Leadership\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-12",
-      "title": "โกลด์แมนกล่าวว่านักลงทุนกำลังมองหาการเติบโตของธุรกิจจีนในต่างประเทศที่ 'มีกำไร'",
-      "title_en": "Goldman says investors are looking for 'profitable' Chinese business growth overseas",
-      "summary": "ความต้องการของผู้บริโภคที่ซบเซาในจีนได้ผลักดันให้บริษัทหลายแห่ง เช่น แบรนด์รถยนต์ไฟฟ้า เร่งแผนการเข้าสู่ประเทศอื่น",
+      "title": "BlackRock draws $205 billion in client funds as quarterly profit beats estimates",
+      "title_en": "BlackRock draws $205 billion in client funds as quarterly profit beats estimates",
+      "summary": "BlackRock's assets under management — which determine a large chunk of its earnings — rose to $15.49 trillion, from $13.46 trillion a year earlier.",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/goldman-says-investors-seek-profitable-chinese-business-growth-abroad.html",
-      "time": "10 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-13T23:05:12Z",
-      "category": "COMMODITIES",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/blackrock-profit-jumps-as-resilient-markets-boost-fees.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T11:57:19Z",
+      "category": "EARNINGS",
       "tickers": [
-        "XOM",
-        "CVX"
+        "SPY",
+        "DIA"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ความต้องการของผู้บริโภคที่ซบเซาในจีนได้ผลักดันให้บริษัทหลายแห่ง เช่น แบรนด์รถยนต์ไฟฟ้า เร่งแผนการเข้าสู่ประเทศอื่น",
-        "แหล่งข่าวอ้างอิง: CNBC (13/10/2026 23:05 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "BlackRock's assets under management — which determine a large chunk of its earnings — rose to $15.49 trillion, from $13.46 trillion a year earlier.",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 11:57 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "โกลด์แมนกล่าวว่านักลงทุนกำลังมองหาการเติบโตของธุรกิจจีนในต่างประเทศที่ 'มีกำไร'",
-        "ความต้องการของผู้บริโภคที่ซบเซาในจีนได้ผลักดันให้บริษัทหลายแห่ง เช่น แบรนด์รถยนต์ไฟฟ้า เร่งแผนการเข้าสู่ประเทศอื่น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Goldman says investors are looking for 'profitable' Chinese business growth overseas\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "BlackRock draws $205 billion in client funds as quarterly profit beats estimates",
+        "BlackRock's assets under management — which determine a large chunk of its earnings — rose to $15.49 trillion, from $13.46 trillion a year earlier.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BlackRock draws $205 billion in client funds as quarterly profit beats estimates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
