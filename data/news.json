@@ -1,130 +1,273 @@
 {
-  "updated_at": "2026-10-14T18:09:44Z",
-  "updated_at_thai": "15 ต.ค. 2569 01:09 น.",
+  "updated_at": "2026-10-14T21:39:04Z",
+  "updated_at_thai": "15 ต.ค. 2569 04:39 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ราคาน้ำมันเพิ่มขึ้นจากการโจมตีในซาอุดิอาระเบีย กลยุทธ์ใหม่ของอิหร่านในการกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
-      "title_en": "Oil prices gain on attacks in Saudi Arabia, Iran's new tactics to target tankers",
-      "summary": "ราคาน้ำมันเพิ่มขึ้นจากการโจมตีในซาอุดิอาระเบีย กลยุทธ์ใหม่ของอิหร่านในการกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-climb-traders-weigh-012735546.html",
-      "time": "8 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T18:01:43Z",
-      "category": "COMMODITIES",
+      "title": "OpenAI ถูกฟ้องโดย 8 รัฐเกี่ยวกับข้อกังวลด้านความปลอดภัยของ ChatGPT",
+      "title_en": "OpenAI sued by 8 states over ChatGPT safety concerns",
+      "summary": "OpenAI กำลังเผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับแนวทางปฏิบัติด้านความปลอดภัย รวมถึงวิธีที่บริษัททำงานเพื่อปกป้องเด็กๆ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html",
+      "time": "29 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T21:09:20Z",
+      "category": "TECH",
       "tickers": [
-        "XOM",
-        "CVX"
+        "NVDA",
+        "AAPL",
+        "MSFT"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": true,
       "points": [
-        "ราคาน้ำมันเพิ่มขึ้นจากการโจมตีในซาอุดิอาระเบีย กลยุทธ์ใหม่ของอิหร่านในการกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
-        "แหล่งข่าวอ้างอิง: Reuters (14/10/2026 18:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "OpenAI กำลังเผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับแนวทางปฏิบัติด้านความปลอดภัย รวมถึงวิธีที่บริษัททำงานเพื่อปกป้องเด็กๆ",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 21:09 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "ราคาน้ำมันเพิ่มขึ้นจากการโจมตีในซาอุดิอาระเบีย กลยุทธ์ใหม่ของอิหร่านในการกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
-        "ราคาน้ำมันเพิ่มขึ้นจากการโจมตีในซาอุดิอาระเบีย กลยุทธ์ใหม่ของอิหร่านในการกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices gain on attacks in Saudi Arabia, Iran's new tactics to target tankers\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "OpenAI ถูกฟ้องโดย 8 รัฐเกี่ยวกับข้อกังวลด้านความปลอดภัยของ ChatGPT",
+        "OpenAI กำลังเผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับแนวทางปฏิบัติด้านความปลอดภัย รวมถึงวิธีที่บริษัททำงานเพื่อปกป้องเด็กๆ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI sued by 8 states over ChatGPT safety concerns\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "อัปเดต: หุ้นร่วงลงระหว่างวันเนื่องจากผู้ค้าแยกวิเคราะห์ข้อมูลเงินเฟ้อ ผลประกอบการของ Bank of America พลาด",
-      "title_en": "Update: Equities Fall Intraday as Traders Parse Inflation Data, Bank of America's Earnings Miss",
-      "summary": "อัปเดต: หุ้นร่วงลงระหว่างวันเนื่องจากผู้ค้าแยกวิเคราะห์ข้อมูลเงินเฟ้อ ผลประกอบการของ Bank of America พลาด",
+      "title": "อัปเดต: Nasdaq, S&P 500 ร่วงลงเป็นช่วงที่สามติดต่อกันตามข้อมูล CPI ที่ร้อนแรง",
+      "title_en": "Update: Nasdaq, S&P 500 Fall for Third Straight Session Following Hot CPI Data",
+      "summary": "อัปเดต: Nasdaq, S&P 500 ร่วงลงเป็นช่วงที่สามติดต่อกันตามข้อมูล CPI ที่ร้อนแรง",
       "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/equities-fall-intraday-traders-parse-175654183.html",
-      "time": "12 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T17:56:54Z",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-p-500-fall-third-210112489.html",
+      "time": "37 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T21:01:12Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "อัปเดต: Nasdaq, S&P 500 ร่วงลงเป็นช่วงที่สามติดต่อกันตามข้อมูล CPI ที่ร้อนแรง",
+        "แหล่งข่าวอ้างอิง: MT Newswires (14/10/2026 21:01 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ"
+      ],
+      "fullArticle": [
+        "อัปเดต: Nasdaq, S&P 500 ร่วงลงเป็นช่วงที่สามติดต่อกันตามข้อมูล CPI ที่ร้อนแรง",
+        "อัปเดต: Nasdaq, S&P 500 ร่วงลงเป็นช่วงที่สามติดต่อกันตามข้อมูล CPI ที่ร้อนแรง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: Nasdaq, S&P 500 Fall for Third Straight Session Following Hot CPI Data\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
+      "title_en": "Basic Materials Roundup: Market Talk",
+      "summary": "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
+      "source": "The Wall Street Journal",
+      "sourceUrl": "https://finance.yahoo.com/m/67ccf912-6817-35f6-819d-a73232b9f325/basic-materials-roundup%3A.html",
+      "time": "39 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T21:00:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
+        "แหล่งข่าวอ้างอิง: The Wall Street Journal (14/10/2026 21:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
+        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Basic Materials Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
+      "title_en": "Energy & Utilities Roundup: Market Talk",
+      "summary": "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
+      "source": "The Wall Street Journal",
+      "sourceUrl": "https://finance.yahoo.com/m/9aa37204-9e35-38ae-996e-febbb3b79bc5/energy-%26-utilities-roundup%3A.html",
+      "time": "41 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T20:58:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
+        "แหล่งข่าวอ้างอิง: The Wall Street Journal (14/10/2026 20:58 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
+        "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Energy & Utilities Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "ปัญหาการขาดแคลนน้ำมันดีเซลทั่วโลกอาจคงอยู่ไปจนถึงปี 2027 Bain มีแนวทางสำหรับผู้ส่งสินค้า",
+      "title_en": "Global Diesel Shortages Could Last Into 2027. Bain Has a Playbook for Shippers",
+      "summary": "ปัญหาการขาดแคลนน้ำมันดีเซลทั่วโลกอาจคงอยู่ไปจนถึงปี 2027 Bain มีแนวทางสำหรับผู้ส่งสินค้า",
+      "source": "Sourcing Journal",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/global-diesel-shortages-could-last-205215069.html",
+      "time": "46 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T20:52:15Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ปัญหาการขาดแคลนน้ำมันดีเซลทั่วโลกอาจคงอยู่ไปจนถึงปี 2027 Bain มีแนวทางสำหรับผู้ส่งสินค้า",
+        "แหล่งข่าวอ้างอิง: Sourcing Journal (14/10/2026 20:52 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "ปัญหาการขาดแคลนน้ำมันดีเซลทั่วโลกอาจคงอยู่ไปจนถึงปี 2027 Bain มีแนวทางสำหรับผู้ส่งสินค้า",
+        "ปัญหาการขาดแคลนน้ำมันดีเซลทั่วโลกอาจคงอยู่ไปจนถึงปี 2027 Bain มีแนวทางสำหรับผู้ส่งสินค้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Global Diesel Shortages Could Last Into 2027. Bain Has a Playbook for Shippers\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "หุ้น CoreWeave ร่วงลงเนื่องจากอัตราผลตอบแทนพันธบัตรเกือบ 15% จากความกังวลเกี่ยวกับการยืมเงินจาก AI",
+      "title_en": "CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge",
+      "summary": "หุ้นของ CoreWeave ทรุดตัวลง 15% ขณะที่อัตราผลตอบแทนพันธบัตรพุ่งสูงขึ้นอีก",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/coreweave-stock-bond-yields-ai-debt.html",
+      "time": "52 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T20:46:32Z",
+      "category": "TECH",
+      "tickers": [
+        "TLT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "หุ้นของ CoreWeave ทรุดตัวลง 15% ขณะที่อัตราผลตอบแทนพันธบัตรพุ่งสูงขึ้นอีก",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 20:46 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+      ],
+      "fullArticle": [
+        "หุ้น CoreWeave ร่วงลงเนื่องจากอัตราผลตอบแทนพันธบัตรเกือบ 15% จากความกังวลเกี่ยวกับการยืมเงินจาก AI",
+        "หุ้นของ CoreWeave ทรุดตัวลง 15% ขณะที่อัตราผลตอบแทนพันธบัตรพุ่งสูงขึ้นอีก",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "ข้อเสนอซื้อของพนักงาน Anduril จะให้ความสำคัญกับการเริ่มต้นเทคโนโลยีการป้องกันที่ 90 พันล้านดอลลาร์",
+      "title_en": "Anduril employee tender offer would value the defense tech startup at $90 billion",
+      "summary": "Anduril เป็นผู้ชนะรายใหญ่จากการเติบโตอย่างรวดเร็วของเทคโนโลยีกลาโหมของสหรัฐฯ และแผนการของประธานาธิบดี Donald Trump ที่จะฟื้นฟูอุตสาหกรรมของกองทัพสหรัฐฯ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/anduril-tender-offer-valuation.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T20:24:13Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Anduril เป็นผู้ชนะรายใหญ่จากการเติบโตอย่างรวดเร็วของเทคโนโลยีกลาโหมของสหรัฐฯ และแผนการของประธานาธิบดี Donald Trump ที่จะฟื้นฟูอุตสาหกรรมของกองทัพสหรัฐฯ",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 20:24 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "ข้อเสนอซื้อของพนักงาน Anduril จะให้ความสำคัญกับการเริ่มต้นเทคโนโลยีการป้องกันที่ 90 พันล้านดอลลาร์",
+        "Anduril เป็นผู้ชนะรายใหญ่จากการเติบโตอย่างรวดเร็วของเทคโนโลยีกลาโหมของสหรัฐฯ และแผนการของประธานาธิบดี Donald Trump ที่จะฟื้นฟูอุตสาหกรรมของกองทัพสหรัฐฯ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anduril employee tender offer would value the defense tech startup at $90 billion\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "Morgan Stanley ติดอันดับท็อปประมาณการ เนื่องจากรายได้จากการซื้อขายตราสารทุนสูงกว่าที่คาดการณ์ไว้ 909 ล้านดอลลาร์",
+      "title_en": "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
+      "summary": "Morgan Stanley เหนือความคาดหวังในบรรทัดบนและล่างสำหรับไตรมาสที่สาม",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/morgan-stanley-ms-q3-2026-earnings.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T20:22:09Z",
       "category": "EARNINGS",
       "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Morgan Stanley เหนือความคาดหวังในบรรทัดบนและล่างสำหรับไตรมาสที่สาม",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 20:22 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "Morgan Stanley ติดอันดับท็อปประมาณการ เนื่องจากรายได้จากการซื้อขายตราสารทุนสูงกว่าที่คาดการณ์ไว้ 909 ล้านดอลลาร์",
+        "Morgan Stanley เหนือความคาดหวังในบรรทัดบนและล่างสำหรับไตรมาสที่สาม",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "หุ้น Bank of America ร่วงลงหลังจากพลาดรายรับในไตรมาสสามและการลงโทษตามกฎระเบียบ",
+      "title_en": "Bank of America shares drop after third-quarter revenue miss and regulatory penalty",
+      "summary": "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธหลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอกว่าคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T20:20:46Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "TLT",
         "BAC"
       ],
       "sentiment": "BEARISH",
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "อัปเดต: หุ้นร่วงลงระหว่างวันเนื่องจากผู้ค้าแยกวิเคราะห์ข้อมูลเงินเฟ้อ ผลประกอบการของ Bank of America พลาด",
-        "แหล่งข่าวอ้างอิง: MT Newswires (14/10/2026 17:56 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #BAC"
+        "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธหลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอกว่าคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 20:20 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT #BAC"
       ],
       "fullArticle": [
-        "อัปเดต: หุ้นร่วงลงระหว่างวันเนื่องจากผู้ค้าแยกวิเคราะห์ข้อมูลเงินเฟ้อ ผลประกอบการของ Bank of America พลาด",
-        "อัปเดต: หุ้นร่วงลงระหว่างวันเนื่องจากผู้ค้าแยกวิเคราะห์ข้อมูลเงินเฟ้อ ผลประกอบการของ Bank of America พลาด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: Equities Fall Intraday as Traders Parse Inflation Data, Bank of America's Earnings Miss\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้น Bank of America ร่วงลงหลังจากพลาดรายรับในไตรมาสสามและการลงโทษตามกฎระเบียบ",
+        "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธหลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอกว่าคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank of America shares drop after third-quarter revenue miss and regulatory penalty\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-3",
-      "title": "การอัปเดตกลุ่มธุรกิจ: หุ้นพลังงานเพิ่มขึ้นบ่ายวันพุธ",
-      "title_en": "Sector Update: Energy Stocks Rise Wednesday Afternoon",
-      "summary": "การอัปเดตกลุ่มธุรกิจ: หุ้นพลังงานเพิ่มขึ้นบ่ายวันพุธ",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-rise-wednesday-175153372.html",
-      "time": "17 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T17:51:53Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "การอัปเดตกลุ่มธุรกิจ: หุ้นพลังงานเพิ่มขึ้นบ่ายวันพุธ",
-        "แหล่งข่าวอ้างอิง: MT Newswires (14/10/2026 17:51 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "การอัปเดตกลุ่มธุรกิจ: หุ้นพลังงานเพิ่มขึ้นบ่ายวันพุธ",
-        "การอัปเดตกลุ่มธุรกิจ: หุ้นพลังงานเพิ่มขึ้นบ่ายวันพุธ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Sector Update: Energy Stocks Rise Wednesday Afternoon\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "เงินดอลลาร์สหรัฐแข็งค่าขึ้นเมื่อเทียบกับ Loonie เนื่องจาก CPI ที่สูงขึ้นทำให้เกิดการคาดการณ์การปรับขึ้นอัตราดอกเบี้ย",
-      "title_en": "US Dollar Strengthens Against The Loonie as Higher CPI Sparks Rate Hike Expectation",
-      "summary": "เงินดอลลาร์สหรัฐแข็งค่าขึ้นเมื่อเทียบกับ Loonie เนื่องจาก CPI ที่สูงขึ้นทำให้เกิดการคาดการณ์การปรับขึ้นอัตราดอกเบี้ย",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/currencies/articles/us-dollar-strengthens-against-loonie-174727408.html",
-      "time": "22 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T17:47:27Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "เงินดอลลาร์สหรัฐแข็งค่าขึ้นเมื่อเทียบกับ Loonie เนื่องจาก CPI ที่สูงขึ้นทำให้เกิดการคาดการณ์การปรับขึ้นอัตราดอกเบี้ย",
-        "แหล่งข่าวอ้างอิง: MT Newswires (14/10/2026 17:47 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "เงินดอลลาร์สหรัฐแข็งค่าขึ้นเมื่อเทียบกับ Loonie เนื่องจาก CPI ที่สูงขึ้นทำให้เกิดการคาดการณ์การปรับขึ้นอัตราดอกเบี้ย",
-        "เงินดอลลาร์สหรัฐแข็งค่าขึ้นเมื่อเทียบกับ Loonie เนื่องจาก CPI ที่สูงขึ้นทำให้เกิดการคาดการณ์การปรับขึ้นอัตราดอกเบี้ย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"US Dollar Strengthens Against The Loonie as Higher CPI Sparks Rate Hike Expectation\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "การโจมตีของฮูตีเพิ่มความเสี่ยงทางภูมิรัฐศาสตร์ครั้งใหม่เพื่อทำให้อัตราตู้คอนเทนเนอร์อ่อนตัวลง",
-      "title_en": "Houthi attacks add new geopolitical risk to softening container rates",
-      "summary": "การโจมตีของฮูตีเพิ่มความเสี่ยงทางภูมิรัฐศาสตร์ครั้งใหม่เพื่อทำให้อัตราตู้คอนเทนเนอร์อ่อนตัวลง",
-      "source": "FreightWaves",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/houthi-attacks-add-geopolitical-risk-174653409.html",
-      "time": "22 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T17:46:53Z",
+      "id": "news-10",
+      "title": "หุ้นของ Dell ร่วงลง 11% เป็นผู้นำในการขายศูนย์ข้อมูล เนื่องจากความกลัวเกี่ยวกับ 'จังหวะเวลา AI ขององค์กร'",
+      "title_en": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
+      "summary": "Barclays ปรับลดรุ่น Dell, HPE และ NetApp เนื่องจากข้อกังวลว่าการนำ AI ขององค์กรไปใช้ยังล่าช้า",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/dell-stock-barclays-enterprise-ai.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T20:19:25Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -135,24 +278,51 @@
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "การโจมตีของฮูตีเพิ่มความเสี่ยงทางภูมิรัฐศาสตร์ครั้งใหม่เพื่อทำให้อัตราตู้คอนเทนเนอร์อ่อนตัวลง",
-        "แหล่งข่าวอ้างอิง: FreightWaves (14/10/2026 17:46 UTC)",
+        "Barclays ปรับลดรุ่น Dell, HPE และ NetApp เนื่องจากข้อกังวลว่าการนำ AI ขององค์กรไปใช้ยังล่าช้า",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 20:19 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "การโจมตีของฮูตีเพิ่มความเสี่ยงทางภูมิรัฐศาสตร์ครั้งใหม่เพื่อทำให้อัตราตู้คอนเทนเนอร์อ่อนตัวลง",
-        "การโจมตีของฮูตีเพิ่มความเสี่ยงทางภูมิรัฐศาสตร์ครั้งใหม่เพื่อทำให้อัตราตู้คอนเทนเนอร์อ่อนตัวลง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Houthi attacks add new geopolitical risk to softening container rates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้นของ Dell ร่วงลง 11% เป็นผู้นำในการขายศูนย์ข้อมูล เนื่องจากความกลัวเกี่ยวกับ 'จังหวะเวลา AI ขององค์กร'",
+        "Barclays ปรับลดรุ่น Dell, HPE และ NetApp เนื่องจากข้อกังวลว่าการนำ AI ขององค์กรไปใช้ยังล่าช้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-6",
+      "id": "news-11",
+      "title": "Bank of America จ้างผู้รับเหมา 1,000 รายเพื่อแก้ไขข้อบกพร่องของซอฟต์แวร์ที่เปิดเผยโดย Mythos ของ Anthropic",
+      "title_en": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos",
+      "summary": "Bank of America จ้างผู้รับเหมา 1,000 รายเพื่อแก้ไขข้อบกพร่องของซอฟต์แวร์ที่เปิดเผยโดย Mythos ของ Anthropic โดยเสนอมุมมองที่หาได้ยากเกี่ยวกับต้นทุนที่เกี่ยวข้องกับการป้องกัน AI",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T20:06:28Z",
+      "category": "TECH",
+      "tickers": [
+        "BAC"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Bank of America จ้างผู้รับเหมา 1,000 รายเพื่อแก้ไขข้อบกพร่องของซอฟต์แวร์ที่เปิดเผยโดย Mythos ของ Anthropic โดยเสนอมุมมองที่หาได้ยากเกี่ยวกับต้นทุนที่เกี่ยวข้องกับการป้องกัน AI",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 20:06 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #BAC"
+      ],
+      "fullArticle": [
+        "Bank of America จ้างผู้รับเหมา 1,000 รายเพื่อแก้ไขข้อบกพร่องของซอฟต์แวร์ที่เปิดเผยโดย Mythos ของ Anthropic",
+        "Bank of America จ้างผู้รับเหมา 1,000 รายเพื่อแก้ไขข้อบกพร่องของซอฟต์แวร์ที่เปิดเผยโดย Mythos ของ Anthropic โดยเสนอมุมมองที่หาได้ยากเกี่ยวกับต้นทุนที่เกี่ยวข้องกับการป้องกัน AI",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-12",
       "title": "Sachin Katti จาก OpenAI จะลาออกจากบทบาทด้านโครงสร้างพื้นฐาน และดำรงตำแหน่งที่ปรึกษาต่อไป",
       "title_en": "OpenAI’s Sachin Katti to leave infrastructure role, stay on as advisor",
       "summary": "Katti กล่าวในโพสต์บน LinkedIn ว่าเขา \"ตัดสินใจที่จะก้าวต่อไปเพื่อสร้างสิ่งใหม่\"",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/14/openais-sachin-katti-to-leave-infrastructure-role-stay-on-as-advisor.html",
-      "time": "44 นาทีที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-14T17:25:34Z",
       "category": "TECH",
       "tickers": [
@@ -172,176 +342,6 @@
         "Sachin Katti จาก OpenAI จะลาออกจากบทบาทด้านโครงสร้างพื้นฐาน และดำรงตำแหน่งที่ปรึกษาต่อไป",
         "Katti กล่าวในโพสต์บน LinkedIn ว่าเขา \"ตัดสินใจที่จะก้าวต่อไปเพื่อสร้างสิ่งใหม่\"",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI’s Sachin Katti to leave infrastructure role, stay on as advisor\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "บัญชีทรัมป์ 26 ล้านบัญชีและอีก 8 พันล้านดอลลาร์ต่อมา นี่คือสิ่งที่คุณได้รับจริงๆ",
-      "title_en": "26 Million Trump Accounts and 8 Billion Dollars Later, Here Is What You Actually Get",
-      "summary": "บัญชีทรัมป์ 26 ล้านบัญชีและอีก 8 พันล้านดอลลาร์ต่อมา นี่คือสิ่งที่คุณได้รับจริงๆ",
-      "source": "24/7 Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/26-million-trump-accounts-8-172506499.html",
-      "time": "44 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T17:25:06Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "บัญชีทรัมป์ 26 ล้านบัญชีและอีก 8 พันล้านดอลลาร์ต่อมา นี่คือสิ่งที่คุณได้รับจริงๆ",
-        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (14/10/2026 17:25 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "บัญชีทรัมป์ 26 ล้านบัญชีและอีก 8 พันล้านดอลลาร์ต่อมา นี่คือสิ่งที่คุณได้รับจริงๆ",
-        "บัญชีทรัมป์ 26 ล้านบัญชีและอีก 8 พันล้านดอลลาร์ต่อมา นี่คือสิ่งที่คุณได้รับจริงๆ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"26 Million Trump Accounts and 8 Billion Dollars Later, Here Is What You Actually Get\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "อัตราเงินเฟ้อที่สูงเพียงใดจึงกลายเป็น 'ความจริงของชีวิต' ในสหรัฐอเมริกา",
-      "title_en": "How high inflation became a 'fact of life' in the U.S.",
-      "summary": "อัตราเงินเฟ้อของสหรัฐฯ ทรงตัวอยู่ในระดับสูงมาหลายปี ทำให้เกิดความกังวลต่อธนาคารกลางสหรัฐว่าผู้บริโภคอาจคาดหวังว่าราคาจะสูงอย่างดื้อรั้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/high-inflation-fed-expectations.html",
-      "time": "49 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T17:20:23Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "อัตราเงินเฟ้อของสหรัฐฯ ทรงตัวอยู่ในระดับสูงมาหลายปี ทำให้เกิดความกังวลต่อธนาคารกลางสหรัฐว่าผู้บริโภคอาจคาดหวังว่าราคาจะสูงอย่างดื้อรั้น",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 17:20 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "อัตราเงินเฟ้อที่สูงเพียงใดจึงกลายเป็น 'ความจริงของชีวิต' ในสหรัฐอเมริกา",
-        "อัตราเงินเฟ้อของสหรัฐฯ ทรงตัวอยู่ในระดับสูงมาหลายปี ทำให้เกิดความกังวลต่อธนาคารกลางสหรัฐว่าผู้บริโภคอาจคาดหวังว่าราคาจะสูงอย่างดื้อรั้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"How high inflation became a 'fact of life' in the U.S.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "Morgan Stanley ติดอันดับท็อปประมาณการ เนื่องจากรายได้จากการซื้อขายตราสารทุนสูงกว่าที่คาดการณ์ไว้ 909 ล้านดอลลาร์",
-      "title_en": "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
-      "summary": "Morgan Stanley เหนือความคาดหวังในบรรทัดบนและล่างสำหรับไตรมาสที่สาม",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/morgan-stanley-ms-q3-2026-earnings.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T17:08:23Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Morgan Stanley เหนือความคาดหวังในบรรทัดบนและล่างสำหรับไตรมาสที่สาม",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 17:08 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "Morgan Stanley ติดอันดับท็อปประมาณการ เนื่องจากรายได้จากการซื้อขายตราสารทุนสูงกว่าที่คาดการณ์ไว้ 909 ล้านดอลลาร์",
-        "Morgan Stanley เหนือความคาดหวังในบรรทัดบนและล่างสำหรับไตรมาสที่สาม",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "หุ้น CoreWeave ร่วงลงเนื่องจากอัตราผลตอบแทนพันธบัตรเกือบ 15% จากความกังวลเกี่ยวกับการยืมเงินจาก AI",
-      "title_en": "CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge",
-      "summary": "หุ้นของ CoreWeave ทรุดตัวลง 15% ขณะที่อัตราผลตอบแทนพันธบัตรพุ่งสูงขึ้นอีก",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/coreweave-stock-bond-yields-ai-debt.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T17:06:17Z",
-      "category": "TECH",
-      "tickers": [
-        "TLT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "หุ้นของ CoreWeave ทรุดตัวลง 15% ขณะที่อัตราผลตอบแทนพันธบัตรพุ่งสูงขึ้นอีก",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 17:06 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
-      ],
-      "fullArticle": [
-        "หุ้น CoreWeave ร่วงลงเนื่องจากอัตราผลตอบแทนพันธบัตรเกือบ 15% จากความกังวลเกี่ยวกับการยืมเงินจาก AI",
-        "หุ้นของ CoreWeave ทรุดตัวลง 15% ขณะที่อัตราผลตอบแทนพันธบัตรพุ่งสูงขึ้นอีก",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "หุ้น Bank of America ลดลง 8% หลังจากพลาดรายรับในไตรมาสสามและการลงโทษตามกฎระเบียบ",
-      "title_en": "Bank of America shares drop 8% after third-quarter revenue miss and regulatory penalty",
-      "summary": "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธหลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอกว่าคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T16:49:11Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "TLT",
-        "BAC"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธหลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอกว่าคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 16:49 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT #BAC"
-      ],
-      "fullArticle": [
-        "หุ้น Bank of America ลดลง 8% หลังจากพลาดรายรับในไตรมาสสามและการลงโทษตามกฎระเบียบ",
-        "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธหลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอกว่าคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank of America shares drop 8% after third-quarter revenue miss and regulatory penalty\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "Bending Spoons พุ่งสูงขึ้น 35% ขณะที่ Berkshire Hathaway ลงทุน 330 ล้านดอลลาร์",
-      "title_en": "Bending Spoons skyrockets 35% as Berkshire Hathaway makes $330 million investment",
-      "summary": "การลงทุนล่าสุดของ Berkshire เกิดขึ้นหลังจากการลงทุน 600 ล้านดอลลาร์ในการเสนอขายหุ้น IPO ของบริษัทในเดือนกรกฎาคมนี้",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/berkshire-hathaway-investment-bending-spoons.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T14:39:21Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "การลงทุนล่าสุดของ Berkshire เกิดขึ้นหลังจากการลงทุน 600 ล้านดอลลาร์ในการเสนอขายหุ้น IPO ของบริษัทในเดือนกรกฎาคมนี้",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 14:39 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "Bending Spoons พุ่งสูงขึ้น 35% ขณะที่ Berkshire Hathaway ลงทุน 330 ล้านดอลลาร์",
-        "การลงทุนล่าสุดของ Berkshire เกิดขึ้นหลังจากการลงทุน 600 ล้านดอลลาร์ในการเสนอขายหุ้น IPO ของบริษัทในเดือนกรกฎาคมนี้",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bending Spoons skyrockets 35% as Berkshire Hathaway makes $330 million investment\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
