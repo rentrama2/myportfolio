@@ -9948,6 +9948,19 @@
                 const accentColor = isPos ? '#10b981' : '#ef4444';
                 const badgeColor = isPos ? '#059669' : '#dc2626';
 
+                let sigBg = 'rgba(16, 185, 129, 0.15)';
+                let sigColor = '#059669';
+                let sigBorder = 'rgba(16, 185, 129, 0.35)';
+                if (item.signal === 'WATCH') {
+                    sigBg = 'rgba(234, 179, 8, 0.15)';
+                    sigColor = '#b45309';
+                    sigBorder = 'rgba(234, 179, 8, 0.35)';
+                } else if (item.signal === 'SELL') {
+                    sigBg = 'rgba(239, 68, 68, 0.15)';
+                    sigColor = '#dc2626';
+                    sigBorder = 'rgba(239, 68, 68, 0.35)';
+                }
+
                 html += `
                     <div class="market-snapshot-card" style="border-top: 3.5px solid ${accentColor} !important;" onclick="openTechnicalForTicker('${item.ticker}')" title="ดูสัญญาณทางเทคนิคและกราฟของ ${item.ticker}">
                         <!-- Top Row: Logo + Ticker on left, Signal on right -->
@@ -9956,7 +9969,7 @@
                                 <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border" width="22" height="22" style="object-fit: contain; background: #fff; padding: 1px;" onerror="this.style.display='none'">
                                 <span class="fw-bold" style="font-size: 0.90rem; color: var(--bs-heading-color, #0f172a);">${item.ticker}</span>
                             </div>
-                            <span class="badge fw-bold" style="font-size: 0.65rem; padding: 2px 6px; background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 9999px;">BUY</span>
+                            <span class="badge fw-bold" style="font-size: 0.65rem; padding: 2px 6px; background: ${sigBg}; color: ${sigColor}; border: 1px solid ${sigBorder}; border-radius: 9999px;">${item.signal || 'BUY'}</span>
                         </div>
                         <div class="text-truncate text-muted mb-2" style="font-size: 0.72rem; min-height: 17px;" title="${item.name}">${item.name}</div>
                         
@@ -12456,19 +12469,19 @@
 
         function getTechnicalData(ticker, tf) {
             ticker = (ticker || 'NVDA').toUpperCase().trim();
-            let preset = screenshotPresetData[ticker];
             let rankedItem = (typeof top100StocksData !== 'undefined' ? top100StocksData.find(x => x.ticker === ticker) : null)
-                || (typeof topRankedEtfsData !== 'undefined' ? topRankedEtfsData.find(x => x.ticker === ticker) : null);
+                || (typeof topEtfsData !== 'undefined' ? topEtfsData.find(x => x.ticker === ticker) : null);
+            let preset = screenshotPresetData[ticker];
 
             let curPrice = 0;
             if (typeof marketPrices !== 'undefined' && marketPrices[ticker] && marketPrices[ticker] > 0) {
                 curPrice = marketPrices[ticker];
             } else if (typeof pricesUpdateData !== 'undefined' && pricesUpdateData?.prices?.[ticker]) {
                 curPrice = typeof pricesUpdateData.prices[ticker] === 'object' ? pricesUpdateData.prices[ticker].price : pricesUpdateData.prices[ticker];
-            } else if (preset) {
-                curPrice = preset.price;
-            } else if (rankedItem) {
+            } else if (rankedItem && rankedItem.price) {
                 curPrice = rankedItem.price;
+            } else if (preset && preset.price) {
+                curPrice = preset.price;
             } else {
                 curPrice = 100;
             }
@@ -12476,10 +12489,10 @@
             let changePct = 0;
             if (typeof pricesUpdateData !== 'undefined' && pricesUpdateData?.prices?.[ticker] && typeof pricesUpdateData.prices[ticker] === 'object' && pricesUpdateData.prices[ticker].changePct !== undefined) {
                 changePct = pricesUpdateData.prices[ticker].changePct;
-            } else if (preset && preset.changePct !== undefined) {
-                changePct = preset.changePct;
             } else if (rankedItem && rankedItem.change !== undefined) {
                 changePct = rankedItem.change;
+            } else if (preset && preset.changePct !== undefined) {
+                changePct = preset.changePct;
             } else {
                 changePct = 0.22;
             }
@@ -12552,9 +12565,7 @@
             let targetTP = Number((resistance * 1.055).toFixed(2));
 
             let scores = {};
-            if (preset && preset.scores) {
-                scores = Object.assign({}, preset.scores);
-            } else if (rankedItem) {
+            if (rankedItem) {
                 let baseScore = 52;
                 if (rankedItem.signal === 'BUY') {
                     baseScore = rankedItem.score >= 6 ? 84 : 76;
@@ -12572,6 +12583,8 @@
                     '6M': Math.min(95, Math.max(15, Math.round(baseScore + (mom.m6 ? mom.m6 * 0.1 : 8)))),
                     '1Y': Math.min(95, Math.max(15, Math.round(baseScore + (mom.y1 ? mom.y1 * 0.05 : 10))))
                 };
+            } else if (preset && preset.scores) {
+                scores = Object.assign({}, preset.scores);
             } else {
                 let base = Math.max(15, Math.min(88, Math.round(52 + (changePct * 4))));
                 scores = {
@@ -12586,10 +12599,10 @@
 
             let score1D = scores['1D'];
             let signal = 'WATCH';
-            if (preset && preset.signal) {
-                signal = preset.signal;
-            } else if (rankedItem && rankedItem.signal) {
+            if (rankedItem && rankedItem.signal) {
                 signal = rankedItem.signal;
+            } else if (preset && preset.signal) {
+                signal = preset.signal;
             } else {
                 if (score1D >= 60) signal = 'BUY';
                 else if (score1D <= 40) signal = 'SELL';
@@ -13196,7 +13209,7 @@
             let isVolGood = curVol >= avg20;
 
             let rankedItem = (typeof top100StocksData !== 'undefined' ? top100StocksData.find(x => x.ticker === ticker) : null)
-                || (typeof topRankedEtfsData !== 'undefined' ? topRankedEtfsData.find(x => x.ticker === ticker) : null);
+                || (typeof topEtfsData !== 'undefined' ? topEtfsData.find(x => x.ticker === ticker) : null);
             let passCount = (isTrendBull ? 1 : 0) + (isRsiGood ? 1 : 0) + (isMacdBull ? 1 : 0) + (isBollHealthy ? 1 : 0) + (isVolGood ? 1 : 0);
             if (rankedItem) {
                 if (rankedItem.signal === 'BUY') {
