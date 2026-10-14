@@ -3384,7 +3384,10 @@
                                         <th class="py-3 border-0">จำนวนหุ้น</th>
                                         <th class="py-3 border-0">ราคาต้นทุน<br><small class="text-muted">(เฉลี่ยต่อหุ้น USD)</small></th>
                                         <th class="py-3 border-0">ทุนรวม (THB)<br><small class="text-muted" id="thCostSub">อิงเรทเงิน Dime</small></th>
-                                        <th class="py-3 border-0" style="background-color: #fffbeb;">ราคาปัจจุบัน (USD)<br><small class="text-muted fw-normal">คลิกแก้ได้</small></th>
+                                        <th class="py-3 border-0" style="background-color: #fffbeb;" id="thPriceCol">
+                                            <span id="thPriceTitle">ราคาปิด / ปัจจุบัน (USD)</span><br>
+                                            <small class="text-muted fw-normal" id="thPriceSub">คลิกแก้ราคาได้</small>
+                                        </th>
                                         <th class="py-3 border-0">มูลค่าล่าสุด<br><small class="text-muted">(USD / THB)</small></th>
                                         <th class="py-3 border-0">ผลตอบแทนรวม<br><small class="text-muted">(% / USD / THB)</small></th>
                                     </tr>
@@ -6860,6 +6863,23 @@
                 badge.innerText = status.text;
                 badge.className = `badge rounded-pill px-2 py-1 fw-bold ${status.badgeClass}`;
             }
+            const thTitle = document.getElementById('thPriceTitle');
+            const thSub = document.getElementById('thPriceSub');
+            if (thTitle && thSub) {
+                if (status.isOpen) {
+                    thTitle.innerText = '🟢 ราคาปัจจุบัน (Live USD)';
+                    thSub.innerText = 'อัปเดตแบบ Real-time';
+                } else if (status.session === 'PRE') {
+                    thTitle.innerText = '🔒 ราคาปิดตลาด (USD)';
+                    thSub.innerText = '🌅 แสดง Pre-Market ด้านล่าง';
+                } else if (status.session === 'POST') {
+                    thTitle.innerText = '🔒 ราคาปิดตลาด (USD)';
+                    thSub.innerText = '🌙 แสดง After-Hours ด้านล่าง';
+                } else {
+                    thTitle.innerText = '🔒 ราคาปิดล่าสุด (USD)';
+                    thSub.innerText = '⚪ ตลาดปิดทำการ';
+                }
+            }
         };
 
         // --- ระบบ Auto-Refresh ดึงราคาอัตโนมัติตามรอบเวลา ---
@@ -8505,12 +8525,13 @@
                     const sign = isUp ? '+' : '';
                     const badgeClass = isUp ? 'text-success bg-success-subtle border-success-subtle' : 'text-danger bg-danger-subtle border-danger-subtle';
                     const icon = isPre ? '🌅 Pre' : '🌙 Post';
-                    const tooltip = `${isPre ? 'ราคาช่วง Pre-Market' : 'ราคาช่วง After-Hours'}: $${ext.price.toFixed(2)} (${sign}${ext.changePct.toFixed(2)}% เทียบราคาปิดปกติ $${(ext.regularPrice || item.currentPriceUSD).toFixed(2)})`;
+                    const tooltip = `${isPre ? 'ราคาช่วง Pre-Market' : 'ราคาช่วง After-Hours'}: $${ext.price.toFixed(2)} (${sign}${ext.changePct.toFixed(2)}% เทียบราคาปิดปกติ $${(ext.regularPrice || item.currentPriceUSD).toFixed(2)}) • คลิกเพื่อนำราคานี้ไปคำนวณในพอร์ต`;
                     
                     extBadgeHtml = `
                         <div class="mt-1 d-flex justify-content-center" title="${tooltip}">
                             <span class="badge ${badgeClass} border fw-bold text-nowrap shadow-xs" 
-                                  style="font-size: 0.68rem; padding: 2px 6px; cursor: help; letter-spacing: -0.2px;">
+                                  style="font-size: 0.68rem; padding: 2px 6px; cursor: pointer; letter-spacing: -0.2px;"
+                                  onclick="event.stopPropagation(); updateMarketPrice('${item.ticker}', ${ext.price.toFixed(2)})">
                                 ${icon}: $${ext.price.toFixed(2)} (${sign}${ext.changePct.toFixed(2)}%)
                             </span>
                         </div>
@@ -8578,13 +8599,19 @@
                         }
                     </td>
                     <td class="bg-warning bg-opacity-10 align-middle border-0 py-3">
-                        <div class="d-flex justify-content-center">
-                            <input type="number" id="priceInput_${item.ticker}" class="form-control price-input" 
-                                   value="${item.currentPriceUSD.toFixed(2)}" step="any"
-                                   onblur="updateMarketPrice('${item.ticker}', this.value)"
-                                   onclick="this.select()">
+                        <div class="d-flex flex-column align-items-center">
+                            <span class="text-muted fw-semibold mb-1" style="font-size: 0.65rem; letter-spacing: -0.2px;">
+                                ${!mktStatus.isOpen ? '🔒 ราคาปิด' : '⚡ ราคา Live'}
+                            </span>
+                            <div class="d-flex justify-content-center">
+                                <input type="number" id="priceInput_${item.ticker}" class="form-control price-input" 
+                                       value="${item.currentPriceUSD.toFixed(2)}" step="any"
+                                       onblur="updateMarketPrice('${item.ticker}', this.value)"
+                                       onclick="this.select()"
+                                       title="${!mktStatus.isOpen ? 'ราคาปิดตลาดรอบปกติ (Official Close Price)' : 'ราคาปัจจุบัน'}">
+                            </div>
+                            ${extBadgeHtml}
                         </div>
-                        ${extBadgeHtml}
                     </td>
                     <td class="border-0 py-3">
                         $${item.mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}<br>
@@ -8662,6 +8689,10 @@
             }
 
             tbody.innerHTML = html;
+
+            if (typeof updateUSMarketStatusUI === 'function') {
+                updateUSMarketStatusUI();
+            }
 
             // 8. Render Pagination Footer
             const infoEl = document.getElementById('holdingsPaginationInfo');
