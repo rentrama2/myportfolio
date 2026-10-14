@@ -3385,8 +3385,16 @@
                                         <th class="py-3 border-0">ราคาต้นทุน<br><small class="text-muted">(เฉลี่ยต่อหุ้น USD)</small></th>
                                         <th class="py-3 border-0">ทุนรวม (THB)<br><small class="text-muted" id="thCostSub">อิงเรทเงิน Dime</small></th>
                                         <th class="py-3 border-0" style="background-color: #fffbeb;" id="thPriceCol">
-                                            <span id="thPriceTitle">ราคาปิด / ปัจจุบัน (USD)</span><br>
-                                            <small class="text-muted fw-normal" id="thPriceSub">คลิกแก้ราคาได้</small>
+                                            <div class="d-flex flex-column align-items-center">
+                                                <span id="thPriceTitle" class="fw-bold">🔒 ราคาปิดตลาด (USD)</span>
+                                                <button id="btnPriceModeToggle" type="button" class="btn btn-xs badge rounded-pill border my-1" 
+                                                        style="font-size: 0.65rem; cursor: pointer; padding: 2px 8px;" 
+                                                        onclick="event.stopPropagation(); togglePriceAutoSwitch();"
+                                                        title="คลิกเพื่อสลับระหว่าง 'สลับตามตลาดอัตโนมัติ' กับ 'ล็อกเฉพาะราคาปิด'">
+                                                    ⚡ สลับอัตโนมัติ: เปิด
+                                                </button>
+                                                <small class="text-muted fw-normal" id="thPriceSub" style="font-size: 0.7rem;">⚪ ตลาดปิดทำการ</small>
+                                            </div>
                                         </th>
                                         <th class="py-3 border-0">มูลค่าล่าสุด<br><small class="text-muted">(USD / THB)</small></th>
                                         <th class="py-3 border-0">ผลตอบแทนรวม<br><small class="text-muted">(% / USD / THB)</small></th>
@@ -6856,6 +6864,20 @@
             }
         }
 
+        let lastKnownMarketSession = null;
+
+        window.togglePriceAutoSwitch = function() {
+            let cur = (localStorage.getItem('myAutoSwitchPrice') !== 'false');
+            let next = !cur;
+            localStorage.setItem('myAutoSwitchPrice', next ? 'true' : 'false');
+            if (typeof updateUSMarketStatusUI === 'function') {
+                updateUSMarketStatusUI();
+            }
+            if (typeof updateSummaryAndChart === 'function') {
+                updateSummaryAndChart();
+            }
+        };
+
         window.updateUSMarketStatusUI = function() {
             const status = getUSMarketStatus();
             const badge = document.getElementById('usMarketStatusBadge');
@@ -6863,22 +6885,51 @@
                 badge.innerText = status.text;
                 badge.className = `badge rounded-pill px-2 py-1 fw-bold ${status.badgeClass}`;
             }
+
             const thTitle = document.getElementById('thPriceTitle');
             const thSub = document.getElementById('thPriceSub');
-            if (thTitle && thSub) {
-                if (status.isOpen) {
-                    thTitle.innerText = '🟢 ราคาปัจจุบัน (Live USD)';
-                    thSub.innerText = 'อัปเดตแบบ Real-time';
-                } else if (status.session === 'PRE') {
-                    thTitle.innerText = '🔒 ราคาปิดตลาด (USD)';
-                    thSub.innerText = '🌅 แสดง Pre-Market ด้านล่าง';
-                } else if (status.session === 'POST') {
-                    thTitle.innerText = '🔒 ราคาปิดตลาด (USD)';
-                    thSub.innerText = '🌙 แสดง After-Hours ด้านล่าง';
+            const toggleBtn = document.getElementById('btnPriceModeToggle');
+            const autoSwitch = (localStorage.getItem('myAutoSwitchPrice') !== 'false');
+
+            if (toggleBtn) {
+                if (autoSwitch) {
+                    toggleBtn.innerHTML = '⚡ สลับอัตโนมัติ: เปิด';
+                    toggleBtn.className = 'btn btn-xs badge rounded-pill bg-primary-subtle text-primary border border-primary-subtle my-1';
+                    toggleBtn.title = 'กำลังสลับราคาตามเวลาตลาดอัตโนมัติ (คลิกเพื่อล็อกเฉพาะราคาปิด)';
                 } else {
-                    thTitle.innerText = '🔒 ราคาปิดล่าสุด (USD)';
+                    toggleBtn.innerHTML = '🔒 ล็อกราคาปิด';
+                    toggleBtn.className = 'btn btn-xs badge rounded-pill bg-secondary-subtle text-secondary border border-secondary-subtle my-1';
+                    toggleBtn.title = 'ล็อกแสดงเฉพาะราคาปิดเสมอ (คลิกเพื่อเปิดสลับอัตโนมัติ)';
+                }
+            }
+
+            if (thTitle && thSub) {
+                if (!autoSwitch) {
+                    thTitle.innerText = '🔒 ราคาปิดตลาด (USD)';
+                    thSub.innerText = 'ล็อกราคาปิดปกติ • คลิกแก้ได้';
+                } else if (status.isOpen) {
+                    thTitle.innerText = '🟢 ราคาปัจจุบัน (Live USD)';
+                    thSub.innerText = '⚡ ตลาดเปิดทำการ (Live)';
+                } else if (status.session === 'PRE') {
+                    thTitle.innerText = '🌅 ราคา Pre-Market (USD)';
+                    thSub.innerText = '⚡ สลับราคา Pre อัตโนมัติ';
+                } else if (status.session === 'POST') {
+                    thTitle.innerText = '🌙 ราคา After-Hours (USD)';
+                    thSub.innerText = '⚡ สลับราคา Post อัตโนมัติ';
+                } else {
+                    thTitle.innerText = '🔒 ราคาปิดตลาด (USD)';
                     thSub.innerText = '⚪ ตลาดปิดทำการ';
                 }
+            }
+
+            // ตรวจจับการเปลี่ยนรอบตลาด เพื่อรีเฟรชคำนวณราคาอัตโนมัติเมื่อเปลี่ยนเซสชัน
+            if (lastKnownMarketSession && lastKnownMarketSession !== status.session) {
+                lastKnownMarketSession = status.session;
+                if (autoSwitch && typeof updateSummaryAndChart === 'function') {
+                    updateSummaryAndChart();
+                }
+            } else {
+                lastKnownMarketSession = status.session;
             }
         };
 
@@ -8036,7 +8087,21 @@
                     if(!groupTotals[groupName]) groupTotals[groupName] = 0;
                     
                     let avgCostUSD = costUSD / shares;
-                    let currentPriceUSD = marketPrices[ticker] || avgCostUSD;
+                    let regularPriceUSD = marketPrices[ticker] || avgCostUSD;
+                    let currentPriceUSD = regularPriceUSD;
+                    let appliedExtSession = null;
+
+                    const mktStatus = (typeof getUSMarketStatus === 'function') ? getUSMarketStatus() : { isOpen: false, session: 'CLOSED' };
+                    const autoSwitchExt = (localStorage.getItem('myAutoSwitchPrice') !== 'false');
+
+                    if (autoSwitchExt && !mktStatus.isOpen && (mktStatus.session === 'PRE' || mktStatus.session === 'POST')) {
+                        const ext = (typeof extendedHoursPrices !== 'undefined' && extendedHoursPrices) ? extendedHoursPrices[ticker] : null;
+                        if (ext && ext.price && ext.price > 0 && ext.session === mktStatus.session) {
+                            currentPriceUSD = ext.price;
+                            appliedExtSession = ext.session;
+                        }
+                    }
+
                     let mktValueUSD = Number((shares * currentPriceUSD).toFixed(2));
                     let mktValueTHB = Number((mktValueUSD * liveFxRate).toFixed(2));
 
@@ -8115,6 +8180,8 @@
                         portName,
                         avgCostUSD,
                         currentPriceUSD,
+                        regularPriceUSD,
+                        appliedExtSession,
                         mktValueUSD,
                         mktValueTHB,
                         plUSD,
@@ -8517,22 +8584,17 @@
                 }
 
                 let extBadgeHtml = '';
-                const ext = (typeof extendedHoursPrices !== 'undefined' && extendedHoursPrices) ? extendedHoursPrices[item.ticker] : null;
-                const mktStatus = (typeof getUSMarketStatus === 'function') ? getUSMarketStatus() : { isOpen: false };
-                if (ext && ext.price && ext.price > 0 && (ext.session === 'PRE' || ext.session === 'POST') && !mktStatus.isOpen) {
-                    const isPre = ext.session === 'PRE';
-                    const isUp = ext.changePct >= 0;
-                    const sign = isUp ? '+' : '';
-                    const badgeClass = isUp ? 'text-success bg-success-subtle border-success-subtle' : 'text-danger bg-danger-subtle border-danger-subtle';
+                if (item.appliedExtSession) {
+                    const isPre = item.appliedExtSession === 'PRE';
+                    const diff = item.currentPriceUSD - item.regularPriceUSD;
+                    const pct = item.regularPriceUSD > 0 ? (diff / item.regularPriceUSD) * 100 : 0;
+                    const sign = diff >= 0 ? '+' : '';
+                    const colorClass = diff >= 0 ? 'text-success' : 'text-danger';
                     const icon = isPre ? '🌅 Pre' : '🌙 Post';
-                    const tooltip = `${isPre ? 'ราคาช่วง Pre-Market' : 'ราคาช่วง After-Hours'}: $${ext.price.toFixed(2)} (${sign}${ext.changePct.toFixed(2)}% เทียบราคาปิดปกติ $${(ext.regularPrice || item.currentPriceUSD).toFixed(2)}) • คลิกเพื่อนำราคานี้ไปคำนวณในพอร์ต`;
-                    
                     extBadgeHtml = `
-                        <div class="mt-1 d-flex justify-content-center" title="${tooltip}">
-                            <span class="badge ${badgeClass} border fw-bold text-nowrap shadow-xs" 
-                                  style="font-size: 0.68rem; padding: 2px 6px; cursor: pointer; letter-spacing: -0.2px;"
-                                  onclick="event.stopPropagation(); updateMarketPrice('${item.ticker}', ${ext.price.toFixed(2)})">
-                                ${icon}: $${ext.price.toFixed(2)} (${sign}${ext.changePct.toFixed(2)}%)
+                        <div class="mt-1 d-flex justify-content-center text-nowrap" style="font-size: 0.65rem; line-height: 1;">
+                            <span class="text-muted" title="ราคาปิดปกติ $${item.regularPriceUSD.toFixed(2)}">
+                                ${icon}: <span class="${colorClass} fw-bold">${sign}${pct.toFixed(2)}%</span> <span class="opacity-75">($${item.regularPriceUSD.toFixed(2)})</span>
                             </span>
                         </div>
                     `;
@@ -8600,15 +8662,12 @@
                     </td>
                     <td class="bg-warning bg-opacity-10 align-middle border-0 py-3">
                         <div class="d-flex flex-column align-items-center">
-                            <span class="text-muted fw-semibold mb-1" style="font-size: 0.65rem; letter-spacing: -0.2px;">
-                                ${!mktStatus.isOpen ? '🔒 ราคาปิด' : '⚡ ราคา Live'}
-                            </span>
                             <div class="d-flex justify-content-center">
                                 <input type="number" id="priceInput_${item.ticker}" class="form-control price-input" 
                                        value="${item.currentPriceUSD.toFixed(2)}" step="any"
                                        onblur="updateMarketPrice('${item.ticker}', this.value)"
                                        onclick="this.select()"
-                                       title="${!mktStatus.isOpen ? 'ราคาปิดตลาดรอบปกติ (Official Close Price)' : 'ราคาปัจจุบัน'}">
+                                       title="${item.appliedExtSession ? `ราคาช่วง ${item.appliedExtSession}: $${item.currentPriceUSD.toFixed(2)} (ราคาปิด: $${item.regularPriceUSD.toFixed(2)})` : 'ราคาหุ้น (คลิกแก้ไขได้)'}">
                             </div>
                             ${extBadgeHtml}
                         </div>
@@ -13564,6 +13623,9 @@
             initPrivacyMode();
             initMarketIndices();
             updateUSMarketStatusUI();
+            setInterval(() => {
+                updateUSMarketStatusUI();
+            }, 30000);
             updateAutoRefreshUI();
             startAutoRefreshTimer();
             populatePortfolioDropdown();
