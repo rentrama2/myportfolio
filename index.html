@@ -1254,10 +1254,46 @@
         }
         .market-rank-table tbody tr {
             cursor: pointer;
-            transition: background-color 0.15s;
+            transition: all 0.15s ease-in-out;
         }
         .market-rank-table tbody tr:hover {
-            background-color: rgba(59, 130, 246, 0.06);
+            background-color: rgba(59, 130, 246, 0.05) !important;
+        }
+        .market-rank-table thead th {
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            color: #475569;
+            background-color: rgba(248, 250, 252, 0.96) !important;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.06) !important;
+            vertical-align: middle;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        body.dark-mode .market-rank-table thead th {
+            background-color: rgba(30, 41, 59, 0.96) !important;
+            color: #cbd5e1;
+            border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+        }
+        body.dark-mode .market-rank-table tbody tr:hover {
+            background-color: rgba(59, 130, 246, 0.12) !important;
+        }
+        .mom-col {
+            min-width: 36px;
+        }
+        .mom-lbl {
+            font-size: 0.58rem;
+            font-weight: 700;
+            color: #64748b;
+            line-height: 1.1;
+            margin-bottom: 2px;
+        }
+        body.dark-mode .mom-lbl {
+            color: #94a3b8;
+        }
+        .mom-val {
+            font-size: 0.68rem;
+            font-weight: 700;
+            line-height: 1.1;
         }
 
         /* Market Overview Sub-nav Switcher (Stock Market Overview vs ETF Market Overview) */
@@ -3218,36 +3254,52 @@
 
                     <!-- Top 100 Ranked Stocks Table Card -->
                     <div class="card border-0 shadow-sm rounded-4 mb-4" id="marketTopRankedCard">
-                        <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2 p-3">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="fw-bold" style="font-size: 1rem;">🏆 ตารางจัดอันดับหุ้นรายตัว (Top Ranked Stocks)</span>
-                                <span class="badge rounded-pill bg-primary px-2 py-1" id="marketTableCountBadge" style="font-size: 0.72rem;">100 รายการ</span>
+                        <div class="card-header-pro border-0 p-3" style="background: var(--bs-card-bg, #ffffff);">
+                            <!-- Row 1: Title, Count Badge, Search Box -->
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fs-5">🏆</span>
+                                    <span class="fw-bolder" style="font-size: 1.05rem; letter-spacing: -0.2px; color: var(--bs-heading-color, #0f172a);">
+                                        ตารางจัดอันดับหุ้นรายตัว (Top Ranked Stocks)
+                                    </span>
+                                    <span class="badge rounded-pill bg-primary px-2.5 py-1 fw-bold" id="marketTableCountBadge" style="font-size: 0.72rem;">100 รายการ</span>
+                                </div>
+                                <div class="input-group input-group-sm shadow-2xs" style="max-width: 260px;">
+                                    <span class="input-group-text bg-light border-end-0 text-muted" style="border-radius: 20px 0 0 20px;">🔍</span>
+                                    <input type="text" id="marketTableSearch" class="form-control border-start-0 bg-light" placeholder="ค้นหา Ticker หรือชื่อหุ้น..." oninput="onMarketTableSearch(this.value)" style="border-radius: 0 20px 20px 0; font-size: 0.78rem;">
+                                </div>
                             </div>
-                            <div class="d-flex align-items-center gap-2 flex-wrap">
-                                <div class="input-group input-group-sm" style="max-width: 200px;">
-                                    <span class="input-group-text bg-transparent border-end-0 text-muted">🔍</span>
-                                    <input type="text" id="marketTableSearch" class="form-control border-start-0" placeholder="ค้นหา Ticker หรือชื่อหุ้น..." oninput="onMarketTableSearch(this.value)">
-                                </div>
-                                <div class="btn-group btn-group-sm" role="group">
-                                    <button type="button" class="btn btn-outline-secondary active py-1 px-2 fw-bold" id="marketFilterSignalAll" onclick="setMarketTableSignalFilter('ALL')">ทั้งหมด</button>
-                                    <button type="button" class="btn btn-outline-success py-1 px-2 fw-bold" id="marketFilterSignalBuy" onclick="setMarketTableSignalFilter('BUY')">🟢 BUY</button>
-                                    <button type="button" class="btn btn-outline-warning py-1 px-2 fw-bold" id="marketFilterSignalWatch" onclick="setMarketTableSignalFilter('WATCH')">🟡 WATCH</button>
-                                    <button type="button" class="btn btn-outline-danger py-1 px-2 fw-bold" id="marketFilterSignalSell" onclick="setMarketTableSignalFilter('SELL')">🔴 SELL</button>
-                                </div>
-                                <select id="marketTableSortSelect" class="form-select form-select-sm" style="width: auto; font-size: 0.78rem;" onchange="onMarketTableSortChange(this.value)">
-                                    <option value="rank_asc">เรียงตาม Rank (1-100)</option>
-                                    <option value="change_desc">เปลี่ยนแปลงสูงสุด (Top Gainers)</option>
-                                    <option value="change_asc">เปลี่ยนแปลงต่ำสุด (Top Losers)</option>
-                                    <option value="score_desc">คะแนนเทคนิคสูงสุด (Score)</option>
-                                    <option value="price_desc">ราคาสูงสุด -> ต่ำสุด</option>
-                                </select>
-                                <div class="d-flex align-items-center gap-1">
-                                    <span class="text-muted fw-bold" style="font-size: 0.78rem;">หน้าละ:</span>
+
+                            <!-- Row 2: Clean Controls Bar (Signal Filters, Sort, Page Size) -->
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 p-2 rounded-3 border bg-light-subtle shadow-2xs">
+                                <div class="d-flex align-items-center gap-1.5 flex-wrap">
+                                    <span class="text-muted fw-bold d-none d-sm-inline" style="font-size: 0.74rem;">สัญญาณ:</span>
                                     <div class="btn-group btn-group-sm" role="group">
-                                        <button type="button" class="btn btn-sm btn-dark py-1 px-2 fw-bold" id="btnMarketPageSize_10" onclick="setMarketTablePageSize(10)">10</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_20" onclick="setMarketTablePageSize(20)">20</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_50" onclick="setMarketTablePageSize(50)">50</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_ALL" onclick="setMarketTablePageSize('ALL')">ทั้งหมด</button>
+                                        <button type="button" class="btn btn-outline-secondary active py-1 px-2.5 fw-bold" id="marketFilterSignalAll" onclick="setMarketTableSignalFilter('ALL')" style="font-size: 0.74rem;">ทั้งหมด</button>
+                                        <button type="button" class="btn btn-outline-success py-1 px-2.5 fw-bold" id="marketFilterSignalBuy" onclick="setMarketTableSignalFilter('BUY')" style="font-size: 0.74rem;">🟢 BUY</button>
+                                        <button type="button" class="btn btn-outline-warning py-1 px-2.5 fw-bold" id="marketFilterSignalWatch" onclick="setMarketTableSignalFilter('WATCH')" style="font-size: 0.74rem;">🟡 WATCH</button>
+                                        <button type="button" class="btn btn-outline-danger py-1 px-2.5 fw-bold" id="marketFilterSignalSell" onclick="setMarketTableSignalFilter('SELL')" style="font-size: 0.74rem;">🔴 SELL</button>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 flex-wrap ms-auto">
+                                    <div class="d-flex align-items-center gap-1">
+                                        <span class="text-muted fw-bold" style="font-size: 0.74rem;">เรียงตาม:</span>
+                                        <select id="marketTableSortSelect" class="form-select form-select-sm py-1" style="width: auto; font-size: 0.76rem; border-radius: 8px;" onchange="onMarketTableSortChange(this.value)">
+                                            <option value="rank_asc">🏆 Rank (1-100)</option>
+                                            <option value="change_desc">🚀 เปลี่ยนแปลงสูงสุด (Gainers)</option>
+                                            <option value="change_asc">📉 เปลี่ยนแปลงต่ำสุด (Losers)</option>
+                                            <option value="score_desc">★ คะแนนเทคนิค (Score)</option>
+                                            <option value="price_desc">💵 ราคาสูงสุด -> ต่ำสุด</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <span class="text-muted fw-bold" style="font-size: 0.74rem;">หน้าละ:</span>
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <button type="button" class="btn btn-sm btn-dark py-1 px-2 fw-bold" id="btnMarketPageSize_10" onclick="setMarketTablePageSize(10)">10</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_20" onclick="setMarketTablePageSize(20)">20</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_50" onclick="setMarketTablePageSize(50)">50</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnMarketPageSize_ALL" onclick="setMarketTablePageSize('ALL')">ทั้งหมด</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -3255,20 +3307,18 @@
                         <div class="card-body p-0">
                             <div class="table-responsive">
                                 <table class="table table-hover align-middle market-rank-table mb-0" style="font-size: 0.85rem;">
-                                    <thead style="border-bottom: 2px solid rgba(0,0,0,0.06); font-size: 0.75rem;" class="table-light">
+                                    <thead style="border-bottom: 2px solid rgba(0,0,0,0.06); font-size: 0.74rem;" class="table-light">
                                         <tr>
-                                            <th class="text-center py-2 px-2" style="width: 45px;">#</th>
-                                            <th class="py-2" style="min-width: 170px;">TICKER</th>
-                                            <th class="text-center py-2" style="width: 100px;">TREND</th>
-                                            <th class="text-center py-2" style="width: 80px;">SIGNAL</th>
-                                            <th class="text-center py-2" style="width: 75px;">CONF</th>
-                                            <th class="text-center py-2" style="width: 90px;">SCORE</th>
-                                            <th class="text-end py-2" style="min-width: 90px;">PRICE</th>
-                                            <th class="text-end py-2" style="min-width: 90px;">CHANGE</th>
-                                            <th class="text-end py-2" style="min-width: 90px;">แนวต้าน</th>
-                                            <th class="text-end py-2" style="min-width: 90px;">แนวรับระยะสั้น</th>
-                                            <th class="text-center py-2" style="min-width: 210px;">MOMENTUM (1D | 1W | 1M | 3M | 6M | 1Y)</th>
-                                            <th class="text-center py-2" style="width: 85px;">ACTION</th>
+                                            <th class="text-center py-2.5 px-2" style="width: 48px;">#</th>
+                                            <th class="py-2.5" style="min-width: 175px;">TICKER & COMPANY</th>
+                                            <th class="text-center py-2.5" style="width: 85px;">TREND (7D)</th>
+                                            <th class="text-center py-2.5" style="width: 95px;">SIGNAL</th>
+                                            <th class="text-center py-2.5" style="width: 85px;">TECH SCORE</th>
+                                            <th class="text-end py-2.5" style="min-width: 85px;">PRICE</th>
+                                            <th class="text-end py-2.5" style="min-width: 85px;">CHANGE</th>
+                                            <th class="text-end py-2.5" style="min-width: 115px;">กรอบราคา (ต้าน/รับ)</th>
+                                            <th class="text-center py-2.5" style="min-width: 250px;">MOMENTUM (1D | 1W | 1M | 3M | 6M | 1Y)</th>
+                                            <th class="text-center py-2.5" style="width: 80px;">ACTION</th>
                                         </tr>
                                     </thead>
                                     <tbody id="marketTableBody">
@@ -3331,36 +3381,52 @@
 
                     <!-- Top Ranked ETFs Table Card -->
                     <div class="card border-0 shadow-sm rounded-4 mb-4" id="etfTopRankedCard">
-                        <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap gap-2 p-3">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="fw-bold" style="font-size: 1rem;">🏆 ตารางจัดอันดับกองทุน ETF (Top Ranked ETFs)</span>
-                                <span class="badge rounded-pill bg-success px-2 py-1" id="etfTableCountBadge" style="font-size: 0.72rem;">36 รายการ</span>
+                        <div class="card-header-pro border-0 p-3" style="background: var(--bs-card-bg, #ffffff);">
+                            <!-- Row 1: Title, Count Badge, Search Box -->
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fs-5">📦</span>
+                                    <span class="fw-bolder" style="font-size: 1.05rem; letter-spacing: -0.2px; color: var(--bs-heading-color, #0f172a);">
+                                        ตารางจัดอันดับกองทุน ETF (Top Ranked ETFs)
+                                    </span>
+                                    <span class="badge rounded-pill bg-success px-2.5 py-1 fw-bold" id="etfTableCountBadge" style="font-size: 0.72rem;">36 รายการ</span>
+                                </div>
+                                <div class="input-group input-group-sm shadow-2xs" style="max-width: 260px;">
+                                    <span class="input-group-text bg-light border-end-0 text-muted" style="border-radius: 20px 0 0 20px;">🔍</span>
+                                    <input type="text" id="etfTableSearch" class="form-control border-start-0 bg-light" placeholder="ค้นหา Ticker หรือชื่อกองทุน..." oninput="onEtfTableSearch(this.value)" style="border-radius: 0 20px 20px 0; font-size: 0.78rem;">
+                                </div>
                             </div>
-                            <div class="d-flex align-items-center gap-2 flex-wrap">
-                                <div class="input-group input-group-sm" style="max-width: 200px;">
-                                    <span class="input-group-text bg-transparent border-end-0 text-muted">🔍</span>
-                                    <input type="text" id="etfTableSearch" class="form-control border-start-0" placeholder="ค้นหา Ticker หรือชื่อกองทุน..." oninput="onEtfTableSearch(this.value)">
-                                </div>
-                                <div class="btn-group btn-group-sm" role="group">
-                                    <button type="button" class="btn btn-outline-secondary active py-1 px-2 fw-bold" id="etfFilterSignalAll" onclick="setEtfTableSignalFilter('ALL')">ทั้งหมด</button>
-                                    <button type="button" class="btn btn-outline-success py-1 px-2 fw-bold" id="etfFilterSignalBuy" onclick="setEtfTableSignalFilter('BUY')">🟢 BUY</button>
-                                    <button type="button" class="btn btn-outline-warning py-1 px-2 fw-bold" id="etfFilterSignalWatch" onclick="setEtfTableSignalFilter('WATCH')">🟡 WATCH</button>
-                                    <button type="button" class="btn btn-outline-danger py-1 px-2 fw-bold" id="etfFilterSignalSell" onclick="setEtfTableSignalFilter('SELL')">🔴 SELL</button>
-                                </div>
-                                <select id="etfTableSortSelect" class="form-select form-select-sm" style="width: auto; font-size: 0.78rem;" onchange="onEtfTableSortChange(this.value)">
-                                    <option value="rank_asc">เรียงตาม Rank (1-36)</option>
-                                    <option value="change_desc">เปลี่ยนแปลงสูงสุด (Top Gainers)</option>
-                                    <option value="change_asc">เปลี่ยนแปลงต่ำสุด (Top Losers)</option>
-                                    <option value="score_desc">คะแนนเทคนิคสูงสุด (Score)</option>
-                                    <option value="price_desc">ราคาสูงสุด -> ต่ำสุด</option>
-                                </select>
-                                <div class="d-flex align-items-center gap-1">
-                                    <span class="text-muted fw-bold" style="font-size: 0.78rem;">หน้าละ:</span>
+
+                            <!-- Row 2: Clean Controls Bar (Signal Filters, Sort, Page Size) -->
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 p-2 rounded-3 border bg-light-subtle shadow-2xs">
+                                <div class="d-flex align-items-center gap-1.5 flex-wrap">
+                                    <span class="text-muted fw-bold d-none d-sm-inline" style="font-size: 0.74rem;">สัญญาณ:</span>
                                     <div class="btn-group btn-group-sm" role="group">
-                                        <button type="button" class="btn btn-sm btn-dark py-1 px-2 fw-bold" id="btnEtfPageSize_10" onclick="setEtfTablePageSize(10)">10</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnEtfPageSize_20" onclick="setEtfTablePageSize(20)">20</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnEtfPageSize_50" onclick="setEtfTablePageSize(50)">50</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnEtfPageSize_ALL" onclick="setEtfTablePageSize('ALL')">ทั้งหมด</button>
+                                        <button type="button" class="btn btn-outline-secondary active py-1 px-2.5 fw-bold" id="etfFilterSignalAll" onclick="setEtfTableSignalFilter('ALL')" style="font-size: 0.74rem;">ทั้งหมด</button>
+                                        <button type="button" class="btn btn-outline-success py-1 px-2.5 fw-bold" id="etfFilterSignalBuy" onclick="setEtfTableSignalFilter('BUY')" style="font-size: 0.74rem;">🟢 BUY</button>
+                                        <button type="button" class="btn btn-outline-warning py-1 px-2.5 fw-bold" id="etfFilterSignalWatch" onclick="setEtfTableSignalFilter('WATCH')" style="font-size: 0.74rem;">🟡 WATCH</button>
+                                        <button type="button" class="btn btn-outline-danger py-1 px-2.5 fw-bold" id="etfFilterSignalSell" onclick="setEtfTableSignalFilter('SELL')" style="font-size: 0.74rem;">🔴 SELL</button>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 flex-wrap ms-auto">
+                                    <div class="d-flex align-items-center gap-1">
+                                        <span class="text-muted fw-bold" style="font-size: 0.74rem;">เรียงตาม:</span>
+                                        <select id="etfTableSortSelect" class="form-select form-select-sm py-1" style="width: auto; font-size: 0.76rem; border-radius: 8px;" onchange="onEtfTableSortChange(this.value)">
+                                            <option value="rank_asc">🏆 Rank (1-36)</option>
+                                            <option value="change_desc">🚀 เปลี่ยนแปลงสูงสุด (Gainers)</option>
+                                            <option value="change_asc">📉 เปลี่ยนแปลงต่ำสุด (Losers)</option>
+                                            <option value="score_desc">★ คะแนนเทคนิค (Score)</option>
+                                            <option value="price_desc">💵 ราคาสูงสุด -> ต่ำสุด</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <span class="text-muted fw-bold" style="font-size: 0.74rem;">หน้าละ:</span>
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <button type="button" class="btn btn-sm btn-dark py-1 px-2 fw-bold" id="btnEtfPageSize_10" onclick="setEtfTablePageSize(10)">10</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnEtfPageSize_20" onclick="setEtfTablePageSize(20)">20</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnEtfPageSize_50" onclick="setEtfTablePageSize(50)">50</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 fw-bold" id="btnEtfPageSize_ALL" onclick="setEtfTablePageSize('ALL')">ทั้งหมด</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -3368,20 +3434,20 @@
                         <div class="card-body p-0">
                             <div class="table-responsive">
                                 <table class="table table-hover align-middle market-rank-table mb-0" style="font-size: 0.85rem;">
-                                    <thead style="border-bottom: 2px solid rgba(0,0,0,0.06); font-size: 0.75rem;" class="table-light">
+                                    <thead style="border-bottom: 2px solid rgba(0,0,0,0.06); font-size: 0.74rem;" class="table-light">
                                         <tr>
-                                            <th class="text-center py-2 px-2" style="width: 45px;">#</th>
-                                            <th class="py-2" style="min-width: 190px;">TICKER & FUND NAME</th>
-                                            <th class="text-center py-2" style="width: 115px;">หมวดหมู่</th>
-                                            <th class="text-center py-2" style="width: 100px;">TREND</th>
-                                            <th class="text-center py-2" style="width: 80px;">SIGNAL</th>
-                                            <th class="text-center py-2" style="width: 90px;">SCORE</th>
-                                            <th class="text-center py-2" style="width: 75px;">EXPENSE</th>
-                                            <th class="text-end py-2" style="min-width: 90px;">PRICE</th>
-                                            <th class="text-end py-2" style="min-width: 90px;">CHANGE</th>
-                                            <th class="text-end py-2" style="min-width: 90px;">AUM</th>
-                                            <th class="text-center py-2" style="min-width: 210px;">MOMENTUM (1D | 1W | 1M | 3M | 6M | 1Y)</th>
-                                            <th class="text-center py-2" style="width: 85px;">ACTION</th>
+                                            <th class="text-center py-2.5 px-2" style="width: 48px;">#</th>
+                                            <th class="py-2.5" style="min-width: 190px;">TICKER & FUND NAME</th>
+                                            <th class="text-center py-2.5" style="width: 105px;">หมวดหมู่</th>
+                                            <th class="text-center py-2.5" style="width: 85px;">TREND (7D)</th>
+                                            <th class="text-center py-2.5" style="width: 90px;">SIGNAL</th>
+                                            <th class="text-center py-2.5" style="width: 85px;">TECH SCORE</th>
+                                            <th class="text-center py-2.5" style="width: 70px;">EXPENSE</th>
+                                            <th class="text-end py-2.5" style="min-width: 85px;">PRICE</th>
+                                            <th class="text-end py-2.5" style="min-width: 85px;">CHANGE</th>
+                                            <th class="text-end py-2.5" style="min-width: 95px;">AUM / YIELD</th>
+                                            <th class="text-center py-2.5" style="min-width: 250px;">MOMENTUM (1D | 1W | 1M | 3M | 6M | 1Y)</th>
+                                            <th class="text-center py-2.5" style="width: 80px;">ACTION</th>
                                         </tr>
                                     </thead>
                                     <tbody id="etfTableBody">
@@ -3674,43 +3740,106 @@
         <div class="row mb-4">
             <div class="col-12">
                 <div class="card border-tbl">
-                    <div class="card-header-pro border-0 d-flex justify-content-between align-items-center flex-wrap">
-                        <div class="d-flex align-items-center gap-2 flex-wrap">
-                            <span class="fw-bold" style="color: #111827;">รายการลงทุนของฉัน (Holdings)</span>
-                            <div class="btn-group btn-group-sm ms-md-2" role="group" style="border-radius: 8px;">
-                                <button type="button" id="btnModeDime" class="btn btn-primary btn-sm fw-bold px-2 py-1" onclick="setCalcMode('DIME')" title="สูตรคำนวณเหมือนในแอป Dime 100% (คำนวณ Auto อิงเรทเงินปัจจุบัน)">📱 โหมด Dime (Auto)</button>
-                                <button type="button" id="btnModeHist" class="btn btn-outline-secondary btn-sm fw-bold px-2 py-1" onclick="setCalcMode('HISTORICAL')" title="คำนวณตามเงินบาทจริงที่แลกซื้อในแต่ละออเดอร์">🏦 ทุนเงินบาทจริง</button>
+                    <div class="card-header-pro border-0 p-3" style="background: var(--bs-card-bg, #ffffff);">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2.5">
+                            <!-- Left: Title & Calculation Mode Toggle -->
+                            <div class="d-flex align-items-center gap-2.5 flex-wrap">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fs-5">💼</span>
+                                    <span class="fw-bolder" style="font-size: 1.05rem; letter-spacing: -0.2px; color: var(--bs-heading-color, #111827);">
+                                        รายการลงทุนของฉัน (Holdings)
+                                    </span>
+                                </div>
+                                
+                                <!-- Sleek Mode Segmented Toggle -->
+                                <div class="d-inline-flex p-0.5 rounded-pill border bg-light shadow-2xs" role="group">
+                                    <button type="button" id="btnModeDime" class="btn btn-sm btn-primary fw-bold rounded-pill px-2.5 py-0.5" style="font-size: 0.76rem;" onclick="setCalcMode('DIME')" title="สูตรคำนวณเหมือนในแอป Dime 100% (คำนวณ Auto อิงเรทเงินปัจจุบัน)">
+                                        📱 โหมด Dime (Auto)
+                                    </button>
+                                    <button type="button" id="btnModeHist" class="btn btn-sm btn-light text-secondary fw-bold rounded-pill px-2.5 py-0.5 border-0" style="font-size: 0.76rem;" onclick="setCalcMode('HISTORICAL')" title="คำนวณตามเงินบาทจริงที่แลกซื้อในแต่ละออเดอร์">
+                                        🏦 ทุนเงินบาทจริง
+                                    </button>
+                                </div>
                             </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-3 d-flex align-items-center gap-1" style="font-size: 0.8rem;" onclick="openSimulator()">
-                                🧮 จำลองซื้อขาย
-                            </button>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="quickMoveStock()" title="ย้ายหุ้นข้ามพอร์ตการลงทุน">
-                                💼 ย้ายพอร์ต ⇄
-                            </button>
-                            <button class="btn btn-outline-danger btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="openTrimCalculator()" title="คำนวณการขายลดสัดส่วน / ล็อกกำไร / คืนทุน">
-                                ✂️ Trim
-                            </button>
-                            <button class="btn btn-outline-success btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="openStockTargetModal()" title="ตั้งเป้าหมายกำไร TP และจุดตัดขาดทุน SL">
-                                🎯 ตั้งเป้า TP/SL
-                            </button>
-                            <button class="btn btn-outline-secondary btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="changeGroup()" title="จัดกลุ่มสินทรัพย์ เช่น ETF, Stock, REIT">
-                                📁 จัดกลุ่ม
-                            </button>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="openDCAPlanner()" title="คำนวณเติมเงิน DCA & ปรับสมดุลพอร์ตตามเป้าหมาย">
-                                ⚖️ วางแผน DCA
-                            </button>
-                            <button class="btn btn-outline-success btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="exportFullBackup()" title="สำรองข้อมูลพอร์ตทั้งหมดเป็นไฟล์ JSON คลิกเดียว">
-                                💾 สำรอง JSON
-                            </button>
-                        </div>
-                        <div class="d-flex align-items-center gap-2 mt-2 mt-md-0 flex-wrap justify-content-end">
-                            <span class="text-muted fw-bold" style="font-size: 0.9rem;">
-                                เรทเงินแอป: <input type="number" id="liveFxInput" class="fx-input" value="33.2291" step="any" onclick="this.select()" title="คลิกเพื่อแก้ไขเรทเงินได้ด้วยตนเอง"> THB
-                            </span>
-                            <button class="btn btn-dark btn-sm d-flex align-items-center gap-1" style="border-radius: 8px;" id="btnUpdateAllPrices" title="ดึงราคาหุ้นและเรทเงินล่าสุดอัตโนมัติ">
-                                <span id="btnUpdateIcon">🔄</span> <span id="btnUpdateText">ดึงราคา & เรทเงินล่าสุด</span>
-                            </button>
-                            <span id="lastUpdatedBadge" class="badge bg-light text-muted border py-1 px-2" style="font-size: 0.75rem;">(ยังไม่อัปเดต)</span>
+
+                            <!-- Right: Actions & Tools -->
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                <!-- Hero Action: วางแผน DCA -->
+                                <button class="btn btn-sm btn-primary fw-bold rounded-pill px-3 py-1 shadow-xs d-flex align-items-center gap-1.5" onclick="openDCAPlanner()" title="คำนวณเติมเงิน DCA & ปรับสมดุลพอร์ตตามเป้าหมาย">
+                                    <span>⚖️</span>
+                                    <span>วางแผน DCA</span>
+                                </button>
+
+                                <!-- Action: Trim พอร์ต -->
+                                <button class="btn btn-sm btn-outline-danger fw-bold rounded-pill px-2.5 py-1 d-flex align-items-center gap-1 shadow-2xs" onclick="openTrimCalculator()" title="คำนวณการขายลดสัดส่วน / ล็อกกำไร / คืนทุน">
+                                    <span>✂️</span>
+                                    <span>Trim พอร์ต</span>
+                                </button>
+
+                                <!-- Action: ตั้งเป้า TP/SL -->
+                                <button class="btn btn-sm btn-outline-success fw-bold rounded-pill px-2.5 py-1 d-flex align-items-center gap-1 shadow-2xs" onclick="openStockTargetModal()" title="ตั้งเป้าหมายกำไร TP และจุดตัดขาดทุน SL">
+                                    <span>🎯</span>
+                                    <span>ตั้งเป้า TP/SL</span>
+                                </button>
+
+                                <!-- Dropdown: ⚙️ จัดการพอร์ต (Consolidated Tools) -->
+                                <div class="dropdown">
+                                    <button class="btn btn-sm btn-light border fw-bold rounded-pill px-2.5 py-1 dropdown-toggle d-flex align-items-center gap-1.5 shadow-2xs" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.78rem;">
+                                        <span>⚙️</span>
+                                        <span>จัดการพอร์ต</span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 rounded-3 p-1.5" style="font-size: 0.82rem; min-width: 220px;">
+                                        <li><h6 class="dropdown-header text-uppercase fw-bold text-muted" style="font-size: 0.68rem; letter-spacing: 0.5px;">เครื่องมือพอร์ต (Tools)</h6></li>
+                                        <li>
+                                            <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2" href="javascript:void(0)" onclick="openSimulator()">
+                                                <span>🧮</span>
+                                                <span>จำลองซื้อขาย (Simulator)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2" href="javascript:void(0)" onclick="quickMoveStock()">
+                                                <span>💼</span>
+                                                <span>ย้ายหุ้นข้ามพอร์ต ⇄</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2" href="javascript:void(0)" onclick="changeGroup()">
+                                                <span>📁</span>
+                                                <span>จัดกลุ่มสินทรัพย์ (ETF/Stock)</span>
+                                            </a>
+                                        </li>
+                                        <li><hr class="dropdown-divider my-1"></li>
+                                        <li><h6 class="dropdown-header text-uppercase fw-bold text-muted" style="font-size: 0.68rem; letter-spacing: 0.5px;">สำรอง & กู้คืนข้อมูล (Data)</h6></li>
+                                        <li>
+                                            <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2 text-success fw-bold" href="javascript:void(0)" onclick="exportFullBackup()">
+                                                <span>💾</span>
+                                                <span>สำรองข้อมูล JSON (Backup)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2 text-primary fw-bold" href="javascript:void(0)" onclick="document.getElementById('jsonBackupInput').click()">
+                                                <span>📥</span>
+                                                <span>กู้คืนข้อมูล JSON (Restore)</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Vertical subtle divider -->
+                                <div class="vr mx-1 d-none d-md-block" style="height: 22px; opacity: 0.15;"></div>
+
+                                <!-- Fx Rate & Refresh Controls -->
+                                <div class="d-flex align-items-center gap-1.5 flex-wrap">
+                                    <div class="d-inline-flex align-items-center gap-1 px-2.5 py-1 rounded-pill bg-light border shadow-2xs" title="คลิกเพื่อแก้ไขเรทเงินได้ด้วยตนเอง">
+                                        <span class="text-muted fw-bold" style="font-size: 0.74rem;">฿/USD:</span>
+                                        <input type="number" id="liveFxInput" class="fx-input border-0 bg-transparent fw-bolder text-primary text-center p-0 m-0" value="33.2291" step="any" onclick="this.select()" style="width: 62px; font-size: 0.78rem; outline: none;">
+                                    </div>
+                                    <button class="btn btn-dark btn-sm rounded-pill px-2.5 py-1 fw-bold d-flex align-items-center gap-1 shadow-2xs" id="btnUpdateAllPrices" title="ดึงราคาหุ้นและเรทเงินล่าสุดอัตโนมัติ" style="font-size: 0.78rem;">
+                                        <span id="btnUpdateIcon">🔄</span> <span id="btnUpdateText">อัปเดตราคา</span>
+                                    </button>
+                                    <span id="lastUpdatedBadge" class="badge rounded-pill bg-light text-muted border px-2 py-1" style="font-size: 0.72rem;">(ยังไม่อัปเดต)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card-body p-0">
@@ -7035,12 +7164,12 @@
             const thSub = document.getElementById('thCostSub');
             if (!btnDime || !btnHist) return;
             if (currentCalcMode === 'DIME') {
-                btnDime.className = 'btn btn-primary btn-sm fw-bold px-2 py-1';
-                btnHist.className = 'btn btn-outline-secondary btn-sm fw-bold px-2 py-1';
+                btnDime.className = 'btn btn-sm btn-primary fw-bold rounded-pill px-2.5 py-0.5';
+                btnHist.className = 'btn btn-sm btn-light text-secondary fw-bold rounded-pill px-2.5 py-0.5 border-0';
                 if (thSub) thSub.innerText = 'อิงเรทเงิน Dime';
             } else {
-                btnDime.className = 'btn btn-outline-primary btn-sm fw-bold px-2 py-1';
-                btnHist.className = 'btn btn-secondary btn-sm fw-bold px-2 py-1';
+                btnDime.className = 'btn btn-sm btn-light text-secondary fw-bold rounded-pill px-2.5 py-0.5 border-0';
+                btnHist.className = 'btn btn-sm btn-primary fw-bold rounded-pill px-2.5 py-0.5';
                 if (thSub) thSub.innerText = 'ตามประวัติแลกเงิน';
             }
         }
@@ -11586,71 +11715,116 @@
                 }
                 const isPos = item.change >= 0;
                 const sign = isPos ? '+' : '';
-                const chgColor = isPos ? '#10b981' : '#ef4444';
-                const spark = generateSvgSparkline(item.seed, isPos, 75, 24);
+                const chgColor = isPos ? '#059669' : '#dc2626';
+                const spark = generateSvgSparkline(item.seed, isPos, 70, 22);
 
-                let sigBadge = `<span class="badge bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">🟢 BUY</span>`;
+                let sigBadge = `<span class="badge rounded-pill fw-bold" style="background: rgba(16, 185, 129, 0.12); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.72rem; padding: 3px 8px;">🟢 BUY</span>`;
                 if (item.signal === 'WATCH') {
-                    sigBadge = `<span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle fw-bold" style="font-size: 0.72rem;">🟡 WATCH</span>`;
+                    sigBadge = `<span class="badge rounded-pill fw-bold" style="background: rgba(245, 158, 11, 0.12); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.72rem; padding: 3px 8px;">🟡 WATCH</span>`;
                 } else if (item.signal === 'SELL') {
-                    sigBadge = `<span class="badge bg-danger-subtle text-danger border border-danger-subtle fw-bold" style="font-size: 0.72rem;">🔴 SELL</span>`;
+                    sigBadge = `<span class="badge rounded-pill fw-bold" style="background: rgba(239, 68, 68, 0.12); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.72rem; padding: 3px 8px;">🔴 SELL</span>`;
                 }
 
-                let confBadge = item.conf === 'HIGH' 
-                    ? `<span class="badge bg-success-subtle text-success border border-success-subtle" style="font-size: 0.68rem;">HIGH</span>`
-                    : `<span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle" style="font-size: 0.68rem;">MED</span>`;
+                let confText = item.conf === 'HIGH' 
+                    ? `<span class="text-success fw-bold" style="font-size:0.62rem; letter-spacing: 0.3px;">HIGH CONF</span>`
+                    : `<span class="text-muted fw-bold" style="font-size:0.62rem; letter-spacing: 0.3px;">MED CONF</span>`;
 
-                // 6 green score dots
+                // Score pill + 6 micro dots
+                let scoreColor = item.score >= 5 ? '#059669' : (item.score >= 3 ? '#d97706' : '#dc2626');
+                let scoreBg = item.score >= 5 ? 'rgba(16, 185, 129, 0.12)' : (item.score >= 3 ? 'rgba(245, 158, 11, 0.12)' : 'rgba(239, 68, 68, 0.12)');
+                let scoreBorder = item.score >= 5 ? 'rgba(16, 185, 129, 0.3)' : (item.score >= 3 ? 'rgba(245, 158, 11, 0.3)' : 'rgba(239, 68, 68, 0.3)');
+
                 let dotsHtml = '';
                 for (let i = 1; i <= 6; i++) {
-                    const dotColor = i <= item.score ? '#10b981' : '#cbd5e1';
-                    dotsHtml += `<span style="display:inline-block; width:6px; height:6px; border-radius:50%; background-color:${dotColor};"></span>`;
+                    const dotColor = i <= item.score ? scoreColor : '#e2e8f0';
+                    dotsHtml += `<span style="display:inline-block; width:4.5px; height:4.5px; border-radius:50%; background-color:${dotColor};"></span>`;
                 }
 
-                // Momentum 6 timeframes
+                // Rank Medal / Number
+                let rankDisplay = '';
+                if (item.rank === 1) rankDisplay = `<span class="badge bg-warning text-dark fw-bold rounded-circle shadow-xs" style="width:24px; height:24px; line-height:18px; font-size:0.75rem;">🥇</span>`;
+                else if (item.rank === 2) rankDisplay = `<span class="badge bg-light text-secondary border fw-bold rounded-circle shadow-xs" style="width:24px; height:24px; line-height:18px; font-size:0.75rem;">🥈</span>`;
+                else if (item.rank === 3) rankDisplay = `<span class="badge bg-light text-dark border fw-bold rounded-circle shadow-xs" style="width:24px; height:24px; line-height:18px; font-size:0.75rem;">🥉</span>`;
+                else rankDisplay = `<span class="fw-bold text-muted" style="font-size:0.75rem;">#${item.rank}</span>`;
+
+                // Momentum 6 timeframes in micro-grid
                 const m = item.mom;
-                function momPill(val) {
+                function momBox(lbl, val) {
                     const p = val >= 0;
-                    return `<span class="badge ${p ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger'}" style="font-size: 0.65rem; padding: 2px 4px;">${p ? '+' : ''}${val.toFixed(1)}%</span>`;
+                    const c = p ? '#059669' : '#dc2626';
+                    const s = p ? '+' : '';
+                    return `
+                        <div class="mom-col text-center px-1">
+                            <div class="mom-lbl">${lbl}</div>
+                            <div class="mom-val" style="color: ${c};">${s}${val.toFixed(1)}%</div>
+                        </div>
+                    `;
                 }
 
                 html += `
                     <tr onclick="openTechnicalForTicker('${item.ticker}')">
-                        <td class="text-center text-muted fw-bold" style="font-size: 0.75rem;">${item.rank}</td>
-                        <td>
+                        <td class="text-center py-2.5">${rankDisplay}</td>
+                        <td class="py-2.5">
                             <div class="d-flex align-items-center">
-                                <div class="position-relative me-2 flex-shrink-0" style="width: 28px; height: 28px;">
-                                    <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border bg-white p-0.5 shadow-sm" width="28" height="28" style="object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="position-relative me-2.5 flex-shrink-0" style="width: 32px; height: 32px;">
+                                    <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border bg-white p-0.5 shadow-2xs" width="32" height="32" style="object-fit: contain;" onerror="this.style.display='none'">
                                 </div>
-                                <div class="text-truncate" style="max-width: 170px;">
-                                    <div class="fw-bold" style="font-size: 0.88rem; line-height: 1.1;">${item.ticker}</div>
-                                    <div class="text-muted text-truncate" style="font-size: 0.72rem;" title="${item.name}">${item.name}</div>
+                                <div class="text-truncate" style="max-width: 175px;">
+                                    <div class="fw-bolder" style="font-size: 0.95rem; line-height: 1.1; color: var(--bs-heading-color, #0f172a);">${item.ticker}</div>
+                                    <div class="text-muted text-truncate" style="font-size: 0.72rem; margin-top: 1px;" title="${item.name}">${item.name}</div>
                                 </div>
                             </div>
                         </td>
-                        <td class="text-center">${spark}</td>
-                        <td class="text-center">${sigBadge}</td>
-                        <td class="text-center">${confBadge}</td>
-                        <td class="text-center">
-                            <div class="d-flex align-items-center justify-content-center gap-1" title="คะแนน ${item.score}/6">${dotsHtml}</div>
+                        <td class="text-center py-2.5">${spark}</td>
+                        <td class="text-center py-2.5">
+                            <div>${sigBadge}</div>
+                            <div class="mt-0.5">${confText}</div>
                         </td>
-                        <td class="text-end fw-bold" style="font-size: 0.88rem;">$${curPrice.toFixed(2)}</td>
-                        <td class="text-end fw-bold" style="color: ${chgColor}; font-size: 0.88rem;">${sign}${item.change.toFixed(2)}%</td>
-                        <td class="text-end text-muted" style="font-size: 0.82rem;">$${item.res.toFixed(2)}</td>
-                        <td class="text-end text-muted" style="font-size: 0.82rem;">$${item.supp.toFixed(2)}</td>
-                        <td class="text-center">
-                            <div class="d-flex align-items-center justify-content-center gap-1 flex-nowrap">
-                                ${momPill(m.d1)}
-                                ${momPill(m.w1)}
-                                ${momPill(m.m1)}
-                                ${momPill(m.m3)}
-                                ${momPill(m.m6)}
-                                ${momPill(m.y1)}
+                        <td class="text-center py-2.5">
+                            <div class="d-inline-flex flex-column align-items-center">
+                                <span class="badge rounded-pill fw-bolder px-2 py-0.5" style="background: ${scoreBg}; color: ${scoreColor}; border: 1px solid ${scoreBorder}; font-size: 0.70rem;">
+                                    ★ ${item.score}/6
+                                </span>
+                                <div class="d-flex gap-1 mt-1" title="คะแนนเทคนิค ${item.score}/6">
+                                    ${dotsHtml}
+                                </div>
                             </div>
                         </td>
-                        <td class="text-center" onclick="event.stopPropagation();">
-                            <button class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.72rem;" onclick="openTechnicalForTicker('${item.ticker}')">
-                                📈 ดูกราฟ
+                        <td class="text-end py-2.5 fw-bolder" style="font-size: 0.92rem; letter-spacing: -0.2px;">$${curPrice.toFixed(2)}</td>
+                        <td class="text-end py-2.5">
+                            <span class="badge rounded-pill px-2 py-1 fw-bold" style="background: ${isPos ? 'rgba(16, 185, 129, 0.12)' : 'rgba(239, 68, 68, 0.12)'}; color: ${chgColor}; border: 1px solid ${isPos ? 'rgba(16, 185, 129, 0.25)' : 'rgba(239, 68, 68, 0.25)'}; font-size: 0.76rem;">
+                                ${sign}${item.change.toFixed(2)}%
+                            </span>
+                        </td>
+                        <td class="text-end py-2.5">
+                            <div class="text-nowrap" style="font-size: 0.76rem;">
+                                <span class="text-muted" style="font-size: 0.65rem;">ต้าน:</span>
+                                <strong style="color: #dc2626;">$${item.res.toFixed(2)}</strong>
+                            </div>
+                            <div class="text-nowrap" style="font-size: 0.76rem;">
+                                <span class="text-muted" style="font-size: 0.65rem;">รับ:</span>
+                                <strong style="color: #059669;">$${item.supp.toFixed(2)}</strong>
+                            </div>
+                        </td>
+                        <td class="text-center py-2.5">
+                            <div class="d-inline-flex align-items-center p-1 rounded-2 border bg-light-subtle shadow-2xs">
+                                ${momBox('1D', m.d1)}
+                                <div class="vr" style="height: 18px; opacity: 0.15;"></div>
+                                ${momBox('1W', m.w1)}
+                                <div class="vr" style="height: 18px; opacity: 0.15;"></div>
+                                ${momBox('1M', m.m1)}
+                                <div class="vr" style="height: 18px; opacity: 0.15;"></div>
+                                ${momBox('3M', m.m3)}
+                                <div class="vr" style="height: 18px; opacity: 0.15;"></div>
+                                ${momBox('6M', m.m6)}
+                                <div class="vr" style="height: 18px; opacity: 0.15;"></div>
+                                ${momBox('1Y', m.y1)}
+                            </div>
+                        </td>
+                        <td class="text-center py-2.5" onclick="event.stopPropagation();">
+                            <button class="btn btn-sm btn-outline-primary py-1 px-2.5 rounded-pill fw-bold shadow-2xs d-inline-flex align-items-center gap-1" style="font-size: 0.74rem;" onclick="openTechnicalForTicker('${item.ticker}')">
+                                <span>📈</span>
+                                <span>ดูกราฟ</span>
                             </button>
                         </td>
                     </tr>
@@ -12009,62 +12183,97 @@
                 else if (item.category === 'SECTOR') catClass = 'bg-warning-subtle text-warning-emphasis border border-warning-subtle';
                 else if (item.category === 'DEFENSIVE') catClass = 'bg-secondary-subtle text-secondary border border-secondary-subtle';
 
-                // 6 score dots
+                // Score pill + 6 micro dots
+                let scoreColor = item.score >= 5 ? '#059669' : (item.score >= 3 ? '#d97706' : '#dc2626');
+                let scoreBg = item.score >= 5 ? 'rgba(16, 185, 129, 0.12)' : (item.score >= 3 ? 'rgba(245, 158, 11, 0.12)' : 'rgba(239, 68, 68, 0.12)');
+                let scoreBorder = item.score >= 5 ? 'rgba(16, 185, 129, 0.3)' : (item.score >= 3 ? 'rgba(245, 158, 11, 0.3)' : 'rgba(239, 68, 68, 0.3)');
+
                 let dotsHtml = '';
                 for (let i = 1; i <= 6; i++) {
-                    const dotColor = i <= item.score ? '#10b981' : '#cbd5e1';
-                    dotsHtml += `<span style="display:inline-block; width:6px; height:6px; border-radius:50%; background-color:${dotColor};"></span>`;
+                    const dotColor = i <= item.score ? scoreColor : '#e2e8f0';
+                    dotsHtml += `<span style="display:inline-block; width:4.5px; height:4.5px; border-radius:50%; background-color:${dotColor};"></span>`;
                 }
 
-                // Momentum 6 timeframes
+                // Rank Medal / Number
+                let rankDisplay = '';
+                if (item.rank === 1) rankDisplay = `<span class="badge bg-warning text-dark fw-bold rounded-circle shadow-xs" style="width:24px; height:24px; line-height:18px; font-size:0.75rem;">🥇</span>`;
+                else if (item.rank === 2) rankDisplay = `<span class="badge bg-light text-secondary border fw-bold rounded-circle shadow-xs" style="width:24px; height:24px; line-height:18px; font-size:0.75rem;">🥈</span>`;
+                else if (item.rank === 3) rankDisplay = `<span class="badge bg-light text-dark border fw-bold rounded-circle shadow-xs" style="width:24px; height:24px; line-height:18px; font-size:0.75rem;">🥉</span>`;
+                else rankDisplay = `<span class="fw-bold text-muted" style="font-size:0.75rem;">#${item.rank}</span>`;
+
+                // Momentum 6 timeframes in micro-grid
                 const m = item.mom;
-                function momPill(val) {
+                function momBox(lbl, val) {
                     const p = val >= 0;
-                    return `<span class="badge ${p ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger'}" style="font-size: 0.65rem; padding: 2px 4px;">${p ? '+' : ''}${val.toFixed(1)}%</span>`;
+                    const c = p ? '#059669' : '#dc2626';
+                    const s = p ? '+' : '';
+                    return `
+                        <div class="mom-col text-center px-1">
+                            <div class="mom-lbl">${lbl}</div>
+                            <div class="mom-val" style="color: ${c};">${s}${val.toFixed(1)}%</div>
+                        </div>
+                    `;
                 }
 
                 html += `
                     <tr onclick="openTechnicalForTicker('${item.ticker}')">
-                        <td class="text-center text-muted fw-bold" style="font-size: 0.75rem;">${item.rank}</td>
-                        <td>
+                        <td class="text-center py-2.5">${rankDisplay}</td>
+                        <td class="py-2.5">
                             <div class="d-flex align-items-center">
-                                <div class="position-relative me-2 flex-shrink-0" style="width: 28px; height: 28px;">
-                                    <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border bg-white p-0.5 shadow-sm" width="28" height="28" style="object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="position-relative me-2.5 flex-shrink-0" style="width: 32px; height: 32px;">
+                                    <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border bg-white p-0.5 shadow-2xs" width="32" height="32" style="object-fit: contain;" onerror="this.style.display='none'">
                                 </div>
                                 <div class="text-truncate" style="max-width: 190px;">
-                                    <div class="fw-bold" style="font-size: 0.88rem; line-height: 1.1;">${item.ticker}</div>
-                                    <div class="text-muted text-truncate" style="font-size: 0.72rem;" title="${item.name}">${item.name}</div>
+                                    <div class="fw-bolder" style="font-size: 0.95rem; line-height: 1.1; color: var(--bs-heading-color, #0f172a);">${item.ticker}</div>
+                                    <div class="text-muted text-truncate" style="font-size: 0.72rem; margin-top: 1px;" title="${item.name}">${item.name}</div>
                                 </div>
                             </div>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center py-2.5">
                             <span class="badge ${catClass}" style="font-size: 0.70rem;">${item.categoryTh || item.category}</span>
                         </td>
-                        <td class="text-center">${spark}</td>
-                        <td class="text-center">${sigBadge}</td>
-                        <td class="text-center">
-                            <div class="d-flex align-items-center justify-content-center gap-1" title="คะแนน ${item.score}/6">${dotsHtml}</div>
+                        <td class="text-center py-2.5">${spark}</td>
+                        <td class="text-center py-2.5">${sigBadge}</td>
+                        <td class="text-center py-2.5">
+                            <div class="d-inline-flex flex-column align-items-center">
+                                <span class="badge rounded-pill fw-bolder px-2 py-0.5" style="background: ${scoreBg}; color: ${scoreColor}; border: 1px solid ${scoreBorder}; font-size: 0.70rem;">
+                                    ★ ${item.score}/6
+                                </span>
+                                <div class="d-flex gap-1 mt-1" title="คะแนนเทคนิค ${item.score}/6">
+                                    ${dotsHtml}
+                                </div>
+                            </div>
                         </td>
-                        <td class="text-center fw-bold" style="font-size: 0.78rem; color: #475569;">${item.exp}</td>
-                        <td class="text-end fw-bold" style="font-size: 0.88rem;">$${curPrice.toFixed(2)}</td>
-                        <td class="text-end fw-bold" style="color: ${chgColor}; font-size: 0.88rem;">${sign}${item.change.toFixed(2)}%</td>
-                        <td class="text-end" style="font-size: 0.82rem;">
+                        <td class="text-center py-2.5 fw-bold" style="font-size: 0.78rem; color: #475569;">${item.exp}</td>
+                        <td class="text-end py-2.5 fw-bolder" style="font-size: 0.92rem; letter-spacing: -0.2px;">$${curPrice.toFixed(2)}</td>
+                        <td class="text-end py-2.5">
+                            <span class="badge rounded-pill px-2 py-1 fw-bold" style="background: ${isPos ? 'rgba(16, 185, 129, 0.12)' : 'rgba(239, 68, 68, 0.12)'}; color: ${chgColor}; border: 1px solid ${isPos ? 'rgba(16, 185, 129, 0.25)' : 'rgba(239, 68, 68, 0.25)'}; font-size: 0.76rem;">
+                                ${sign}${item.change.toFixed(2)}%
+                            </span>
+                        </td>
+                        <td class="text-end py-2.5" style="font-size: 0.82rem;">
                             <div class="fw-bold">${item.aum}</div>
                             <div class="text-muted" style="font-size: 0.68rem;">Yield: ${item.yield}</div>
                         </td>
-                        <td class="text-center">
-                            <div class="d-flex align-items-center justify-content-center gap-1 flex-nowrap">
-                                ${momPill(m.d1)}
-                                ${momPill(m.w1)}
-                                ${momPill(m.m1)}
-                                ${momPill(m.m3)}
-                                ${momPill(m.m6)}
-                                ${momPill(m.y1)}
+                        <td class="text-center py-2.5">
+                            <div class="d-inline-flex align-items-center p-1 rounded-2 border bg-light-subtle shadow-2xs">
+                                ${momBox('1D', m.d1)}
+                                <div class="vr" style="height: 18px; opacity: 0.15;"></div>
+                                ${momBox('1W', m.w1)}
+                                <div class="vr" style="height: 18px; opacity: 0.15;"></div>
+                                ${momBox('1M', m.m1)}
+                                <div class="vr" style="height: 18px; opacity: 0.15;"></div>
+                                ${momBox('3M', m.m3)}
+                                <div class="vr" style="height: 18px; opacity: 0.15;"></div>
+                                ${momBox('6M', m.m6)}
+                                <div class="vr" style="height: 18px; opacity: 0.15;"></div>
+                                ${momBox('1Y', m.y1)}
                             </div>
                         </td>
-                        <td class="text-center" onclick="event.stopPropagation();">
-                            <button class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill fw-bold" style="font-size: 0.72rem;" onclick="openTechnicalForTicker('${item.ticker}')">
-                                📈 ดูกราฟ
+                        <td class="text-center py-2.5" onclick="event.stopPropagation();">
+                            <button class="btn btn-sm btn-outline-primary py-1 px-2.5 rounded-pill fw-bold shadow-2xs d-inline-flex align-items-center gap-1" style="font-size: 0.74rem;" onclick="openTechnicalForTicker('${item.ticker}')">
+                                <span>📈</span>
+                                <span>ดูกราฟ</span>
                             </button>
                         </td>
                     </tr>
