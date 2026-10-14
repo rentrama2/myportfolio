@@ -1905,6 +1905,137 @@
             background: rgba(148, 163, 184, 0.2);
             color: #cbd5e1;
         }
+
+        /* --- 5 FEATURE EXPANSIONS --- */
+        /* 1. Pre-Market Impact Card */
+        .premarket-glow-card {
+            background: linear-gradient(135deg, rgba(254, 243, 199, 0.45) 0%, rgba(255, 251, 235, 0.7) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.3) !important;
+            transition: all 0.25s ease;
+        }
+        [data-bs-theme="dark"] .premarket-glow-card,
+        body.dark-mode .premarket-glow-card {
+            background: linear-gradient(135deg, rgba(120, 53, 15, 0.2) 0%, rgba(69, 26, 3, 0.3) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.35) !important;
+        }
+        .premarket-pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #f59e0b;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 0 rgba(245, 158, 11, 0.7);
+            animation: premarketPulse 1.8s infinite;
+        }
+        @keyframes premarketPulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(245, 158, 11, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+        .premarket-mover-chip {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            padding: 6px 10px;
+            min-width: 130px;
+            flex-shrink: 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            transition: transform 0.15s ease;
+        }
+        .premarket-mover-chip:hover {
+            transform: translateY(-2px);
+        }
+        [data-bs-theme="dark"] .premarket-mover-chip,
+        body.dark-mode .premarket-mover-chip {
+            background: rgba(30, 41, 59, 0.85);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .premarket-summary-banner {
+            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        [data-bs-theme="dark"] .premarket-summary-banner,
+        body.dark-mode .premarket-summary-banner {
+            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(245, 158, 11, 0.25);
+        }
+
+        /* 2. Fear & Greed Index Meter */
+        .fg-meter-bar-container {
+            position: relative;
+            height: 16px;
+            background: linear-gradient(90deg, #ef4444 0%, #f97316 25%, #eab308 50%, #84cc16 75%, #10b981 100%);
+            border-radius: 999px;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+        }
+        .fg-meter-needle {
+            position: absolute;
+            top: -5px;
+            bottom: -5px;
+            width: 5px;
+            background: #0f172a;
+            border-radius: 4px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.45);
+            transform: translateX(-50%);
+            transition: left 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        [data-bs-theme="dark"] .fg-meter-needle,
+        body.dark-mode .fg-meter-needle {
+            background: #ffffff;
+            box-shadow: 0 0 8px rgba(255,255,255,0.7);
+        }
+        .fg-pulse-score {
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        /* 3. Dividend 12-Month Breakdown Bars */
+        .div-month-col {
+            flex: 1;
+            min-width: 55px;
+            background: rgba(248, 250, 252, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            padding: 8px 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            min-height: 140px;
+            position: relative;
+            transition: background 0.2s ease;
+        }
+        .div-month-col:hover {
+            background: rgba(16, 185, 129, 0.08);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        [data-bs-theme="dark"] .div-month-col,
+        body.dark-mode .div-month-col {
+            background: rgba(30, 41, 59, 0.5);
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+        [data-bs-theme="dark"] .div-month-col:hover,
+        body.dark-mode .div-month-col:hover {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+        .div-bar-container {
+            width: 100%;
+            height: 65px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin: 4px 0;
+        }
+        .div-bar-fill {
+            width: 22px;
+            border-radius: 6px 6px 2px 2px;
+            background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+            transition: height 0.6s ease;
+            box-shadow: 0 2px 4px rgba(16, 185, 129, 0.25);
+        }
     </style>
 </head>
 <body class="p-2 p-md-3">
@@ -2116,21 +2247,26 @@
 
     <!-- Modal: DCA Rebalancing Assistant -->
     <div class="modal fade" id="dcaModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
                 <div class="modal-body p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
                         <div>
-                            <h5 class="fw-bold m-0" style="color: inherit;">⚖️ วางแผน DCA & ปรับสมดุลพอร์ต (Rebalancing)</h5>
-                            <small class="text-muted">คำนวณการกระจายเงินซื้อ เพื่อปรับพอร์ตให้ตรงกับ Target % ที่ตั้งไว้</small>
+                            <h5 class="fw-bold m-0" style="color: inherit;">⚖️ เครื่องคำนวณเติมเงิน DCA & ปรับสมดุลพอร์ต (Smart Rebalance)</h5>
+                            <small class="text-muted">คำนวณเงินซื้อและจำนวนหุ้นที่ควรซื้อเพิ่ม เพื่อดึงสัดส่วนพอร์ตกลับสู่เป้าหมาย (Target Allocation)</small>
                         </div>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="d-flex align-items-center gap-2">
+                            <button type="button" class="btn btn-sm btn-outline-success rounded-pill fw-bold px-3 py-1" onclick="copyDCAPlan()" title="คัดลอกรายการซื้อทั้งหมดไปวางในแอปเทรด">
+                                📋 คัดลอกแผน DCA
+                            </button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
                     </div>
                     
                     <div class="card p-3 mb-3 border-0" style="border-radius: 12px; background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.15) !important;">
                         <div class="row g-3 align-items-center">
                             <div class="col-md-7">
-                                <label class="form-label fw-bold mb-1" style="font-size: 0.85rem;">จำนวนเงินที่ต้องการ DCA เพิ่มในครั้งนี้ (THB)</label>
+                                <label class="form-label fw-bold mb-1" style="font-size: 0.85rem;">💵 จำนวนเงินที่ต้องการ DCA เพิ่มในครั้งนี้ (THB)</label>
                                 <div class="input-group">
                                     <span class="input-group-text fw-bold">฿</span>
                                     <input type="text" inputmode="decimal" id="dcaAmountInput" class="form-control form-control-lg fw-bold text-primary" placeholder="เช่น 10,000 หรือ 20000" oninput="handleDCAAmountInput(this.value)" onclick="this.select()">
@@ -2148,17 +2284,25 @@
                             </div>
                             <div class="col-md-5">
                                 <div class="text-muted" style="font-size: 0.82rem;">
-                                    💡 <strong>ระบบคำนวณอัตโนมัติ:</strong> จัดสรรเงินก้อนนี้ไปยังสินทรัพย์ที่สัดส่วนยังต่ำกว่าเป้าหมาย (Underweight) ก่อน เพื่อดึงพอร์ตกลับสู่สมดุลตาม Target % ที่ต้องการ
+                                    💡 <strong>Smart Rebalance:</strong> จัดสรรงบก้อนนี้เข้าตัวที่สัดส่วนยังต่ำกว่าเป้าหมาย (Underweight) ก่อน เพื่อให้พอร์ตสมดุลโดยไม่ต้องขายตัวที่กำไรออกมา (ลดภาษีและค่าคอมมิชชัน)
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Target % Quick Presets & Status Alert -->
+                    <!-- Mode Selector: Ticker-Level vs Group-Level -->
                     <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-primary fw-bold px-3 py-1" id="btnDcaViewTicker" onclick="switchDCAViewMode('TICKER')">
+                                🎯 รายตัวหุ้น (มีจำนวนหุ้นแนะนำ)
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary fw-bold px-3 py-1" id="btnDcaViewGroup" onclick="switchDCAViewMode('GROUP')">
+                                📦 สรุปตามกลุ่มสินทรัพย์
+                            </button>
+                        </div>
                         <div class="d-flex align-items-center gap-1 flex-wrap">
                             <span class="fw-bold text-secondary me-1" style="font-size: 0.8rem;">🎯 กำหนดเป้าหมายด่วน:</span>
-                            <button type="button" class="btn btn-sm btn-light border py-0 px-2 rounded-pill fw-bold" style="font-size: 0.75rem;" onclick="applyDCAPreset('EQUAL')" title="แบ่งเป้าหมายเท่ากันทุกกลุ่ม (เช่น 50/50)">⚖️ แบ่งเท่ากัน</button>
+                            <button type="button" class="btn btn-sm btn-light border py-0 px-2 rounded-pill fw-bold" style="font-size: 0.75rem;" onclick="applyDCAPreset('EQUAL')" title="แบ่งเป้าหมายเท่ากันทุกรายการ">⚖️ แบ่งเท่ากัน</button>
                             <button type="button" class="btn btn-sm btn-light border py-0 px-2 rounded-pill fw-bold" style="font-size: 0.75rem;" onclick="applyDCAPreset('CURRENT')" title="ใช้สัดส่วนปัจจุบันเป็นเป้าหมาย">🔄 ตามพอร์ตปัจจุบัน</button>
                             <button type="button" class="btn btn-sm btn-light border py-0 px-2 rounded-pill fw-bold" style="font-size: 0.75rem;" onclick="applyDCAPreset('60_40')">📊 60 / 40</button>
                             <button type="button" class="btn btn-sm btn-light border py-0 px-2 rounded-pill fw-bold" style="font-size: 0.75rem;" onclick="applyDCAPreset('70_30')">🚀 70 / 30</button>
@@ -2177,7 +2321,30 @@
                         </button>
                     </div>
 
-                    <div class="table-responsive">
+                    <!-- View 1: Ticker Level DCA Table -->
+                    <div id="dcaTickerTableWrap" class="table-responsive">
+                        <table class="table table-hover align-middle text-center" style="font-size: 0.85rem;">
+                            <thead style="background-color: rgba(0,0,0,0.03);">
+                                <tr>
+                                    <th class="py-2 text-start">หุ้น / ETF</th>
+                                    <th class="py-2">ราคาปัจจุบัน</th>
+                                    <th class="py-2">ถืออยู่ (หุ้น)</th>
+                                    <th class="py-2">มูลค่าปัจจุบัน (฿)</th>
+                                    <th class="py-2">สัดส่วนปัจจุบัน</th>
+                                    <th class="py-2 text-primary" style="min-width: 100px;">เป้าหมาย %</th>
+                                    <th class="py-2 text-primary">งบแนะนำ (฿)</th>
+                                    <th class="py-2 text-primary">งบ ($)</th>
+                                    <th class="py-2 text-success fw-bolder" style="min-width: 110px;">แนะนำซื้อ (หุ้น)</th>
+                                    <th class="py-2 text-success">สัดส่วนใหม่ (%)</th>
+                                    <th class="py-2">แอ็กชัน</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dcaTickerTableBody"></tbody>
+                        </table>
+                    </div>
+
+                    <!-- View 2: Group Level DCA Table -->
+                    <div id="dcaGroupTableWrap" class="table-responsive" style="display: none;">
                         <table class="table table-hover align-middle text-center" style="font-size: 0.88rem;">
                             <thead style="background-color: rgba(0,0,0,0.03);">
                                 <tr>
@@ -2194,8 +2361,9 @@
                             <tbody id="dcaTableBody"></tbody>
                         </table>
                     </div>
+
                     <div class="d-flex justify-content-between align-items-center mt-3 flex-wrap gap-2">
-                        <small class="text-muted">💡 สามารถพิมพ์แก้ไข <strong>"เป้าหมาย %"</strong> ในตารางได้โดยตรง ระบบจะบันทึกและคำนวณใหม่ให้อัตโนมัติ</small>
+                        <small class="text-muted">💡 สามารถพิมพ์แก้ไข <strong>"เป้าหมาย %"</strong> ในตารางได้โดยตรง ระบบจะบันทึกและคำนวณจำนวนหุ้นที่ควรซื้อให้อัตโนมัติ (รองรับเศษทศนิยมสำหรับ Dime/InnovestX)</small>
                         <button type="button" class="btn btn-secondary px-4 fw-bold" style="border-radius: 10px;" data-bs-dismiss="modal">ปิด</button>
                     </div>
                 </div>
@@ -2317,65 +2485,162 @@
         </div>
     </div>
 
-    <!-- Modal: Dividend Calendar & Tax Summary (W-8BEN 15%) -->
+    <!-- Modal: Dividend Forecast, Calendar & Tax Summary (W-8BEN 15%) -->
     <div class="modal fade" id="dividendModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
                 <div class="modal-body p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
                         <div>
-                            <h5 class="fw-bold m-0" style="color: inherit;">💰 ปฏิทินเงินปันผล & สรุปภาษี 15% (Withholding Tax)</h5>
-                            <small class="text-muted">สรุป Passive Income และภาษีหัก ณ ที่จ่าย 15% ของสหรัฐฯ (W-8BEN)</small>
+                            <h5 class="fw-bold m-0" style="color: inherit;">💰 ปฏิทินเงินปันผล & คาดการณ์ Passive Income 12 เดือน</h5>
+                            <small class="text-muted">คำนวณคาดการณ์เงินปันผลล่วงหน้า 12 เดือน, ปฏิทินวันขึ้น XD, และรายงานภาษีหัก ณ ที่จ่าย 15% (W-8BEN)</small>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
 
-                    <!-- Summary Cards -->
-                    <div class="row g-2 mb-3">
-                        <div class="col-md-3 col-6">
-                            <div class="card p-2 text-center border-0" style="background-color: rgba(16, 185, 129, 0.1); border-radius: 10px;">
-                                <small class="text-muted fw-bold">ยอดปันผลรวม (Gross)</small>
-                                <div class="fw-bold text-success" id="modalGrossDiv">$0.00</div>
-                                <small class="text-muted" id="modalGrossDivTHB">฿0.00</small>
+                    <!-- Dual Tab Switcher -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 border-bottom pb-2">
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-success fw-bold px-3 py-1.5" id="btnDivModalTabForecast" onclick="switchDividendModalTab('FORECAST')">
+                                📅 คาดการณ์ 12 เดือน & ปฏิทินวันขึ้น XD
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary fw-bold px-3 py-1.5" id="btnDivModalTabHistory" onclick="switchDividendModalTab('HISTORY')">
+                                📜 ประวัติปันผลรับจริง & ภาษี 15% (W-8BEN)
+                            </button>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle px-3 py-1 fw-bold" id="badgeModalDivAnnualSum">
+                                🔮 คาดการณ์ทั้งปี: ฿0.00
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- TAB 1: 12-Month Forward Forecast & Ex-Dividend Calendar -->
+                    <div id="divModalForecastView">
+                        <!-- 4 Summary Cards -->
+                        <div class="row g-2 mb-3">
+                            <div class="col-md-3 col-6">
+                                <div class="card p-2 text-center border-0 shadow-xs" style="background-color: rgba(16, 185, 129, 0.1); border-radius: 10px;">
+                                    <small class="text-muted fw-bold">คาดการณ์ปันผลทั้งปี (สุทธิ)</small>
+                                    <div class="fw-bold text-success fs-5" id="fwdTotalDivTHB">฿0.00</div>
+                                    <small class="text-muted" id="fwdTotalDivUSD">≈ $0.00</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="card p-2 text-center border-0 shadow-xs" style="background-color: rgba(59, 130, 246, 0.1); border-radius: 10px;">
+                                    <small class="text-muted fw-bold">เฉลี่ยต่อเดือน (Passive Income)</small>
+                                    <div class="fw-bold text-primary fs-5" id="fwdMonthlyAvgTHB">฿0.00/ด.</div>
+                                    <small class="text-muted" id="fwdMonthlyAvgUSD">≈ $0.00/mo</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="card p-2 text-center border-0 shadow-xs" style="background-color: rgba(245, 158, 11, 0.1); border-radius: 10px;">
+                                    <small class="text-muted fw-bold">Forward Yield on Cost</small>
+                                    <div class="fw-bold text-warning fs-5" id="fwdYocPercent">0.00%</div>
+                                    <small class="text-muted">คำนวณจากต้นทุนเงินลงทุน</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="card p-2 text-center border-0 shadow-xs" style="background-color: rgba(139, 92, 246, 0.1); border-radius: 10px;">
+                                    <small class="text-muted fw-bold">สินทรัพย์ปันผลในพอร์ต</small>
+                                    <div class="fw-bold text-purple fs-5" id="fwdDivPayersCount">0 ตัว</div>
+                                    <small class="text-muted">หุ้น & ETF ที่จ่ายเงินปันผล</small>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-6">
-                            <div class="card p-2 text-center border-0" style="background-color: rgba(239, 68, 68, 0.1); border-radius: 10px;">
-                                <small class="text-muted fw-bold">ภาษี 15% สหรัฐฯ</small>
-                                <div class="fw-bold text-danger" id="modalTaxDiv">$0.00</div>
-                                <small class="text-muted" id="modalTaxDivTHB">฿0.00</small>
+
+                        <!-- 12-Month Interactive Visual Breakdown Bars -->
+                        <div class="card border-0 p-3 mb-3 shadow-xs" style="background: rgba(248, 250, 252, 0.85); border: 1px solid rgba(0,0,0,0.06) !important; border-radius: 12px;">
+                            <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                <span class="fw-bold" style="font-size: 0.9rem;">📊 แผนภาพคาดการณ์เงินปันผลรับ 12 เดือนข้างหน้า (Monthly Flow):</span>
+                                <small class="text-muted" style="font-size: 0.75rem;">หลังหักภาษี W-8BEN 15% อัตโนมัติ</small>
+                            </div>
+                            <div class="d-flex gap-1.5 overflow-x-auto pb-1" id="divForecast12MonthBar" style="scrollbar-width: thin;">
+                                <!-- Populated dynamically by renderDividendForecastModal() -->
                             </div>
                         </div>
-                        <div class="col-md-3 col-6">
-                            <div class="card p-2 text-center border-0" style="background-color: rgba(59, 130, 246, 0.1); border-radius: 10px;">
-                                <small class="text-muted fw-bold">ปันผลสุทธิรับจริง (Net)</small>
-                                <div class="fw-bold text-primary" id="modalNetDiv">$0.00</div>
-                                <small class="text-muted" id="modalNetDivTHB">฿0.00</small>
+
+                        <!-- Upcoming Ex-Dividend Dates Schedule Table -->
+                        <div class="card border-0 shadow-xs rounded-3 overflow-hidden">
+                            <div class="card-header border-0 bg-light py-2 px-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fw-bold" style="font-size: 0.88rem;">📅 ปฏิทินวันขึ้นเครื่องหมาย XD ล่วงหน้า (Upcoming Ex-Dates):</span>
+                                    <span class="badge rounded-pill bg-success" id="divUpcomingCountBadge" style="font-size: 0.7rem;">0 รายการ</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <small class="text-muted" style="font-size: 0.75rem;">* ถือหุ้นก่อนวัน Ex-Date เพื่อรับสิทธิ์ปันผลรอบนี้</small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <div class="card p-2 text-center border-0" style="background-color: rgba(245, 158, 11, 0.1); border-radius: 10px;">
-                                <small class="text-muted fw-bold">Yield on Cost (YOC)</small>
-                                <div class="fw-bold text-warning" id="modalYocDiv">0.00%</div>
-                                <small class="text-muted">ต่อปีจากเงินลงทุน</small>
+                            <div class="table-responsive" style="max-height: 320px; overflow-y: auto;">
+                                <table class="table table-hover align-middle text-center m-0" style="font-size: 0.85rem;">
+                                    <thead class="sticky-top table-light" style="font-size: 0.78rem;">
+                                        <tr>
+                                            <th class="py-2 text-start">หุ้น / ETF</th>
+                                            <th class="py-2 text-start">ชื่อหลักทรัพย์</th>
+                                            <th class="py-2 text-success fw-bold">วันขึ้น XD (ประมาณการ)</th>
+                                            <th class="py-2">วันจ่ายเงิน (Pay Date)</th>
+                                            <th class="py-2">ปันผล/หุ้น ($)</th>
+                                            <th class="py-2">Yield ต่อปี</th>
+                                            <th class="py-2">จำนวนหุ้นในพอร์ต</th>
+                                            <th class="py-2 text-success fw-bold">ปันผลสุทธิที่จะได้รับ (฿)</th>
+                                            <th class="py-2">สถานะ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="divUpcomingExDatesTableBody"></tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
 
-                    <div class="table-responsive" style="max-height: 380px; overflow-y: auto;">
-                        <table class="table table-hover align-middle text-center" style="font-size: 0.85rem;">
-                            <thead class="sticky-top" style="background-color: rgba(0,0,0,0.03);">
-                                <tr>
-                                    <th class="py-2 text-start">ช่วงเวลา (เดือน/ปี)</th>
-                                    <th class="py-2">หุ้น</th>
-                                    <th class="py-2">ยอดก่อนภาษี ($)</th>
-                                    <th class="py-2 text-danger">ภาษี 15% ($)</th>
-                                    <th class="py-2 text-primary">สุทธิ ($)</th>
-                                    <th class="py-2 text-success">สุทธิ (฿)</th>
-                                </tr>
-                            </thead>
-                            <tbody id="dividendModalTableBody"></tbody>
-                        </table>
+                    <!-- TAB 2: Historical Dividends & 15% Tax Report -->
+                    <div id="divModalHistoryView" style="display: none;">
+                        <!-- Summary Cards -->
+                        <div class="row g-2 mb-3">
+                            <div class="col-md-3 col-6">
+                                <div class="card p-2 text-center border-0" style="background-color: rgba(16, 185, 129, 0.1); border-radius: 10px;">
+                                    <small class="text-muted fw-bold">ยอดปันผลรวม (Gross)</small>
+                                    <div class="fw-bold text-success" id="modalGrossDiv">$0.00</div>
+                                    <small class="text-muted" id="modalGrossDivTHB">฿0.00</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="card p-2 text-center border-0" style="background-color: rgba(239, 68, 68, 0.1); border-radius: 10px;">
+                                    <small class="text-muted fw-bold">ภาษี 15% สหรัฐฯ</small>
+                                    <div class="fw-bold text-danger" id="modalTaxDiv">$0.00</div>
+                                    <small class="text-muted" id="modalTaxDivTHB">฿0.00</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="card p-2 text-center border-0" style="background-color: rgba(59, 130, 246, 0.1); border-radius: 10px;">
+                                    <small class="text-muted fw-bold">ปันผลสุทธิรับจริง (Net)</small>
+                                    <div class="fw-bold text-primary" id="modalNetDiv">$0.00</div>
+                                    <small class="text-muted" id="modalNetDivTHB">฿0.00</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="card p-2 text-center border-0" style="background-color: rgba(245, 158, 11, 0.1); border-radius: 10px;">
+                                    <small class="text-muted fw-bold">Yield on Cost (YOC)</small>
+                                    <div class="fw-bold text-warning" id="modalYocDiv">0.00%</div>
+                                    <small class="text-muted">ต่อปีจากเงินลงทุน</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive" style="max-height: 380px; overflow-y: auto;">
+                            <table class="table table-hover align-middle text-center" style="font-size: 0.85rem;">
+                                <thead class="sticky-top" style="background-color: rgba(0,0,0,0.03);">
+                                    <tr>
+                                        <th class="py-2 text-start">ช่วงเวลา (เดือน/ปี)</th>
+                                        <th class="py-2">หุ้น</th>
+                                        <th class="py-2">ยอดก่อนภาษี ($)</th>
+                                        <th class="py-2 text-danger">ภาษี 15% ($)</th>
+                                        <th class="py-2 text-primary">สุทธิ ($)</th>
+                                        <th class="py-2 text-success">สุทธิ (฿)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dividendModalTableBody"></tbody>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="d-flex justify-content-end mt-3">
@@ -2875,6 +3140,63 @@
                         </div>
                     </div>
 
+                    <!-- Fear & Greed Index + Macro Sentiment Meter Card -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-3" id="fearGreedCard" style="background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%); border: 1px solid rgba(0,0,0,0.06) !important;">
+                        <div class="card-body p-3">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-1 border-bottom">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fs-5">🧭</span>
+                                    <div>
+                                        <h6 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.2px;">Fear & Greed Index (ดัชนีวัดอารมณ์ตลาดสหรัฐฯ)</h6>
+                                        <small class="text-muted" style="font-size: 0.73rem;">ประเมินอารมณ์ตลาดรวมจากความผันผวน (VIX), โมเมนตัม S&P 500, สินทรัพย์ปลอดภัย และค่าเงินดอลลาร์</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span id="fgHistoricalComparisonBadge" class="badge rounded-pill bg-light text-muted border px-2.5 py-1" style="font-size: 0.72rem;">ก่อนหน้า: 62 (Greed)</span>
+                                    <button class="btn btn-sm btn-outline-secondary rounded-pill px-2.5 py-0 fw-bold" onclick="renderFearAndGreedMeter(true)" title="คำนวณดัชนีใหม่ตามข้อมูลล่าสุด" style="font-size: 0.72rem;">🔄 อัปเดต</button>
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center g-3">
+                                <!-- Left: Meter & Score -->
+                                <div class="col-lg-5 col-md-6 text-center text-md-start">
+                                    <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3 mb-2">
+                                        <div class="fg-pulse-score text-success" id="fgScoreDisplay">65</div>
+                                        <div>
+                                            <span class="badge rounded-pill px-3 py-1 fw-bold fs-6" id="fgRatingBadge" style="background-color: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">
+                                                🟢 GREED (ความโลภ)
+                                            </span>
+                                            <div class="text-muted mt-1" style="font-size: 0.72rem;" id="fgScoreSubText">ตลาดเปิดรับความเสี่ยง (Risk-On)</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 5-Zone Gauge Bar -->
+                                    <div class="fg-meter-bar-container my-2" id="fgMeterContainer">
+                                        <div class="fg-meter-needle" id="fgMeterNeedle" style="left: 65%;"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between text-muted fw-bold px-1" style="font-size: 0.68rem;">
+                                        <span class="text-danger">0 กลัวจัด</span>
+                                        <span class="text-warning">25 กลัว</span>
+                                        <span class="text-secondary">50 สมดุล</span>
+                                        <span class="text-success">75 โลภ</span>
+                                        <span class="text-success fw-bolder">100 โลภจัด</span>
+                                    </div>
+                                </div>
+
+                                <!-- Right: Tactical Investment Insight & 4 Pulse Drivers -->
+                                <div class="col-lg-7 col-md-6">
+                                    <div class="p-2.5 rounded-3 mb-2" id="fgAdviceBox" style="background: rgba(16, 185, 129, 0.06); border-left: 3.5px solid #10b981; font-size: 0.8rem;">
+                                        💡 <strong>กลยุทธ์การลงทุน:</strong> <span id="fgAdviceText">ตลาดอยู่ในโซน Greed: บรรยากาศการลงทุนเปิดรับความเสี่ยง หุ้นกลุ่มเติบโตยังคงได้เปรียบ แนะนำทยอย Run Trend แต่ควรระวังการไล่ราคาเกินเป้าหมาย</span>
+                                    </div>
+                                    
+                                    <div class="row g-1.5" id="fgDriverRow">
+                                        <!-- Injected by renderFearAndGreedMeter() -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- 7 Macro Indices Cards (Dow Jones, S&P 500, Nasdaq 100, VIX, Gold, WTI Crude Oil, DXY) -->
                     <div class="mb-3" id="macroIndicesRow">
                         <!-- Populated by renderMacroIndices() -->
@@ -3104,6 +3426,9 @@
             <div class="d-flex align-items-center gap-2">
                 <span class="badge rounded-pill bg-dark text-white px-2 py-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">🇺🇸 US MARKETS</span>
                 <span id="usMarketStatusBadge" class="badge rounded-pill bg-success px-2 py-1" style="font-size: 0.72rem;">🟢 ตลาดเปิด (LIVE)</span>
+                <button id="btnPreMarketCardToggle" class="btn btn-sm btn-outline-warning rounded-pill py-0 px-2 fw-bold d-flex align-items-center gap-1" style="font-size: 0.72rem;" onclick="togglePreMarketCard()" title="เปิด/ปิดการ์ดสรุปผลกระทบหุ้นในพอร์ตช่วง Pre-Market">
+                    🌅 สรุป Pre-Market
+                </button>
             </div>
             
             <div class="d-flex align-items-center gap-2 gap-md-3 flex-wrap">
@@ -3150,6 +3475,47 @@
                 <button class="btn btn-sm btn-dark py-0 px-2 rounded-pill text-white fw-bold" onclick="updateAllPricesAndFx(true)" title="ดึงราคาสดล่าสุดทันที (Bypass Cache)" style="font-size: 0.72rem;">
                     🔄 ดึงราคาสด
                 </button>
+            </div>
+        </div>
+
+        <!-- Pre-Market Movers & Opening Portfolio Impact Card -->
+        <div id="preMarketImpactCard" class="card border-0 shadow-sm rounded-4 mb-3 premarket-glow-card" style="display: none;">
+            <div class="card-body p-3">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge rounded-pill bg-warning-subtle text-warning-emphasis border border-warning-subtle px-2.5 py-1 fw-bold d-flex align-items-center gap-1.5" style="font-size: 0.8rem;">
+                            <span class="premarket-pulse-dot"></span>
+                            🌅 Pre-Market Movers & คาดการณ์ผลกระทบเปิดตลาด
+                        </span>
+                        <span id="preMarketSessionCountdown" class="text-muted fw-normal" style="font-size: 0.75rem;">(อิงราคาซื้อขายล่วงหน้าก่อนตลาดเปิด)</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span id="preMarketImpactTotalDeltaBadge" class="badge rounded-pill px-3 py-1 fw-bold fs-6 bg-success text-white">
+                            +฿0.00 (+0.00%)
+                        </span>
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-2 py-0 fw-bold" onclick="togglePreMarketCard(false)" style="font-size: 0.72rem;">✕ ซ่อนการ์ด</button>
+                    </div>
+                </div>
+                
+                <!-- Estimated Opening Value Banner -->
+                <div class="p-2.5 rounded-3 mb-2 premarket-summary-banner d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <div>
+                        <small class="text-muted fw-bold d-block" style="font-size: 0.72rem;">คาดการณ์มูลค่าพอร์ตเมื่อตลาดเปิด (Estimated Open Portfolio Value):</small>
+                        <div class="d-flex align-items-baseline gap-2">
+                            <span class="fw-bolder fs-5 text-dark" id="preMarketEstOpenPortTHB">฿0.00</span>
+                            <span class="text-muted fw-bold" id="preMarketEstOpenPortUSD">≈ $0.00</span>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <small class="text-muted fw-bold d-block" style="font-size: 0.72rem;">ผลกระทบสุทธิต่อพอร์ต (Estimated Pre-Market Delta):</small>
+                        <div class="fw-bold fs-6 text-success" id="preMarketNetDeltaTHB">+฿0.00</div>
+                    </div>
+                </div>
+
+                <!-- Top Movers Chips / Scroller in Portfolio -->
+                <div class="d-flex align-items-center gap-2 overflow-x-auto pb-1" id="preMarketMoversContainer" style="scrollbar-width: thin;">
+                    <!-- Injected by renderPreMarketMoversCard() -->
+                </div>
             </div>
         </div>
 
@@ -3329,6 +3695,12 @@
                             </button>
                             <button class="btn btn-outline-secondary btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="changeGroup()" title="จัดกลุ่มสินทรัพย์ เช่น ETF, Stock, REIT">
                                 📁 จัดกลุ่ม
+                            </button>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="openDCAPlanner()" title="คำนวณเติมเงิน DCA & ปรับสมดุลพอร์ตตามเป้าหมาย">
+                                ⚖️ วางแผน DCA
+                            </button>
+                            <button class="btn btn-outline-success btn-sm rounded-pill fw-bold px-2 px-md-3 d-flex align-items-center gap-1 shadow-sm" style="font-size: 0.8rem;" onclick="exportFullBackup()" title="สำรองข้อมูลพอร์ตทั้งหมดเป็นไฟล์ JSON คลิกเดียว">
+                                💾 สำรอง JSON
                             </button>
                         </div>
                         <div class="d-flex align-items-center gap-2 mt-2 mt-md-0 flex-wrap justify-content-end">
@@ -4904,20 +5276,34 @@
 
         // --- 1-CLICK BACKUP & RESTORE ---
         window.exportFullBackup = function() {
+            let activeWatchlist = [];
+            try {
+                activeWatchlist = (typeof techWatchlist !== 'undefined' && Array.isArray(techWatchlist)) 
+                    ? techWatchlist 
+                    : JSON.parse(localStorage.getItem('myTechWatchlist') || '[]');
+            } catch(e) {}
+
             const backupData = {
-                version: "V53",
+                version: "V54",
                 appName: "MyPortfolioPro",
                 backupDate: new Date().toISOString(),
                 portfolios: portfolios,
                 activePortfolioId: activePortfolioId,
                 transactions: transactions,
                 marketPrices: marketPrices,
+                extendedHoursPrices: (typeof extendedHoursPrices !== 'undefined') ? extendedHoursPrices : {},
                 portfolioTargets: portfolioTargets,
+                stockTargets: (typeof stockTargets !== 'undefined') ? stockTargets : (JSON.parse(localStorage.getItem('myStockTargets') || '{}')),
                 portfolioMapping: portfolioMapping,
                 liveFxRate: liveFxRate,
                 currentCalcMode: currentCalcMode,
                 tunedDiffsV2: tunedDiffsV2,
-                theme: localStorage.getItem('myPortfolioTheme') || 'light'
+                techWatchlist: activeWatchlist,
+                theme: localStorage.getItem('myPortfolioTheme') || 'light',
+                autoSwitchPrice: (localStorage.getItem('myAutoSwitchPrice') !== 'false'),
+                privacyMode: (localStorage.getItem('myPrivacyMode') === 'true'),
+                holdingsViewMode: localStorage.getItem('myHoldingsViewMode') || 'GROUPED',
+                holdingsPageSize: localStorage.getItem('myHoldingsPageSize') || 'ALL'
             };
             const jsonStr = JSON.stringify(backupData, null, 2);
             const blob = new Blob([jsonStr], { type: 'application/json;charset=utf-8;' });
@@ -4929,6 +5315,9 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+            
+            // Show toast or alert
+            console.log("Portfolio backup exported successfully:", backupData);
         };
 
         window.handleRestoreBackup = function(event) {
@@ -4939,14 +5328,28 @@
                 try {
                     const data = JSON.parse(e.target.result);
                     if (!data.transactions || !Array.isArray(data.transactions)) {
-                        alert("ไฟล์สำรองไม่ถูกต้องหรือไม่พบข้อมูลรายการครับ");
+                        alert("ไฟล์สำรองไม่ถูกต้องหรือไม่พบข้อมูลรายการ (Transactions) ครับ");
                         return;
                     }
-                    if (!confirm(`พบข้อมูลสำรอง ${data.transactions.length} รายการ (วันที่: ${data.backupDate || 'ไม่ระบุ'})\nต้องการกู้คืนข้อมูลทั้งหมดใช่หรือไม่? (ข้อมูลปัจจุบันจะถูกเขียนทับด้วยข้อมูลสำรอง)`)) {
+
+                    const txnCount = data.transactions.length;
+                    const portCount = (data.portfolios && Array.isArray(data.portfolios)) ? data.portfolios.length : 1;
+                    const dateDisplay = data.backupDate ? new Date(data.backupDate).toLocaleString('th-TH') : 'ไม่ระบุ';
+                    
+                    const confirmMsg = `📥 ยืนยันการกู้คืนข้อมูลพอร์ตลงทุน\n` +
+                                       `━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+                                       `• วันที่สำรองข้อมูล: ${dateDisplay}\n` +
+                                       `• จำนวนพอร์ตการลงทุน: ${portCount} พอร์ต\n` +
+                                       `• รายการธุรกรรมทั้งหมด: ${txnCount} รายการ\n` +
+                                       `• ข้อมูลราคา, เป้าหมาย TP/SL และ Watchlist ครบถ้วน\n\n` +
+                                       `⚠️ ข้อมูลพอร์ตและรายการปัจจุบันจะถูกเขียนทับด้วยข้อมูลสำรองนี้ ต้องการดำเนินการต่อใช่หรือไม่?`;
+
+                    if (!confirm(confirmMsg)) {
                         event.target.value = '';
                         return;
                     }
-                    if (data.portfolios) {
+
+                    if (data.portfolios && Array.isArray(data.portfolios)) {
                         portfolios = data.portfolios;
                         localStorage.setItem('myPortfolios', JSON.stringify(portfolios));
                     }
@@ -4955,12 +5358,20 @@
                         localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
                     }
                     if (data.marketPrices) {
-                        marketPrices = data.marketPrices;
+                        marketPrices = Object.assign({}, defaultInitialPrices, data.marketPrices);
                         localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
+                    }
+                    if (data.extendedHoursPrices) {
+                        extendedHoursPrices = Object.assign({}, data.extendedHoursPrices);
+                        localStorage.setItem('myExtendedHoursPrices', JSON.stringify(extendedHoursPrices));
                     }
                     if (data.portfolioTargets) {
                         portfolioTargets = data.portfolioTargets;
                         localStorage.setItem('myPortfolioTargets', JSON.stringify(portfolioTargets));
+                    }
+                    if (data.stockTargets) {
+                        stockTargets = data.stockTargets;
+                        localStorage.setItem('myStockTargets', JSON.stringify(stockTargets));
                     }
                     if (data.portfolioMapping) {
                         portfolioMapping = data.portfolioMapping;
@@ -4969,7 +5380,8 @@
                     if (data.liveFxRate) {
                         liveFxRate = data.liveFxRate;
                         localStorage.setItem('myLiveFxRate', liveFxRate);
-                        document.getElementById('liveFxInput').value = liveFxRate;
+                        const fxInput = document.getElementById('liveFxInput');
+                        if (fxInput) fxInput.value = liveFxRate;
                     }
                     if (data.currentCalcMode) {
                         currentCalcMode = data.currentCalcMode;
@@ -4980,10 +5392,22 @@
                         tunedDiffsV2 = data.tunedDiffsV2;
                         localStorage.setItem('myTunedDiffsV2', JSON.stringify(tunedDiffsV2));
                     }
+                    if (data.techWatchlist && Array.isArray(data.techWatchlist)) {
+                        techWatchlist = data.techWatchlist;
+                        localStorage.setItem('myTechWatchlist', JSON.stringify(techWatchlist));
+                    }
                     if (data.theme) {
                         localStorage.setItem('myPortfolioTheme', data.theme);
                         initTheme();
                     }
+                    if (data.autoSwitchPrice !== undefined) {
+                        localStorage.setItem('myAutoSwitchPrice', data.autoSwitchPrice ? 'true' : 'false');
+                    }
+                    if (data.privacyMode !== undefined) {
+                        localStorage.setItem('myPrivacyMode', data.privacyMode ? 'true' : 'false');
+                        if (typeof updatePrivacyBtnUI === 'function') updatePrivacyBtnUI(data.privacyMode);
+                    }
+
                     activePortfolioId = data.activePortfolioId || 'ALL';
                     localStorage.setItem('myActivePortfolioId', activePortfolioId);
 
@@ -4991,7 +5415,12 @@
                     renderPortfolioCards();
                     updateSummaryAndChart();
                     renderTable();
-                    alert("กู้คืนข้อมูลและโครงสร้างพอร์ตสำเร็จสมบูรณ์ 100% ครับ!");
+                    if (typeof updateUSMarketStatusUI === 'function') updateUSMarketStatusUI();
+                    if (typeof renderTechWatchlist === 'function') renderTechWatchlist();
+                    if (typeof renderPreMarketMoversCard === 'function') renderPreMarketMoversCard();
+                    if (typeof renderDividends === 'function') renderDividends();
+
+                    alert("🎉 กู้คืนข้อมูลพอร์ตและประวัติทั้งหมดสำเร็จ 100% เรียบร้อยครับ!");
                 } catch (err) {
                     alert("เกิดข้อผิดพลาดในการอ่านไฟล์สำรอง: " + err.message);
                 }
@@ -5049,10 +5478,156 @@
         };
 
         // --- DCA REBALANCING ASSISTANT ---
+        let currentDcaViewMode = 'TICKER'; // 'TICKER' or 'GROUP'
+        let portfolioTickerTargets = JSON.parse(localStorage.getItem('myPortfolioTickerTargets')) || {};
+
         window.openDCAPlanner = function() {
             const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('dcaModal'));
             calculateDCA(true);
             modal.show();
+        };
+
+        window.switchDCAViewMode = function(mode) {
+            currentDcaViewMode = mode;
+            const btnTicker = document.getElementById('btnDcaViewTicker');
+            const btnGroup = document.getElementById('btnDcaViewGroup');
+            const wrapTicker = document.getElementById('dcaTickerTableWrap');
+            const wrapGroup = document.getElementById('dcaGroupTableWrap');
+
+            if (btnTicker && btnGroup) {
+                if (mode === 'TICKER') {
+                    btnTicker.className = 'btn btn-primary fw-bold px-3 py-1';
+                    btnGroup.className = 'btn btn-outline-secondary fw-bold px-3 py-1';
+                } else {
+                    btnTicker.className = 'btn btn-outline-secondary fw-bold px-3 py-1';
+                    btnGroup.className = 'btn btn-primary fw-bold px-3 py-1';
+                }
+            }
+
+            if (wrapTicker && wrapGroup) {
+                wrapTicker.style.display = (mode === 'TICKER') ? 'block' : 'none';
+                wrapGroup.style.display = (mode === 'GROUP') ? 'block' : 'none';
+            }
+
+            calculateDCA(true);
+        };
+
+        window.handleDCATickerTargetChange = function(ticker, val) {
+            let clean = cleanNumericInput(val, true);
+            let num = parseFloat(clean) || 0;
+            if (num < 0) num = 0;
+            if (num > 100) num = 100;
+            portfolioTickerTargets[ticker] = num;
+            localStorage.setItem('myPortfolioTickerTargets', JSON.stringify(portfolioTickerTargets));
+            calculateDCA(false);
+        };
+
+        window.sendDCATickerToBuyForm = function(ticker, shares, price) {
+            const modalEl = document.getElementById('dcaModal');
+            bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+
+            const selType = document.getElementById('txnType');
+            const inpTicker = document.getElementById('txnTicker');
+            if (selType) selType.value = 'BUY';
+            if (inpTicker) {
+                inpTicker.value = ticker;
+                if (typeof handleTickerChange === 'function') handleTickerChange();
+            }
+
+            const inpShares = document.getElementById('txnShares');
+            const inpPrice = document.getElementById('txnPrice');
+            if (inpShares && shares) inpShares.value = shares;
+            if (inpPrice && price) inpPrice.value = Number(price).toFixed(2);
+            if (typeof calculateTxnTotal === 'function') calculateTxnTotal();
+
+            const formCard = document.getElementById('txnFormCard') || document.getElementById('txnType');
+            if (formCard) {
+                formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                formCard.classList.add('form-highlight');
+                setTimeout(() => formCard.classList.remove('form-highlight'), 2000);
+            }
+        };
+
+        window.copyDCAPlan = function() {
+            const rawInput = document.getElementById('dcaAmountInput') ? document.getElementById('dcaAmountInput').value : '0';
+            const cleanInput = cleanNumericInput(rawInput, true);
+            const dcaTHB = parseFloat(cleanInput) || 0;
+
+            const currentTxns = (activePortfolioId === 'ALL')
+                ? transactions
+                : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
+
+            let holdings = {};
+            currentTxns.forEach(t => {
+                if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW') return;
+                if (!holdings[t.ticker]) holdings[t.ticker] = 0;
+                if (t.type === 'BUY') holdings[t.ticker] += t.shares;
+                else if (t.type === 'SELL') holdings[t.ticker] -= t.shares;
+            });
+
+            let activeHoldings = [];
+            for (let tk in holdings) {
+                if (holdings[tk] > 0.0001) {
+                    let price = marketPrices[tk] || 0;
+                    let mktTHB = holdings[tk] * price * liveFxRate;
+                    activeHoldings.push({ ticker: tk, shares: holdings[tk], price: price, valTHB: mktTHB });
+                }
+            }
+
+            if (!activeHoldings.length) {
+                alert("ยังไม่มีรายการหุ้นในพอร์ตเพื่อสร้างแผน DCA ครับ");
+                return;
+            }
+
+            let totalCurrentVal = activeHoldings.reduce((s, h) => s + h.valTHB, 0);
+            let newTotalVal = totalCurrentVal + dcaTHB;
+
+            let planLines = [];
+            planLines.push(`📋 แผนลงทุน DCA & Rebalance`);
+            planLines.push(`• งบประมาณรวม: ฿${dcaTHB.toLocaleString('th-TH')} (≈ $${(dcaTHB / liveFxRate).toFixed(2)})`);
+            planLines.push(`• อิงเรทเงิน: ฿${liveFxRate.toFixed(2)} / USD`);
+            planLines.push(`━━━━━━━━━━━━━━━━━━━━━━━━━━`);
+
+            let shortfalls = {};
+            let totalShortfall = 0;
+            activeHoldings.forEach(h => {
+                let targetPct = portfolioTickerTargets[h.ticker] || (100 / activeHoldings.length);
+                let targetVal = newTotalVal * (targetPct / 100);
+                let sf = Math.max(0, targetVal - h.valTHB);
+                shortfalls[h.ticker] = sf;
+                totalShortfall += sf;
+            });
+
+            activeHoldings.forEach(h => {
+                let allocTHB = 0;
+                if (dcaTHB > 0) {
+                    if (totalShortfall > 0 && shortfalls[h.ticker] > 0) {
+                        allocTHB = (shortfalls[h.ticker] / totalShortfall) * dcaTHB;
+                    } else {
+                        allocTHB = dcaTHB / activeHoldings.length;
+                    }
+                }
+                let allocUSD = liveFxRate > 0 ? allocTHB / liveFxRate : 0;
+                let recShares = (h.price > 0 && allocUSD > 0) ? (allocUSD / h.price).toFixed(4) : '0.0000';
+
+                if (allocTHB > 0) {
+                    planLines.push(`👉 ${h.ticker}: ซื้อ ${recShares} หุ้น (@ $${h.price.toFixed(2)}) ≈ ฿${Math.round(allocTHB).toLocaleString()} ($${allocUSD.toFixed(2)})`);
+                }
+            });
+
+            planLines.push(`━━━━━━━━━━━━━━━━━━━━━━━━━━`);
+            planLines.push(`สร้างโดย MyPortfolio Pro • นำไปคีย์ซื้อใน Dime ได้ทันที`);
+
+            const fullText = planLines.join('\n');
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(fullText).then(() => {
+                    alert("📋 คัดลอกแผน DCA เรียบร้อยแล้วครับ!\nสามารถนำไปเปิดแอป Dime เพื่อส่งคำสั่งซื้อได้ทันที");
+                }).catch(() => {
+                    prompt("คัดลอกข้อความแผน DCA ด้านล่างนี้ได้เลยครับ:", fullText);
+                });
+            } else {
+                prompt("คัดลอกข้อความแผน DCA ด้านล่างนี้ได้เลยครับ:", fullText);
+            }
         };
 
         window.setDCAQuickAmount = function(amt) {
@@ -5129,6 +5704,81 @@
         }
 
         window.applyDCAPreset = function(type) {
+            const currentTxns = (activePortfolioId === 'ALL')
+                ? transactions
+                : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
+
+            let holdings = {};
+            currentTxns.forEach(t => {
+                if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW') return;
+                if (!holdings[t.ticker]) holdings[t.ticker] = 0;
+                if (t.type === 'BUY') holdings[t.ticker] += t.shares;
+                else if (t.type === 'SELL') holdings[t.ticker] -= t.shares;
+            });
+
+            let activeTickers = Object.keys(holdings).filter(tk => holdings[tk] > 0.0001);
+
+            if (currentDcaViewMode === 'TICKER' && activeTickers.length > 0) {
+                let totalCurrentVal = 0;
+                let tkVals = {};
+                activeTickers.forEach(tk => {
+                    let v = holdings[tk] * (marketPrices[tk] || 0) * liveFxRate;
+                    tkVals[tk] = v;
+                    totalCurrentVal += v;
+                });
+
+                if (type === 'EQUAL') {
+                    let each = Number((100 / activeTickers.length).toFixed(1));
+                    let running = 0;
+                    activeTickers.forEach((tk, idx) => {
+                        if (idx === activeTickers.length - 1) {
+                            portfolioTickerTargets[tk] = Number((100 - running).toFixed(1));
+                        } else {
+                            portfolioTickerTargets[tk] = each;
+                            running += each;
+                        }
+                    });
+                } else if (type === 'CURRENT') {
+                    let running = 0;
+                    activeTickers.forEach((tk, idx) => {
+                        let pct = totalCurrentVal > 0 ? (tkVals[tk] / totalCurrentVal) * 100 : (100 / activeTickers.length);
+                        let rounded = Number(pct.toFixed(1));
+                        if (idx === activeTickers.length - 1) {
+                            portfolioTickerTargets[tk] = Number((100 - running).toFixed(1));
+                        } else {
+                            portfolioTickerTargets[tk] = rounded;
+                            running += rounded;
+                        }
+                    });
+                } else if (type === '60_40' || type === '70_30') {
+                    let etfRatio = (type === '60_40') ? 60 : 70;
+                    let stockRatio = 100 - etfRatio;
+                    let etfList = activeTickers.filter(t => (portfolioMapping[t] || 'Stock') === 'ETF');
+                    let stockList = activeTickers.filter(t => (portfolioMapping[t] || 'Stock') !== 'ETF');
+                    
+                    if (etfList.length > 0 && stockList.length > 0) {
+                        let eachEtf = Number((etfRatio / etfList.length).toFixed(1));
+                        let eachStock = Number((stockRatio / stockList.length).toFixed(1));
+                        let rEtf = 0, rStock = 0;
+                        etfList.forEach((t, i) => {
+                            if (i === etfList.length - 1) portfolioTickerTargets[t] = Number((etfRatio - rEtf).toFixed(1));
+                            else { portfolioTickerTargets[t] = eachEtf; rEtf += eachEtf; }
+                        });
+                        stockList.forEach((t, i) => {
+                            if (i === stockList.length - 1) portfolioTickerTargets[t] = Number((stockRatio - rStock).toFixed(1));
+                            else { portfolioTickerTargets[t] = eachStock; rStock += eachStock; }
+                        });
+                    } else {
+                        let each = Number((100 / activeTickers.length).toFixed(1));
+                        activeTickers.forEach(tk => { portfolioTickerTargets[tk] = each; });
+                    }
+                }
+                localStorage.setItem('myPortfolioTickerTargets', JSON.stringify(portfolioTickerTargets));
+                calculateDCA(true);
+                return;
+            }
+
+            // GROUP MODE PRESET
             let groupValues = getDCAGroupValues();
             let groupList = Object.keys(groupValues);
             if (groupList.length === 0) groupList = ['ETF', 'Stock'];
@@ -5228,19 +5878,10 @@
             const rawInput = document.getElementById('dcaAmountInput') ? document.getElementById('dcaAmountInput').value : '0';
             const cleanInput = cleanNumericInput(rawInput, true);
             const dcaTHB = parseFloat(cleanInput) || 0;
-            const tbody = document.getElementById('dcaTableBody');
-            if (!tbody) return;
 
             const currentTxns = (activePortfolioId === 'ALL')
                 ? transactions
                 : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
-
-            let groupValues = {};
-            let groupTickers = {};
-            let allGroups = new Set();
-            for (let tk in portfolioMapping) allGroups.add(portfolioMapping[tk]);
-            for (let tg in portfolioTargets) allGroups.add(tg);
-            allGroups.forEach(g => { groupValues[g] = 0; groupTickers[g] = []; });
 
             let holdings = {};
             currentTxns.forEach(t => {
@@ -5250,188 +5891,368 @@
                 else if (t.type === 'SELL') holdings[t.ticker] -= t.shares;
             });
 
-            for (let tk in holdings) {
-                if (holdings[tk] > 0.0001) {
-                    let price = marketPrices[tk] || 0;
-                    let mktTHB = holdings[tk] * price * liveFxRate;
-                    let grp = portfolioMapping[tk] || 'Stock';
-                    groupValues[grp] = (groupValues[grp] || 0) + mktTHB;
-                    if (!groupTickers[grp]) groupTickers[grp] = [];
-                    if (!groupTickers[grp].includes(tk)) groupTickers[grp].push(tk);
-                }
-            }
-
-            let totalCurrentVal = Object.values(groupValues).reduce((a, b) => a + b, 0);
-            let newTotalVal = totalCurrentVal + dcaTHB;
-
-            let groupList = Object.keys(groupValues);
-            if (groupList.length === 0) groupList = ['ETF', 'Stock'];
-
-            let totalTargetPct = 0;
-            groupList.forEach(grp => {
-                totalTargetPct += (portfolioTargets[grp] || 0);
-            });
-
-            // Target total badge
-            const targetBadge = document.getElementById('dcaTargetTotalBadge');
-            if (targetBadge) {
-                targetBadge.innerText = `รวมเป้าหมาย: ${totalTargetPct.toFixed(1)}%`;
-                if (Math.abs(totalTargetPct - 100) < 0.1) {
-                    targetBadge.className = 'badge rounded-pill bg-success text-white border px-3 py-1';
-                } else if (totalTargetPct === 0) {
-                    targetBadge.className = 'badge rounded-pill bg-secondary text-white border px-3 py-1';
-                } else {
-                    targetBadge.className = 'badge rounded-pill bg-warning text-dark border px-3 py-1';
-                }
-            }
-
-            // Alert banner if targets are not set
-            const alertEl = document.getElementById('dcaNoTargetAlert');
-            if (alertEl) {
-                alertEl.style.display = (totalTargetPct === 0) ? 'flex' : 'none';
-            }
-
-            let shortfalls = {};
-            let totalShortfall = 0;
-
-            groupList.forEach(grp => {
-                let targetPct = portfolioTargets[grp] || 0;
-                let targetVal = newTotalVal * (targetPct / 100);
-                let curVal = groupValues[grp] || 0;
-                let shortfall = Math.max(0, targetVal - curVal);
-                shortfalls[grp] = shortfall;
-                if (targetPct > 0) totalShortfall += shortfall;
-            });
-
-            if (fullRender || !document.getElementById('dcaTarget_' + groupList[0])) {
-                let html = '';
-                groupList.forEach(grp => {
-                    let curVal = groupValues[grp] || 0;
-                    let curPct = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * 100 : 0;
-                    let targetPct = portfolioTargets[grp] || 0;
-
-                    let allocTHB = 0;
-                    if (dcaTHB > 0) {
-                        if (totalShortfall > 0 && shortfalls[grp] > 0) {
-                            allocTHB = (shortfalls[grp] / totalShortfall) * dcaTHB;
-                        } else if (targetPct > 0) {
-                            allocTHB = (targetPct / 100) * dcaTHB;
-                        } else if (totalTargetPct === 0) {
-                            // Fallback: divide proportionally by current value or equally
-                            allocTHB = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * dcaTHB : (dcaTHB / groupList.length);
-                        }
+            // --- 1. TICKER LEVEL DCA CALCULATION ---
+            const tickerTbody = document.getElementById('dcaTickerTableBody');
+            if (tickerTbody) {
+                let holdingList = [];
+                for (let tk in holdings) {
+                    if (holdings[tk] > 0.0001) {
+                        let curP = marketPrices[tk] || 0;
+                        let mktTHB = holdings[tk] * curP * liveFxRate;
+                        let grp = portfolioMapping[tk] || 'Stock';
+                        holdingList.push({ ticker: tk, shares: holdings[tk], price: curP, valTHB: mktTHB, group: grp });
                     }
-                    let allocUSD = liveFxRate > 0 ? allocTHB / liveFxRate : 0;
-                    let newVal = curVal + allocTHB;
-                    let newPct = newTotalVal > 0 ? (newVal / newTotalVal) * 100 : 0;
+                }
 
-                    let statusBadge = '';
-                    if (targetPct === 0) statusBadge = '<span class="badge bg-secondary" id="dcaStatus_' + grp + '">ยังไม่ตั้งเป้าหมาย</span>';
-                    else if (curPct < targetPct - 1) statusBadge = '<span class="badge bg-warning text-dark" id="dcaStatus_' + grp + '">Underweight (ควรซื้อ)</span>';
-                    else if (curPct > targetPct + 1) statusBadge = '<span class="badge bg-info text-dark" id="dcaStatus_' + grp + '">Overweight</span>';
-                    else statusBadge = '<span class="badge bg-success" id="dcaStatus_' + grp + '">ตามเป้าหมาย</span>';
+                let totalCurVal = holdingList.reduce((s, it) => s + it.valTHB, 0);
+                let newTotalVal = totalCurVal + dcaTHB;
 
-                    let tickersDisplay = (groupTickers[grp] && groupTickers[grp].length > 0)
-                        ? `<div class="text-muted text-truncate" style="font-size: 0.74rem; max-width: 140px;">${groupTickers[grp].join(', ')}</div>`
-                        : '';
-
-                    html += `
-                        <tr>
-                            <td class="text-start py-2">
-                                <strong class="fs-6">${grp}</strong>
-                                ${tickersDisplay}
-                                ${statusBadge}
-                            </td>
-                            <td class="py-2" id="dcaCurVal_${grp}">฿${curVal.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-                            <td class="py-2 fw-bold" id="dcaCurPct_${grp}">${curPct.toFixed(1)}%</td>
-                            <td class="py-2" style="width: 110px;">
-                                <div class="input-group input-group-sm justify-content-center" style="max-width: 95px; margin: 0 auto;">
-                                    <input type="text" 
-                                           inputmode="decimal"
-                                           class="form-control text-center fw-bold text-primary" 
-                                           id="dcaTarget_${grp}" 
-                                           value="${targetPct > 0 ? targetPct : ''}" 
-                                           placeholder="0" 
-                                           onclick="this.select()"
-                                           onfocus="this.select()"
-                                           oninput="this.value = cleanNumericInput(this.value, true); handleDCATargetChange('${grp}', this.value)" 
-                                           style="border-radius: 8px 0 0 8px;">
-                                    <span class="input-group-text bg-light fw-bold" style="font-size: 0.75rem; border-radius: 0 8px 8px 0;">%</span>
-                                </div>
-                            </td>
-                            <td class="py-2 text-primary fw-bold fs-6" id="dcaAllocTHB_${grp}">+฿${allocTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-                            <td class="py-2 text-primary fw-bold" id="dcaAllocUSD_${grp}">+$${allocUSD.toFixed(2)}</td>
-                            <td class="py-2 text-success fw-bold" id="dcaNewPct_${grp}">${newPct.toFixed(1)}%</td>
-                            <td class="py-2">
-                                <button type="button" 
-                                        class="btn btn-sm btn-outline-primary py-0 px-2 fw-bold" 
-                                        id="dcaBuyBtn_${grp}"
-                                        style="font-size: 0.74rem; border-radius: 8px;" 
-                                        onclick="sendDCAToBuyForm('${grp}', ${allocTHB}, ${allocUSD})" 
-                                        ${allocTHB <= 0 ? 'disabled' : ''}>
-                                    ⚡ ส่งไปซื้อ
-                                </button>
-                            </td>
-                        </tr>
-                    `;
+                let totalTargetPct = 0;
+                holdingList.forEach(it => {
+                    totalTargetPct += (portfolioTickerTargets[it.ticker] || 0);
                 });
-                tbody.innerHTML = html;
-            } else {
-                // Update cells in place without replacing inputs (maintaining focus)
-                groupList.forEach(grp => {
-                    let curVal = groupValues[grp] || 0;
-                    let curPct = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * 100 : 0;
-                    let targetPct = portfolioTargets[grp] || 0;
 
-                    let allocTHB = 0;
-                    if (dcaTHB > 0) {
-                        if (totalShortfall > 0 && shortfalls[grp] > 0) {
-                            allocTHB = (shortfalls[grp] / totalShortfall) * dcaTHB;
-                        } else if (targetPct > 0) {
-                            allocTHB = (targetPct / 100) * dcaTHB;
+                if (currentDcaViewMode === 'TICKER') {
+                    const targetBadge = document.getElementById('dcaTargetTotalBadge');
+                    if (targetBadge) {
+                        targetBadge.innerText = `รวมเป้าหมาย: ${totalTargetPct.toFixed(1)}%`;
+                        if (Math.abs(totalTargetPct - 100) < 0.1) {
+                            targetBadge.className = 'badge rounded-pill bg-success text-white border px-3 py-1';
                         } else if (totalTargetPct === 0) {
-                            allocTHB = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * dcaTHB : (dcaTHB / groupList.length);
-                        }
-                    }
-                    let allocUSD = liveFxRate > 0 ? allocTHB / liveFxRate : 0;
-                    let newVal = curVal + allocTHB;
-                    let newPct = newTotalVal > 0 ? (newVal / newTotalVal) * 100 : 0;
-
-                    const curValEl = document.getElementById('dcaCurVal_' + grp);
-                    const curPctEl = document.getElementById('dcaCurPct_' + grp);
-                    const allocTHBEl = document.getElementById('dcaAllocTHB_' + grp);
-                    const allocUSDEl = document.getElementById('dcaAllocUSD_' + grp);
-                    const newPctEl = document.getElementById('dcaNewPct_' + grp);
-                    const statusEl = document.getElementById('dcaStatus_' + grp);
-                    const buyBtn = document.getElementById('dcaBuyBtn_' + grp);
-
-                    if (curValEl) curValEl.innerText = '฿' + curVal.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-                    if (curPctEl) curPctEl.innerText = curPct.toFixed(1) + '%';
-                    if (allocTHBEl) allocTHBEl.innerText = '+฿' + allocTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-                    if (allocUSDEl) allocUSDEl.innerText = '+$' + allocUSD.toFixed(2);
-                    if (newPctEl) newPctEl.innerText = newPct.toFixed(1) + '%';
-
-                    if (statusEl) {
-                        if (targetPct === 0) {
-                            statusEl.className = 'badge bg-secondary';
-                            statusEl.innerText = 'ยังไม่ตั้งเป้าหมาย';
-                        } else if (curPct < targetPct - 1) {
-                            statusEl.className = 'badge bg-warning text-dark';
-                            statusEl.innerText = 'Underweight (ควรซื้อ)';
-                        } else if (curPct > targetPct + 1) {
-                            statusEl.className = 'badge bg-info text-dark';
-                            statusEl.innerText = 'Overweight';
+                            targetBadge.className = 'badge rounded-pill bg-secondary text-white border px-3 py-1';
                         } else {
-                            statusEl.className = 'badge bg-success';
-                            statusEl.innerText = 'ตามเป้าหมาย';
+                            targetBadge.className = 'badge rounded-pill bg-warning text-dark border px-3 py-1';
                         }
                     }
-
-                    if (buyBtn) {
-                        buyBtn.disabled = (allocTHB <= 0);
-                        buyBtn.setAttribute('onclick', `sendDCAToBuyForm('${grp}', ${allocTHB}, ${allocUSD})`);
+                    const alertEl = document.getElementById('dcaNoTargetAlert');
+                    if (alertEl) {
+                        alertEl.style.display = (totalTargetPct === 0 && holdingList.length > 0) ? 'flex' : 'none';
                     }
+                }
+
+                let shortfalls = {};
+                let totalShortfall = 0;
+                holdingList.forEach(it => {
+                    let targetPct = portfolioTickerTargets[it.ticker] || 0;
+                    let targetVal = newTotalVal * (targetPct / 100);
+                    let sf = Math.max(0, targetVal - it.valTHB);
+                    shortfalls[it.ticker] = sf;
+                    if (targetPct > 0) totalShortfall += sf;
                 });
+
+                if (holdingList.length === 0) {
+                    tickerTbody.innerHTML = '<tr><td colspan="11" class="text-muted py-4">ยังไม่มีหุ้นในพอร์ตนี้ กรุณาบันทึกรายการซื้อก่อนใช้งานเครื่องคำนวณ DCA ครับ</td></tr>';
+                } else if (fullRender || !document.getElementById('dcaTickerTarget_' + holdingList[0].ticker)) {
+                    let html = '';
+                    holdingList.forEach(it => {
+                        let curPct = totalCurVal > 0 ? (it.valTHB / totalCurVal) * 100 : 0;
+                        let targetPct = portfolioTickerTargets[it.ticker] || 0;
+
+                        let allocTHB = 0;
+                        if (dcaTHB > 0) {
+                            if (totalShortfall > 0 && shortfalls[it.ticker] > 0) {
+                                allocTHB = (shortfalls[it.ticker] / totalShortfall) * dcaTHB;
+                            } else if (targetPct > 0) {
+                                allocTHB = (targetPct / 100) * dcaTHB;
+                            } else if (totalTargetPct === 0) {
+                                allocTHB = totalCurVal > 0 ? (it.valTHB / totalCurVal) * dcaTHB : (dcaTHB / holdingList.length);
+                            }
+                        }
+
+                        let allocUSD = liveFxRate > 0 ? allocTHB / liveFxRate : 0;
+                        let recShares = (it.price > 0 && allocUSD > 0) ? (allocUSD / it.price).toFixed(4) : '0.0000';
+                        let newValTHB = it.valTHB + allocTHB;
+                        let newPct = newTotalVal > 0 ? (newValTHB / newTotalVal) * 100 : 0;
+
+                        let statusBadge = '';
+                        if (targetPct === 0) statusBadge = '<span class="badge bg-secondary">ยังไม่ตั้งเป้า</span>';
+                        else if (curPct < targetPct - 1) statusBadge = '<span class="badge bg-warning text-dark">Underweight (ซื้อ)</span>';
+                        else if (curPct > targetPct + 1) statusBadge = '<span class="badge bg-info text-dark">Overweight</span>';
+                        else statusBadge = '<span class="badge bg-success">ตามเป้าหมาย</span>';
+
+                        html += `
+                            <tr>
+                                <td class="text-start py-2">
+                                    <div class="d-flex align-items-center gap-1.5">
+                                        <img src="https://assets.parqet.com/logos/symbol/${it.ticker}" class="rounded-circle border bg-white p-0.5" width="22" height="22" onerror="this.style.display='none'">
+                                        <strong>${it.ticker}</strong>
+                                        <span class="badge bg-light text-dark border" style="font-size:0.68rem;">${it.group}</span>
+                                    </div>
+                                    <div class="mt-0.5">${statusBadge}</div>
+                                </td>
+                                <td class="py-2">
+                                    <div>$${it.price.toFixed(2)}</div>
+                                    <small class="text-muted">฿${(it.price * liveFxRate).toFixed(1)}</small>
+                                </td>
+                                <td class="py-2">${it.shares.toFixed(4)}</td>
+                                <td class="py-2" id="dcaTkCurVal_${it.ticker}">฿${Math.round(it.valTHB).toLocaleString()}</td>
+                                <td class="py-2 fw-bold" id="dcaTkCurPct_${it.ticker}">${curPct.toFixed(1)}%</td>
+                                <td class="py-2">
+                                    <div class="input-group input-group-sm justify-content-center" style="max-width: 90px; margin: 0 auto;">
+                                        <input type="text" 
+                                               inputmode="decimal"
+                                               class="form-control text-center fw-bold text-primary" 
+                                               id="dcaTickerTarget_${it.ticker}" 
+                                               value="${targetPct > 0 ? targetPct : ''}" 
+                                               placeholder="0" 
+                                               onclick="this.select()"
+                                               onfocus="this.select()"
+                                               oninput="this.value = cleanNumericInput(this.value, true); handleDCATickerTargetChange('${it.ticker}', this.value)" 
+                                               style="border-radius: 8px 0 0 8px;">
+                                        <span class="input-group-text bg-light fw-bold" style="font-size: 0.72rem; border-radius: 0 8px 8px 0;">%</span>
+                                    </div>
+                                </td>
+                                <td class="py-2 text-primary fw-bold fs-6" id="dcaTkAllocTHB_${it.ticker}">+฿${Math.round(allocTHB).toLocaleString()}</td>
+                                <td class="py-2 text-primary fw-bold" id="dcaTkAllocUSD_${it.ticker}">+$${allocUSD.toFixed(2)}</td>
+                                <td class="py-2 text-success fw-bolder fs-6" id="dcaTkRecShares_${it.ticker}">+${recShares}</td>
+                                <td class="py-2 text-success fw-bold" id="dcaTkNewPct_${it.ticker}">${newPct.toFixed(1)}%</td>
+                                <td class="py-2">
+                                    <button type="button" 
+                                            class="btn btn-sm btn-outline-primary py-0 px-2 fw-bold text-nowrap" 
+                                            id="dcaTkBuyBtn_${it.ticker}"
+                                            style="font-size: 0.72rem; border-radius: 8px;" 
+                                            onclick="sendDCATickerToBuyForm('${it.ticker}', '${recShares}', ${it.price})" 
+                                            ${allocTHB <= 0 ? 'disabled' : ''}>
+                                        ⚡ ซื้อทันที
+                                    </button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                    tickerTbody.innerHTML = html;
+                } else {
+                    holdingList.forEach(it => {
+                        let curPct = totalCurVal > 0 ? (it.valTHB / totalCurVal) * 100 : 0;
+                        let targetPct = portfolioTickerTargets[it.ticker] || 0;
+
+                        let allocTHB = 0;
+                        if (dcaTHB > 0) {
+                            if (totalShortfall > 0 && shortfalls[it.ticker] > 0) {
+                                allocTHB = (shortfalls[it.ticker] / totalShortfall) * dcaTHB;
+                            } else if (targetPct > 0) {
+                                allocTHB = (targetPct / 100) * dcaTHB;
+                            } else if (totalTargetPct === 0) {
+                                allocTHB = totalCurVal > 0 ? (it.valTHB / totalCurVal) * dcaTHB : (dcaTHB / holdingList.length);
+                            }
+                        }
+
+                        let allocUSD = liveFxRate > 0 ? allocTHB / liveFxRate : 0;
+                        let recShares = (it.price > 0 && allocUSD > 0) ? (allocUSD / it.price).toFixed(4) : '0.0000';
+                        let newValTHB = it.valTHB + allocTHB;
+                        let newPct = newTotalVal > 0 ? (newValTHB / newTotalVal) * 100 : 0;
+
+                        const curValEl = document.getElementById('dcaTkCurVal_' + it.ticker);
+                        const curPctEl = document.getElementById('dcaTkCurPct_' + it.ticker);
+                        const allocTHBEl = document.getElementById('dcaTkAllocTHB_' + it.ticker);
+                        const allocUSDEl = document.getElementById('dcaTkAllocUSD_' + it.ticker);
+                        const recSharesEl = document.getElementById('dcaTkRecShares_' + it.ticker);
+                        const newPctEl = document.getElementById('dcaTkNewPct_' + it.ticker);
+                        const buyBtn = document.getElementById('dcaTkBuyBtn_' + it.ticker);
+
+                        if (curValEl) curValEl.innerText = '฿' + Math.round(it.valTHB).toLocaleString();
+                        if (curPctEl) curPctEl.innerText = curPct.toFixed(1) + '%';
+                        if (allocTHBEl) allocTHBEl.innerText = '+฿' + Math.round(allocTHB).toLocaleString();
+                        if (allocUSDEl) allocUSDEl.innerText = '+$' + allocUSD.toFixed(2);
+                        if (recSharesEl) recSharesEl.innerText = '+' + recShares;
+                        if (newPctEl) newPctEl.innerText = newPct.toFixed(1) + '%';
+                        if (buyBtn) {
+                            buyBtn.disabled = (allocTHB <= 0);
+                            buyBtn.setAttribute('onclick', `sendDCATickerToBuyForm('${it.ticker}', '${recShares}', ${it.price})`);
+                        }
+                    });
+                }
+            }
+
+            // --- 2. GROUP LEVEL DCA CALCULATION ---
+            const groupTbody = document.getElementById('dcaTableBody');
+            if (groupTbody) {
+                let groupValues = {};
+                let groupTickers = {};
+                let allGroups = new Set();
+                for (let tk in portfolioMapping) allGroups.add(portfolioMapping[tk]);
+                for (let tg in portfolioTargets) allGroups.add(tg);
+                allGroups.forEach(g => { groupValues[g] = 0; groupTickers[g] = []; });
+
+                for (let tk in holdings) {
+                    if (holdings[tk] > 0.0001) {
+                        let price = marketPrices[tk] || 0;
+                        let mktTHB = holdings[tk] * price * liveFxRate;
+                        let grp = portfolioMapping[tk] || 'Stock';
+                        groupValues[grp] = (groupValues[grp] || 0) + mktTHB;
+                        if (!groupTickers[grp]) groupTickers[grp] = [];
+                        if (!groupTickers[grp].includes(tk)) groupTickers[grp].push(tk);
+                    }
+                }
+
+                let totalCurrentVal = Object.values(groupValues).reduce((a, b) => a + b, 0);
+                let newTotalVal = totalCurrentVal + dcaTHB;
+
+                let groupList = Object.keys(groupValues);
+                if (groupList.length === 0) groupList = ['ETF', 'Stock'];
+
+                let totalTargetPct = 0;
+                groupList.forEach(grp => {
+                    totalTargetPct += (portfolioTargets[grp] || 0);
+                });
+
+                if (currentDcaViewMode === 'GROUP') {
+                    const targetBadge = document.getElementById('dcaTargetTotalBadge');
+                    if (targetBadge) {
+                        targetBadge.innerText = `รวมเป้าหมาย: ${totalTargetPct.toFixed(1)}%`;
+                        if (Math.abs(totalTargetPct - 100) < 0.1) {
+                            targetBadge.className = 'badge rounded-pill bg-success text-white border px-3 py-1';
+                        } else if (totalTargetPct === 0) {
+                            targetBadge.className = 'badge rounded-pill bg-secondary text-white border px-3 py-1';
+                        } else {
+                            targetBadge.className = 'badge rounded-pill bg-warning text-dark border px-3 py-1';
+                        }
+                    }
+                    const alertEl = document.getElementById('dcaNoTargetAlert');
+                    if (alertEl) {
+                        alertEl.style.display = (totalTargetPct === 0) ? 'flex' : 'none';
+                    }
+                }
+
+                let shortfalls = {};
+                let totalShortfall = 0;
+
+                groupList.forEach(grp => {
+                    let targetPct = portfolioTargets[grp] || 0;
+                    let targetVal = newTotalVal * (targetPct / 100);
+                    let curVal = groupValues[grp] || 0;
+                    let shortfall = Math.max(0, targetVal - curVal);
+                    shortfalls[grp] = shortfall;
+                    if (targetPct > 0) totalShortfall += shortfall;
+                });
+
+                if (fullRender || !document.getElementById('dcaTarget_' + groupList[0])) {
+                    let html = '';
+                    groupList.forEach(grp => {
+                        let curVal = groupValues[grp] || 0;
+                        let curPct = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * 100 : 0;
+                        let targetPct = portfolioTargets[grp] || 0;
+
+                        let allocTHB = 0;
+                        if (dcaTHB > 0) {
+                            if (totalShortfall > 0 && shortfalls[grp] > 0) {
+                                allocTHB = (shortfalls[grp] / totalShortfall) * dcaTHB;
+                            } else if (targetPct > 0) {
+                                allocTHB = (targetPct / 100) * dcaTHB;
+                            } else if (totalTargetPct === 0) {
+                                allocTHB = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * dcaTHB : (dcaTHB / groupList.length);
+                            }
+                        }
+                        let allocUSD = liveFxRate > 0 ? allocTHB / liveFxRate : 0;
+                        let newVal = curVal + allocTHB;
+                        let newPct = newTotalVal > 0 ? (newVal / newTotalVal) * 100 : 0;
+
+                        let statusBadge = '';
+                        if (targetPct === 0) statusBadge = '<span class="badge bg-secondary" id="dcaStatus_' + grp + '">ยังไม่ตั้งเป้าหมาย</span>';
+                        else if (curPct < targetPct - 1) statusBadge = '<span class="badge bg-warning text-dark" id="dcaStatus_' + grp + '">Underweight (ควรซื้อ)</span>';
+                        else if (curPct > targetPct + 1) statusBadge = '<span class="badge bg-info text-dark" id="dcaStatus_' + grp + '">Overweight</span>';
+                        else statusBadge = '<span class="badge bg-success" id="dcaStatus_' + grp + '">ตามเป้าหมาย</span>';
+
+                        let tickersDisplay = (groupTickers[grp] && groupTickers[grp].length > 0)
+                            ? `<div class="text-muted text-truncate" style="font-size: 0.74rem; max-width: 140px;">${groupTickers[grp].join(', ')}</div>`
+                            : '';
+
+                        html += `
+                            <tr>
+                                <td class="text-start py-2">
+                                    <strong class="fs-6">${grp}</strong>
+                                    ${tickersDisplay}
+                                    ${statusBadge}
+                                </td>
+                                <td class="py-2" id="dcaCurVal_${grp}">฿${curVal.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                                <td class="py-2 fw-bold" id="dcaCurPct_${grp}">${curPct.toFixed(1)}%</td>
+                                <td class="py-2" style="width: 110px;">
+                                    <div class="input-group input-group-sm justify-content-center" style="max-width: 95px; margin: 0 auto;">
+                                        <input type="text" 
+                                               inputmode="decimal"
+                                               class="form-control text-center fw-bold text-primary" 
+                                               id="dcaTarget_${grp}" 
+                                               value="${targetPct > 0 ? targetPct : ''}" 
+                                               placeholder="0" 
+                                               onclick="this.select()"
+                                               onfocus="this.select()"
+                                               oninput="this.value = cleanNumericInput(this.value, true); handleDCATargetChange('${grp}', this.value)" 
+                                               style="border-radius: 8px 0 0 8px;">
+                                        <span class="input-group-text bg-light fw-bold" style="font-size: 0.75rem; border-radius: 0 8px 8px 0;">%</span>
+                                    </div>
+                                </td>
+                                <td class="py-2 text-primary fw-bold fs-6" id="dcaAllocTHB_${grp}">+฿${allocTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                                <td class="py-2 text-primary fw-bold" id="dcaAllocUSD_${grp}">+$${allocUSD.toFixed(2)}</td>
+                                <td class="py-2 text-success fw-bold" id="dcaNewPct_${grp}">${newPct.toFixed(1)}%</td>
+                                <td class="py-2">
+                                    <button type="button" 
+                                            class="btn btn-sm btn-outline-primary py-0 px-2 fw-bold" 
+                                            id="dcaBuyBtn_${grp}"
+                                            style="font-size: 0.74rem; border-radius: 8px;" 
+                                            onclick="sendDCAToBuyForm('${grp}', ${allocTHB}, ${allocUSD})" 
+                                            ${allocTHB <= 0 ? 'disabled' : ''}>
+                                        ⚡ ส่งไปซื้อ
+                                    </button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                    groupTbody.innerHTML = html;
+                } else {
+                    groupList.forEach(grp => {
+                        let curVal = groupValues[grp] || 0;
+                        let curPct = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * 100 : 0;
+                        let targetPct = portfolioTargets[grp] || 0;
+
+                        let allocTHB = 0;
+                        if (dcaTHB > 0) {
+                            if (totalShortfall > 0 && shortfalls[grp] > 0) {
+                                allocTHB = (shortfalls[grp] / totalShortfall) * dcaTHB;
+                            } else if (targetPct > 0) {
+                                allocTHB = (targetPct / 100) * dcaTHB;
+                            } else if (totalTargetPct === 0) {
+                                allocTHB = totalCurrentVal > 0 ? (curVal / totalCurrentVal) * dcaTHB : (dcaTHB / groupList.length);
+                            }
+                        }
+                        let allocUSD = liveFxRate > 0 ? allocTHB / liveFxRate : 0;
+                        let newVal = curVal + allocTHB;
+                        let newPct = newTotalVal > 0 ? (newVal / newTotalVal) * 100 : 0;
+
+                        const curValEl = document.getElementById('dcaCurVal_' + grp);
+                        const curPctEl = document.getElementById('dcaCurPct_' + grp);
+                        const allocTHBEl = document.getElementById('dcaAllocTHB_' + grp);
+                        const allocUSDEl = document.getElementById('dcaAllocUSD_' + grp);
+                        const newPctEl = document.getElementById('dcaNewPct_' + grp);
+                        const statusEl = document.getElementById('dcaStatus_' + grp);
+                        const buyBtn = document.getElementById('dcaBuyBtn_' + grp);
+
+                        if (curValEl) curValEl.innerText = '฿' + curVal.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                        if (curPctEl) curPctEl.innerText = curPct.toFixed(1) + '%';
+                        if (allocTHBEl) allocTHBEl.innerText = '+฿' + allocTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                        if (allocUSDEl) allocUSDEl.innerText = '+$' + allocUSD.toFixed(2);
+                        if (newPctEl) newPctEl.innerText = newPct.toFixed(1) + '%';
+
+                        if (statusEl) {
+                            if (targetPct === 0) {
+                                statusEl.className = 'badge bg-secondary';
+                                statusEl.innerText = 'ยังไม่ตั้งเป้าหมาย';
+                            } else if (curPct < targetPct - 1) {
+                                statusEl.className = 'badge bg-warning text-dark';
+                                statusEl.innerText = 'Underweight (ควรซื้อ)';
+                            } else if (curPct > targetPct + 1) {
+                                statusEl.className = 'badge bg-info text-dark';
+                                statusEl.innerText = 'Overweight';
+                            } else {
+                                statusEl.className = 'badge bg-success';
+                                statusEl.innerText = 'ตามเป้าหมาย';
+                            }
+                        }
+
+                        if (buyBtn) {
+                            buyBtn.disabled = (allocTHB <= 0);
+                            buyBtn.setAttribute('onclick', `sendDCAToBuyForm('${grp}', ${allocTHB}, ${allocUSD})`);
+                        }
+                    });
+                }
             }
         };
 
@@ -5817,10 +6638,300 @@
             renderDividends();
         };
 
+        const dividendScheduleDatabase = {
+            'JEPI': { name: 'JPMorgan Equity Premium Income ETF', divPerShare: 4.25, yieldPct: 7.3, months: [1,2,3,4,5,6,7,8,9,10,11,12], exDay: 1, payDay: 6 },
+            'JEPQ': { name: 'JPMorgan Nasdaq Equity Premium Income ETF', divPerShare: 5.40, yieldPct: 9.2, months: [1,2,3,4,5,6,7,8,9,10,11,12], exDay: 1, payDay: 6 },
+            'SCHD': { name: 'Schwab US Dividend Equity ETF', divPerShare: 2.75, yieldPct: 3.4, months: [3,6,9,12], exDay: 20, payDay: 26 },
+            'SPYD': { name: 'SPDR Portfolio S&P 500 High Dividend ETF', divPerShare: 1.88, yieldPct: 4.3, months: [3,6,9,12], exDay: 20, payDay: 25 },
+            'VOO':  { name: 'Vanguard S&P 500 ETF', divPerShare: 6.85, yieldPct: 1.3, months: [3,6,9,12], exDay: 25, payDay: 30 },
+            'VTI':  { name: 'Vanguard Total Stock Market ETF', divPerShare: 3.75, yieldPct: 1.35, months: [3,6,9,12], exDay: 24, payDay: 29 },
+            'SPY':  { name: 'SPDR S&P 500 ETF Trust', divPerShare: 7.15, yieldPct: 1.25, months: [3,6,9,12], exDay: 18, payDay: 28 },
+            'QQQ':  { name: 'Invesco QQQ Trust', divPerShare: 2.65, yieldPct: 0.55, months: [4,7,10,12], exDay: 20, payDay: 28 },
+            'QQQM': { name: 'Invesco NASDAQ 100 ETF', divPerShare: 1.85, yieldPct: 0.55, months: [4,7,10,12], exDay: 20, payDay: 28 },
+            'AAPL': { name: 'Apple Inc.', divPerShare: 1.00, yieldPct: 0.5, months: [2,5,8,11], exDay: 10, payDay: 15 },
+            'MSFT': { name: 'Microsoft Corporation', divPerShare: 3.30, yieldPct: 0.7, months: [2,5,8,11], exDay: 14, payDay: 12 },
+            'NVDA': { name: 'NVIDIA Corporation', divPerShare: 0.16, yieldPct: 0.08, months: [3,6,9,12], exDay: 11, payDay: 27 },
+            'GOOGL':{ name: 'Alphabet Inc. Cl A', divPerShare: 0.80, yieldPct: 0.45, months: [3,6,9,12], exDay: 9, payDay: 16 },
+            'O':    { name: 'Realty Income Corporation', divPerShare: 3.15, yieldPct: 5.1, months: [1,2,3,4,5,6,7,8,9,10,11,12], exDay: 1, payDay: 15 },
+            'KO':   { name: 'The Coca-Cola Company', divPerShare: 1.94, yieldPct: 3.1, months: [3,6,9,11], exDay: 14, payDay: 1 },
+            'PEP':  { name: 'PepsiCo Inc.', divPerShare: 5.42, yieldPct: 3.2, months: [3,6,9,12], exDay: 6, payDay: 30 },
+            'TSM':  { name: 'Taiwan Semiconductor ADR', divPerShare: 2.45, yieldPct: 1.4, months: [3,6,9,12], exDay: 12, payDay: 10 },
+            'LLY':  { name: 'Eli Lilly and Company', divPerShare: 5.20, yieldPct: 0.7, months: [2,5,8,11], exDay: 15, payDay: 10 },
+            'XLV':  { name: 'Health Care Select Sector SPDR', divPerShare: 2.65, yieldPct: 1.6, months: [3,6,9,12], exDay: 21, payDay: 27 },
+            'VXUS': { name: 'Vanguard Total International Stock', divPerShare: 2.65, yieldPct: 3.1, months: [3,6,9,12], exDay: 20, payDay: 26 },
+            'SMH':  { name: 'VanEck Semiconductor ETF', divPerShare: 3.80, yieldPct: 0.6, months: [12], exDay: 20, payDay: 26 },
+            'SOXX': { name: 'iShares Semiconductor ETF', divPerShare: 4.10, yieldPct: 0.7, months: [3,6,9,12], exDay: 22, payDay: 27 }
+        };
+
         window.openDividendModal = function() {
             const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('dividendModal'));
-            renderDividendModalTable();
+            switchDividendModalTab('FORECAST');
             modal.show();
+        };
+
+        window.switchDividendModalTab = function(tab) {
+            const btnForecast = document.getElementById('btnDivModalTabForecast');
+            const btnHistory = document.getElementById('btnDivModalTabHistory');
+            const viewForecast = document.getElementById('divModalForecastView');
+            const viewHistory = document.getElementById('divModalHistoryView');
+
+            if (tab === 'FORECAST') {
+                if (btnForecast) btnForecast.className = 'btn btn-success fw-bold px-3 py-1.5';
+                if (btnHistory) btnHistory.className = 'btn btn-outline-secondary fw-bold px-3 py-1.5';
+                if (viewForecast) viewForecast.style.display = 'block';
+                if (viewHistory) viewHistory.style.display = 'none';
+                renderDividendForecastModal();
+            } else {
+                if (btnForecast) btnForecast.className = 'btn btn-outline-secondary fw-bold px-3 py-1.5';
+                if (btnHistory) btnHistory.className = 'btn btn-primary fw-bold px-3 py-1.5';
+                if (viewForecast) viewForecast.style.display = 'none';
+                if (viewHistory) viewHistory.style.display = 'block';
+                renderDividendModalTable();
+            }
+        };
+
+        window.renderDividendForecastModal = function() {
+            const currentTxns = (activePortfolioId === 'ALL')
+                ? transactions
+                : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
+
+            let holdings = {};
+            currentTxns.forEach(t => {
+                if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW') return;
+                if (!holdings[t.ticker]) holdings[t.ticker] = { shares: 0, costUSD: 0, costTHB: 0 };
+                if (t.type === 'BUY') {
+                    holdings[t.ticker].shares += t.shares;
+                    holdings[t.ticker].costUSD += (t.shares * t.price);
+                    holdings[t.ticker].costTHB += (parseFloat(t.totalTHB) || (t.shares * t.price * liveFxRate));
+                } else if (t.type === 'SELL' && holdings[t.ticker].shares > 0) {
+                    let avgUSD = holdings[t.ticker].costUSD / holdings[t.ticker].shares;
+                    let avgTHB = holdings[t.ticker].costTHB / holdings[t.ticker].shares;
+                    holdings[t.ticker].shares -= t.shares;
+                    holdings[t.ticker].costUSD -= (t.shares * avgUSD);
+                    holdings[t.ticker].costTHB -= (t.shares * avgTHB);
+                }
+            });
+
+            const now = new Date();
+            const monthNamesTh = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+            let forecastMonths = [];
+            for (let i = 0; i < 12; i++) {
+                let d = new Date(now.getFullYear(), now.getMonth() + i, 1);
+                let mNum = d.getMonth() + 1;
+                let yNum = d.getFullYear();
+                forecastMonths.push({
+                    monthNum: mNum,
+                    year: yNum,
+                    label: `${monthNamesTh[mNum - 1]} ${String(yNum).slice(-2)}`,
+                    netUSD: 0,
+                    netTHB: 0,
+                    tickers: []
+                });
+            }
+
+            let totalAnnualNetUSD = 0;
+            let totalAnnualNetTHB = 0;
+            let divPayersCount = 0;
+            let upcomingExDatesList = [];
+
+            for (let tk in holdings) {
+                let s = holdings[tk].shares;
+                if (s > 0.0001) {
+                    let info = dividendScheduleDatabase[tk];
+                    let divPerShare = 0;
+                    let yieldPct = 0;
+                    let payMonths = [3, 6, 9, 12];
+                    let exDay = 15;
+                    let payDay = 25;
+                    let stockName = tk;
+
+                    if (info) {
+                        divPerShare = info.divPerShare;
+                        yieldPct = info.yieldPct;
+                        payMonths = info.months;
+                        exDay = info.exDay || 15;
+                        payDay = info.payDay || 25;
+                        stockName = info.name || tk;
+                    } else {
+                        let foundEtf = (typeof topEtfsData !== 'undefined') ? topEtfsData.find(e => e.ticker === tk) : null;
+                        let foundStk = (typeof top100StocksData !== 'undefined') ? top100StocksData.find(st => st.ticker === tk) : null;
+                        if (foundEtf && foundEtf.yield) {
+                            yieldPct = parseFloat(foundEtf.yield) || 1.5;
+                            stockName = foundEtf.name || tk;
+                        } else if (foundStk && foundStk.yield) {
+                            yieldPct = parseFloat(foundStk.yield) || 1.2;
+                            stockName = foundStk.name || tk;
+                        } else {
+                            yieldPct = 1.0;
+                        }
+                        let curP = marketPrices[tk] || (holdings[tk].costUSD / s);
+                        divPerShare = curP * (yieldPct / 100);
+                    }
+
+                    if (divPerShare > 0.001) {
+                        divPayersCount++;
+                        let grossAnnual = s * divPerShare;
+                        let netAnnual = grossAnnual * 0.85; // W-8BEN 15%
+                        let netAnnualTHB = netAnnual * liveFxRate;
+
+                        totalAnnualNetUSD += netAnnual;
+                        totalAnnualNetTHB += netAnnualTHB;
+
+                        let payoutPerPeriodNetUSD = netAnnual / payMonths.length;
+                        let payoutPerPeriodNetTHB = payoutPerPeriodNetUSD * liveFxRate;
+                        let divPerSharePeriod = divPerShare / payMonths.length;
+
+                        forecastMonths.forEach(fm => {
+                            if (payMonths.includes(fm.monthNum)) {
+                                fm.netUSD += payoutPerPeriodNetUSD;
+                                fm.netTHB += payoutPerPeriodNetTHB;
+                                if (!fm.tickers.includes(tk)) fm.tickers.push(tk);
+                            }
+                        });
+
+                        // Generate upcoming ex-dates schedule for next 120 days
+                        let today = new Date();
+                        today.setHours(0,0,0,0);
+
+                        payMonths.forEach(pm => {
+                            [today.getFullYear(), today.getFullYear() + 1].forEach(yr => {
+                                let exDateObj = new Date(yr, pm - 1, exDay);
+                                let payDateObj = new Date(yr, pm - 1, payDay);
+                                let diffDays = Math.ceil((exDateObj - today) / (1000 * 60 * 60 * 24));
+
+                                if (diffDays >= -3 && diffDays <= 120) {
+                                    upcomingExDatesList.push({
+                                        ticker: tk,
+                                        name: stockName,
+                                        exDate: exDateObj,
+                                        payDate: payDateObj,
+                                        diffDays: diffDays,
+                                        divPerSharePeriod: divPerSharePeriod,
+                                        yieldPct: yieldPct,
+                                        shares: s,
+                                        payoutTHB: payoutPerPeriodNetTHB,
+                                        payoutUSD: payoutPerPeriodNetUSD
+                                    });
+                                }
+                            });
+                        });
+                    }
+                }
+            }
+
+            // Update KPI cards
+            const fwdTHBEl = document.getElementById('fwdTotalDivTHB');
+            const fwdUSDEl = document.getElementById('fwdTotalDivUSD');
+            const fwdMoTHBEl = document.getElementById('fwdMonthlyAvgTHB');
+            const fwdMoUSDEl = document.getElementById('fwdMonthlyAvgUSD');
+            const fwdYocEl = document.getElementById('fwdYocPercent');
+            const fwdCountEl = document.getElementById('fwdDivPayersCount');
+            const sumBadge = document.getElementById('badgeModalDivAnnualSum');
+
+            if (fwdTHBEl) fwdTHBEl.innerText = '฿' + Math.round(totalAnnualNetTHB).toLocaleString();
+            if (fwdUSDEl) fwdUSDEl.innerText = `≈ $${totalAnnualNetUSD.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            if (fwdMoTHBEl) fwdMoTHBEl.innerText = `฿${Math.round(totalAnnualNetTHB / 12).toLocaleString()}/ด.`;
+            if (fwdMoUSDEl) fwdMoUSDEl.innerText = `≈ $${(totalAnnualNetUSD / 12).toFixed(2)}/mo`;
+
+            let totalCostTHB = Object.values(holdings).reduce((sum, h) => sum + (h.costTHB || 0), 0);
+            let fwdYoc = totalCostTHB > 0 ? (totalAnnualNetTHB / totalCostTHB) * 100 : 0;
+            if (fwdYocEl) fwdYocEl.innerText = `${fwdYoc.toFixed(2)}%`;
+            if (fwdCountEl) fwdCountEl.innerText = `${divPayersCount} ตัว`;
+            if (sumBadge) sumBadge.innerText = `💰 คาดการณ์รวม: ฿${Math.round(totalAnnualNetTHB).toLocaleString()} / ปี`;
+
+            // Render 12 Monthly Visual Bars
+            const barContainer = document.getElementById('divForecast12MonthBar');
+            if (barContainer) {
+                let maxMonthTHB = Math.max(...forecastMonths.map(m => m.netTHB), 100);
+                let barsHtml = '';
+
+                forecastMonths.forEach(m => {
+                    let pct = Math.max(8, Math.min(100, Math.round((m.netTHB / maxMonthTHB) * 100)));
+                    let isPeak = (m.netTHB === maxMonthTHB && m.netTHB > 0);
+                    let barBg = isPeak 
+                        ? 'linear-gradient(180deg, #10b981 0%, #059669 100%)' 
+                        : (m.netTHB > 0 ? 'linear-gradient(180deg, #34d399 0%, #10b981 100%)' : 'rgba(203, 213, 225, 0.4)');
+
+                    let tickerChips = m.tickers.slice(0, 3).map(tk => `<span class="badge bg-white text-dark border p-0.5" style="font-size:0.62rem;">${tk}</span>`).join(' ');
+                    if (m.tickers.length > 3) tickerChips += `<span class="text-muted" style="font-size:0.62rem;">+${m.tickers.length - 3}</span>`;
+
+                    barsHtml += `
+                        <div class="div-month-col d-flex flex-column align-items-center flex-shrink-0" style="width: 82px; min-height: 160px;">
+                            <div class="text-center mb-1">
+                                <span class="fw-bold ${m.netTHB > 0 ? 'text-success' : 'text-muted'}" style="font-size: 0.76rem;">
+                                    ${m.netTHB > 0 ? '฿' + Math.round(m.netTHB).toLocaleString() : '-'}
+                                </span>
+                                <div class="text-muted" style="font-size: 0.65rem;">
+                                    ${m.netUSD > 0 ? '$' + m.netUSD.toFixed(1) : ''}
+                                </div>
+                            </div>
+                            <div class="div-bar-track flex-grow-1 w-100 d-flex align-items-end justify-content-center p-1 rounded-2" style="background: rgba(0,0,0,0.03); min-height: 80px;">
+                                <div class="div-bar-fill w-100 rounded-1" style="height: ${pct}%; background: ${barBg}; transition: height 0.4s ease;" title="${m.label}: ฿${Math.round(m.netTHB).toLocaleString()}"></div>
+                            </div>
+                            <div class="text-center mt-1 w-100">
+                                <strong style="font-size: 0.75rem;">${m.label}</strong>
+                                <div class="d-flex justify-content-center flex-wrap gap-0.5 mt-0.5" style="min-height: 18px;">
+                                    ${tickerChips}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                barContainer.innerHTML = barsHtml;
+            }
+
+            // Render Upcoming Ex-Dates Table
+            const exTableBody = document.getElementById('divUpcomingExDatesTableBody');
+            const exCountBadge = document.getElementById('divUpcomingCountBadge');
+
+            if (exCountBadge) exCountBadge.innerText = `${upcomingExDatesList.length} รายการ`;
+
+            if (exTableBody) {
+                if (upcomingExDatesList.length === 0) {
+                    exTableBody.innerHTML = '<tr><td colspan="9" class="text-muted py-4">ไม่มีกำหนดการขึ้น XD ของหุ้นในพอร์ตช่วง 120 วันข้างหน้า</td></tr>';
+                } else {
+                    upcomingExDatesList.sort((a, b) => a.diffDays - b.diffDays);
+                    let tableHtml = '';
+                    upcomingExDatesList.forEach(item => {
+                        let exDateStr = `${item.exDate.getDate()} ${monthNamesTh[item.exDate.getMonth()]} ${item.exDate.getFullYear()}`;
+                        let payDateStr = `${item.payDate.getDate()} ${monthNamesTh[item.payDate.getMonth()]} ${item.payDate.getFullYear()}`;
+
+                        let badgeDiff = '';
+                        if (item.diffDays < 0) {
+                            badgeDiff = '<span class="badge bg-secondary">ผ่านไปแล้ว</span>';
+                        } else if (item.diffDays === 0) {
+                            badgeDiff = '<span class="badge bg-danger animate-pulse">วันนี้ (XD)</span>';
+                        } else if (item.diffDays <= 7) {
+                            badgeDiff = `<span class="badge bg-warning text-dark">อีก ${item.diffDays} วัน</span>`;
+                        } else {
+                            badgeDiff = `<span class="badge bg-success-subtle text-success border border-success-subtle">อีก ${item.diffDays} วัน</span>`;
+                        }
+
+                        tableHtml += `
+                            <tr>
+                                <td class="text-start py-2">
+                                    <div class="d-flex align-items-center gap-1.5">
+                                        <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" class="rounded-circle border bg-white p-0.5" width="22" height="22" onerror="this.style.display='none'">
+                                        <strong>${item.ticker}</strong>
+                                    </div>
+                                </td>
+                                <td class="text-start py-2 text-truncate" style="max-width: 160px;" title="${item.name}">${item.name}</td>
+                                <td class="py-2 text-success fw-bold">
+                                    <div>${exDateStr}</div>
+                                    ${badgeDiff}
+                                </td>
+                                <td class="py-2 text-muted">${payDateStr}</td>
+                                <td class="py-2">$${item.divPerSharePeriod.toFixed(4)}</td>
+                                <td class="py-2 text-primary fw-bold">${item.yieldPct.toFixed(2)}%</td>
+                                <td class="py-2">${item.shares.toFixed(4)}</td>
+                                <td class="py-2 text-success fw-bold">+฿${Math.round(item.payoutTHB).toLocaleString()}</td>
+                                <td class="py-2"><span class="badge bg-success-subtle text-success border border-success-subtle">มีสิทธิ์ได้รับ</span></td>
+                            </tr>
+                        `;
+                    });
+                    exTableBody.innerHTML = tableHtml;
+                }
+            }
         };
 
         function renderDividendModalTable() {
@@ -6930,6 +8041,205 @@
                 }
             } else {
                 lastKnownMarketSession = status.session;
+            }
+
+            if (typeof renderPreMarketMoversCard === 'function') {
+                renderPreMarketMoversCard();
+            }
+        };
+
+        // --- PRE-MARKET MOVERS & PORTFOLIO IMPACT CARD ---
+        let preMarketCardVisible = (localStorage.getItem('myPreMarketCardDismissed') !== 'true');
+
+        window.togglePreMarketCard = function(force) {
+            const card = document.getElementById('preMarketImpactCard');
+            const toggleBtn = document.getElementById('btnPreMarketCardToggle');
+            if (force !== undefined) {
+                preMarketCardVisible = !!force;
+            } else {
+                preMarketCardVisible = !preMarketCardVisible;
+            }
+
+            if (!preMarketCardVisible) {
+                localStorage.setItem('myPreMarketCardDismissed', 'true');
+            } else {
+                localStorage.removeItem('myPreMarketCardDismissed');
+            }
+
+            if (card) {
+                card.style.display = preMarketCardVisible ? 'block' : 'none';
+            }
+            if (toggleBtn) {
+                if (preMarketCardVisible) {
+                    toggleBtn.innerHTML = '⚡ ซ่อน Pre-Market';
+                    toggleBtn.className = 'btn btn-sm btn-warning text-dark rounded-pill py-0 px-2 fw-bold d-flex align-items-center gap-1';
+                } else {
+                    toggleBtn.innerHTML = '🌅 ดู Pre-Market';
+                    toggleBtn.className = 'btn btn-sm btn-outline-warning rounded-pill py-0 px-2 fw-bold d-flex align-items-center gap-1';
+                }
+            }
+            if (preMarketCardVisible) {
+                renderPreMarketMoversCard();
+            }
+        };
+
+        window.renderPreMarketMoversCard = function() {
+            const card = document.getElementById('preMarketImpactCard');
+            if (!card) return;
+
+            const mktStatus = getUSMarketStatus();
+            const countdownEl = document.getElementById('preMarketSessionCountdown');
+            if (countdownEl) {
+                if (mktStatus.session === 'PRE') {
+                    countdownEl.innerText = '(รอบก่อนเปิดตลาด 15:00 - 20:30 น. • คำนวณจากราคา Pre-Market ล่าสุด)';
+                } else if (mktStatus.session === 'POST') {
+                    countdownEl.innerText = '(รอบหลังปิดตลาด After-Hours • อิงราคาปิดนอกเวลาล่าสุด)';
+                } else if (mktStatus.isOpen) {
+                    countdownEl.innerText = '(ตลาดเปิดทำการปกติ • แสดงการเปรียบเทียบราคาปัจจุบัน)';
+                } else {
+                    countdownEl.innerText = '(ตลาดปิดทำการ • ประมาณการเปิดรอบถัดไป)';
+                }
+            }
+
+            const toggleBtn = document.getElementById('btnPreMarketCardToggle');
+            if (localStorage.getItem('myPreMarketCardDismissed') !== 'true') {
+                if (mktStatus.session === 'PRE' || mktStatus.session === 'POST') {
+                    card.style.display = 'block';
+                    preMarketCardVisible = true;
+                } else {
+                    if (card.style.display === 'none' && preMarketCardVisible) {
+                        card.style.display = 'block';
+                    }
+                }
+            } else {
+                card.style.display = preMarketCardVisible ? 'block' : 'none';
+            }
+
+            if (toggleBtn) {
+                if (card.style.display !== 'none') {
+                    toggleBtn.innerHTML = '⚡ ซ่อน Pre-Market';
+                    toggleBtn.className = 'btn btn-sm btn-warning text-dark rounded-pill py-0 px-2 fw-bold d-flex align-items-center gap-1';
+                } else {
+                    toggleBtn.innerHTML = '🌅 ดู Pre-Market';
+                    toggleBtn.className = 'btn btn-sm btn-outline-warning rounded-pill py-0 px-2 fw-bold d-flex align-items-center gap-1';
+                }
+            }
+
+            const currentTxns = (activePortfolioId === 'ALL')
+                ? transactions
+                : transactions.filter(t => (t.portfolio || 'core') === activePortfolioId);
+
+            let holdings = {};
+            currentTxns.forEach(t => {
+                if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW') return;
+                if (!holdings[t.ticker]) holdings[t.ticker] = 0;
+                if (t.type === 'BUY') holdings[t.ticker] += t.shares;
+                else if (t.type === 'SELL') holdings[t.ticker] -= t.shares;
+            });
+
+            let holdingTickers = Object.keys(holdings).filter(tk => holdings[tk] > 0.0001);
+            if (holdingTickers.length === 0) {
+                const container = document.getElementById('preMarketMoversContainer');
+                if (container) container.innerHTML = '<span class="text-muted" style="font-size: 0.78rem;">ยังไม่มีหุ้นในพอร์ตสำหรับคำนวณผลกระทบราคา Pre-Market ครับ</span>';
+                return;
+            }
+
+            let totalEstOpenUSD = 0;
+            let totalRegValUSD = 0;
+            let movers = [];
+
+            holdingTickers.forEach(tk => {
+                const s = holdings[tk];
+                const regP = marketPrices[tk] || 0;
+                const ext = (typeof extendedHoursPrices !== 'undefined' && extendedHoursPrices) ? extendedHoursPrices[tk] : null;
+
+                let openPrice = regP;
+                let chg = 0;
+                let chgPct = 0;
+                let isExt = false;
+
+                if (ext && ext.price && ext.price > 0) {
+                    openPrice = ext.price;
+                    chg = ext.change !== undefined ? ext.change : (ext.price - (ext.regularPrice || regP));
+                    chgPct = ext.changePct !== undefined ? ext.changePct : (regP > 0 ? (chg / regP) * 100 : 0);
+                    isExt = true;
+                }
+
+                const deltaUSD = s * chg;
+                const deltaTHB = deltaUSD * liveFxRate;
+                const openValUSD = s * openPrice;
+                const regValUSD = s * regP;
+
+                totalEstOpenUSD += openValUSD;
+                totalRegValUSD += regValUSD;
+
+                movers.push({
+                    ticker: tk,
+                    shares: s,
+                    regPrice: regP,
+                    openPrice: openPrice,
+                    change: chg,
+                    changePct: chgPct,
+                    deltaUSD: deltaUSD,
+                    deltaTHB: deltaTHB,
+                    isExt: isExt
+                });
+            });
+
+            const totalEstOpenTHB = totalEstOpenUSD * liveFxRate;
+            const netDeltaUSD = totalEstOpenUSD - totalRegValUSD;
+            const netDeltaTHB = netDeltaUSD * liveFxRate;
+            const netDeltaPct = totalRegValUSD > 0 ? (netDeltaUSD / totalRegValUSD) * 100 : 0;
+
+            const elEstOpenTHB = document.getElementById('preMarketEstOpenPortTHB');
+            const elEstOpenUSD = document.getElementById('preMarketEstOpenPortUSD');
+            const elNetDeltaTHB = document.getElementById('preMarketNetDeltaTHB');
+            const elDeltaBadge = document.getElementById('preMarketImpactTotalDeltaBadge');
+
+            if (elEstOpenTHB) elEstOpenTHB.innerText = '฿' + Math.round(totalEstOpenTHB).toLocaleString();
+            if (elEstOpenUSD) elEstOpenUSD.innerText = `≈ $${totalEstOpenUSD.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
+            const isPos = netDeltaTHB >= 0;
+            const sign = isPos ? '+' : '';
+            if (elNetDeltaTHB) {
+                elNetDeltaTHB.className = `fw-bold fs-6 ${isPos ? 'text-success' : 'text-danger'}`;
+                elNetDeltaTHB.innerText = `${sign}฿${Math.round(netDeltaTHB).toLocaleString()} (${sign}${netDeltaPct.toFixed(2)}%)`;
+            }
+            if (elDeltaBadge) {
+                elDeltaBadge.className = `badge rounded-pill px-3 py-1 fw-bold fs-6 ${isPos ? 'bg-success' : 'bg-danger'} text-white`;
+                elDeltaBadge.innerText = `${sign}฿${Math.round(netDeltaTHB).toLocaleString()} (${sign}${netDeltaPct.toFixed(2)}%)`;
+            }
+
+            movers.sort((a, b) => Math.abs(b.changePct) - Math.abs(a.changePct));
+
+            const container = document.getElementById('preMarketMoversContainer');
+            if (container) {
+                let chipsHtml = '';
+                movers.forEach(m => {
+                    const mPos = m.changePct >= 0;
+                    const mSign = mPos ? '+' : '';
+                    const chipBg = mPos ? 'rgba(16, 185, 129, 0.08)' : 'rgba(239, 68, 68, 0.08)';
+                    const chipBorder = mPos ? 'rgba(16, 185, 129, 0.3)' : 'rgba(239, 68, 68, 0.3)';
+                    const badgeBg = mPos ? '#10b981' : '#ef4444';
+
+                    chipsHtml += `
+                        <div class="premarket-mover-chip d-flex align-items-center gap-2 px-2.5 py-1.5 rounded-pill border shadow-2xs" 
+                             style="cursor: pointer; background: ${chipBg}; border-color: ${chipBorder} !important;" 
+                             onclick="if(typeof openChartModal === 'function') openChartModal('${m.ticker}')"
+                             title="แตะเพื่อเปิดกราฟ ${m.ticker} (ราคา: $${m.openPrice.toFixed(2)})">
+                            <img src="https://assets.parqet.com/logos/symbol/${m.ticker}" class="rounded-circle border bg-white" width="20" height="20" onerror="this.style.display='none'">
+                            <span class="fw-bold" style="font-size: 0.8rem;">${m.ticker}</span>
+                            <span class="text-muted" style="font-size: 0.72rem;">$${m.openPrice.toFixed(2)}</span>
+                            <span class="badge text-white rounded-pill px-2 py-0.5" style="background: ${badgeBg}; font-size: 0.68rem;">
+                                ${mSign}${m.changePct.toFixed(2)}%
+                            </span>
+                            <span class="fw-bold ${mPos ? 'text-success' : 'text-danger'}" style="font-size: 0.72rem;">
+                                ${mSign}฿${Math.round(m.deltaTHB).toLocaleString()}
+                            </span>
+                        </div>
+                    `;
+                });
+                container.innerHTML = chipsHtml;
             }
         };
 
@@ -9929,6 +11239,181 @@
                 `;
             });
             container.innerHTML = html;
+            if (typeof renderFearAndGreedMeter === 'function') {
+                renderFearAndGreedMeter();
+            }
+        };
+
+        // --- FEAR & GREED INDEX & MACRO SENTIMENT PULSE ---
+        window.calculateFearAndGreedIndex = function() {
+            let vixVal = 16.8;
+            let vixChange = -0.5;
+            let sp500Change = 0.35;
+            let goldChange = -0.15;
+            let dxyChange = -0.08;
+
+            if (typeof marketIndices !== 'undefined' && marketIndices) {
+                if (marketIndices['^VIX'] && marketIndices['^VIX'].price) {
+                    vixVal = parseFloat(marketIndices['^VIX'].price);
+                    if (marketIndices['^VIX'].changePct !== undefined) vixChange = parseFloat(marketIndices['^VIX'].changePct);
+                }
+                if (marketIndices['^GSPC'] && marketIndices['^GSPC'].changePct !== undefined) {
+                    sp500Change = parseFloat(marketIndices['^GSPC'].changePct);
+                }
+                if (marketIndices['GC=F'] && marketIndices['GC=F'].changePct !== undefined) {
+                    goldChange = parseFloat(marketIndices['GC=F'].changePct);
+                }
+                if (marketIndices['DX-Y.NYB'] && marketIndices['DX-Y.NYB'].changePct !== undefined) {
+                    dxyChange = parseFloat(marketIndices['DX-Y.NYB'].changePct);
+                }
+            }
+
+            // 1. VIX Volatility sub-score (0-100)
+            let vixScore = 50;
+            if (vixVal <= 12) vixScore = 88;
+            else if (vixVal <= 15) vixScore = 75 - ((vixVal - 12) / 3) * 15;
+            else if (vixVal <= 20) vixScore = 60 - ((vixVal - 15) / 5) * 15;
+            else if (vixVal <= 28) vixScore = 45 - ((vixVal - 20) / 8) * 25;
+            else vixScore = Math.max(5, 20 - ((vixVal - 28) / 12) * 15);
+
+            // 2. S&P 500 Daily Momentum
+            let momentumScore = 50 + (sp500Change * 20);
+            momentumScore = Math.max(10, Math.min(90, momentumScore));
+
+            // 3. Safe Haven Demand (Stock vs Gold spread)
+            let safeHavenSpread = sp500Change - goldChange;
+            let safeHavenScore = 50 + (safeHavenSpread * 15);
+            safeHavenScore = Math.max(15, Math.min(85, safeHavenScore));
+
+            // 4. US Dollar Liquidity (DXY)
+            let dxyScore = 50 - (dxyChange * 25);
+            dxyScore = Math.max(15, Math.min(85, dxyScore));
+
+            let composite = (vixScore * 0.40) + (momentumScore * 0.30) + (safeHavenScore * 0.15) + (dxyScore * 0.15);
+            composite = Math.round(Math.max(2, Math.min(98, composite)));
+
+            let rating = 'Neutral';
+            let ratingTh = 'สมดุล (Neutral)';
+            let badgeBg = 'rgba(100, 116, 139, 0.15)';
+            let badgeColor = '#475569';
+            let scoreColor = '#475569';
+            let advice = '';
+
+            if (composite <= 25) {
+                rating = 'Extreme Fear';
+                ratingTh = '😱 EXTREME FEAR (กลัวจัด)';
+                badgeBg = 'rgba(239, 68, 68, 0.15)';
+                badgeColor = '#dc2626';
+                scoreColor = '#dc2626';
+                advice = 'ตลาดอยู่ในความกลัวขั้นสุด: วิกฤตคือโอกาสทองของผู้ลงทุนระยะยาว ทยอยเข้าสะสมหุ้นพื้นฐานแกร่งและ ETF ที่ Underweight ตามแผน DCA';
+            } else if (composite <= 45) {
+                rating = 'Fear';
+                ratingTh = '⚠️ FEAR (กลัว)';
+                badgeBg = 'rgba(245, 158, 11, 0.15)';
+                badgeColor = '#d97706';
+                scoreColor = '#d97706';
+                advice = 'ตลาดอยู่ในโซนระมัดระวังตัว: ตลาดมีความผันผวนสูง เหมาะสำหรับการตั้งรับ ซื้อสะสมหุ้นปันผลและกองทุนดัชนี ไม่แนะนำให้ Panic Sell';
+            } else if (composite <= 55) {
+                rating = 'Neutral';
+                ratingTh = '⚖️ NEUTRAL (สมดุล)';
+                badgeBg = 'rgba(100, 116, 139, 0.15)';
+                badgeColor = '#475569';
+                scoreColor = '#475569';
+                advice = 'ตลาดสมดุล ไร้ทิศทางชัดเจน: ดำเนินการ Rebalance ตามสัดส่วนเป้าหมาย และลงทุนตามวินัยปกติ สอดคล้องกับปัจจัยพื้นฐานรายตัว';
+            } else if (composite <= 75) {
+                rating = 'Greed';
+                ratingTh = '🚀 GREED (โลภ)';
+                badgeBg = 'rgba(16, 185, 129, 0.15)';
+                badgeColor = '#059669';
+                scoreColor = '#059669';
+                advice = 'ตลาดอยู่ในโซน Greed: บรรยากาศการลงทุนเปิดรับความเสี่ยง หุ้นกลุ่มเติบโตยังคงได้เปรียบ แนะนำทยอย Run Trend แต่ควรระวังการไล่ราคาเกินเป้าหมาย';
+            } else {
+                rating = 'Extreme Greed';
+                ratingTh = '🔥 EXTREME GREED (โลภจัด)';
+                badgeBg = 'rgba(4, 120, 87, 0.2)';
+                badgeColor = '#047857';
+                scoreColor = '#047857';
+                advice = 'ตลาดร้อนแรงเกินไป (Overbought): ห้ามไล่ราคาอย่างเด็ดขาด พิจารณาใช้เครื่องมือ Trim Calculator เพื่อล็อกกำไรบางส่วนหรือเตรียมเงินสดสำรอง';
+            }
+
+            return {
+                score: composite,
+                rating: rating,
+                ratingTh: ratingTh,
+                badgeBg: badgeBg,
+                badgeColor: badgeColor,
+                scoreColor: scoreColor,
+                advice: advice,
+                drivers: [
+                    { name: 'ความผันผวน VIX', val: `${vixVal.toFixed(2)} (${vixChange >= 0 ? '+' : ''}${vixChange.toFixed(2)}%)`, score: Math.round(vixScore) },
+                    { name: 'โมเมนตัม S&P 500', val: `${sp500Change >= 0 ? '+' : ''}${sp500Change.toFixed(2)}%`, score: Math.round(momentumScore) },
+                    { name: 'Safe Haven Demand (ทอง)', val: `${goldChange >= 0 ? '+' : ''}${goldChange.toFixed(2)}%`, score: Math.round(safeHavenScore) },
+                    { name: 'สภาพคล่องดอลลาร์ DXY', val: `${dxyChange >= 0 ? '+' : ''}${dxyChange.toFixed(2)}%`, score: Math.round(dxyScore) }
+                ]
+            };
+        };
+
+        window.renderFearAndGreedMeter = function(force) {
+            const card = document.getElementById('fearGreedCard');
+            if (!card) return;
+
+            const fg = calculateFearAndGreedIndex();
+            const scoreEl = document.getElementById('fgScoreDisplay');
+            const badgeEl = document.getElementById('fgRatingBadge');
+            const needleEl = document.getElementById('fgMeterNeedle');
+            const adviceEl = document.getElementById('fgAdviceText');
+            const adviceBox = document.getElementById('fgAdviceBox');
+            const driverRow = document.getElementById('fgDriverRow');
+
+            if (scoreEl) {
+                scoreEl.innerText = fg.score;
+                scoreEl.style.color = fg.scoreColor;
+            }
+
+            if (badgeEl) {
+                badgeEl.innerText = fg.ratingTh;
+                badgeEl.style.backgroundColor = fg.badgeBg;
+                badgeEl.style.color = fg.badgeColor;
+                badgeEl.style.border = `1px solid ${fg.badgeColor}40`;
+            }
+
+            if (needleEl) {
+                const clamped = Math.max(2, Math.min(98, fg.score));
+                needleEl.style.left = `${clamped}%`;
+            }
+
+            if (adviceEl) {
+                adviceEl.innerText = fg.advice;
+            }
+
+            if (adviceBox) {
+                adviceBox.style.borderLeftColor = fg.badgeColor;
+                adviceBox.style.backgroundColor = `${fg.badgeColor}10`;
+            }
+
+            if (driverRow) {
+                let html = '';
+                fg.drivers.forEach(d => {
+                    let dColor = '#475569';
+                    if (d.score >= 70) dColor = '#059669';
+                    else if (d.score <= 35) dColor = '#dc2626';
+
+                    html += `
+                        <div class="col-6">
+                            <div class="p-2 rounded-2 border bg-light d-flex justify-content-between align-items-center">
+                                <div>
+                                    <small class="text-muted d-block" style="font-size: 0.68rem;">${d.name}</small>
+                                    <span class="fw-bold" style="font-size: 0.78rem;">${d.val}</span>
+                                </div>
+                                <span class="badge fw-bold" style="font-size: 0.72rem; color: ${dColor}; background: rgba(0,0,0,0.05);">
+                                    ${d.score}
+                                </span>
+                            </div>
+                        </div>
+                    `;
+                });
+                driverRow.innerHTML = html;
+            }
         };
 
         window.renderMarketTop10Scroller = function() {
@@ -13673,7 +15158,9 @@
             initTheme();
             initPrivacyMode();
             initMarketIndices();
+            if (typeof renderFearAndGreedMeter === 'function') renderFearAndGreedMeter();
             updateUSMarketStatusUI();
+            if (typeof renderPreMarketMoversCard === 'function') renderPreMarketMoversCard();
             setInterval(() => {
                 updateUSMarketStatusUI();
             }, 30000);
