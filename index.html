@@ -2544,7 +2544,10 @@
                                 📜 ประวัติปันผลรับจริง & ภาษี 15% (W-8BEN)
                             </button>
                         </div>
-                        <div class="d-flex align-items-center gap-2">
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <button type="button" class="btn btn-sm btn-outline-info rounded-pill fw-bold px-3 py-1" onclick="openLongTermProjectionModal('DIVIDEND')">
+                                🔮 คาดการณ์ปันผลระยะยาว 5-30 ปี ➔
+                            </button>
                             <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle px-3 py-1 fw-bold" id="badgeModalDivAnnualSum">
                                 🔮 คาดการณ์ทั้งปี: ฿0.00
                             </span>
@@ -2687,7 +2690,537 @@
         </div>
     </div>
 
-    <!-- Modal: Stock Target (TP/SL & Risk:Reward) -->
+    <!-- Modal: Long-Term Portfolio & Dividend Projections (คาดการณ์พอร์ต & ปันผลระยะยาว) -->
+    <div class="modal fade" id="longTermProjectionModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 18px; overflow: hidden;">
+                <!-- Modal Header -->
+                <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-start flex-wrap gap-2" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(16, 185, 129, 0.08)); padding: 20px 24px 14px;">
+                    <div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fs-4">🔮</span>
+                            <h5 class="fw-bolder m-0" style="color: inherit;">คาดการณ์พอร์ตลงทุน & เงินปันผลระยะยาว (Long-Term Wealth & Dividend Forecaster)</h5>
+                            <span class="badge rounded-pill bg-primary-subtle text-primary border border-primary-subtle fw-bold" style="font-size: 0.72rem;">สูงสุด 30 ปี</span>
+                        </div>
+                        <small class="text-muted d-block mt-1">
+                            แบบจำลองพลังดอกเบี้ยทบต้น (Compound Interest), อัตราการเติบโตเงินปันผล (Dividend Growth), และการบรรลุอิสรภาพทางการเงิน (FIRE)
+                        </small>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal Subheader: Navigation Tabs & Presets -->
+                <div class="p-3 border-bottom d-flex justify-content-between align-items-center flex-wrap gap-2" style="background-color: var(--bs-card-bg, #ffffff);">
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-primary fw-bold px-3 py-1.5" id="btnProjTabCalc" onclick="switchProjTab('PROJECTION')">
+                            📊 แบบจำลอง & กราฟคาดการณ์
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary fw-bold px-3 py-1.5" id="btnProjTabGuide" onclick="switchProjTab('GUIDE')">
+                            📖 คำอธิบายในแต่ละฟังก์ชัน (ความหมาย & ผลกระทบ)
+                        </button>
+                    </div>
+                    <!-- Quick Strategy Presets -->
+                    <div class="d-flex align-items-center gap-1.5 flex-wrap">
+                        <small class="text-muted fw-bold me-1" style="font-size: 0.75rem;">แผนสำเร็จรูป:</small>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-2.5 fw-bold" style="font-size: 0.73rem;" onclick="setProjPreset('CONSERVATIVE')" title="เน้นความปลอดภัย: เติบโต 6%, ปันผล 3.5%, DGR 4%">🛡️ อนุรักษนิยม</button>
+                        <button class="btn btn-sm btn-outline-primary rounded-pill py-0.5 px-2.5 fw-bold active" id="btnPresetBalanced" style="font-size: 0.73rem;" onclick="setProjPreset('BALANCED')" title="แผนสมดุล S&P500: เติบโต 8%, ปันผล 2.0%, DGR 6%">⚖️ สมดุล S&P500</button>
+                        <button class="btn btn-sm btn-outline-success rounded-pill py-0.5 px-2.5 fw-bold" style="font-size: 0.73rem;" onclick="setProjPreset('GROWTH')" title="หุ้นเติบโตสูง: เติบโต 11%, ปันผล 1.0%, DGR 8%">🚀 เติบโตสูง</button>
+                        <button class="btn btn-sm btn-outline-warning text-dark rounded-pill py-0.5 px-2.5 fw-bold" style="font-size: 0.73rem;" onclick="setProjPreset('DIVIDEND')" title="ปันผลสูงเกษียณ: เติบโต 5%, ปันผล 5.5%, DGR 5%">👑 ปันผลสูงเกษียณ</button>
+                    </div>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body p-4" style="background-color: var(--bs-body-bg, #f9fafb);">
+                    <!-- TAB 1: PROJECTION & CHARTS -->
+                    <div id="projViewCalc">
+                        <!-- Control Panel (Input Variables) -->
+                        <div class="card border-0 shadow-sm p-3 mb-4 rounded-4" style="background: var(--bs-card-bg, #ffffff);">
+                            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 border-bottom pb-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fw-bold fs-6">⚙️ ปรับแต่งตัวแปรการคาดการณ์ (Parameters)</span>
+                                    <button class="btn btn-xs btn-outline-primary rounded-pill px-2 py-0 fw-bold" style="font-size: 0.7rem;" onclick="switchProjTab('GUIDE')">❓ สงสัยฟังก์ชันไหน? คลิกดูคำอธิบาย</button>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <label class="form-label mb-0 fw-bold text-muted small">อ้างอิงพอร์ต:</label>
+                                    <select id="projPortSelect" class="form-select form-select-sm fw-bold border-primary" style="max-width: 170px; font-size: 0.78rem;" onchange="syncProjWithCurrentPortfolio()">
+                                        <option value="ALL">พอร์ตทั้งหมด (All)</option>
+                                    </select>
+                                    <button class="btn btn-sm btn-light border py-1 px-2 text-primary fw-bold" onclick="syncProjWithCurrentPortfolio()" title="ดึงมูลค่าและเรทปันผลจากพอร์ตปัจจุบัน">
+                                        🔄 ดึงค่าพอร์ตจริง
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <!-- 1. เงินต้นเริ่มต้น -->
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <label class="form-label text-muted fw-bold d-flex justify-content-between align-items-center mb-1" style="font-size: 0.8rem;">
+                                        <span>💰 เงินลงทุนเริ่มต้น (THB)</span>
+                                        <span class="badge bg-light text-secondary border p-1" title="เงินที่มีอยู่จริงในพอร์ต ณ วันนี้">ฐานเงินต้น</span>
+                                    </label>
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-text bg-light fw-bold">฿</span>
+                                        <input type="number" id="projInitialValue" class="form-control fw-bold" step="1000" min="0" oninput="calculateLongTermProjection()">
+                                    </div>
+                                    <small class="text-muted d-block mt-1" style="font-size: 0.72rem;">* ฐานเงินต้นเริ่มต้นสำหรับรับดอกเบี้ยทบต้น</small>
+                                </div>
+
+                                <!-- 2. เงินเติม DCA รายเดือน -->
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <label class="form-label text-muted fw-bold d-flex justify-content-between align-items-center mb-1" style="font-size: 0.8rem;">
+                                        <span>📅 เติมเงิน DCA ต่อเดือน (THB)</span>
+                                        <span class="badge bg-light text-primary border p-1" title="เงินออมสะสมเพิ่มทุกๆ เดือน">วินัยสะสม</span>
+                                    </label>
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-text bg-light fw-bold">฿</span>
+                                        <input type="number" id="projMonthlyDCA" class="form-control fw-bold text-primary" value="10000" step="500" min="0" oninput="calculateLongTermProjection()">
+                                    </div>
+                                    <div class="d-flex gap-1 mt-1">
+                                        <button class="btn btn-xs btn-outline-secondary py-0 px-1.5" style="font-size: 0.65rem;" onclick="applyProjDCAAdd(5000)">+5k</button>
+                                        <button class="btn btn-xs btn-outline-secondary py-0 px-1.5" style="font-size: 0.65rem;" onclick="applyProjDCAAdd(10000)">+10k</button>
+                                        <button class="btn btn-xs btn-outline-secondary py-0 px-1.5" style="font-size: 0.65rem;" onclick="applyProjDCAAdd(20000)">+20k</button>
+                                        <button class="btn btn-xs btn-outline-secondary py-0 px-1.5" style="font-size: 0.65rem;" onclick="applyProjDCAAdd(50000)">+50k</button>
+                                    </div>
+                                </div>
+
+                                <!-- 3. ผลตอบแทนราคาหุ้นต่อปี -->
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <label class="form-label text-muted fw-bold d-flex justify-content-between align-items-center mb-1" style="font-size: 0.8rem;">
+                                        <span>📈 ผลตอบแทนหุ้นเฉลี่ย (%/ปี)</span>
+                                        <span class="badge bg-light text-success border p-1">Capital Gain</span>
+                                    </label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" id="projReturnRate" class="form-control fw-bold text-success" value="8.0" step="0.5" min="0" max="30" oninput="calculateLongTermProjection()">
+                                        <span class="input-group-text bg-light fw-bold">%</span>
+                                    </div>
+                                    <small class="text-muted d-block mt-1" style="font-size: 0.72rem;">* ค่าเฉลี่ยอดีต S&P 500 ประมาณ 8-10%/ปี</small>
+                                </div>
+
+                                <!-- 4. อัตราเงินปันผลเริ่มต้น -->
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <label class="form-label text-muted fw-bold d-flex justify-content-between align-items-center mb-1" style="font-size: 0.8rem;">
+                                        <span>💵 อัตราเงินปันผล (% Yield)</span>
+                                        <span class="badge bg-light text-warning border p-1">Dividend Yield</span>
+                                    </label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" id="projDivYield" class="form-control fw-bold text-warning" value="2.5" step="0.1" min="0" max="25" oninput="calculateLongTermProjection()">
+                                        <span class="input-group-text bg-light fw-bold">%</span>
+                                    </div>
+                                    <small class="text-muted d-block mt-1" style="font-size: 0.72rem;">* คำนวณสุทธิหลังหักภาษี 15% แล้ว</small>
+                                </div>
+
+                                <!-- 5. อัตราการเติบโตเงินปันผลต่อปี (DGR) -->
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <label class="form-label text-muted fw-bold d-flex justify-content-between align-items-center mb-1" style="font-size: 0.8rem;">
+                                        <span>🌱 ปันผลเติบโต (% DGR/ปี)</span>
+                                        <span class="badge bg-light text-info border p-1" title="Dividend Growth Rate">DGR</span>
+                                    </label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" id="projDivGrowthRate" class="form-control fw-bold text-info" value="5.0" step="0.5" min="0" max="25" oninput="calculateLongTermProjection()">
+                                        <span class="input-group-text bg-light fw-bold">%</span>
+                                    </div>
+                                    <small class="text-muted d-block mt-1" style="font-size: 0.72rem;">* บริษัทเพิ่มเงินปันผลทุกปี เร่ง Yield on Cost</small>
+                                </div>
+
+                                <!-- 6. ระยะเวลาลงทุน (ปี) -->
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <label class="form-label text-muted fw-bold d-flex justify-content-between align-items-center mb-1" style="font-size: 0.8rem;">
+                                        <span>⏳ ระยะเวลาคาดการณ์ (ปี)</span>
+                                        <span class="badge bg-primary text-white fw-bold px-2 py-0.5" id="lblProjYears">15 ปี</span>
+                                    </label>
+                                    <input type="range" class="form-range" id="projYearsRange" min="3" max="30" value="15" step="1" oninput="document.getElementById('lblProjYears').innerText = this.value + ' ปี'; calculateLongTermProjection();">
+                                    <div class="d-flex justify-content-between" style="font-size: 0.68rem; color: #9ca3af;">
+                                        <span role="button" onclick="setProjYears(5)">5ปี</span>
+                                        <span role="button" onclick="setProjYears(10)">10ปี</span>
+                                        <span role="button" onclick="setProjYears(15)">15ปี</span>
+                                        <span role="button" onclick="setProjYears(20)">20ปี</span>
+                                        <span role="button" onclick="setProjYears(25)">25ปี</span>
+                                        <span role="button" onclick="setProjYears(30)">30ปี</span>
+                                    </div>
+                                </div>
+
+                                <!-- 7. เป้าหมาย Passive Income อิสรภาพการเงิน (FIRE) -->
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <label class="form-label text-muted fw-bold d-flex justify-content-between align-items-center mb-1" style="font-size: 0.8rem;">
+                                        <span>🎯 เป้าหมาย Passive Income/ด.</span>
+                                        <span class="badge bg-light text-danger border p-1">FIRE Goal</span>
+                                    </label>
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-text bg-light fw-bold">฿</span>
+                                        <input type="number" id="projTargetIncome" class="form-control fw-bold text-danger" value="30000" step="5000" min="1000" oninput="calculateLongTermProjection()">
+                                    </div>
+                                    <small class="text-muted d-block mt-1" style="font-size: 0.72rem;">* ยอดปันผลต่อเดือนที่ต้องการใช้จ่ายสบายๆ</small>
+                                </div>
+
+                                <!-- 8. ตัวเลือกเสริม DRIP & เงินเฟ้อ -->
+                                <div class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-center">
+                                    <!-- DRIP Toggle -->
+                                    <div class="form-check form-switch mb-1.5">
+                                        <input class="form-check-input" type="checkbox" id="projDripEnabled" checked onchange="calculateLongTermProjection()">
+                                        <label class="form-check-label fw-bold text-primary small" for="projDripEnabled" style="font-size: 0.78rem;">
+                                            🔁 นำปันผลซื้อหุ้นทบต้น (DRIP)
+                                        </label>
+                                    </div>
+                                    <!-- Inflation Toggle -->
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="projAdjustInflation" onchange="calculateLongTermProjection()">
+                                        <label class="form-check-label fw-bold text-secondary small" for="projAdjustInflation" style="font-size: 0.78rem;">
+                                            🛡️ หักเงินเฟ้อ (<span id="lblProjInfVal">2.5%</span>/ปี)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4 Summary KPI Cards -->
+                        <div class="row g-3 mb-4">
+                            <!-- Card 1: มูลค่าพอร์ตในอนาคต -->
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="card p-3 border-0 shadow-sm h-100 rounded-4" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.03)); border-left: 4px solid #3b82f6 !important;">
+                                    <small class="text-muted fw-bold d-block mb-1">มูลค่าพอร์ตในอนาคต (Total Wealth)</small>
+                                    <div class="fw-bolder text-primary fs-4" id="kpiProjTotalValue">฿0.00</div>
+                                    <div class="d-flex justify-content-between align-items-center mt-2 pt-2 border-top" style="font-size: 0.75rem;">
+                                        <span class="text-muted">เงินต้นสะสม:</span>
+                                        <span class="fw-bold text-dark" id="kpiProjTotalInvested">฿0.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-1" style="font-size: 0.75rem;">
+                                        <span class="text-success fw-bold">กำไรทบต้นสุทธิ:</span>
+                                        <span class="fw-bold text-success" id="kpiProjGainProfit">+฿0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: เงินปันผลรับต่อปี & ต่อเดือน -->
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="card p-3 border-0 shadow-sm h-100 rounded-4" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.03)); border-left: 4px solid #10b981 !important;">
+                                    <small class="text-muted fw-bold d-block mb-1">เงินปันผลรับต่อปี (Annual Dividend)</small>
+                                    <div class="fw-bolder text-success fs-4" id="kpiProjAnnualDiv">฿0.00 / ปี</div>
+                                    <div class="d-flex justify-content-between align-items-center mt-2 pt-2 border-top" style="font-size: 0.75rem;">
+                                        <span class="text-muted">เฉลี่ยต่อเดือน (Passive Income):</span>
+                                        <span class="fw-bolder text-success fs-6" id="kpiProjMonthlyDiv">฿0.00 / ด.</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-1" style="font-size: 0.75rem;">
+                                        <span class="text-muted">ปันผลสะสมตลอดแผน:</span>
+                                        <span class="fw-bold text-success" id="kpiProjCumulativeDiv">฿0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Yield on Cost (YoC) ในอนาคต -->
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="card p-3 border-0 shadow-sm h-100 rounded-4" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.03)); border-left: 4px solid #f59e0b !important;">
+                                    <small class="text-muted fw-bold d-block mb-1">Yield on Cost (YoC ในอนาคต)</small>
+                                    <div class="fw-bolder text-warning fs-4" id="kpiProjYoC">0.00%</div>
+                                    <div class="d-flex justify-content-between align-items-center mt-2 pt-2 border-top" style="font-size: 0.75rem;">
+                                        <span class="text-muted">Yield วันแรก:</span>
+                                        <span class="fw-bold text-dark" id="kpiProjInitialYield">0.00%</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-1" style="font-size: 0.75rem;">
+                                        <span class="text-muted">พลังการเติบโต:</span>
+                                        <span class="badge bg-warning text-dark fw-bold" id="kpiProjYoCMultiply">1.0x เท่า</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: อิสรภาพทางการเงิน (FIRE Goal Status) -->
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="card p-3 border-0 shadow-sm h-100 rounded-4" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(147, 51, 234, 0.03)); border-left: 4px solid #a855f7 !important;">
+                                    <small class="text-muted fw-bold d-block mb-1">เป้าหมายอิสรภาพการเงิน (FIRE Goal)</small>
+                                    <div class="fw-bolder text-purple fs-5" id="kpiProjFireMilestone">ปีที่ --</div>
+                                    <div class="d-flex justify-content-between align-items-center mt-2 pt-2 border-top" style="font-size: 0.75rem;">
+                                        <span class="text-muted">เป้าหมายที่ตั้งไว้:</span>
+                                        <span class="fw-bold text-danger" id="kpiProjFireTargetText">฿30,000 / ด.</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-1" style="font-size: 0.75rem;">
+                                        <span class="text-muted">ความสำเร็จสิ้นสุดแผน:</span>
+                                        <span class="fw-bold text-purple" id="kpiProjFirePercent">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone Checklist Badges -->
+                        <div class="card border-0 shadow-sm p-3 mb-4 rounded-4" style="background: var(--bs-card-bg, #ffffff);">
+                            <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                                <span class="fw-bold text-dark small">🏆 หมุดหมายสำคัญแห่งความมั่งคั่ง (Financial Milestones):</span>
+                                <small class="text-muted" style="font-size: 0.72rem;">* คำนวณตามปีที่จะบรรลุเป้าหมายแรกในอนาคต</small>
+                            </div>
+                            <div class="d-flex gap-2 overflow-x-auto pb-1" id="projMilestonesContainer" style="scrollbar-width: thin;">
+                                <!-- Dynamically generated milestone badges -->
+                            </div>
+                        </div>
+
+                        <!-- Interactive Chart Container -->
+                        <div class="card border-0 shadow-sm p-3 mb-4 rounded-4" style="background: var(--bs-card-bg, #ffffff);">
+                            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                                <div>
+                                    <span class="fw-bold fs-6">📈 กราฟแนวโน้มการเติบโตระยะยาว (Growth Projection Chart)</span>
+                                    <small class="text-muted d-block" id="projChartSubtitle">เปรียบเทียบการเติบโตของเงินต้นสะสม และผลตอบแทนดอกเบี้ยทบต้น</small>
+                                </div>
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <button type="button" class="btn btn-primary fw-bold px-3" id="btnChartModeWealth" onclick="switchProjChartView('WEALTH')">
+                                        📊 มูลค่าพอร์ตรวม
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary fw-bold px-3" id="btnChartModeDiv" onclick="switchProjChartView('DIVIDEND')">
+                                        💵 กระแสเงินปันผลรับ
+                                    </button>
+                                </div>
+                            </div>
+                            <div style="position: relative; height: 320px; width: 100%;">
+                                <canvas id="projChartCanvas"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Detailed Year-by-Year Breakdown Table -->
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden" style="background: var(--bs-card-bg, #ffffff);">
+                            <div class="card-header border-0 bg-light py-2 px-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <span class="fw-bold small">📋 ตารางแจกแจงรายปีโดยละเอียด (Year-by-Year Growth Table)</span>
+                                <button class="btn btn-sm btn-outline-success rounded-pill py-0.5 px-3 fw-bold" style="font-size: 0.75rem;" onclick="exportProjTableCSV()">
+                                    📥 ดาวน์โหลดตาราง CSV
+                                </button>
+                            </div>
+                            <div class="table-responsive" style="max-height: 380px; overflow-y: auto;">
+                                <table class="table table-hover align-middle text-center m-0" style="font-size: 0.85rem;">
+                                    <thead class="table-light sticky-top" style="font-size: 0.78rem;">
+                                        <tr>
+                                            <th class="py-2.5">สิ้นปีที่</th>
+                                            <th class="py-2.5 text-muted">เงินต้นสะสม (THB)</th>
+                                            <th class="py-2.5 text-success fw-bold">กำไรทบต้น (THB)</th>
+                                            <th class="py-2.5 text-warning fw-bold">ปันผลทั้งปี (THB)</th>
+                                            <th class="py-2.5 text-success fw-bold">ปันผลต่อเดือน (฿/ด.)</th>
+                                            <th class="py-2.5 text-primary fw-bold">Yield on Cost</th>
+                                            <th class="py-2.5 text-primary fw-bolder">มูลค่าพอร์ตรวม (THB)</th>
+                                            <th class="py-2.5">ผลตอบแทนรวม</th>
+                                            <th class="py-2.5">หมุดหมาย</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="projYearlyTableBody">
+                                        <!-- Rendered dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: FUNCTION EXPLANATION & USER GUIDE (คำอธิบายในแต่ละฟังก์ชัน ว่าหมายถึงอะไร มีผลอะไร) -->
+                    <div id="projViewGuide" style="display: none;">
+                        <div class="card border-0 shadow-sm p-4 rounded-4 mb-4" style="background: var(--bs-card-bg, #ffffff);">
+                            <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2">
+                                <span class="fs-4">📖</span>
+                                <h5 class="fw-bolder m-0" style="color: inherit;">คู่มืออธิบายฟังก์ชัน: แต่ละตัวแปรหมายถึงอะไร และมีผลอะไรต่อพอร์ตการลงทุน</h5>
+                            </div>
+                            <p class="text-muted" style="font-size: 0.88rem; line-height: 1.6;">
+                                การวางแผนการเงินและพอร์ตลงทุนระยะยาวให้ประสบความสำเร็จ อาศัยความเข้าใจใน <strong>"พลังดอกเบี้ยทบต้น (Compound Interest)"</strong> และ <strong>"กระแสเงินปันผล (Dividend Cash Flow)"</strong> ด้านล่างนี้คือคำอธิบายอย่างละเอียดของฟังก์ชันและตัวแปรทุกตัวในระบบนี้ ว่าแต่ละตัวคืออะไร มีผลกระทบอย่างไร และควรวางแผนอย่างไรให้เกิดประสิทธิภาพสูงสุดครับ
+                            </p>
+
+                            <div class="row g-3">
+                                <!-- Guide 1: เงินลงทุนเริ่มต้น -->
+                                <div class="col-md-6 col-12">
+                                    <div class="p-3 rounded-3 border h-100" style="background-color: rgba(59, 130, 246, 0.04); border-left: 4px solid #3b82f6 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="fs-5">💰</span>
+                                            <strong class="text-primary fs-6">1. เงินลงทุนเริ่มต้น (Initial Capital)</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-dark">📌 หมายถึงอะไร:</strong> คือมูลค่าเงินลงทุนหรือสินทรัพย์ทั้งหมดที่คุณมีอยู่แล้วในพอร์ต ณ วันนี้ ที่นำมาเป็นฐานเริ่มต้นในการคำนวณ
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-success">⚡ มีผลอะไร (ผลกระทบ):</strong> ทำหน้าที่เป็น <strong>"ฐานส่งยานอวกาศ (Base Launchpad)"</strong> ยิ่งเงินต้นเริ่มต้นมีขนาดใหญ่เท่าไร พลังดอกเบี้ยทบต้นจะเริ่มทำงานอย่างรุนแรงตั้งแต่วันแรกๆ เพราะผลตอบแทน 8% ของเงิน 1 ล้าน ย่อมมากกว่า 8% ของเงิน 1 แสน ถึง 10 เท่าตัว
+                                        </div>
+                                        <div class="text-muted" style="font-size: 0.78rem;">
+                                            💡 <em>ทิป: ระบบจะดึงมูลค่าพอร์ตจริงปัจจุบันของคุณมาใส่ให้อัตโนมัติ หรือจะพิมพ์เงินออมก้อนแรกที่ตั้งใจจะเปิดพอร์ตก็ได้</em>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Guide 2: เงินเติม DCA รายเดือน -->
+                                <div class="col-md-6 col-12">
+                                    <div class="p-3 rounded-3 border h-100" style="background-color: rgba(16, 185, 129, 0.04); border-left: 4px solid #10b981 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="fs-5">📅</span>
+                                            <strong class="text-success fs-6">2. เงินเติม DCA รายเดือน (Monthly Contribution)</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-dark">📌 หมายถึงอะไร:</strong> จำนวนเงินออมส่วนตัวที่คุณตั้งใจจะนำมาซื้อหุ้น/ETF สะสมเพิ่มเข้าพอร์ตในทุกๆ เดือนอย่างมีวินัย (Dollar-Cost Averaging)
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-success">⚡ มีผลอะไร (ผลกระทบ):</strong> คือ <strong>"เชื้อเพลิงเติมตลอดการเดินทาง"</strong> ในช่วง 5–10 ปีแรก เงิน DCA จะเป็นกำลังหลักในการขยายขนาดพอร์ตมากกว่าผลตอบแทนตลาด ช่วยลดความเสี่ยงจากการจับจังหวะตลาดผิด และช่วยให้ซื้อได้จำนวนหุ้นมากขึ้นในยามตลาดปรับฐาน
+                                        </div>
+                                        <div class="text-muted" style="font-size: 0.78rem;">
+                                            💡 <em>ทิป: การเพิ่มเงิน DCA เพียงเดือนละ 3,000–5,000 บาท ในระยะ 20 ปี จะส่งผลให้มูลค่าพอร์ตปลายทางต่างกันนับล้านบาท</em>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Guide 3: ผลตอบแทนราคาหุ้นเฉลี่ยต่อปี -->
+                                <div class="col-md-6 col-12">
+                                    <div class="p-3 rounded-3 border h-100" style="background-color: rgba(14, 165, 233, 0.04); border-left: 4px solid #0ea5e9 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="fs-5">📈</span>
+                                            <strong class="text-info fs-6">3. ผลตอบแทนราคาหุ้นเฉลี่ย (% Expected Return)</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-dark">📌 หมายถึงอะไร:</strong> การเติบโตเฉลี่ยต่อปีของราคาสินทรัพย์ (Capital Gains) ตามผลกำไรและการเติบโตของเศรษฐกิจและบริษัทจดทะเบียน โดยไม่นับรวมเงินปันผล
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-success">⚡ มีผลอะไร (ผลกระทบ):</strong> ส่งผลให้พอร์ตเติบโตแบบ <strong>"ก้าวกระโดดทวีคูณ (Exponential Curve)"</strong> ผลตอบแทนของปีนี้จะกลายเป็นฐานเงินต้นให้ผลตอบแทนของปีถัดไป ยิ่งเวลานานกราฟจะยิ่งชันขึ้นอย่างน่าอัศจรรย์
+                                        </div>
+                                        <div class="text-muted" style="font-size: 0.78rem;">
+                                            💡 <em>เกณฑ์อ้างอิง: S&P 500 (VOO, VTI) เฉลี่ยย้อนหลัง 50 ปีอยู่ที่ประมาณ 8%–10%/ปี, หุ้นเติบโต (QQQ) อยู่ที่ 11%–13%/ปี</em>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Guide 4: อัตราเงินปันผลเริ่มต้น -->
+                                <div class="col-md-6 col-12">
+                                    <div class="p-3 rounded-3 border h-100" style="background-color: rgba(245, 158, 11, 0.04); border-left: 4px solid #f59e0b !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="fs-5">💵</span>
+                                            <strong class="text-warning fs-6">4. อัตราเงินปันผลต่อปีเริ่มต้น (% Dividend Yield)</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-dark">📌 หมายถึงอะไร:</strong> สัดส่วนเงินปันผลที่บริษัทจ่ายตอบแทนใน 1 ปี เทียบกับราคาหุ้นปัจจุบัน (ระบบคิดแบบสุทธิหลังหักภาษีหัก ณ ที่จ่าย W-8BEN 15% ของสหรัฐฯ ให้เรียบร้อย)
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-success">⚡ มีผลอะไร (ผลกระทบ):</strong> ผลิต <strong>"กระแสเงินสดสม่ำเสมอ (Passive Cash Flow)"</strong> ที่คุณได้รับจริงในแต่ละปี โดยที่คุณไม่ต้องขายหุ้นกินแม้แต่หุ้นเดียว ยิ่ง Yield สูง ก็ยิ่งสร้างรายได้ต่อเดือนได้รวดเร็ว
+                                        </div>
+                                        <div class="text-muted" style="font-size: 0.78rem;">
+                                            💡 <em>เกณฑ์อ้างอิง: ดัชนีรวม S&P500 อยู่ที่ 1.3%–1.5%, กองทุนปันผลคุณภาพ (SCHD) อยู่ที่ 3.4%–3.8%, กองทุน Covered Call (JEPQ, JEPI) อยู่ที่ 7%–9%</em>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Guide 5: อัตราเติบโตของเงินปันผล (DGR) -->
+                                <div class="col-md-6 col-12">
+                                    <div class="p-3 rounded-3 border h-100" style="background-color: rgba(168, 85, 247, 0.04); border-left: 4px solid #a855f7 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="fs-5">🌱</span>
+                                            <strong class="text-purple fs-6">5. อัตราเติบโตของเงินปันผล (% Dividend Growth Rate - DGR)</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-dark">📌 หมายถึงอะไร:</strong> อัตราที่บริษัทปรับขึ้นการจ่ายเงินปันผลต่อหุ้นในแต่ละปี จากการที่ธุรกิจมีรายได้และกำไรเติบโตอย่างต่อเนื่อง
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-success">⚡ มีผลอะไร (ผลกระทบ):</strong> เป็นหัวใจของ <strong>"Yield on Cost มหาศาลในอนาคต"</strong> หุ้นปันผลที่ดีจะไม่จ่ายปันผลเท่าเดิมตลอดไป แต่จะขึ้นปันผลปีละ 5%–10% ทำให้ในอีก 10–20 ปีข้างหน้า คุณจะได้รับปันผลคิดเป็น 15%–30% ต่อปีเมื่อเทียบกับเงินต้นที่คุณเคยซื้อไว้ในอดีต!
+                                        </div>
+                                        <div class="text-muted" style="font-size: 0.78rem;">
+                                            💡 <em>เกณฑ์อ้างอิง: หุ้นกลุ่ม Dividend Aristocrats หรือ SCHD มีสถิติขึ้นเงินปันผลเฉลี่ย 7%–10% ต่อปีติดต่อกันนับสิบปี</em>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Guide 6: การลงทุนเงินปันผลทบต้น (DRIP) -->
+                                <div class="col-md-6 col-12">
+                                    <div class="p-3 rounded-3 border h-100" style="background-color: rgba(236, 72, 153, 0.04); border-left: 4px solid #ec4899 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="fs-5">🔁</span>
+                                            <strong class="text-danger fs-6">6. การลงทุนเงินปันผลทบต้น (DRIP - Reinvestment)</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-dark">📌 หมายถึงอะไร:</strong> การเลือกว่าจะนำเงินปันผลที่ได้รับในแต่ละรอบ กลับไป <strong>"ซื้อหุ้นเพิ่มทันที (Reinvest)"</strong> หรือจะ <strong>"ถอนออกมาเป็นเงินสดใช้จ่าย"</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-success">⚡ มีผลอะไร (ผลกระทบ):</strong>
+                                            <ul class="ps-3 mb-0">
+                                                <li><strong>เปิด DRIP (แนะนำช่วงสะสมพอร์ต):</strong> สร้างปรากฏการณ์ <em>Snowball Effect</em> หุ้นซื้อหุ้น ปันผลซื้อปันผล พอร์ตจะขยายตัวไวกว่าการไม่ทบต้นถึง 2–3 เท่าในระยะ 20 ปี</li>
+                                                <li><strong>ปิด DRIP (ช่วงเกษียณ/ใช้เงิน):</strong> พอร์ตจะผลิตเงินสดออกมาให้คุณใช้จ่ายรายเดือน โดยที่เงินต้นก้อนใหญ่ยังคงทำงานอยู่ในตลาด</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Guide 7: ระยะเวลาการลงทุน (Years) -->
+                                <div class="col-md-6 col-12">
+                                    <div class="p-3 rounded-3 border h-100" style="background-color: rgba(100, 116, 139, 0.04); border-left: 4px solid #64748b !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="fs-5">⏳</span>
+                                            <strong class="text-secondary fs-6">7. ระยะเวลาการลงทุน (Investment Horizon)</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-dark">📌 หมายถึงอะไร:</strong> จำนวนปีที่คุณตั้งเป้าถือครองและสะสมพอร์ตอย่างต่อเนื่อง (เช่น 5 ปี, 10 ปี, 20 ปี, 30 ปี)
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-success">⚡ มีผลอะไร (ผลกระทบ):</strong> <strong>"เวลาคือพลังที่ทรงอานุภาพที่สุดในโลกการเงิน"</strong> ตามกฎของดอกเบี้ยทบต้น ผลตอบแทน 10 ปีแรกจะเทียบไม่ได้เลยกับผลตอบแทนของปีที่ 11–20 เมื่อเวลาผ่านไปถึงจุดหนึ่ง ผลตอบแทนที่พอร์ตสร้างได้ในแต่ละปีจะแซงหน้ารายได้เงินเดือนของคุณทั้งปี
+                                        </div>
+                                        <div class="text-muted" style="font-size: 0.78rem;">
+                                            💡 <em>สุภาษิตการเงิน: "Time in the market beats timing the market" อยู่ในตลาดให้นาน สำคัญกว่าการพยายามจับจังหวะซื้อขาย</em>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Guide 8: เป้าหมาย Passive Income อิสรภาพการเงิน (FIRE) -->
+                                <div class="col-md-6 col-12">
+                                    <div class="p-3 rounded-3 border h-100" style="background-color: rgba(239, 68, 68, 0.04); border-left: 4px solid #ef4444 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="fs-5">🎯</span>
+                                            <strong class="text-danger fs-6">8. เป้าหมาย Passive Income อิสรภาพการเงิน (FIRE)</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-dark">📌 หมายถึงอะไร:</strong> ยอดเงินปันผลเฉลี่ยต่อเดือนที่คุณต้องการ เพื่อนำมาครอบคลุมค่าใช้จ่ายในชีวิตประจำวัน (Financial Independence, Retire Early - FIRE)
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-success">⚡ มีผลอะไร (ผลกระทบ):</strong> ระบบจะนำเป้าหมายนี้ไปเปรียบเทียบกับเส้นทางเติบโตของพอร์ต และ <strong>"คำนวณระบุปีที่แน่นอน"</strong> ว่าคุณจะบรรลุอิสรภาพทางการเงินในปีที่เท่าใด และเงินปันผลจะชนะค่าใช้จ่ายเมื่อใด
+                                        </div>
+                                        <div class="text-muted" style="font-size: 0.78rem;">
+                                            💡 <em>ตัวอย่าง: ตั้งเป้า 30,000 บ./ด. (360,000 บ./ปี) เมื่อพอร์ตผลิตปันผลถึงระดับนี้ คุณจะมีอิสรภาพในการเลือกทำงานที่รักได้ทันที</em>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Guide 9: อัตราเงินเฟ้อ (Inflation Rate) -->
+                                <div class="col-md-6 col-12">
+                                    <div class="p-3 rounded-3 border h-100" style="background-color: rgba(75, 85, 99, 0.04); border-left: 4px solid #4b5563 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="fs-5">🛡️</span>
+                                            <strong class="text-dark fs-6">9. อัตราเงินเฟ้อ (% Inflation Rate)</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-dark">📌 หมายถึงอะไร:</strong> การลดลงของอำนาจซื้อของเงินตามกาลเวลา ข้าวของแพงขึ้นเฉลี่ย 2.0% – 2.5% ต่อปี
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-success">⚡ มีผลอะไร (ผลกระทบ):</strong> เมื่อเปิดสวิตช์ "หักเงินเฟ้อ" ระบบจะทอนมูลค่าพอร์ตและเงินปันผลในอนาคตกลับมาเป็น <strong>"มูลค่าแท้จริง (Real Purchasing Power)"</strong> เทียบเท่ากับราคาสินค้าในปัจจุบัน ช่วยให้คุณวางแผนเกษียณได้อย่างแม่นยำ ไม่หลงกับตัวเลขในอนาคต
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Guide 10: Yield on Cost (YoC ในอนาคต) -->
+                                <div class="col-md-6 col-12">
+                                    <div class="p-3 rounded-3 border h-100" style="background-color: rgba(202, 138, 4, 0.04); border-left: 4px solid #ca8a04 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <span class="fs-5">🚀</span>
+                                            <strong class="text-warning fs-6">10. Yield on Cost (YoC ในอนาคต)</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-dark">📌 หมายถึงอะไร:</strong> อัตราเงินปันผลที่ได้รับในอนาคต เมื่อเทียบกับ <strong>"เงินต้นสะสมจริงที่คุณควักกระเป๋าจ่ายไป"</strong>
+                                        </div>
+                                        <div class="mb-2" style="font-size: 0.83rem;">
+                                            <strong class="text-success">⚡ มีผลอะไร (ผลกระทบ):</strong> วัด <strong>"ประสิทธิภาพสูงสุดของเงินต้น"</strong> เช่น วันนี้ลงทุน 100,000 บาท ได้ปันผล 3,000 บาท (Yield 3%) แต่อีก 15 ปีข้างหน้า ปันผลเติบโตเป็น 18,000 บาทต่อปี แปลว่าเงินต้นก้อนเดิมให้ Yield on Cost ถึง 18% ต่อปีเทียบกับเงินที่คุณเคยจ่าย!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4 pt-2 border-top">
+                                <button type="button" class="btn btn-primary px-4 fw-bold rounded-pill" onclick="switchProjTab('PROJECTION')">
+                                    🚀 เริ่มต้นคำนวณและจำลองพอร์ตของฉันทันที
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer border-0 p-3" style="background-color: var(--bs-card-bg, #ffffff);">
+                    <div class="d-flex justify-content-between align-items-center w-100 flex-wrap gap-2">
+                        <small class="text-muted" style="font-size: 0.75rem;">
+                            * แบบจำลองนี้จัดทำขึ้นเพื่อการวางแผนทางการเงินและศึกษาพลังดอกเบี้ยทบต้น ผลตอบแทนในอดีตมิได้เป็นสิ่งยืนยันถึงผลตอบแทนในอนาคต
+                        </small>
+                        <button type="button" class="btn btn-secondary px-4 fw-bold rounded-pill" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="stockTargetModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
@@ -3641,7 +4174,10 @@
                 <div class="card h-100 border-div">
                     <div class="card-header-pro border-0 pb-0 d-flex justify-content-between align-items-center flex-wrap gap-1" style="padding: 8px 14px;">
                         <span style="font-size: 0.9rem;">💰 สรุปเงินปันผลรับ (Dividends)</span>
-                        <button class="btn btn-sm btn-outline-warning text-dark fw-bold rounded-pill px-2 py-0" style="font-size: 0.72rem;" onclick="openDividendModal()" title="ดูปฏิทินปันผลและรายงานภาษี 15% สหรัฐฯ">🔍 ปฏิทิน & ภาษี</button>
+                        <div class="d-flex align-items-center gap-1">
+                            <button class="btn btn-sm btn-outline-success fw-bold rounded-pill px-2 py-0" style="font-size: 0.72rem;" onclick="openLongTermProjectionModal('DIVIDEND')" title="คำนวณคาดการณ์เงินปันผลระยะยาวและ Passive Income อิสรภาพทางการเงิน">🔮 ปันผลระยะยาว</button>
+                            <button class="btn btn-sm btn-outline-warning text-dark fw-bold rounded-pill px-2 py-0" style="font-size: 0.72rem;" onclick="openDividendModal()" title="ดูปฏิทินปันผลและรายงานภาษี 15% สหรัฐฯ">🔍 ปฏิทิน & ภาษี</button>
+                        </div>
                     </div>
                     <div class="card-body p-2 pt-1">
                         <div class="d-flex justify-content-between align-items-center mb-1 px-1">
@@ -3782,6 +4318,12 @@
                                     <span>ตั้งเป้า TP/SL</span>
                                 </button>
 
+                                <!-- Action: คาดการณ์ระยะยาว -->
+                                <button class="btn btn-sm btn-outline-info fw-bold rounded-pill px-2.5 py-1 d-flex align-items-center gap-1 shadow-2xs" onclick="openLongTermProjectionModal()" title="จำลองและคาดการณ์มูลค่าพอร์ต & ปันผลระยะยาว (5-30 ปี)">
+                                    <span>🔮</span>
+                                    <span>คาดการณ์ระยะยาว</span>
+                                </button>
+
                                 <!-- Dropdown: ⚙️ จัดการพอร์ต (Consolidated Tools) -->
                                 <div class="dropdown">
                                     <button class="btn btn-sm btn-light border fw-bold rounded-pill px-2.5 py-1 dropdown-toggle d-flex align-items-center gap-1.5 shadow-2xs" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.78rem;">
@@ -3790,6 +4332,12 @@
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 rounded-3 p-1.5" style="font-size: 0.82rem; min-width: 220px;">
                                         <li><h6 class="dropdown-header text-uppercase fw-bold text-muted" style="font-size: 0.68rem; letter-spacing: 0.5px;">เครื่องมือพอร์ต (Tools)</h6></li>
+                                        <li>
+                                            <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2 text-info fw-bold" href="javascript:void(0)" onclick="openLongTermProjectionModal()">
+                                                <span>🔮</span>
+                                                <span>คาดการณ์พอร์ต & ปันผลระยะยาว</span>
+                                            </a>
+                                        </li>
                                         <li>
                                             <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2" href="javascript:void(0)" onclick="openSimulator()">
                                                 <span>🧮</span>
@@ -7365,6 +7913,618 @@
             document.getElementById('inputTargetSL').value = '';
             bootstrap.Modal.getOrCreateInstance(document.getElementById('stockTargetModal')).hide();
             updateSummaryAndChart();
+        };
+
+        // =========================================================================
+        // --- LONG-TERM PORTFOLIO & DIVIDEND PROJECTION ENGINE (คาดการณ์ระยะยาว) ---
+        // =========================================================================
+        let projChartObj = null;
+        let projCurrentChartView = 'WEALTH'; // 'WEALTH' or 'DIVIDEND'
+        let projLastSimulationData = null;
+
+        window.openLongTermProjectionModal = function(initialMode = 'ALL') {
+            // Populate portfolio dropdown
+            const portSel = document.getElementById('projPortSelect');
+            if (portSel) {
+                let html = '<option value="ALL">📁 พอร์ตทั้งหมด (All Portfolios)</option>';
+                if (typeof portfolios !== 'undefined' && Array.isArray(portfolios)) {
+                    portfolios.forEach(p => {
+                        html += `<option value="${p.id}">💼 ${p.name}</option>`;
+                    });
+                }
+                portSel.innerHTML = html;
+                portSel.value = (typeof activePortfolioId === 'string' && activePortfolioId !== 'ALL') ? activePortfolioId : 'ALL';
+            }
+
+            // Sync with current portfolio values
+            syncProjWithCurrentPortfolio(false);
+
+            // Switch to calculation tab
+            switchProjTab('PROJECTION');
+
+            // Set chart view mode if specifically opened for dividends
+            if (initialMode === 'DIVIDEND') {
+                projCurrentChartView = 'DIVIDEND';
+                const btnW = document.getElementById('btnChartModeWealth');
+                const btnD = document.getElementById('btnChartModeDiv');
+                if (btnW) btnW.className = 'btn btn-outline-secondary fw-bold px-3';
+                if (btnD) btnD.className = 'btn btn-success fw-bold px-3';
+            } else {
+                projCurrentChartView = 'WEALTH';
+                const btnW = document.getElementById('btnChartModeWealth');
+                const btnD = document.getElementById('btnChartModeDiv');
+                if (btnW) btnW.className = 'btn btn-primary fw-bold px-3';
+                if (btnD) btnD.className = 'btn btn-outline-secondary fw-bold px-3';
+            }
+
+            // Calculate and show modal
+            calculateLongTermProjection();
+            const modalEl = document.getElementById('longTermProjectionModal');
+            if (modalEl) {
+                const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                modal.show();
+            }
+        };
+
+        window.switchProjTab = function(tab) {
+            const btnCalc = document.getElementById('btnProjTabCalc');
+            const btnGuide = document.getElementById('btnProjTabGuide');
+            const viewCalc = document.getElementById('projViewCalc');
+            const viewGuide = document.getElementById('projViewGuide');
+
+            if (tab === 'PROJECTION') {
+                if (btnCalc) btnCalc.className = 'btn btn-primary fw-bold px-3 py-1.5';
+                if (btnGuide) btnGuide.className = 'btn btn-outline-secondary fw-bold px-3 py-1.5';
+                if (viewCalc) viewCalc.style.display = 'block';
+                if (viewGuide) viewGuide.style.display = 'none';
+                if (projChartObj) setTimeout(() => projChartObj.resize(), 100);
+            } else {
+                if (btnCalc) btnCalc.className = 'btn btn-outline-secondary fw-bold px-3 py-1.5';
+                if (btnGuide) btnGuide.className = 'btn btn-primary fw-bold px-3 py-1.5';
+                if (viewCalc) viewCalc.style.display = 'none';
+                if (viewGuide) viewGuide.style.display = 'block';
+            }
+        };
+
+        window.syncProjWithCurrentPortfolio = function(recalc = true) {
+            const portSel = document.getElementById('projPortSelect');
+            const targetPort = portSel ? portSel.value : 'ALL';
+            const fx = (typeof liveFxRate === 'number' && liveFxRate > 0) ? liveFxRate : 33.50;
+
+            let targetValueTHB = 0;
+            let targetAnnualDivUSD = 0;
+            let targetStockValueUSD = 0;
+
+            if (targetPort === 'ALL') {
+                targetValueTHB = (typeof globalTotalPortfolioValue === 'number' && globalTotalPortfolioValue > 0) ? globalTotalPortfolioValue : 0;
+            }
+
+            // Calculate holding values & dividends for target portfolio
+            if (typeof globalHoldings === 'object' && globalHoldings !== null) {
+                for (let tk in globalHoldings) {
+                    let h = globalHoldings[tk];
+                    if (!h || h.shares <= 0.0001) continue;
+                    if (targetPort !== 'ALL' && (h.port || 'core') !== targetPort) continue;
+
+                    let curPrice = (typeof marketPrices === 'object' && marketPrices[tk]) ? marketPrices[tk] : (h.shares > 0 ? (h.costUSD / h.shares) : 0);
+                    let valUSD = h.shares * curPrice;
+                    targetStockValueUSD += valUSD;
+
+                    if (targetPort !== 'ALL') {
+                        targetValueTHB += valUSD * fx;
+                    }
+
+                    // Look up dividend per share
+                    let info = (typeof dividendScheduleDatabase === 'object') ? dividendScheduleDatabase[tk] : null;
+                    let divPerShare = 0;
+                    if (info && info.divPerShare) {
+                        divPerShare = info.divPerShare;
+                    } else if (info && info.yieldPct) {
+                        divPerShare = curPrice * (info.yieldPct / 100);
+                    } else {
+                        let foundEtf = (typeof topEtfsData !== 'undefined') ? topEtfsData.find(e => e.ticker === tk) : null;
+                        let foundStk = (typeof top100StocksData !== 'undefined') ? top100StocksData.find(st => st.ticker === tk) : null;
+                        let yPct = foundEtf ? parseFloat(foundEtf.yield) : (foundStk ? parseFloat(foundStk.yield) : 1.2);
+                        divPerShare = curPrice * ((yPct || 1.2) / 100);
+                    }
+                    targetAnnualDivUSD += (h.shares * divPerShare * 0.85); // Net after 15% W-8BEN tax
+                }
+            }
+
+            let calculatedYield = targetStockValueUSD > 0 ? (targetAnnualDivUSD / targetStockValueUSD) * 100 : 2.5;
+            if (calculatedYield <= 0 || isNaN(calculatedYield)) calculatedYield = 2.5;
+
+            const initInp = document.getElementById('projInitialValue');
+            const divInp = document.getElementById('projDivYield');
+
+            if (initInp) {
+                initInp.value = targetValueTHB > 0 ? Math.round(targetValueTHB) : 100000;
+            }
+            if (divInp) {
+                divInp.value = Number(calculatedYield.toFixed(2));
+            }
+
+            if (recalc) calculateLongTermProjection();
+        };
+
+        window.setProjPreset = function(presetKey) {
+            // Update active state on preset buttons
+            const presets = {
+                'CONSERVATIVE': { returnRate: 6.0, divYield: 3.5, dgr: 4.0, drip: true, name: '🛡️ อนุรักษนิยม' },
+                'BALANCED':     { returnRate: 8.0, divYield: 2.0, dgr: 6.0, drip: true, name: '⚖️ สมดุล S&P500' },
+                'GROWTH':       { returnRate: 11.0, divYield: 1.0, dgr: 8.0, drip: true, name: '🚀 เติบโตสูง' },
+                'DIVIDEND':     { returnRate: 5.0, divYield: 5.5, dgr: 5.0, drip: true, name: '👑 ปันผลสูงเกษียณ' }
+            };
+
+            const p = presets[presetKey] || presets['BALANCED'];
+            const retInp = document.getElementById('projReturnRate');
+            const divInp = document.getElementById('projDivYield');
+            const dgrInp = document.getElementById('projDivGrowthRate');
+            const dripCheck = document.getElementById('projDripEnabled');
+
+            if (retInp) retInp.value = p.returnRate;
+            if (divInp) divInp.value = p.divYield;
+            if (dgrInp) dgrInp.value = p.dgr;
+            if (dripCheck) dripCheck.checked = p.drip;
+
+            calculateLongTermProjection();
+        };
+
+        window.applyProjDCAAdd = function(amount) {
+            const dcaInp = document.getElementById('projMonthlyDCA');
+            if (dcaInp) {
+                let cur = parseFloat(dcaInp.value) || 0;
+                dcaInp.value = Math.max(0, cur + amount);
+                calculateLongTermProjection();
+            }
+        };
+
+        window.setProjYears = function(years) {
+            const range = document.getElementById('projYearsRange');
+            const lbl = document.getElementById('lblProjYears');
+            if (range) range.value = years;
+            if (lbl) lbl.innerText = years + ' ปี';
+            calculateLongTermProjection();
+        };
+
+        window.switchProjChartView = function(viewType) {
+            projCurrentChartView = viewType;
+            const btnW = document.getElementById('btnChartModeWealth');
+            const btnD = document.getElementById('btnChartModeDiv');
+            const subtitle = document.getElementById('projChartSubtitle');
+
+            if (viewType === 'WEALTH') {
+                if (btnW) btnW.className = 'btn btn-primary fw-bold px-3';
+                if (btnD) btnD.className = 'btn btn-outline-secondary fw-bold px-3';
+                if (subtitle) subtitle.innerText = 'เปรียบเทียบการเติบโตของเงินต้นสะสม และผลตอบแทนดอกเบี้ยทบต้น (Compound Wealth)';
+            } else {
+                if (btnW) btnW.className = 'btn btn-outline-secondary fw-bold px-3';
+                if (btnD) btnD.className = 'btn btn-success fw-bold px-3';
+                if (subtitle) subtitle.innerText = 'กระแสเงินปันผลสุทธิรับต่อปี และเป้าหมาย Passive Income อิสรภาพทางการเงิน (FIRE)';
+            }
+
+            if (projLastSimulationData) {
+                renderProjChart(projLastSimulationData);
+            }
+        };
+
+        window.calculateLongTermProjection = function() {
+            const initialValue = Math.max(0, parseFloat(document.getElementById('projInitialValue')?.value) || 0);
+            const monthlyDCA = Math.max(0, parseFloat(document.getElementById('projMonthlyDCA')?.value) || 0);
+            const annualReturn = (parseFloat(document.getElementById('projReturnRate')?.value) || 0) / 100;
+            const initialDivYield = Math.max(0, parseFloat(document.getElementById('projDivYield')?.value) || 0) / 100;
+            const dgr = (parseFloat(document.getElementById('projDivGrowthRate')?.value) || 0) / 100;
+            const years = Math.min(30, Math.max(1, parseInt(document.getElementById('projYearsRange')?.value) || 15));
+            const targetMonthlyIncome = Math.max(100, parseFloat(document.getElementById('projTargetIncome')?.value) || 30000);
+            const isDrip = document.getElementById('projDripEnabled')?.checked ?? true;
+            const adjustInflation = document.getElementById('projAdjustInflation')?.checked ?? false;
+            const inflationRate = 0.025; // 2.5% standard inflation
+
+            let yearlyData = [];
+            let currentPortfolio = initialValue;
+            let totalInvested = initialValue;
+            let cumulativeDividends = 0;
+            let fireYear = null;
+
+            for (let y = 1; y <= years; y++) {
+                const startYearPortfolio = currentPortfolio;
+                const annualDCA = monthlyDCA * 12;
+                totalInvested += annualDCA;
+
+                // Effective dividend yield for current year considering Dividend Growth Rate (DGR)
+                // Existing portfolio dividends grow by (1 + dgr)^(y - 1)
+                const dividendGrowthFactor = Math.pow(1 + dgr, y - 1);
+                const dividendFromExisting = startYearPortfolio * initialDivYield * dividendGrowthFactor;
+                const dividendFromNewDCA = (annualDCA / 2) * initialDivYield; // Half-year convention for new money
+                const annualDividend = Math.max(0, dividendFromExisting + dividendFromNewDCA);
+                const monthlyDiv = annualDividend / 12;
+
+                cumulativeDividends += annualDividend;
+
+                // Capital appreciation and portfolio compounding
+                const capitalGain = startYearPortfolio * annualReturn + (annualDCA / 2) * annualReturn;
+                if (isDrip) {
+                    // With DRIP: Dividends are reinvested and generate returns
+                    currentPortfolio = startYearPortfolio + annualDCA + capitalGain + annualDividend + (annualDividend / 2) * annualReturn;
+                } else {
+                    // Without DRIP: Dividends are taken as cash flow
+                    currentPortfolio = startYearPortfolio + annualDCA + capitalGain;
+                }
+
+                // Check FIRE Milestone
+                if (fireYear === null && monthlyDiv >= targetMonthlyIncome) {
+                    fireYear = y;
+                }
+
+                const yoc = totalInvested > 0 ? (annualDividend / totalInvested) * 100 : 0;
+                const totalGain = currentPortfolio - totalInvested;
+                const totalROI = totalInvested > 0 ? (totalGain / totalInvested) * 100 : 0;
+
+                // Inflation adjustment factor
+                const inflFactor = adjustInflation ? Math.pow(1 + inflationRate, y) : 1;
+
+                yearlyData.push({
+                    year: y,
+                    invested: totalInvested / inflFactor,
+                    portfolio: currentPortfolio / inflFactor,
+                    annualDiv: annualDividend / inflFactor,
+                    monthlyDiv: monthlyDiv / inflFactor,
+                    cumulativeDiv: cumulativeDividends / inflFactor,
+                    yoc: yoc,
+                    totalGain: totalGain / inflFactor,
+                    roi: totalROI,
+                    isFireReached: monthlyDiv >= targetMonthlyIncome
+                });
+            }
+
+            projLastSimulationData = {
+                yearlyData: yearlyData,
+                initialValue: initialValue,
+                monthlyDCA: monthlyDCA,
+                annualReturn: annualReturn,
+                initialDivYield: initialDivYield,
+                dgr: dgr,
+                years: years,
+                targetMonthlyIncome: targetMonthlyIncome,
+                isDrip: isDrip,
+                adjustInflation: adjustInflation,
+                fireYear: fireYear
+            };
+
+            // Update KPI highlights
+            updateProjKPIs(projLastSimulationData);
+
+            // Update Milestone Badges
+            updateProjMilestones(projLastSimulationData);
+
+            // Render Chart
+            renderProjChart(projLastSimulationData);
+
+            // Render Table
+            renderProjTable(projLastSimulationData);
+        };
+
+        function updateProjKPIs(data) {
+            const last = data.yearlyData[data.yearlyData.length - 1];
+            if (!last) return;
+
+            const elTotalVal = document.getElementById('kpiProjTotalValue');
+            const elInvested = document.getElementById('kpiProjTotalInvested');
+            const elGainProfit = document.getElementById('kpiProjGainProfit');
+            const elAnnualDiv = document.getElementById('kpiProjAnnualDiv');
+            const elMonthlyDiv = document.getElementById('kpiProjMonthlyDiv');
+            const elCumulativeDiv = document.getElementById('kpiProjCumulativeDiv');
+            const elYoC = document.getElementById('kpiProjYoC');
+            const elInitYield = document.getElementById('kpiProjInitialYield');
+            const elYoCMult = document.getElementById('kpiProjYoCMultiply');
+            const elFireMilestone = document.getElementById('kpiProjFireMilestone');
+            const elFireTargetText = document.getElementById('kpiProjFireTargetText');
+            const elFirePercent = document.getElementById('kpiProjFirePercent');
+
+            if (elTotalVal) elTotalVal.innerText = '฿' + Math.round(last.portfolio).toLocaleString('th-TH');
+            if (elInvested) elInvested.innerText = '฿' + Math.round(last.invested).toLocaleString('th-TH');
+            if (elGainProfit) {
+                const profitSign = last.totalGain >= 0 ? '+' : '';
+                elGainProfit.innerText = `${profitSign}฿${Math.round(last.totalGain).toLocaleString('th-TH')} (${last.roi.toFixed(1)}%)`;
+                elGainProfit.className = last.totalGain >= 0 ? 'fw-bold text-success' : 'fw-bold text-danger';
+            }
+
+            if (elAnnualDiv) elAnnualDiv.innerText = '฿' + Math.round(last.annualDiv).toLocaleString('th-TH') + ' / ปี';
+            if (elMonthlyDiv) elMonthlyDiv.innerText = '฿' + Math.round(last.monthlyDiv).toLocaleString('th-TH') + ' / ด.';
+            if (elCumulativeDiv) elCumulativeDiv.innerText = '฿' + Math.round(last.cumulativeDiv).toLocaleString('th-TH');
+
+            if (elYoC) elYoC.innerText = last.yoc.toFixed(2) + '%';
+            if (elInitYield) elInitYield.innerText = (data.initialDivYield * 100).toFixed(2) + '%';
+            if (elYoCMult) {
+                const mult = data.initialDivYield > 0 ? (last.yoc / (data.initialDivYield * 100)).toFixed(1) : '1.0';
+                elYoCMult.innerText = `${mult}x เท่า`;
+            }
+
+            if (elFireTargetText) elFireTargetText.innerText = '฿' + Math.round(data.targetMonthlyIncome).toLocaleString('th-TH') + ' / ด.';
+            if (elFireMilestone) {
+                if (data.fireYear) {
+                    elFireMilestone.innerHTML = `<span class="text-success fw-bolder">🏆 ปีที่ ${data.fireYear} (สำเร็จ!)</span>`;
+                } else {
+                    elFireMilestone.innerHTML = `<span class="text-muted fw-bold">ยังไม่ถึงใน ${data.years} ปี</span>`;
+                }
+            }
+            if (elFirePercent) {
+                const pct = data.targetMonthlyIncome > 0 ? Math.min(999, (last.monthlyDiv / data.targetMonthlyIncome) * 100) : 0;
+                elFirePercent.innerText = pct.toFixed(0) + '% ของเป้าหมาย';
+            }
+        }
+
+        function updateProjMilestones(data) {
+            const container = document.getElementById('projMilestonesContainer');
+            if (!container) return;
+
+            const milestones = [
+                { id: 'p1m', type: 'WEALTH', target: 1000000, label: 'พอร์ต 1 ล้านแรก', icon: '🌱' },
+                { id: 'p5m', type: 'WEALTH', target: 5000000, label: 'พอร์ต 5 ล้านบาท', icon: '🌿' },
+                { id: 'p10m', type: 'WEALTH', target: 10000000, label: 'พอร์ต 10 ล้านบาท', icon: '🌳' },
+                { id: 'p20m', type: 'WEALTH', target: 20000000, label: 'พอร์ต 20 ล้านบาท', icon: '🏰' },
+                { id: 'd10k', type: 'DIV', target: 10000, label: 'ปันผล 10,000 บ./ด.', icon: '☕' },
+                { id: 'd30k', type: 'DIV', target: 30000, label: 'ปันผล 30,000 บ./ด.', icon: '🚗' },
+                { id: 'd50k', type: 'DIV', target: 50000, label: 'ปันผล 50,000 บ./ด.', icon: '🏖️' },
+                { id: 'd100k', type: 'DIV', target: 100000, label: 'ปันผล 100,000 บ./ด.', icon: '👑' }
+            ];
+
+            let html = '';
+            milestones.forEach(m => {
+                let unlockedYear = null;
+                for (let i = 0; i < data.yearlyData.length; i++) {
+                    const row = data.yearlyData[i];
+                    if (m.type === 'WEALTH' && row.portfolio >= m.target) {
+                        unlockedYear = row.year;
+                        break;
+                    }
+                    if (m.type === 'DIV' && row.monthlyDiv >= m.target) {
+                        unlockedYear = row.year;
+                        break;
+                    }
+                }
+
+                if (unlockedYear) {
+                    html += `
+                        <div class="card p-2 border-0 shadow-xs flex-shrink-0 d-flex flex-row align-items-center gap-2 rounded-3" style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981 !important; min-width: 145px;">
+                            <span class="fs-5">${m.icon}</span>
+                            <div class="overflow-hidden">
+                                <div class="fw-bold text-dark text-truncate" style="font-size: 0.72rem;">${m.label}</div>
+                                <span class="badge bg-success text-white" style="font-size: 0.65rem;">บรรลุปีที่ ${unlockedYear}</span>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    html += `
+                        <div class="card p-2 border-0 shadow-xs flex-shrink-0 d-flex flex-row align-items-center gap-2 rounded-3 opacity-60" style="background: rgba(0, 0, 0, 0.02); border-left: 3px solid #cbd5e1 !important; min-width: 145px;">
+                            <span class="fs-5">${m.icon}</span>
+                            <div class="overflow-hidden">
+                                <div class="fw-bold text-muted text-truncate" style="font-size: 0.72rem;">${m.label}</div>
+                                <span class="badge bg-light text-secondary border" style="font-size: 0.65rem;">ยังไม่ถึง</span>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+            container.innerHTML = html;
+        }
+
+        function renderProjChart(data) {
+            const canvas = document.getElementById('projChartCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            if (projChartObj) {
+                projChartObj.destroy();
+                projChartObj = null;
+            }
+
+            const labels = data.yearlyData.map(d => 'ปีที่ ' + d.year);
+
+            if (projCurrentChartView === 'WEALTH') {
+                const investedValues = data.yearlyData.map(d => Math.round(d.invested));
+                const portfolioValues = data.yearlyData.map(d => Math.round(d.portfolio));
+                const cumulativeDivValues = data.yearlyData.map(d => Math.round(d.cumulativeDiv));
+
+                projChartObj = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                label: 'มูลค่าพอร์ตรวม (Total Wealth)',
+                                data: portfolioValues,
+                                borderColor: '#3b82f6',
+                                backgroundColor: 'rgba(59, 130, 246, 0.12)',
+                                fill: true,
+                                tension: 0.35,
+                                borderWidth: 3,
+                                pointRadius: 3,
+                                pointHoverRadius: 6
+                            },
+                            {
+                                label: 'เงินต้นสะสม (Invested Capital)',
+                                data: investedValues,
+                                borderColor: '#94a3b8',
+                                backgroundColor: 'transparent',
+                                borderDash: [5, 5],
+                                borderWidth: 2,
+                                pointRadius: 2,
+                                pointHoverRadius: 5
+                            },
+                            {
+                                label: 'ปันผลสะสม (Cumulative Dividends)',
+                                data: cumulativeDivValues,
+                                borderColor: '#10b981',
+                                backgroundColor: 'transparent',
+                                borderWidth: 2,
+                                pointRadius: 2,
+                                pointHoverRadius: 5
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: { mode: 'index', intersect: false },
+                        plugins: {
+                            legend: { position: 'top', labels: { boxWidth: 14, font: { size: 11, family: 'Segoe UI' } } },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(ctx) {
+                                        return `${ctx.dataset.label}: ฿${ctx.parsed.y.toLocaleString('th-TH')}`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                ticks: {
+                                    callback: function(v) {
+                                        if (v >= 1000000) return (v / 1000000).toFixed(1) + 'M';
+                                        if (v >= 1000) return (v / 1000).toFixed(0) + 'k';
+                                        return v;
+                                    }
+                                },
+                                grid: { color: 'rgba(0,0,0,0.05)' }
+                            },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+            } else {
+                // DIVIDEND VIEW
+                const annualDivValues = data.yearlyData.map(d => Math.round(d.annualDiv));
+                const targetValues = data.yearlyData.map(() => Math.round(data.targetMonthlyIncome * 12));
+
+                projChartObj = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                type: 'bar',
+                                label: 'เงินปันผลรับทั้งปี (Annual Dividend)',
+                                data: annualDivValues,
+                                backgroundColor: 'rgba(16, 185, 129, 0.75)',
+                                borderColor: '#10b981',
+                                borderWidth: 1,
+                                borderRadius: 6
+                            },
+                            {
+                                type: 'line',
+                                label: 'เป้าหมาย Passive Income (฿' + Math.round(data.targetMonthlyIncome).toLocaleString() + '/ด.)',
+                                data: targetValues,
+                                borderColor: '#ef4444',
+                                borderDash: [6, 4],
+                                borderWidth: 2,
+                                pointRadius: 0,
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: { mode: 'index', intersect: false },
+                        plugins: {
+                            legend: { position: 'top', labels: { boxWidth: 14, font: { size: 11, family: 'Segoe UI' } } },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(ctx) {
+                                        const val = ctx.parsed.y;
+                                        const perMonth = Math.round(val / 12);
+                                        return `${ctx.dataset.label}: ฿${val.toLocaleString('th-TH')} (เฉลี่ย ฿${perMonth.toLocaleString()}/ด.)`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                ticks: {
+                                    callback: function(v) {
+                                        if (v >= 1000000) return (v / 1000000).toFixed(1) + 'M';
+                                        if (v >= 1000) return (v / 1000).toFixed(0) + 'k';
+                                        return v;
+                                    }
+                                },
+                                grid: { color: 'rgba(0,0,0,0.05)' }
+                            },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+        }
+
+        function renderProjTable(data) {
+            const tbody = document.getElementById('projYearlyTableBody');
+            if (!tbody) return;
+
+            let html = '';
+            data.yearlyData.forEach(row => {
+                const isFireYear = (data.fireYear === row.year);
+                const isMilestone = (row.year % 5 === 0) || isFireYear;
+                const rowBg = isFireYear ? 'background-color: rgba(168, 85, 247, 0.08);' : (isMilestone ? 'background-color: rgba(59, 130, 246, 0.03);' : '');
+
+                let milestoneBadge = '';
+                if (isFireYear) {
+                    milestoneBadge = '<span class="badge bg-purple text-white">🏆 FIRE แตะเป้า!</span>';
+                } else if (row.portfolio >= 10000000 && (!data.yearlyData[row.year - 2] || data.yearlyData[row.year - 2].portfolio < 10000000)) {
+                    milestoneBadge = '<span class="badge bg-primary text-white">💎 10 ล้าน</span>';
+                } else if (row.portfolio >= 5000000 && (!data.yearlyData[row.year - 2] || data.yearlyData[row.year - 2].portfolio < 5000000)) {
+                    milestoneBadge = '<span class="badge bg-success text-white">🌿 5 ล้าน</span>';
+                } else if (row.portfolio >= 1000000 && (!data.yearlyData[row.year - 2] || data.yearlyData[row.year - 2].portfolio < 1000000)) {
+                    milestoneBadge = '<span class="badge bg-info text-white">🌱 1 ล้านแรก</span>';
+                } else if (row.year % 5 === 0) {
+                    milestoneBadge = `<span class="badge bg-light text-muted border">ครบ ${row.year} ปี</span>`;
+                }
+
+                html += `
+                    <tr style="${rowBg}">
+                        <td class="py-2.5 fw-bold">ปีที่ ${row.year}</td>
+                        <td class="py-2.5 text-muted">฿${Math.round(row.invested).toLocaleString('th-TH')}</td>
+                        <td class="py-2.5 text-success fw-bold">+฿${Math.round(row.totalGain).toLocaleString('th-TH')}</td>
+                        <td class="py-2.5 text-warning fw-bold">฿${Math.round(row.annualDiv).toLocaleString('th-TH')}</td>
+                        <td class="py-2.5 text-success fw-bold">฿${Math.round(row.monthlyDiv).toLocaleString('th-TH')}</td>
+                        <td class="py-2.5 text-primary fw-bold">${row.yoc.toFixed(2)}%</td>
+                        <td class="py-2.5 text-primary fw-bolder" style="font-size: 0.92rem;">฿${Math.round(row.portfolio).toLocaleString('th-TH')}</td>
+                        <td class="py-2.5 text-success fw-bold">+${row.roi.toFixed(1)}%</td>
+                        <td class="py-2.5">${milestoneBadge}</td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = html;
+        }
+
+        window.exportProjTableCSV = function() {
+            if (!projLastSimulationData || !projLastSimulationData.yearlyData) return;
+            const headers = ['Year', 'Total Invested (THB)', 'Compound Profit (THB)', 'Annual Dividend (THB)', 'Monthly Passive Income (THB)', 'Yield on Cost (%)', 'Total Portfolio Value (THB)', 'ROI (%)'];
+            let csvRows = [headers.join(',')];
+
+            projLastSimulationData.yearlyData.forEach(r => {
+                csvRows.push([
+                    r.year,
+                    Math.round(r.invested),
+                    Math.round(r.totalGain),
+                    Math.round(r.annualDiv),
+                    Math.round(r.monthlyDiv),
+                    r.yoc.toFixed(2),
+                    Math.round(r.portfolio),
+                    r.roi.toFixed(2)
+                ].join(','));
+            });
+
+            const csvContent = '\uFEFF' + csvRows.join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Portfolio_LongTerm_Projection_${new Date().toISOString().split('T')[0]}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         };
 
         const defaultGroupMapping = {
