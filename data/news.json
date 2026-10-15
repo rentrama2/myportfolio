@@ -1,16 +1,213 @@
 {
-  "updated_at": "2026-10-14T21:39:04Z",
-  "updated_at_thai": "15 ต.ค. 2569 04:39 น.",
+  "updated_at": "2026-10-15T00:06:29Z",
+  "updated_at_thai": "15 ต.ค. 2569 07:06 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "การผลิตเซมิคอนดักเตอร์ของไต้หวันและหุ้นชิป AI 2 ตัวที่น่าจับตามอง",
+      "title_en": "Taiwan Semiconductor Manufacturing And 2 AI Chip Stocks To Watch",
+      "summary": "การผลิตเซมิคอนดักเตอร์ของไต้หวันและหุ้นชิป AI 2 ตัวที่น่าจับตามอง",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/taiwan-semiconductor-manufacturing-2-ai-231859326.html",
+      "time": "47 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T23:18:59Z",
+      "category": "TECH",
+      "tickers": [
+        "TSM"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "การผลิตเซมิคอนดักเตอร์ของไต้หวันและหุ้นชิป AI 2 ตัวที่น่าจับตามอง",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (14/10/2026 23:18 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSM"
+      ],
+      "fullArticle": [
+        "การผลิตเซมิคอนดักเตอร์ของไต้หวันและหุ้นชิป AI 2 ตัวที่น่าจับตามอง",
+        "การผลิตเซมิคอนดักเตอร์ของไต้หวันและหุ้นชิป AI 2 ตัวที่น่าจับตามอง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Taiwan Semiconductor Manufacturing And 2 AI Chip Stocks To Watch\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "ราคาน้ำมันเพิ่มขึ้นจากการโจมตีในซาอุดิอาระเบีย กลยุทธ์ใหม่ของอิหร่านในการกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
+      "title_en": "Oil prices gain on attacks in Saudi Arabia, Iran's new tactics to target tankers",
+      "summary": "ราคาน้ำมันเพิ่มขึ้นจากการโจมตีในซาอุดิอาระเบีย กลยุทธ์ใหม่ของอิหร่านในการกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-climb-traders-weigh-012735546.html",
+      "time": "49 นาทีที่แล้ว",
+      "publishedAt": "2026-10-14T23:16:53Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ราคาน้ำมันเพิ่มขึ้นจากการโจมตีในซาอุดิอาระเบีย กลยุทธ์ใหม่ของอิหร่านในการกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
+        "แหล่งข่าวอ้างอิง: Reuters (14/10/2026 23:16 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ราคาน้ำมันเพิ่มขึ้นจากการโจมตีในซาอุดิอาระเบีย กลยุทธ์ใหม่ของอิหร่านในการกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
+        "ราคาน้ำมันเพิ่มขึ้นจากการโจมตีในซาอุดิอาระเบีย กลยุทธ์ใหม่ของอิหร่านในการกำหนดเป้าหมายเรือบรรทุกน้ำมัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices gain on attacks in Saudi Arabia, Iran's new tactics to target tankers\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "ตลาดน้ำมันกระชับขึ้นเมื่อการโจมตีของเรือบรรทุกน้ำมันและสินค้าคงคลังเพิ่มมากขึ้น",
+      "title_en": "Oil Market Tightens as Tanker Attacks and Inventory Draws Mount",
+      "summary": "ตลาดน้ำมันกระชับขึ้นเมื่อการโจมตีของเรือบรรทุกน้ำมันและสินค้าคงคลังเพิ่มมากขึ้น",
+      "source": "Oilprice.com",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-market-tightens-tanker-attacks-230000051.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T23:00:00Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ตลาดน้ำมันกระชับขึ้นเมื่อการโจมตีของเรือบรรทุกน้ำมันและสินค้าคงคลังเพิ่มมากขึ้น",
+        "แหล่งข่าวอ้างอิง: Oilprice.com (14/10/2026 23:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ตลาดน้ำมันกระชับขึ้นเมื่อการโจมตีของเรือบรรทุกน้ำมันและสินค้าคงคลังเพิ่มมากขึ้น",
+        "ตลาดน้ำมันกระชับขึ้นเมื่อการโจมตีของเรือบรรทุกน้ำมันและสินค้าคงคลังเพิ่มมากขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Market Tightens as Tanker Attacks and Inventory Draws Mount\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "Jim Cramer อธิบายว่าทำไมแม้แต่รายได้ของธนาคารที่แข็งแกร่งก็ไม่สามารถรักษาหุ้นของพวกเขาได้",
+      "title_en": "Jim Cramer explains why even strong bank earnings couldn't save their stocks",
+      "summary": "ธนาคารทั้ง 6 แห่งร่วงลงตามรายงานผลประกอบการ แม้ว่าบางธนาคารจะมีผลประกอบการที่แข็งแกร่ง ซึ่งสะท้อนถึงความกังวลเกี่ยวกับอัตราดอกเบี้ยและแนวโน้มเศรษฐกิจ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/cramer-big-bank-earnings-stock-reaction.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T22:48:06Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ธนาคารทั้ง 6 แห่งร่วงลงตามรายงานผลประกอบการ แม้ว่าบางธนาคารจะมีผลประกอบการที่แข็งแกร่ง ซึ่งสะท้อนถึงความกังวลเกี่ยวกับอัตราดอกเบี้ยและแนวโน้มเศรษฐกิจ",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 22:48 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "Jim Cramer อธิบายว่าทำไมแม้แต่รายได้ของธนาคารที่แข็งแกร่งก็ไม่สามารถรักษาหุ้นของพวกเขาได้",
+        "ธนาคารทั้ง 6 แห่งร่วงลงตามรายงานผลประกอบการ แม้ว่าบางธนาคารจะมีผลประกอบการที่แข็งแกร่ง ซึ่งสะท้อนถึงความกังวลเกี่ยวกับอัตราดอกเบี้ยและแนวโน้มเศรษฐกิจ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer explains why even strong bank earnings couldn't save their stocks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "Jim Cramer กล่าวว่าอย่ายอมแพ้กับตลาดที่คาดเดาไม่ได้นี้ นี่คือเหตุผล",
+      "title_en": "Jim Cramer says don't give up on this unpredictable market. Here's why",
+      "summary": "แม้ว่าตลาดจะคาดเดาไม่ได้ แต่ Jim Cramer จาก CNBC กล่าวว่าการลงทุนอย่างต่อเนื่องเป็นสิ่งสำคัญ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/14/cramer-stock-market-selloff-inflation.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T22:19:32Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "แม้ว่าตลาดจะคาดเดาไม่ได้ แต่ Jim Cramer จาก CNBC กล่าวว่าการลงทุนอย่างต่อเนื่องเป็นสิ่งสำคัญ",
+        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 22:19 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "Jim Cramer กล่าวว่าอย่ายอมแพ้กับตลาดที่คาดเดาไม่ได้นี้ นี่คือเหตุผล",
+        "แม้ว่าตลาดจะคาดเดาไม่ได้ แต่ Jim Cramer จาก CNBC กล่าวว่าการลงทุนอย่างต่อเนื่องเป็นสิ่งสำคัญ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer says don't give up on this unpredictable market. Here's why\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "HighPeak Energy (HPK) ได้รับข้อตกลงที่ต้องการมูลค่า 450 ล้านดอลลาร์ หุ้นมีมูลค่าเต็มมูลค่าแล้วหรือยัง?",
+      "title_en": "HighPeak Energy (HPK) Lands $450 Million Preferred Deal, Is The Stock Already Fully Valued?",
+      "summary": "HighPeak Energy (HPK) ได้รับข้อตกลงที่ต้องการมูลค่า 450 ล้านดอลลาร์ หุ้นมีมูลค่าเต็มมูลค่าแล้วหรือยัง?",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/highpeak-energy-hpk-lands-450-221512263.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T22:15:12Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "HighPeak Energy (HPK) ได้รับข้อตกลงที่ต้องการมูลค่า 450 ล้านดอลลาร์ หุ้นมีมูลค่าเต็มมูลค่าแล้วหรือยัง?",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (14/10/2026 22:15 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "HighPeak Energy (HPK) ได้รับข้อตกลงที่ต้องการมูลค่า 450 ล้านดอลลาร์ หุ้นมีมูลค่าเต็มมูลค่าแล้วหรือยัง?",
+        "HighPeak Energy (HPK) ได้รับข้อตกลงที่ต้องการมูลค่า 450 ล้านดอลลาร์ หุ้นมีมูลค่าเต็มมูลค่าแล้วหรือยัง?",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"HighPeak Energy (HPK) Lands $450 Million Preferred Deal, Is The Stock Already Fully Valued?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "First Helium ประกาศการเข้าซื้อกิจการน้ำมันหนักตื้นเชิงกลยุทธ์",
+      "title_en": "First Helium Announces Strategic Shallow Heavy Oil Acquisition",
+      "summary": "First Helium ประกาศการเข้าซื้อกิจการน้ำมันหนักตื้นเชิงกลยุทธ์",
+      "source": "ACCESS Newswire",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/first-helium-announces-strategic-shallow-215500749.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-14T21:55:00Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "First Helium ประกาศการเข้าซื้อกิจการน้ำมันหนักตื้นเชิงกลยุทธ์",
+        "แหล่งข่าวอ้างอิง: ACCESS Newswire (14/10/2026 21:55 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "First Helium ประกาศการเข้าซื้อกิจการน้ำมันหนักตื้นเชิงกลยุทธ์",
+        "First Helium ประกาศการเข้าซื้อกิจการน้ำมันหนักตื้นเชิงกลยุทธ์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"First Helium Announces Strategic Shallow Heavy Oil Acquisition\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
       "title": "OpenAI ถูกฟ้องโดย 8 รัฐเกี่ยวกับข้อกังวลด้านความปลอดภัยของ ChatGPT",
       "title_en": "OpenAI sued by 8 states over ChatGPT safety concerns",
-      "summary": "OpenAI กำลังเผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับแนวทางปฏิบัติด้านความปลอดภัย รวมถึงวิธีที่บริษัททำงานเพื่อปกป้องเด็กๆ",
+      "summary": "OpenAI กำลังเผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับหลักปฏิบัติด้านความปลอดภัย รวมถึงวิธีที่บริษัททำงานเพื่อปกป้องเด็กๆ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html",
-      "time": "29 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-14T21:09:20Z",
       "category": "TECH",
       "tickers": [
@@ -20,168 +217,26 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
-        "OpenAI กำลังเผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับแนวทางปฏิบัติด้านความปลอดภัย รวมถึงวิธีที่บริษัททำงานเพื่อปกป้องเด็กๆ",
+        "OpenAI กำลังเผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับหลักปฏิบัติด้านความปลอดภัย รวมถึงวิธีที่บริษัททำงานเพื่อปกป้องเด็กๆ",
         "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 21:09 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
         "OpenAI ถูกฟ้องโดย 8 รัฐเกี่ยวกับข้อกังวลด้านความปลอดภัยของ ChatGPT",
-        "OpenAI กำลังเผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับแนวทางปฏิบัติด้านความปลอดภัย รวมถึงวิธีที่บริษัททำงานเพื่อปกป้องเด็กๆ",
+        "OpenAI กำลังเผชิญกับการตรวจสอบที่เข้มงวดมากขึ้นเกี่ยวกับหลักปฏิบัติด้านความปลอดภัย รวมถึงวิธีที่บริษัททำงานเพื่อปกป้องเด็กๆ",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI sued by 8 states over ChatGPT safety concerns\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-2",
-      "title": "อัปเดต: Nasdaq, S&P 500 ร่วงลงเป็นช่วงที่สามติดต่อกันตามข้อมูล CPI ที่ร้อนแรง",
-      "title_en": "Update: Nasdaq, S&P 500 Fall for Third Straight Session Following Hot CPI Data",
-      "summary": "อัปเดต: Nasdaq, S&P 500 ร่วงลงเป็นช่วงที่สามติดต่อกันตามข้อมูล CPI ที่ร้อนแรง",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-p-500-fall-third-210112489.html",
-      "time": "37 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T21:01:12Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "อัปเดต: Nasdaq, S&P 500 ร่วงลงเป็นช่วงที่สามติดต่อกันตามข้อมูล CPI ที่ร้อนแรง",
-        "แหล่งข่าวอ้างอิง: MT Newswires (14/10/2026 21:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ"
-      ],
-      "fullArticle": [
-        "อัปเดต: Nasdaq, S&P 500 ร่วงลงเป็นช่วงที่สามติดต่อกันตามข้อมูล CPI ที่ร้อนแรง",
-        "อัปเดต: Nasdaq, S&P 500 ร่วงลงเป็นช่วงที่สามติดต่อกันตามข้อมูล CPI ที่ร้อนแรง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: Nasdaq, S&P 500 Fall for Third Straight Session Following Hot CPI Data\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-      "title_en": "Basic Materials Roundup: Market Talk",
-      "summary": "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/67ccf912-6817-35f6-819d-a73232b9f325/basic-materials-roundup%3A.html",
-      "time": "39 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T21:00:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (14/10/2026 21:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Basic Materials Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
-      "title_en": "Energy & Utilities Roundup: Market Talk",
-      "summary": "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/9aa37204-9e35-38ae-996e-febbb3b79bc5/energy-%26-utilities-roundup%3A.html",
-      "time": "41 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T20:58:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (14/10/2026 20:58 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
-        "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Energy & Utilities Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "ปัญหาการขาดแคลนน้ำมันดีเซลทั่วโลกอาจคงอยู่ไปจนถึงปี 2027 Bain มีแนวทางสำหรับผู้ส่งสินค้า",
-      "title_en": "Global Diesel Shortages Could Last Into 2027. Bain Has a Playbook for Shippers",
-      "summary": "ปัญหาการขาดแคลนน้ำมันดีเซลทั่วโลกอาจคงอยู่ไปจนถึงปี 2027 Bain มีแนวทางสำหรับผู้ส่งสินค้า",
-      "source": "Sourcing Journal",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/global-diesel-shortages-could-last-205215069.html",
-      "time": "46 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T20:52:15Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ปัญหาการขาดแคลนน้ำมันดีเซลทั่วโลกอาจคงอยู่ไปจนถึงปี 2027 Bain มีแนวทางสำหรับผู้ส่งสินค้า",
-        "แหล่งข่าวอ้างอิง: Sourcing Journal (14/10/2026 20:52 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "ปัญหาการขาดแคลนน้ำมันดีเซลทั่วโลกอาจคงอยู่ไปจนถึงปี 2027 Bain มีแนวทางสำหรับผู้ส่งสินค้า",
-        "ปัญหาการขาดแคลนน้ำมันดีเซลทั่วโลกอาจคงอยู่ไปจนถึงปี 2027 Bain มีแนวทางสำหรับผู้ส่งสินค้า",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Global Diesel Shortages Could Last Into 2027. Bain Has a Playbook for Shippers\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "หุ้น CoreWeave ร่วงลงเนื่องจากอัตราผลตอบแทนพันธบัตรเกือบ 15% จากความกังวลเกี่ยวกับการยืมเงินจาก AI",
-      "title_en": "CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge",
-      "summary": "หุ้นของ CoreWeave ทรุดตัวลง 15% ขณะที่อัตราผลตอบแทนพันธบัตรพุ่งสูงขึ้นอีก",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/coreweave-stock-bond-yields-ai-debt.html",
-      "time": "52 นาทีที่แล้ว",
-      "publishedAt": "2026-10-14T20:46:32Z",
-      "category": "TECH",
-      "tickers": [
-        "TLT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "หุ้นของ CoreWeave ทรุดตัวลง 15% ขณะที่อัตราผลตอบแทนพันธบัตรพุ่งสูงขึ้นอีก",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 20:46 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
-      ],
-      "fullArticle": [
-        "หุ้น CoreWeave ร่วงลงเนื่องจากอัตราผลตอบแทนพันธบัตรเกือบ 15% จากความกังวลเกี่ยวกับการยืมเงินจาก AI",
-        "หุ้นของ CoreWeave ทรุดตัวลง 15% ขณะที่อัตราผลตอบแทนพันธบัตรพุ่งสูงขึ้นอีก",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "ข้อเสนอซื้อของพนักงาน Anduril จะให้ความสำคัญกับการเริ่มต้นเทคโนโลยีการป้องกันที่ 90 พันล้านดอลลาร์",
+      "id": "news-9",
+      "title": "ข้อเสนอซื้อพนักงานของ Anduril จะให้ความสำคัญกับการเริ่มต้นเทคโนโลยีการป้องกันที่ 90 พันล้านดอลลาร์",
       "title_en": "Anduril employee tender offer would value the defense tech startup at $90 billion",
-      "summary": "Anduril เป็นผู้ชนะรายใหญ่จากการเติบโตอย่างรวดเร็วของเทคโนโลยีกลาโหมของสหรัฐฯ และแผนการของประธานาธิบดี Donald Trump ที่จะฟื้นฟูอุตสาหกรรมของกองทัพสหรัฐฯ",
+      "summary": "Anduril เป็นผู้ชนะรายใหญ่จากการเติบโตทางเทคโนโลยีด้านกลาโหมของสหรัฐฯ และแผนการของประธานาธิบดี Donald Trump ที่จะฟื้นฟูอุตสาหกรรมของกองทัพสหรัฐฯ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/14/anduril-tender-offer-valuation.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-14T20:24:13Z",
       "category": "TECH",
       "tickers": [
@@ -193,24 +248,24 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Anduril เป็นผู้ชนะรายใหญ่จากการเติบโตอย่างรวดเร็วของเทคโนโลยีกลาโหมของสหรัฐฯ และแผนการของประธานาธิบดี Donald Trump ที่จะฟื้นฟูอุตสาหกรรมของกองทัพสหรัฐฯ",
+        "Anduril เป็นผู้ชนะรายใหญ่จากการเติบโตทางเทคโนโลยีด้านกลาโหมของสหรัฐฯ และแผนการของประธานาธิบดี Donald Trump ที่จะฟื้นฟูอุตสาหกรรมของกองทัพสหรัฐฯ",
         "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 20:24 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "ข้อเสนอซื้อของพนักงาน Anduril จะให้ความสำคัญกับการเริ่มต้นเทคโนโลยีการป้องกันที่ 90 พันล้านดอลลาร์",
-        "Anduril เป็นผู้ชนะรายใหญ่จากการเติบโตอย่างรวดเร็วของเทคโนโลยีกลาโหมของสหรัฐฯ และแผนการของประธานาธิบดี Donald Trump ที่จะฟื้นฟูอุตสาหกรรมของกองทัพสหรัฐฯ",
+        "ข้อเสนอซื้อพนักงานของ Anduril จะให้ความสำคัญกับการเริ่มต้นเทคโนโลยีการป้องกันที่ 90 พันล้านดอลลาร์",
+        "Anduril เป็นผู้ชนะรายใหญ่จากการเติบโตทางเทคโนโลยีด้านกลาโหมของสหรัฐฯ และแผนการของประธานาธิบดี Donald Trump ที่จะฟื้นฟูอุตสาหกรรมของกองทัพสหรัฐฯ",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anduril employee tender offer would value the defense tech startup at $90 billion\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-8",
+      "id": "news-10",
       "title": "Morgan Stanley ติดอันดับท็อปประมาณการ เนื่องจากรายได้จากการซื้อขายตราสารทุนสูงกว่าที่คาดการณ์ไว้ 909 ล้านดอลลาร์",
       "title_en": "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
       "summary": "Morgan Stanley เหนือความคาดหวังในบรรทัดบนและล่างสำหรับไตรมาสที่สาม",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/14/morgan-stanley-ms-q3-2026-earnings.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-14T20:22:09Z",
       "category": "EARNINGS",
       "tickers": [
@@ -232,13 +287,13 @@
       ]
     },
     {
-      "id": "news-9",
+      "id": "news-11",
       "title": "หุ้น Bank of America ร่วงลงหลังจากพลาดรายรับในไตรมาสสามและการลงโทษตามกฎระเบียบ",
       "title_en": "Bank of America shares drop after third-quarter revenue miss and regulatory penalty",
-      "summary": "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธหลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอกว่าคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
+      "summary": "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธ หลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอเกินคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-14T20:20:46Z",
       "category": "EARNINGS",
       "tickers": [
@@ -249,24 +304,24 @@
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธหลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอกว่าคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
+        "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธ หลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอเกินคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
         "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 20:20 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT #BAC"
       ],
       "fullArticle": [
         "หุ้น Bank of America ร่วงลงหลังจากพลาดรายรับในไตรมาสสามและการลงโทษตามกฎระเบียบ",
-        "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธหลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอกว่าคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
+        "หุ้นของ Bank of America ร่วงลงเมื่อวันพุธ หลังจากที่บริษัทประกาศรายรับจากการซื้อขายที่อ่อนแอเกินคาดและผลกระทบจากการปรับคลังมูลค่า 1.2 พันล้านดอลลาร์",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank of America shares drop after third-quarter revenue miss and regulatory penalty\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-10",
-      "title": "หุ้นของ Dell ร่วงลง 11% เป็นผู้นำในการขายศูนย์ข้อมูล เนื่องจากความกลัวเกี่ยวกับ 'จังหวะเวลา AI ขององค์กร'",
+      "id": "news-12",
+      "title": "หุ้นของ Dell ร่วงลง 11% เป็นผู้นำในการขายศูนย์ข้อมูล เนื่องจากความกังวลเกี่ยวกับ 'จังหวะเวลา AI ขององค์กร'",
       "title_en": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
       "summary": "Barclays ปรับลดรุ่น Dell, HPE และ NetApp เนื่องจากข้อกังวลว่าการนำ AI ขององค์กรไปใช้ยังล่าช้า",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/14/dell-stock-barclays-enterprise-ai.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-14T20:19:25Z",
       "category": "TECH",
       "tickers": [
@@ -283,65 +338,9 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "หุ้นของ Dell ร่วงลง 11% เป็นผู้นำในการขายศูนย์ข้อมูล เนื่องจากความกลัวเกี่ยวกับ 'จังหวะเวลา AI ขององค์กร'",
+        "หุ้นของ Dell ร่วงลง 11% เป็นผู้นำในการขายศูนย์ข้อมูล เนื่องจากความกังวลเกี่ยวกับ 'จังหวะเวลา AI ขององค์กร'",
         "Barclays ปรับลดรุ่น Dell, HPE และ NetApp เนื่องจากข้อกังวลว่าการนำ AI ขององค์กรไปใช้ยังล่าช้า",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "Bank of America จ้างผู้รับเหมา 1,000 รายเพื่อแก้ไขข้อบกพร่องของซอฟต์แวร์ที่เปิดเผยโดย Mythos ของ Anthropic",
-      "title_en": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos",
-      "summary": "Bank of America จ้างผู้รับเหมา 1,000 รายเพื่อแก้ไขข้อบกพร่องของซอฟต์แวร์ที่เปิดเผยโดย Mythos ของ Anthropic โดยเสนอมุมมองที่หาได้ยากเกี่ยวกับต้นทุนที่เกี่ยวข้องกับการป้องกัน AI",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T20:06:28Z",
-      "category": "TECH",
-      "tickers": [
-        "BAC"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Bank of America จ้างผู้รับเหมา 1,000 รายเพื่อแก้ไขข้อบกพร่องของซอฟต์แวร์ที่เปิดเผยโดย Mythos ของ Anthropic โดยเสนอมุมมองที่หาได้ยากเกี่ยวกับต้นทุนที่เกี่ยวข้องกับการป้องกัน AI",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 20:06 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #BAC"
-      ],
-      "fullArticle": [
-        "Bank of America จ้างผู้รับเหมา 1,000 รายเพื่อแก้ไขข้อบกพร่องของซอฟต์แวร์ที่เปิดเผยโดย Mythos ของ Anthropic",
-        "Bank of America จ้างผู้รับเหมา 1,000 รายเพื่อแก้ไขข้อบกพร่องของซอฟต์แวร์ที่เปิดเผยโดย Mythos ของ Anthropic โดยเสนอมุมมองที่หาได้ยากเกี่ยวกับต้นทุนที่เกี่ยวข้องกับการป้องกัน AI",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "Sachin Katti จาก OpenAI จะลาออกจากบทบาทด้านโครงสร้างพื้นฐาน และดำรงตำแหน่งที่ปรึกษาต่อไป",
-      "title_en": "OpenAI’s Sachin Katti to leave infrastructure role, stay on as advisor",
-      "summary": "Katti กล่าวในโพสต์บน LinkedIn ว่าเขา \"ตัดสินใจที่จะก้าวต่อไปเพื่อสร้างสิ่งใหม่\"",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/openais-sachin-katti-to-leave-infrastructure-role-stay-on-as-advisor.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T17:25:34Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Katti กล่าวในโพสต์บน LinkedIn ว่าเขา \"ตัดสินใจที่จะก้าวต่อไปเพื่อสร้างสิ่งใหม่\"",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 17:25 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "Sachin Katti จาก OpenAI จะลาออกจากบทบาทด้านโครงสร้างพื้นฐาน และดำรงตำแหน่งที่ปรึกษาต่อไป",
-        "Katti กล่าวในโพสต์บน LinkedIn ว่าเขา \"ตัดสินใจที่จะก้าวต่อไปเพื่อสร้างสิ่งใหม่\"",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI’s Sachin Katti to leave infrastructure role, stay on as advisor\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
