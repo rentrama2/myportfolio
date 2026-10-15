@@ -1,130 +1,73 @@
 {
-  "updated_at": "2026-10-15T09:19:49Z",
-  "updated_at_thai": "15 ต.ค. 2569 16:19 น.",
+  "updated_at": "2026-10-15T14:14:32Z",
+  "updated_at_thai": "15 ต.ค. 2569 21:14 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "China indicates rare earths will keep flowing to EU, regardless of U.S. trade deal expiration",
-      "title_en": "China indicates rare earths will keep flowing to EU, regardless of U.S. trade deal expiration",
-      "summary": "European trade commissioner Maroš Sefčovič met with Chinese Commerce Minister Wang Wentao in Beijing last week.",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/china-rare-earth-exports-europe.html",
-      "time": "17 นาทีที่แล้ว",
-      "publishedAt": "2026-10-15T09:02:31Z",
-      "category": "MACRO",
+      "title": "Tech slumps as AI financing worries grow, investors flock to bonds: AlphaCheck",
+      "title_en": "Tech slumps as AI financing worries grow, investors flock to bonds: AlphaCheck",
+      "summary": "Tech slumps as AI financing worries grow, investors flock to bonds: AlphaCheck",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/article/tech-slumps-as-ai-financing-worries-grow-investors-flock-to-bonds-alphacheck-140248350.html",
+      "time": "11 นาทีที่แล้ว",
+      "publishedAt": "2026-10-15T14:02:48Z",
+      "category": "TECH",
       "tickers": [
-        "SPY",
-        "QQQ",
         "TLT"
       ],
       "sentiment": "BEARISH",
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": true,
       "points": [
-        "European trade commissioner Maroš Sefčovič met with Chinese Commerce Minister Wang Wentao in Beijing last week.",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 09:02 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+        "Tech slumps as AI financing worries grow, investors flock to bonds: AlphaCheck",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (15/10/2026 14:02 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
       ],
       "fullArticle": [
-        "China indicates rare earths will keep flowing to EU, regardless of U.S. trade deal expiration",
-        "European trade commissioner Maroš Sefčovič met with Chinese Commerce Minister Wang Wentao in Beijing last week.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"China indicates rare earths will keep flowing to EU, regardless of U.S. trade deal expiration\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Tech slumps as AI financing worries grow, investors flock to bonds: AlphaCheck",
+        "Tech slumps as AI financing worries grow, investors flock to bonds: AlphaCheck",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tech slumps as AI financing worries grow, investors flock to bonds: AlphaCheck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "UK economy grew 0.1% in August, beating expectations",
-      "title_en": "UK economy grew 0.1% in August, beating expectations",
-      "summary": "The U.K. is grappling with a cost-of-living crisis sparked by sticky inflation and surging energy costs.",
+      "title": "Tale of two markets: Our 3 biggest winners and losers over the past five weeks",
+      "title_en": "Tale of two markets: Our 3 biggest winners and losers over the past five weeks",
+      "summary": "A divided market created big winners and losers. Here's how our stocks fared since the last Monthly Meeting.",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/uk-gdp-august-2026-economy.html",
-      "time": "35 นาทีที่แล้ว",
-      "publishedAt": "2026-10-15T08:44:17Z",
-      "category": "MACRO",
+      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/15/tale-of-two-markets-our-3-biggest-winners-and-losers-over-the-past-five-weeks.html",
+      "time": "12 นาทีที่แล้ว",
+      "publishedAt": "2026-10-15T14:02:19Z",
+      "category": "TECH",
       "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "The U.K. is grappling with a cost-of-living crisis sparked by sticky inflation and surging energy costs.",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 08:44 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "UK economy grew 0.1% in August, beating expectations",
-        "The U.K. is grappling with a cost-of-living crisis sparked by sticky inflation and surging energy costs.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"UK economy grew 0.1% in August, beating expectations\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "Tech stocks lead rout after US inflation fuels rate hike bets",
-      "title_en": "Tech stocks lead rout after US inflation fuels rate hike bets",
-      "summary": "Tech stocks lead rout after US inflation fuels rate hike bets",
-      "source": "AFP",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/tech-stock-lead-rout-us-025325296.html",
-      "time": "56 นาทีที่แล้ว",
-      "publishedAt": "2026-10-15T08:23:20Z",
-      "category": "MACRO",
-      "tickers": [
-        "QQQ"
+        "NVDA",
+        "AAPL",
+        "MSFT"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Tech stocks lead rout after US inflation fuels rate hike bets",
-        "แหล่งข่าวอ้างอิง: AFP (15/10/2026 08:23 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
+        "A divided market created big winners and losers. Here's how our stocks fared since the last Monthly Meeting.",
+        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 14:02 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "Tech stocks lead rout after US inflation fuels rate hike bets",
-        "Tech stocks lead rout after US inflation fuels rate hike bets",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tech stocks lead rout after US inflation fuels rate hike bets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Tale of two markets: Our 3 biggest winners and losers over the past five weeks",
+        "A divided market created big winners and losers. Here's how our stocks fared since the last Monthly Meeting.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tale of two markets: Our 3 biggest winners and losers over the past five weeks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-4",
-      "title": "Nvidia, AMD, Micron fall as AI stock sell-off deepens",
-      "title_en": "Nvidia, AMD, Micron fall as AI stock sell-off deepens",
-      "summary": "A sell-off in global technology hardware stocks deepened Thursday.",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/sk-hynix-samsung-softbank-stocks-asia-tech-rout-ai-funding-worries.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T08:18:14Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AMD"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "A sell-off in global technology hardware stocks deepened Thursday.",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 08:18 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AMD"
-      ],
-      "fullArticle": [
-        "Nvidia, AMD, Micron fall as AI stock sell-off deepens",
-        "A sell-off in global technology hardware stocks deepened Thursday.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia, AMD, Micron fall as AI stock sell-off deepens\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "Oil prices slide as US weighs easing sanctions on 'shadow fleet'",
-      "title_en": "Oil prices slide as US weighs easing sanctions on 'shadow fleet'",
-      "summary": "Oil prices slide as US weighs easing sanctions on 'shadow fleet'",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-fall-investors-weigh-012948990.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T08:11:41Z",
+      "id": "news-3",
+      "title": "BC-Crude Oil Futures",
+      "title_en": "BC-Crude Oil Futures",
+      "summary": "BC-Crude Oil Futures",
+      "source": "Associated Press",
+      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/bc-crude-oil-futures-140016376.html",
+      "time": "14 นาทีที่แล้ว",
+      "publishedAt": "2026-10-15T14:00:16Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
@@ -134,194 +77,244 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Oil prices slide as US weighs easing sanctions on 'shadow fleet'",
-        "แหล่งข่าวอ้างอิง: Reuters (15/10/2026 08:11 UTC)",
+        "BC-Crude Oil Futures",
+        "แหล่งข่าวอ้างอิง: Associated Press (15/10/2026 14:00 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "Oil prices slide as US weighs easing sanctions on 'shadow fleet'",
-        "Oil prices slide as US weighs easing sanctions on 'shadow fleet'",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices slide as US weighs easing sanctions on 'shadow fleet'\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "BC-Crude Oil Futures",
+        "BC-Crude Oil Futures",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BC-Crude Oil Futures\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-6",
-      "title": "TSMC posts record profit for a sixth straight quarter, beating estimates on AI boom",
-      "title_en": "TSMC posts record profit for a sixth straight quarter, beating estimates on AI boom",
-      "summary": "TSMC reported its third-quarter earnings on Thursday.",
+      "id": "news-4",
+      "title": "Amazon launches new Bee 'personal AI' devices that listen to conversations",
+      "title_en": "Amazon launches new Bee 'personal AI' devices that listen to conversations",
+      "summary": "The $75 Bee Frontier is an upgraded version of Amazon's wearable bracelet, while the $100 Bee Eclipse attaches to a user's smartphone.",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/tsmc-third-quarter-profit-global-ai-.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T08:09:37Z",
-      "category": "EARNINGS",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/amazon-bee-frontier-eclipse-ai-devices.html",
+      "time": "24 นาทีที่แล้ว",
+      "publishedAt": "2026-10-15T13:50:00Z",
+      "category": "TECH",
       "tickers": [
-        "TSM"
+        "AMZN"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "TSMC reported its third-quarter earnings on Thursday.",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 08:09 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSM"
+        "The $75 Bee Frontier is an upgraded version of Amazon's wearable bracelet, while the $100 Bee Eclipse attaches to a user's smartphone.",
+        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 13:50 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AMZN"
       ],
       "fullArticle": [
-        "TSMC posts record profit for a sixth straight quarter, beating estimates on AI boom",
-        "TSMC reported its third-quarter earnings on Thursday.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"TSMC posts record profit for a sixth straight quarter, beating estimates on AI boom\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Amazon launches new Bee 'personal AI' devices that listen to conversations",
+        "The $75 Bee Frontier is an upgraded version of Amazon's wearable bracelet, while the $100 Bee Eclipse attaches to a user's smartphone.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Amazon launches new Bee 'personal AI' devices that listen to conversations\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "Canada Commodities: Oil Prices Mixed as Middle East Fighting Continues; Gold Climbs",
+      "title_en": "Canada Commodities: Oil Prices Mixed as Middle East Fighting Continues; Gold Climbs",
+      "summary": "Canada Commodities: Oil Prices Mixed as Middle East Fighting Continues; Gold Climbs",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/canada-commodities-oil-prices-mixed-134822284.html",
+      "time": "26 นาทีที่แล้ว",
+      "publishedAt": "2026-10-15T13:48:22Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Canada Commodities: Oil Prices Mixed as Middle East Fighting Continues; Gold Climbs",
+        "แหล่งข่าวอ้างอิง: MT Newswires (15/10/2026 13:48 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "Canada Commodities: Oil Prices Mixed as Middle East Fighting Continues; Gold Climbs",
+        "Canada Commodities: Oil Prices Mixed as Middle East Fighting Continues; Gold Climbs",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Canada Commodities: Oil Prices Mixed as Middle East Fighting Continues; Gold Climbs\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "Wholesale prices jumped 6.3% annually in September, biggest gain since 2022",
+      "title_en": "Wholesale prices jumped 6.3% annually in September, biggest gain since 2022",
+      "summary": "September producer prices were expected to increase 0.6% month-over-month and 5.5% annually, according to the consensus estimate by Dow Jones.",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/september-producer-price-index-retail-sales-data.html",
+      "time": "27 นาทีที่แล้ว",
+      "publishedAt": "2026-10-15T13:46:36Z",
+      "category": "TECH",
+      "tickers": [
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "September producer prices were expected to increase 0.6% month-over-month and 5.5% annually, according to the consensus estimate by Dow Jones.",
+        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 13:46 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #DIA"
+      ],
+      "fullArticle": [
+        "Wholesale prices jumped 6.3% annually in September, biggest gain since 2022",
+        "September producer prices were expected to increase 0.6% month-over-month and 5.5% annually, according to the consensus estimate by Dow Jones.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wholesale prices jumped 6.3% annually in September, biggest gain since 2022\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-7",
-      "title": "TotalEnergies Expects Windfall as Conflict Squeezes Fuel Supplies",
-      "title_en": "TotalEnergies Expects Windfall as Conflict Squeezes Fuel Supplies",
-      "summary": "TotalEnergies Expects Windfall as Conflict Squeezes Fuel Supplies",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/00f58253-48cc-3188-9745-8366510aa1d6/totalenergies-expects.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T07:49:00Z",
+      "title": "Exxon’s Dividend Stays Safe Even if Oil Crashes to $79 a Barrel",
+      "title_en": "Exxon’s Dividend Stays Safe Even if Oil Crashes to $79 a Barrel",
+      "summary": "Exxon’s Dividend Stays Safe Even if Oil Crashes to $79 a Barrel",
+      "source": "24/7 Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/exxon-dividend-stays-safe-even-134553099.html",
+      "time": "28 นาทีที่แล้ว",
+      "publishedAt": "2026-10-15T13:45:53Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "SCHD"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "Exxon’s Dividend Stays Safe Even if Oil Crashes to $79 a Barrel",
+        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (15/10/2026 13:45 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #SCHD"
+      ],
+      "fullArticle": [
+        "Exxon’s Dividend Stays Safe Even if Oil Crashes to $79 a Barrel",
+        "Exxon’s Dividend Stays Safe Even if Oil Crashes to $79 a Barrel",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Exxon’s Dividend Stays Safe Even if Oil Crashes to $79 a Barrel\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "U.S. Treasury dismisses IMF debt warning and 'messy' forecasting",
+      "title_en": "U.S. Treasury dismisses IMF debt warning and 'messy' forecasting",
+      "summary": "The exchange comes as U.S. debt exceeds $40 trillion and 10-year Treasury yields remain above 5%, intensifying scrutiny of the fiscal outlook.",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/zervos-imf-us-debt-warning.html",
+      "time": "32 นาทีที่แล้ว",
+      "publishedAt": "2026-10-15T13:42:32Z",
       "category": "MACRO",
       "tickers": [
-        "SPY",
-        "QQQ",
         "TLT"
       ],
       "sentiment": "BEARISH",
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "TotalEnergies Expects Windfall as Conflict Squeezes Fuel Supplies",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (15/10/2026 07:49 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+        "The exchange comes as U.S. debt exceeds $40 trillion and 10-year Treasury yields remain above 5%, intensifying scrutiny of the fiscal outlook.",
+        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 13:42 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
       ],
       "fullArticle": [
-        "TotalEnergies Expects Windfall as Conflict Squeezes Fuel Supplies",
-        "TotalEnergies Expects Windfall as Conflict Squeezes Fuel Supplies",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"TotalEnergies Expects Windfall as Conflict Squeezes Fuel Supplies\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "TotalEnergies sees Q3 European refining margin nearly 4x year earlier",
-      "title_en": "TotalEnergies sees Q3 European refining margin nearly 4x year earlier",
-      "summary": "TotalEnergies sees Q3 European refining margin nearly 4x year earlier",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/totalenergies-sees-q3-european-refining-070641643.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T07:06:41Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "TotalEnergies sees Q3 European refining margin nearly 4x year earlier",
-        "แหล่งข่าวอ้างอิง: Investing.com (15/10/2026 07:06 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "TotalEnergies sees Q3 European refining margin nearly 4x year earlier",
-        "TotalEnergies sees Q3 European refining margin nearly 4x year earlier",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"TotalEnergies sees Q3 European refining margin nearly 4x year earlier\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "U.S. Treasury dismisses IMF debt warning and 'messy' forecasting",
+        "The exchange comes as U.S. debt exceeds $40 trillion and 10-year Treasury yields remain above 5%, intensifying scrutiny of the fiscal outlook.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. Treasury dismisses IMF debt warning and 'messy' forecasting\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-9",
-      "title": "Anthropic's third-quarter revenue is said to hit $16.8 billion ahead of IPO",
-      "title_en": "Anthropic's third-quarter revenue is said to hit $16.8 billion ahead of IPO",
-      "summary": "Anthropic reports third-quarter stands at $16.8 billion ahead of its IPO.",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/anthropics-third-quarter-revenue-hits-16point8-billion-ipo.html",
-      "time": "5 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T03:48:58Z",
-      "category": "EARNINGS",
+      "title": "Stock Market Today: Dow Rises, Nasdaq Tumbles As AI Worries Hit Major Players (Live Coverage)",
+      "title_en": "Stock Market Today: Dow Rises, Nasdaq Tumbles As AI Worries Hit Major Players (Live Coverage)",
+      "summary": "Stock Market Today: Dow Rises, Nasdaq Tumbles As AI Worries Hit Major Players (Live Coverage)",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/27f9f9ee-5b06-3a78-a91a-ddc2a33bd2d2/stock-market-today%3A-dow.html",
+      "time": "34 นาทีที่แล้ว",
+      "publishedAt": "2026-10-15T13:40:26Z",
+      "category": "TECH",
       "tickers": [
-        "SPY",
+        "QQQ",
         "DIA"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Anthropic reports third-quarter stands at $16.8 billion ahead of its IPO.",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 03:48 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+        "Stock Market Today: Dow Rises, Nasdaq Tumbles As AI Worries Hit Major Players (Live Coverage)",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (15/10/2026 13:40 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ #DIA"
       ],
       "fullArticle": [
-        "Anthropic's third-quarter revenue is said to hit $16.8 billion ahead of IPO",
-        "Anthropic reports third-quarter stands at $16.8 billion ahead of its IPO.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic's third-quarter revenue is said to hit $16.8 billion ahead of IPO\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Stock Market Today: Dow Rises, Nasdaq Tumbles As AI Worries Hit Major Players (Live Coverage)",
+        "Stock Market Today: Dow Rises, Nasdaq Tumbles As AI Worries Hit Major Players (Live Coverage)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Dow Rises, Nasdaq Tumbles As AI Worries Hit Major Players (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-10",
-      "title": "Jim Cramer explains why even strong bank earnings couldn't save their stocks",
-      "title_en": "Jim Cramer explains why even strong bank earnings couldn't save their stocks",
-      "summary": "All six banks fell following their earnings reports, even as some delivered strong results, reflecting concerns about interest rates and the economic outlook.",
+      "title": "Wall Street's latest AI spook, Netflix layoffs, 'good debt' and more in Morning Squawk",
+      "title_en": "Wall Street's latest AI spook, Netflix layoffs, 'good debt' and more in Morning Squawk",
+      "summary": "Here are five key things investors need to know to start the trading day.",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/cramer-big-bank-earnings-stock-reaction.html",
-      "time": "10 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T22:48:06Z",
-      "category": "EARNINGS",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/5-things-to-know-before-the-stock-market-opens.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-15T12:32:10Z",
+      "category": "TECH",
       "tickers": [
-        "SPY",
-        "DIA"
+        "NFLX"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "All six banks fell following their earnings reports, even as some delivered strong results, reflecting concerns about interest rates and the economic outlook.",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 22:48 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+        "Here are five key things investors need to know to start the trading day.",
+        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 12:32 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NFLX"
       ],
       "fullArticle": [
-        "Jim Cramer explains why even strong bank earnings couldn't save their stocks",
-        "All six banks fell following their earnings reports, even as some delivered strong results, reflecting concerns about interest rates and the economic outlook.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer explains why even strong bank earnings couldn't save their stocks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Wall Street's latest AI spook, Netflix layoffs, 'good debt' and more in Morning Squawk",
+        "Here are five key things investors need to know to start the trading day.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wall Street's latest AI spook, Netflix layoffs, 'good debt' and more in Morning Squawk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-11",
-      "title": "Jim Cramer says don't give up on this unpredictable market. Here's why",
-      "title_en": "Jim Cramer says don't give up on this unpredictable market. Here's why",
-      "summary": "Despite an unpredictable market, CNBC's Jim Cramer says it's important to stay invested.",
+      "title": "Nvidia CEO Jensen Huang urges U.S.-China dialogue on 'potentially dangerous' AI",
+      "title_en": "Nvidia CEO Jensen Huang urges U.S.-China dialogue on 'potentially dangerous' AI",
+      "summary": "Huang told CNBC he has ongoing \"dialogs\" with researchers in China.",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/cramer-stock-market-selloff-inflation.html",
-      "time": "11 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T22:19:32Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/jensen-huang-nvidia-china-ai.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-15T12:17:13Z",
       "category": "TECH",
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
+        "NVDA"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Despite an unpredictable market, CNBC's Jim Cramer says it's important to stay invested.",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 22:19 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+        "Huang told CNBC he has ongoing \"dialogs\" with researchers in China.",
+        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 12:17 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
       ],
       "fullArticle": [
-        "Jim Cramer says don't give up on this unpredictable market. Here's why",
-        "Despite an unpredictable market, CNBC's Jim Cramer says it's important to stay invested.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer says don't give up on this unpredictable market. Here's why\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Nvidia CEO Jensen Huang urges U.S.-China dialogue on 'potentially dangerous' AI",
+        "Huang told CNBC he has ongoing \"dialogs\" with researchers in China.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia CEO Jensen Huang urges U.S.-China dialogue on 'potentially dangerous' AI\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-12",
-      "title": "OpenAI sued by 8 states over ChatGPT safety concerns",
-      "title_en": "OpenAI sued by 8 states over ChatGPT safety concerns",
-      "summary": "OpenAI is facing mounting scrutiny over its safety and security practices, including around how the company is working to protect children.",
+      "title": "Memory stocks are getting hammered. China and a 2029 oversupply are the big worries",
+      "title_en": "Memory stocks are getting hammered. China and a 2029 oversupply are the big worries",
+      "summary": "SK Hynix, Samsung and Micron have been some of the hardest-hit names in the latest tech sell-off.",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html",
-      "time": "12 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-14T21:09:20Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/memory-stocks-micron-sk-hynix-samsung-china.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-15T12:15:09Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -332,14 +325,14 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "OpenAI is facing mounting scrutiny over its safety and security practices, including around how the company is working to protect children.",
-        "แหล่งข่าวอ้างอิง: CNBC (14/10/2026 21:09 UTC)",
+        "SK Hynix, Samsung and Micron have been some of the hardest-hit names in the latest tech sell-off.",
+        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 12:15 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "OpenAI sued by 8 states over ChatGPT safety concerns",
-        "OpenAI is facing mounting scrutiny over its safety and security practices, including around how the company is working to protect children.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI sued by 8 states over ChatGPT safety concerns\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Memory stocks are getting hammered. China and a 2029 oversupply are the big worries",
+        "SK Hynix, Samsung and Micron have been some of the hardest-hit names in the latest tech sell-off.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Memory stocks are getting hammered. China and a 2029 oversupply are the big worries\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
