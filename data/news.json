@@ -1,17 +1,73 @@
 {
-  "updated_at": "2026-10-15T21:36:02Z",
-  "updated_at_thai": "16 ต.ค. 2569 04:36 น.",
+  "updated_at": "2026-10-15T23:49:31Z",
+  "updated_at_thai": "16 ต.ค. 2569 06:49 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "การแลกเปลี่ยนเครดิตเริ่มต้นของ CoreWeave กระทบถึงระดับความทุกข์เนื่องจากนักลงทุนไม่พอใจกับหนี้ AI",
-      "title_en": "CoreWeave credit default swaps hit distress levels as investors sour on AI debt",
-      "summary": "สัญญาณของความทุกข์ทวีมากขึ้นใน CoreWeave ในวันพฤหัสบดี",
+      "title": "People in China are spending nearly as much of their income as Americans on healthcare",
+      "title_en": "People in China are spending nearly as much of their income as Americans on healthcare",
+      "summary": "Increasing government spending on healthcare could help boost consumption in China, the International Monetary Fund said.",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/coreweave-credit-default-swaps-hit-distress-levels-as-investors-sour-on-ai-debt.html",
-      "time": "2 นาทีที่แล้ว",
-      "publishedAt": "2026-10-15T21:33:24Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/chinese-spending-nearly-as-much-of-income-as-americans-on-healthcare.html",
+      "time": "49 นาทีที่แล้ว",
+      "publishedAt": "2026-10-15T23:00:01Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": true,
+      "points": [
+        "Increasing government spending on healthcare could help boost consumption in China, the International Monetary Fund said.",
+        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 23:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "People in China are spending nearly as much of their income as Americans on healthcare",
+        "Increasing government spending on healthcare could help boost consumption in China, the International Monetary Fund said.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"People in China are spending nearly as much of their income as Americans on healthcare\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
+      "title_en": "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
+      "summary": "Big Tech gave millions to Trump's White House ballroom, documents show",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/trump-ballroom-nvidia-cisco-donations.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-15T22:48:12Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Big Tech gave millions to Trump's White House ballroom, documents show",
+        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 22:48 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
+      ],
+      "fullArticle": [
+        "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
+        "Big Tech gave millions to Trump's White House ballroom, documents show",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "Jim Cramer says this week's AI sell-off offers a crucial lesson for investors",
+      "title_en": "Jim Cramer says this week's AI sell-off offers a crucial lesson for investors",
+      "summary": "CNBC’s Jim Cramer said Thursday’s AI sell-off underscores the importance of owning stocks outside the market’s hottest trade.",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/jim-cramer-ai-stocks-diversification.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-15T22:16:13Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -20,26 +76,26 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
-        "สัญญาณของความทุกข์ทวีมากขึ้นใน CoreWeave ในวันพฤหัสบดี",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 21:33 UTC)",
+        "CNBC’s Jim Cramer said Thursday’s AI sell-off underscores the importance of owning stocks outside the market’s hottest trade.",
+        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 22:16 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "การแลกเปลี่ยนเครดิตเริ่มต้นของ CoreWeave กระทบถึงระดับความทุกข์เนื่องจากนักลงทุนไม่พอใจกับหนี้ AI",
-        "สัญญาณของความทุกข์ทวีมากขึ้นใน CoreWeave ในวันพฤหัสบดี",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"CoreWeave credit default swaps hit distress levels as investors sour on AI debt\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Jim Cramer says this week's AI sell-off offers a crucial lesson for investors",
+        "CNBC’s Jim Cramer said Thursday’s AI sell-off underscores the importance of owning stocks outside the market’s hottest trade.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer says this week's AI sell-off offers a crucial lesson for investors\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-2",
-      "title": "Tesla วางแผนเปิดตัว Roadster รุ่นต่อไปหลังจากเกิดความล่าช้าเกือบทศวรรษ",
+      "id": "news-4",
+      "title": "Tesla plans next-generation Roadster reveal after almost a decade of delays",
       "title_en": "Tesla plans next-generation Roadster reveal after almost a decade of delays",
-      "summary": "Elon Musk เปิดตัวแนวคิดการรีเฟรช Roadster ครั้งแรกในปี 2560 แต่ตั้งแต่นั้นเป็นต้นมา Tesla ก็พลาดทุกวันที่จัดส่งตามเป้าหมาย",
+      "summary": "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html",
-      "time": "9 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T21:26:05Z",
       "category": "TECH",
       "tickers": [
@@ -49,24 +105,24 @@
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "Elon Musk เปิดตัวแนวคิดการรีเฟรช Roadster ครั้งแรกในปี 2560 แต่ตั้งแต่นั้นเป็นต้นมา Tesla ก็พลาดทุกวันที่จัดส่งตามเป้าหมาย",
+        "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
         "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 21:26 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
       ],
       "fullArticle": [
-        "Tesla วางแผนเปิดตัว Roadster รุ่นต่อไปหลังจากเกิดความล่าช้าเกือบทศวรรษ",
-        "Elon Musk เปิดตัวแนวคิดการรีเฟรช Roadster ครั้งแรกในปี 2560 แต่ตั้งแต่นั้นเป็นต้นมา Tesla ก็พลาดทุกวันที่จัดส่งตามเป้าหมาย",
+        "Tesla plans next-generation Roadster reveal after almost a decade of delays",
+        "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla plans next-generation Roadster reveal after almost a decade of delays\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-3",
-      "title": "การทดแทนพลังงานนำน้ำมันดิบที่ได้รับการสนับสนุนทางกายภาพสู่ตลาดสถาบันด้วยการจดทะเบียน WTIC บน LMAX Digital",
+      "id": "news-5",
+      "title": "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
       "title_en": "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
-      "summary": "การทดแทนพลังงานนำน้ำมันดิบที่ได้รับการสนับสนุนทางกายภาพสู่ตลาดสถาบันด้วยการจดทะเบียน WTIC บน LMAX Digital",
+      "summary": "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
       "source": "PR Newswire",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/energy-substantiation-brings-physically-backed-212300480.html",
-      "time": "13 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T21:23:00Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -77,24 +133,82 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "การทดแทนพลังงานนำน้ำมันดิบที่ได้รับการสนับสนุนทางกายภาพสู่ตลาดสถาบันด้วยการจดทะเบียน WTIC บน LMAX Digital",
+        "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
         "แหล่งข่าวอ้างอิง: PR Newswire (15/10/2026 21:23 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "การทดแทนพลังงานนำน้ำมันดิบที่ได้รับการสนับสนุนทางกายภาพสู่ตลาดสถาบันด้วยการจดทะเบียน WTIC บน LMAX Digital",
-        "การทดแทนพลังงานนำน้ำมันดิบที่ได้รับการสนับสนุนทางกายภาพสู่ตลาดสถาบันด้วยการจดทะเบียน WTIC บน LMAX Digital",
+        "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
+        "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-4",
-      "title": "การขนส่งตู้คอนเทนเนอร์จะบรรเทาลงเล็กน้อยหากสหรัฐฯ ผ่อนปรนมาตรการคว่ำบาตรเรือ 'Shadow Fleet'",
+      "id": "news-6",
+      "title": "Energy & Utilities Roundup: Market Talk",
+      "title_en": "Energy & Utilities Roundup: Market Talk",
+      "summary": "Energy & Utilities Roundup: Market Talk",
+      "source": "The Wall Street Journal",
+      "sourceUrl": "https://finance.yahoo.com/m/cc8fc7dd-b2d5-3e42-8dfc-e4ab27cdb683/energy-%26-utilities-roundup%3A.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-15T21:04:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Energy & Utilities Roundup: Market Talk",
+        "แหล่งข่าวอ้างอิง: The Wall Street Journal (15/10/2026 21:04 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Energy & Utilities Roundup: Market Talk",
+        "Energy & Utilities Roundup: Market Talk",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Energy & Utilities Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "Basic Materials Roundup: Market Talk",
+      "title_en": "Basic Materials Roundup: Market Talk",
+      "summary": "Basic Materials Roundup: Market Talk",
+      "source": "The Wall Street Journal",
+      "sourceUrl": "https://finance.yahoo.com/m/9132dd09-0638-33cc-9a5b-b8508a5a4ab9/basic-materials-roundup%3A.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-15T21:03:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Basic Materials Roundup: Market Talk",
+        "แหล่งข่าวอ้างอิง: The Wall Street Journal (15/10/2026 21:03 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Basic Materials Roundup: Market Talk",
+        "Basic Materials Roundup: Market Talk",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Basic Materials Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "Container Shipping Would See Little Relief if US Eased Sanctions on ‘Shadow Fleet’ Vessels",
       "title_en": "Container Shipping Would See Little Relief if US Eased Sanctions on ‘Shadow Fleet’ Vessels",
-      "summary": "การขนส่งตู้คอนเทนเนอร์จะบรรเทาลงเล็กน้อยหากสหรัฐฯ ผ่อนปรนมาตรการคว่ำบาตรเรือ 'Shadow Fleet'",
+      "summary": "Container Shipping Would See Little Relief if US Eased Sanctions on ‘Shadow Fleet’ Vessels",
       "source": "Sourcing Journal",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/container-shipping-see-little-relief-210011435.html",
-      "time": "35 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T21:00:11Z",
       "category": "TECH",
       "tickers": [
@@ -106,81 +220,24 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "การขนส่งตู้คอนเทนเนอร์จะบรรเทาลงเล็กน้อยหากสหรัฐฯ ผ่อนปรนมาตรการคว่ำบาตรเรือ 'Shadow Fleet'",
+        "Container Shipping Would See Little Relief if US Eased Sanctions on ‘Shadow Fleet’ Vessels",
         "แหล่งข่าวอ้างอิง: Sourcing Journal (15/10/2026 21:00 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "การขนส่งตู้คอนเทนเนอร์จะบรรเทาลงเล็กน้อยหากสหรัฐฯ ผ่อนปรนมาตรการคว่ำบาตรเรือ 'Shadow Fleet'",
-        "การขนส่งตู้คอนเทนเนอร์จะบรรเทาลงเล็กน้อยหากสหรัฐฯ ผ่อนปรนมาตรการคว่ำบาตรเรือ 'Shadow Fleet'",
+        "Container Shipping Would See Little Relief if US Eased Sanctions on ‘Shadow Fleet’ Vessels",
+        "Container Shipping Would See Little Relief if US Eased Sanctions on ‘Shadow Fleet’ Vessels",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Container Shipping Would See Little Relief if US Eased Sanctions on ‘Shadow Fleet’ Vessels\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-5",
-      "title": "Diamondback, Expand Energy Named Top Picks at Scotiabank",
-      "title_en": "Diamondback, Expand Energy Named Top Picks at Scotiabank",
-      "summary": "Diamondback, Expand Energy Named Top Picks at Scotiabank",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/diamondback-expand-energy-named-top-205209734.html",
-      "time": "43 นาทีที่แล้ว",
-      "publishedAt": "2026-10-15T20:52:09Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Diamondback, Expand Energy Named Top Picks at Scotiabank",
-        "แหล่งข่าวอ้างอิง: Investing.com (15/10/2026 20:52 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "Diamondback, Expand Energy Named Top Picks at Scotiabank",
-        "Diamondback, Expand Energy Named Top Picks at Scotiabank",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Diamondback, Expand Energy Named Top Picks at Scotiabank\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "TD Cowen เพิ่มการคาดการณ์น้ำมัน และมองว่าผู้ผลิตในแคนาดาได้รับผลประโยชน์เมื่อส่วนลด WCS กว้างขึ้น",
-      "title_en": "TD Cowen raises oil forecasts, sees Canadian producers gain as WCS discounts widen",
-      "summary": "TD Cowen เพิ่มการคาดการณ์น้ำมัน และมองว่าผู้ผลิตในแคนาดาได้รับผลประโยชน์เมื่อส่วนลด WCS กว้างขึ้น",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/td-cowen-raises-oil-forecasts-205010150.html",
-      "time": "45 นาทีที่แล้ว",
-      "publishedAt": "2026-10-15T20:50:10Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "TD Cowen เพิ่มการคาดการณ์น้ำมัน และมองว่าผู้ผลิตในแคนาดาได้รับผลประโยชน์เมื่อส่วนลด WCS กว้างขึ้น",
-        "แหล่งข่าวอ้างอิง: Investing.com (15/10/2026 20:50 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "TD Cowen เพิ่มการคาดการณ์น้ำมัน และมองว่าผู้ผลิตในแคนาดาได้รับผลประโยชน์เมื่อส่วนลด WCS กว้างขึ้น",
-        "TD Cowen เพิ่มการคาดการณ์น้ำมัน และมองว่าผู้ผลิตในแคนาดาได้รับผลประโยชน์เมื่อส่วนลด WCS กว้างขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"TD Cowen raises oil forecasts, sees Canadian producers gain as WCS discounts widen\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "หุ้นที่มีการเคลื่อนไหวครั้งใหญ่ที่สุดหลังเวลาผ่านไป: Interactive Brokers, J.B. Hunt, Alcoa และอีกมากมาย",
+      "id": "news-9",
+      "title": "Stocks making the biggest moves after hours: Interactive Brokers, J.B. Hunt, Alcoa and more",
       "title_en": "Stocks making the biggest moves after hours: Interactive Brokers, J.B. Hunt, Alcoa and more",
-      "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายระยะยาว",
+      "summary": "These are the stocks posting the largest moves in extended trading.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/stocks-making-the-biggest-moves-after-hours-ibkr-jbht-aa.html",
-      "time": "47 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T20:48:50Z",
       "category": "MACRO",
       "tickers": [
@@ -192,51 +249,24 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายระยะยาว",
+        "These are the stocks posting the largest moves in extended trading.",
         "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 20:48 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "หุ้นที่มีการเคลื่อนไหวครั้งใหญ่ที่สุดหลังเวลาผ่านไป: Interactive Brokers, J.B. Hunt, Alcoa และอีกมากมาย",
-        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายระยะยาว",
+        "Stocks making the biggest moves after hours: Interactive Brokers, J.B. Hunt, Alcoa and more",
+        "These are the stocks posting the largest moves in extended trading.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves after hours: Interactive Brokers, J.B. Hunt, Alcoa and more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-8",
-      "title": "Nvidia และ Cisco ยืนยันการบริจาคเงินหลายล้านดอลลาร์ให้กับห้องบอลรูมทำเนียบขาวของทรัมป์",
-      "title_en": "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
-      "summary": "Big Tech มอบเงินหลายล้านให้กับห้องบอลรูมทำเนียบขาวของ Trump เอกสารแสดง",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/trump-ballroom-nvidia-cisco-donations.html",
-      "time": "51 นาทีที่แล้ว",
-      "publishedAt": "2026-10-15T20:44:46Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Big Tech มอบเงินหลายล้านให้กับห้องบอลรูมทำเนียบขาวของ Trump เอกสารแสดง",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 20:44 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
-      ],
-      "fullArticle": [
-        "Nvidia และ Cisco ยืนยันการบริจาคเงินหลายล้านดอลลาร์ให้กับห้องบอลรูมทำเนียบขาวของทรัมป์",
-        "Big Tech มอบเงินหลายล้านให้กับห้องบอลรูมทำเนียบขาวของ Trump เอกสารแสดง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "Anthropic ร่วมมือกับ METR และ SecureBio เพื่อประเมินความเสี่ยงและแนวปฏิบัติด้านความปลอดภัย",
+      "id": "news-10",
+      "title": "Anthropic taps nonprofits METR and SecureBio to help assess risks and safety practices",
       "title_en": "Anthropic taps nonprofits METR and SecureBio to help assess risks and safety practices",
-      "summary": "บริษัทยังมีส่วนร่วมในการสนทนาในระยะเริ่มต้นกับองค์กรอื่นๆ รวมถึง Hugging Face",
+      "summary": "The company is also engaged in early-stage discussions with other organizations, including Hugging Face.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/anthropic-metr-securebio-ai-safety-evaluators.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T20:35:21Z",
       "category": "EARNINGS",
       "tickers": [
@@ -247,53 +277,24 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "บริษัทยังมีส่วนร่วมในการสนทนาในระยะเริ่มต้นกับองค์กรอื่นๆ รวมถึง Hugging Face",
+        "The company is also engaged in early-stage discussions with other organizations, including Hugging Face.",
         "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 20:35 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "Anthropic ร่วมมือกับ METR และ SecureBio เพื่อประเมินความเสี่ยงและแนวปฏิบัติด้านความปลอดภัย",
-        "บริษัทยังมีส่วนร่วมในการสนทนาในระยะเริ่มต้นกับองค์กรอื่นๆ รวมถึง Hugging Face",
+        "Anthropic taps nonprofits METR and SecureBio to help assess risks and safety practices",
+        "The company is also engaged in early-stage discussions with other organizations, including Hugging Face.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic taps nonprofits METR and SecureBio to help assess risks and safety practices\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-10",
-      "title": "TSX Closer: ดัชนีเพิ่มขึ้นมากกว่า 550 คะแนน เนื่องจากหุ้นด้านการดูแลสุขภาพและเทคโนโลยีก้าวหน้า",
-      "title_en": "TSX Closer: Index Gains More Than 550 Points as Healthcare And Technology Stocks Advance",
-      "summary": "TSX Closer: ดัชนีเพิ่มขึ้นมากกว่า 550 คะแนน เนื่องจากหุ้นด้านการดูแลสุขภาพและเทคโนโลยีก้าวหน้า",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/tsx-closer-index-gains-more-202416275.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T20:24:16Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "TSX Closer: ดัชนีเพิ่มขึ้นมากกว่า 550 คะแนน เนื่องจากหุ้นด้านการดูแลสุขภาพและเทคโนโลยีก้าวหน้า",
-        "แหล่งข่าวอ้างอิง: MT Newswires (15/10/2026 20:24 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "TSX Closer: ดัชนีเพิ่มขึ้นมากกว่า 550 คะแนน เนื่องจากหุ้นด้านการดูแลสุขภาพและเทคโนโลยีก้าวหน้า",
-        "TSX Closer: ดัชนีเพิ่มขึ้นมากกว่า 550 คะแนน เนื่องจากหุ้นด้านการดูแลสุขภาพและเทคโนโลยีก้าวหน้า",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"TSX Closer: Index Gains More Than 550 Points as Healthcare And Technology Stocks Advance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
       "id": "news-11",
-      "title": "เงินบริจาคของ Harvard เพิ่มขึ้น 27% ในปีงบประมาณ 2026 โดย SpaceX ขึ้นเป็นผู้ถือครองสูงสุด",
+      "title": "Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding",
       "title_en": "Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding",
-      "summary": "ช่วง 12 เดือนล่าสุดถือเป็นผลตอบแทนที่แข็งแกร่งที่สุดสำหรับกองทุนของมหาวิทยาลัยนับตั้งแต่ปี 2021",
+      "summary": "The latest 12-month period marked the strongest return for the university's fund since 2021.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/harvards-endowment-jumps-27percent-with-spacex-as-top-holding.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T19:53:49Z",
       "category": "MACRO",
       "tickers": [
@@ -305,24 +306,24 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ช่วง 12 เดือนล่าสุดถือเป็นผลตอบแทนที่แข็งแกร่งที่สุดสำหรับกองทุนของมหาวิทยาลัยนับตั้งแต่ปี 2021",
+        "The latest 12-month period marked the strongest return for the university's fund since 2021.",
         "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 19:53 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "เงินบริจาคของ Harvard เพิ่มขึ้น 27% ในปีงบประมาณ 2026 โดย SpaceX ขึ้นเป็นผู้ถือครองสูงสุด",
-        "ช่วง 12 เดือนล่าสุดถือเป็นผลตอบแทนที่แข็งแกร่งที่สุดสำหรับกองทุนของมหาวิทยาลัยนับตั้งแต่ปี 2021",
+        "Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding",
+        "The latest 12-month period marked the strongest return for the university's fund since 2021.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-12",
-      "title": "หุ้น BNY พุ่งขึ้นจากผลประกอบการที่แข็งแกร่ง — แสดงให้เห็นอย่างชัดเจนว่าทำไมเราถึงชอบธนาคารนี้ในตลาดนี้",
+      "title": "BNY stock pops on strong earnings — showing exactly why we like this bank in this market",
       "title_en": "BNY stock pops on strong earnings — showing exactly why we like this bank in this market",
-      "summary": "Wall Street ชอบสิ่งที่ได้ยินในการประชุมทางโทรศัพท์หลังผลประกอบการอย่างชัดเจน เนื่องจากหุ้น BNY เปลี่ยนจากทรงตัวเป็นเพิ่มขึ้นมากกว่า 3% ในวันนั้น",
+      "summary": "Wall Street clearly liked what it heard on the post-earnings conference call because BNY stock went from flat to up more than 3% on the day.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/15/bny-stock-pops-on-strong-earnings-showing-exactly-why-we-like-this-bank-in-this-market.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T18:16:41Z",
       "category": "EARNINGS",
       "tickers": [
@@ -333,13 +334,13 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "Wall Street ชอบสิ่งที่ได้ยินในการประชุมทางโทรศัพท์หลังผลประกอบการอย่างชัดเจน เนื่องจากหุ้น BNY เปลี่ยนจากทรงตัวเป็นเพิ่มขึ้นมากกว่า 3% ในวันนั้น",
+        "Wall Street clearly liked what it heard on the post-earnings conference call because BNY stock went from flat to up more than 3% on the day.",
         "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 18:16 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "หุ้น BNY พุ่งขึ้นจากผลประกอบการที่แข็งแกร่ง — แสดงให้เห็นอย่างชัดเจนว่าทำไมเราถึงชอบธนาคารนี้ในตลาดนี้",
-        "Wall Street ชอบสิ่งที่ได้ยินในการประชุมทางโทรศัพท์หลังผลประกอบการอย่างชัดเจน เนื่องจากหุ้น BNY เปลี่ยนจากทรงตัวเป็นเพิ่มขึ้นมากกว่า 3% ในวันนั้น",
+        "BNY stock pops on strong earnings — showing exactly why we like this bank in this market",
+        "Wall Street clearly liked what it heard on the post-earnings conference call because BNY stock went from flat to up more than 3% on the day.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BNY stock pops on strong earnings — showing exactly why we like this bank in this market\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
