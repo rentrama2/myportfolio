@@ -1,72 +1,45 @@
 {
-  "updated_at": "2026-10-16T01:44:25Z",
-  "updated_at_thai": "16 ต.ค. 2569 08:44 น.",
+  "updated_at": "2026-10-16T06:27:01Z",
+  "updated_at_thai": "16 ต.ค. 2569 13:27 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "Tesla reveals next-generation Roadster after almost a decade of delays",
-      "title_en": "Tesla reveals next-generation Roadster after almost a decade of delays",
-      "summary": "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html",
-      "time": "9 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T01:34:51Z",
-      "category": "TECH",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": true,
-      "points": [
-        "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 01:34 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "Tesla reveals next-generation Roadster after almost a decade of delays",
-        "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla reveals next-generation Roadster after almost a decade of delays\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-2",
-      "title": "Oil edges down as investors weigh possible US sanctions on 'shadow fleet'",
-      "title_en": "Oil edges down as investors weigh possible US sanctions on 'shadow fleet'",
-      "summary": "Oil edges down as investors weigh possible US sanctions on 'shadow fleet'",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-edges-down-investors-weigh-010642305.html",
-      "time": "37 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T01:06:42Z",
+      "title": "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
+      "title_en": "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
+      "summary": "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
+      "source": "Oilprice.com",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-head-weekly-gain-053000638.html",
+      "time": "57 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T05:30:00Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
         "CVX"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": true,
       "points": [
-        "Oil edges down as investors weigh possible US sanctions on 'shadow fleet'",
-        "แหล่งข่าวอ้างอิง: Reuters (16/10/2026 01:06 UTC)",
+        "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
+        "แหล่งข่าวอ้างอิง: Oilprice.com (16/10/2026 05:30 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "Oil edges down as investors weigh possible US sanctions on 'shadow fleet'",
-        "Oil edges down as investors weigh possible US sanctions on 'shadow fleet'",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil edges down as investors weigh possible US sanctions on 'shadow fleet'\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
+        "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-3",
-      "title": "Standard Chartered: Trump's Russian Diesel Won't Add New Supply",
-      "title_en": "Standard Chartered: Trump's Russian Diesel Won't Add New Supply",
-      "summary": "Standard Chartered: Trump's Russian Diesel Won't Add New Supply",
-      "source": "Oilprice.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/standard-chartered-trumps-russian-diesel-000000613.html",
+      "id": "news-2",
+      "title": "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
+      "title_en": "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
+      "summary": "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
+      "source": "TMX Newsfile",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/prospera-energy-restarts-five-additional-043500084.html",
       "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T00:00:00Z",
+      "publishedAt": "2026-10-16T04:35:00Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -77,24 +50,107 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Standard Chartered: Trump's Russian Diesel Won't Add New Supply",
-        "แหล่งข่าวอ้างอิง: Oilprice.com (16/10/2026 00:00 UTC)",
+        "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
+        "แหล่งข่าวอ้างอิง: TMX Newsfile (16/10/2026 04:35 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "Standard Chartered: Trump's Russian Diesel Won't Add New Supply",
-        "Standard Chartered: Trump's Russian Diesel Won't Add New Supply",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Standard Chartered: Trump's Russian Diesel Won't Add New Supply\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
+        "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "Oil heads for weekly gain with Mideast supply risks",
+      "title_en": "Oil heads for weekly gain with Mideast supply risks",
+      "summary": "Oil heads for weekly gain with Mideast supply risks",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-edges-down-investors-weigh-010642305.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T04:25:09Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Oil heads for weekly gain with Mideast supply risks",
+        "แหล่งข่าวอ้างอิง: Reuters (16/10/2026 04:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "Oil heads for weekly gain with Mideast supply risks",
+        "Oil heads for weekly gain with Mideast supply risks",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil heads for weekly gain with Mideast supply risks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-4",
+      "title": "Tesla reveals next-generation Roadster after almost a decade of delays",
+      "title_en": "Tesla reveals next-generation Roadster after almost a decade of delays",
+      "summary": "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T03:47:50Z",
+      "category": "TECH",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 03:47 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "Tesla reveals next-generation Roadster after almost a decade of delays",
+        "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla reveals next-generation Roadster after almost a decade of delays\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
+      "title_en": "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
+      "summary": "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/3-european-gas-stocks-investors-021458209.html",
+      "time": "4 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T02:14:58Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (16/10/2026 02:14 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
+        "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 European Gas Stocks Investors Should Watch As Energy Costs Stay High\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
       "title": "Elon Musk helps GOP Senate super PAC raise record $273 million",
       "title_en": "Elon Musk helps GOP Senate super PAC raise record $273 million",
       "summary": "Elon Musk gave a record $158 million to the GOP’s Senate Leadership Fund, boosting its war chest as Republicans pour money into Texas to defend Ken Paxton.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/elon-musk-senate-leadership-fund-fundraising.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T23:53:29Z",
       "category": "TECH",
       "tickers": [
@@ -115,13 +171,13 @@
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-7",
       "title": "People in China are spending nearly as much of their income as Americans on healthcare",
       "title_en": "People in China are spending nearly as much of their income as Americans on healthcare",
       "summary": "Increasing government spending on healthcare could help boost consumption in China, the International Monetary Fund said.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/chinese-spending-nearly-as-much-of-income-as-americans-on-healthcare.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T23:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -144,42 +200,13 @@
       ]
     },
     {
-      "id": "news-6",
-      "title": "The Diesel Crunch Will Persist Well into 2027",
-      "title_en": "The Diesel Crunch Will Persist Well into 2027",
-      "summary": "The Diesel Crunch Will Persist Well into 2027",
-      "source": "Oilprice.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/diesel-crunch-persist-well-2027-230000048.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T23:00:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "The Diesel Crunch Will Persist Well into 2027",
-        "แหล่งข่าวอ้างอิง: Oilprice.com (15/10/2026 23:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "The Diesel Crunch Will Persist Well into 2027",
-        "The Diesel Crunch Will Persist Well into 2027",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"The Diesel Crunch Will Persist Well into 2027\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
+      "id": "news-8",
       "title": "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
       "title_en": "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
       "summary": "Big Tech gave millions to Trump's White House ballroom, documents show",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/trump-ballroom-nvidia-cisco-donations.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T22:48:12Z",
       "category": "TECH",
       "tickers": [
@@ -200,13 +227,13 @@
       ]
     },
     {
-      "id": "news-8",
+      "id": "news-9",
       "title": "Jim Cramer says this week's AI sell-off offers a crucial lesson for investors",
       "title_en": "Jim Cramer says this week's AI sell-off offers a crucial lesson for investors",
       "summary": "CNBC’s Jim Cramer said Thursday’s AI sell-off underscores the importance of owning stocks outside the market’s hottest trade.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/jim-cramer-ai-stocks-diversification.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "8 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T22:16:13Z",
       "category": "TECH",
       "tickers": [
@@ -229,41 +256,13 @@
       ]
     },
     {
-      "id": "news-9",
-      "title": "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
-      "title_en": "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
-      "summary": "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
-      "source": "PR Newswire",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/energy-substantiation-brings-physically-backed-212300480.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T21:23:00Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
-        "แหล่งข่าวอ้างอิง: PR Newswire (15/10/2026 21:23 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
-        "Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Energy Substantiation Brings Physically Backed Crude Oil to Institutional Markets with WTIC Listing on LMAX Digital\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
       "id": "news-10",
       "title": "Stocks making the biggest moves after hours: Interactive Brokers, J.B. Hunt, Alcoa and more",
       "title_en": "Stocks making the biggest moves after hours: Interactive Brokers, J.B. Hunt, Alcoa and more",
       "summary": "These are the stocks posting the largest moves in extended trading.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/stocks-making-the-biggest-moves-after-hours-ibkr-jbht-aa.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T20:48:50Z",
       "category": "MACRO",
       "tickers": [
@@ -292,7 +291,7 @@
       "summary": "The company is also engaged in early-stage discussions with other organizations, including Hugging Face.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/anthropic-metr-securebio-ai-safety-evaluators.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T20:35:21Z",
       "category": "EARNINGS",
       "tickers": [
@@ -320,7 +319,7 @@
       "summary": "The latest 12-month period marked the strongest return for the university's fund since 2021.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/harvards-endowment-jumps-27percent-with-spacex-as-top-holding.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T19:53:49Z",
       "category": "MACRO",
       "tickers": [
