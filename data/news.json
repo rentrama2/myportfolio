@@ -1,45 +1,100 @@
 {
-  "updated_at": "2026-10-16T06:27:01Z",
-  "updated_at_thai": "16 ต.ค. 2569 13:27 น.",
+  "updated_at": "2026-10-16T11:46:32Z",
+  "updated_at_thai": "16 ต.ค. 2569 18:46 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
-      "title_en": "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
-      "summary": "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
-      "source": "Oilprice.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-head-weekly-gain-053000638.html",
-      "time": "57 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T05:30:00Z",
-      "category": "COMMODITIES",
+      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Tesla, SpaceX, Alcoa, CoreWeave, Travellers และอื่นๆ",
+      "title_en": "Stocks making the biggest moves premarket: Tesla, SpaceX, Alcoa, CoreWeave, Travelers & more",
+      "summary": "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/stocks-making-the-biggest-moves-premarket-tsla-spcx-aa-crwv.html",
+      "time": "2 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T11:43:42Z",
+      "category": "MACRO",
       "tickers": [
-        "XOM",
-        "CVX"
+        "TSLA"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": true,
       "points": [
-        "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
-        "แหล่งข่าวอ้างอิง: Oilprice.com (16/10/2026 05:30 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 11:43 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
       ],
       "fullArticle": [
-        "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
-        "Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Prices Head for Weekly Gain as Hormuz Attacks Rattle Markets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Tesla, SpaceX, Alcoa, CoreWeave, Travellers และอื่นๆ",
+        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: Tesla, SpaceX, Alcoa, CoreWeave, Travelers & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
-      "title_en": "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
-      "summary": "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
-      "source": "TMX Newsfile",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/prospera-energy-restarts-five-additional-043500084.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T04:35:00Z",
+      "title": "ราคา Bitcoin และ ethereum วันนี้ วันศุกร์ที่ 16 ตุลาคม 2569: Bitcoin ราคา ethereum มั่นคง แม้จะมีรายงานเงินเฟ้อที่แข็งแกร่งสองฉบับ",
+      "title_en": "Bitcoin and ethereum prices today, Friday, October 16, 2026: Bitcoin, ethereum prices firm despite two strong inflation reports",
+      "summary": "ราคา Bitcoin และ ethereum วันนี้ วันศุกร์ที่ 16 ตุลาคม 2569: Bitcoin ราคา ethereum มั่นคง แม้จะมีรายงานเงินเฟ้อที่แข็งแกร่งสองฉบับ",
+      "source": "Yahoo Personal Finance",
+      "sourceUrl": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-october-16-2026-bitcoin-ethereum-prices-firm-despite-two-strong-inflation-reports-113928147.html",
+      "time": "7 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T11:39:28Z",
+      "category": "MACRO",
+      "tickers": [
+        "COIN"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ราคา Bitcoin และ ethereum วันนี้ วันศุกร์ที่ 16 ตุลาคม 2569: Bitcoin ราคา ethereum มั่นคง แม้จะมีรายงานเงินเฟ้อที่แข็งแกร่งสองฉบับ",
+        "แหล่งข่าวอ้างอิง: Yahoo Personal Finance (16/10/2026 11:39 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #COIN"
+      ],
+      "fullArticle": [
+        "ราคา Bitcoin และ ethereum วันนี้ วันศุกร์ที่ 16 ตุลาคม 2569: Bitcoin ราคา ethereum มั่นคง แม้จะมีรายงานเงินเฟ้อที่แข็งแกร่งสองฉบับ",
+        "ราคา Bitcoin และ ethereum วันนี้ วันศุกร์ที่ 16 ตุลาคม 2569: Bitcoin ราคา ethereum มั่นคง แม้จะมีรายงานเงินเฟ้อที่แข็งแกร่งสองฉบับ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bitcoin and ethereum prices today, Friday, October 16, 2026: Bitcoin, ethereum prices firm despite two strong inflation reports\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "CoreWeave ไม่ใช่หุ้น AI เพียงตัวเดียว — หรือแย่ที่สุด",
+      "title_en": "CoreWeave Isn't The Only Sputtering AI Stock — Nor The Worst",
+      "summary": "CoreWeave ไม่ใช่หุ้น AI เพียงตัวเดียว — หรือแย่ที่สุด",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/7400be65-1675-35e1-a62d-17ae6fe9b185/coreweave-isn%27t-the-only.html",
+      "time": "13 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T11:33:20Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "CoreWeave ไม่ใช่หุ้น AI เพียงตัวเดียว — หรือแย่ที่สุด",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (16/10/2026 11:33 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "CoreWeave ไม่ใช่หุ้น AI เพียงตัวเดียว — หรือแย่ที่สุด",
+        "CoreWeave ไม่ใช่หุ้น AI เพียงตัวเดียว — หรือแย่ที่สุด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"CoreWeave Isn't The Only Sputtering AI Stock — Nor The Worst\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "ครึ่งทางของเดือนตุลาคม ดีเซลกำลังกำหนดเงื่อนไขสำหรับตลาดพลังงานทั้งหมด",
+      "title_en": "Halfway Through October, Diesel Is Setting the Terms for the Entire Energy Market",
+      "summary": "ครึ่งทางของเดือนตุลาคม ดีเซลกำลังกำหนดเงื่อนไขสำหรับตลาดพลังงานทั้งหมด",
+      "source": "CNW Group",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/halfway-october-diesel-setting-terms-113000824.html",
+      "time": "16 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T11:30:00Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -50,25 +105,53 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
-        "แหล่งข่าวอ้างอิง: TMX Newsfile (16/10/2026 04:35 UTC)",
+        "ครึ่งทางของเดือนตุลาคม ดีเซลกำลังกำหนดเงื่อนไขสำหรับตลาดพลังงานทั้งหมด",
+        "แหล่งข่าวอ้างอิง: CNW Group (16/10/2026 11:30 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
-        "Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Prospera Energy Restarts Five Additional Luseland Wells at $6,400 per Flowing Barrel; First Ten Reactivations Return 1.92x Capital\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ครึ่งทางของเดือนตุลาคม ดีเซลกำลังกำหนดเงื่อนไขสำหรับตลาดพลังงานทั้งหมด",
+        "ครึ่งทางของเดือนตุลาคม ดีเซลกำลังกำหนดเงื่อนไขสำหรับตลาดพลังงานทั้งหมด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Halfway Through October, Diesel Is Setting the Terms for the Entire Energy Market\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-3",
-      "title": "Oil heads for weekly gain with Mideast supply risks",
-      "title_en": "Oil heads for weekly gain with Mideast supply risks",
-      "summary": "Oil heads for weekly gain with Mideast supply risks",
+      "id": "news-5",
+      "title": "หัวน้ำมันปรับตัวขึ้นรายสัปดาห์โดยเน้นที่อุปทานในตะวันออกกลาง",
+      "title_en": "Oil heads for weekly gain with focus on Middle East supply",
+      "summary": "หัวน้ำมันปรับตัวขึ้นรายสัปดาห์โดยเน้นที่อุปทานในตะวันออกกลาง",
       "source": "Reuters",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-edges-down-investors-weigh-010642305.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T04:25:09Z",
+      "time": "21 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T11:25:03Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "หัวน้ำมันปรับตัวขึ้นรายสัปดาห์โดยเน้นที่อุปทานในตะวันออกกลาง",
+        "แหล่งข่าวอ้างอิง: Reuters (16/10/2026 11:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "หัวน้ำมันปรับตัวขึ้นรายสัปดาห์โดยเน้นที่อุปทานในตะวันออกกลาง",
+        "หัวน้ำมันปรับตัวขึ้นรายสัปดาห์โดยเน้นที่อุปทานในตะวันออกกลาง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil heads for weekly gain with focus on Middle East supply\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "แนวโน้มประธานเฟด, การผ่อนปรนน้ำมัน Undergirds Wall Street Pre-Bell; เอเชีย ยุโรป ขึ้นไป",
+      "title_en": "Fed Chair Outlook, Easing Oil Undergirds Wall Street Pre-Bell; Asia, Europe Up",
+      "summary": "แนวโน้มประธานเฟด, การผ่อนปรนน้ำมัน Undergirds Wall Street Pre-Bell; เอเชีย ยุโรป ขึ้นไป",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/articles/fed-chair-outlook-easing-oil-111637867.html",
+      "time": "29 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T11:16:37Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
@@ -78,25 +161,52 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Oil heads for weekly gain with Mideast supply risks",
-        "แหล่งข่าวอ้างอิง: Reuters (16/10/2026 04:25 UTC)",
+        "แนวโน้มประธานเฟด, การผ่อนปรนน้ำมัน Undergirds Wall Street Pre-Bell; เอเชีย ยุโรป ขึ้นไป",
+        "แหล่งข่าวอ้างอิง: MT Newswires (16/10/2026 11:16 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "Oil heads for weekly gain with Mideast supply risks",
-        "Oil heads for weekly gain with Mideast supply risks",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil heads for weekly gain with Mideast supply risks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "แนวโน้มประธานเฟด, การผ่อนปรนน้ำมัน Undergirds Wall Street Pre-Bell; เอเชีย ยุโรป ขึ้นไป",
+        "แนวโน้มประธานเฟด, การผ่อนปรนน้ำมัน Undergirds Wall Street Pre-Bell; เอเชีย ยุโรป ขึ้นไป",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Fed Chair Outlook, Easing Oil Undergirds Wall Street Pre-Bell; Asia, Europe Up\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-4",
-      "title": "Tesla reveals next-generation Roadster after almost a decade of delays",
+      "id": "news-7",
+      "title": "ฟิวเจอร์สของ Wall St ปะปนกันในขณะที่เทคโนโลยีโยกเยกอีกครั้ง Tesla ก็เพิ่มขึ้น",
+      "title_en": "Wall St futures mixed as tech wobbles again, Tesla gains",
+      "summary": "ฟิวเจอร์สของ Wall St ปะปนกันในขณะที่เทคโนโลยีโยกเยกอีกครั้ง Tesla ก็เพิ่มขึ้น",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-mixed-tech-110701262.html",
+      "time": "39 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T11:07:01Z",
+      "category": "TECH",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ฟิวเจอร์สของ Wall St ปะปนกันในขณะที่เทคโนโลยีโยกเยกอีกครั้ง Tesla ก็เพิ่มขึ้น",
+        "แหล่งข่าวอ้างอิง: Reuters (16/10/2026 11:07 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "ฟิวเจอร์สของ Wall St ปะปนกันในขณะที่เทคโนโลยีโยกเยกอีกครั้ง Tesla ก็เพิ่มขึ้น",
+        "ฟิวเจอร์สของ Wall St ปะปนกันในขณะที่เทคโนโลยีโยกเยกอีกครั้ง Tesla ก็เพิ่มขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wall St futures mixed as tech wobbles again, Tesla gains\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "Tesla เผยโฉม Roadster เจเนอเรชั่นใหม่หลังจากเกิดความล่าช้าเกือบทศวรรษ",
       "title_en": "Tesla reveals next-generation Roadster after almost a decade of delays",
-      "summary": "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
+      "summary": "Elon Musk เปิดตัวแนวคิดการรีเฟรช Roadster ครั้งแรกในปี 2560 แต่ตั้งแต่นั้นเป็นต้นมา Tesla ก็พลาดทุกวันที่จัดส่งตามเป้าหมาย",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T03:47:50Z",
+      "time": "49 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T10:57:11Z",
       "category": "TECH",
       "tickers": [
         "TSLA"
@@ -105,52 +215,82 @@
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 03:47 UTC)",
+        "Elon Musk เปิดตัวแนวคิดการรีเฟรช Roadster ครั้งแรกในปี 2560 แต่ตั้งแต่นั้นเป็นต้นมา Tesla ก็พลาดทุกวันที่จัดส่งตามเป้าหมาย",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 10:57 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
       ],
       "fullArticle": [
-        "Tesla reveals next-generation Roadster after almost a decade of delays",
-        "Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.",
+        "Tesla เผยโฉม Roadster เจเนอเรชั่นใหม่หลังจากเกิดความล่าช้าเกือบทศวรรษ",
+        "Elon Musk เปิดตัวแนวคิดการรีเฟรช Roadster ครั้งแรกในปี 2560 แต่ตั้งแต่นั้นเป็นต้นมา Tesla ก็พลาดทุกวันที่จัดส่งตามเป้าหมาย",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla reveals next-generation Roadster after almost a decade of delays\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-5",
-      "title": "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
-      "title_en": "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
-      "summary": "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/3-european-gas-stocks-investors-021458209.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T02:14:58Z",
-      "category": "COMMODITIES",
+      "id": "news-9",
+      "title": "VOO, VTI, SPY หรือ IVV? กองทุนดัชนีทั้ง 4 เหล่านี้แตกต่างกันอย่างไร",
+      "title_en": "VOO, VTI, SPY, or IVV? How These 4 Index Funds Differ",
+      "summary": "VOO, VTI, SPY หรือ IVV? กองทุนดัชนีทั้ง 4 เหล่านี้แตกต่างกันอย่างไร",
+      "source": "Motley Fool",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/voo-vti-spy-ivv-4-092000271.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T09:20:00Z",
+      "category": "MACRO",
       "tickers": [
-        "XOM",
-        "CVX"
+        "SPY",
+        "VOO",
+        "VTI"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (16/10/2026 02:14 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "VOO, VTI, SPY หรือ IVV? กองทุนดัชนีทั้ง 4 เหล่านี้แตกต่างกันอย่างไร",
+        "แหล่งข่าวอ้างอิง: Motley Fool (16/10/2026 09:20 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #VOO #VTI"
       ],
       "fullArticle": [
-        "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
-        "3 European Gas Stocks Investors Should Watch As Energy Costs Stay High",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 European Gas Stocks Investors Should Watch As Energy Costs Stay High\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "VOO, VTI, SPY หรือ IVV? กองทุนดัชนีทั้ง 4 เหล่านี้แตกต่างกันอย่างไร",
+        "VOO, VTI, SPY หรือ IVV? กองทุนดัชนีทั้ง 4 เหล่านี้แตกต่างกันอย่างไร",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"VOO, VTI, SPY, or IVV? How These 4 Index Funds Differ\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-6",
-      "title": "Elon Musk helps GOP Senate super PAC raise record $273 million",
+      "id": "news-10",
+      "title": "ผู้จัดการนโยบายของ SpaceX เตรียมให้การเป็นพยานโดยเป็นส่วนหนึ่งของการสืบสวนด้านความปลอดภัยของ AI ของสภา NYC",
+      "title_en": "SpaceX policy manager set to testify as part of NYC Council AI safety investigation",
+      "summary": "SpaceX กำลังส่ง Gabriela Castillo Madrid หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกด้าน AI ไปให้การเป็นพยานต่อสภานครนิวยอร์ก",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/spacex-policy-manger-to-testify-in-nyc-council-ai-safety-investigation.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T08:00:01Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "SpaceX กำลังส่ง Gabriela Castillo Madrid หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกด้าน AI ไปให้การเป็นพยานต่อสภานครนิวยอร์ก",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 08:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "ผู้จัดการนโยบายของ SpaceX เตรียมให้การเป็นพยานโดยเป็นส่วนหนึ่งของการสืบสวนด้านความปลอดภัยของ AI ของสภา NYC",
+        "SpaceX กำลังส่ง Gabriela Castillo Madrid หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกด้าน AI ไปให้การเป็นพยานต่อสภานครนิวยอร์ก",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX policy manager set to testify as part of NYC Council AI safety investigation\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
+      "title": "Elon Musk ช่วย GOP Senate super PAC ระดมทุนได้ 273 ล้านดอลลาร์",
       "title_en": "Elon Musk helps GOP Senate super PAC raise record $273 million",
-      "summary": "Elon Musk gave a record $158 million to the GOP’s Senate Leadership Fund, boosting its war chest as Republicans pour money into Texas to defend Ken Paxton.",
+      "summary": "Elon Musk มอบเงินจำนวน 158 ล้านดอลลาร์ให้กับกองทุนผู้นำวุฒิสภาของ GOP เพื่อส่งเสริมสงครามในขณะที่พรรครีพับลิกันทุ่มเงินเข้าสู่เท็กซัสเพื่อปกป้อง Ken Paxton",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/elon-musk-senate-leadership-fund-fundraising.html",
-      "time": "6 ชั่วโมงที่แล้ว",
+      "time": "11 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T23:53:29Z",
       "category": "TECH",
       "tickers": [
@@ -160,24 +300,24 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "Elon Musk gave a record $158 million to the GOP’s Senate Leadership Fund, boosting its war chest as Republicans pour money into Texas to defend Ken Paxton.",
+        "Elon Musk มอบเงินจำนวน 158 ล้านดอลลาร์ให้กับกองทุนผู้นำวุฒิสภาของ GOP เพื่อส่งเสริมสงครามในขณะที่พรรครีพับลิกันทุ่มเงินเข้าสู่เท็กซัสเพื่อปกป้อง Ken Paxton",
         "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 23:53 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
       ],
       "fullArticle": [
-        "Elon Musk helps GOP Senate super PAC raise record $273 million",
-        "Elon Musk gave a record $158 million to the GOP’s Senate Leadership Fund, boosting its war chest as Republicans pour money into Texas to defend Ken Paxton.",
+        "Elon Musk ช่วย GOP Senate super PAC ระดมทุนได้ 273 ล้านดอลลาร์",
+        "Elon Musk มอบเงินจำนวน 158 ล้านดอลลาร์ให้กับกองทุนผู้นำวุฒิสภาของ GOP เพื่อส่งเสริมสงครามในขณะที่พรรครีพับลิกันทุ่มเงินเข้าสู่เท็กซัสเพื่อปกป้อง Ken Paxton",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Elon Musk helps GOP Senate super PAC raise record $273 million\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-7",
-      "title": "People in China are spending nearly as much of their income as Americans on healthcare",
+      "id": "news-12",
+      "title": "ผู้คนในประเทศจีนใช้จ่ายรายได้เกือบเท่าคนอเมริกันในด้านการดูแลสุขภาพ",
       "title_en": "People in China are spending nearly as much of their income as Americans on healthcare",
-      "summary": "Increasing government spending on healthcare could help boost consumption in China, the International Monetary Fund said.",
+      "summary": "กองทุนการเงินระหว่างประเทศกล่าวว่าการเพิ่มการใช้จ่ายของรัฐบาลในด้านการดูแลสุขภาพอาจช่วยเพิ่มการบริโภคในจีนได้",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/chinese-spending-nearly-as-much-of-income-as-americans-on-healthcare.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "12 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-15T23:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -189,156 +329,14 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "Increasing government spending on healthcare could help boost consumption in China, the International Monetary Fund said.",
+        "กองทุนการเงินระหว่างประเทศกล่าวว่าการเพิ่มการใช้จ่ายของรัฐบาลในด้านการดูแลสุขภาพอาจช่วยเพิ่มการบริโภคในจีนได้",
         "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 23:00 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "People in China are spending nearly as much of their income as Americans on healthcare",
-        "Increasing government spending on healthcare could help boost consumption in China, the International Monetary Fund said.",
+        "ผู้คนในประเทศจีนใช้จ่ายรายได้เกือบเท่าคนอเมริกันในด้านการดูแลสุขภาพ",
+        "กองทุนการเงินระหว่างประเทศกล่าวว่าการเพิ่มการใช้จ่ายของรัฐบาลในด้านการดูแลสุขภาพอาจช่วยเพิ่มการบริโภคในจีนได้",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"People in China are spending nearly as much of their income as Americans on healthcare\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
-      "title_en": "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
-      "summary": "Big Tech gave millions to Trump's White House ballroom, documents show",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/trump-ballroom-nvidia-cisco-donations.html",
-      "time": "7 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T22:48:12Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Big Tech gave millions to Trump's White House ballroom, documents show",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 22:48 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
-      ],
-      "fullArticle": [
-        "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
-        "Big Tech gave millions to Trump's White House ballroom, documents show",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "Jim Cramer says this week's AI sell-off offers a crucial lesson for investors",
-      "title_en": "Jim Cramer says this week's AI sell-off offers a crucial lesson for investors",
-      "summary": "CNBC’s Jim Cramer said Thursday’s AI sell-off underscores the importance of owning stocks outside the market’s hottest trade.",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/jim-cramer-ai-stocks-diversification.html",
-      "time": "8 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T22:16:13Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "CNBC’s Jim Cramer said Thursday’s AI sell-off underscores the importance of owning stocks outside the market’s hottest trade.",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 22:16 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "Jim Cramer says this week's AI sell-off offers a crucial lesson for investors",
-        "CNBC’s Jim Cramer said Thursday’s AI sell-off underscores the importance of owning stocks outside the market’s hottest trade.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer says this week's AI sell-off offers a crucial lesson for investors\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "Stocks making the biggest moves after hours: Interactive Brokers, J.B. Hunt, Alcoa and more",
-      "title_en": "Stocks making the biggest moves after hours: Interactive Brokers, J.B. Hunt, Alcoa and more",
-      "summary": "These are the stocks posting the largest moves in extended trading.",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/stocks-making-the-biggest-moves-after-hours-ibkr-jbht-aa.html",
-      "time": "9 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T20:48:50Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "These are the stocks posting the largest moves in extended trading.",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 20:48 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "Stocks making the biggest moves after hours: Interactive Brokers, J.B. Hunt, Alcoa and more",
-        "These are the stocks posting the largest moves in extended trading.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves after hours: Interactive Brokers, J.B. Hunt, Alcoa and more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "Anthropic taps nonprofits METR and SecureBio to help assess risks and safety practices",
-      "title_en": "Anthropic taps nonprofits METR and SecureBio to help assess risks and safety practices",
-      "summary": "The company is also engaged in early-stage discussions with other organizations, including Hugging Face.",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/anthropic-metr-securebio-ai-safety-evaluators.html",
-      "time": "9 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T20:35:21Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "The company is also engaged in early-stage discussions with other organizations, including Hugging Face.",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 20:35 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "Anthropic taps nonprofits METR and SecureBio to help assess risks and safety practices",
-        "The company is also engaged in early-stage discussions with other organizations, including Hugging Face.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic taps nonprofits METR and SecureBio to help assess risks and safety practices\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding",
-      "title_en": "Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding",
-      "summary": "The latest 12-month period marked the strongest return for the university's fund since 2021.",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/harvards-endowment-jumps-27percent-with-spacex-as-top-holding.html",
-      "time": "10 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T19:53:49Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "The latest 12-month period marked the strongest return for the university's fund since 2021.",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 19:53 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding",
-        "The latest 12-month period marked the strongest return for the university's fund since 2021.",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
