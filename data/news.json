@@ -1,104 +1,159 @@
 {
-  "updated_at": "2026-10-16T15:35:57Z",
-  "updated_at_thai": "16 ต.ค. 2569 22:35 น.",
+  "updated_at": "2026-10-16T18:59:50Z",
+  "updated_at_thai": "17 ต.ค. 2569 01:59 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ASML (ASML) ลดลง 8.9% แม้จะมีคูน้ำที่โดดเด่นในเทคโนโลยีการพิมพ์หิน EUV",
-      "title_en": "ASML (ASML) Declines 8.9% Despite Dominant Moat in EUV Lithography Technology",
-      "summary": "ASML (ASML) ลดลง 8.9% แม้จะมีคูน้ำที่โดดเด่นในเทคโนโลยีการพิมพ์หิน EUV",
-      "source": "Insider Monkey",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/asml-asml-declines-8-9-152557165.html",
-      "time": "10 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T15:25:57Z",
-      "category": "TECH",
+      "title": "Saturn Oil & Gas Inc. ประกาศวันวางจำหน่ายสำหรับผลประกอบการไตรมาสที่ 3 ปี 2569 พร้อมให้รายละเอียดการประชุมทางโทรศัพท์/เว็บแคสต์",
+      "title_en": "Saturn Oil & Gas Inc. Announces Release Date for Q3 2026 Results and Provides Conference Call / Webcast Details",
+      "summary": "Saturn Oil & Gas Inc. ประกาศวันวางจำหน่ายสำหรับผลประกอบการไตรมาสที่ 3 ปี 2569 พร้อมให้รายละเอียดการประชุมทางโทรศัพท์/เว็บแคสต์",
+      "source": "TMX Newsfile",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/saturn-oil-gas-inc-announces-185100441.html",
+      "time": "8 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T18:51:00Z",
+      "category": "COMMODITIES",
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
+        "XOM",
+        "CVX"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": true,
       "points": [
-        "ASML (ASML) ลดลง 8.9% แม้จะมีคูน้ำที่โดดเด่นในเทคโนโลยีการพิมพ์หิน EUV",
-        "แหล่งข่าวอ้างอิง: Insider Monkey (16/10/2026 15:25 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+        "Saturn Oil & Gas Inc. ประกาศวันวางจำหน่ายสำหรับผลประกอบการไตรมาสที่ 3 ปี 2569 พร้อมให้รายละเอียดการประชุมทางโทรศัพท์/เว็บแคสต์",
+        "แหล่งข่าวอ้างอิง: TMX Newsfile (16/10/2026 18:51 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "ASML (ASML) ลดลง 8.9% แม้จะมีคูน้ำที่โดดเด่นในเทคโนโลยีการพิมพ์หิน EUV",
-        "ASML (ASML) ลดลง 8.9% แม้จะมีคูน้ำที่โดดเด่นในเทคโนโลยีการพิมพ์หิน EUV",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"ASML (ASML) Declines 8.9% Despite Dominant Moat in EUV Lithography Technology\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Saturn Oil & Gas Inc. ประกาศวันวางจำหน่ายสำหรับผลประกอบการไตรมาสที่ 3 ปี 2569 พร้อมให้รายละเอียดการประชุมทางโทรศัพท์/เว็บแคสต์",
+        "Saturn Oil & Gas Inc. ประกาศวันวางจำหน่ายสำหรับผลประกอบการไตรมาสที่ 3 ปี 2569 พร้อมให้รายละเอียดการประชุมทางโทรศัพท์/เว็บแคสต์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Saturn Oil & Gas Inc. Announces Release Date for Q3 2026 Results and Provides Conference Call / Webcast Details\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "เหตุใดการพิพากษาลงโทษระยะยาวจึงยังคงอยู่สำหรับ Broadcom (AVGO)",
-      "title_en": "Why Long-Term Conviction Remains Intact for Broadcom (AVGO)?",
-      "summary": "เหตุใดการพิพากษาลงโทษระยะยาวจึงยังคงอยู่สำหรับ Broadcom (AVGO)",
-      "source": "Insider Monkey",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/why-long-term-conviction-remains-152101631.html",
-      "time": "14 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T15:21:01Z",
-      "category": "TECH",
+      "title": "ราคาน้ำมันที่สูงขึ้น ค่าขนส่งอาจทำให้ราคารองเท้าสูงขึ้นอีกครั้ง",
+      "title_en": "Rising Oil Prices, Freight Costs Could Drive Shoe Prices Up Again",
+      "summary": "ราคาน้ำมันที่สูงขึ้น ค่าขนส่งอาจทำให้ราคารองเท้าสูงขึ้นอีกครั้ง",
+      "source": "Footwear News",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/rising-oil-prices-freight-costs-185004170.html",
+      "time": "9 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T18:50:04Z",
+      "category": "COMMODITIES",
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
+        "XOM",
+        "CVX"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "เหตุใดการพิพากษาลงโทษระยะยาวจึงยังคงอยู่สำหรับ Broadcom (AVGO)",
-        "แหล่งข่าวอ้างอิง: Insider Monkey (16/10/2026 15:21 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+        "ราคาน้ำมันที่สูงขึ้น ค่าขนส่งอาจทำให้ราคารองเท้าสูงขึ้นอีกครั้ง",
+        "แหล่งข่าวอ้างอิง: Footwear News (16/10/2026 18:50 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "เหตุใดการพิพากษาลงโทษระยะยาวจึงยังคงอยู่สำหรับ Broadcom (AVGO)",
-        "เหตุใดการพิพากษาลงโทษระยะยาวจึงยังคงอยู่สำหรับ Broadcom (AVGO)",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why Long-Term Conviction Remains Intact for Broadcom (AVGO)?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ราคาน้ำมันที่สูงขึ้น ค่าขนส่งอาจทำให้ราคารองเท้าสูงขึ้นอีกครั้ง",
+        "ราคาน้ำมันที่สูงขึ้น ค่าขนส่งอาจทำให้ราคารองเท้าสูงขึ้นอีกครั้ง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Rising Oil Prices, Freight Costs Could Drive Shoe Prices Up Again\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-3",
-      "title": "ผู้นำนโยบาย SpaceX AI นำเสนอโดยสภา NYC เกี่ยวกับความปลอดภัยของ Grok และภาพที่สื่อถึงเรื่องเพศ",
-      "title_en": "SpaceX AI policy leader grilled by NYC Council on Grok safety, sexualized images",
-      "summary": "หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกของ SpaceX สำหรับ AI Gabriela Castillo Madrid เผชิญกับคำถามสำคัญจากสภานครนิวยอร์กเมื่อวันศุกร์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/spacex-policy-manger-to-testify-in-nyc-council-ai-safety-investigation.html",
-      "time": "17 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T15:18:40Z",
-      "category": "TECH",
+      "title": "ตลาดหุ้นวันนี้: Nasdaq, S&P 500, Dow ร่วงลงเนื่องจากหุ้นเทคโนโลยีร่วงลง, ราคาน้ำมันพุ่งขึ้นถึง 110 ดอลลาร์",
+      "title_en": "Stock market today: Nasdaq, S&P 500, Dow fall as tech stocks slide, oil climbs to $110",
+      "summary": "ตลาดหุ้นวันนี้: Nasdaq, S&P 500, Dow ร่วงลงเนื่องจากหุ้นเทคโนโลยีร่วงลง, ราคาน้ำมันพุ่งขึ้นถึง 110 ดอลลาร์",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-futures-mixed-amid-volatile-week-112939401.html",
+      "time": "11 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T18:48:36Z",
+      "category": "COMMODITIES",
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
+        "SPY",
+        "QQQ",
+        "DIA"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกของ SpaceX สำหรับ AI Gabriela Castillo Madrid เผชิญกับคำถามสำคัญจากสภานครนิวยอร์กเมื่อวันศุกร์",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 15:18 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+        "ตลาดหุ้นวันนี้: Nasdaq, S&P 500, Dow ร่วงลงเนื่องจากหุ้นเทคโนโลยีร่วงลง, ราคาน้ำมันพุ่งขึ้นถึง 110 ดอลลาร์",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (16/10/2026 18:48 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
       ],
       "fullArticle": [
-        "ผู้นำนโยบาย SpaceX AI นำเสนอโดยสภา NYC เกี่ยวกับความปลอดภัยของ Grok และภาพที่สื่อถึงเรื่องเพศ",
-        "หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกของ SpaceX สำหรับ AI Gabriela Castillo Madrid เผชิญกับคำถามสำคัญจากสภานครนิวยอร์กเมื่อวันศุกร์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX AI policy leader grilled by NYC Council on Grok safety, sexualized images\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตลาดหุ้นวันนี้: Nasdaq, S&P 500, Dow ร่วงลงเนื่องจากหุ้นเทคโนโลยีร่วงลง, ราคาน้ำมันพุ่งขึ้นถึง 110 ดอลลาร์",
+        "ตลาดหุ้นวันนี้: Nasdaq, S&P 500, Dow ร่วงลงเนื่องจากหุ้นเทคโนโลยีร่วงลง, ราคาน้ำมันพุ่งขึ้นถึง 110 ดอลลาร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Nasdaq, S&P 500, Dow fall as tech stocks slide, oil climbs to $110\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-4",
-      "title": "รากของระบบที่ลึกแค่ไหนปกป้อง ServiceNow (ตอนนี้) ในยุค AI",
-      "title_en": "How Deep System Roots Protect ServiceNow (NOW) in AI Era",
-      "summary": "รากของระบบที่ลึกแค่ไหนปกป้อง ServiceNow (ตอนนี้) ในยุค AI",
-      "source": "Insider Monkey",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/deep-system-roots-protect-servicenow-151258260.html",
+      "title": "Jim Cramer ยืนหยัดในตลาดหุ้นเป็นสองเท่า",
+      "title_en": "Jim Cramer doubles down on his stock market stand",
+      "summary": "Jim Cramer ยืนหยัดในตลาดหุ้นเป็นสองเท่า",
+      "source": "TheStreet",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-doubles-down-stock-184700423.html",
+      "time": "12 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T18:47:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "Jim Cramer ยืนหยัดในตลาดหุ้นเป็นสองเท่า",
+        "แหล่งข่าวอ้างอิง: TheStreet (16/10/2026 18:47 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Jim Cramer ยืนหยัดในตลาดหุ้นเป็นสองเท่า",
+        "Jim Cramer ยืนหยัดในตลาดหุ้นเป็นสองเท่า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer doubles down on his stock market stand\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "อัปเดต: ดัชนีหุ้นสหรัฐร่วงลงเนื่องจากนักลงทุนหมุนเวียนออกจากกลุ่มที่มีการเติบโตสูง การกระโดดของน้ำมันดิบ",
+      "title_en": "Update: US Equity Indexes Drop as Investors Rotate Out of High-Growth Sectors, Crude Oil Jumps",
+      "summary": "อัปเดต: ดัชนีหุ้นสหรัฐร่วงลงเนื่องจากนักลงทุนหมุนเวียนออกจากกลุ่มที่มีการเติบโตสูง การกระโดดของน้ำมันดิบ",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-drop-investors-183740840.html",
       "time": "22 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T15:12:58Z",
+      "publishedAt": "2026-10-16T18:37:40Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "อัปเดต: ดัชนีหุ้นสหรัฐร่วงลงเนื่องจากนักลงทุนหมุนเวียนออกจากกลุ่มที่มีการเติบโตสูง การกระโดดของน้ำมันดิบ",
+        "แหล่งข่าวอ้างอิง: MT Newswires (16/10/2026 18:37 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "อัปเดต: ดัชนีหุ้นสหรัฐร่วงลงเนื่องจากนักลงทุนหมุนเวียนออกจากกลุ่มที่มีการเติบโตสูง การกระโดดของน้ำมันดิบ",
+        "อัปเดต: ดัชนีหุ้นสหรัฐร่วงลงเนื่องจากนักลงทุนหมุนเวียนออกจากกลุ่มที่มีการเติบโตสูง การกระโดดของน้ำมันดิบ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Indexes Drop as Investors Rotate Out of High-Growth Sectors, Crude Oil Jumps\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "ทรัมป์กล่าวว่าทำเนียบขาวไม่ได้สั่งการจำกัด Starlink ในยูเครน",
+      "title_en": "Trump says White House didn't order Starlink restrictions in Ukraine",
+      "summary": "เจ้าหน้าที่ของยูเครนบ่นในสัปดาห์นี้ว่า SpaceX มีการเชื่อมต่ออินเทอร์เน็ตที่จำกัดโดยไม่ต้องแจ้งให้ทราบล่วงหน้า",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/trump-denies-musk-claim-he-ordered-starlink-restrictions-in-ukraine.html",
+      "time": "32 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T18:27:02Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -109,54 +164,106 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "รากของระบบที่ลึกแค่ไหนปกป้อง ServiceNow (ตอนนี้) ในยุค AI",
-        "แหล่งข่าวอ้างอิง: Insider Monkey (16/10/2026 15:12 UTC)",
+        "เจ้าหน้าที่ของยูเครนบ่นในสัปดาห์นี้ว่า SpaceX มีการเชื่อมต่ออินเทอร์เน็ตที่จำกัดโดยไม่ต้องแจ้งให้ทราบล่วงหน้า",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 18:27 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "รากของระบบที่ลึกแค่ไหนปกป้อง ServiceNow (ตอนนี้) ในยุค AI",
-        "รากของระบบที่ลึกแค่ไหนปกป้อง ServiceNow (ตอนนี้) ในยุค AI",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"How Deep System Roots Protect ServiceNow (NOW) in AI Era\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ทรัมป์กล่าวว่าทำเนียบขาวไม่ได้สั่งการจำกัด Starlink ในยูเครน",
+        "เจ้าหน้าที่ของยูเครนบ่นในสัปดาห์นี้ว่า SpaceX มีการเชื่อมต่ออินเทอร์เน็ตที่จำกัดโดยไม่ต้องแจ้งให้ทราบล่วงหน้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Trump says White House didn't order Starlink restrictions in Ukraine\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-5",
-      "title": "หุ้นการเติบโตของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
-      "title_en": "Top 3 Canadian Growth Stocks To Watch In October 2026",
-      "summary": "หุ้นการเติบโตของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/top-3-canadian-growth-stocks-150948728.html",
-      "time": "26 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T15:09:48Z",
+      "id": "news-7",
+      "title": "การวิเคราะห์: เหตุใดการขาดดุล 2 ล้านล้านดอลลาร์และอัตราผลตอบแทนพันธบัตรรัฐบาล 5% จึงกลายเป็นความท้าทายทางเศรษฐกิจที่ใหญ่ที่สุดของอเมริกา",
+      "title_en": "Analysis: Why a $2 trillion deficit and 5% Treasury yields are becoming America's biggest economic challenge",
+      "summary": "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/treasury-yields-deficit-national-debt-ai.html",
+      "time": "55 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T18:04:20Z",
       "category": "MACRO",
       "tickers": [
-        "SPY",
-        "QQQ",
         "TLT"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "หุ้นการเติบโตของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (16/10/2026 15:09 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+        "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 18:04 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
       ],
       "fullArticle": [
-        "หุ้นการเติบโตของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
-        "หุ้นการเติบโตของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Top 3 Canadian Growth Stocks To Watch In October 2026\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "การวิเคราะห์: เหตุใดการขาดดุล 2 ล้านล้านดอลลาร์และอัตราผลตอบแทนพันธบัตรรัฐบาล 5% จึงกลายเป็นความท้าทายทางเศรษฐกิจที่ใหญ่ที่สุดของอเมริกา",
+        "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Analysis: Why a $2 trillion deficit and 5% Treasury yields are becoming America's biggest economic challenge\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-6",
-      "title": "ความต้องการด้านการบินและอวกาศและกลาโหมยังคงเดิมแม้จะมีความเชื่อมั่นลดลงก็ตาม Morgan Stanley กล่าว",
-      "title_en": "Aerospace, Defense Stocks' Demand Intact Despite Softer Sentiment, Morgan Stanley Says",
-      "summary": "ความต้องการด้านการบินและอวกาศและกลาโหมยังคงเดิมแม้จะมีความเชื่อมั่นลดลงก็ตาม Morgan Stanley กล่าว",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/aerospace-defense-stocks-apos-demand-150554672.html",
-      "time": "30 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T15:05:54Z",
+      "id": "news-8",
+      "title": "การขาดดุลงบประมาณของสหรัฐฯ เพิ่มขึ้นเป็นเกือบ 2 ล้านล้านดอลลาร์ในปีงบประมาณ 2026 เพิ่มขึ้น 12% ในปีเดียว",
+      "title_en": "U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year",
+      "summary": "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/us-budget-deficit-2026.html",
+      "time": "59 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T18:00:15Z",
+      "category": "MACRO",
+      "tickers": [
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 18:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+      ],
+      "fullArticle": [
+        "การขาดดุลงบประมาณของสหรัฐฯ เพิ่มขึ้นเป็นเกือบ 2 ล้านล้านดอลลาร์ในปีงบประมาณ 2026 เพิ่มขึ้น 12% ในปีเดียว",
+        "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "สหรัฐฯ กดดันจีนเรื่องการเข้าถึงตลาดมาสเตอร์การ์ดและซิตี้กรุ๊ปในการเจรจาทวิภาคีกรุงเทพฯ เจ้าหน้าที่กล่าว",
+      "title_en": "U.S. presses China on Mastercard, Citigroup market access in bilateral Bangkok talks, official says",
+      "summary": "สหรัฐฯ หยิบยกประเด็นการเข้าถึงตลาดสำหรับ Mastercard และ Citigroup ในประเทศจีนในระหว่างการประชุมทวิภาคีที่กรุงเทพฯ ในสัปดาห์นี้ เจ้าหน้าที่กระทรวงการคลังสหรัฐฯ กล่าว",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/us-china-mastercard-citigroup-market-access.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T16:46:18Z",
+      "category": "MACRO",
+      "tickers": [
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "สหรัฐฯ หยิบยกประเด็นการเข้าถึงตลาดสำหรับ Mastercard และ Citigroup ในประเทศจีนในระหว่างการประชุมทวิภาคีที่กรุงเทพฯ ในสัปดาห์นี้ เจ้าหน้าที่กระทรวงการคลังสหรัฐฯ กล่าว",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 16:46 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+      ],
+      "fullArticle": [
+        "สหรัฐฯ กดดันจีนเรื่องการเข้าถึงตลาดมาสเตอร์การ์ดและซิตี้กรุ๊ปในการเจรจาทวิภาคีกรุงเทพฯ เจ้าหน้าที่กล่าว",
+        "สหรัฐฯ หยิบยกประเด็นการเข้าถึงตลาดสำหรับ Mastercard และ Citigroup ในประเทศจีนในระหว่างการประชุมทวิภาคีที่กรุงเทพฯ ในสัปดาห์นี้ เจ้าหน้าที่กระทรวงการคลังสหรัฐฯ กล่าว",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. presses China on Mastercard, Citigroup market access in bilateral Bangkok talks, official says\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
+      "title": "หุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน: CoreWeave, Moog, J.B. Hunt, Alcoa และอีกมากมาย",
+      "title_en": "Stocks making the biggest moves midday: CoreWeave, Moog, J.B. Hunt, Alcoa & more",
+      "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/stocks-making-the-biggest-moves-midday-crwv-moga-jbht-aa.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T16:29:16Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -167,25 +274,25 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ความต้องการด้านการบินและอวกาศและกลาโหมยังคงเดิมแม้จะมีความเชื่อมั่นลดลงก็ตาม Morgan Stanley กล่าว",
-        "แหล่งข่าวอ้างอิง: MT Newswires (16/10/2026 15:05 UTC)",
+        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 16:29 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "ความต้องการด้านการบินและอวกาศและกลาโหมยังคงเดิมแม้จะมีความเชื่อมั่นลดลงก็ตาม Morgan Stanley กล่าว",
-        "ความต้องการด้านการบินและอวกาศและกลาโหมยังคงเดิมแม้จะมีความเชื่อมั่นลดลงก็ตาม Morgan Stanley กล่าว",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Aerospace, Defense Stocks' Demand Intact Despite Softer Sentiment, Morgan Stanley Says\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน: CoreWeave, Moog, J.B. Hunt, Alcoa และอีกมากมาย",
+        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves midday: CoreWeave, Moog, J.B. Hunt, Alcoa & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-7",
-      "title": "กรณีการดักฟังระดับชาติของ OpenAI ในซาอุดิอาระเบียแสดงให้เห็นถึงภัยคุกคามต่อผู้นำสหรัฐฯ ใน AI: DNI Clayton",
+      "id": "news-11",
+      "title": "กรณีการดักฟังระดับชาติของ OpenAI ในซาอุดีอาระเบียแสดงให้เห็นถึงภัยคุกคามต่อผู้นำสหรัฐฯ ใน AI: DNI Clayton",
       "title_en": "OpenAI Saudi national bugging case shows threat to U.S. leadership in AI: DNI Clayton",
       "summary": "AI \"ขยาย\" ความเสี่ยงด้านความปลอดภัยทางไซเบอร์ที่มีอยู่ไปยังโครงสร้างพื้นฐานดิจิทัลของสหรัฐอเมริกา Clayton กล่าวใน \"Squawk Box\"",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/16/ai-espionage-openai-jay-clayton.html",
-      "time": "34 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T15:01:34Z",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T16:27:44Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -197,154 +304,42 @@
       "isHero": false,
       "points": [
         "AI \"ขยาย\" ความเสี่ยงด้านความปลอดภัยทางไซเบอร์ที่มีอยู่ไปยังโครงสร้างพื้นฐานดิจิทัลของสหรัฐอเมริกา Clayton กล่าวใน \"Squawk Box\"",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 15:01 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 16:27 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "กรณีการดักฟังระดับชาติของ OpenAI ในซาอุดิอาระเบียแสดงให้เห็นถึงภัยคุกคามต่อผู้นำสหรัฐฯ ใน AI: DNI Clayton",
+        "กรณีการดักฟังระดับชาติของ OpenAI ในซาอุดีอาระเบียแสดงให้เห็นถึงภัยคุกคามต่อผู้นำสหรัฐฯ ใน AI: DNI Clayton",
         "AI \"ขยาย\" ความเสี่ยงด้านความปลอดภัยทางไซเบอร์ที่มีอยู่ไปยังโครงสร้างพื้นฐานดิจิทัลของสหรัฐอเมริกา Clayton กล่าวใน \"Squawk Box\"",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI Saudi national bugging case shows threat to U.S. leadership in AI: DNI Clayton\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-8",
-      "title": "Blue Origin วางแผนขยายธุรกิจในฟลอริดามูลค่า 330 ล้านดอลลาร์เพื่อเปิดตัว New Glenn",
-      "title_en": "Blue Origin plans $330 million Florida expansion to ramp New Glenn launches",
-      "summary": "Blue Origin กล่าวว่ามีเป้าหมายเที่ยวบินจรวด New Glenn หลายเที่ยวบินต่อสัปดาห์ภายในสิ้นทศวรรษนี้",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/blue-origin-new-glenn-florida-expansion.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T14:26:05Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Blue Origin กล่าวว่ามีเป้าหมายเที่ยวบินจรวด New Glenn หลายเที่ยวบินต่อสัปดาห์ภายในสิ้นทศวรรษนี้",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 14:26 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "Blue Origin วางแผนขยายธุรกิจในฟลอริดามูลค่า 330 ล้านดอลลาร์เพื่อเปิดตัว New Glenn",
-        "Blue Origin กล่าวว่ามีเป้าหมายเที่ยวบินจรวด New Glenn หลายเที่ยวบินต่อสัปดาห์ภายในสิ้นทศวรรษนี้",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Blue Origin plans $330 million Florida expansion to ramp New Glenn launches\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "คำตอบของยุโรปต่อ SpaceX เพิ่มขึ้น 19% เนื่องจากข้อจำกัดของ Starshield ของยูเครนทำให้เกิดความกังวล",
-      "title_en": "Europe's answer to SpaceX pops 19% as Ukraine's Starshield limits raise concerns",
-      "summary": "หุ้นของ Eutelsat ทะยานขึ้นในสัปดาห์นี้และไต่ขึ้นอย่างต่อเนื่องในวันศุกร์ เนื่องจากคู่แข่งอย่าง Starshield ได้รับการวิพากษ์วิจารณ์เกี่ยวกับข้อจำกัดในยูเครน",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/eutelsat-starshield-ukraine-spacex.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T14:04:19Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "หุ้นของ Eutelsat ทะยานขึ้นในสัปดาห์นี้และไต่ขึ้นอย่างต่อเนื่องในวันศุกร์ เนื่องจากคู่แข่งอย่าง Starshield ได้รับการวิพากษ์วิจารณ์เกี่ยวกับข้อจำกัดในยูเครน",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 14:04 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "คำตอบของยุโรปต่อ SpaceX เพิ่มขึ้น 19% เนื่องจากข้อจำกัดของ Starshield ของยูเครนทำให้เกิดความกังวล",
-        "หุ้นของ Eutelsat ทะยานขึ้นในสัปดาห์นี้และไต่ขึ้นอย่างต่อเนื่องในวันศุกร์ เนื่องจากคู่แข่งอย่าง Starshield ได้รับการวิพากษ์วิจารณ์เกี่ยวกับข้อจำกัดในยูเครน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Europe's answer to SpaceX pops 19% as Ukraine's Starshield limits raise concerns\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "การเปิดเผย Roadster ของ Tesla, Apple และ Meta ร่วมมือกัน, Nike's India ผลักดันและอีกมากมายใน Morning Squawk",
-      "title_en": "Tesla's Roadster reveal, Apple and Meta team up, Nike's India push and more in Morning Squawk",
-      "summary": "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/5-things-to-know-before-the-stock-market-opens.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T12:38:58Z",
-      "category": "TECH",
-      "tickers": [
-        "AAPL",
-        "META",
-        "TSLA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 12:38 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL #META #TSLA"
-      ],
-      "fullArticle": [
-        "การเปิดเผย Roadster ของ Tesla, Apple และ Meta ร่วมมือกัน, Nike's India ผลักดันและอีกมากมายใน Morning Squawk",
-        "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla's Roadster reveal, Apple and Meta team up, Nike's India push and more in Morning Squawk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "การเพิ่มเงินสดของ Elon Musk ช่วยให้ GOP Senate super PAC ระดมทุนได้ 273 ล้านดอลลาร์",
-      "title_en": "Elon Musk cash infusion helps GOP Senate super PAC raise record $273 million",
-      "summary": "Elon Musk มอบเงินจำนวน 158 ล้านดอลลาร์ให้กับกองทุนผู้นำวุฒิสภาของ GOP เพื่อส่งเสริมสงครามในขณะที่พรรครีพับลิกันทุ่มเงินเข้าสู่เท็กซัสเพื่อปกป้อง Ken Paxton",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/elon-musk-senate-leadership-fund-fundraising.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T12:17:29Z",
-      "category": "TECH",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Elon Musk มอบเงินจำนวน 158 ล้านดอลลาร์ให้กับกองทุนผู้นำวุฒิสภาของ GOP เพื่อส่งเสริมสงครามในขณะที่พรรครีพับลิกันทุ่มเงินเข้าสู่เท็กซัสเพื่อปกป้อง Ken Paxton",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 12:17 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "การเพิ่มเงินสดของ Elon Musk ช่วยให้ GOP Senate super PAC ระดมทุนได้ 273 ล้านดอลลาร์",
-        "Elon Musk มอบเงินจำนวน 158 ล้านดอลลาร์ให้กับกองทุนผู้นำวุฒิสภาของ GOP เพื่อส่งเสริมสงครามในขณะที่พรรครีพับลิกันทุ่มเงินเข้าสู่เท็กซัสเพื่อปกป้อง Ken Paxton",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Elon Musk cash infusion helps GOP Senate super PAC raise record $273 million\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
       "id": "news-12",
-      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Tesla, SpaceX, Alcoa, CoreWeave, Travellers และอื่นๆ",
-      "title_en": "Stocks making the biggest moves premarket: Tesla, SpaceX, Alcoa, CoreWeave, Travelers & more",
-      "summary": "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
+      "title": "บทวิเคราะห์: ทุกคนคาดว่า Fed จะคงอัตราดอกเบี้ยในเดือนตุลาคม Kevin Warsh อาจทำให้พวกเราทุกคนประหลาดใจ",
+      "title_en": "Analysis: Everyone expects the Fed to hold rates in October. Kevin Warsh could surprise us all",
+      "summary": "นักลงทุนคาดหวังว่า Fed จะหยุดขึ้นอัตราดอกเบี้ยชั่วคราวในเดือนตุลาคม แต่การที่ Kevin Warsh ปฏิเสธหลักปฏิบัติด้านการสื่อสารแบบเดิมๆ และความกังวลเกี่ยวกับภาวะเงินเฟ้ออย่างต่อเนื่อง ทำให้การตัดสินใจมีความไม่แน่นอน",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/stocks-making-the-biggest-moves-premarket-tsla-spcx-aa-crwv.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T11:43:42Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T16:27:31Z",
       "category": "MACRO",
       "tickers": [
-        "TSLA"
+        "SPY",
+        "QQQ",
+        "TLT"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 11:43 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+        "นักลงทุนคาดหวังว่า Fed จะหยุดขึ้นอัตราดอกเบี้ยชั่วคราวในเดือนตุลาคม แต่การที่ Kevin Warsh ปฏิเสธหลักปฏิบัติด้านการสื่อสารแบบเดิมๆ และความกังวลเกี่ยวกับภาวะเงินเฟ้ออย่างต่อเนื่อง ทำให้การตัดสินใจมีความไม่แน่นอน",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 16:27 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Tesla, SpaceX, Alcoa, CoreWeave, Travellers และอื่นๆ",
-        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: Tesla, SpaceX, Alcoa, CoreWeave, Travelers & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "บทวิเคราะห์: ทุกคนคาดว่า Fed จะคงอัตราดอกเบี้ยในเดือนตุลาคม Kevin Warsh อาจทำให้พวกเราทุกคนประหลาดใจ",
+        "นักลงทุนคาดหวังว่า Fed จะหยุดขึ้นอัตราดอกเบี้ยชั่วคราวในเดือนตุลาคม แต่การที่ Kevin Warsh ปฏิเสธหลักปฏิบัติด้านการสื่อสารแบบเดิมๆ และความกังวลเกี่ยวกับภาวะเงินเฟ้ออย่างต่อเนื่อง ทำให้การตัดสินใจมีความไม่แน่นอน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Analysis: Everyone expects the Fed to hold rates in October. Kevin Warsh could surprise us all\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
