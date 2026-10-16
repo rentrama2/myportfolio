@@ -1,71 +1,46 @@
 {
-  "updated_at": "2026-10-16T11:46:32Z",
-  "updated_at_thai": "16 ต.ค. 2569 18:46 น.",
+  "updated_at": "2026-10-16T15:35:57Z",
+  "updated_at_thai": "16 ต.ค. 2569 22:35 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Tesla, SpaceX, Alcoa, CoreWeave, Travellers และอื่นๆ",
-      "title_en": "Stocks making the biggest moves premarket: Tesla, SpaceX, Alcoa, CoreWeave, Travelers & more",
-      "summary": "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/stocks-making-the-biggest-moves-premarket-tsla-spcx-aa-crwv.html",
-      "time": "2 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T11:43:42Z",
-      "category": "MACRO",
+      "title": "ASML (ASML) ลดลง 8.9% แม้จะมีคูน้ำที่โดดเด่นในเทคโนโลยีการพิมพ์หิน EUV",
+      "title_en": "ASML (ASML) Declines 8.9% Despite Dominant Moat in EUV Lithography Technology",
+      "summary": "ASML (ASML) ลดลง 8.9% แม้จะมีคูน้ำที่โดดเด่นในเทคโนโลยีการพิมพ์หิน EUV",
+      "source": "Insider Monkey",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/asml-asml-declines-8-9-152557165.html",
+      "time": "10 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T15:25:57Z",
+      "category": "TECH",
       "tickers": [
-        "TSLA"
+        "NVDA",
+        "AAPL",
+        "MSFT"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": true,
       "points": [
-        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 11:43 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+        "ASML (ASML) ลดลง 8.9% แม้จะมีคูน้ำที่โดดเด่นในเทคโนโลยีการพิมพ์หิน EUV",
+        "แหล่งข่าวอ้างอิง: Insider Monkey (16/10/2026 15:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Tesla, SpaceX, Alcoa, CoreWeave, Travellers และอื่นๆ",
-        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: Tesla, SpaceX, Alcoa, CoreWeave, Travelers & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ASML (ASML) ลดลง 8.9% แม้จะมีคูน้ำที่โดดเด่นในเทคโนโลยีการพิมพ์หิน EUV",
+        "ASML (ASML) ลดลง 8.9% แม้จะมีคูน้ำที่โดดเด่นในเทคโนโลยีการพิมพ์หิน EUV",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"ASML (ASML) Declines 8.9% Despite Dominant Moat in EUV Lithography Technology\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "ราคา Bitcoin และ ethereum วันนี้ วันศุกร์ที่ 16 ตุลาคม 2569: Bitcoin ราคา ethereum มั่นคง แม้จะมีรายงานเงินเฟ้อที่แข็งแกร่งสองฉบับ",
-      "title_en": "Bitcoin and ethereum prices today, Friday, October 16, 2026: Bitcoin, ethereum prices firm despite two strong inflation reports",
-      "summary": "ราคา Bitcoin และ ethereum วันนี้ วันศุกร์ที่ 16 ตุลาคม 2569: Bitcoin ราคา ethereum มั่นคง แม้จะมีรายงานเงินเฟ้อที่แข็งแกร่งสองฉบับ",
-      "source": "Yahoo Personal Finance",
-      "sourceUrl": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-october-16-2026-bitcoin-ethereum-prices-firm-despite-two-strong-inflation-reports-113928147.html",
-      "time": "7 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T11:39:28Z",
-      "category": "MACRO",
-      "tickers": [
-        "COIN"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ราคา Bitcoin และ ethereum วันนี้ วันศุกร์ที่ 16 ตุลาคม 2569: Bitcoin ราคา ethereum มั่นคง แม้จะมีรายงานเงินเฟ้อที่แข็งแกร่งสองฉบับ",
-        "แหล่งข่าวอ้างอิง: Yahoo Personal Finance (16/10/2026 11:39 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #COIN"
-      ],
-      "fullArticle": [
-        "ราคา Bitcoin และ ethereum วันนี้ วันศุกร์ที่ 16 ตุลาคม 2569: Bitcoin ราคา ethereum มั่นคง แม้จะมีรายงานเงินเฟ้อที่แข็งแกร่งสองฉบับ",
-        "ราคา Bitcoin และ ethereum วันนี้ วันศุกร์ที่ 16 ตุลาคม 2569: Bitcoin ราคา ethereum มั่นคง แม้จะมีรายงานเงินเฟ้อที่แข็งแกร่งสองฉบับ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bitcoin and ethereum prices today, Friday, October 16, 2026: Bitcoin, ethereum prices firm despite two strong inflation reports\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "CoreWeave ไม่ใช่หุ้น AI เพียงตัวเดียว — หรือแย่ที่สุด",
-      "title_en": "CoreWeave Isn't The Only Sputtering AI Stock — Nor The Worst",
-      "summary": "CoreWeave ไม่ใช่หุ้น AI เพียงตัวเดียว — หรือแย่ที่สุด",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/7400be65-1675-35e1-a62d-17ae6fe9b185/coreweave-isn%27t-the-only.html",
-      "time": "13 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T11:33:20Z",
+      "title": "เหตุใดการพิพากษาลงโทษระยะยาวจึงยังคงอยู่สำหรับ Broadcom (AVGO)",
+      "title_en": "Why Long-Term Conviction Remains Intact for Broadcom (AVGO)?",
+      "summary": "เหตุใดการพิพากษาลงโทษระยะยาวจึงยังคงอยู่สำหรับ Broadcom (AVGO)",
+      "source": "Insider Monkey",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/why-long-term-conviction-remains-152101631.html",
+      "time": "14 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T15:21:01Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -76,25 +51,112 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "CoreWeave ไม่ใช่หุ้น AI เพียงตัวเดียว — หรือแย่ที่สุด",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (16/10/2026 11:33 UTC)",
+        "เหตุใดการพิพากษาลงโทษระยะยาวจึงยังคงอยู่สำหรับ Broadcom (AVGO)",
+        "แหล่งข่าวอ้างอิง: Insider Monkey (16/10/2026 15:21 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "CoreWeave ไม่ใช่หุ้น AI เพียงตัวเดียว — หรือแย่ที่สุด",
-        "CoreWeave ไม่ใช่หุ้น AI เพียงตัวเดียว — หรือแย่ที่สุด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"CoreWeave Isn't The Only Sputtering AI Stock — Nor The Worst\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "เหตุใดการพิพากษาลงโทษระยะยาวจึงยังคงอยู่สำหรับ Broadcom (AVGO)",
+        "เหตุใดการพิพากษาลงโทษระยะยาวจึงยังคงอยู่สำหรับ Broadcom (AVGO)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why Long-Term Conviction Remains Intact for Broadcom (AVGO)?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "ผู้นำนโยบาย SpaceX AI นำเสนอโดยสภา NYC เกี่ยวกับความปลอดภัยของ Grok และภาพที่สื่อถึงเรื่องเพศ",
+      "title_en": "SpaceX AI policy leader grilled by NYC Council on Grok safety, sexualized images",
+      "summary": "หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกของ SpaceX สำหรับ AI Gabriela Castillo Madrid เผชิญกับคำถามสำคัญจากสภานครนิวยอร์กเมื่อวันศุกร์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/spacex-policy-manger-to-testify-in-nyc-council-ai-safety-investigation.html",
+      "time": "17 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T15:18:40Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกของ SpaceX สำหรับ AI Gabriela Castillo Madrid เผชิญกับคำถามสำคัญจากสภานครนิวยอร์กเมื่อวันศุกร์",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 15:18 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "ผู้นำนโยบาย SpaceX AI นำเสนอโดยสภา NYC เกี่ยวกับความปลอดภัยของ Grok และภาพที่สื่อถึงเรื่องเพศ",
+        "หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกของ SpaceX สำหรับ AI Gabriela Castillo Madrid เผชิญกับคำถามสำคัญจากสภานครนิวยอร์กเมื่อวันศุกร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX AI policy leader grilled by NYC Council on Grok safety, sexualized images\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-4",
-      "title": "ครึ่งทางของเดือนตุลาคม ดีเซลกำลังกำหนดเงื่อนไขสำหรับตลาดพลังงานทั้งหมด",
-      "title_en": "Halfway Through October, Diesel Is Setting the Terms for the Entire Energy Market",
-      "summary": "ครึ่งทางของเดือนตุลาคม ดีเซลกำลังกำหนดเงื่อนไขสำหรับตลาดพลังงานทั้งหมด",
-      "source": "CNW Group",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/halfway-october-diesel-setting-terms-113000824.html",
-      "time": "16 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T11:30:00Z",
+      "title": "รากของระบบที่ลึกแค่ไหนปกป้อง ServiceNow (ตอนนี้) ในยุค AI",
+      "title_en": "How Deep System Roots Protect ServiceNow (NOW) in AI Era",
+      "summary": "รากของระบบที่ลึกแค่ไหนปกป้อง ServiceNow (ตอนนี้) ในยุค AI",
+      "source": "Insider Monkey",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/deep-system-roots-protect-servicenow-151258260.html",
+      "time": "22 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T15:12:58Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "รากของระบบที่ลึกแค่ไหนปกป้อง ServiceNow (ตอนนี้) ในยุค AI",
+        "แหล่งข่าวอ้างอิง: Insider Monkey (16/10/2026 15:12 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "รากของระบบที่ลึกแค่ไหนปกป้อง ServiceNow (ตอนนี้) ในยุค AI",
+        "รากของระบบที่ลึกแค่ไหนปกป้อง ServiceNow (ตอนนี้) ในยุค AI",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"How Deep System Roots Protect ServiceNow (NOW) in AI Era\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "หุ้นการเติบโตของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
+      "title_en": "Top 3 Canadian Growth Stocks To Watch In October 2026",
+      "summary": "หุ้นการเติบโตของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/top-3-canadian-growth-stocks-150948728.html",
+      "time": "26 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T15:09:48Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "หุ้นการเติบโตของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (16/10/2026 15:09 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "หุ้นการเติบโตของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
+        "หุ้นการเติบโตของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Top 3 Canadian Growth Stocks To Watch In October 2026\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "ความต้องการด้านการบินและอวกาศและกลาโหมยังคงเดิมแม้จะมีความเชื่อมั่นลดลงก็ตาม Morgan Stanley กล่าว",
+      "title_en": "Aerospace, Defense Stocks' Demand Intact Despite Softer Sentiment, Morgan Stanley Says",
+      "summary": "ความต้องการด้านการบินและอวกาศและกลาโหมยังคงเดิมแม้จะมีความเชื่อมั่นลดลงก็ตาม Morgan Stanley กล่าว",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/aerospace-defense-stocks-apos-demand-150554672.html",
+      "time": "30 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T15:05:54Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -105,164 +167,54 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ครึ่งทางของเดือนตุลาคม ดีเซลกำลังกำหนดเงื่อนไขสำหรับตลาดพลังงานทั้งหมด",
-        "แหล่งข่าวอ้างอิง: CNW Group (16/10/2026 11:30 UTC)",
+        "ความต้องการด้านการบินและอวกาศและกลาโหมยังคงเดิมแม้จะมีความเชื่อมั่นลดลงก็ตาม Morgan Stanley กล่าว",
+        "แหล่งข่าวอ้างอิง: MT Newswires (16/10/2026 15:05 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "ครึ่งทางของเดือนตุลาคม ดีเซลกำลังกำหนดเงื่อนไขสำหรับตลาดพลังงานทั้งหมด",
-        "ครึ่งทางของเดือนตุลาคม ดีเซลกำลังกำหนดเงื่อนไขสำหรับตลาดพลังงานทั้งหมด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Halfway Through October, Diesel Is Setting the Terms for the Entire Energy Market\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "หัวน้ำมันปรับตัวขึ้นรายสัปดาห์โดยเน้นที่อุปทานในตะวันออกกลาง",
-      "title_en": "Oil heads for weekly gain with focus on Middle East supply",
-      "summary": "หัวน้ำมันปรับตัวขึ้นรายสัปดาห์โดยเน้นที่อุปทานในตะวันออกกลาง",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-edges-down-investors-weigh-010642305.html",
-      "time": "21 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T11:25:03Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "หัวน้ำมันปรับตัวขึ้นรายสัปดาห์โดยเน้นที่อุปทานในตะวันออกกลาง",
-        "แหล่งข่าวอ้างอิง: Reuters (16/10/2026 11:25 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "หัวน้ำมันปรับตัวขึ้นรายสัปดาห์โดยเน้นที่อุปทานในตะวันออกกลาง",
-        "หัวน้ำมันปรับตัวขึ้นรายสัปดาห์โดยเน้นที่อุปทานในตะวันออกกลาง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil heads for weekly gain with focus on Middle East supply\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "แนวโน้มประธานเฟด, การผ่อนปรนน้ำมัน Undergirds Wall Street Pre-Bell; เอเชีย ยุโรป ขึ้นไป",
-      "title_en": "Fed Chair Outlook, Easing Oil Undergirds Wall Street Pre-Bell; Asia, Europe Up",
-      "summary": "แนวโน้มประธานเฟด, การผ่อนปรนน้ำมัน Undergirds Wall Street Pre-Bell; เอเชีย ยุโรป ขึ้นไป",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/articles/fed-chair-outlook-easing-oil-111637867.html",
-      "time": "29 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T11:16:37Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "แนวโน้มประธานเฟด, การผ่อนปรนน้ำมัน Undergirds Wall Street Pre-Bell; เอเชีย ยุโรป ขึ้นไป",
-        "แหล่งข่าวอ้างอิง: MT Newswires (16/10/2026 11:16 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "แนวโน้มประธานเฟด, การผ่อนปรนน้ำมัน Undergirds Wall Street Pre-Bell; เอเชีย ยุโรป ขึ้นไป",
-        "แนวโน้มประธานเฟด, การผ่อนปรนน้ำมัน Undergirds Wall Street Pre-Bell; เอเชีย ยุโรป ขึ้นไป",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Fed Chair Outlook, Easing Oil Undergirds Wall Street Pre-Bell; Asia, Europe Up\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ความต้องการด้านการบินและอวกาศและกลาโหมยังคงเดิมแม้จะมีความเชื่อมั่นลดลงก็ตาม Morgan Stanley กล่าว",
+        "ความต้องการด้านการบินและอวกาศและกลาโหมยังคงเดิมแม้จะมีความเชื่อมั่นลดลงก็ตาม Morgan Stanley กล่าว",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Aerospace, Defense Stocks' Demand Intact Despite Softer Sentiment, Morgan Stanley Says\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-7",
-      "title": "ฟิวเจอร์สของ Wall St ปะปนกันในขณะที่เทคโนโลยีโยกเยกอีกครั้ง Tesla ก็เพิ่มขึ้น",
-      "title_en": "Wall St futures mixed as tech wobbles again, Tesla gains",
-      "summary": "ฟิวเจอร์สของ Wall St ปะปนกันในขณะที่เทคโนโลยีโยกเยกอีกครั้ง Tesla ก็เพิ่มขึ้น",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-mixed-tech-110701262.html",
-      "time": "39 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T11:07:01Z",
-      "category": "TECH",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ฟิวเจอร์สของ Wall St ปะปนกันในขณะที่เทคโนโลยีโยกเยกอีกครั้ง Tesla ก็เพิ่มขึ้น",
-        "แหล่งข่าวอ้างอิง: Reuters (16/10/2026 11:07 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "ฟิวเจอร์สของ Wall St ปะปนกันในขณะที่เทคโนโลยีโยกเยกอีกครั้ง Tesla ก็เพิ่มขึ้น",
-        "ฟิวเจอร์สของ Wall St ปะปนกันในขณะที่เทคโนโลยีโยกเยกอีกครั้ง Tesla ก็เพิ่มขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wall St futures mixed as tech wobbles again, Tesla gains\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "Tesla เผยโฉม Roadster เจเนอเรชั่นใหม่หลังจากเกิดความล่าช้าเกือบทศวรรษ",
-      "title_en": "Tesla reveals next-generation Roadster after almost a decade of delays",
-      "summary": "Elon Musk เปิดตัวแนวคิดการรีเฟรช Roadster ครั้งแรกในปี 2560 แต่ตั้งแต่นั้นเป็นต้นมา Tesla ก็พลาดทุกวันที่จัดส่งตามเป้าหมาย",
+      "title": "กรณีการดักฟังระดับชาติของ OpenAI ในซาอุดิอาระเบียแสดงให้เห็นถึงภัยคุกคามต่อผู้นำสหรัฐฯ ใน AI: DNI Clayton",
+      "title_en": "OpenAI Saudi national bugging case shows threat to U.S. leadership in AI: DNI Clayton",
+      "summary": "AI \"ขยาย\" ความเสี่ยงด้านความปลอดภัยทางไซเบอร์ที่มีอยู่ไปยังโครงสร้างพื้นฐานดิจิทัลของสหรัฐอเมริกา Clayton กล่าวใน \"Squawk Box\"",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html",
-      "time": "49 นาทีที่แล้ว",
-      "publishedAt": "2026-10-16T10:57:11Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/ai-espionage-openai-jay-clayton.html",
+      "time": "34 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T15:01:34Z",
       "category": "TECH",
       "tickers": [
-        "TSLA"
+        "NVDA",
+        "AAPL",
+        "MSFT"
       ],
       "sentiment": "BEARISH",
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "Elon Musk เปิดตัวแนวคิดการรีเฟรช Roadster ครั้งแรกในปี 2560 แต่ตั้งแต่นั้นเป็นต้นมา Tesla ก็พลาดทุกวันที่จัดส่งตามเป้าหมาย",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 10:57 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+        "AI \"ขยาย\" ความเสี่ยงด้านความปลอดภัยทางไซเบอร์ที่มีอยู่ไปยังโครงสร้างพื้นฐานดิจิทัลของสหรัฐอเมริกา Clayton กล่าวใน \"Squawk Box\"",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 15:01 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "Tesla เผยโฉม Roadster เจเนอเรชั่นใหม่หลังจากเกิดความล่าช้าเกือบทศวรรษ",
-        "Elon Musk เปิดตัวแนวคิดการรีเฟรช Roadster ครั้งแรกในปี 2560 แต่ตั้งแต่นั้นเป็นต้นมา Tesla ก็พลาดทุกวันที่จัดส่งตามเป้าหมาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla reveals next-generation Roadster after almost a decade of delays\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "กรณีการดักฟังระดับชาติของ OpenAI ในซาอุดิอาระเบียแสดงให้เห็นถึงภัยคุกคามต่อผู้นำสหรัฐฯ ใน AI: DNI Clayton",
+        "AI \"ขยาย\" ความเสี่ยงด้านความปลอดภัยทางไซเบอร์ที่มีอยู่ไปยังโครงสร้างพื้นฐานดิจิทัลของสหรัฐอเมริกา Clayton กล่าวใน \"Squawk Box\"",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI Saudi national bugging case shows threat to U.S. leadership in AI: DNI Clayton\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-9",
-      "title": "VOO, VTI, SPY หรือ IVV? กองทุนดัชนีทั้ง 4 เหล่านี้แตกต่างกันอย่างไร",
-      "title_en": "VOO, VTI, SPY, or IVV? How These 4 Index Funds Differ",
-      "summary": "VOO, VTI, SPY หรือ IVV? กองทุนดัชนีทั้ง 4 เหล่านี้แตกต่างกันอย่างไร",
-      "source": "Motley Fool",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/voo-vti-spy-ivv-4-092000271.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T09:20:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "VOO",
-        "VTI"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "VOO, VTI, SPY หรือ IVV? กองทุนดัชนีทั้ง 4 เหล่านี้แตกต่างกันอย่างไร",
-        "แหล่งข่าวอ้างอิง: Motley Fool (16/10/2026 09:20 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #VOO #VTI"
-      ],
-      "fullArticle": [
-        "VOO, VTI, SPY หรือ IVV? กองทุนดัชนีทั้ง 4 เหล่านี้แตกต่างกันอย่างไร",
-        "VOO, VTI, SPY หรือ IVV? กองทุนดัชนีทั้ง 4 เหล่านี้แตกต่างกันอย่างไร",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"VOO, VTI, SPY, or IVV? How These 4 Index Funds Differ\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "ผู้จัดการนโยบายของ SpaceX เตรียมให้การเป็นพยานโดยเป็นส่วนหนึ่งของการสืบสวนด้านความปลอดภัยของ AI ของสภา NYC",
-      "title_en": "SpaceX policy manager set to testify as part of NYC Council AI safety investigation",
-      "summary": "SpaceX กำลังส่ง Gabriela Castillo Madrid หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกด้าน AI ไปให้การเป็นพยานต่อสภานครนิวยอร์ก",
+      "id": "news-8",
+      "title": "Blue Origin วางแผนขยายธุรกิจในฟลอริดามูลค่า 330 ล้านดอลลาร์เพื่อเปิดตัว New Glenn",
+      "title_en": "Blue Origin plans $330 million Florida expansion to ramp New Glenn launches",
+      "summary": "Blue Origin กล่าวว่ามีเป้าหมายเที่ยวบินจรวด New Glenn หลายเที่ยวบินต่อสัปดาห์ภายในสิ้นทศวรรษนี้",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/spacex-policy-manger-to-testify-in-nyc-council-ai-safety-investigation.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T08:00:01Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/blue-origin-new-glenn-florida-expansion.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T14:26:05Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -273,25 +225,83 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "SpaceX กำลังส่ง Gabriela Castillo Madrid หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกด้าน AI ไปให้การเป็นพยานต่อสภานครนิวยอร์ก",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 08:00 UTC)",
+        "Blue Origin กล่าวว่ามีเป้าหมายเที่ยวบินจรวด New Glenn หลายเที่ยวบินต่อสัปดาห์ภายในสิ้นทศวรรษนี้",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 14:26 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "ผู้จัดการนโยบายของ SpaceX เตรียมให้การเป็นพยานโดยเป็นส่วนหนึ่งของการสืบสวนด้านความปลอดภัยของ AI ของสภา NYC",
-        "SpaceX กำลังส่ง Gabriela Castillo Madrid หัวหน้าฝ่ายกิจการรัฐบาลทั่วโลกด้าน AI ไปให้การเป็นพยานต่อสภานครนิวยอร์ก",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX policy manager set to testify as part of NYC Council AI safety investigation\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Blue Origin วางแผนขยายธุรกิจในฟลอริดามูลค่า 330 ล้านดอลลาร์เพื่อเปิดตัว New Glenn",
+        "Blue Origin กล่าวว่ามีเป้าหมายเที่ยวบินจรวด New Glenn หลายเที่ยวบินต่อสัปดาห์ภายในสิ้นทศวรรษนี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Blue Origin plans $330 million Florida expansion to ramp New Glenn launches\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "คำตอบของยุโรปต่อ SpaceX เพิ่มขึ้น 19% เนื่องจากข้อจำกัดของ Starshield ของยูเครนทำให้เกิดความกังวล",
+      "title_en": "Europe's answer to SpaceX pops 19% as Ukraine's Starshield limits raise concerns",
+      "summary": "หุ้นของ Eutelsat ทะยานขึ้นในสัปดาห์นี้และไต่ขึ้นอย่างต่อเนื่องในวันศุกร์ เนื่องจากคู่แข่งอย่าง Starshield ได้รับการวิพากษ์วิจารณ์เกี่ยวกับข้อจำกัดในยูเครน",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/eutelsat-starshield-ukraine-spacex.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T14:04:19Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "หุ้นของ Eutelsat ทะยานขึ้นในสัปดาห์นี้และไต่ขึ้นอย่างต่อเนื่องในวันศุกร์ เนื่องจากคู่แข่งอย่าง Starshield ได้รับการวิพากษ์วิจารณ์เกี่ยวกับข้อจำกัดในยูเครน",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 14:04 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "คำตอบของยุโรปต่อ SpaceX เพิ่มขึ้น 19% เนื่องจากข้อจำกัดของ Starshield ของยูเครนทำให้เกิดความกังวล",
+        "หุ้นของ Eutelsat ทะยานขึ้นในสัปดาห์นี้และไต่ขึ้นอย่างต่อเนื่องในวันศุกร์ เนื่องจากคู่แข่งอย่าง Starshield ได้รับการวิพากษ์วิจารณ์เกี่ยวกับข้อจำกัดในยูเครน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Europe's answer to SpaceX pops 19% as Ukraine's Starshield limits raise concerns\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
+      "title": "การเปิดเผย Roadster ของ Tesla, Apple และ Meta ร่วมมือกัน, Nike's India ผลักดันและอีกมากมายใน Morning Squawk",
+      "title_en": "Tesla's Roadster reveal, Apple and Meta team up, Nike's India push and more in Morning Squawk",
+      "summary": "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/5-things-to-know-before-the-stock-market-opens.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T12:38:58Z",
+      "category": "TECH",
+      "tickers": [
+        "AAPL",
+        "META",
+        "TSLA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 12:38 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL #META #TSLA"
+      ],
+      "fullArticle": [
+        "การเปิดเผย Roadster ของ Tesla, Apple และ Meta ร่วมมือกัน, Nike's India ผลักดันและอีกมากมายใน Morning Squawk",
+        "ต่อไปนี้เป็นห้าสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla's Roadster reveal, Apple and Meta team up, Nike's India push and more in Morning Squawk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-11",
-      "title": "Elon Musk ช่วย GOP Senate super PAC ระดมทุนได้ 273 ล้านดอลลาร์",
-      "title_en": "Elon Musk helps GOP Senate super PAC raise record $273 million",
+      "title": "การเพิ่มเงินสดของ Elon Musk ช่วยให้ GOP Senate super PAC ระดมทุนได้ 273 ล้านดอลลาร์",
+      "title_en": "Elon Musk cash infusion helps GOP Senate super PAC raise record $273 million",
       "summary": "Elon Musk มอบเงินจำนวน 158 ล้านดอลลาร์ให้กับกองทุนผู้นำวุฒิสภาของ GOP เพื่อส่งเสริมสงครามในขณะที่พรรครีพับลิกันทุ่มเงินเข้าสู่เท็กซัสเพื่อปกป้อง Ken Paxton",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/15/elon-musk-senate-leadership-fund-fundraising.html",
-      "time": "11 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T23:53:29Z",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T12:17:29Z",
       "category": "TECH",
       "tickers": [
         "TSLA"
@@ -301,42 +311,40 @@
       "isHero": false,
       "points": [
         "Elon Musk มอบเงินจำนวน 158 ล้านดอลลาร์ให้กับกองทุนผู้นำวุฒิสภาของ GOP เพื่อส่งเสริมสงครามในขณะที่พรรครีพับลิกันทุ่มเงินเข้าสู่เท็กซัสเพื่อปกป้อง Ken Paxton",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 23:53 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 12:17 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
       ],
       "fullArticle": [
-        "Elon Musk ช่วย GOP Senate super PAC ระดมทุนได้ 273 ล้านดอลลาร์",
+        "การเพิ่มเงินสดของ Elon Musk ช่วยให้ GOP Senate super PAC ระดมทุนได้ 273 ล้านดอลลาร์",
         "Elon Musk มอบเงินจำนวน 158 ล้านดอลลาร์ให้กับกองทุนผู้นำวุฒิสภาของ GOP เพื่อส่งเสริมสงครามในขณะที่พรรครีพับลิกันทุ่มเงินเข้าสู่เท็กซัสเพื่อปกป้อง Ken Paxton",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Elon Musk helps GOP Senate super PAC raise record $273 million\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Elon Musk cash infusion helps GOP Senate super PAC raise record $273 million\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-12",
-      "title": "ผู้คนในประเทศจีนใช้จ่ายรายได้เกือบเท่าคนอเมริกันในด้านการดูแลสุขภาพ",
-      "title_en": "People in China are spending nearly as much of their income as Americans on healthcare",
-      "summary": "กองทุนการเงินระหว่างประเทศกล่าวว่าการเพิ่มการใช้จ่ายของรัฐบาลในด้านการดูแลสุขภาพอาจช่วยเพิ่มการบริโภคในจีนได้",
+      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Tesla, SpaceX, Alcoa, CoreWeave, Travellers และอื่นๆ",
+      "title_en": "Stocks making the biggest moves premarket: Tesla, SpaceX, Alcoa, CoreWeave, Travelers & more",
+      "summary": "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/chinese-spending-nearly-as-much-of-income-as-americans-on-healthcare.html",
-      "time": "12 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-15T23:00:01Z",
-      "category": "TECH",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/stocks-making-the-biggest-moves-premarket-tsla-spcx-aa-crwv.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T11:43:42Z",
+      "category": "MACRO",
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
+        "TSLA"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "กองทุนการเงินระหว่างประเทศกล่าวว่าการเพิ่มการใช้จ่ายของรัฐบาลในด้านการดูแลสุขภาพอาจช่วยเพิ่มการบริโภคในจีนได้",
-        "แหล่งข่าวอ้างอิง: CNBC (15/10/2026 23:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 11:43 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
       ],
       "fullArticle": [
-        "ผู้คนในประเทศจีนใช้จ่ายรายได้เกือบเท่าคนอเมริกันในด้านการดูแลสุขภาพ",
-        "กองทุนการเงินระหว่างประเทศกล่าวว่าการเพิ่มการใช้จ่ายของรัฐบาลในด้านการดูแลสุขภาพอาจช่วยเพิ่มการบริโภคในจีนได้",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"People in China are spending nearly as much of their income as Americans on healthcare\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Tesla, SpaceX, Alcoa, CoreWeave, Travellers และอื่นๆ",
+        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: Tesla, SpaceX, Alcoa, CoreWeave, Travelers & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
