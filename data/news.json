@@ -1,16 +1,155 @@
 {
-  "updated_at": "2026-10-16T21:59:11Z",
-  "updated_at_thai": "17 ต.ค. 2569 04:59 น.",
+  "updated_at": "2026-10-17T00:14:57Z",
+  "updated_at_thai": "17 ต.ค. 2569 07:14 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "แท่นขุดเจาะลุ่มน้ำนับถอยหลัง 2 หลังราคาพุ่งสูงขึ้น",
+      "title_en": "Basin rig count down two as prices swell",
+      "summary": "แท่นขุดเจาะลุ่มน้ำนับถอยหลัง 2 หลังราคาพุ่งสูงขึ้น",
+      "source": "Odessa American, Texas",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/basin-rig-count-down-two-000100397.html",
+      "time": "13 นาทีที่แล้ว",
+      "publishedAt": "2026-10-17T00:01:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": true,
+      "points": [
+        "แท่นขุดเจาะลุ่มน้ำนับถอยหลัง 2 หลังราคาพุ่งสูงขึ้น",
+        "แหล่งข่าวอ้างอิง: Odessa American, Texas (17/10/2026 00:01 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "แท่นขุดเจาะลุ่มน้ำนับถอยหลัง 2 หลังราคาพุ่งสูงขึ้น",
+        "แท่นขุดเจาะลุ่มน้ำนับถอยหลัง 2 หลังราคาพุ่งสูงขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Basin rig count down two as prices swell\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "กองทุนเฮดจ์ฟันด์ทั่วโลกถูกเทขายโดย AI ในสัปดาห์นี้ ผู้จัดการในเอเชียนำไปสู่การสูญเสีย",
+      "title_en": "Global hedge funds hammered by AI selloff this week, Asia managers lead losses",
+      "summary": "กองทุนเฮดจ์ฟันด์ทั่วโลกถูกเทขายโดย AI ในสัปดาห์นี้ ผู้จัดการในเอเชียนำไปสู่การสูญเสีย",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/ai-selloff-hammers-hedge-funds-020957793.html",
+      "time": "36 นาทีที่แล้ว",
+      "publishedAt": "2026-10-16T23:38:33Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "กองทุนเฮดจ์ฟันด์ทั่วโลกถูกเทขายโดย AI ในสัปดาห์นี้ ผู้จัดการในเอเชียนำไปสู่การสูญเสีย",
+        "แหล่งข่าวอ้างอิง: Reuters (16/10/2026 23:38 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "กองทุนเฮดจ์ฟันด์ทั่วโลกถูกเทขายโดย AI ในสัปดาห์นี้ ผู้จัดการในเอเชียนำไปสู่การสูญเสีย",
+        "กองทุนเฮดจ์ฟันด์ทั่วโลกถูกเทขายโดย AI ในสัปดาห์นี้ ผู้จัดการในเอเชียนำไปสู่การสูญเสีย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Global hedge funds hammered by AI selloff this week, Asia managers lead losses\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "การขาดดุลงบประมาณของสหรัฐฯ เพิ่มขึ้นเป็นเกือบ 2 ล้านล้านดอลลาร์ในปีงบประมาณ 2026 เพิ่มขึ้น 12% ในปีเดียว",
+      "title_en": "U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year",
+      "summary": "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/us-budget-deficit-2026.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T22:34:29Z",
+      "category": "MACRO",
+      "tickers": [
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 22:34 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+      ],
+      "fullArticle": [
+        "การขาดดุลงบประมาณของสหรัฐฯ เพิ่มขึ้นเป็นเกือบ 2 ล้านล้านดอลลาร์ในปีงบประมาณ 2026 เพิ่มขึ้น 12% ในปีเดียว",
+        "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "การวิเคราะห์: เหตุใดการขาดดุล 2 ล้านล้านดอลลาร์และอัตราผลตอบแทนพันธบัตรรัฐบาล 5% จึงกลายเป็นความท้าทายทางเศรษฐกิจที่ใหญ่ที่สุดของอเมริกา",
+      "title_en": "Analysis: Why a $2 trillion deficit and 5% Treasury yields are becoming America's biggest economic challenge",
+      "summary": "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/15/treasury-yields-deficit-national-debt-ai.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T22:33:05Z",
+      "category": "MACRO",
+      "tickers": [
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 22:33 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+      ],
+      "fullArticle": [
+        "การวิเคราะห์: เหตุใดการขาดดุล 2 ล้านล้านดอลลาร์และอัตราผลตอบแทนพันธบัตรรัฐบาล 5% จึงกลายเป็นความท้าทายทางเศรษฐกิจที่ใหญ่ที่สุดของอเมริกา",
+        "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Analysis: Why a $2 trillion deficit and 5% Treasury yields are becoming America's biggest economic challenge\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple ทดสอบพลังสัญลักษณ์สถานะของบริษัท",
+      "title_en": "Apple’s $1,999 iPhone Duo puts the company's status-symbol power to the test",
+      "summary": "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple กำลังดึงดูดความต้องการในช่วงต้น เนื่องจากนักวิเคราะห์ประเมินว่า iPhone แบบพับได้สามารถเพิ่มราคาและรายได้ของ iPhone ได้หรือไม่",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/16/apple-iphone-duo-demand-price.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-16T22:31:26Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "AAPL"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple กำลังดึงดูดความต้องการในช่วงต้น เนื่องจากนักวิเคราะห์ประเมินว่า iPhone แบบพับได้สามารถเพิ่มราคาและรายได้ของ iPhone ได้หรือไม่",
+        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 22:31 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
+      ],
+      "fullArticle": [
+        "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple ทดสอบพลังสัญลักษณ์สถานะของบริษัท",
+        "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple กำลังดึงดูดความต้องการในช่วงต้น เนื่องจากนักวิเคราะห์ประเมินว่า iPhone แบบพับได้สามารถเพิ่มราคาและรายได้ของ iPhone ได้หรือไม่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple’s $1,999 iPhone Duo puts the company's status-symbol power to the test\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
       "title": "5 ประเด็นเรื่องเงินกลางภาค: พรรคเดโมแครตมีเงินสดของผู้สมัคร รีพับลิกันก็มีอีลอน มัสก์",
       "title_en": "5 midterm money takeaways: Democrats have candidate cash. Republicans have Elon Musk",
       "summary": "พรรคเดโมแครตยกย่องพรรครีพับลิกันในการแข่งขันรัฐสภาครั้งสำคัญๆ ในขณะที่ Elon Musk ให้ทุนสนับสนุน Ken Paxton ในเท็กซัสและกลุ่ม GOP ที่สอดคล้องกับ Trump",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/16/midterm-election-fundraising-elon-musk.html",
-      "time": "9 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-16T21:49:13Z",
       "category": "TECH",
       "tickers": [
@@ -18,7 +157,7 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "พรรคเดโมแครตยกย่องพรรครีพับลิกันในการแข่งขันรัฐสภาครั้งสำคัญๆ ในขณะที่ Elon Musk ให้ทุนสนับสนุน Ken Paxton ในเท็กซัสและกลุ่ม GOP ที่สอดคล้องกับ Trump",
         "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 21:49 UTC)",
@@ -31,13 +170,13 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-7",
       "title": "สรุปรายสัปดาห์: การเข้ารหัสลับภายใต้ความกดดันในฐานะ A.I. การค้าผ่อนคลาย",
       "title_en": "Weekly Wrap: Crypto Under Pressure As A.I. Trade Unwinds",
       "summary": "สรุปรายสัปดาห์: การเข้ารหัสลับภายใต้ความกดดันในฐานะ A.I. การค้าผ่อนคลาย",
       "source": "CryptoProwl",
       "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/weekly-wrap-crypto-under-pressure-214400014.html",
-      "time": "15 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-16T21:44:00Z",
       "category": "MACRO",
       "tickers": [
@@ -58,13 +197,13 @@
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-8",
       "title": "Wall Street ร่วงลงเนื่องจากความกังวลเกี่ยวกับการค้า AI และราคาน้ำมันที่สูงขึ้น",
       "title_en": "Wall Street tumbles as worries about AI trade and high oil prices weigh",
       "summary": "Wall Street ร่วงลงเนื่องจากความกังวลเกี่ยวกับการค้า AI และราคาน้ำมันที่สูงขึ้น",
       "source": "Reuters",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-mixed-tech-110701262.html",
-      "time": "21 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-16T21:37:12Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -86,13 +225,13 @@
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-9",
       "title": "Dow Jones Futures: S&P 500, Nasdaq ทำลายระดับสำคัญในฐานะ CoreWeave, Dell Dive; เทสลา, สเปซเอ็กซ์, เมต้า ลูม",
       "title_en": "Dow Jones Futures: S&P 500, Nasdaq Break Key Levels As CoreWeave, Dell Dive; Tesla, SpaceX, Meta Loom",
       "summary": "Dow Jones Futures: S&P 500, Nasdaq ทำลายระดับสำคัญในฐานะ CoreWeave, Dell Dive; เทสลา, สเปซเอ็กซ์, เมต้า ลูม",
       "source": "Investor's Business Daily",
       "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-s%26p-500%2C.html",
-      "time": "51 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-16T21:08:07Z",
       "category": "MACRO",
       "tickers": [
@@ -117,70 +256,13 @@
       ]
     },
     {
-      "id": "news-5",
-      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq จมลงเนื่องจากการเทขายหุ้นเทคโนโลยีในสัปดาห์ที่ผันผวน",
-      "title_en": "Stock market today: Dow, S&P 500, Nasdaq sink as tech sell-off caps volatile week",
-      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq จมลงเนื่องจากการเทขายหุ้นเทคโนโลยีในสัปดาห์ที่ผันผวน",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-futures-mixed-amid-volatile-week-112939401.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T20:48:28Z",
-      "category": "TECH",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq จมลงเนื่องจากการเทขายหุ้นเทคโนโลยีในสัปดาห์ที่ผันผวน",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (16/10/2026 20:48 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq จมลงเนื่องจากการเทขายหุ้นเทคโนโลยีในสัปดาห์ที่ผันผวน",
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq จมลงเนื่องจากการเทขายหุ้นเทคโนโลยีในสัปดาห์ที่ผันผวน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq sink as tech sell-off caps volatile week\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "อัปเดต: ดัชนีหุ้นสหรัฐปรับตัวลงท่ามกลางการหมุนเวียนของภาคที่มีการเติบโตสูง และการเพิ่มขึ้นของน้ำมันดิบ",
-      "title_en": "Update: US Equity Indexes Retreat Amid Rotation Out of High-Growth Sectors, Surge in Crude Oil",
-      "summary": "อัปเดต: ดัชนีหุ้นสหรัฐปรับตัวลงท่ามกลางการหมุนเวียนของภาคที่มีการเติบโตสูง และการเพิ่มขึ้นของน้ำมันดิบ",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-retreat-amid-204142032.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T20:41:42Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "อัปเดต: ดัชนีหุ้นสหรัฐปรับตัวลงท่ามกลางการหมุนเวียนของภาคที่มีการเติบโตสูง และการเพิ่มขึ้นของน้ำมันดิบ",
-        "แหล่งข่าวอ้างอิง: MT Newswires (16/10/2026 20:41 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "อัปเดต: ดัชนีหุ้นสหรัฐปรับตัวลงท่ามกลางการหมุนเวียนของภาคที่มีการเติบโตสูง และการเพิ่มขึ้นของน้ำมันดิบ",
-        "อัปเดต: ดัชนีหุ้นสหรัฐปรับตัวลงท่ามกลางการหมุนเวียนของภาคที่มีการเติบโตสูง และการเพิ่มขึ้นของน้ำมันดิบ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Indexes Retreat Amid Rotation Out of High-Growth Sectors, Surge in Crude Oil\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
+      "id": "news-10",
       "title": "ทรัมป์กล่าวว่าทำเนียบขาวไม่ได้สั่งการจำกัด Starlink ในยูเครน",
       "title_en": "Trump says White House didn't order Starlink restrictions in Ukraine",
       "summary": "เจ้าหน้าที่ยูเครนบ่นในสัปดาห์นี้ว่า SpaceX มีการเชื่อมต่ออินเทอร์เน็ตที่จำกัดโดยไม่ต้องแจ้งให้ทราบล่วงหน้า",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/16/trump-denies-musk-claim-he-ordered-starlink-restrictions-in-ukraine.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-16T20:28:10Z",
       "category": "TECH",
       "tickers": [
@@ -203,94 +285,13 @@
       ]
     },
     {
-      "id": "news-8",
-      "title": "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple ทดสอบพลังสัญลักษณ์สถานะของบริษัท",
-      "title_en": "Apple’s $1,999 iPhone Duo puts the company's status-symbol power to the test",
-      "summary": "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple กำลังดึงดูดความต้องการในช่วงต้น เนื่องจากนักวิเคราะห์ประเมินว่า iPhone แบบพับได้สามารถเพิ่มราคาและรายได้ของ iPhone ได้หรือไม่",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/apple-iphone-duo-demand-price.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T18:55:17Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "AAPL"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple กำลังดึงดูดความต้องการในช่วงต้น เนื่องจากนักวิเคราะห์ประเมินว่า iPhone แบบพับได้สามารถเพิ่มราคาและรายได้ของ iPhone ได้หรือไม่",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 18:55 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
-      ],
-      "fullArticle": [
-        "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple ทดสอบพลังสัญลักษณ์สถานะของบริษัท",
-        "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple กำลังดึงดูดความต้องการในช่วงต้น เนื่องจากนักวิเคราะห์ประเมินว่า iPhone แบบพับได้สามารถเพิ่มราคาและรายได้ของ iPhone ได้หรือไม่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple’s $1,999 iPhone Duo puts the company's status-symbol power to the test\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "การวิเคราะห์: เหตุใดการขาดดุล 2 ล้านล้านดอลลาร์และอัตราผลตอบแทนพันธบัตรรัฐบาล 5% จึงกลายเป็นความท้าทายทางเศรษฐกิจที่ใหญ่ที่สุดของอเมริกา",
-      "title_en": "Analysis: Why a $2 trillion deficit and 5% Treasury yields are becoming America's biggest economic challenge",
-      "summary": "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/treasury-yields-deficit-national-debt-ai.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T18:04:20Z",
-      "category": "MACRO",
-      "tickers": [
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 18:04 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
-      ],
-      "fullArticle": [
-        "การวิเคราะห์: เหตุใดการขาดดุล 2 ล้านล้านดอลลาร์และอัตราผลตอบแทนพันธบัตรรัฐบาล 5% จึงกลายเป็นความท้าทายทางเศรษฐกิจที่ใหญ่ที่สุดของอเมริกา",
-        "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Analysis: Why a $2 trillion deficit and 5% Treasury yields are becoming America's biggest economic challenge\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "การขาดดุลงบประมาณของสหรัฐฯ เพิ่มขึ้นเป็นเกือบ 2 ล้านล้านดอลลาร์ในปีงบประมาณ 2026 เพิ่มขึ้น 12% ในปีเดียว",
-      "title_en": "U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year",
-      "summary": "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/us-budget-deficit-2026.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T18:00:15Z",
-      "category": "MACRO",
-      "tickers": [
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 18:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
-      ],
-      "fullArticle": [
-        "การขาดดุลงบประมาณของสหรัฐฯ เพิ่มขึ้นเป็นเกือบ 2 ล้านล้านดอลลาร์ในปีงบประมาณ 2026 เพิ่มขึ้น 12% ในปีเดียว",
-        "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
       "id": "news-11",
       "title": "สหรัฐฯ กดดันจีนเรื่องการเข้าถึงตลาดมาสเตอร์การ์ดและซิตี้กรุ๊ปในการเจรจาทวิภาคีกรุงเทพฯ เจ้าหน้าที่กล่าว",
       "title_en": "U.S. presses China on Mastercard, Citigroup market access in bilateral Bangkok talks, official says",
       "summary": "สหรัฐฯ หยิบยกประเด็นการเข้าถึงตลาดสำหรับมาสเตอร์การ์ดและซิตี้กรุ๊ปในประเทศจีนในระหว่างการประชุมทวิภาคีที่กรุงเทพฯ ในสัปดาห์นี้ เจ้าหน้าที่กระทรวงการคลังสหรัฐฯ กล่าว",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/16/us-china-mastercard-citigroup-market-access.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-16T16:46:18Z",
       "category": "MACRO",
       "tickers": [
@@ -317,7 +318,7 @@
       "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/16/stocks-making-the-biggest-moves-midday-crwv-moga-jbht-aa.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-16T16:29:16Z",
       "category": "MACRO",
       "tickers": [
