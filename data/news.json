@@ -1,48 +1,45 @@
 {
-  "updated_at": "2026-10-17T12:28:34Z",
-  "updated_at_thai": "17 ต.ค. 2569 19:28 น.",
+  "updated_at": "2026-10-17T15:50:38Z",
+  "updated_at_thai": "17 ต.ค. 2569 22:50 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "Dow Jones Futures: S&P 500, Nasdaq ทำลายระดับสำคัญในฐานะ CoreWeave, Dell Dive; เทสลา, สเปซเอ็กซ์, เมต้า ลูม",
-      "title_en": "Dow Jones Futures: S&P 500, Nasdaq Break Key Levels As CoreWeave, Dell Dive; Tesla, SpaceX, Meta Loom",
-      "summary": "Dow Jones Futures: S&P 500, Nasdaq ทำลายระดับสำคัญในฐานะ CoreWeave, Dell Dive; เทสลา, สเปซเอ็กซ์, เมต้า ลูม",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-s%26p-500%2C.html",
-      "time": "20 นาทีที่แล้ว",
-      "publishedAt": "2026-10-17T12:07:54Z",
-      "category": "MACRO",
+      "title": "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
+      "title_en": "AI stocks plunge. Inflation heats up. Where we're still finding opportunities",
+      "summary": "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/17/ai-stocks-plunge-inflation-heats-up-where-were-still-finding-opportunities.html",
+      "time": "8 นาทีที่แล้ว",
+      "publishedAt": "2026-10-17T15:42:34Z",
+      "category": "EARNINGS",
       "tickers": [
-        "META",
-        "TSLA",
         "SPY",
-        "QQQ",
         "DIA"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": true,
       "points": [
-        "Dow Jones Futures: S&P 500, Nasdaq ทำลายระดับสำคัญในฐานะ CoreWeave, Dell Dive; เทสลา, สเปซเอ็กซ์, เมต้า ลูม",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (17/10/2026 12:07 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #SPY #QQQ #DIA"
+        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+        "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:42 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "Dow Jones Futures: S&P 500, Nasdaq ทำลายระดับสำคัญในฐานะ CoreWeave, Dell Dive; เทสลา, สเปซเอ็กซ์, เมต้า ลูม",
-        "Dow Jones Futures: S&P 500, Nasdaq ทำลายระดับสำคัญในฐานะ CoreWeave, Dell Dive; เทสลา, สเปซเอ็กซ์, เมต้า ลูม",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures: S&P 500, Nasdaq Break Key Levels As CoreWeave, Dell Dive; Tesla, SpaceX, Meta Loom\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
+        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AI stocks plunge. Inflation heats up. Where we're still finding opportunities\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "Bending Spoons ต้องการรื้อฟื้นการละทิ้งซอฟต์แวร์ Berkshire กำลังสนับสนุนแผนนี้",
-      "title_en": "Bending Spoons wants to revive software castoffs. Berkshire is backing the plan",
+      "title": "ผู้รวบรวมรายใหม่ของซอฟต์แวร์ได้รับคะแนนความเชื่อมั่นอย่างมากจาก Berkshire",
+      "title_en": "Software’s new consolidator gets big vote of confidence from Berkshire",
       "summary": "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/bending-spoons-wants-to-revive-software-castoffs-berkshire-investing.html",
-      "time": "28 นาทีที่แล้ว",
-      "publishedAt": "2026-10-17T12:00:01Z",
+      "time": "39 นาทีที่แล้ว",
+      "publishedAt": "2026-10-17T15:11:30Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -54,135 +51,246 @@
       "isHero": false,
       "points": [
         "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
-        "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 12:00 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:11 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "Bending Spoons ต้องการรื้อฟื้นการละทิ้งซอฟต์แวร์ Berkshire กำลังสนับสนุนแผนนี้",
+        "ผู้รวบรวมรายใหม่ของซอฟต์แวร์ได้รับคะแนนความเชื่อมั่นอย่างมากจาก Berkshire",
         "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bending Spoons wants to revive software castoffs. Berkshire is backing the plan\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Software’s new consolidator gets big vote of confidence from Berkshire\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-3",
-      "title": "เหตุใดราคาน้ำมันจึงอาจทรงตัวสำหรับ 'ซุปเปอร์พุ่ง': นักวิเคราะห์",
-      "title_en": "Why oil prices could be poised for a 'super spike': Analyst",
-      "summary": "เหตุใดราคาน้ำมันจึงอาจทรงตัวสำหรับ 'ซุปเปอร์พุ่ง': นักวิเคราะห์",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/energy/article/why-oil-prices-could-be-poised-for-a-super-spike-analyst-115927231.html",
-      "time": "29 นาทีที่แล้ว",
-      "publishedAt": "2026-10-17T11:59:27Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "เหตุใดราคาน้ำมันจึงอาจทรงตัวสำหรับ 'ซุปเปอร์พุ่ง': นักวิเคราะห์",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (17/10/2026 11:59 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "เหตุใดราคาน้ำมันจึงอาจทรงตัวสำหรับ 'ซุปเปอร์พุ่ง': นักวิเคราะห์",
-        "เหตุใดราคาน้ำมันจึงอาจทรงตัวสำหรับ 'ซุปเปอร์พุ่ง': นักวิเคราะห์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why oil prices could be poised for a 'super spike': Analyst\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "น้ำมันเพิ่งแตะ 100 ดอลลาร์ต่อบาร์เรล เกิดอะไรขึ้นกับ Bitcoin ในครั้งสุดท้ายที่ราคาน้ำมันแตะสามหลัก?",
-      "title_en": "Oil Just Hit $100 a Barrel. What Happened to Bitcoin the Last Time Oil Prices Hit Three Digits?",
-      "summary": "น้ำมันเพิ่งแตะ 100 ดอลลาร์ต่อบาร์เรล เกิดอะไรขึ้นกับ Bitcoin ในครั้งสุดท้ายที่ราคาน้ำมันแตะสามหลัก?",
-      "source": "24/7 Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/oil-just-hit-100-barrel-113030528.html",
-      "time": "58 นาทีที่แล้ว",
-      "publishedAt": "2026-10-17T11:30:30Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "COIN"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "น้ำมันเพิ่งแตะ 100 ดอลลาร์ต่อบาร์เรล เกิดอะไรขึ้นกับ Bitcoin ในครั้งสุดท้ายที่ราคาน้ำมันแตะสามหลัก?",
-        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (17/10/2026 11:30 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #COIN"
-      ],
-      "fullArticle": [
-        "น้ำมันเพิ่งแตะ 100 ดอลลาร์ต่อบาร์เรล เกิดอะไรขึ้นกับ Bitcoin ในครั้งสุดท้ายที่ราคาน้ำมันแตะสามหลัก?",
-        "น้ำมันเพิ่งแตะ 100 ดอลลาร์ต่อบาร์เรล เกิดอะไรขึ้นกับ Bitcoin ในครั้งสุดท้ายที่ราคาน้ำมันแตะสามหลัก?",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Just Hit $100 a Barrel. What Happened to Bitcoin the Last Time Oil Prices Hit Three Digits?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "ราคาน้ำมันกลับมาเหนือ 100 ดอลลาร์แล้ว ประวัติศาสตร์กล่าวว่าผู้แพ้ตลาดหุ้นรายใหญ่ที่สุดอาจมีส่วนกลับที่ใหญ่ที่สุด",
-      "title_en": "Oil Prices Are Back Above $100. History Says the Biggest Stock Market Loser May Now Offer the Biggest Upside.",
-      "summary": "ราคาน้ำมันกลับมาเหนือ 100 ดอลลาร์แล้ว ประวัติศาสตร์กล่าวว่าผู้แพ้ตลาดหุ้นรายใหญ่ที่สุดอาจมีส่วนกลับที่ใหญ่ที่สุด",
-      "source": "Motley Fool",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-back-above-100-102500097.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-17T10:25:00Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ราคาน้ำมันกลับมาเหนือ 100 ดอลลาร์แล้ว ประวัติศาสตร์กล่าวว่าผู้แพ้ตลาดหุ้นรายใหญ่ที่สุดอาจมีส่วนกลับที่ใหญ่ที่สุด",
-        "แหล่งข่าวอ้างอิง: Motley Fool (17/10/2026 10:25 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ราคาน้ำมันกลับมาเหนือ 100 ดอลลาร์แล้ว ประวัติศาสตร์กล่าวว่าผู้แพ้ตลาดหุ้นรายใหญ่ที่สุดอาจมีส่วนกลับที่ใหญ่ที่สุด",
-        "ราคาน้ำมันกลับมาเหนือ 100 ดอลลาร์แล้ว ประวัติศาสตร์กล่าวว่าผู้แพ้ตลาดหุ้นรายใหญ่ที่สุดอาจมีส่วนกลับที่ใหญ่ที่สุด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Prices Are Back Above $100. History Says the Biggest Stock Market Loser May Now Offer the Biggest Upside.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "หุ้น EV ที่ดีที่สุดของเราในเดือนตุลาคม 2569",
-      "title_en": "Our Pick Of The Best EV Stocks In October 2026",
-      "summary": "หุ้น EV ที่ดีที่สุดของเราในเดือนตุลาคม 2569",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/pick-best-ev-stocks-october-081117615.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-17T08:11:17Z",
+      "title": "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+      "title_en": "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
+      "summary": "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/17/dead-money-for-a-decade-hedge-fund-approach-that-may-trump-bonds.html",
+      "time": "50 นาทีที่แล้ว",
+      "publishedAt": "2026-10-17T15:00:01Z",
       "category": "MACRO",
       "tickers": [
-        "SPY",
-        "QQQ",
         "TLT"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "หุ้น EV ที่ดีที่สุดของเราในเดือนตุลาคม 2569",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (17/10/2026 08:11 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+        "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
+        "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
       ],
       "fullArticle": [
-        "หุ้น EV ที่ดีที่สุดของเราในเดือนตุลาคม 2569",
-        "หุ้น EV ที่ดีที่สุดของเราในเดือนตุลาคม 2569",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Our Pick Of The Best EV Stocks In October 2026\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+        "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
+      "title_en": "ExxonMobil Is Up 49% in 2026 With Brent Near $110. Here’s What the Stock Could Be Worth When Oil Cools",
+      "summary": "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
+      "source": "TIKR",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-49-2026-brent-near-141417110.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T14:14:17Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
+        "แหล่งข่าวอ้างอิง: TIKR (17/10/2026 14:14 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM"
+      ],
+      "fullArticle": [
+        "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
+        "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"ExxonMobil Is Up 49% in 2026 With Brent Near $110. Here’s What the Stock Could Be Worth When Oil Cools\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
+      "title_en": "3 Canadian Dividend Stocks With Up To 3% Yield",
+      "summary": "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-dividend-stocks-3-141154802.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T14:11:54Z",
+      "category": "MACRO",
+      "tickers": [
+        "SCHD"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (17/10/2026 14:11 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SCHD"
+      ],
+      "fullArticle": [
+        "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
+        "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Canadian Dividend Stocks With Up To 3% Yield\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq ทำลายระดับสำคัญ; รายได้จาก Meta และ SpaceX จะช่วย AI ได้หรือไม่",
+      "title_en": "Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Key Levels; Will Meta, SpaceX Earnings Save AI?",
+      "summary": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq ทำลายระดับสำคัญ; รายได้จาก Meta และ SpaceX จะช่วย AI ได้หรือไม่",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-what-to-do.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T13:00:31Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "META",
+        "SPY",
+        "QQQ",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq ทำลายระดับสำคัญ; รายได้จาก Meta และ SpaceX จะช่วย AI ได้หรือไม่",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (17/10/2026 13:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #SPY #QQQ #DIA"
+      ],
+      "fullArticle": [
+        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq ทำลายระดับสำคัญ; รายได้จาก Meta และ SpaceX จะช่วย AI ได้หรือไม่",
+        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq ทำลายระดับสำคัญ; รายได้จาก Meta และ SpaceX จะช่วย AI ได้หรือไม่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Key Levels; Will Meta, SpaceX Earnings Save AI?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-7",
+      "title": "ราคาดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
+      "title_en": "What High Diesel Prices Mean for These 5 Energy Stocks",
+      "summary": "ราคาดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
+      "source": "Motley Fool",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/high-diesel-prices-mean-5-125000931.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T12:50:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ราคาดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
+        "แหล่งข่าวอ้างอิง: Motley Fool (17/10/2026 12:50 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "ราคาดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
+        "ราคาดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"What High Diesel Prices Mean for These 5 Energy Stocks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "น้ำมันพุ่งทะลุ 110 ดอลลาร์ ขณะที่หุ้นเทคโนโลยีขาดทุน 1 ล้านล้านดอลลาร์ในหนึ่งวัน",
+      "title_en": "Oil Topped $110 as Tech Stocks Lost $1 Trillion in a Day",
+      "summary": "น้ำมันพุ่งทะลุ 110 ดอลลาร์ ขณะที่หุ้นเทคโนโลยีขาดทุน 1 ล้านล้านดอลลาร์ในหนึ่งวัน",
+      "source": "24/7 Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-topped-110-tech-stocks-124517039.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T12:45:17Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "QQQ"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "น้ำมันพุ่งทะลุ 110 ดอลลาร์ ขณะที่หุ้นเทคโนโลยีขาดทุน 1 ล้านล้านดอลลาร์ในหนึ่งวัน",
+        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (17/10/2026 12:45 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
+      ],
+      "fullArticle": [
+        "น้ำมันพุ่งทะลุ 110 ดอลลาร์ ขณะที่หุ้นเทคโนโลยีขาดทุน 1 ล้านล้านดอลลาร์ในหนึ่งวัน",
+        "น้ำมันพุ่งทะลุ 110 ดอลลาร์ ขณะที่หุ้นเทคโนโลยีขาดทุน 1 ล้านล้านดอลลาร์ในหนึ่งวัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Topped $110 as Tech Stocks Lost $1 Trillion in a Day\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+      "title_en": "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
+      "summary": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+      "source": "24/7 Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/25-000-front-250-more-123212635.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T12:32:12Z",
+      "category": "MACRO",
+      "tickers": [
+        "VTI"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (17/10/2026 12:32 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #VTI"
+      ],
+      "fullArticle": [
+        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
+      "title": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+      "title_en": "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
+      "summary": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+      "source": "Moby",
+      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/anthropic-wants-ipo-york-city-120200718.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T12:02:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+        "แหล่งข่าวอ้างอิง: Moby (17/10/2026 12:02 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic Wants an IPO. New York City Wants It to Slow Down.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
       "title": "บางบริษัทมอบ AI ให้กับทุกคน ซีอีโอคนนี้กำลังทำสิ่งที่ตรงกันข้าม",
       "title_en": "Some companies give AI to everyone. This CEO is doing the opposite",
       "summary": "Ben Chisell ซีอีโอของ Paysend จำกัดเครื่องมือ AI ไว้เฉพาะกับบริษัทที่มีประสิทธิภาพสูงสุด เนื่องจากบริษัทอื่นๆ ในสหราชอาณาจักรผลักดันให้มีการเปิดตัวสถานที่ทำงานที่กว้างขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/ai-workplace-tokenmaxxing-paysend.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T05:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -205,13 +313,13 @@
       ]
     },
     {
-      "id": "news-8",
+      "id": "news-12",
       "title": "การขาดดุลงบประมาณของสหรัฐฯ เพิ่มขึ้นเป็นเกือบ 2 ล้านล้านดอลลาร์ในปีงบประมาณ 2026 เพิ่มขึ้น 12% ในปีเดียว",
       "title_en": "U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year",
       "summary": "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/16/us-budget-deficit-2026.html",
-      "time": "13 ชั่วโมงที่แล้ว",
+      "time": "17 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-16T22:34:29Z",
       "category": "MACRO",
       "tickers": [
@@ -229,116 +337,6 @@
         "การขาดดุลงบประมาณของสหรัฐฯ เพิ่มขึ้นเป็นเกือบ 2 ล้านล้านดอลลาร์ในปีงบประมาณ 2026 เพิ่มขึ้น 12% ในปีเดียว",
         "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "การวิเคราะห์: เหตุใดการขาดดุล 2 ล้านล้านดอลลาร์และอัตราผลตอบแทนพันธบัตรรัฐบาล 5% จึงกลายเป็นความท้าทายทางเศรษฐกิจที่ใหญ่ที่สุดของอเมริกา",
-      "title_en": "Analysis: Why a $2 trillion deficit and 5% Treasury yields are becoming America's biggest economic challenge",
-      "summary": "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/15/treasury-yields-deficit-national-debt-ai.html",
-      "time": "13 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T22:33:05Z",
-      "category": "MACRO",
-      "tickers": [
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 22:33 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
-      ],
-      "fullArticle": [
-        "การวิเคราะห์: เหตุใดการขาดดุล 2 ล้านล้านดอลลาร์และอัตราผลตอบแทนพันธบัตรรัฐบาล 5% จึงกลายเป็นความท้าทายทางเศรษฐกิจที่ใหญ่ที่สุดของอเมริกา",
-        "อัตราผลตอบแทนของกระทรวงการคลังที่สูงกว่า 5% กำลังเพิ่มต้นทุนการกู้ยืมสำหรับครัวเรือนและรัฐบาลกลาง โดยเน้นถึงความท้าทายในการจัดหาเงินทุนที่ขาดดุล 2 ล้านล้านดอลลาร์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Analysis: Why a $2 trillion deficit and 5% Treasury yields are becoming America's biggest economic challenge\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple ทดสอบพลังสัญลักษณ์สถานะของบริษัท",
-      "title_en": "Apple’s $1,999 iPhone Duo puts the company's status-symbol power to the test",
-      "summary": "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple กำลังดึงดูดความต้องการในช่วงต้น เนื่องจากนักวิเคราะห์ประเมินว่า iPhone แบบพับได้สามารถเพิ่มราคาและรายได้ของ iPhone ได้หรือไม่",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/apple-iphone-duo-demand-price.html",
-      "time": "13 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T22:31:26Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "AAPL"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple กำลังดึงดูดความต้องการในช่วงต้น เนื่องจากนักวิเคราะห์ประเมินว่า iPhone แบบพับได้สามารถเพิ่มราคาและรายได้ของ iPhone ได้หรือไม่",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 22:31 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
-      ],
-      "fullArticle": [
-        "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple ทดสอบพลังสัญลักษณ์สถานะของบริษัท",
-        "iPhone Duo มูลค่า 1,999 ดอลลาร์ของ Apple กำลังดึงดูดความต้องการในช่วงต้น เนื่องจากนักวิเคราะห์ประเมินว่า iPhone แบบพับได้สามารถเพิ่มราคาและรายได้ของ iPhone ได้หรือไม่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple’s $1,999 iPhone Duo puts the company's status-symbol power to the test\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "5 ประเด็นเรื่องเงินกลางภาค: พรรคเดโมแครตมีเงินสดของผู้สมัคร รีพับลิกันก็มีอีลอน มัสก์",
-      "title_en": "5 midterm money takeaways: Democrats have candidate cash. Republicans have Elon Musk",
-      "summary": "พรรคเดโมแครตยกย่องพรรครีพับลิกันในการแข่งขันรัฐสภาครั้งสำคัญๆ ในขณะที่ Elon Musk ให้ทุนสนับสนุน Ken Paxton ในเท็กซัสและกลุ่ม GOP ที่สอดคล้องกับ Trump",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/midterm-election-fundraising-elon-musk.html",
-      "time": "14 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T21:49:13Z",
-      "category": "TECH",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "พรรคเดโมแครตยกย่องพรรครีพับลิกันในการแข่งขันรัฐสภาครั้งสำคัญๆ ในขณะที่ Elon Musk ให้ทุนสนับสนุน Ken Paxton ในเท็กซัสและกลุ่ม GOP ที่สอดคล้องกับ Trump",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 21:49 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "5 ประเด็นเรื่องเงินกลางภาค: พรรคเดโมแครตมีเงินสดของผู้สมัคร รีพับลิกันก็มีอีลอน มัสก์",
-        "พรรคเดโมแครตยกย่องพรรครีพับลิกันในการแข่งขันรัฐสภาครั้งสำคัญๆ ในขณะที่ Elon Musk ให้ทุนสนับสนุน Ken Paxton ในเท็กซัสและกลุ่ม GOP ที่สอดคล้องกับ Trump",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"5 midterm money takeaways: Democrats have candidate cash. Republicans have Elon Musk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "ทรัมป์กล่าวว่าทำเนียบขาวไม่ได้สั่งการจำกัด Starlink ในยูเครน",
-      "title_en": "Trump says White House didn't order Starlink restrictions in Ukraine",
-      "summary": "เจ้าหน้าที่ของยูเครนบ่นในสัปดาห์นี้ว่า SpaceX มีการเชื่อมต่ออินเทอร์เน็ตที่จำกัดโดยไม่ต้องแจ้งให้ทราบล่วงหน้า",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/16/trump-denies-musk-claim-he-ordered-starlink-restrictions-in-ukraine.html",
-      "time": "16 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-16T20:28:10Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "เจ้าหน้าที่ของยูเครนบ่นในสัปดาห์นี้ว่า SpaceX มีการเชื่อมต่ออินเทอร์เน็ตที่จำกัดโดยไม่ต้องแจ้งให้ทราบล่วงหน้า",
-        "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 20:28 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "ทรัมป์กล่าวว่าทำเนียบขาวไม่ได้สั่งการจำกัด Starlink ในยูเครน",
-        "เจ้าหน้าที่ของยูเครนบ่นในสัปดาห์นี้ว่า SpaceX มีการเชื่อมต่ออินเทอร์เน็ตที่จำกัดโดยไม่ต้องแจ้งให้ทราบล่วงหน้า",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Trump says White House didn't order Starlink restrictions in Ukraine\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
