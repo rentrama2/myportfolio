@@ -1,16 +1,74 @@
 {
-  "updated_at": "2026-10-17T20:31:30Z",
-  "updated_at_thai": "18 ต.ค. 2569 03:31 น.",
+  "updated_at": "2026-10-17T22:37:38Z",
+  "updated_at_thai": "18 ต.ค. 2569 05:37 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มช็อกและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
+      "title": "หุ้นแคนาดา 3 ตัวที่มี ROE มากกว่า 27%",
+      "title_en": "3 Canadian Stocks With ROE Over 27%",
+      "summary": "หุ้นแคนาดา 3 ตัวที่มี ROE มากกว่า 27%",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-stocks-roe-over-221100695.html",
+      "time": "26 นาทีที่แล้ว",
+      "publishedAt": "2026-10-17T22:11:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "หุ้นแคนาดา 3 ตัวที่มี ROE มากกว่า 27%",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (17/10/2026 22:11 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "หุ้นแคนาดา 3 ตัวที่มี ROE มากกว่า 27%",
+        "หุ้นแคนาดา 3 ตัวที่มี ROE มากกว่า 27%",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Canadian Stocks With ROE Over 27%\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "ทรัพยากร Aclara และหุ้น Rare Earth ของแคนาดาอีก 2 รายการที่น่าจับตามอง",
+      "title_en": "Aclara Resources And 2 Other Canadian Rare Earth Stocks To Watch",
+      "summary": "ทรัพยากร Aclara และหุ้น Rare Earth ของแคนาดาอีก 2 รายการที่น่าจับตามอง",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/aclara-resources-2-other-canadian-210851755.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T21:08:51Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ทรัพยากร Aclara และหุ้น Rare Earth ของแคนาดาอีก 2 รายการที่น่าจับตามอง",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (17/10/2026 21:08 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "ทรัพยากร Aclara และหุ้น Rare Earth ของแคนาดาอีก 2 รายการที่น่าจับตามอง",
+        "ทรัพยากร Aclara และหุ้น Rare Earth ของแคนาดาอีก 2 รายการที่น่าจับตามอง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Aclara Resources And 2 Other Canadian Rare Earth Stocks To Watch\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มตกตะลึงและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
       "title_en": "Beyond Crude: Why Refinery Bottlenecks Are Driving Pump Shock and Could Dampen U.S. Growth",
-      "summary": "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มช็อกและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
+      "summary": "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มตกตะลึงและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
       "source": "Barrons.com",
       "sourceUrl": "https://finance.yahoo.com/m/f4e82b74-5332-3225-90d9-8bbc309bc257/beyond-crude%3A-why-refinery.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T18:51:00Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -19,26 +77,26 @@
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
+      "isHero": false,
       "points": [
-        "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มช็อกและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
+        "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มตกตะลึงและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
         "แหล่งข่าวอ้างอิง: Barrons.com (17/10/2026 18:51 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มช็อกและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
-        "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มช็อกและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
+        "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มตกตะลึงและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
+        "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มตกตะลึงและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Beyond Crude: Why Refinery Bottlenecks Are Driving Pump Shock and Could Dampen U.S. Growth\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-2",
-      "title": "เชฟรอนหรือเป๊ปซี่โค: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
+      "id": "news-4",
+      "title": "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
       "title_en": "Chevron or PepsiCo: Only One Gets My Dividend Dollars for the Next 20 Years",
-      "summary": "เชฟรอนหรือเป๊ปซี่โค: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
+      "summary": "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
       "source": "TIKR",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/chevron-pepsico-only-one-gets-160741715.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T16:07:41Z",
       "category": "MACRO",
       "tickers": [
@@ -49,24 +107,24 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "เชฟรอนหรือเป๊ปซี่โค: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
+        "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
         "แหล่งข่าวอ้างอิง: TIKR (17/10/2026 16:07 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX #SCHD"
       ],
       "fullArticle": [
-        "เชฟรอนหรือเป๊ปซี่โค: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
-        "เชฟรอนหรือเป๊ปซี่โค: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
+        "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
+        "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Chevron or PepsiCo: Only One Gets My Dividend Dollars for the Next 20 Years\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-5",
       "title": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
       "title_en": "Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
       "summary": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
       "source": "Investor's Business Daily",
       "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-what-to-do.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:51:51Z",
       "category": "EARNINGS",
       "tickers": [
@@ -90,13 +148,13 @@
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-6",
       "title": "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
       "title_en": "AI stocks plunge. Inflation heats up. Where we're still finding opportunities",
       "summary": "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/17/ai-stocks-plunge-inflation-heats-up-where-were-still-finding-opportunities.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:42:34Z",
       "category": "EARNINGS",
       "tickers": [
@@ -118,13 +176,13 @@
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-7",
       "title": "ผู้รวบรวมรายใหม่ของซอฟต์แวร์ได้รับคะแนนความเชื่อมั่นอย่างมากจาก Berkshire",
       "title_en": "Software’s new consolidator gets big vote of confidence from Berkshire",
       "summary": "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/bending-spoons-wants-to-revive-software-castoffs-berkshire-investing.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:11:30Z",
       "category": "TECH",
       "tickers": [
@@ -147,13 +205,13 @@
       ]
     },
     {
-      "id": "news-6",
+      "id": "news-8",
       "title": "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
       "title_en": "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
       "summary": "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/dead-money-for-a-decade-hedge-fund-approach-that-may-trump-bonds.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:00:01Z",
       "category": "MACRO",
       "tickers": [
@@ -174,13 +232,13 @@
       ]
     },
     {
-      "id": "news-7",
+      "id": "news-9",
       "title": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
       "title_en": "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
       "summary": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
       "source": "Moby",
       "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/anthropic-wants-ipo-york-city-120200718.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T14:48:07Z",
       "category": "MACRO",
       "tickers": [
@@ -203,67 +261,13 @@
       ]
     },
     {
-      "id": "news-8",
-      "title": "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
-      "title_en": "ExxonMobil Is Up 49% in 2026 With Brent Near $110. Here’s What the Stock Could Be Worth When Oil Cools",
-      "summary": "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
-      "source": "TIKR",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-49-2026-brent-near-141417110.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-17T14:14:17Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
-        "แหล่งข่าวอ้างอิง: TIKR (17/10/2026 14:14 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM"
-      ],
-      "fullArticle": [
-        "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
-        "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"ExxonMobil Is Up 49% in 2026 With Brent Near $110. Here’s What the Stock Could Be Worth When Oil Cools\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
-      "title_en": "3 Canadian Dividend Stocks With Up To 3% Yield",
-      "summary": "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-dividend-stocks-3-141154802.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-17T14:11:54Z",
-      "category": "MACRO",
-      "tickers": [
-        "SCHD"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (17/10/2026 14:11 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SCHD"
-      ],
-      "fullArticle": [
-        "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
-        "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Canadian Dividend Stocks With Up To 3% Yield\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
       "id": "news-10",
       "title": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
       "title_en": "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
       "summary": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/25-000-front-250-more-123212635.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T12:32:12Z",
       "category": "MACRO",
       "tickers": [
@@ -290,7 +294,7 @@
       "summary": "Ben Chisell ซีอีโอของ Paysend จำกัดเครื่องมือ AI ไว้เฉพาะกับบริษัทที่มีประสิทธิภาพสูงสุด เนื่องจากบริษัทอื่นๆ ในสหราชอาณาจักรผลักดันให้มีการเปิดตัวสถานที่ทำงานที่กว้างขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/ai-workplace-tokenmaxxing-paysend.html",
-      "time": "15 ชั่วโมงที่แล้ว",
+      "time": "17 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T05:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -319,7 +323,7 @@
       "summary": "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/16/us-budget-deficit-2026.html",
-      "time": "21 ชั่วโมงที่แล้ว",
+      "time": "1 วันที่แล้ว",
       "publishedAt": "2026-10-16T22:34:29Z",
       "category": "MACRO",
       "tickers": [
