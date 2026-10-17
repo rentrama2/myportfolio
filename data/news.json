@@ -1,16 +1,74 @@
 {
-  "updated_at": "2026-10-17T15:50:38Z",
-  "updated_at_thai": "17 ต.ค. 2569 22:50 น.",
+  "updated_at": "2026-10-17T18:07:14Z",
+  "updated_at_thai": "18 ต.ค. 2569 01:07 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
+      "title_en": "Chevron or PepsiCo: Only One Gets My Dividend Dollars for the Next 20 Years",
+      "summary": "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
+      "source": "TIKR",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/chevron-pepsico-only-one-gets-160741715.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T16:07:41Z",
+      "category": "MACRO",
+      "tickers": [
+        "CVX",
+        "SCHD"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
+        "แหล่งข่าวอ้างอิง: TIKR (17/10/2026 16:07 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX #SCHD"
+      ],
+      "fullArticle": [
+        "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
+        "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Chevron or PepsiCo: Only One Gets My Dividend Dollars for the Next 20 Years\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
+      "title_en": "Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
+      "summary": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-what-to-do.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T15:51:51Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "META",
+        "SPY",
+        "QQQ",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (17/10/2026 15:51 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #SPY #QQQ #DIA"
+      ],
+      "fullArticle": [
+        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
+        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
       "title": "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
       "title_en": "AI stocks plunge. Inflation heats up. Where we're still finding opportunities",
       "summary": "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/17/ai-stocks-plunge-inflation-heats-up-where-were-still-finding-opportunities.html",
-      "time": "8 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:42:34Z",
       "category": "EARNINGS",
       "tickers": [
@@ -19,7 +77,7 @@
       ],
       "sentiment": "BEARISH",
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
         "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:42 UTC)",
@@ -32,13 +90,13 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-4",
       "title": "ผู้รวบรวมรายใหม่ของซอฟต์แวร์ได้รับคะแนนความเชื่อมั่นอย่างมากจาก Berkshire",
       "title_en": "Software’s new consolidator gets big vote of confidence from Berkshire",
       "summary": "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/bending-spoons-wants-to-revive-software-castoffs-berkshire-investing.html",
-      "time": "39 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:11:30Z",
       "category": "TECH",
       "tickers": [
@@ -61,13 +119,13 @@
       ]
     },
     {
-      "id": "news-3",
-      "title": "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+      "id": "news-5",
+      "title": "'เงินตาย' มานานนับทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
       "title_en": "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
       "summary": "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/dead-money-for-a-decade-hedge-fund-approach-that-may-trump-bonds.html",
-      "time": "50 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:00:01Z",
       "category": "MACRO",
       "tickers": [
@@ -82,19 +140,48 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
       ],
       "fullArticle": [
-        "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+        "'เงินตาย' มานานนับทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
         "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-6",
+      "title": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+      "title_en": "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
+      "summary": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+      "source": "Moby",
+      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/anthropic-wants-ipo-york-city-120200718.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T14:48:07Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+        "แหล่งข่าวอ้างอิง: Moby (17/10/2026 14:48 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic Wants an IPO. New York City Wants It to Slow Down.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
       "title": "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
       "title_en": "ExxonMobil Is Up 49% in 2026 With Brent Near $110. Here’s What the Stock Could Be Worth When Oil Cools",
       "summary": "ExxonMobil เพิ่มขึ้น 49% ในปี 2569 โดยมี Brent ใกล้ 110 ดอลลาร์ นี่คือสิ่งที่อาจมีมูลค่าในสต็อกเมื่อน้ำมันเย็นตัวลง",
       "source": "TIKR",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-49-2026-brent-near-141417110.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T14:14:17Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -115,13 +202,13 @@
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-8",
       "title": "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
       "title_en": "3 Canadian Dividend Stocks With Up To 3% Yield",
       "summary": "หุ้นปันผลของแคนาดา 3 ตัวที่ให้ผลตอบแทนสูงถึง 3%",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-dividend-stocks-3-141154802.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T14:11:54Z",
       "category": "MACRO",
       "tickers": [
@@ -142,43 +229,13 @@
       ]
     },
     {
-      "id": "news-6",
-      "title": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq ทำลายระดับสำคัญ; รายได้จาก Meta และ SpaceX จะช่วย AI ได้หรือไม่",
-      "title_en": "Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Key Levels; Will Meta, SpaceX Earnings Save AI?",
-      "summary": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq ทำลายระดับสำคัญ; รายได้จาก Meta และ SpaceX จะช่วย AI ได้หรือไม่",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-what-to-do.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-17T13:00:31Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "META",
-        "SPY",
-        "QQQ",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq ทำลายระดับสำคัญ; รายได้จาก Meta และ SpaceX จะช่วย AI ได้หรือไม่",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (17/10/2026 13:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #SPY #QQQ #DIA"
-      ],
-      "fullArticle": [
-        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq ทำลายระดับสำคัญ; รายได้จาก Meta และ SpaceX จะช่วย AI ได้หรือไม่",
-        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq ทำลายระดับสำคัญ; รายได้จาก Meta และ SpaceX จะช่วย AI ได้หรือไม่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Key Levels; Will Meta, SpaceX Earnings Save AI?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "ราคาดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
+      "id": "news-9",
+      "title": "ราคาน้ำมันดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
       "title_en": "What High Diesel Prices Mean for These 5 Energy Stocks",
-      "summary": "ราคาดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
+      "summary": "ราคาน้ำมันดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
       "source": "Motley Fool",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/high-diesel-prices-mean-5-125000931.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T12:50:00Z",
       "category": "MACRO",
       "tickers": [
@@ -190,51 +247,24 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ราคาดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
+        "ราคาน้ำมันดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
         "แหล่งข่าวอ้างอิง: Motley Fool (17/10/2026 12:50 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "ราคาดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
-        "ราคาดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
+        "ราคาน้ำมันดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
+        "ราคาน้ำมันดีเซลที่สูงหมายถึงอะไรสำหรับหุ้นพลังงานทั้ง 5 นี้",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"What High Diesel Prices Mean for These 5 Energy Stocks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-8",
-      "title": "น้ำมันพุ่งทะลุ 110 ดอลลาร์ ขณะที่หุ้นเทคโนโลยีขาดทุน 1 ล้านล้านดอลลาร์ในหนึ่งวัน",
-      "title_en": "Oil Topped $110 as Tech Stocks Lost $1 Trillion in a Day",
-      "summary": "น้ำมันพุ่งทะลุ 110 ดอลลาร์ ขณะที่หุ้นเทคโนโลยีขาดทุน 1 ล้านล้านดอลลาร์ในหนึ่งวัน",
-      "source": "24/7 Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-topped-110-tech-stocks-124517039.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-17T12:45:17Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "QQQ"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "น้ำมันพุ่งทะลุ 110 ดอลลาร์ ขณะที่หุ้นเทคโนโลยีขาดทุน 1 ล้านล้านดอลลาร์ในหนึ่งวัน",
-        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (17/10/2026 12:45 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
-      ],
-      "fullArticle": [
-        "น้ำมันพุ่งทะลุ 110 ดอลลาร์ ขณะที่หุ้นเทคโนโลยีขาดทุน 1 ล้านล้านดอลลาร์ในหนึ่งวัน",
-        "น้ำมันพุ่งทะลุ 110 ดอลลาร์ ขณะที่หุ้นเทคโนโลยีขาดทุน 1 ล้านล้านดอลลาร์ในหนึ่งวัน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Topped $110 as Tech Stocks Lost $1 Trillion in a Day\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+      "id": "news-10",
+      "title": "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
       "title_en": "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
-      "summary": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+      "summary": "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/25-000-front-250-more-123212635.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T12:32:12Z",
       "category": "MACRO",
       "tickers": [
@@ -244,43 +274,14 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
         "แหล่งข่าวอ้างอิง: 24/7 Wall St. (17/10/2026 12:32 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #VTI"
       ],
       "fullArticle": [
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-      "title_en": "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
-      "summary": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-      "source": "Moby",
-      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/anthropic-wants-ipo-york-city-120200718.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-17T12:02:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-        "แหล่งข่าวอ้างอิง: Moby (17/10/2026 12:02 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic Wants an IPO. New York City Wants It to Slow Down.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
@@ -290,7 +291,7 @@
       "summary": "Ben Chisell ซีอีโอของ Paysend จำกัดเครื่องมือ AI ไว้เฉพาะกับบริษัทที่มีประสิทธิภาพสูงสุด เนื่องจากบริษัทอื่นๆ ในสหราชอาณาจักรผลักดันให้มีการเปิดตัวสถานที่ทำงานที่กว้างขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/ai-workplace-tokenmaxxing-paysend.html",
-      "time": "10 ชั่วโมงที่แล้ว",
+      "time": "13 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T05:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -319,7 +320,7 @@
       "summary": "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/16/us-budget-deficit-2026.html",
-      "time": "17 ชั่วโมงที่แล้ว",
+      "time": "19 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-16T22:34:29Z",
       "category": "MACRO",
       "tickers": [
