@@ -2072,6 +2072,26 @@
             transition: height 0.6s ease;
             box-shadow: 0 2px 4px rgba(16, 185, 129, 0.25);
         }
+        /* --- Custom utility classes not in Bootstrap 5.3 --- */
+        /* Purple badge for FIRE milestone */
+        .bg-purple { background-color: #7c3aed !important; }
+        /* Decimal spacing utilities (all-sided padding) */
+        .p-0\.5  { padding: 0.125rem !important; }
+        .p-1\.5  { padding: 0.375rem !important; }
+        .p-2\.5  { padding: 0.625rem !important; }
+        /* Decimal spacing utilities (directional) */
+        .py-0\.5 { padding-top: 0.125rem !important; padding-bottom: 0.125rem !important; }
+        .py-1\.5 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
+        .py-2\.5 { padding-top: 0.625rem !important; padding-bottom: 0.625rem !important; }
+        .px-2\.5 { padding-left: 0.625rem !important; padding-right: 0.625rem !important; }
+        /* Decimal gap utilities */
+        .gap-1\.5 { gap: 0.375rem !important; }
+        .gap-2\.5 { gap: 0.625rem !important; }
+        /* Shadow utilities missing from Bootstrap 5.3 */
+        .shadow-2xs { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05) !important; }
+        .shadow-xs  { box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1) !important; }
+        [data-bs-theme="dark"] .shadow-2xs { box-shadow: 0 1px 2px 0 rgba(0,0,0,.25) !important; }
+        [data-bs-theme="dark"] .shadow-xs  { box-shadow: 0 1px 3px 0 rgba(0,0,0,.3), 0 1px 2px -1px rgba(0,0,0,.2) !important; }
     </style>
 </head>
 <body class="p-2 p-md-3">
@@ -8462,19 +8482,21 @@
             if (!tbody) return;
 
             let html = '';
-            data.yearlyData.forEach(row => {
+            data.yearlyData.forEach((row, i) => {
                 const isFireYear = (data.fireYear === row.year);
                 const isMilestone = (row.year % 5 === 0) || isFireYear;
                 const rowBg = isFireYear ? 'background-color: rgba(168, 85, 247, 0.08);' : (isMilestone ? 'background-color: rgba(59, 130, 246, 0.03);' : '');
+                // Use array index (i) to safely get previous row — avoids negative index bug when year=1
+                const prevRow = i > 0 ? data.yearlyData[i - 1] : null;
 
                 let milestoneBadge = '';
                 if (isFireYear) {
                     milestoneBadge = '<span class="badge bg-purple text-white">🏆 FIRE แตะเป้า!</span>';
-                } else if (row.portfolio >= 10000000 && (!data.yearlyData[row.year - 2] || data.yearlyData[row.year - 2].portfolio < 10000000)) {
+                } else if (row.portfolio >= 10000000 && (!prevRow || prevRow.portfolio < 10000000)) {
                     milestoneBadge = '<span class="badge bg-primary text-white">💎 10 ล้าน</span>';
-                } else if (row.portfolio >= 5000000 && (!data.yearlyData[row.year - 2] || data.yearlyData[row.year - 2].portfolio < 5000000)) {
+                } else if (row.portfolio >= 5000000 && (!prevRow || prevRow.portfolio < 5000000)) {
                     milestoneBadge = '<span class="badge bg-success text-white">🌿 5 ล้าน</span>';
-                } else if (row.portfolio >= 1000000 && (!data.yearlyData[row.year - 2] || data.yearlyData[row.year - 2].portfolio < 1000000)) {
+                } else if (row.portfolio >= 1000000 && (!prevRow || prevRow.portfolio < 1000000)) {
                     milestoneBadge = '<span class="badge bg-info text-white">🌱 1 ล้านแรก</span>';
                 } else if (row.year % 5 === 0) {
                     milestoneBadge = `<span class="badge bg-light text-muted border">ครบ ${row.year} ปี</span>`;
