@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-18T12:57:35Z",
-  "updated_at_thai": "18 ต.ค. 2569 19:57 น.",
+  "updated_at": "2026-10-18T13:14:23Z",
+  "updated_at_thai": "18 ต.ค. 2569 20:14 น.",
   "news_count": 12,
   "news": [
     {
@@ -10,7 +10,7 @@
       "summary": "Meta, General Motors, สายการบินหลัก และบริษัทอื่นๆ จะรายงานผลประกอบการในสัปดาห์นี้ นี่คือสิ่งที่นักวิเคราะห์คาดการณ์และสิ่งที่เกิดขึ้นในอดีต",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/18/meta-tesla-netflix-earnings-preview.html",
-      "time": "16 นาทีที่แล้ว",
+      "time": "33 นาทีที่แล้ว",
       "publishedAt": "2026-10-18T12:41:18Z",
       "category": "EARNINGS",
       "tickers": [
@@ -38,7 +38,7 @@
       "summary": "Dow Jones Futures Loom หลังจาก S&P 500, Nasdaq ทะลุแนวรับ; Meta จะช่วย AI ได้หรือไม่?",
       "source": "Investor's Business Daily",
       "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures-loom-after.html",
-      "time": "21 นาทีที่แล้ว",
+      "time": "38 นาทีที่แล้ว",
       "publishedAt": "2026-10-18T12:36:15Z",
       "category": "TECH",
       "tickers": [
@@ -68,7 +68,7 @@
       "summary": "การผลักดันไปป์ไลน์ของการวิเคราะห์ - คาร์นีย์ไม่น่าจะทำให้งานน้ำมันของแคนาดากลับมาเฟื่องฟูได้",
       "source": "Reuters",
       "sourceUrl": "https://finance.yahoo.com/news/analysis-carney-pipeline-push-unlikely-121447010.html",
-      "time": "26 นาทีที่แล้ว",
+      "time": "43 นาทีที่แล้ว",
       "publishedAt": "2026-10-18T12:31:07Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -96,7 +96,7 @@
       "summary": "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/18/ai-wearables-privacy-wiretap-laws.html",
-      "time": "57 นาทีที่แล้ว",
+      "time": "1 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T12:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -125,7 +125,7 @@
       "summary": "3 หุ้นพลังงานของสหรัฐฯ ที่สัมผัสโดยตรงกับราคาก๊าซธรรมชาติและน้ำมันที่สูงขึ้น",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/3-u-energy-stocks-direct-110932424.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T11:09:32Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -153,7 +153,7 @@
       "summary": "มูลค่ายุติธรรมของหุ้น ExxonMobil (XOM) ขยับสูงขึ้นเนื่องจากนักวิเคราะห์ปรับแนวโน้มผลประกอบการใหม่",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-xom-stock-fair-value-081256601.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T08:12:56Z",
       "category": "EARNINGS",
       "tickers": [
@@ -180,7 +180,7 @@
       "summary": "นักลงทุนชาวอังกฤษเดิมพันน้ำมันในทะเลเหนือ",
       "source": "The Telegraph",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/british-investor-betting-north-sea-080000637.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T08:00:00Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -205,7 +205,7 @@
       "id": "news-8",
       "title": "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
       "title_en": "AI stocks plunge. Inflation heats up. Where we're still finding opportunities",
-      "summary": "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนนอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+      "summary": "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/17/ai-stocks-plunge-inflation-heats-up-where-were-still-finding-opportunities.html",
       "time": "21 ชั่วโมงที่แล้ว",
@@ -219,13 +219,13 @@
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนนอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
         "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:42 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
         "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
-        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนนอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AI stocks plunge. Inflation heats up. Where we're still finding opportunities\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
@@ -236,7 +236,7 @@
       "summary": "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/bending-spoons-wants-to-revive-software-castoffs-berkshire-investing.html",
-      "time": "21 ชั่วโมงที่แล้ว",
+      "time": "22 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:11:30Z",
       "category": "TECH",
       "tickers": [
@@ -265,7 +265,7 @@
       "summary": "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/dead-money-for-a-decade-hedge-fund-approach-that-may-trump-bonds.html",
-      "time": "21 ชั่วโมงที่แล้ว",
+      "time": "22 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:00:01Z",
       "category": "MACRO",
       "tickers": [
@@ -316,9 +316,9 @@
     },
     {
       "id": "news-12",
-      "title": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+      "title": "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
       "title_en": "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
-      "summary": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+      "summary": "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/25-000-front-250-more-123212635.html",
       "time": "1 วันที่แล้ว",
@@ -331,13 +331,13 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
         "แหล่งข่าวอ้างอิง: 24/7 Wall St. (17/10/2026 12:32 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #VTI"
       ],
       "fullArticle": [
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
