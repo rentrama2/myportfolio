@@ -4520,7 +4520,7 @@
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-6">
                                     <label class="form-label text-muted fw-bold" id="lblPrice" style="font-size:0.8rem;">ราคา (USD)</label>
-                                    <input type="number" id="txnPrice" class="form-control form-control-sm" step="0.01" required>
+                                    <input type="number" id="txnPrice" class="form-control form-control-sm" step="any" required>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-6">
                                     <label class="form-label text-muted fw-bold" id="lblComm" style="font-size:0.8rem;">ค่าคอมฯ</label>
@@ -4548,7 +4548,7 @@
                                 <div class="col-lg-4 col-md-6 col-12">
                                     <label class="form-label text-danger fw-bold" id="lblTotalTHB" style="font-size:0.8rem;">เงินบาทที่จ่ายจริง (THB) - ข้ามได้</label>
                                     <div class="input-group input-group-sm">
-                                        <input type="number" id="txnTotalTHB" class="form-control border-danger bg-danger bg-opacity-10" step="0.01" placeholder="เว้นว่างได้">
+                                        <input type="number" id="txnTotalTHB" class="form-control border-danger bg-danger bg-opacity-10" step="any" placeholder="เว้นว่างได้">
                                         <button type="submit" id="btnSubmitTxn" class="btn btn-dark w-25">บันทึก</button>
                                     </div>
                                 </div>
@@ -7713,14 +7713,14 @@
             'AAPL': 333.69, 'AMD': 633.91, 'AMZN': 251.52, 'BRK-B': 502.65, 'BRK.B': 502.65,
             'CIEN': 391.34, 'COIN': 183.00, 'CRWD': 270.04, 'GOOGL': 343.50, 'GRID': 182.91,
             'INTC': 119.33, 'JEPI': 56.10, 'JEPQ': 61.04, 'LLY': 1142.85, 'META': 728.08,
-            'MSFT': 517.53, 'MU': 1074.89, 'NFLX': 67.06, 'NVDA': 233.95, 'PLTR': 188.75,
+            'MSFT': 517.53, 'MU': 1074.89, 'NFLX': 67.06, 'NVDA': 214.13, 'PLTR': 188.75,
             'QQQ': 749.58, 'QQQM': 308.69, 'SCHD': 32.72, 'SMH': 630.60, 'SOXX': 588.90,
             'SPMO': 153.23, 'SPY': 769.64, 'SPYD': 45.39, 'TSLA': 370.59, 'VOO': 707.54,
             'VRT': 252.18, 'VTI': 377.99, 'VXUS': 85.43, 'XLV': 166.18
         };
         let storedPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
         // Clean out legacy preset prices if they match the old hardcoded screenshot values
-        if (storedPrices['NVDA'] === 225.07) delete storedPrices['NVDA'];
+        if (storedPrices['NVDA'] === 225.07 || storedPrices['NVDA'] === 233.95) delete storedPrices['NVDA'];
         if (storedPrices['SPYD'] === 43.10) delete storedPrices['SPYD'];
         if (storedPrices['VRT'] === 250.75) delete storedPrices['VRT'];
         if (storedPrices['MU'] === 1077.77) delete storedPrices['MU'];

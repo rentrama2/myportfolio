@@ -59,18 +59,37 @@ def clean_html(raw_html):
 def translate_to_thai(text):
     if not text or not text.strip():
         return ""
-    try:
-        q = urllib.parse.quote(text.strip())
-        url = f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=th&dt=t&q={q}"
-        req = urllib.request.Request(url, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=5) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            if data and isinstance(data, list) and len(data) > 0 and isinstance(data[0], list):
-                translated = "".join(part[0] for part in data[0] if part and part[0])
-                if translated.strip():
-                    return translated.strip()
-    except Exception:
-        pass
+    q = urllib.parse.quote(text.strip())
+    endpoints = [
+        f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=th&dt=t&q={q}",
+        f"https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=en&tl=th&q={q}",
+        f"https://api.mymemory.translated.net/get?q={q}&langpair=en|th"
+    ]
+    for url in endpoints:
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=6) as resp:
+                raw = resp.read().decode("utf-8")
+                # Format 1: Google gtx [[["trans", "orig", ...]]]
+                try:
+                    data = json.loads(raw)
+                    if isinstance(data, list) and len(data) > 0 and isinstance(data[0], list):
+                        translated = "".join(part[0] for part in data[0] if part and part[0])
+                        if translated.strip():
+                            return translated.strip()
+                    elif isinstance(data, list) and len(data) > 0 and isinstance(data[0], str):
+                        # Format 2: clients5 ["trans"]
+                        if data[0].strip():
+                            return data[0].strip()
+                    elif isinstance(data, dict) and "responseData" in data:
+                        # Format 3: MyMemory
+                        res_text = data.get("responseData", {}).get("translatedText", "")
+                        if res_text and not res_text.startswith("MYMEMORY WARNING"):
+                            return res_text.strip()
+                except Exception:
+                    pass
+        except Exception:
+            continue
     return text.strip()
 
 def detect_sentiment(text):
