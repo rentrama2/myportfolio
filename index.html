@@ -7710,7 +7710,7 @@
         }
 
         const defaultInitialPrices = {
-            'AAPL': 333.69, 'AMD': 633.91, 'AMZN': 251.52, 'BRK-B': 502.65, 'BRK.B': 502.65,
+            'AAPL': 333.69, 'AMD': 633.91, 'AMZN': 251.52, 'BRK-B': 532.02, 'BRK.B': 532.02,
             'CIEN': 391.34, 'COIN': 183.00, 'CRWD': 270.04, 'GOOGL': 343.50, 'GRID': 182.91,
             'INTC': 119.33, 'JEPI': 56.10, 'JEPQ': 61.04, 'LLY': 1142.85, 'META': 728.08,
             'MSFT': 517.53, 'MU': 1074.89, 'NFLX': 67.06, 'NVDA': 214.13, 'PLTR': 188.75,
@@ -7721,6 +7721,8 @@
         let storedPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
         // Clean out legacy preset prices if they match the old hardcoded screenshot values
         if (storedPrices['NVDA'] === 225.07 || storedPrices['NVDA'] === 233.95) delete storedPrices['NVDA'];
+        if (storedPrices['BRK.B'] === 502.65) delete storedPrices['BRK.B'];
+        if (storedPrices['BRK-B'] === 502.65) delete storedPrices['BRK-B'];
         if (storedPrices['SPYD'] === 43.10) delete storedPrices['SPYD'];
         if (storedPrices['VRT'] === 250.75) delete storedPrices['VRT'];
         if (storedPrices['MU'] === 1077.77) delete storedPrices['MU'];
@@ -8782,6 +8784,8 @@
             let newPrice = parseFloat(value);
             if(!isNaN(newPrice) && newPrice >= 0) {
                 marketPrices[ticker] = newPrice;
+                if (ticker.includes('.')) marketPrices[ticker.replace('.', '-')] = newPrice;
+                if (ticker.includes('-')) marketPrices[ticker.replace('-', '.')] = newPrice;
                 localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
                 
                 updateSummaryAndChart();
@@ -9064,6 +9068,8 @@
                             for (let [tk, pr] of Object.entries(data.prices)) {
                                 if (pr && typeof pr === 'number' && pr > 0) {
                                     marketPrices[tk] = pr;
+                                    if (tk.includes('-')) marketPrices[tk.replace('-', '.')] = pr;
+                                    if (tk.includes('.')) marketPrices[tk.replace('.', '-')] = pr;
                                     count++;
                                 }
                             }
@@ -9091,6 +9097,10 @@
                             }
                             if (data.extended_hours && typeof data.extended_hours === 'object') {
                                 extendedHoursPrices = Object.assign({}, data.extended_hours);
+                                for (let [tk, ext] of Object.entries(data.extended_hours)) {
+                                    if (tk.includes('-')) extendedHoursPrices[tk.replace('-', '.')] = ext;
+                                    if (tk.includes('.')) extendedHoursPrices[tk.replace('.', '-')] = ext;
+                                }
                                 localStorage.setItem('myExtendedHoursPrices', JSON.stringify(extendedHoursPrices));
                             }
                             localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
@@ -9739,6 +9749,8 @@
                         const price = await fetchStockPrice(tk, shouldForceFetch);
                         if (price && price > 0) {
                             marketPrices[tk] = price;
+                            if (tk.includes('.')) marketPrices[tk.replace('.', '-')] = price;
+                            if (tk.includes('-')) marketPrices[tk.replace('-', '.')] = price;
                             updatedCount++;
                         }
                     }

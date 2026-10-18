@@ -204,6 +204,18 @@ def main():
                 if ticker in extended_hours:
                     del extended_hours[ticker]
                 print(f"  [OK] {ticker}: {reg_price}")
+            
+            # Synchronize dot/hyphen symbols like BRK.B and BRK-B
+            if "-" in ticker:
+                alt = ticker.replace("-", ".")
+                prices[alt] = reg_price
+                if ext_info:
+                    extended_hours[alt] = ext_info
+            elif "." in ticker:
+                alt = ticker.replace(".", "-")
+                prices[alt] = reg_price
+                if ext_info:
+                    extended_hours[alt] = ext_info
             success_count += 1
         else:
             print(f"  [FAIL] {ticker} (kept previous: {prices.get(ticker)})")
