@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-18T18:53:34Z",
-  "updated_at_thai": "19 ต.ค. 2569 01:53 น.",
+  "updated_at": "2026-10-18T21:13:37Z",
+  "updated_at_thai": "19 ต.ค. 2569 04:13 น.",
   "news_count": 12,
   "news": [
     {
@@ -10,7 +10,7 @@
       "summary": "Dow Jones Futures: AI เจ็บปวดมากขึ้นหลังจากการขาย Nasdaq ออกไปหรือไม่? Meta, SpaceX, รหัสรายได้ของ Tesla",
       "source": "Investor's Business Daily",
       "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-more-ai.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T17:32:26Z",
       "category": "EARNINGS",
       "tickers": [
@@ -40,7 +40,7 @@
       "summary": "Bessent กล่าวว่าการบริหารงานจะ 'เป็นเจ้าของเศรษฐกิจ'",
       "source": "Barrons.com",
       "sourceUrl": "https://finance.yahoo.com/m/0d2de407-7de3-37c3-a3fb-ca939cf0d8a7/bessent-says-administration.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T17:23:47Z",
       "category": "MACRO",
       "tickers": [
@@ -69,7 +69,7 @@
       "summary": "การผลักดันไปป์ไลน์ของการวิเคราะห์ - คาร์นีย์ไม่น่าจะทำให้งานน้ำมันของแคนาดากลับมาเฟื่องฟูได้",
       "source": "Reuters",
       "sourceUrl": "https://finance.yahoo.com/news/analysis-carney-pipeline-push-unlikely-121447010.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T13:31:08Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -97,7 +97,7 @@
       "summary": "Meta, General Motors, สายการบินหลัก และบริษัทอื่นๆ จะรายงานผลประกอบการในสัปดาห์นี้ นี่คือสิ่งที่นักวิเคราะห์คาดการณ์และสิ่งที่เกิดขึ้นในอดีต",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/18/meta-tesla-netflix-earnings-preview.html",
-      "time": "6 ชั่วโมงที่แล้ว",
+      "time": "8 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T12:41:18Z",
       "category": "EARNINGS",
       "tickers": [
@@ -122,10 +122,10 @@
       "id": "news-5",
       "title": "เปิดตลอดเวลา ฟังตลอดเวลา: อุปกรณ์ AI ใหม่กำลังก้าวข้ามขีดจำกัดทางกฎหมาย และอาจส่งผลให้ผู้ใช้ตกอยู่ในอันตราย",
       "title_en": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
-      "summary": "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
+      "summary": "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์ตามกฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/18/ai-wearables-privacy-wiretap-laws.html",
-      "time": "6 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T12:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -137,13 +137,13 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
+        "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์ตามกฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
         "แหล่งข่าวอ้างอิง: CNBC (18/10/2026 12:00 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL #AMZN #META"
       ],
       "fullArticle": [
         "เปิดตลอดเวลา ฟังตลอดเวลา: อุปกรณ์ AI ใหม่กำลังก้าวข้ามขีดจำกัดทางกฎหมาย และอาจส่งผลให้ผู้ใช้ตกอยู่ในอันตราย",
-        "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
+        "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์ตามกฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
@@ -154,7 +154,7 @@
       "summary": "3 หุ้นพลังงานของสหรัฐฯ ที่สัมผัสโดยตรงกับราคาก๊าซธรรมชาติและน้ำมันที่สูงขึ้น",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/3-u-energy-stocks-direct-110932424.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T11:09:32Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -182,7 +182,7 @@
       "summary": "มูลค่ายุติธรรมของหุ้น ExxonMobil (XOM) ขยับสูงขึ้นเนื่องจากนักวิเคราะห์ปรับแนวโน้มผลประกอบการใหม่",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-xom-stock-fair-value-081256601.html",
-      "time": "10 ชั่วโมงที่แล้ว",
+      "time": "13 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T08:12:56Z",
       "category": "EARNINGS",
       "tickers": [
@@ -261,7 +261,7 @@
     },
     {
       "id": "news-10",
-      "title": "'เงินตาย' มานานนับทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+      "title": "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
       "title_en": "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
       "summary": "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
       "source": "CNBC",
@@ -281,7 +281,7 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
       ],
       "fullArticle": [
-        "'เงินตาย' มานานนับทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+        "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
         "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
@@ -317,9 +317,9 @@
     },
     {
       "id": "news-12",
-      "title": "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+      "title": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
       "title_en": "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
-      "summary": "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+      "summary": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/25-000-front-250-more-123212635.html",
       "time": "1 วันที่แล้ว",
@@ -332,13 +332,13 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
         "แหล่งข่าวอ้างอิง: 24/7 Wall St. (17/10/2026 12:32 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #VTI"
       ],
       "fullArticle": [
-        "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
-        "$25,000 ล่วงหน้าหรือ $250 เพิ่มเติมต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
