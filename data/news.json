@@ -1,47 +1,100 @@
 {
-  "updated_at": "2026-10-18T04:44:16Z",
-  "updated_at_thai": "18 ต.ค. 2569 11:44 น.",
+  "updated_at": "2026-10-18T09:08:41Z",
+  "updated_at_thai": "18 ต.ค. 2569 16:08 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "Dow Jones Futures Loom หลังจาก S&P 500, Nasdaq ทะลุแนวรับ; Meta Earnings จะช่วย AI ได้หรือไม่?",
-      "title_en": "Dow Jones Futures Loom After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
-      "summary": "Dow Jones Futures Loom หลังจาก S&P 500, Nasdaq ทะลุแนวรับ; Meta Earnings จะช่วย AI ได้หรือไม่?",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures-loom-after.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T02:57:39Z",
+      "title": "ExxonMobil (XOM) Stock Fair Value Edges Higher As Analysts Rework Earnings Outlook",
+      "title_en": "ExxonMobil (XOM) Stock Fair Value Edges Higher As Analysts Rework Earnings Outlook",
+      "summary": "ExxonMobil (XOM) Stock Fair Value Edges Higher As Analysts Rework Earnings Outlook",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-xom-stock-fair-value-081256601.html",
+      "time": "55 นาทีที่แล้ว",
+      "publishedAt": "2026-10-18T08:12:56Z",
       "category": "EARNINGS",
       "tickers": [
-        "META",
-        "SPY",
-        "QQQ",
-        "DIA"
+        "XOM"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": true,
       "points": [
-        "Dow Jones Futures Loom หลังจาก S&P 500, Nasdaq ทะลุแนวรับ; Meta Earnings จะช่วย AI ได้หรือไม่?",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (18/10/2026 02:57 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #SPY #QQQ #DIA"
+        "ExxonMobil (XOM) Stock Fair Value Edges Higher As Analysts Rework Earnings Outlook",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (18/10/2026 08:12 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM"
       ],
       "fullArticle": [
-        "Dow Jones Futures Loom หลังจาก S&P 500, Nasdaq ทะลุแนวรับ; Meta Earnings จะช่วย AI ได้หรือไม่?",
-        "Dow Jones Futures Loom หลังจาก S&P 500, Nasdaq ทะลุแนวรับ; Meta Earnings จะช่วย AI ได้หรือไม่?",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures Loom After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ExxonMobil (XOM) Stock Fair Value Edges Higher As Analysts Rework Earnings Outlook",
+        "ExxonMobil (XOM) Stock Fair Value Edges Higher As Analysts Rework Earnings Outlook",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"ExxonMobil (XOM) Stock Fair Value Edges Higher As Analysts Rework Earnings Outlook\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "หุ้น AI ในเอเชียร่วงลงเนื่องจากต้นทุนทางการเงินที่เพิ่มขึ้นคุกคามการใช้จ่าย - Bloomberg",
+      "title": "The British investor betting on North Sea oil",
+      "title_en": "The British investor betting on North Sea oil",
+      "summary": "The British investor betting on North Sea oil",
+      "source": "The Telegraph",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/british-investor-betting-north-sea-080000637.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-18T08:00:00Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "The British investor betting on North Sea oil",
+        "แหล่งข่าวอ้างอิง: The Telegraph (18/10/2026 08:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "The British investor betting on North Sea oil",
+        "The British investor betting on North Sea oil",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"The British investor betting on North Sea oil\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "Venezuela expects $76 billion oil investment boost amid U.S. cooperation",
+      "title_en": "Venezuela expects $76 billion oil investment boost amid U.S. cooperation",
+      "summary": "Venezuela expects $76 billion oil investment boost amid U.S. cooperation",
+      "source": "Investing.com",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/venezuela-expects-76-billion-oil-015516817.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-18T07:49:35Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Venezuela expects $76 billion oil investment boost amid U.S. cooperation",
+        "แหล่งข่าวอ้างอิง: Investing.com (18/10/2026 07:49 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "Venezuela expects $76 billion oil investment boost amid U.S. cooperation",
+        "Venezuela expects $76 billion oil investment boost amid U.S. cooperation",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Venezuela expects $76 billion oil investment boost amid U.S. cooperation\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "Asian AI stocks fall as rising financing costs threaten spending boom - Bloomberg",
       "title_en": "Asian AI stocks fall as rising financing costs threaten spending boom - Bloomberg",
-      "summary": "หุ้น AI ในเอเชียร่วงลงเนื่องจากต้นทุนทางการเงินที่เพิ่มขึ้นคุกคามการใช้จ่าย - Bloomberg",
+      "summary": "Asian AI stocks fall as rising financing costs threaten spending boom - Bloomberg",
       "source": "Investing.com",
       "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/asian-ai-stocks-fall-rising-023003094.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T02:30:03Z",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-18T07:49:27Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -52,108 +105,54 @@
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "หุ้น AI ในเอเชียร่วงลงเนื่องจากต้นทุนทางการเงินที่เพิ่มขึ้นคุกคามการใช้จ่าย - Bloomberg",
-        "แหล่งข่าวอ้างอิง: Investing.com (18/10/2026 02:30 UTC)",
+        "Asian AI stocks fall as rising financing costs threaten spending boom - Bloomberg",
+        "แหล่งข่าวอ้างอิง: Investing.com (18/10/2026 07:49 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "หุ้น AI ในเอเชียร่วงลงเนื่องจากต้นทุนทางการเงินที่เพิ่มขึ้นคุกคามการใช้จ่าย - Bloomberg",
-        "หุ้น AI ในเอเชียร่วงลงเนื่องจากต้นทุนทางการเงินที่เพิ่มขึ้นคุกคามการใช้จ่าย - Bloomberg",
+        "Asian AI stocks fall as rising financing costs threaten spending boom - Bloomberg",
+        "Asian AI stocks fall as rising financing costs threaten spending boom - Bloomberg",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asian AI stocks fall as rising financing costs threaten spending boom - Bloomberg\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-3",
-      "title": "3 หุ้นเรือบรรทุกน้ำมันที่นักลงทุนรายย่อยกำลังจับตาดูอัตราการขนส่งน้ำมันที่สูงขึ้น",
-      "title_en": "3 Tanker Stocks Retail Investors Are Watching For Higher Oil Shipping Rates",
-      "summary": "3 หุ้นเรือบรรทุกน้ำมันที่นักลงทุนรายย่อยกำลังจับตาดูอัตราการขนส่งน้ำมันที่สูงขึ้น",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-tanker-stocks-retail-investors-021404618.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T02:14:04Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "3 หุ้นเรือบรรทุกน้ำมันที่นักลงทุนรายย่อยกำลังจับตาดูอัตราการขนส่งน้ำมันที่สูงขึ้น",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (18/10/2026 02:14 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "3 หุ้นเรือบรรทุกน้ำมันที่นักลงทุนรายย่อยกำลังจับตาดูอัตราการขนส่งน้ำมันที่สูงขึ้น",
-        "3 หุ้นเรือบรรทุกน้ำมันที่นักลงทุนรายย่อยกำลังจับตาดูอัตราการขนส่งน้ำมันที่สูงขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Tanker Stocks Retail Investors Are Watching For Higher Oil Shipping Rates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "เวเนซุเอลาคาดว่าจะมีการลงทุนด้านน้ำมันเพิ่มขึ้น 76 พันล้านดอลลาร์ท่ามกลางความร่วมมือของสหรัฐฯ",
-      "title_en": "Venezuela expects $76 billion oil investment boost amid U.S. cooperation",
-      "summary": "เวเนซุเอลาคาดว่าจะมีการลงทุนด้านน้ำมันเพิ่มขึ้น 76 พันล้านดอลลาร์ท่ามกลางความร่วมมือของสหรัฐฯ",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/venezuela-expects-76-billion-oil-015516817.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T01:55:16Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "เวเนซุเอลาคาดว่าจะมีการลงทุนด้านน้ำมันเพิ่มขึ้น 76 พันล้านดอลลาร์ท่ามกลางความร่วมมือของสหรัฐฯ",
-        "แหล่งข่าวอ้างอิง: Investing.com (18/10/2026 01:55 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "เวเนซุเอลาคาดว่าจะมีการลงทุนด้านน้ำมันเพิ่มขึ้น 76 พันล้านดอลลาร์ท่ามกลางความร่วมมือของสหรัฐฯ",
-        "เวเนซุเอลาคาดว่าจะมีการลงทุนด้านน้ำมันเพิ่มขึ้น 76 พันล้านดอลลาร์ท่ามกลางความร่วมมือของสหรัฐฯ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Venezuela expects $76 billion oil investment boost amid U.S. cooperation\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
       "id": "news-5",
-      "title": "ราคาน้ำมันยังคงอยู่ในระดับสูงเนื่องจากสงครามทำให้อุปทานตึงตัวจนถึงปี 2570",
-      "title_en": "Oil Prices Stay High as War Keeps Supply Tight Into 2027",
-      "summary": "ราคาน้ำมันยังคงอยู่ในระดับสูงเนื่องจากสงครามทำให้อุปทานตึงตัวจนถึงปี 2570",
-      "source": "Oilprice.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-stay-high-war-230000230.html",
-      "time": "5 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-17T23:00:00Z",
-      "category": "COMMODITIES",
+      "title": "Dow Jones Futures Loom After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
+      "title_en": "Dow Jones Futures Loom After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
+      "summary": "Dow Jones Futures Loom After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures-loom-after.html",
+      "time": "6 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-18T02:57:39Z",
+      "category": "EARNINGS",
       "tickers": [
-        "XOM",
-        "CVX"
+        "META",
+        "SPY",
+        "QQQ",
+        "DIA"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ราคาน้ำมันยังคงอยู่ในระดับสูงเนื่องจากสงครามทำให้อุปทานตึงตัวจนถึงปี 2570",
-        "แหล่งข่าวอ้างอิง: Oilprice.com (17/10/2026 23:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "Dow Jones Futures Loom After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (18/10/2026 02:57 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #SPY #QQQ #DIA"
       ],
       "fullArticle": [
-        "ราคาน้ำมันยังคงอยู่ในระดับสูงเนื่องจากสงครามทำให้อุปทานตึงตัวจนถึงปี 2570",
-        "ราคาน้ำมันยังคงอยู่ในระดับสูงเนื่องจากสงครามทำให้อุปทานตึงตัวจนถึงปี 2570",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Prices Stay High as War Keeps Supply Tight Into 2027\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Dow Jones Futures Loom After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
+        "Dow Jones Futures Loom After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures Loom After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-6",
-      "title": "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
+      "title": "AI stocks plunge. Inflation heats up. Where we're still finding opportunities",
       "title_en": "AI stocks plunge. Inflation heats up. Where we're still finding opportunities",
-      "summary": "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+      "summary": "The sinking AI trade rattled last week's market. But solid bank earnings and a rotation beyond tech gave us reasons for optimism.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/17/ai-stocks-plunge-inflation-heats-up-where-were-still-finding-opportunities.html",
-      "time": "13 ชั่วโมงที่แล้ว",
+      "time": "17 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:42:34Z",
       "category": "EARNINGS",
       "tickers": [
@@ -164,24 +163,24 @@
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+        "The sinking AI trade rattled last week's market. But solid bank earnings and a rotation beyond tech gave us reasons for optimism.",
         "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:42 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
-        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+        "AI stocks plunge. Inflation heats up. Where we're still finding opportunities",
+        "The sinking AI trade rattled last week's market. But solid bank earnings and a rotation beyond tech gave us reasons for optimism.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AI stocks plunge. Inflation heats up. Where we're still finding opportunities\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-7",
-      "title": "ผู้รวบรวมรายใหม่ของซอฟต์แวร์ได้รับคะแนนความเชื่อมั่นอย่างมากจาก Berkshire",
+      "title": "Software’s new consolidator gets big vote of confidence from Berkshire",
       "title_en": "Software’s new consolidator gets big vote of confidence from Berkshire",
-      "summary": "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
+      "summary": "Less than four months into life as a public company, Bending Spoons got a big vote of confidence this week from Berkshire Hathaway.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/bending-spoons-wants-to-revive-software-castoffs-berkshire-investing.html",
-      "time": "13 ชั่วโมงที่แล้ว",
+      "time": "17 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:11:30Z",
       "category": "TECH",
       "tickers": [
@@ -193,24 +192,24 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
+        "Less than four months into life as a public company, Bending Spoons got a big vote of confidence this week from Berkshire Hathaway.",
         "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:11 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "ผู้รวบรวมรายใหม่ของซอฟต์แวร์ได้รับคะแนนความเชื่อมั่นอย่างมากจาก Berkshire",
-        "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
+        "Software’s new consolidator gets big vote of confidence from Berkshire",
+        "Less than four months into life as a public company, Bending Spoons got a big vote of confidence this week from Berkshire Hathaway.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Software’s new consolidator gets big vote of confidence from Berkshire\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-8",
-      "title": "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+      "title": "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
       "title_en": "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
-      "summary": "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
+      "summary": "Investors may want to rethink their bond allocation and opt for managed futures exposure.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/dead-money-for-a-decade-hedge-fund-approach-that-may-trump-bonds.html",
-      "time": "13 ชั่วโมงที่แล้ว",
+      "time": "18 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:00:01Z",
       "category": "MACRO",
       "tickers": [
@@ -220,24 +219,24 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
+        "Investors may want to rethink their bond allocation and opt for managed futures exposure.",
         "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:00 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
       ],
       "fullArticle": [
-        "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
-        "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
+        "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
+        "Investors may want to rethink their bond allocation and opt for managed futures exposure.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-9",
-      "title": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+      "title": "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
       "title_en": "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
-      "summary": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+      "summary": "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
       "source": "Moby",
       "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/anthropic-wants-ipo-york-city-120200718.html",
-      "time": "13 ชั่วโมงที่แล้ว",
+      "time": "18 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T14:48:07Z",
       "category": "MACRO",
       "tickers": [
@@ -249,24 +248,24 @@
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+        "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
         "แหล่งข่าวอ้างอิง: Moby (17/10/2026 14:48 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
+        "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
+        "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic Wants an IPO. New York City Wants It to Slow Down.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-10",
-      "title": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+      "title": "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
       "title_en": "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
-      "summary": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+      "summary": "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/25-000-front-250-more-123212635.html",
-      "time": "16 ชั่วโมงที่แล้ว",
+      "time": "20 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T12:32:12Z",
       "category": "MACRO",
       "tickers": [
@@ -276,24 +275,24 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
         "แหล่งข่าวอ้างอิง: 24/7 Wall St. (17/10/2026 12:32 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #VTI"
       ],
       "fullArticle": [
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
+        "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
+        "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-11",
-      "title": "บางบริษัทมอบ AI ให้กับทุกคน ซีอีโอคนนี้กำลังทำสิ่งที่ตรงกันข้าม",
+      "title": "Some companies give AI to everyone. This CEO is doing the opposite",
       "title_en": "Some companies give AI to everyone. This CEO is doing the opposite",
-      "summary": "Ben Chisell ซีอีโอของ Paysend จำกัดเครื่องมือ AI ไว้เฉพาะกับบริษัทที่มีประสิทธิภาพสูงสุด เนื่องจากบริษัทอื่นๆ ในสหราชอาณาจักรผลักดันให้มีการเปิดตัวสถานที่ทำงานที่กว้างขึ้น",
+      "summary": "Paysend CEO Ben Chisell limits AI tools to top performers as other U.K. companies push broader workplace rollouts.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/ai-workplace-tokenmaxxing-paysend.html",
-      "time": "23 ชั่วโมงที่แล้ว",
+      "time": "1 วันที่แล้ว",
       "publishedAt": "2026-10-17T05:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -305,21 +304,21 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Ben Chisell ซีอีโอของ Paysend จำกัดเครื่องมือ AI ไว้เฉพาะกับบริษัทที่มีประสิทธิภาพสูงสุด เนื่องจากบริษัทอื่นๆ ในสหราชอาณาจักรผลักดันให้มีการเปิดตัวสถานที่ทำงานที่กว้างขึ้น",
+        "Paysend CEO Ben Chisell limits AI tools to top performers as other U.K. companies push broader workplace rollouts.",
         "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 05:00 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "บางบริษัทมอบ AI ให้กับทุกคน ซีอีโอคนนี้กำลังทำสิ่งที่ตรงกันข้าม",
-        "Ben Chisell ซีอีโอของ Paysend จำกัดเครื่องมือ AI ไว้เฉพาะกับบริษัทที่มีประสิทธิภาพสูงสุด เนื่องจากบริษัทอื่นๆ ในสหราชอาณาจักรผลักดันให้มีการเปิดตัวสถานที่ทำงานที่กว้างขึ้น",
+        "Some companies give AI to everyone. This CEO is doing the opposite",
+        "Paysend CEO Ben Chisell limits AI tools to top performers as other U.K. companies push broader workplace rollouts.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Some companies give AI to everyone. This CEO is doing the opposite\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-12",
-      "title": "การขาดดุลงบประมาณของสหรัฐฯ เพิ่มขึ้นเป็นเกือบ 2 ล้านล้านดอลลาร์ในปีงบประมาณ 2026 เพิ่มขึ้น 12% ในปีเดียว",
+      "title": "U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year",
       "title_en": "U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year",
-      "summary": "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
+      "summary": "The Treasury Department published the U.S. budget deficit for the 2026 fiscal year.",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/16/us-budget-deficit-2026.html",
       "time": "1 วันที่แล้ว",
@@ -332,13 +331,13 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
+        "The Treasury Department published the U.S. budget deficit for the 2026 fiscal year.",
         "แหล่งข่าวอ้างอิง: CNBC (16/10/2026 22:34 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
       ],
       "fullArticle": [
-        "การขาดดุลงบประมาณของสหรัฐฯ เพิ่มขึ้นเป็นเกือบ 2 ล้านล้านดอลลาร์ในปีงบประมาณ 2026 เพิ่มขึ้น 12% ในปีเดียว",
-        "กรมธนารักษ์เผยแพร่การขาดดุลงบประมาณของสหรัฐฯ สำหรับปีงบประมาณ 2026",
+        "U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year",
+        "The Treasury Department published the U.S. budget deficit for the 2026 fiscal year.",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. budget deficit swells to almost $2 trillion for fiscal 2026, up 12% in a single year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
