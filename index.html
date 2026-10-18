@@ -5183,6 +5183,20 @@
         let editingIndex = -1; 
         
         let transactions = JSON.parse(localStorage.getItem('myPortfolioTxns')) || [];
+        let sanitizedTxnsOnLoad = false;
+        transactions.forEach(t => {
+            if (t && t.ticker) {
+                let clean = t.ticker.trim().toUpperCase().replace(/\s+/g, '');
+                if (clean === 'BRK-B' || clean === 'BRK/B' || clean === 'BRK_B') clean = 'BRK.B';
+                if (clean !== t.ticker) {
+                    t.ticker = clean;
+                    sanitizedTxnsOnLoad = true;
+                }
+            }
+        });
+        if (sanitizedTxnsOnLoad) {
+            try { localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions)); } catch(e) {}
+        }
         Object.defineProperty(window, 'transactions', {
             get() { return transactions; },
             set(v) { transactions = v; },
@@ -7721,14 +7735,45 @@
         let storedPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
         // Clean out legacy preset prices if they match the old hardcoded screenshot values
         if (storedPrices['NVDA'] === 225.07 || storedPrices['NVDA'] === 233.95) delete storedPrices['NVDA'];
-        if (storedPrices['BRK.B'] === 502.65) delete storedPrices['BRK.B'];
-        if (storedPrices['BRK-B'] === 502.65) delete storedPrices['BRK-B'];
+        if (storedPrices['BRK.B'] === 502.65 || (storedPrices['BRK.B'] && storedPrices['BRK.B'] < 510)) delete storedPrices['BRK.B'];
+        if (storedPrices['BRK-B'] === 502.65 || (storedPrices['BRK-B'] && storedPrices['BRK-B'] < 510)) delete storedPrices['BRK-B'];
         if (storedPrices['SPYD'] === 43.10) delete storedPrices['SPYD'];
         if (storedPrices['VRT'] === 250.75) delete storedPrices['VRT'];
         if (storedPrices['MU'] === 1077.77) delete storedPrices['MU'];
         if (storedPrices['CIEN'] === 358.92) delete storedPrices['CIEN'];
         if (storedPrices['CRWD'] === 255.90) delete storedPrices['CRWD'];
         let marketPrices = Object.assign({}, defaultInitialPrices, storedPrices);
+        
+        // Ensure BRK.B / BRK-B and NVDA are synchronized and up-to-date
+        if (!marketPrices['BRK.B'] || marketPrices['BRK.B'] < 510) marketPrices['BRK.B'] = 532.02;
+        if (!marketPrices['BRK-B'] || marketPrices['BRK-B'] < 510) marketPrices['BRK-B'] = 532.02;
+        marketPrices['BRK.B'] = Math.max(marketPrices['BRK.B'], marketPrices['BRK-B'] || 0, 532.02);
+        marketPrices['BRK-B'] = marketPrices['BRK.B'];
+
+        if (!marketPrices['NVDA'] || marketPrices['NVDA'] === 225.07 || marketPrices['NVDA'] === 233.95) {
+            marketPrices['NVDA'] = 214.13;
+        }
+        localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
+
+        window.getMarketPrice = function(tk) {
+            if (!tk || typeof tk !== 'string') return 0;
+            const clean = tk.trim().toUpperCase().replace(/\s+/g, '');
+            const dot = clean.replace('-', '.');
+            const hyphen = clean.replace('.', '-');
+            if (typeof marketPrices !== 'object' || !marketPrices) return 0;
+            return marketPrices[clean] || marketPrices[dot] || marketPrices[hyphen] || 0;
+        };
+
+        window.getStockFullName = function(tk, groupName) {
+            if (!tk || typeof tk !== 'string') return '';
+            const clean = tk.trim().toUpperCase().replace(/\s+/g, '');
+            const dot = clean.replace('-', '.');
+            const hyphen = clean.replace('.', '-');
+            const name = (typeof stockNames === 'object' && stockNames) ? (stockNames[clean] || stockNames[dot] || stockNames[hyphen]) : '';
+            if (name) return name;
+            return (groupName === 'ETF' ? `${clean} ETF` : `${clean} Corp`);
+        };
+
         let storedExtendedPrices = JSON.parse(localStorage.getItem('myExtendedHoursPrices')) || {};
         let extendedHoursPrices = Object.assign({}, storedExtendedPrices);
         
@@ -8982,15 +9027,19 @@
         });
 
         document.getElementById('txnTicker').addEventListener('input', function() {
-            let val = this.value.toUpperCase().trim();
-            document.getElementById('tickerHint').innerText = stockNames[val] ? `(${stockNames[val]})` : '';
+            let val = this.value.toUpperCase().trim().replace(/\s+/g, '');
+            if (val === 'BRK-B' || val === 'BRK/B' || val === 'BRK_B') val = 'BRK.B';
+            const fn = (typeof getStockFullName === 'function') ? getStockFullName(val) : stockNames[val];
+            document.getElementById('tickerHint').innerText = fn ? `(${fn})` : '';
         });
 
         document.getElementById('txnTicker').addEventListener('blur', function() {
-            let val = this.value.toUpperCase().trim();
+            let val = this.value.toUpperCase().trim().replace(/\s+/g, '');
+            if (val === 'BRK-B' || val === 'BRK/B' || val === 'BRK_B') val = 'BRK.B';
             this.value = val; 
-            if(val && marketPrices[val] && document.getElementById('txnType').value !== 'DIVIDEND') {
-                document.getElementById('txnPrice').value = marketPrices[val].toFixed(2);
+            let p = (typeof getMarketPrice === 'function') ? getMarketPrice(val) : (marketPrices[val] || 0);
+            if(val && p > 0 && document.getElementById('txnType').value !== 'DIVIDEND') {
+                document.getElementById('txnPrice').value = p.toFixed(2);
                 autoCalculateDimeFees();
             }
         });
@@ -9856,6 +9905,16 @@
             for (let i = 0; i < transactions.length; i++) {
                 let txn = transactions[i];
                 if (!txn || txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW') continue;
+
+                // Sanitize and normalize ticker symbol (clean whitespace, normalize BRK-B/BRK/B to BRK.B)
+                if (txn.ticker) {
+                    let clean = txn.ticker.trim().toUpperCase().replace(/\s+/g, '');
+                    if (clean === 'BRK-B' || clean === 'BRK/B' || clean === 'BRK_B') clean = 'BRK.B';
+                    if (clean !== txn.ticker) {
+                        txn.ticker = clean;
+                        hasChanged = true;
+                    }
+                }
 
                 // Fix dividends that had duplicate commission/tax deductions
                 if (txn.type === 'DIVIDEND' && txn.comm > 0) {
@@ -10739,20 +10798,25 @@
             let allHoldingsMap = {};
             transactions.forEach(txn => {
                 if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW' || txn.type === 'DIVIDEND') return;
-                if(!allHoldingsMap[txn.ticker]) allHoldingsMap[txn.ticker] = { shares: 0, costUSD: 0 };
+                let tkClean = (txn.ticker || '').trim().toUpperCase().replace(/\s+/g, '');
+                if (tkClean === 'BRK-B' || tkClean === 'BRK/B' || tkClean === 'BRK_B') tkClean = 'BRK.B';
+                if (!tkClean) return;
+
+                if(!allHoldingsMap[tkClean]) allHoldingsMap[tkClean] = { shares: 0, costUSD: 0 };
                 if(txn.type === 'BUY') {
-                    allHoldingsMap[txn.ticker].shares += txn.shares;
-                    allHoldingsMap[txn.ticker].costUSD += (txn.shares * txn.price);
-                } else if(txn.type === 'SELL' && allHoldingsMap[txn.ticker].shares > 0) {
-                    let avg = allHoldingsMap[txn.ticker].costUSD / allHoldingsMap[txn.ticker].shares;
-                    allHoldingsMap[txn.ticker].shares -= txn.shares;
-                    allHoldingsMap[txn.ticker].costUSD -= (txn.shares * avg);
+                    allHoldingsMap[tkClean].shares += txn.shares;
+                    allHoldingsMap[tkClean].costUSD += (txn.shares * txn.price);
+                } else if(txn.type === 'SELL' && allHoldingsMap[tkClean].shares > 0) {
+                    let avg = allHoldingsMap[tkClean].costUSD / allHoldingsMap[tkClean].shares;
+                    allHoldingsMap[tkClean].shares -= txn.shares;
+                    allHoldingsMap[tkClean].costUSD -= (txn.shares * avg);
                 }
             });
             let allPortfoliosMktTHB = 0;
             for(let tk in allHoldingsMap) {
                 if(allHoldingsMap[tk].shares > 0.0001) {
-                    let curPrice = marketPrices[tk] || (allHoldingsMap[tk].costUSD / allHoldingsMap[tk].shares);
+                    let curPrice = (typeof getMarketPrice === 'function') ? getMarketPrice(tk) : (marketPrices[tk] || 0);
+                    if (!curPrice || curPrice <= 0) curPrice = (allHoldingsMap[tk].costUSD / allHoldingsMap[tk].shares);
                     allPortfoliosMktTHB += (allHoldingsMap[tk].shares * curPrice * liveFxRate);
                 }
             }
@@ -10766,21 +10830,25 @@
 
                 if(txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW' || txn.type === 'DIVIDEND') return;
 
-                if(!holdings[txn.ticker]) holdings[txn.ticker] = { shares: 0, costUSD: 0, costTHB: 0, port: txn.portfolio || (activePortfolioId !== 'ALL' ? activePortfolioId : 'core') };
-                if(txn.portfolio) holdings[txn.ticker].port = txn.portfolio;
+                let tkClean = (txn.ticker || '').trim().toUpperCase().replace(/\s+/g, '');
+                if (tkClean === 'BRK-B' || tkClean === 'BRK/B' || tkClean === 'BRK_B') tkClean = 'BRK.B';
+                if (!tkClean) return;
+
+                if(!holdings[tkClean]) holdings[tkClean] = { shares: 0, costUSD: 0, costTHB: 0, port: txn.portfolio || (activePortfolioId !== 'ALL' ? activePortfolioId : 'core') };
+                if(txn.portfolio) holdings[tkClean].port = txn.portfolio;
                 let usdAmount = Number((txn.shares * txn.price).toFixed(2));
                 
                 if(txn.type === 'BUY') {
-                    holdings[txn.ticker].shares += txn.shares;
-                    holdings[txn.ticker].costUSD += usdAmount; 
-                    holdings[txn.ticker].costTHB += parsedTHB; 
+                    holdings[tkClean].shares += txn.shares;
+                    holdings[tkClean].costUSD += usdAmount; 
+                    holdings[tkClean].costTHB += parsedTHB; 
                 } else if(txn.type === 'SELL') {
-                    if(holdings[txn.ticker].shares > 0) {
-                        let avgCostUSD = holdings[txn.ticker].costUSD / holdings[txn.ticker].shares;
-                        let avgCostTHB = holdings[txn.ticker].costTHB / holdings[txn.ticker].shares;
-                        holdings[txn.ticker].shares -= txn.shares;
-                        holdings[txn.ticker].costUSD -= (txn.shares * avgCostUSD);
-                        holdings[txn.ticker].costTHB -= (txn.shares * avgCostTHB);
+                    if(holdings[tkClean].shares > 0) {
+                        let avgCostUSD = holdings[tkClean].costUSD / holdings[tkClean].shares;
+                        let avgCostTHB = holdings[tkClean].costTHB / holdings[tkClean].shares;
+                        holdings[tkClean].shares -= txn.shares;
+                        holdings[tkClean].costUSD -= (txn.shares * avgCostUSD);
+                        holdings[tkClean].costTHB -= (txn.shares * avgCostTHB);
                     }
                 }
             });
@@ -10799,11 +10867,12 @@
                     let costUSD = holdings[ticker].costUSD;
                     let rawCostTHB = holdings[ticker].costTHB;
                     
-                    let groupName = portfolioMapping[ticker] || 'Stock';
+                    let groupName = portfolioMapping[ticker] || portfolioMapping[ticker.replace('-', '.')] || portfolioMapping[ticker.replace('.', '-')] || 'Stock';
                     if(!groupTotals[groupName]) groupTotals[groupName] = 0;
                     
                     let avgCostUSD = costUSD / shares;
-                    let regularPriceUSD = marketPrices[ticker] || avgCostUSD;
+                    let resolvedPrice = (typeof getMarketPrice === 'function') ? getMarketPrice(ticker) : (marketPrices[ticker] || 0);
+                    let regularPriceUSD = (resolvedPrice > 0) ? resolvedPrice : avgCostUSD;
                     let currentPriceUSD = regularPriceUSD;
                     let appliedExtSession = null;
 
@@ -10811,7 +10880,7 @@
                     const autoSwitchExt = (localStorage.getItem('myAutoSwitchPrice') !== 'false');
 
                     if (autoSwitchExt && !mktStatus.isOpen && (mktStatus.session === 'PRE' || mktStatus.session === 'POST')) {
-                        const ext = (typeof extendedHoursPrices !== 'undefined' && extendedHoursPrices) ? extendedHoursPrices[ticker] : null;
+                        const ext = (typeof extendedHoursPrices !== 'undefined' && extendedHoursPrices) ? (extendedHoursPrices[ticker] || extendedHoursPrices[ticker.replace('-', '.')] || extendedHoursPrices[ticker.replace('.', '-')]) : null;
                         if (ext && ext.price && ext.price > 0 && ext.session === mktStatus.session) {
                             currentPriceUSD = ext.price;
                             appliedExtSession = ext.session;
@@ -10886,7 +10955,7 @@
 
                     holdingItems.push({
                         ticker,
-                        fullName: stockNames[ticker] || (groupName === 'ETF' ? `${ticker} ETF` : `${ticker} Corp`),
+                        fullName: (typeof getStockFullName === 'function') ? getStockFullName(ticker, groupName) : (stockNames[ticker] || (groupName === 'ETF' ? `${ticker} ETF` : `${ticker} Corp`)),
                         shares,
                         costUSD,
                         rawCostTHB,
@@ -11322,16 +11391,16 @@
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center overflow-hidden me-2">
                                 <div class="position-relative me-2 flex-shrink-0" style="width: 38px; height: 38px;">
-                                    <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" 
+                                    <img src="https://assets.parqet.com/logos/symbol/${item.ticker.replace('.', '-')}" 
                                          alt="${item.ticker}" 
                                          class="rounded-circle border bg-white p-1 shadow-sm" 
                                          width="38" height="38" 
                                          style="object-fit: contain;"
-                                         onerror="this.onerror=null; this.src='https://financialmodelingprep.com/image-stock/${item.ticker}.png'; this.onerror=() => { this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex'; };"
+                                         onerror="this.onerror=null; this.src='https://assets.parqet.com/logos/symbol/${item.ticker}'; this.onerror=() => { this.src='https://financialmodelingprep.com/image-stock/${item.ticker}.png'; this.onerror=() => { this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex'; }; };"
                                          loading="lazy">
                                     <div class="rounded-circle bg-light border text-primary fw-bold justify-content-center align-items-center shadow-sm" 
                                          style="width: 38px; height: 38px; font-size: 0.75rem; display: none;">
-                                        ${item.ticker.slice(0, 3)}
+                                        ${item.ticker.replace(/[^A-Za-z0-9]/g, '').slice(0, 3)}
                                     </div>
                                 </div>
                                 <div class="text-start overflow-hidden">
@@ -11787,15 +11856,15 @@
                     let isCash = (txn.ticker === 'CASH' || txn.type === 'DEPOSIT' || txn.type === 'WITHDRAW');
                     let tickerCell = isCash ? `<strong>${txn.ticker || 'CASH'}</strong>` : `
                         <div class="d-flex align-items-center">
-                            <img src="https://assets.parqet.com/logos/symbol/${txn.ticker}" 
+                            <img src="https://assets.parqet.com/logos/symbol/${txn.ticker.replace('.', '-')}" 
                                  class="rounded-circle border me-2 flex-shrink-0 bg-white p-1" 
                                  width="24" height="24" 
                                  style="object-fit: contain;"
-                                 onerror="this.style.display='none'" 
+                                 onerror="this.onerror=null; this.src='https://assets.parqet.com/logos/symbol/${txn.ticker}'; this.onerror=() => { this.style.display='none'; };" 
                                  loading="lazy">
                             <div class="text-start overflow-hidden">
                                 <strong>${txn.ticker}</strong>
-                                ${stockNames[txn.ticker] ? `<br><small class="text-primary text-truncate d-inline-block lh-sm" style="max-width: 140px; font-size: 0.72rem; font-weight: 500;">${stockNames[txn.ticker]}</small>` : ''}
+                                ${(typeof getStockFullName === 'function' ? getStockFullName(txn.ticker) : stockNames[txn.ticker]) ? `<br><small class="text-primary text-truncate d-inline-block lh-sm" style="max-width: 140px; font-size: 0.72rem; font-weight: 500;">${typeof getStockFullName === 'function' ? getStockFullName(txn.ticker) : stockNames[txn.ticker]}</small>` : ''}
                             </div>
                         </div>
                     `;
@@ -11919,7 +11988,8 @@
             const typeVal = document.getElementById('txnType').value;
             const isCash = (typeVal === 'DEPOSIT' || typeVal === 'WITHDRAW');
             const isDiv = (typeVal === 'DIVIDEND');
-            let tickerVal = document.getElementById('txnTicker').value.trim().toUpperCase();
+            let tickerVal = document.getElementById('txnTicker').value.trim().toUpperCase().replace(/\s+/g, '');
+            if (tickerVal === 'BRK-B' || tickerVal === 'BRK/B' || tickerVal === 'BRK_B') tickerVal = 'BRK.B';
 
             let priceVal = parseFloat(document.getElementById('txnPrice').value) || 0;
             let sharesVal = parseFloat(document.getElementById('txnShares').value) || 0;
@@ -16783,6 +16853,11 @@
             renderPortfolioCards();
             initCarouselState();
             updateModeButtons();
+            try {
+                if (typeof loadStaticPrices === 'function') {
+                    await loadStaticPrices();
+                }
+            } catch(e) {}
             await renderTable(); 
             autoCalculateDimeFees();
             initTechnicalHub();
