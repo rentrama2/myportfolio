@@ -9038,8 +9038,9 @@
             if (val === 'BRK-B' || val === 'BRK/B' || val === 'BRK_B') val = 'BRK.B';
             this.value = val; 
             let p = (typeof getMarketPrice === 'function') ? getMarketPrice(val) : (marketPrices[val] || 0);
-            if(val && p > 0 && document.getElementById('txnType').value !== 'DIVIDEND') {
-                document.getElementById('txnPrice').value = p.toFixed(2);
+            const priceInp = document.getElementById('txnPrice');
+            if(editingIndex === -1 && (!priceInp.value || parseFloat(priceInp.value) <= 0) && val && p > 0 && document.getElementById('txnType').value !== 'DIVIDEND') {
+                priceInp.value = p.toFixed(2);
                 autoCalculateDimeFees();
             }
         });
