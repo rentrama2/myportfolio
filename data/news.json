@@ -1,46 +1,131 @@
 {
-  "updated_at": "2026-10-18T21:13:37Z",
-  "updated_at_thai": "19 ต.ค. 2569 04:13 น.",
+  "updated_at": "2026-10-18T23:18:31Z",
+  "updated_at_thai": "19 ต.ค. 2569 06:18 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "Dow Jones Futures: AI เจ็บปวดมากขึ้นหลังจากการขาย Nasdaq ออกไปหรือไม่? Meta, SpaceX, รหัสรายได้ของ Tesla",
-      "title_en": "Dow Jones Futures: More AI Pain After Nasdaq Sell-Off? Meta, SpaceX, Tesla Earnings Key",
-      "summary": "Dow Jones Futures: AI เจ็บปวดมากขึ้นหลังจากการขาย Nasdaq ออกไปหรือไม่? Meta, SpaceX, รหัสรายได้ของ Tesla",
+      "title": "Dow Jones Futures ดีดตัวขึ้นหลังจากการขาย AI; Meta, SpaceX, รหัสรายได้ของ Tesla",
+      "title_en": "Dow Jones Futures Rebound After AI Sell-Off; Meta, SpaceX, Tesla Earnings Key",
+      "summary": "Dow Jones Futures ดีดตัวขึ้นหลังจากการขาย AI; Meta, SpaceX, รหัสรายได้ของ Tesla",
       "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-more-ai.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T17:32:26Z",
+      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures-rebound.html",
+      "time": "5 นาทีที่แล้ว",
+      "publishedAt": "2026-10-18T23:13:10Z",
       "category": "EARNINGS",
       "tickers": [
         "META",
         "TSLA",
-        "QQQ",
         "DIA"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": true,
       "points": [
-        "Dow Jones Futures: AI เจ็บปวดมากขึ้นหลังจากการขาย Nasdaq ออกไปหรือไม่? Meta, SpaceX, รหัสรายได้ของ Tesla",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (18/10/2026 17:32 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #QQQ #DIA"
+        "Dow Jones Futures ดีดตัวขึ้นหลังจากการขาย AI; Meta, SpaceX, รหัสรายได้ของ Tesla",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (18/10/2026 23:13 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #DIA"
       ],
       "fullArticle": [
-        "Dow Jones Futures: AI เจ็บปวดมากขึ้นหลังจากการขาย Nasdaq ออกไปหรือไม่? Meta, SpaceX, รหัสรายได้ของ Tesla",
-        "Dow Jones Futures: AI เจ็บปวดมากขึ้นหลังจากการขาย Nasdaq ออกไปหรือไม่? Meta, SpaceX, รหัสรายได้ของ Tesla",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures: More AI Pain After Nasdaq Sell-Off? Meta, SpaceX, Tesla Earnings Key\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Dow Jones Futures ดีดตัวขึ้นหลังจากการขาย AI; Meta, SpaceX, รหัสรายได้ของ Tesla",
+        "Dow Jones Futures ดีดตัวขึ้นหลังจากการขาย AI; Meta, SpaceX, รหัสรายได้ของ Tesla",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures Rebound After AI Sell-Off; Meta, SpaceX, Tesla Earnings Key\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
+      "title": "รัฐมนตรีกระทรวงการคลังของอินเดียโทษว่าการออกจากตลาดอย่างง่ายดายและสภาพคล่องส่วนเกินส่งผลให้ตลาดตราสารทุนมีผลการดำเนินงานต่ำกว่าปกติ",
+      "title_en": "India’s Finance Minister blames easy exits and excess liquidity for equity market's underperformance",
+      "summary": "รัฐมนตรีกระทรวงการคลังของอินเดียกล่าวว่าเงินทุนไหลออกอย่างต่อเนื่องเป็นหนึ่งในความเสี่ยงที่ใหญ่ที่สุดของประเทศในปี 2570",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/18/india-ai-nifty50-sensex-investors.html",
+      "time": "18 นาทีที่แล้ว",
+      "publishedAt": "2026-10-18T23:00:01Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "รัฐมนตรีกระทรวงการคลังของอินเดียกล่าวว่าเงินทุนไหลออกอย่างต่อเนื่องเป็นหนึ่งในความเสี่ยงที่ใหญ่ที่สุดของประเทศในปี 2570",
+        "แหล่งข่าวอ้างอิง: CNBC (18/10/2026 23:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "รัฐมนตรีกระทรวงการคลังของอินเดียโทษว่าการออกจากตลาดอย่างง่ายดายและสภาพคล่องส่วนเกินส่งผลให้ตลาดตราสารทุนมีผลการดำเนินงานต่ำกว่าปกติ",
+        "รัฐมนตรีกระทรวงการคลังของอินเดียกล่าวว่าเงินทุนไหลออกอย่างต่อเนื่องเป็นหนึ่งในความเสี่ยงที่ใหญ่ที่สุดของประเทศในปี 2570",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"India’s Finance Minister blames easy exits and excess liquidity for equity market's underperformance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "ราคาน้ำมันร่วงลงเนื่องจากการยกเว้นคว่ำบาตรของทรัมป์อาจส่งผลให้รัสเซียมีปริมาณเชื้อเพลิงเพิ่มมากขึ้น",
+      "title_en": "Oil slips as Trump's sanction waiver may lead to more Russian fuel supplies",
+      "summary": "ราคาน้ำมันร่วงลงเนื่องจากการยกเว้นคว่ำบาตรของทรัมป์อาจส่งผลให้รัสเซียมีปริมาณเชื้อเพลิงเพิ่มมากขึ้น",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-slips-trumps-sanction-waiver-222256196.html",
+      "time": "55 นาทีที่แล้ว",
+      "publishedAt": "2026-10-18T22:22:56Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ราคาน้ำมันร่วงลงเนื่องจากการยกเว้นคว่ำบาตรของทรัมป์อาจส่งผลให้รัสเซียมีปริมาณเชื้อเพลิงเพิ่มมากขึ้น",
+        "แหล่งข่าวอ้างอิง: Reuters (18/10/2026 22:22 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ราคาน้ำมันร่วงลงเนื่องจากการยกเว้นคว่ำบาตรของทรัมป์อาจส่งผลให้รัสเซียมีปริมาณเชื้อเพลิงเพิ่มมากขึ้น",
+        "ราคาน้ำมันร่วงลงเนื่องจากการยกเว้นคว่ำบาตรของทรัมป์อาจส่งผลให้รัสเซียมีปริมาณเชื้อเพลิงเพิ่มมากขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil slips as Trump's sanction waiver may lead to more Russian fuel supplies\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "Hormuz กำลังเปลี่ยนบิลค่าเชื้อเพลิงของ Shipping ให้เป็นวิกฤตการจัดหา",
+      "title_en": "Hormuz Is Turning Shipping’s Fuel Bill Into a Supply Crisis",
+      "summary": "Hormuz กำลังเปลี่ยนบิลค่าเชื้อเพลิงของ Shipping ให้เป็นวิกฤตการจัดหา",
+      "source": "Oilprice.com",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/hormuz-turning-shipping-fuel-bill-210000168.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-18T21:00:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Hormuz กำลังเปลี่ยนบิลค่าเชื้อเพลิงของ Shipping ให้เป็นวิกฤตการจัดหา",
+        "แหล่งข่าวอ้างอิง: Oilprice.com (18/10/2026 21:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Hormuz กำลังเปลี่ยนบิลค่าเชื้อเพลิงของ Shipping ให้เป็นวิกฤตการจัดหา",
+        "Hormuz กำลังเปลี่ยนบิลค่าเชื้อเพลิงของ Shipping ให้เป็นวิกฤตการจัดหา",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Hormuz Is Turning Shipping’s Fuel Bill Into a Supply Crisis\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
       "title": "Bessent กล่าวว่าการบริหารงานจะ 'เป็นเจ้าของเศรษฐกิจ'",
       "title_en": "Bessent Says Administration Will 'Own the Economy'",
       "summary": "Bessent กล่าวว่าการบริหารงานจะ 'เป็นเจ้าของเศรษฐกิจ'",
       "source": "Barrons.com",
       "sourceUrl": "https://finance.yahoo.com/m/0d2de407-7de3-37c3-a3fb-ca939cf0d8a7/bessent-says-administration.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T17:23:47Z",
       "category": "MACRO",
       "tickers": [
@@ -63,41 +148,41 @@
       ]
     },
     {
-      "id": "news-3",
-      "title": "การผลักดันไปป์ไลน์ของการวิเคราะห์ - คาร์นีย์ไม่น่าจะทำให้งานน้ำมันของแคนาดากลับมาเฟื่องฟูได้",
-      "title_en": "Analysis-Carney’s pipeline push is unlikely to bring back Canada’s oil jobs boom",
-      "summary": "การผลักดันไปป์ไลน์ของการวิเคราะห์ - คาร์นีย์ไม่น่าจะทำให้งานน้ำมันของแคนาดากลับมาเฟื่องฟูได้",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/news/analysis-carney-pipeline-push-unlikely-121447010.html",
-      "time": "7 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T13:31:08Z",
-      "category": "COMMODITIES",
+      "id": "news-6",
+      "title": "ความกดดันของภาค AI รายได้ และสิ่งสำคัญอื่นๆ ที่น่าจับตามองในสัปดาห์นี้",
+      "title_en": "AI Sector Pressure, Earnings and Other Key Things to Watch this Week",
+      "summary": "ความกดดันของภาค AI รายได้ และสิ่งสำคัญอื่นๆ ที่น่าจับตามองในสัปดาห์นี้",
+      "source": "Barchart",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/ai-sector-pressure-earnings-other-170002115.html",
+      "time": "6 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-18T17:00:02Z",
+      "category": "EARNINGS",
       "tickers": [
-        "XOM",
-        "CVX"
+        "SPY",
+        "DIA"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "การผลักดันไปป์ไลน์ของการวิเคราะห์ - คาร์นีย์ไม่น่าจะทำให้งานน้ำมันของแคนาดากลับมาเฟื่องฟูได้",
-        "แหล่งข่าวอ้างอิง: Reuters (18/10/2026 13:31 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "ความกดดันของภาค AI รายได้ และสิ่งสำคัญอื่นๆ ที่น่าจับตามองในสัปดาห์นี้",
+        "แหล่งข่าวอ้างอิง: Barchart (18/10/2026 17:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "การผลักดันไปป์ไลน์ของการวิเคราะห์ - คาร์นีย์ไม่น่าจะทำให้งานน้ำมันของแคนาดากลับมาเฟื่องฟูได้",
-        "การผลักดันไปป์ไลน์ของการวิเคราะห์ - คาร์นีย์ไม่น่าจะทำให้งานน้ำมันของแคนาดากลับมาเฟื่องฟูได้",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Analysis-Carney’s pipeline push is unlikely to bring back Canada’s oil jobs boom\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ความกดดันของภาค AI รายได้ และสิ่งสำคัญอื่นๆ ที่น่าจับตามองในสัปดาห์นี้",
+        "ความกดดันของภาค AI รายได้ และสิ่งสำคัญอื่นๆ ที่น่าจับตามองในสัปดาห์นี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AI Sector Pressure, Earnings and Other Key Things to Watch this Week\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-7",
       "title": "Meta Platforms และ Tesla เป็นหนึ่งในบริษัทที่เตรียมรายงานในสัปดาห์หน้า สิ่งที่คาดหวัง",
       "title_en": "Meta Platforms and Tesla are among the companies set to report next week. What to expect",
       "summary": "Meta, General Motors, สายการบินหลัก และบริษัทอื่นๆ จะรายงานผลประกอบการในสัปดาห์นี้ นี่คือสิ่งที่นักวิเคราะห์คาดการณ์และสิ่งที่เกิดขึ้นในอดีต",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/18/meta-tesla-netflix-earnings-preview.html",
-      "time": "8 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T12:41:18Z",
       "category": "EARNINGS",
       "tickers": [
@@ -119,13 +204,13 @@
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-8",
       "title": "เปิดตลอดเวลา ฟังตลอดเวลา: อุปกรณ์ AI ใหม่กำลังก้าวข้ามขีดจำกัดทางกฎหมาย และอาจส่งผลให้ผู้ใช้ตกอยู่ในอันตราย",
       "title_en": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
-      "summary": "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์ตามกฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
+      "summary": "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/18/ai-wearables-privacy-wiretap-laws.html",
-      "time": "9 ชั่วโมงที่แล้ว",
+      "time": "11 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T12:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -137,76 +222,21 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์ตามกฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
+        "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
         "แหล่งข่าวอ้างอิง: CNBC (18/10/2026 12:00 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL #AMZN #META"
       ],
       "fullArticle": [
         "เปิดตลอดเวลา ฟังตลอดเวลา: อุปกรณ์ AI ใหม่กำลังก้าวข้ามขีดจำกัดทางกฎหมาย และอาจส่งผลให้ผู้ใช้ตกอยู่ในอันตราย",
-        "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์ตามกฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
+        "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-6",
-      "title": "3 หุ้นพลังงานของสหรัฐฯ ที่สัมผัสโดยตรงกับราคาก๊าซธรรมชาติและน้ำมันที่สูงขึ้น",
-      "title_en": "3 U.S. Energy Stocks With Direct Exposure to Higher Natural Gas and Oil Prices",
-      "summary": "3 หุ้นพลังงานของสหรัฐฯ ที่สัมผัสโดยตรงกับราคาก๊าซธรรมชาติและน้ำมันที่สูงขึ้น",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/3-u-energy-stocks-direct-110932424.html",
-      "time": "10 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T11:09:32Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "3 หุ้นพลังงานของสหรัฐฯ ที่สัมผัสโดยตรงกับราคาก๊าซธรรมชาติและน้ำมันที่สูงขึ้น",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (18/10/2026 11:09 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "3 หุ้นพลังงานของสหรัฐฯ ที่สัมผัสโดยตรงกับราคาก๊าซธรรมชาติและน้ำมันที่สูงขึ้น",
-        "3 หุ้นพลังงานของสหรัฐฯ ที่สัมผัสโดยตรงกับราคาก๊าซธรรมชาติและน้ำมันที่สูงขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 U.S. Energy Stocks With Direct Exposure to Higher Natural Gas and Oil Prices\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "มูลค่ายุติธรรมของหุ้น ExxonMobil (XOM) ขยับสูงขึ้นเนื่องจากนักวิเคราะห์ปรับแนวโน้มผลประกอบการใหม่",
-      "title_en": "ExxonMobil (XOM) Stock Fair Value Edges Higher As Analysts Rework Earnings Outlook",
-      "summary": "มูลค่ายุติธรรมของหุ้น ExxonMobil (XOM) ขยับสูงขึ้นเนื่องจากนักวิเคราะห์ปรับแนวโน้มผลประกอบการใหม่",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-xom-stock-fair-value-081256601.html",
-      "time": "13 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T08:12:56Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "XOM"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "มูลค่ายุติธรรมของหุ้น ExxonMobil (XOM) ขยับสูงขึ้นเนื่องจากนักวิเคราะห์ปรับแนวโน้มผลประกอบการใหม่",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (18/10/2026 08:12 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM"
-      ],
-      "fullArticle": [
-        "มูลค่ายุติธรรมของหุ้น ExxonMobil (XOM) ขยับสูงขึ้นเนื่องจากนักวิเคราะห์ปรับแนวโน้มผลประกอบการใหม่",
-        "มูลค่ายุติธรรมของหุ้น ExxonMobil (XOM) ขยับสูงขึ้นเนื่องจากนักวิเคราะห์ปรับแนวโน้มผลประกอบการใหม่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"ExxonMobil (XOM) Stock Fair Value Edges Higher As Analysts Rework Earnings Outlook\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
+      "id": "news-9",
       "title": "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
       "title_en": "AI stocks plunge. Inflation heats up. Where we're still finding opportunities",
-      "summary": "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+      "summary": "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนนอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/17/ai-stocks-plunge-inflation-heats-up-where-were-still-finding-opportunities.html",
       "time": "1 วันที่แล้ว",
@@ -220,18 +250,18 @@
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนนอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
         "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:42 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
         "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
-        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
+        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนนอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AI stocks plunge. Inflation heats up. Where we're still finding opportunities\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-9",
+      "id": "news-10",
       "title": "ผู้รวบรวมรายใหม่ของซอฟต์แวร์ได้รับคะแนนความเชื่อมั่นอย่างมากจาก Berkshire",
       "title_en": "Software’s new consolidator gets big vote of confidence from Berkshire",
       "summary": "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
@@ -260,8 +290,8 @@
       ]
     },
     {
-      "id": "news-10",
-      "title": "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+      "id": "news-11",
+      "title": "'เงินตาย' มานานนับทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
       "title_en": "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
       "summary": "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
       "source": "CNBC",
@@ -281,13 +311,13 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
       ],
       "fullArticle": [
-        "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+        "'เงินตาย' มานานนับทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
         "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-11",
+      "id": "news-12",
       "title": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
       "title_en": "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
       "summary": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
@@ -313,33 +343,6 @@
         "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
         "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic Wants an IPO. New York City Wants It to Slow Down.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
-      "title_en": "$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook",
-      "summary": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
-      "source": "24/7 Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/25-000-front-250-more-123212635.html",
-      "time": "1 วันที่แล้ว",
-      "publishedAt": "2026-10-17T12:32:12Z",
-      "category": "MACRO",
-      "tickers": [
-        "VTI"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
-        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (17/10/2026 12:32 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #VTI"
-      ],
-      "fullArticle": [
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
-        "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"$25,000 Up Front or $250 More a Month? The Shortcut to a VTI Million Most Savers Overlook\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
