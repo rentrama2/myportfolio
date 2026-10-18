@@ -1,16 +1,74 @@
 {
-  "updated_at": "2026-10-17T22:37:38Z",
-  "updated_at_thai": "18 ต.ค. 2569 05:37 น.",
+  "updated_at": "2026-10-18T00:16:42Z",
+  "updated_at_thai": "18 ต.ค. 2569 07:16 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
+      "title_en": "Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
+      "summary": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-what-to-do.html",
+      "time": "29 นาทีที่แล้ว",
+      "publishedAt": "2026-10-17T23:47:05Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "META",
+        "SPY",
+        "QQQ",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (17/10/2026 23:47 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #SPY #QQQ #DIA"
+      ],
+      "fullArticle": [
+        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
+        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "ราคาน้ำมันยังคงอยู่ในระดับสูงเนื่องจากสงครามทำให้อุปทานตึงตัวจนถึงปี 2570",
+      "title_en": "Oil Prices Stay High as War Keeps Supply Tight Into 2027",
+      "summary": "ราคาน้ำมันยังคงอยู่ในระดับสูงเนื่องจากสงครามทำให้อุปทานตึงตัวจนถึงปี 2570",
+      "source": "Oilprice.com",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-stay-high-war-230000230.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-17T23:00:00Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ราคาน้ำมันยังคงอยู่ในระดับสูงเนื่องจากสงครามทำให้อุปทานตึงตัวจนถึงปี 2570",
+        "แหล่งข่าวอ้างอิง: Oilprice.com (17/10/2026 23:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ราคาน้ำมันยังคงอยู่ในระดับสูงเนื่องจากสงครามทำให้อุปทานตึงตัวจนถึงปี 2570",
+        "ราคาน้ำมันยังคงอยู่ในระดับสูงเนื่องจากสงครามทำให้อุปทานตึงตัวจนถึงปี 2570",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Prices Stay High as War Keeps Supply Tight Into 2027\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
       "title": "หุ้นแคนาดา 3 ตัวที่มี ROE มากกว่า 27%",
       "title_en": "3 Canadian Stocks With ROE Over 27%",
       "summary": "หุ้นแคนาดา 3 ตัวที่มี ROE มากกว่า 27%",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-stocks-roe-over-221100695.html",
-      "time": "26 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T22:11:00Z",
       "category": "MACRO",
       "tickers": [
@@ -20,7 +78,7 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "หุ้นแคนาดา 3 ตัวที่มี ROE มากกว่า 27%",
         "แหล่งข่าวอ้างอิง: Simply Wall St. (17/10/2026 22:11 UTC)",
@@ -33,13 +91,13 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-4",
       "title": "ทรัพยากร Aclara และหุ้น Rare Earth ของแคนาดาอีก 2 รายการที่น่าจับตามอง",
       "title_en": "Aclara Resources And 2 Other Canadian Rare Earth Stocks To Watch",
       "summary": "ทรัพยากร Aclara และหุ้น Rare Earth ของแคนาดาอีก 2 รายการที่น่าจับตามอง",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/aclara-resources-2-other-canadian-210851755.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T21:08:51Z",
       "category": "MACRO",
       "tickers": [
@@ -62,13 +120,13 @@
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-5",
       "title": "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มตกตะลึงและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
       "title_en": "Beyond Crude: Why Refinery Bottlenecks Are Driving Pump Shock and Could Dampen U.S. Growth",
       "summary": "เหนือกว่าน้ำมันดิบ: เหตุใดปัญหาคอขวดของโรงกลั่นจึงทำให้ปั๊มตกตะลึงและอาจส่งผลกระทบต่อการเติบโตของสหรัฐฯ",
       "source": "Barrons.com",
       "sourceUrl": "https://finance.yahoo.com/m/f4e82b74-5332-3225-90d9-8bbc309bc257/beyond-crude%3A-why-refinery.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T18:51:00Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -90,71 +148,13 @@
       ]
     },
     {
-      "id": "news-4",
-      "title": "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
-      "title_en": "Chevron or PepsiCo: Only One Gets My Dividend Dollars for the Next 20 Years",
-      "summary": "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
-      "source": "TIKR",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/chevron-pepsico-only-one-gets-160741715.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-17T16:07:41Z",
-      "category": "MACRO",
-      "tickers": [
-        "CVX",
-        "SCHD"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
-        "แหล่งข่าวอ้างอิง: TIKR (17/10/2026 16:07 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX #SCHD"
-      ],
-      "fullArticle": [
-        "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
-        "Chevron หรือ PepsiCo: มีเพียงคนเดียวเท่านั้นที่ได้รับเงินปันผลของฉันในอีก 20 ปีข้างหน้า",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Chevron or PepsiCo: Only One Gets My Dividend Dollars for the Next 20 Years\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
-      "title_en": "Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?",
-      "summary": "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-what-to-do.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-17T15:51:51Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "META",
-        "SPY",
-        "QQQ",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (17/10/2026 15:51 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #SPY #QQQ #DIA"
-      ],
-      "fullArticle": [
-        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
-        "Dow Jones Futures: จะทำอย่างไรหลังจาก S&P 500, Nasdaq Break Support; Meta Earnings จะช่วย AI ได้หรือไม่?",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures: What To Do After S&P 500, Nasdaq Break Support; Will Meta Earnings Save AI?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
       "id": "news-6",
       "title": "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
       "title_en": "AI stocks plunge. Inflation heats up. Where we're still finding opportunities",
       "summary": "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/17/ai-stocks-plunge-inflation-heats-up-where-were-still-finding-opportunities.html",
-      "time": "6 ชั่วโมงที่แล้ว",
+      "time": "8 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:42:34Z",
       "category": "EARNINGS",
       "tickers": [
@@ -182,7 +182,7 @@
       "summary": "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/bending-spoons-wants-to-revive-software-castoffs-berkshire-investing.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:11:30Z",
       "category": "TECH",
       "tickers": [
@@ -211,7 +211,7 @@
       "summary": "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/dead-money-for-a-decade-hedge-fund-approach-that-may-trump-bonds.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T15:00:01Z",
       "category": "MACRO",
       "tickers": [
@@ -238,7 +238,7 @@
       "summary": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
       "source": "Moby",
       "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/anthropic-wants-ipo-york-city-120200718.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T14:48:07Z",
       "category": "MACRO",
       "tickers": [
@@ -267,7 +267,7 @@
       "summary": "ชำระล่วงหน้า $25,000 หรือเพิ่มอีก $250 ต่อเดือน? ทางลัดสู่การมองข้าม VTI Million Most Savers",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/25-000-front-250-more-123212635.html",
-      "time": "10 ชั่วโมงที่แล้ว",
+      "time": "11 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T12:32:12Z",
       "category": "MACRO",
       "tickers": [
@@ -294,7 +294,7 @@
       "summary": "Ben Chisell ซีอีโอของ Paysend จำกัดเครื่องมือ AI ไว้เฉพาะกับบริษัทที่มีประสิทธิภาพสูงสุด เนื่องจากบริษัทอื่นๆ ในสหราชอาณาจักรผลักดันให้มีการเปิดตัวสถานที่ทำงานที่กว้างขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/17/ai-workplace-tokenmaxxing-paysend.html",
-      "time": "17 ชั่วโมงที่แล้ว",
+      "time": "19 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-17T05:00:01Z",
       "category": "TECH",
       "tickers": [
