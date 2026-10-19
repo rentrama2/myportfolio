@@ -1,17 +1,186 @@
 {
-  "updated_at": "2026-10-19T19:37:12Z",
-  "updated_at_thai": "20 ต.ค. 2569 02:37 น.",
+  "updated_at": "2026-10-19T23:04:24Z",
+  "updated_at_thai": "20 ต.ค. 2569 06:04 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "อัพเดตภาคส่วน: พลังงาน",
-      "title_en": "Sector Update: Energy",
-      "summary": "อัพเดตภาคส่วน: พลังงาน",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/sector-energy-192532159.html",
-      "time": "11 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T19:25:32Z",
+      "title": "Jim Cramer บอกว่าอย่าเพิ่งไล่ตามการฟื้นตัวของ AI นี่คือสิ่งที่ต้องเกิดขึ้นก่อน",
+      "title_en": "Jim Cramer says don't chase the AI rebound just yet. Here's what needs to happen first",
+      "summary": "Jim Cramer จาก CNBC เตือนนักลงทุนไม่ให้รีบกลับเข้าไปในหุ้น AI",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/jim-cramer-dont-chase-ai-rebound-yet.html",
+      "time": "17 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T22:46:33Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": true,
+      "points": [
+        "Jim Cramer จาก CNBC เตือนนักลงทุนไม่ให้รีบกลับเข้าไปในหุ้น AI",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 22:46 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "Jim Cramer บอกว่าอย่าเพิ่งไล่ตามการฟื้นตัวของ AI นี่คือสิ่งที่ต้องเกิดขึ้นก่อน",
+        "Jim Cramer จาก CNBC เตือนนักลงทุนไม่ให้รีบกลับเข้าไปในหุ้น AI",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer says don't chase the AI rebound just yet. Here's what needs to happen first\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "Jim Cramer กล่าวว่าการขายหุ้น AI เมื่อเร็ว ๆ นี้สะท้อนบทเรียนที่สำคัญจากความล้มเหลวของตลาดในปี 1987",
+      "title_en": "Jim Cramer says the recent AI stock sell-off echoes a crucial lesson from the 1987 market crash",
+      "summary": "Jim Cramer จาก CNBC กล่าวว่าการล่มสลายของตลาดหุ้นในปี 1987 ถือเป็นบทเรียนสำคัญที่สามารถนำไปใช้กับการขาย AI เมื่อเร็ว ๆ นี้",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/cramer-recent-ai-sell-off-echoes-lesson-1987-crash.html",
+      "time": "41 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T22:22:45Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "Jim Cramer จาก CNBC กล่าวว่าการล่มสลายของตลาดหุ้นในปี 1987 ถือเป็นบทเรียนสำคัญที่สามารถนำไปใช้กับการขาย AI เมื่อเร็ว ๆ นี้",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 22:22 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "Jim Cramer กล่าวว่าการขายหุ้น AI เมื่อเร็ว ๆ นี้สะท้อนบทเรียนที่สำคัญจากความล้มเหลวของตลาดในปี 1987",
+        "Jim Cramer จาก CNBC กล่าวว่าการล่มสลายของตลาดหุ้นในปี 1987 ถือเป็นบทเรียนสำคัญที่สามารถนำไปใช้กับการขาย AI เมื่อเร็ว ๆ นี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer says the recent AI stock sell-off echoes a crucial lesson from the 1987 market crash\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
+      "title_en": "Where Will VTI Be in 20 Years? Here's What History Suggests",
+      "summary": "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
+      "source": "Motley Fool",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/where-vti-20-years-heres-214300311.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T21:43:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "VTI"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
+        "แหล่งข่าวอ้างอิง: Motley Fool (19/10/2026 21:43 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #VTI"
+      ],
+      "fullArticle": [
+        "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
+        "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Where Will VTI Be in 20 Years? Here's What History Suggests\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "ลืมเทค.. พลังงานจะเป็นผู้ชนะรายใหญ่ในฤดูกาลรับรายได้นี้",
+      "title_en": "Forget Tech. Energy Will Be The Big Winner This Earnings Season.",
+      "summary": "ลืมเทค.. พลังงานจะเป็นผู้ชนะรายใหญ่ในฤดูกาลรับรายได้นี้",
+      "source": "Barrons.com",
+      "sourceUrl": "https://finance.yahoo.com/m/2bba9727-a5dc-3eb3-821b-571b920f9856/forget-tech.-energy-will-be.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T21:33:00Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ลืมเทค.. พลังงานจะเป็นผู้ชนะรายใหญ่ในฤดูกาลรับรายได้นี้",
+        "แหล่งข่าวอ้างอิง: Barrons.com (19/10/2026 21:33 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "ลืมเทค.. พลังงานจะเป็นผู้ชนะรายใหญ่ในฤดูกาลรับรายได้นี้",
+        "ลืมเทค.. พลังงานจะเป็นผู้ชนะรายใหญ่ในฤดูกาลรับรายได้นี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Forget Tech. Energy Will Be The Big Winner This Earnings Season.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "หุ้นประกันภัยต่อและบริษัทประกันภัยในซาอุดีอาระเบียเชื่อมโยงกับความเสี่ยงด้านความปลอดภัยของซาอุดีอาระเบีย",
+      "title_en": "Saudi Reinsurance Stock And Insurance Peers Tied To Saudi Security Risk",
+      "summary": "หุ้นประกันภัยต่อและบริษัทประกันภัยในซาอุดีอาระเบียเชื่อมโยงกับความเสี่ยงด้านความปลอดภัยของซาอุดีอาระเบีย",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/saudi-reinsurance-stock-insurance-peers-211206299.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T21:12:06Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "หุ้นประกันภัยต่อและบริษัทประกันภัยในซาอุดีอาระเบียเชื่อมโยงกับความเสี่ยงด้านความปลอดภัยของซาอุดีอาระเบีย",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (19/10/2026 21:12 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "หุ้นประกันภัยต่อและบริษัทประกันภัยในซาอุดีอาระเบียเชื่อมโยงกับความเสี่ยงด้านความปลอดภัยของซาอุดีอาระเบีย",
+        "หุ้นประกันภัยต่อและบริษัทประกันภัยในซาอุดีอาระเบียเชื่อมโยงกับความเสี่ยงด้านความปลอดภัยของซาอุดีอาระเบีย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Saudi Reinsurance Stock And Insurance Peers Tied To Saudi Security Risk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "Google กล่าวว่าสามารถสร้างศูนย์ข้อมูลได้อย่างถูกต้อง ผู้เชี่ยวชาญและผู้อยู่อาศัยบางคนสงสัย",
+      "title_en": "Google says it can build data centers the right way. Some experts and residents are skeptical",
+      "summary": "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T21:05:20Z",
+      "category": "TECH",
+      "tickers": [
+        "GOOGL"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 21:05 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #GOOGL"
+      ],
+      "fullArticle": [
+        "Google กล่าวว่าสามารถสร้างศูนย์ข้อมูลได้อย่างถูกต้อง ผู้เชี่ยวชาญและผู้อยู่อาศัยบางคนสงสัย",
+        "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Google says it can build data centers the right way. Some experts and residents are skeptical\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "สรุปพลังงานและสาธารณูปโภค: พูดคุยเรื่องตลาด",
+      "title_en": "Energy and Utilities Roundup: Market Talk",
+      "summary": "สรุปพลังงานและสาธารณูปโภค: พูดคุยเรื่องตลาด",
+      "source": "The Wall Street Journal",
+      "sourceUrl": "https://finance.yahoo.com/m/0c7aaae9-fbca-3c29-98ea-76ce58e21a72/energy-and-utilities-roundup%3A.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T21:01:00Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -20,109 +189,111 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
-        "อัพเดตภาคส่วน: พลังงาน",
-        "แหล่งข่าวอ้างอิง: MT Newswires (19/10/2026 19:25 UTC)",
+        "สรุปพลังงานและสาธารณูปโภค: พูดคุยเรื่องตลาด",
+        "แหล่งข่าวอ้างอิง: The Wall Street Journal (19/10/2026 21:01 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "อัพเดตภาคส่วน: พลังงาน",
-        "อัพเดตภาคส่วน: พลังงาน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Sector Update: Energy\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "สรุปพลังงานและสาธารณูปโภค: พูดคุยเรื่องตลาด",
+        "สรุปพลังงานและสาธารณูปโภค: พูดคุยเรื่องตลาด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Energy and Utilities Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-2",
-      "title": "สต็อกน้ำมันที่ดีกว่า: Chevron (CVX) กับ ExxonMobil (XOM)",
-      "title_en": "Better Oil Stock: Chevron (CVX) vs. ExxonMobil (XOM)",
-      "summary": "สต็อกน้ำมันที่ดีกว่า: Chevron (CVX) กับ ExxonMobil (XOM)",
-      "source": "Motley Fool",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/better-oil-stock-chevron-cvx-191500321.html",
-      "time": "22 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T19:15:00Z",
-      "category": "COMMODITIES",
+      "id": "news-8",
+      "title": "หุ้นสหรัฐฯ ส่วนใหญ่สูงขึ้นเนื่องจากเครดิตของ AI กังวลลดลง",
+      "title_en": "U.S. Stocks Mostly Higher as AI Credit Worries Abate",
+      "summary": "หุ้นสหรัฐฯ ส่วนใหญ่สูงขึ้นเนื่องจากเครดิตของ AI กังวลลดลง",
+      "source": "The Wall Street Journal",
+      "sourceUrl": "https://finance.yahoo.com/m/de4c2500-3bcd-3a7c-b6de-e99390f1edf7/u.s.-stocks-mostly-higher-as.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T20:58:00Z",
+      "category": "TECH",
       "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "สต็อกน้ำมันที่ดีกว่า: Chevron (CVX) กับ ExxonMobil (XOM)",
-        "แหล่งข่าวอ้างอิง: Motley Fool (19/10/2026 19:15 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "สต็อกน้ำมันที่ดีกว่า: Chevron (CVX) กับ ExxonMobil (XOM)",
-        "สต็อกน้ำมันที่ดีกว่า: Chevron (CVX) กับ ExxonMobil (XOM)",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Better Oil Stock: Chevron (CVX) vs. ExxonMobil (XOM)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "บีซี-ออยส์",
-      "title_en": "BC-OILS",
-      "summary": "บีซี-ออยส์",
-      "source": "Associated Press",
-      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/bc-oils-190031856.html",
-      "time": "36 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T19:00:31Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "บีซี-ออยส์",
-        "แหล่งข่าวอ้างอิง: Associated Press (19/10/2026 19:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "บีซี-ออยส์",
-        "บีซี-ออยส์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BC-OILS\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "เชฟรอนเพิ่งทำสถิติสูงสุด หุ้นยังคงเป็นการซื้อหรือไม่?",
-      "title_en": "Chevron Just Hit a Record High. Is the Stock Still a Buy?",
-      "summary": "เชฟรอนเพิ่งทำสถิติสูงสุด หุ้นยังคงเป็นการซื้อหรือไม่?",
-      "source": "Motley Fool",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/chevron-just-hit-record-high-185000036.html",
-      "time": "47 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T18:50:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "CVX"
+        "NVDA",
+        "AAPL",
+        "MSFT"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "เชฟรอนเพิ่งทำสถิติสูงสุด หุ้นยังคงเป็นการซื้อหรือไม่?",
-        "แหล่งข่าวอ้างอิง: Motley Fool (19/10/2026 18:50 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX"
+        "หุ้นสหรัฐฯ ส่วนใหญ่สูงขึ้นเนื่องจากเครดิตของ AI กังวลลดลง",
+        "แหล่งข่าวอ้างอิง: The Wall Street Journal (19/10/2026 20:58 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "เชฟรอนเพิ่งทำสถิติสูงสุด หุ้นยังคงเป็นการซื้อหรือไม่?",
-        "เชฟรอนเพิ่งทำสถิติสูงสุด หุ้นยังคงเป็นการซื้อหรือไม่?",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Chevron Just Hit a Record High. Is the Stock Still a Buy?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้นสหรัฐฯ ส่วนใหญ่สูงขึ้นเนื่องจากเครดิตของ AI กังวลลดลง",
+        "หุ้นสหรัฐฯ ส่วนใหญ่สูงขึ้นเนื่องจากเครดิตของ AI กังวลลดลง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. Stocks Mostly Higher as AI Credit Worries Abate\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-9",
+      "title": "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
+      "title_en": "Basic Materials Roundup: Market Talk",
+      "summary": "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
+      "source": "The Wall Street Journal",
+      "sourceUrl": "https://finance.yahoo.com/m/d7192cfe-562b-30df-89af-59602850e51c/basic-materials-roundup%3A.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T20:55:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
+        "แหล่งข่าวอ้างอิง: The Wall Street Journal (19/10/2026 20:55 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
+        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Basic Materials Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
+      "title": "Apple ประกาศงานเปิดตัวผลิตภัณฑ์ในวันที่ 28 ต.ค. นักวิเคราะห์คาดว่าแล็ปท็อปหน้าจอสัมผัส",
+      "title_en": "Apple announces product launch event for Oct. 28. Analysts expect touchscreen laptop",
+      "summary": "Apple ส่งคำเชิญเข้าร่วมกิจกรรมในสัปดาห์หน้า โดยเรียกว่า \"Pro and tell\"",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/apple-product-launch-event-oct-28-analysts-expect-touchscreen-laptop.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T19:46:07Z",
+      "category": "TECH",
+      "tickers": [
+        "AAPL"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Apple ส่งคำเชิญเข้าร่วมกิจกรรมในสัปดาห์หน้า โดยเรียกว่า \"Pro and tell\"",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 19:46 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
+      ],
+      "fullArticle": [
+        "Apple ประกาศงานเปิดตัวผลิตภัณฑ์ในวันที่ 28 ต.ค. นักวิเคราะห์คาดว่าแล็ปท็อปหน้าจอสัมผัส",
+        "Apple ส่งคำเชิญเข้าร่วมกิจกรรมในสัปดาห์หน้า โดยเรียกว่า \"Pro and tell\"",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple announces product launch event for Oct. 28. Analysts expect touchscreen laptop\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
       "title": "ผู้หญิงอาจเสี่ยงต่อการตกงานด้าน AI มากขึ้น ผู้ให้บริการสวิตช์โทรศัพท์และพีซีแสดงสาเหตุ",
       "title_en": "Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why",
       "summary": "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/19/ai-job-losses-women-automation-risk.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T18:36:21Z",
       "category": "TECH",
       "tickers": [
@@ -145,40 +316,13 @@
       ]
     },
     {
-      "id": "news-6",
-      "title": "Apple ประกาศงานเปิดตัวผลิตภัณฑ์ในวันที่ 28 ต.ค. นักวิเคราะห์คาดว่าแล็ปท็อปหน้าจอสัมผัส",
-      "title_en": "Apple announces product launch event for Oct. 28. Analysts expect touchscreen laptop",
-      "summary": "Apple ส่งคำเชิญเข้าร่วมกิจกรรมในสัปดาห์หน้า โดยเรียกว่า \"Pro and tell\"",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/apple-product-launch-event-oct-28-analysts-expect-touchscreen-laptop.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T17:25:57Z",
-      "category": "TECH",
-      "tickers": [
-        "AAPL"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Apple ส่งคำเชิญเข้าร่วมกิจกรรมในสัปดาห์หน้า โดยเรียกว่า \"Pro and tell\"",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 17:25 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
-      ],
-      "fullArticle": [
-        "Apple ประกาศงานเปิดตัวผลิตภัณฑ์ในวันที่ 28 ต.ค. นักวิเคราะห์คาดว่าแล็ปท็อปหน้าจอสัมผัส",
-        "Apple ส่งคำเชิญเข้าร่วมกิจกรรมในสัปดาห์หน้า โดยเรียกว่า \"Pro and tell\"",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple announces product launch event for Oct. 28. Analysts expect touchscreen laptop\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
+      "id": "news-12",
       "title": "iPhone Duo ของ Apple กำลังพิสูจน์ตัวเองว่าเป็นตัวเร่งปฏิกิริยาที่ Jim Cramer กล่าวว่าจะเป็นได้",
       "title_en": "Apple's iPhone Duo is proving itself the catalyst that Jim Cramer said it would be",
       "summary": "การสั่งซื้อ iPhone Duo ของ Apple ล่วงหน้าเป็นการพิสูจน์ว่า Jim Cramer ถูกต้อง เนื่องจากสัญญาณบ่งชี้ในช่วงแรกแสดงให้เห็นถึงความต้องการที่แข็งแกร่ง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/19/apples-iphone-duo-is-proving-the-catalyst-that-jim-cramer-said-it-would-be.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T17:25:20Z",
       "category": "TECH",
       "tickers": [
@@ -196,148 +340,6 @@
         "iPhone Duo ของ Apple กำลังพิสูจน์ตัวเองว่าเป็นตัวเร่งปฏิกิริยาที่ Jim Cramer กล่าวว่าจะเป็นได้",
         "การสั่งซื้อ iPhone Duo ของ Apple ล่วงหน้าเป็นการพิสูจน์ว่า Jim Cramer ถูกต้อง เนื่องจากสัญญาณบ่งชี้ในช่วงแรกแสดงให้เห็นถึงความต้องการที่แข็งแกร่ง",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple's iPhone Duo is proving itself the catalyst that Jim Cramer said it would be\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "Anthropic เป็นความหวังสำคัญครั้งสุดท้ายของการค้า AI สำหรับการเสนอขายหุ้น IPO ครั้งใหญ่ในปีนี้",
-      "title_en": "Anthropic is AI trade's last big hope for a major IPO this year",
-      "summary": "ใน Kalshi นั้น Anthropic ถูกมองว่าเป็นการเสนอขายหุ้น IPO ครั้งใหญ่ครั้งสุดท้ายในปี 2569 หลังจากที่ OpenAI ชะลอการเปิดตัวสู่ตลาดสาธารณะ คนอื่นๆก็เลื่อนเช่นกัน",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/anthropic-ipo-ai-trade.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T16:42:14Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ใน Kalshi นั้น Anthropic ถูกมองว่าเป็นการเสนอขายหุ้น IPO ครั้งใหญ่ครั้งสุดท้ายในปี 2569 หลังจากที่ OpenAI ชะลอการเปิดตัวสู่ตลาดสาธารณะ คนอื่นๆก็เลื่อนเช่นกัน",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 16:42 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "Anthropic เป็นความหวังสำคัญครั้งสุดท้ายของการค้า AI สำหรับการเสนอขายหุ้น IPO ครั้งใหญ่ในปีนี้",
-        "ใน Kalshi นั้น Anthropic ถูกมองว่าเป็นการเสนอขายหุ้น IPO ครั้งใหญ่ครั้งสุดท้ายในปี 2569 หลังจากที่ OpenAI ชะลอการเปิดตัวสู่ตลาดสาธารณะ คนอื่นๆก็เลื่อนเช่นกัน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic is AI trade's last big hope for a major IPO this year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "Capital One, General Motors เป็นหนึ่งในหุ้นที่รายงานในสัปดาห์นี้โดยมีโมเมนตัม นี่คือคนอื่นๆ",
-      "title_en": "Capital One, General Motors are among the stocks reporting this week with momentum. Here are the others",
-      "summary": "Capital One และ General Motors เป็นหนึ่งในชื่อที่รายงานผลประกอบการในสัปดาห์หน้าพร้อมกับการเร่งหากำไรจากนักวิเคราะห์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/gm-abbott-earnings-momentum.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T16:01:30Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Capital One และ General Motors เป็นหนึ่งในชื่อที่รายงานผลประกอบการในสัปดาห์หน้าพร้อมกับการเร่งหากำไรจากนักวิเคราะห์",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 16:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "Capital One, General Motors เป็นหนึ่งในหุ้นที่รายงานในสัปดาห์นี้โดยมีโมเมนตัม นี่คือคนอื่นๆ",
-        "Capital One และ General Motors เป็นหนึ่งในชื่อที่รายงานผลประกอบการในสัปดาห์หน้าพร้อมกับการเร่งหากำไรจากนักวิเคราะห์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Capital One, General Motors are among the stocks reporting this week with momentum. Here are the others\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "AITX ขยายกลยุทธ์การกระจายความปลอดภัยด้วยการแต่งตั้ง Tom Reilly ผู้มีประสบการณ์ในอุตสาหกรรม",
-      "title_en": "AITX Expands Security Distribution Strategy With Appointment of Industry Veteran Tom Reilly",
-      "summary": "AITX ขยายกลยุทธ์การกระจายความปลอดภัยด้วยการแต่งตั้ง Tom Reilly ผู้มีประสบการณ์ในอุตสาหกรรม",
-      "source": "InvestorsHub",
-      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitx-expands-security-distribution-strategy-153235981.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T15:32:35Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "AITX ขยายกลยุทธ์การกระจายความปลอดภัยด้วยการแต่งตั้ง Tom Reilly ผู้มีประสบการณ์ในอุตสาหกรรม",
-        "แหล่งข่าวอ้างอิง: InvestorsHub (19/10/2026 15:32 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "AITX ขยายกลยุทธ์การกระจายความปลอดภัยด้วยการแต่งตั้ง Tom Reilly ผู้มีประสบการณ์ในอุตสาหกรรม",
-        "AITX ขยายกลยุทธ์การกระจายความปลอดภัยด้วยการแต่งตั้ง Tom Reilly ผู้มีประสบการณ์ในอุตสาหกรรม",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX Expands Security Distribution Strategy With Appointment of Industry Veteran Tom Reilly\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "Google กล่าวว่าสามารถสร้างศูนย์ข้อมูลได้อย่างถูกต้อง ผู้เชี่ยวชาญและผู้อยู่อาศัยบางคนสงสัย",
-      "title_en": "Google says it can build data centers the right way. Some experts and residents are skeptical",
-      "summary": "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T13:36:41Z",
-      "category": "TECH",
-      "tickers": [
-        "GOOGL"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 13:36 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #GOOGL"
-      ],
-      "fullArticle": [
-        "Google กล่าวว่าสามารถสร้างศูนย์ข้อมูลได้อย่างถูกต้อง ผู้เชี่ยวชาญและผู้อยู่อาศัยบางคนสงสัย",
-        "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Google says it can build data centers the right way. Some experts and residents are skeptical\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
-      "title_en": "AITX's RAD Engages Security Industry Veteran Tom Reilly to Drive Strategy for New Integrator and Distribution Channels",
-      "summary": "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
-      "source": "TMX Newsfile",
-      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitxs-rad-engages-security-industry-124000935.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T12:40:00Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
-        "แหล่งข่าวอ้างอิง: TMX Newsfile (19/10/2026 12:40 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
-        "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX's RAD Engages Security Industry Veteran Tom Reilly to Drive Strategy for New Integrator and Distribution Channels\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
