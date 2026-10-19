@@ -1,101 +1,99 @@
 {
-  "updated_at": "2026-10-19T01:23:12Z",
-  "updated_at_thai": "19 ต.ค. 2569 08:23 น.",
+  "updated_at": "2026-10-19T06:29:33Z",
+  "updated_at_thai": "19 ต.ค. 2569 13:29 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "Dow Jones Futures ดีดตัวขึ้นหลังจากการขาย AI; Meta, SpaceX, รหัสรายได้ของ Tesla",
-      "title_en": "Dow Jones Futures Rebound After AI Sell-Off; Meta, SpaceX, Tesla Earnings Key",
-      "summary": "Dow Jones Futures ดีดตัวขึ้นหลังจากการขาย AI; Meta, SpaceX, รหัสรายได้ของ Tesla",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures-rebound.html",
-      "time": "6 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T01:16:38Z",
-      "category": "EARNINGS",
+      "title": "ราคาน้ำมันร่วงจากระดับสูงสุดในรอบ 5 เดือนเนื่องจากการยกเว้นการคว่ำบาตรรัสเซียของทรัมป์อาจทำให้มีอุปทานเพิ่มขึ้น",
+      "title_en": "Oil slips from 5-month high as Trump's Russia sanctions waiver may bring more supplies",
+      "summary": "ราคาน้ำมันร่วงจากระดับสูงสุดในรอบ 5 เดือนเนื่องจากการยกเว้นการคว่ำบาตรรัสเซียของทรัมป์อาจทำให้มีอุปทานเพิ่มขึ้น",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-slips-trumps-sanction-waiver-222256196.html",
+      "time": "5 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T06:24:05Z",
+      "category": "COMMODITIES",
       "tickers": [
-        "META",
-        "TSLA",
-        "DIA"
+        "XOM",
+        "CVX"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": true,
       "points": [
-        "Dow Jones Futures ดีดตัวขึ้นหลังจากการขาย AI; Meta, SpaceX, รหัสรายได้ของ Tesla",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (19/10/2026 01:16 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #DIA"
+        "ราคาน้ำมันร่วงจากระดับสูงสุดในรอบ 5 เดือนเนื่องจากการยกเว้นการคว่ำบาตรรัสเซียของทรัมป์อาจทำให้มีอุปทานเพิ่มขึ้น",
+        "แหล่งข่าวอ้างอิง: Reuters (19/10/2026 06:24 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "Dow Jones Futures ดีดตัวขึ้นหลังจากการขาย AI; Meta, SpaceX, รหัสรายได้ของ Tesla",
-        "Dow Jones Futures ดีดตัวขึ้นหลังจากการขาย AI; Meta, SpaceX, รหัสรายได้ของ Tesla",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures Rebound After AI Sell-Off; Meta, SpaceX, Tesla Earnings Key\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ราคาน้ำมันร่วงจากระดับสูงสุดในรอบ 5 เดือนเนื่องจากการยกเว้นการคว่ำบาตรรัสเซียของทรัมป์อาจทำให้มีอุปทานเพิ่มขึ้น",
+        "ราคาน้ำมันร่วงจากระดับสูงสุดในรอบ 5 เดือนเนื่องจากการยกเว้นการคว่ำบาตรรัสเซียของทรัมป์อาจทำให้มีอุปทานเพิ่มขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil slips from 5-month high as Trump's Russia sanctions waiver may bring more supplies\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "ราคาน้ำมันร่วงลง หลังทรัมป์สละมาตรการคว่ำบาตรรัสเซีย",
-      "title_en": "Oil prices slide as Trump waives Russia sanctions",
-      "summary": "ราคาน้ำมันร่วงลง หลังทรัมป์สละมาตรการคว่ำบาตรรัสเซีย",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-slide-trump-waives-004424276.html",
-      "time": "38 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T00:44:24Z",
-      "category": "COMMODITIES",
+      "title": "Tom Lee กล่าวว่าการขายหุ้นเมื่อสัปดาห์ที่แล้วทำให้เกิดการซื้อใน Crypto, Semis",
+      "title_en": "Tom Lee Says Last Week's Stock Selloff Sets Up a Buy in Crypto, Semis",
+      "summary": "Tom Lee กล่าวว่าการขายหุ้นเมื่อสัปดาห์ที่แล้วทำให้เกิดการซื้อใน Crypto, Semis",
+      "source": "BeInCrypto",
+      "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/tom-lee-says-last-weeks-055500464.html",
+      "time": "34 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T05:55:00Z",
+      "category": "MACRO",
       "tickers": [
-        "XOM",
-        "CVX"
+        "COIN"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "ราคาน้ำมันร่วงลง หลังทรัมป์สละมาตรการคว่ำบาตรรัสเซีย",
-        "แหล่งข่าวอ้างอิง: Investing.com (19/10/2026 00:44 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "Tom Lee กล่าวว่าการขายหุ้นเมื่อสัปดาห์ที่แล้วทำให้เกิดการซื้อใน Crypto, Semis",
+        "แหล่งข่าวอ้างอิง: BeInCrypto (19/10/2026 05:55 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #COIN"
       ],
       "fullArticle": [
-        "ราคาน้ำมันร่วงลง หลังทรัมป์สละมาตรการคว่ำบาตรรัสเซีย",
-        "ราคาน้ำมันร่วงลง หลังทรัมป์สละมาตรการคว่ำบาตรรัสเซีย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices slide as Trump waives Russia sanctions\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Tom Lee กล่าวว่าการขายหุ้นเมื่อสัปดาห์ที่แล้วทำให้เกิดการซื้อใน Crypto, Semis",
+        "Tom Lee กล่าวว่าการขายหุ้นเมื่อสัปดาห์ที่แล้วทำให้เกิดการซื้อใน Crypto, Semis",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tom Lee Says Last Week's Stock Selloff Sets Up a Buy in Crypto, Semis\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-3",
-      "title": "หุ้นเอเชียร่วง วอลล์สตรีท และพันธบัตรได้รับแรงหนุนจากน้ำมันหลุด",
-      "title_en": "Asian stocks skid, Wall Street and bonds aided by oil slip",
-      "summary": "หุ้นเอเชียร่วง วอลล์สตรีท และพันธบัตรได้รับแรงหนุนจากน้ำมันหลุด",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-skid-wall-street-003817318.html",
-      "time": "44 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T00:38:17Z",
+      "title": "หุ้นเอเชียปะปนกับหุ้นเทคโนโลยีที่มีความผันผวน และน้ำมันตกอยู่ภายใต้การยกเว้นคว่ำบาตรรัสเซียของทรัมป์",
+      "title_en": "Asian shares are mixed with tech stocks volatile, and oil falls on Trump's Russian sanctions waiver",
+      "summary": "หุ้นเอเชียปะปนกับหุ้นเทคโนโลยีที่มีความผันผวน และน้ำมันตกอยู่ภายใต้การยกเว้นคว่ำบาตรรัสเซียของทรัมป์",
+      "source": "Associated Press",
+      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asian-shares-mixed-tech-stocks-054813000.html",
+      "time": "41 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T05:48:13Z",
       "category": "COMMODITIES",
       "tickers": [
-        "TLT"
+        "QQQ"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "หุ้นเอเชียร่วง วอลล์สตรีท และพันธบัตรได้รับแรงหนุนจากน้ำมันหลุด",
-        "แหล่งข่าวอ้างอิง: Reuters (19/10/2026 00:38 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+        "หุ้นเอเชียปะปนกับหุ้นเทคโนโลยีที่มีความผันผวน และน้ำมันตกอยู่ภายใต้การยกเว้นคว่ำบาตรรัสเซียของทรัมป์",
+        "แหล่งข่าวอ้างอิง: Associated Press (19/10/2026 05:48 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
       ],
       "fullArticle": [
-        "หุ้นเอเชียร่วง วอลล์สตรีท และพันธบัตรได้รับแรงหนุนจากน้ำมันหลุด",
-        "หุ้นเอเชียร่วง วอลล์สตรีท และพันธบัตรได้รับแรงหนุนจากน้ำมันหลุด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asian stocks skid, Wall Street and bonds aided by oil slip\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้นเอเชียปะปนกับหุ้นเทคโนโลยีที่มีความผันผวน และน้ำมันตกอยู่ภายใต้การยกเว้นคว่ำบาตรรัสเซียของทรัมป์",
+        "หุ้นเอเชียปะปนกับหุ้นเทคโนโลยีที่มีความผันผวน และน้ำมันตกอยู่ภายใต้การยกเว้นคว่ำบาตรรัสเซียของทรัมป์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asian shares are mixed with tech stocks volatile, and oil falls on Trump's Russian sanctions waiver\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-4",
-      "title": "ราคาน้ำมันร่วงลงเนื่องจากการยกเว้นคว่ำบาตรของทรัมป์อาจส่งผลให้รัสเซียมีปริมาณเชื้อเพลิงเพิ่มมากขึ้น",
-      "title_en": "Oil slips as Trump's sanction waiver may lead to more Russian fuel supplies",
-      "summary": "ราคาน้ำมันร่วงลงเนื่องจากการยกเว้นคว่ำบาตรของทรัมป์อาจส่งผลให้รัสเซียมีปริมาณเชื้อเพลิงเพิ่มมากขึ้น",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-slips-trumps-sanction-waiver-222256196.html",
+      "title": "ราคาน้ำมันดิ่งลงเนื่องจากข้อตกลงดีเซลของทรัมป์-ปูตินเพิ่มความหวังด้านอุปทาน",
+      "title_en": "Oil Prices Slip as Trump-Putin Diesel Deal Raises Supply Hopes",
+      "summary": "ราคาน้ำมันดิ่งลงเนื่องจากข้อตกลงดีเซลของทรัมป์-ปูตินเพิ่มความหวังด้านอุปทาน",
+      "source": "Oilprice.com",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-slip-trump-putin-052500608.html",
       "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T23:52:04Z",
+      "publishedAt": "2026-10-19T05:25:00Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
@@ -105,53 +103,25 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ราคาน้ำมันร่วงลงเนื่องจากการยกเว้นคว่ำบาตรของทรัมป์อาจส่งผลให้รัสเซียมีปริมาณเชื้อเพลิงเพิ่มมากขึ้น",
-        "แหล่งข่าวอ้างอิง: Reuters (18/10/2026 23:52 UTC)",
+        "ราคาน้ำมันดิ่งลงเนื่องจากข้อตกลงดีเซลของทรัมป์-ปูตินเพิ่มความหวังด้านอุปทาน",
+        "แหล่งข่าวอ้างอิง: Oilprice.com (19/10/2026 05:25 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "ราคาน้ำมันร่วงลงเนื่องจากการยกเว้นคว่ำบาตรของทรัมป์อาจส่งผลให้รัสเซียมีปริมาณเชื้อเพลิงเพิ่มมากขึ้น",
-        "ราคาน้ำมันร่วงลงเนื่องจากการยกเว้นคว่ำบาตรของทรัมป์อาจส่งผลให้รัสเซียมีปริมาณเชื้อเพลิงเพิ่มมากขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil slips as Trump's sanction waiver may lead to more Russian fuel supplies\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ราคาน้ำมันดิ่งลงเนื่องจากข้อตกลงดีเซลของทรัมป์-ปูตินเพิ่มความหวังด้านอุปทาน",
+        "ราคาน้ำมันดิ่งลงเนื่องจากข้อตกลงดีเซลของทรัมป์-ปูตินเพิ่มความหวังด้านอุปทาน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Prices Slip as Trump-Putin Diesel Deal Raises Supply Hopes\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-5",
-      "title": "อัปเดตคำแนะนำเอาต์พุตเปลี่ยนกรณีกระทิงสำหรับหุ้น BP (LSE: BP.) หรือไม่",
-      "title_en": "Updated Output Guidance Change The Bull Case For BP Stock (LSE:BP.)?",
-      "summary": "อัปเดตคำแนะนำเอาต์พุตเปลี่ยนกรณีกระทิงสำหรับหุ้น BP (LSE: BP.) หรือไม่",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/updated-output-guidance-change-bull-232036310.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T23:20:36Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "อัปเดตคำแนะนำเอาต์พุตเปลี่ยนกรณีกระทิงสำหรับหุ้น BP (LSE: BP.) หรือไม่",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (18/10/2026 23:20 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "อัปเดตคำแนะนำเอาต์พุตเปลี่ยนกรณีกระทิงสำหรับหุ้น BP (LSE: BP.) หรือไม่",
-        "อัปเดตคำแนะนำเอาต์พุตเปลี่ยนกรณีกระทิงสำหรับหุ้น BP (LSE: BP.) หรือไม่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Updated Output Guidance Change The Bull Case For BP Stock (LSE:BP.)?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "รัฐมนตรีว่าการกระทรวงการคลังของอินเดียโทษว่าการออกจากตลาดอย่างง่ายดายและสภาพคล่องส่วนเกินส่งผลให้ตลาดตราสารทุนมีผลการดำเนินงานต่ำกว่าปกติ",
-      "title_en": "India’s Finance Minister blames easy exits and excess liquidity for equity market's underperformance",
+      "title": "รัฐมนตรีว่าการกระทรวงการคลังของอินเดียกล่าวว่าการออกจากตลาดได้ง่ายและสภาพคล่องส่วนเกินของตลาดทุนที่มากเกินไปนั้นมีผลการดำเนินงานต่ำกว่าปกติ",
+      "title_en": "India’s Finance Minister says easy exits and excess liquidity fuel equity market's underperformance",
       "summary": "รัฐมนตรีกระทรวงการคลังของอินเดียกล่าวว่าเงินทุนไหลออกอย่างต่อเนื่องเป็นหนึ่งในความเสี่ยงที่ใหญ่ที่สุดของประเทศในปี 2570",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/18/india-ai-nifty50-sensex-investors.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T23:00:01Z",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T04:46:26Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -163,13 +133,41 @@
       "isHero": false,
       "points": [
         "รัฐมนตรีกระทรวงการคลังของอินเดียกล่าวว่าเงินทุนไหลออกอย่างต่อเนื่องเป็นหนึ่งในความเสี่ยงที่ใหญ่ที่สุดของประเทศในปี 2570",
-        "แหล่งข่าวอ้างอิง: CNBC (18/10/2026 23:00 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 04:46 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "รัฐมนตรีว่าการกระทรวงการคลังของอินเดียโทษว่าการออกจากตลาดอย่างง่ายดายและสภาพคล่องส่วนเกินส่งผลให้ตลาดตราสารทุนมีผลการดำเนินงานต่ำกว่าปกติ",
+        "รัฐมนตรีว่าการกระทรวงการคลังของอินเดียกล่าวว่าการออกจากตลาดได้ง่ายและสภาพคล่องส่วนเกินของตลาดทุนที่มากเกินไปนั้นมีผลการดำเนินงานต่ำกว่าปกติ",
         "รัฐมนตรีกระทรวงการคลังของอินเดียกล่าวว่าเงินทุนไหลออกอย่างต่อเนื่องเป็นหนึ่งในความเสี่ยงที่ใหญ่ที่สุดของประเทศในปี 2570",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"India’s Finance Minister blames easy exits and excess liquidity for equity market's underperformance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"India’s Finance Minister says easy exits and excess liquidity fuel equity market's underperformance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "CXMT ของจีนเห็นว่าหุ้นร่วงลงกว่า 6% เนื่องจากนักลงทุนมองข้ามการฟื้นตัวของกำไรของผู้ผลิตชิป",
+      "title_en": "China's CXMT sees shares drop over 6% as investors look past chipmaker's profit turnaround",
+      "summary": "หุ้น CXMT ร่วงลงกว่า 6% ในวันจันทร์หลังจากที่บริษัทเปิดเผยการคาดการณ์ผลประกอบการในช่วง 9 เดือนแรกของปี 2569",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/china-cxmt-profit-outlook-shares.html",
+      "time": "4 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T01:56:34Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "หุ้น CXMT ร่วงลงกว่า 6% ในวันจันทร์หลังจากที่บริษัทเปิดเผยการคาดการณ์ผลประกอบการในช่วง 9 เดือนแรกของปี 2569",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 01:56 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "CXMT ของจีนเห็นว่าหุ้นร่วงลงกว่า 6% เนื่องจากนักลงทุนมองข้ามการฟื้นตัวของกำไรของผู้ผลิตชิป",
+        "หุ้น CXMT ร่วงลงกว่า 6% ในวันจันทร์หลังจากที่บริษัทเปิดเผยการคาดการณ์ผลประกอบการในช่วง 9 เดือนแรกของปี 2569",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"China's CXMT sees shares drop over 6% as investors look past chipmaker's profit turnaround\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
@@ -179,7 +177,7 @@
       "summary": "Meta, General Motors, สายการบินหลัก และบริษัทอื่นๆ จะรายงานผลประกอบการในสัปดาห์นี้ นี่คือสิ่งที่นักวิเคราะห์คาดการณ์และสิ่งที่เกิดขึ้นในอดีต",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/18/meta-tesla-netflix-earnings-preview.html",
-      "time": "12 ชั่วโมงที่แล้ว",
+      "time": "17 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T12:41:18Z",
       "category": "EARNINGS",
       "tickers": [
@@ -207,7 +205,7 @@
       "summary": "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/18/ai-wearables-privacy-wiretap-laws.html",
-      "time": "13 ชั่วโมงที่แล้ว",
+      "time": "18 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-18T12:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -288,7 +286,7 @@
     },
     {
       "id": "news-11",
-      "title": "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+      "title": "'เงินตาย' มานานนับทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
       "title_en": "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
       "summary": "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
       "source": "CNBC",
@@ -308,7 +306,7 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
       ],
       "fullArticle": [
-        "'เงินตาย' เป็นเวลาหนึ่งทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
+        "'เงินตาย' มานานนับทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
         "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]

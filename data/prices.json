@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-19T01:23:10Z",
-  "updated_at_thai": "19 ต.ค. 2569 08:23 น.",
+  "updated_at": "2026-10-19T06:29:31Z",
+  "updated_at_thai": "19 ต.ค. 2569 13:29 น.",
   "fx": {
-    "USDTHB": 33.4
+    "USDTHB": 33.52
   },
   "indices": {
     "^IXIC": {
@@ -20,17 +20,17 @@
       "name": "VIX Index"
     },
     "GC=F": {
-      "price": 4191.1,
+      "price": 4197.1,
       "prevClose": 4181.1,
-      "change": 10.0,
-      "changePct": 0.24,
+      "change": 16.0,
+      "changePct": 0.38,
       "name": "Gold (XAU)"
     },
     "DX-Y.NYB": {
-      "price": 101.82,
+      "price": 101.87,
       "prevClose": 101.84,
-      "change": -0.02,
-      "changePct": -0.02,
+      "change": 0.03,
+      "changePct": 0.03,
       "name": "DXY Index"
     },
     "^GSPC": {
@@ -48,10 +48,10 @@
       "name": "Dow Jones"
     },
     "CL=F": {
-      "price": 98.01,
+      "price": 97.17,
       "prevClose": 99.02,
-      "change": -1.01,
-      "changePct": -1.02,
+      "change": -1.85,
+      "changePct": -1.87,
       "name": "WTI Crude Oil"
     },
     "^NDX": {
