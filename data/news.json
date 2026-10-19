@@ -1,325 +1,159 @@
 {
-  "updated_at": "2026-10-19T06:29:33Z",
-  "updated_at_thai": "19 ต.ค. 2569 13:29 น.",
+  "updated_at": "2026-10-19T13:50:50Z",
+  "updated_at_thai": "19 ต.ค. 2569 20:50 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ราคาน้ำมันร่วงจากระดับสูงสุดในรอบ 5 เดือนเนื่องจากการยกเว้นการคว่ำบาตรรัสเซียของทรัมป์อาจทำให้มีอุปทานเพิ่มขึ้น",
-      "title_en": "Oil slips from 5-month high as Trump's Russia sanctions waiver may bring more supplies",
-      "summary": "ราคาน้ำมันร่วงจากระดับสูงสุดในรอบ 5 เดือนเนื่องจากการยกเว้นการคว่ำบาตรรัสเซียของทรัมป์อาจทำให้มีอุปทานเพิ่มขึ้น",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-slips-trumps-sanction-waiver-222256196.html",
-      "time": "5 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T06:24:05Z",
-      "category": "COMMODITIES",
+      "title": "ผู้หญิงอาจเสี่ยงต่อการตกงานด้าน AI มากขึ้น ผู้ให้บริการสวิตช์โทรศัพท์และพีซีแสดงสาเหตุ",
+      "title_en": "Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why",
+      "summary": "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/ai-job-losses-women-automation-risk.html",
+      "time": "เมื่อสักครู่",
+      "publishedAt": "2026-10-19T13:50:32Z",
+      "category": "TECH",
       "tickers": [
-        "XOM",
-        "CVX"
+        "NVDA",
+        "AAPL",
+        "MSFT"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": true,
       "points": [
-        "ราคาน้ำมันร่วงจากระดับสูงสุดในรอบ 5 เดือนเนื่องจากการยกเว้นการคว่ำบาตรรัสเซียของทรัมป์อาจทำให้มีอุปทานเพิ่มขึ้น",
-        "แหล่งข่าวอ้างอิง: Reuters (19/10/2026 06:24 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 13:50 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "ราคาน้ำมันร่วงจากระดับสูงสุดในรอบ 5 เดือนเนื่องจากการยกเว้นการคว่ำบาตรรัสเซียของทรัมป์อาจทำให้มีอุปทานเพิ่มขึ้น",
-        "ราคาน้ำมันร่วงจากระดับสูงสุดในรอบ 5 เดือนเนื่องจากการยกเว้นการคว่ำบาตรรัสเซียของทรัมป์อาจทำให้มีอุปทานเพิ่มขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil slips from 5-month high as Trump's Russia sanctions waiver may bring more supplies\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ผู้หญิงอาจเสี่ยงต่อการตกงานด้าน AI มากขึ้น ผู้ให้บริการสวิตช์โทรศัพท์และพีซีแสดงสาเหตุ",
+        "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "Tom Lee กล่าวว่าการขายหุ้นเมื่อสัปดาห์ที่แล้วทำให้เกิดการซื้อใน Crypto, Semis",
-      "title_en": "Tom Lee Says Last Week's Stock Selloff Sets Up a Buy in Crypto, Semis",
-      "summary": "Tom Lee กล่าวว่าการขายหุ้นเมื่อสัปดาห์ที่แล้วทำให้เกิดการซื้อใน Crypto, Semis",
-      "source": "BeInCrypto",
-      "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/tom-lee-says-last-weeks-055500464.html",
-      "time": "34 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T05:55:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "COIN"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "Tom Lee กล่าวว่าการขายหุ้นเมื่อสัปดาห์ที่แล้วทำให้เกิดการซื้อใน Crypto, Semis",
-        "แหล่งข่าวอ้างอิง: BeInCrypto (19/10/2026 05:55 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #COIN"
-      ],
-      "fullArticle": [
-        "Tom Lee กล่าวว่าการขายหุ้นเมื่อสัปดาห์ที่แล้วทำให้เกิดการซื้อใน Crypto, Semis",
-        "Tom Lee กล่าวว่าการขายหุ้นเมื่อสัปดาห์ที่แล้วทำให้เกิดการซื้อใน Crypto, Semis",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tom Lee Says Last Week's Stock Selloff Sets Up a Buy in Crypto, Semis\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "หุ้นเอเชียปะปนกับหุ้นเทคโนโลยีที่มีความผันผวน และน้ำมันตกอยู่ภายใต้การยกเว้นคว่ำบาตรรัสเซียของทรัมป์",
-      "title_en": "Asian shares are mixed with tech stocks volatile, and oil falls on Trump's Russian sanctions waiver",
-      "summary": "หุ้นเอเชียปะปนกับหุ้นเทคโนโลยีที่มีความผันผวน และน้ำมันตกอยู่ภายใต้การยกเว้นคว่ำบาตรรัสเซียของทรัมป์",
-      "source": "Associated Press",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asian-shares-mixed-tech-stocks-054813000.html",
-      "time": "41 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T05:48:13Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "QQQ"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "หุ้นเอเชียปะปนกับหุ้นเทคโนโลยีที่มีความผันผวน และน้ำมันตกอยู่ภายใต้การยกเว้นคว่ำบาตรรัสเซียของทรัมป์",
-        "แหล่งข่าวอ้างอิง: Associated Press (19/10/2026 05:48 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
-      ],
-      "fullArticle": [
-        "หุ้นเอเชียปะปนกับหุ้นเทคโนโลยีที่มีความผันผวน และน้ำมันตกอยู่ภายใต้การยกเว้นคว่ำบาตรรัสเซียของทรัมป์",
-        "หุ้นเอเชียปะปนกับหุ้นเทคโนโลยีที่มีความผันผวน และน้ำมันตกอยู่ภายใต้การยกเว้นคว่ำบาตรรัสเซียของทรัมป์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asian shares are mixed with tech stocks volatile, and oil falls on Trump's Russian sanctions waiver\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "ราคาน้ำมันดิ่งลงเนื่องจากข้อตกลงดีเซลของทรัมป์-ปูตินเพิ่มความหวังด้านอุปทาน",
-      "title_en": "Oil Prices Slip as Trump-Putin Diesel Deal Raises Supply Hopes",
-      "summary": "ราคาน้ำมันดิ่งลงเนื่องจากข้อตกลงดีเซลของทรัมป์-ปูตินเพิ่มความหวังด้านอุปทาน",
-      "source": "Oilprice.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-slip-trump-putin-052500608.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T05:25:00Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ราคาน้ำมันดิ่งลงเนื่องจากข้อตกลงดีเซลของทรัมป์-ปูตินเพิ่มความหวังด้านอุปทาน",
-        "แหล่งข่าวอ้างอิง: Oilprice.com (19/10/2026 05:25 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ราคาน้ำมันดิ่งลงเนื่องจากข้อตกลงดีเซลของทรัมป์-ปูตินเพิ่มความหวังด้านอุปทาน",
-        "ราคาน้ำมันดิ่งลงเนื่องจากข้อตกลงดีเซลของทรัมป์-ปูตินเพิ่มความหวังด้านอุปทาน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Prices Slip as Trump-Putin Diesel Deal Raises Supply Hopes\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "รัฐมนตรีว่าการกระทรวงการคลังของอินเดียกล่าวว่าการออกจากตลาดได้ง่ายและสภาพคล่องส่วนเกินของตลาดทุนที่มากเกินไปนั้นมีผลการดำเนินงานต่ำกว่าปกติ",
-      "title_en": "India’s Finance Minister says easy exits and excess liquidity fuel equity market's underperformance",
-      "summary": "รัฐมนตรีกระทรวงการคลังของอินเดียกล่าวว่าเงินทุนไหลออกอย่างต่อเนื่องเป็นหนึ่งในความเสี่ยงที่ใหญ่ที่สุดของประเทศในปี 2570",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/18/india-ai-nifty50-sensex-investors.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T04:46:26Z",
+      "title": "เทคโนโลยีดีดตัวขึ้นเมื่อหุ้นเซมิคอนดักเตอร์กระโดด: AlphaCheck",
+      "title_en": "Tech rebounds as semiconductor stocks jump: AlphaCheck",
+      "summary": "เทคโนโลยีดีดตัวขึ้นเมื่อหุ้นเซมิคอนดักเตอร์กระโดด: AlphaCheck",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/article/tech-rebounds-as-semiconductor-stocks-jump-alphacheck-135003909.html",
+      "time": "เมื่อสักครู่",
+      "publishedAt": "2026-10-19T13:50:03Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
         "AAPL",
         "MSFT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "รัฐมนตรีกระทรวงการคลังของอินเดียกล่าวว่าเงินทุนไหลออกอย่างต่อเนื่องเป็นหนึ่งในความเสี่ยงที่ใหญ่ที่สุดของประเทศในปี 2570",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 04:46 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "รัฐมนตรีว่าการกระทรวงการคลังของอินเดียกล่าวว่าการออกจากตลาดได้ง่ายและสภาพคล่องส่วนเกินของตลาดทุนที่มากเกินไปนั้นมีผลการดำเนินงานต่ำกว่าปกติ",
-        "รัฐมนตรีกระทรวงการคลังของอินเดียกล่าวว่าเงินทุนไหลออกอย่างต่อเนื่องเป็นหนึ่งในความเสี่ยงที่ใหญ่ที่สุดของประเทศในปี 2570",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"India’s Finance Minister says easy exits and excess liquidity fuel equity market's underperformance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "CXMT ของจีนเห็นว่าหุ้นร่วงลงกว่า 6% เนื่องจากนักลงทุนมองข้ามการฟื้นตัวของกำไรของผู้ผลิตชิป",
-      "title_en": "China's CXMT sees shares drop over 6% as investors look past chipmaker's profit turnaround",
-      "summary": "หุ้น CXMT ร่วงลงกว่า 6% ในวันจันทร์หลังจากที่บริษัทเปิดเผยการคาดการณ์ผลประกอบการในช่วง 9 เดือนแรกของปี 2569",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/china-cxmt-profit-outlook-shares.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T01:56:34Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "หุ้น CXMT ร่วงลงกว่า 6% ในวันจันทร์หลังจากที่บริษัทเปิดเผยการคาดการณ์ผลประกอบการในช่วง 9 เดือนแรกของปี 2569",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 01:56 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "CXMT ของจีนเห็นว่าหุ้นร่วงลงกว่า 6% เนื่องจากนักลงทุนมองข้ามการฟื้นตัวของกำไรของผู้ผลิตชิป",
-        "หุ้น CXMT ร่วงลงกว่า 6% ในวันจันทร์หลังจากที่บริษัทเปิดเผยการคาดการณ์ผลประกอบการในช่วง 9 เดือนแรกของปี 2569",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"China's CXMT sees shares drop over 6% as investors look past chipmaker's profit turnaround\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "Meta Platforms และ Tesla เป็นหนึ่งในบริษัทที่เตรียมรายงานในสัปดาห์หน้า สิ่งที่คาดหวัง",
-      "title_en": "Meta Platforms and Tesla are among the companies set to report next week. What to expect",
-      "summary": "Meta, General Motors, สายการบินหลัก และบริษัทอื่นๆ จะรายงานผลประกอบการในสัปดาห์นี้ นี่คือสิ่งที่นักวิเคราะห์คาดการณ์และสิ่งที่เกิดขึ้นในอดีต",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/18/meta-tesla-netflix-earnings-preview.html",
-      "time": "17 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T12:41:18Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "META",
-        "TSLA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Meta, General Motors, สายการบินหลัก และบริษัทอื่นๆ จะรายงานผลประกอบการในสัปดาห์นี้ นี่คือสิ่งที่นักวิเคราะห์คาดการณ์และสิ่งที่เกิดขึ้นในอดีต",
-        "แหล่งข่าวอ้างอิง: CNBC (18/10/2026 12:41 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA"
-      ],
-      "fullArticle": [
-        "Meta Platforms และ Tesla เป็นหนึ่งในบริษัทที่เตรียมรายงานในสัปดาห์หน้า สิ่งที่คาดหวัง",
-        "Meta, General Motors, สายการบินหลัก และบริษัทอื่นๆ จะรายงานผลประกอบการในสัปดาห์นี้ นี่คือสิ่งที่นักวิเคราะห์คาดการณ์และสิ่งที่เกิดขึ้นในอดีต",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta Platforms and Tesla are among the companies set to report next week. What to expect\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "เปิดตลอดเวลา ฟังตลอดเวลา: อุปกรณ์ AI ใหม่กำลังก้าวข้ามขีดจำกัดทางกฎหมาย และอาจส่งผลให้ผู้ใช้ตกอยู่ในอันตราย",
-      "title_en": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
-      "summary": "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/18/ai-wearables-privacy-wiretap-laws.html",
-      "time": "18 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-18T12:00:01Z",
-      "category": "TECH",
-      "tickers": [
-        "AAPL",
-        "AMZN",
-        "META"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
-        "แหล่งข่าวอ้างอิง: CNBC (18/10/2026 12:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL #AMZN #META"
-      ],
-      "fullArticle": [
-        "เปิดตลอดเวลา ฟังตลอดเวลา: อุปกรณ์ AI ใหม่กำลังก้าวข้ามขีดจำกัดทางกฎหมาย และอาจส่งผลให้ผู้ใช้ตกอยู่ในอันตราย",
-        "อุปกรณ์สวมใส่ที่สวมใส่ได้ของ AI จาก Apple, Amazon, Meta และบริษัทสตาร์ทอัพอื่นๆ กำลังสร้างสรรค์กฎความเป็นส่วนตัว และกระตุ้นให้เกิดความกังวลเกี่ยวกับการบันทึกที่แอบแฝง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
-      "title_en": "AI stocks plunge. Inflation heats up. Where we're still finding opportunities",
-      "summary": "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/17/ai-stocks-plunge-inflation-heats-up-where-were-still-finding-opportunities.html",
-      "time": "1 วันที่แล้ว",
-      "publishedAt": "2026-10-17T15:42:34Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
-        "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:42 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "หุ้น AI ร่วง อัตราเงินเฟ้อร้อนขึ้น ที่เรายังคงหาโอกาสอยู่",
-        "การค้า AI ที่กำลังจมสั่นคลอนตลาดเมื่อสัปดาห์ที่แล้ว แต่รายได้ของธนาคารที่แข็งแกร่งและการหมุนเวียนที่นอกเหนือจากเทคโนโลยีทำให้เรามีเหตุผลในการมองโลกในแง่ดี",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AI stocks plunge. Inflation heats up. Where we're still finding opportunities\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "ผู้รวบรวมรายใหม่ของซอฟต์แวร์ได้รับคะแนนความเชื่อมั่นอย่างมากจาก Berkshire",
-      "title_en": "Software’s new consolidator gets big vote of confidence from Berkshire",
-      "summary": "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/17/bending-spoons-wants-to-revive-software-castoffs-berkshire-investing.html",
-      "time": "1 วันที่แล้ว",
-      "publishedAt": "2026-10-17T15:11:30Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
-        "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:11 UTC)",
+        "เทคโนโลยีดีดตัวขึ้นเมื่อหุ้นเซมิคอนดักเตอร์กระโดด: AlphaCheck",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (19/10/2026 13:50 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "ผู้รวบรวมรายใหม่ของซอฟต์แวร์ได้รับคะแนนความเชื่อมั่นอย่างมากจาก Berkshire",
-        "ไม่ถึงสี่เดือนในชีวิตในฐานะบริษัทมหาชน Bending Spoons ได้รับคะแนนความเชื่อมั่นอย่างมากในสัปดาห์นี้จาก Berkshire Hathaway",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Software’s new consolidator gets big vote of confidence from Berkshire\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "เทคโนโลยีดีดตัวขึ้นเมื่อหุ้นเซมิคอนดักเตอร์กระโดด: AlphaCheck",
+        "เทคโนโลยีดีดตัวขึ้นเมื่อหุ้นเซมิคอนดักเตอร์กระโดด: AlphaCheck",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tech rebounds as semiconductor stocks jump: AlphaCheck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-11",
-      "title": "'เงินตาย' มานานนับทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
-      "title_en": "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
-      "summary": "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/17/dead-money-for-a-decade-hedge-fund-approach-that-may-trump-bonds.html",
-      "time": "1 วันที่แล้ว",
-      "publishedAt": "2026-10-17T15:00:01Z",
-      "category": "MACRO",
+      "id": "news-3",
+      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง, Nasdaq, S&P 500 เพิ่มขึ้นเนื่องจากการค้า AI ฟื้นตัว",
+      "title_en": "Stock market today: Dow slips, Nasdaq, S&P 500 rise as the AI trade rebounds",
+      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง, Nasdaq, S&P 500 เพิ่มขึ้นเนื่องจากการค้า AI ฟื้นตัว",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-futures-mixed-amid-volatile-week-112734828.html",
+      "time": "3 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T13:47:21Z",
+      "category": "TECH",
       "tickers": [
-        "TLT"
+        "SPY",
+        "QQQ",
+        "DIA"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
-        "แหล่งข่าวอ้างอิง: CNBC (17/10/2026 15:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+        "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง, Nasdaq, S&P 500 เพิ่มขึ้นเนื่องจากการค้า AI ฟื้นตัว",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (19/10/2026 13:47 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
       ],
       "fullArticle": [
-        "'เงินตาย' มานานนับทศวรรษ: เหตุใดแนวทางกองทุนเฮดจ์ฟันด์นี้อาจให้ข้อได้เปรียบเหนือพันธบัตร",
-        "นักลงทุนอาจต้องการคิดใหม่เกี่ยวกับการจัดสรรพันธบัตรและเลือกรับความเสี่ยงจากสัญญาซื้อขายล่วงหน้าที่มีการจัดการ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง, Nasdaq, S&P 500 เพิ่มขึ้นเนื่องจากการค้า AI ฟื้นตัว",
+        "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง, Nasdaq, S&P 500 เพิ่มขึ้นเนื่องจากการค้า AI ฟื้นตัว",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow slips, Nasdaq, S&P 500 rise as the AI trade rebounds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-12",
-      "title": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-      "title_en": "Anthropic Wants an IPO. New York City Wants It to Slow Down.",
-      "summary": "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-      "source": "Moby",
-      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/anthropic-wants-ipo-york-city-120200718.html",
-      "time": "1 วันที่แล้ว",
-      "publishedAt": "2026-10-17T14:48:07Z",
+      "id": "news-4",
+      "title": "Google กล่าวว่าสามารถสร้างศูนย์ข้อมูลได้อย่างถูกต้อง ผู้เชี่ยวชาญและผู้อยู่อาศัยบางคนสงสัย",
+      "title_en": "Google says it can build data centers the right way. Some experts and residents are skeptical",
+      "summary": "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html",
+      "time": "14 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T13:36:41Z",
+      "category": "TECH",
+      "tickers": [
+        "GOOGL"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 13:36 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #GOOGL"
+      ],
+      "fullArticle": [
+        "Google กล่าวว่าสามารถสร้างศูนย์ข้อมูลได้อย่างถูกต้อง ผู้เชี่ยวชาญและผู้อยู่อาศัยบางคนสงสัย",
+        "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Google says it can build data centers the right way. Some experts and residents are skeptical\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "S&P 500, Nasdaq เปิดสูงขึ้นเนื่องจากหุ้น AI ดีดตัวก่อนผลประกอบการหลัก",
+      "title_en": "S&P 500, Nasdaq open higher as AI stocks rebound ahead of major earnings",
+      "summary": "S&P 500, Nasdaq เปิดสูงขึ้นเนื่องจากหุ้น AI ดีดตัวก่อนผลประกอบการหลัก",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-open-higher-133516178.html",
+      "time": "15 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T13:35:16Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "QQQ"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "S&P 500, Nasdaq เปิดสูงขึ้นเนื่องจากหุ้น AI ดีดตัวก่อนผลประกอบการหลัก",
+        "แหล่งข่าวอ้างอิง: Reuters (19/10/2026 13:35 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ"
+      ],
+      "fullArticle": [
+        "S&P 500, Nasdaq เปิดสูงขึ้นเนื่องจากหุ้น AI ดีดตัวก่อนผลประกอบการหลัก",
+        "S&P 500, Nasdaq เปิดสูงขึ้นเนื่องจากหุ้น AI ดีดตัวก่อนผลประกอบการหลัก",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"S&P 500, Nasdaq open higher as AI stocks rebound ahead of major earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "การอัปเดตกลุ่ม: หุ้นพลังงานร่วงก่อนตลาดวันจันทร์",
+      "title_en": "Sector Update: Energy Stocks Fall Premarket Monday",
+      "summary": "การอัปเดตกลุ่ม: หุ้นพลังงานร่วงก่อนตลาดวันจันทร์",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-premarket-132606391.html",
+      "time": "24 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T13:26:06Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -330,14 +164,183 @@
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
       "isHero": false,
       "points": [
-        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-        "แหล่งข่าวอ้างอิง: Moby (17/10/2026 14:48 UTC)",
+        "การอัปเดตกลุ่ม: หุ้นพลังงานร่วงก่อนตลาดวันจันทร์",
+        "แหล่งข่าวอ้างอิง: MT Newswires (19/10/2026 13:26 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-        "Anthropic ต้องการเสนอขายหุ้น IPO เมืองนิวยอร์กต้องการให้มันช้าลง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic Wants an IPO. New York City Wants It to Slow Down.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "การอัปเดตกลุ่ม: หุ้นพลังงานร่วงก่อนตลาดวันจันทร์",
+        "การอัปเดตกลุ่ม: หุ้นพลังงานร่วงก่อนตลาดวันจันทร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Sector Update: Energy Stocks Fall Premarket Monday\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "Imperial Petroleum ประกาศประมาณการการจัดการมูลค่าทรัพย์สินสุทธิต่อหุ้นและการปรับปรุงกลุ่มยานพาหนะ",
+      "title_en": "Imperial Petroleum Announces Management Estimate of Net Asset Value Per Share and Fleet Update",
+      "summary": "Imperial Petroleum ประกาศประมาณการการจัดการมูลค่าทรัพย์สินสุทธิต่อหุ้นและการปรับปรุงกลุ่มยานพาหนะ",
+      "source": "GlobeNewswire",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/imperial-petroleum-announces-management-estimate-132000799.html",
+      "time": "30 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T13:20:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Imperial Petroleum ประกาศประมาณการการจัดการมูลค่าทรัพย์สินสุทธิต่อหุ้นและการปรับปรุงกลุ่มยานพาหนะ",
+        "แหล่งข่าวอ้างอิง: GlobeNewswire (19/10/2026 13:20 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Imperial Petroleum ประกาศประมาณการการจัดการมูลค่าทรัพย์สินสุทธิต่อหุ้นและการปรับปรุงกลุ่มยานพาหนะ",
+        "Imperial Petroleum ประกาศประมาณการการจัดการมูลค่าทรัพย์สินสุทธิต่อหุ้นและการปรับปรุงกลุ่มยานพาหนะ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Imperial Petroleum Announces Management Estimate of Net Asset Value Per Share and Fleet Update\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
+      "title_en": "AITX's RAD Engages Security Industry Veteran Tom Reilly to Drive Strategy for New Integrator and Distribution Channels",
+      "summary": "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
+      "source": "TMX Newsfile",
+      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitxs-rad-engages-security-industry-124000935.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T12:40:00Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
+        "แหล่งข่าวอ้างอิง: TMX Newsfile (19/10/2026 12:40 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
+        "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX's RAD Engages Security Industry Veteran Tom Reilly to Drive Strategy for New Integrator and Distribution Channels\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "โรงงานหุ่นยนต์และขีปนาวุธความเร็วเหนือเสียง: การลงทุนด้านการป้องกันประเทศครั้งแรกมูลค่า 5 พันล้านดอลลาร์ของ JPMorgan Chase",
+      "title_en": "Robot factories and hypersonic missiles: JPMorgan Chase's first $5 billion of defense investments",
+      "summary": "ด้วยเงินจำนวน 5 พันล้านดอลลาร์ที่นำไปใช้จากงบดุลแล้ว JPMorgan Chase กำลังเร่งดำเนินการด้านการลงทุนโดยตรงในด้านเทคโนโลยีการป้องกันประเทศ ฮาร์ดแวร์ และห่วงโซ่อุปทาน",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/jpmorgan-security-defense-investments.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T12:34:01Z",
+      "category": "TECH",
+      "tickers": [
+        "JPM"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "ด้วยเงินจำนวน 5 พันล้านดอลลาร์ที่นำไปใช้จากงบดุลแล้ว JPMorgan Chase กำลังเร่งดำเนินการด้านการลงทุนโดยตรงในด้านเทคโนโลยีการป้องกันประเทศ ฮาร์ดแวร์ และห่วงโซ่อุปทาน",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 12:34 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM"
+      ],
+      "fullArticle": [
+        "โรงงานหุ่นยนต์และขีปนาวุธความเร็วเหนือเสียง: การลงทุนด้านการป้องกันประเทศครั้งแรกมูลค่า 5 พันล้านดอลลาร์ของ JPMorgan Chase",
+        "ด้วยเงินจำนวน 5 พันล้านดอลลาร์ที่นำไปใช้จากงบดุลแล้ว JPMorgan Chase กำลังเร่งดำเนินการด้านการลงทุนโดยตรงในด้านเทคโนโลยีการป้องกันประเทศ ฮาร์ดแวร์ และห่วงโซ่อุปทาน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Robot factories and hypersonic missiles: JPMorgan Chase's first $5 billion of defense investments\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
+      "title": "Elon Musk กล่าวว่าเขาจะมอบส่วนแบ่ง SpaceX ให้กับเด็กทุกคนในอเมริกาในปีหน้า",
+      "title_en": "Elon Musk says he'll give a SpaceX share to every child in America next year",
+      "summary": "หัวหน้า SpaceX กล่าวเมื่อวันจันทร์ว่าเขาจะมอบหุ้นบริษัทหนึ่งหุ้นให้กับเด็กทุกคนในสหรัฐอเมริกาในปีหน้า เขาไม่ได้บอกว่าแจกหุ้นจะเป็นยังไง",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/elon-musk-spacex-shares-giveaway-kids.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T12:07:51Z",
+      "category": "TECH",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "หัวหน้า SpaceX กล่าวเมื่อวันจันทร์ว่าเขาจะมอบหุ้นบริษัทหนึ่งหุ้นให้กับเด็กทุกคนในสหรัฐอเมริกาในปีหน้า เขาไม่ได้บอกว่าแจกหุ้นจะเป็นยังไง",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 12:07 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "Elon Musk กล่าวว่าเขาจะมอบส่วนแบ่ง SpaceX ให้กับเด็กทุกคนในอเมริกาในปีหน้า",
+        "หัวหน้า SpaceX กล่าวเมื่อวันจันทร์ว่าเขาจะมอบหุ้นบริษัทหนึ่งหุ้นให้กับเด็กทุกคนในสหรัฐอเมริกาในปีหน้า เขาไม่ได้บอกว่าแจกหุ้นจะเป็นยังไง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Elon Musk says he'll give a SpaceX share to every child in America next year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
+      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Cleveland-Cliffs, Intel, Datadog, Amazon และอีกมากมาย",
+      "title_en": "Stocks making the biggest moves premarket: Cleveland-Cliffs, Intel, Datadog, Amazon & more",
+      "summary": "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/stocks-making-the-biggest-moves-premarket-clf-intc-ddog-amzn.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T12:00:34Z",
+      "category": "MACRO",
+      "tickers": [
+        "AMZN",
+        "INTC"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 12:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AMZN #INTC"
+      ],
+      "fullArticle": [
+        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Cleveland-Cliffs, Intel, Datadog, Amazon และอีกมากมาย",
+        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: Cleveland-Cliffs, Intel, Datadog, Amazon & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-12",
+      "title": "นักลงทุนกำลังซื้อในวันจันทร์ แม้จะมีความกลัวว่าสถานการณ์ฝันร้ายทางการค้าของ AI จะยังไม่จบสิ้น",
+      "title_en": "Investors are buying on Monday despite fear the AI trade nightmare scenario is far from over",
+      "summary": "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/stocks-buying-opportunity-ai-selloff.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T12:00:15Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 12:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "นักลงทุนกำลังซื้อในวันจันทร์ แม้จะมีความกลัวว่าสถานการณ์ฝันร้ายทางการค้าของ AI จะยังไม่จบสิ้น",
+        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Investors are buying on Monday despite fear the AI trade nightmare scenario is far from over\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
