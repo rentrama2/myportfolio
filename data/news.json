@@ -1,17 +1,129 @@
 {
-  "updated_at": "2026-10-19T13:50:50Z",
-  "updated_at_thai": "19 ต.ค. 2569 20:50 น.",
+  "updated_at": "2026-10-19T19:37:12Z",
+  "updated_at_thai": "20 ต.ค. 2569 02:37 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "อัพเดตภาคส่วน: พลังงาน",
+      "title_en": "Sector Update: Energy",
+      "summary": "อัพเดตภาคส่วน: พลังงาน",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/sector-energy-192532159.html",
+      "time": "11 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T19:25:32Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "อัพเดตภาคส่วน: พลังงาน",
+        "แหล่งข่าวอ้างอิง: MT Newswires (19/10/2026 19:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "อัพเดตภาคส่วน: พลังงาน",
+        "อัพเดตภาคส่วน: พลังงาน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Sector Update: Energy\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "สต็อกน้ำมันที่ดีกว่า: Chevron (CVX) กับ ExxonMobil (XOM)",
+      "title_en": "Better Oil Stock: Chevron (CVX) vs. ExxonMobil (XOM)",
+      "summary": "สต็อกน้ำมันที่ดีกว่า: Chevron (CVX) กับ ExxonMobil (XOM)",
+      "source": "Motley Fool",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/better-oil-stock-chevron-cvx-191500321.html",
+      "time": "22 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T19:15:00Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "สต็อกน้ำมันที่ดีกว่า: Chevron (CVX) กับ ExxonMobil (XOM)",
+        "แหล่งข่าวอ้างอิง: Motley Fool (19/10/2026 19:15 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "สต็อกน้ำมันที่ดีกว่า: Chevron (CVX) กับ ExxonMobil (XOM)",
+        "สต็อกน้ำมันที่ดีกว่า: Chevron (CVX) กับ ExxonMobil (XOM)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Better Oil Stock: Chevron (CVX) vs. ExxonMobil (XOM)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "บีซี-ออยส์",
+      "title_en": "BC-OILS",
+      "summary": "บีซี-ออยส์",
+      "source": "Associated Press",
+      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/bc-oils-190031856.html",
+      "time": "36 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T19:00:31Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "บีซี-ออยส์",
+        "แหล่งข่าวอ้างอิง: Associated Press (19/10/2026 19:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "บีซี-ออยส์",
+        "บีซี-ออยส์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BC-OILS\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "เชฟรอนเพิ่งทำสถิติสูงสุด หุ้นยังคงเป็นการซื้อหรือไม่?",
+      "title_en": "Chevron Just Hit a Record High. Is the Stock Still a Buy?",
+      "summary": "เชฟรอนเพิ่งทำสถิติสูงสุด หุ้นยังคงเป็นการซื้อหรือไม่?",
+      "source": "Motley Fool",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/chevron-just-hit-record-high-185000036.html",
+      "time": "47 นาทีที่แล้ว",
+      "publishedAt": "2026-10-19T18:50:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "เชฟรอนเพิ่งทำสถิติสูงสุด หุ้นยังคงเป็นการซื้อหรือไม่?",
+        "แหล่งข่าวอ้างอิง: Motley Fool (19/10/2026 18:50 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX"
+      ],
+      "fullArticle": [
+        "เชฟรอนเพิ่งทำสถิติสูงสุด หุ้นยังคงเป็นการซื้อหรือไม่?",
+        "เชฟรอนเพิ่งทำสถิติสูงสุด หุ้นยังคงเป็นการซื้อหรือไม่?",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Chevron Just Hit a Record High. Is the Stock Still a Buy?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
       "title": "ผู้หญิงอาจเสี่ยงต่อการตกงานด้าน AI มากขึ้น ผู้ให้บริการสวิตช์โทรศัพท์และพีซีแสดงสาเหตุ",
       "title_en": "Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why",
       "summary": "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/19/ai-job-losses-women-automation-risk.html",
-      "time": "เมื่อสักครู่",
-      "publishedAt": "2026-10-19T13:50:32Z",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T18:36:21Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -20,10 +132,10 @@
       ],
       "sentiment": "BEARISH",
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 13:50 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 18:36 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
@@ -33,71 +145,153 @@
       ]
     },
     {
-      "id": "news-2",
-      "title": "เทคโนโลยีดีดตัวขึ้นเมื่อหุ้นเซมิคอนดักเตอร์กระโดด: AlphaCheck",
-      "title_en": "Tech rebounds as semiconductor stocks jump: AlphaCheck",
-      "summary": "เทคโนโลยีดีดตัวขึ้นเมื่อหุ้นเซมิคอนดักเตอร์กระโดด: AlphaCheck",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/article/tech-rebounds-as-semiconductor-stocks-jump-alphacheck-135003909.html",
-      "time": "เมื่อสักครู่",
-      "publishedAt": "2026-10-19T13:50:03Z",
+      "id": "news-6",
+      "title": "Apple ประกาศงานเปิดตัวผลิตภัณฑ์ในวันที่ 28 ต.ค. นักวิเคราะห์คาดว่าแล็ปท็อปหน้าจอสัมผัส",
+      "title_en": "Apple announces product launch event for Oct. 28. Analysts expect touchscreen laptop",
+      "summary": "Apple ส่งคำเชิญเข้าร่วมกิจกรรมในสัปดาห์หน้า โดยเรียกว่า \"Pro and tell\"",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/apple-product-launch-event-oct-28-analysts-expect-touchscreen-laptop.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T17:25:57Z",
+      "category": "TECH",
+      "tickers": [
+        "AAPL"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Apple ส่งคำเชิญเข้าร่วมกิจกรรมในสัปดาห์หน้า โดยเรียกว่า \"Pro and tell\"",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 17:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
+      ],
+      "fullArticle": [
+        "Apple ประกาศงานเปิดตัวผลิตภัณฑ์ในวันที่ 28 ต.ค. นักวิเคราะห์คาดว่าแล็ปท็อปหน้าจอสัมผัส",
+        "Apple ส่งคำเชิญเข้าร่วมกิจกรรมในสัปดาห์หน้า โดยเรียกว่า \"Pro and tell\"",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple announces product launch event for Oct. 28. Analysts expect touchscreen laptop\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "iPhone Duo ของ Apple กำลังพิสูจน์ตัวเองว่าเป็นตัวเร่งปฏิกิริยาที่ Jim Cramer กล่าวว่าจะเป็นได้",
+      "title_en": "Apple's iPhone Duo is proving itself the catalyst that Jim Cramer said it would be",
+      "summary": "การสั่งซื้อ iPhone Duo ของ Apple ล่วงหน้าเป็นการพิสูจน์ว่า Jim Cramer ถูกต้อง เนื่องจากสัญญาณบ่งชี้ในช่วงแรกแสดงให้เห็นถึงความต้องการที่แข็งแกร่ง",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/19/apples-iphone-duo-is-proving-the-catalyst-that-jim-cramer-said-it-would-be.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T17:25:20Z",
+      "category": "TECH",
+      "tickers": [
+        "AAPL"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "การสั่งซื้อ iPhone Duo ของ Apple ล่วงหน้าเป็นการพิสูจน์ว่า Jim Cramer ถูกต้อง เนื่องจากสัญญาณบ่งชี้ในช่วงแรกแสดงให้เห็นถึงความต้องการที่แข็งแกร่ง",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 17:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
+      ],
+      "fullArticle": [
+        "iPhone Duo ของ Apple กำลังพิสูจน์ตัวเองว่าเป็นตัวเร่งปฏิกิริยาที่ Jim Cramer กล่าวว่าจะเป็นได้",
+        "การสั่งซื้อ iPhone Duo ของ Apple ล่วงหน้าเป็นการพิสูจน์ว่า Jim Cramer ถูกต้อง เนื่องจากสัญญาณบ่งชี้ในช่วงแรกแสดงให้เห็นถึงความต้องการที่แข็งแกร่ง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple's iPhone Duo is proving itself the catalyst that Jim Cramer said it would be\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "Anthropic เป็นความหวังสำคัญครั้งสุดท้ายของการค้า AI สำหรับการเสนอขายหุ้น IPO ครั้งใหญ่ในปีนี้",
+      "title_en": "Anthropic is AI trade's last big hope for a major IPO this year",
+      "summary": "ใน Kalshi นั้น Anthropic ถูกมองว่าเป็นการเสนอขายหุ้น IPO ครั้งใหญ่ครั้งสุดท้ายในปี 2569 หลังจากที่ OpenAI ชะลอการเปิดตัวสู่ตลาดสาธารณะ คนอื่นๆก็เลื่อนเช่นกัน",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/anthropic-ipo-ai-trade.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T16:42:14Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
         "AAPL",
         "MSFT"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "เทคโนโลยีดีดตัวขึ้นเมื่อหุ้นเซมิคอนดักเตอร์กระโดด: AlphaCheck",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (19/10/2026 13:50 UTC)",
+        "ใน Kalshi นั้น Anthropic ถูกมองว่าเป็นการเสนอขายหุ้น IPO ครั้งใหญ่ครั้งสุดท้ายในปี 2569 หลังจากที่ OpenAI ชะลอการเปิดตัวสู่ตลาดสาธารณะ คนอื่นๆก็เลื่อนเช่นกัน",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 16:42 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "เทคโนโลยีดีดตัวขึ้นเมื่อหุ้นเซมิคอนดักเตอร์กระโดด: AlphaCheck",
-        "เทคโนโลยีดีดตัวขึ้นเมื่อหุ้นเซมิคอนดักเตอร์กระโดด: AlphaCheck",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tech rebounds as semiconductor stocks jump: AlphaCheck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Anthropic เป็นความหวังสำคัญครั้งสุดท้ายของการค้า AI สำหรับการเสนอขายหุ้น IPO ครั้งใหญ่ในปีนี้",
+        "ใน Kalshi นั้น Anthropic ถูกมองว่าเป็นการเสนอขายหุ้น IPO ครั้งใหญ่ครั้งสุดท้ายในปี 2569 หลังจากที่ OpenAI ชะลอการเปิดตัวสู่ตลาดสาธารณะ คนอื่นๆก็เลื่อนเช่นกัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic is AI trade's last big hope for a major IPO this year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-3",
-      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง, Nasdaq, S&P 500 เพิ่มขึ้นเนื่องจากการค้า AI ฟื้นตัว",
-      "title_en": "Stock market today: Dow slips, Nasdaq, S&P 500 rise as the AI trade rebounds",
-      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง, Nasdaq, S&P 500 เพิ่มขึ้นเนื่องจากการค้า AI ฟื้นตัว",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-futures-mixed-amid-volatile-week-112734828.html",
-      "time": "3 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T13:47:21Z",
-      "category": "TECH",
+      "id": "news-9",
+      "title": "Capital One, General Motors เป็นหนึ่งในหุ้นที่รายงานในสัปดาห์นี้โดยมีโมเมนตัม นี่คือคนอื่นๆ",
+      "title_en": "Capital One, General Motors are among the stocks reporting this week with momentum. Here are the others",
+      "summary": "Capital One และ General Motors เป็นหนึ่งในชื่อที่รายงานผลประกอบการในสัปดาห์หน้าพร้อมกับการเร่งหากำไรจากนักวิเคราะห์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/gm-abbott-earnings-momentum.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T16:01:30Z",
+      "category": "EARNINGS",
       "tickers": [
         "SPY",
-        "QQQ",
         "DIA"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง, Nasdaq, S&P 500 เพิ่มขึ้นเนื่องจากการค้า AI ฟื้นตัว",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (19/10/2026 13:47 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
+        "Capital One และ General Motors เป็นหนึ่งในชื่อที่รายงานผลประกอบการในสัปดาห์หน้าพร้อมกับการเร่งหากำไรจากนักวิเคราะห์",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 16:01 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง, Nasdaq, S&P 500 เพิ่มขึ้นเนื่องจากการค้า AI ฟื้นตัว",
-        "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง, Nasdaq, S&P 500 เพิ่มขึ้นเนื่องจากการค้า AI ฟื้นตัว",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow slips, Nasdaq, S&P 500 rise as the AI trade rebounds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Capital One, General Motors เป็นหนึ่งในหุ้นที่รายงานในสัปดาห์นี้โดยมีโมเมนตัม นี่คือคนอื่นๆ",
+        "Capital One และ General Motors เป็นหนึ่งในชื่อที่รายงานผลประกอบการในสัปดาห์หน้าพร้อมกับการเร่งหากำไรจากนักวิเคราะห์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Capital One, General Motors are among the stocks reporting this week with momentum. Here are the others\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-10",
+      "title": "AITX ขยายกลยุทธ์การกระจายความปลอดภัยด้วยการแต่งตั้ง Tom Reilly ผู้มีประสบการณ์ในอุตสาหกรรม",
+      "title_en": "AITX Expands Security Distribution Strategy With Appointment of Industry Veteran Tom Reilly",
+      "summary": "AITX ขยายกลยุทธ์การกระจายความปลอดภัยด้วยการแต่งตั้ง Tom Reilly ผู้มีประสบการณ์ในอุตสาหกรรม",
+      "source": "InvestorsHub",
+      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitx-expands-security-distribution-strategy-153235981.html",
+      "time": "4 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T15:32:35Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "AITX ขยายกลยุทธ์การกระจายความปลอดภัยด้วยการแต่งตั้ง Tom Reilly ผู้มีประสบการณ์ในอุตสาหกรรม",
+        "แหล่งข่าวอ้างอิง: InvestorsHub (19/10/2026 15:32 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "AITX ขยายกลยุทธ์การกระจายความปลอดภัยด้วยการแต่งตั้ง Tom Reilly ผู้มีประสบการณ์ในอุตสาหกรรม",
+        "AITX ขยายกลยุทธ์การกระจายความปลอดภัยด้วยการแต่งตั้ง Tom Reilly ผู้มีประสบการณ์ในอุตสาหกรรม",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX Expands Security Distribution Strategy With Appointment of Industry Veteran Tom Reilly\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
       "title": "Google กล่าวว่าสามารถสร้างศูนย์ข้อมูลได้อย่างถูกต้อง ผู้เชี่ยวชาญและผู้อยู่อาศัยบางคนสงสัย",
       "title_en": "Google says it can build data centers the right way. Some experts and residents are skeptical",
       "summary": "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html",
-      "time": "14 นาทีที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T13:36:41Z",
       "category": "TECH",
       "tickers": [
@@ -118,99 +312,13 @@
       ]
     },
     {
-      "id": "news-5",
-      "title": "S&P 500, Nasdaq เปิดสูงขึ้นเนื่องจากหุ้น AI ดีดตัวก่อนผลประกอบการหลัก",
-      "title_en": "S&P 500, Nasdaq open higher as AI stocks rebound ahead of major earnings",
-      "summary": "S&P 500, Nasdaq เปิดสูงขึ้นเนื่องจากหุ้น AI ดีดตัวก่อนผลประกอบการหลัก",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-open-higher-133516178.html",
-      "time": "15 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T13:35:16Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "QQQ"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "S&P 500, Nasdaq เปิดสูงขึ้นเนื่องจากหุ้น AI ดีดตัวก่อนผลประกอบการหลัก",
-        "แหล่งข่าวอ้างอิง: Reuters (19/10/2026 13:35 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ"
-      ],
-      "fullArticle": [
-        "S&P 500, Nasdaq เปิดสูงขึ้นเนื่องจากหุ้น AI ดีดตัวก่อนผลประกอบการหลัก",
-        "S&P 500, Nasdaq เปิดสูงขึ้นเนื่องจากหุ้น AI ดีดตัวก่อนผลประกอบการหลัก",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"S&P 500, Nasdaq open higher as AI stocks rebound ahead of major earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "การอัปเดตกลุ่ม: หุ้นพลังงานร่วงก่อนตลาดวันจันทร์",
-      "title_en": "Sector Update: Energy Stocks Fall Premarket Monday",
-      "summary": "การอัปเดตกลุ่ม: หุ้นพลังงานร่วงก่อนตลาดวันจันทร์",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-premarket-132606391.html",
-      "time": "24 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T13:26:06Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "การอัปเดตกลุ่ม: หุ้นพลังงานร่วงก่อนตลาดวันจันทร์",
-        "แหล่งข่าวอ้างอิง: MT Newswires (19/10/2026 13:26 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "การอัปเดตกลุ่ม: หุ้นพลังงานร่วงก่อนตลาดวันจันทร์",
-        "การอัปเดตกลุ่ม: หุ้นพลังงานร่วงก่อนตลาดวันจันทร์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Sector Update: Energy Stocks Fall Premarket Monday\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "Imperial Petroleum ประกาศประมาณการการจัดการมูลค่าทรัพย์สินสุทธิต่อหุ้นและการปรับปรุงกลุ่มยานพาหนะ",
-      "title_en": "Imperial Petroleum Announces Management Estimate of Net Asset Value Per Share and Fleet Update",
-      "summary": "Imperial Petroleum ประกาศประมาณการการจัดการมูลค่าทรัพย์สินสุทธิต่อหุ้นและการปรับปรุงกลุ่มยานพาหนะ",
-      "source": "GlobeNewswire",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/imperial-petroleum-announces-management-estimate-132000799.html",
-      "time": "30 นาทีที่แล้ว",
-      "publishedAt": "2026-10-19T13:20:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Imperial Petroleum ประกาศประมาณการการจัดการมูลค่าทรัพย์สินสุทธิต่อหุ้นและการปรับปรุงกลุ่มยานพาหนะ",
-        "แหล่งข่าวอ้างอิง: GlobeNewswire (19/10/2026 13:20 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "Imperial Petroleum ประกาศประมาณการการจัดการมูลค่าทรัพย์สินสุทธิต่อหุ้นและการปรับปรุงกลุ่มยานพาหนะ",
-        "Imperial Petroleum ประกาศประมาณการการจัดการมูลค่าทรัพย์สินสุทธิต่อหุ้นและการปรับปรุงกลุ่มยานพาหนะ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Imperial Petroleum Announces Management Estimate of Net Asset Value Per Share and Fleet Update\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
+      "id": "news-12",
       "title": "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
       "title_en": "AITX's RAD Engages Security Industry Veteran Tom Reilly to Drive Strategy for New Integrator and Distribution Channels",
       "summary": "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
       "source": "TMX Newsfile",
       "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitxs-rad-engages-security-industry-124000935.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T12:40:00Z",
       "category": "TECH",
       "tickers": [
@@ -230,117 +338,6 @@
         "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
         "RAD ของ AITX ชักชวน Tom Reilly ผู้คร่ำหวอดในอุตสาหกรรมความปลอดภัย เพื่อขับเคลื่อนกลยุทธ์สำหรับผู้ประกอบระบบและช่องทางการจัดจำหน่ายรายใหม่",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX's RAD Engages Security Industry Veteran Tom Reilly to Drive Strategy for New Integrator and Distribution Channels\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "โรงงานหุ่นยนต์และขีปนาวุธความเร็วเหนือเสียง: การลงทุนด้านการป้องกันประเทศครั้งแรกมูลค่า 5 พันล้านดอลลาร์ของ JPMorgan Chase",
-      "title_en": "Robot factories and hypersonic missiles: JPMorgan Chase's first $5 billion of defense investments",
-      "summary": "ด้วยเงินจำนวน 5 พันล้านดอลลาร์ที่นำไปใช้จากงบดุลแล้ว JPMorgan Chase กำลังเร่งดำเนินการด้านการลงทุนโดยตรงในด้านเทคโนโลยีการป้องกันประเทศ ฮาร์ดแวร์ และห่วงโซ่อุปทาน",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/jpmorgan-security-defense-investments.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T12:34:01Z",
-      "category": "TECH",
-      "tickers": [
-        "JPM"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "ด้วยเงินจำนวน 5 พันล้านดอลลาร์ที่นำไปใช้จากงบดุลแล้ว JPMorgan Chase กำลังเร่งดำเนินการด้านการลงทุนโดยตรงในด้านเทคโนโลยีการป้องกันประเทศ ฮาร์ดแวร์ และห่วงโซ่อุปทาน",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 12:34 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM"
-      ],
-      "fullArticle": [
-        "โรงงานหุ่นยนต์และขีปนาวุธความเร็วเหนือเสียง: การลงทุนด้านการป้องกันประเทศครั้งแรกมูลค่า 5 พันล้านดอลลาร์ของ JPMorgan Chase",
-        "ด้วยเงินจำนวน 5 พันล้านดอลลาร์ที่นำไปใช้จากงบดุลแล้ว JPMorgan Chase กำลังเร่งดำเนินการด้านการลงทุนโดยตรงในด้านเทคโนโลยีการป้องกันประเทศ ฮาร์ดแวร์ และห่วงโซ่อุปทาน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Robot factories and hypersonic missiles: JPMorgan Chase's first $5 billion of defense investments\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "Elon Musk กล่าวว่าเขาจะมอบส่วนแบ่ง SpaceX ให้กับเด็กทุกคนในอเมริกาในปีหน้า",
-      "title_en": "Elon Musk says he'll give a SpaceX share to every child in America next year",
-      "summary": "หัวหน้า SpaceX กล่าวเมื่อวันจันทร์ว่าเขาจะมอบหุ้นบริษัทหนึ่งหุ้นให้กับเด็กทุกคนในสหรัฐอเมริกาในปีหน้า เขาไม่ได้บอกว่าแจกหุ้นจะเป็นยังไง",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/elon-musk-spacex-shares-giveaway-kids.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T12:07:51Z",
-      "category": "TECH",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "หัวหน้า SpaceX กล่าวเมื่อวันจันทร์ว่าเขาจะมอบหุ้นบริษัทหนึ่งหุ้นให้กับเด็กทุกคนในสหรัฐอเมริกาในปีหน้า เขาไม่ได้บอกว่าแจกหุ้นจะเป็นยังไง",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 12:07 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "Elon Musk กล่าวว่าเขาจะมอบส่วนแบ่ง SpaceX ให้กับเด็กทุกคนในอเมริกาในปีหน้า",
-        "หัวหน้า SpaceX กล่าวเมื่อวันจันทร์ว่าเขาจะมอบหุ้นบริษัทหนึ่งหุ้นให้กับเด็กทุกคนในสหรัฐอเมริกาในปีหน้า เขาไม่ได้บอกว่าแจกหุ้นจะเป็นยังไง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Elon Musk says he'll give a SpaceX share to every child in America next year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Cleveland-Cliffs, Intel, Datadog, Amazon และอีกมากมาย",
-      "title_en": "Stocks making the biggest moves premarket: Cleveland-Cliffs, Intel, Datadog, Amazon & more",
-      "summary": "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/stocks-making-the-biggest-moves-premarket-clf-intc-ddog-amzn.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T12:00:34Z",
-      "category": "MACRO",
-      "tickers": [
-        "AMZN",
-        "INTC"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 12:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AMZN #INTC"
-      ],
-      "fullArticle": [
-        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: Cleveland-Cliffs, Intel, Datadog, Amazon และอีกมากมาย",
-        "เหล่านี้เป็นหุ้นที่มีการโพสต์การเคลื่อนไหวล่วงหน้าที่ใหญ่ที่สุด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: Cleveland-Cliffs, Intel, Datadog, Amazon & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "นักลงทุนกำลังซื้อในวันจันทร์ แม้จะมีความกลัวว่าสถานการณ์ฝันร้ายทางการค้าของ AI จะยังไม่จบสิ้น",
-      "title_en": "Investors are buying on Monday despite fear the AI trade nightmare scenario is far from over",
-      "summary": "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/stocks-buying-opportunity-ai-selloff.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T12:00:15Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 12:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "นักลงทุนกำลังซื้อในวันจันทร์ แม้จะมีความกลัวว่าสถานการณ์ฝันร้ายทางการค้าของ AI จะยังไม่จบสิ้น",
-        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Investors are buying on Monday despite fear the AI trade nightmare scenario is far from over\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
