@@ -7725,12 +7725,12 @@
 
         const defaultInitialPrices = {
             'AAPL': 333.69, 'AMD': 633.91, 'AMZN': 251.52, 'BRK-B': 532.02, 'BRK.B': 532.02,
-            'CIEN': 391.34, 'COIN': 183.00, 'CRWD': 270.04, 'GOOGL': 343.50, 'GRID': 182.91,
-            'INTC': 119.33, 'JEPI': 56.10, 'JEPQ': 61.04, 'LLY': 1142.85, 'META': 728.08,
-            'MSFT': 517.53, 'MU': 1074.89, 'NFLX': 67.06, 'NVDA': 214.13, 'PLTR': 188.75,
+            'CIEN': 345.97, 'COIN': 183.00, 'CRWD': 228.18, 'GOOGL': 343.50, 'GRID': 167.71,
+            'INTC': 119.33, 'JEPI': 56.10, 'JEPQ': 61.04, 'LLY': 1310.63, 'META': 728.08,
+            'MSFT': 517.53, 'MU': 909.96, 'NFLX': 67.06, 'NVDA': 214.13, 'PLTR': 188.75,
             'QQQ': 749.58, 'QQQM': 308.69, 'SCHD': 32.72, 'SMH': 630.60, 'SOXX': 588.90,
-            'SPMO': 153.23, 'SPY': 769.64, 'SPYD': 45.39, 'TSLA': 370.59, 'VOO': 707.54,
-            'VRT': 252.18, 'VTI': 377.99, 'VXUS': 85.43, 'XLV': 166.18
+            'SPMO': 142.46, 'SPY': 769.64, 'SPYD': 47.43, 'TSLA': 370.59, 'VOO': 707.54,
+            'VRT': 206.42, 'VTI': 377.99, 'VXUS': 85.43, 'XLV': 179.83
         };
         let storedPrices = JSON.parse(localStorage.getItem('myPortfolioPrices')) || {};
         // Clean out legacy preset prices if they match the old hardcoded screenshot values
@@ -7741,7 +7741,14 @@
         if (storedPrices['VRT'] === 250.75) delete storedPrices['VRT'];
         if (storedPrices['MU'] === 1077.77) delete storedPrices['MU'];
         if (storedPrices['CIEN'] === 358.92) delete storedPrices['CIEN'];
-        if (storedPrices['CRWD'] === 255.90) delete storedPrices['CRWD'];
+        if (storedPrices['CRWD'] === 255.90 || storedPrices['CRWD'] === 270.04) delete storedPrices['CRWD'];
+        if (storedPrices['GRID'] === 182.91 || (storedPrices['GRID'] && storedPrices['GRID'] > 175)) delete storedPrices['GRID'];
+        if (storedPrices['SPMO'] === 153.23) delete storedPrices['SPMO'];
+        if (storedPrices['XLV'] === 166.18) delete storedPrices['XLV'];
+        if (storedPrices['LLY'] === 1142.85) delete storedPrices['LLY'];
+        if (storedPrices['VRT'] === 252.18) delete storedPrices['VRT'];
+        if (storedPrices['CIEN'] === 391.34) delete storedPrices['CIEN'];
+        if (storedPrices['MU'] === 1074.89) delete storedPrices['MU'];
         let marketPrices = Object.assign({}, defaultInitialPrices, storedPrices);
         
         // Ensure BRK.B / BRK-B and NVDA are synchronized and up-to-date
@@ -7752,6 +7759,9 @@
 
         if (!marketPrices['NVDA'] || marketPrices['NVDA'] === 225.07 || marketPrices['NVDA'] === 233.95) {
             marketPrices['NVDA'] = 214.13;
+        }
+        if (!marketPrices['GRID'] || marketPrices['GRID'] > 175) {
+            marketPrices['GRID'] = 167.71;
         }
         localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
 

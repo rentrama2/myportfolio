@@ -10,7 +10,9 @@ DEFAULT_TICKERS = [
     "VOO", "QQQ", "QQQM", "SCHD", "AAPL", 
     "NVDA", "VXUS", "SPY", "AMZN", "META", 
     "TSLA", "AMD", "NFLX", "COIN", "PLTR", 
-    "SOXX", "SMH", "INTC", "BRK-B"
+    "SOXX", "SMH", "INTC", "BRK-B", "GRID", 
+    "SPMO", "XLV", "SPYD", "VRT", "CIEN", 
+    "CRWD", "LLY", "MU"
 ]
 
 def fetch_json(url, timeout=10):
