@@ -1,16 +1,157 @@
 {
-  "updated_at": "2026-10-19T23:04:24Z",
-  "updated_at_thai": "20 ต.ค. 2569 06:04 น.",
+  "updated_at": "2026-10-20T01:44:30Z",
+  "updated_at_thai": "20 ต.ค. 2569 08:44 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "โรงกลั่นน้ำมันกำลังเอาชนะ Nvidia ในปีนี้: นักวิเคราะห์คิดว่าสามารถรวบรวมได้มากขึ้น 16% จากที่นี่",
+      "title_en": "An Oil Refiner Is Beating Nvidia This Year: Analyst Thinks It Can Rally 16% More From Here",
+      "summary": "โรงกลั่นน้ำมันกำลังเอาชนะ Nvidia ในปีนี้: นักวิเคราะห์คิดว่าสามารถรวบรวมได้มากขึ้น 16% จากที่นี่",
+      "source": "Stocktwits",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-refiner-beating-nvidia-analyst-012056671.html",
+      "time": "23 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T01:20:56Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "NVDA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": true,
+      "points": [
+        "โรงกลั่นน้ำมันกำลังเอาชนะ Nvidia ในปีนี้: นักวิเคราะห์คิดว่าสามารถรวบรวมได้มากขึ้น 16% จากที่นี่",
+        "แหล่งข่าวอ้างอิง: Stocktwits (20/10/2026 01:20 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
+      ],
+      "fullArticle": [
+        "โรงกลั่นน้ำมันกำลังเอาชนะ Nvidia ในปีนี้: นักวิเคราะห์คิดว่าสามารถรวบรวมได้มากขึ้น 16% จากที่นี่",
+        "โรงกลั่นน้ำมันกำลังเอาชนะ Nvidia ในปีนี้: นักวิเคราะห์คิดว่าสามารถรวบรวมได้มากขึ้น 16% จากที่นี่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"An Oil Refiner Is Beating Nvidia This Year: Analyst Thinks It Can Rally 16% More From Here\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "น้ำมันผ่อนคลายลงเนื่องจากตลาดประเมินการยกเว้นพลังงานของรัสเซีย และความเสี่ยงด้านอุปทานในตะวันออกกลาง",
+      "title_en": "Oil eases as markets assess potential waiver on Russian energy, Middle East supply risks",
+      "summary": "น้ำมันผ่อนคลายลงเนื่องจากตลาดประเมินการยกเว้นพลังงานของรัสเซีย และความเสี่ยงด้านอุปทานในตะวันออกกลาง",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-eases-markets-assess-potential-005750414.html",
+      "time": "46 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T00:57:50Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "น้ำมันผ่อนคลายลงเนื่องจากตลาดประเมินการยกเว้นพลังงานของรัสเซีย และความเสี่ยงด้านอุปทานในตะวันออกกลาง",
+        "แหล่งข่าวอ้างอิง: Reuters (20/10/2026 00:57 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "น้ำมันผ่อนคลายลงเนื่องจากตลาดประเมินการยกเว้นพลังงานของรัสเซีย และความเสี่ยงด้านอุปทานในตะวันออกกลาง",
+        "น้ำมันผ่อนคลายลงเนื่องจากตลาดประเมินการยกเว้นพลังงานของรัสเซีย และความเสี่ยงด้านอุปทานในตะวันออกกลาง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil eases as markets assess potential waiver on Russian energy, Middle East supply risks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "ประเด็นสำคัญ 3 ประการจากการประชุม IMF-World Bank",
+      "title_en": "Three big takeaways from the IMF-World Bank meetings",
+      "summary": "หนี้, AI และยูเครนครอบงำการสนทนาในการประชุม IMF-World Bank ในกรุงเทพฯ ในขณะที่จีนซึ่งเป็นประเด็นสำคัญในปี 2561 กลับกลายเป็นเบื้องหลัง",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/imf-debt-yields-russia-china-takeaway-.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T00:33:34Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "หนี้, AI และยูเครนครอบงำการสนทนาในการประชุม IMF-World Bank ในกรุงเทพฯ ในขณะที่จีนซึ่งเป็นประเด็นสำคัญในปี 2561 กลับกลายเป็นเบื้องหลัง",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 00:33 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "ประเด็นสำคัญ 3 ประการจากการประชุม IMF-World Bank",
+        "หนี้, AI และยูเครนครอบงำการสนทนาในการประชุม IMF-World Bank ในกรุงเทพฯ ในขณะที่จีนซึ่งเป็นประเด็นสำคัญในปี 2561 กลับกลายเป็นเบื้องหลัง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Three big takeaways from the IMF-World Bank meetings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "3 หุ้นพลังงานของแคนาดาต้องคัดกรองเนื่องจากอัตราเงินเฟ้อดันราคาน้ำมันให้สูงขึ้น",
+      "title_en": "3 Canadian Energy Stocks To Screen As Inflation Pushes Oil Prices Higher",
+      "summary": "3 หุ้นพลังงานของแคนาดาต้องคัดกรองเนื่องจากอัตราเงินเฟ้อดันราคาน้ำมันให้สูงขึ้น",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/3-canadian-energy-stocks-screen-001709316.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T00:17:09Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "3 หุ้นพลังงานของแคนาดาต้องคัดกรองเนื่องจากอัตราเงินเฟ้อดันราคาน้ำมันให้สูงขึ้น",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (20/10/2026 00:17 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "3 หุ้นพลังงานของแคนาดาต้องคัดกรองเนื่องจากอัตราเงินเฟ้อดันราคาน้ำมันให้สูงขึ้น",
+        "3 หุ้นพลังงานของแคนาดาต้องคัดกรองเนื่องจากอัตราเงินเฟ้อดันราคาน้ำมันให้สูงขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Canadian Energy Stocks To Screen As Inflation Pushes Oil Prices Higher\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "การแก้ไขและการขยาย",
+      "title_en": "Corrections & Amplifications",
+      "summary": "การแก้ไขและการขยาย",
+      "source": "The Wall Street Journal",
+      "sourceUrl": "https://finance.yahoo.com/m/32d09282-bc57-31a7-be90-a902f301f8b0/corrections-%26-amplifications.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T22:52:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "การแก้ไขและการขยาย",
+        "แหล่งข่าวอ้างอิง: The Wall Street Journal (19/10/2026 22:52 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "การแก้ไขและการขยาย",
+        "การแก้ไขและการขยาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Corrections & Amplifications\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
       "title": "Jim Cramer บอกว่าอย่าเพิ่งไล่ตามการฟื้นตัวของ AI นี่คือสิ่งที่ต้องเกิดขึ้นก่อน",
       "title_en": "Jim Cramer says don't chase the AI rebound just yet. Here's what needs to happen first",
       "summary": "Jim Cramer จาก CNBC เตือนนักลงทุนไม่ให้รีบกลับเข้าไปในหุ้น AI",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/19/jim-cramer-dont-chase-ai-rebound-yet.html",
-      "time": "17 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T22:46:33Z",
       "category": "TECH",
       "tickers": [
@@ -20,7 +161,7 @@
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "Jim Cramer จาก CNBC เตือนนักลงทุนไม่ให้รีบกลับเข้าไปในหุ้น AI",
         "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 22:46 UTC)",
@@ -33,13 +174,13 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-7",
       "title": "Jim Cramer กล่าวว่าการขายหุ้น AI เมื่อเร็ว ๆ นี้สะท้อนบทเรียนที่สำคัญจากความล้มเหลวของตลาดในปี 1987",
       "title_en": "Jim Cramer says the recent AI stock sell-off echoes a crucial lesson from the 1987 market crash",
       "summary": "Jim Cramer จาก CNBC กล่าวว่าการล่มสลายของตลาดหุ้นในปี 1987 ถือเป็นบทเรียนสำคัญที่สามารถนำไปใช้กับการขาย AI เมื่อเร็ว ๆ นี้",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/19/cramer-recent-ai-sell-off-echoes-lesson-1987-crash.html",
-      "time": "41 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T22:22:45Z",
       "category": "TECH",
       "tickers": [
@@ -62,13 +203,13 @@
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-8",
       "title": "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
       "title_en": "Where Will VTI Be in 20 Years? Here's What History Suggests",
       "summary": "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
       "source": "Motley Fool",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/where-vti-20-years-heres-214300311.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T21:43:00Z",
       "category": "MACRO",
       "tickers": [
@@ -89,13 +230,13 @@
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-9",
       "title": "ลืมเทค.. พลังงานจะเป็นผู้ชนะรายใหญ่ในฤดูกาลรับรายได้นี้",
       "title_en": "Forget Tech. Energy Will Be The Big Winner This Earnings Season.",
       "summary": "ลืมเทค.. พลังงานจะเป็นผู้ชนะรายใหญ่ในฤดูกาลรับรายได้นี้",
       "source": "Barrons.com",
       "sourceUrl": "https://finance.yahoo.com/m/2bba9727-a5dc-3eb3-821b-571b920f9856/forget-tech.-energy-will-be.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T21:33:00Z",
       "category": "EARNINGS",
       "tickers": [
@@ -117,42 +258,13 @@
       ]
     },
     {
-      "id": "news-5",
-      "title": "หุ้นประกันภัยต่อและบริษัทประกันภัยในซาอุดีอาระเบียเชื่อมโยงกับความเสี่ยงด้านความปลอดภัยของซาอุดีอาระเบีย",
-      "title_en": "Saudi Reinsurance Stock And Insurance Peers Tied To Saudi Security Risk",
-      "summary": "หุ้นประกันภัยต่อและบริษัทประกันภัยในซาอุดีอาระเบียเชื่อมโยงกับความเสี่ยงด้านความปลอดภัยของซาอุดีอาระเบีย",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/saudi-reinsurance-stock-insurance-peers-211206299.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T21:12:06Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "หุ้นประกันภัยต่อและบริษัทประกันภัยในซาอุดีอาระเบียเชื่อมโยงกับความเสี่ยงด้านความปลอดภัยของซาอุดีอาระเบีย",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (19/10/2026 21:12 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "หุ้นประกันภัยต่อและบริษัทประกันภัยในซาอุดีอาระเบียเชื่อมโยงกับความเสี่ยงด้านความปลอดภัยของซาอุดีอาระเบีย",
-        "หุ้นประกันภัยต่อและบริษัทประกันภัยในซาอุดีอาระเบียเชื่อมโยงกับความเสี่ยงด้านความปลอดภัยของซาอุดีอาระเบีย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Saudi Reinsurance Stock And Insurance Peers Tied To Saudi Security Risk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
+      "id": "news-10",
       "title": "Google กล่าวว่าสามารถสร้างศูนย์ข้อมูลได้อย่างถูกต้อง ผู้เชี่ยวชาญและผู้อยู่อาศัยบางคนสงสัย",
       "title_en": "Google says it can build data centers the right way. Some experts and residents are skeptical",
       "summary": "Google กล่าวว่าศูนย์ข้อมูล Minnesota AI จะเพิ่มพลังงานสะอาดให้กับกริดและปกป้องผู้จ่ายเงิน ผู้เชี่ยวชาญตั้งคำถามว่าจำเป็นต้องอัพเกรดกริดหรือไม่",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T21:05:20Z",
       "category": "TECH",
       "tickers": [
@@ -173,100 +285,13 @@
       ]
     },
     {
-      "id": "news-7",
-      "title": "สรุปพลังงานและสาธารณูปโภค: พูดคุยเรื่องตลาด",
-      "title_en": "Energy and Utilities Roundup: Market Talk",
-      "summary": "สรุปพลังงานและสาธารณูปโภค: พูดคุยเรื่องตลาด",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/0c7aaae9-fbca-3c29-98ea-76ce58e21a72/energy-and-utilities-roundup%3A.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T21:01:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "สรุปพลังงานและสาธารณูปโภค: พูดคุยเรื่องตลาด",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (19/10/2026 21:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "สรุปพลังงานและสาธารณูปโภค: พูดคุยเรื่องตลาด",
-        "สรุปพลังงานและสาธารณูปโภค: พูดคุยเรื่องตลาด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Energy and Utilities Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "หุ้นสหรัฐฯ ส่วนใหญ่สูงขึ้นเนื่องจากเครดิตของ AI กังวลลดลง",
-      "title_en": "U.S. Stocks Mostly Higher as AI Credit Worries Abate",
-      "summary": "หุ้นสหรัฐฯ ส่วนใหญ่สูงขึ้นเนื่องจากเครดิตของ AI กังวลลดลง",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/de4c2500-3bcd-3a7c-b6de-e99390f1edf7/u.s.-stocks-mostly-higher-as.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T20:58:00Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "หุ้นสหรัฐฯ ส่วนใหญ่สูงขึ้นเนื่องจากเครดิตของ AI กังวลลดลง",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (19/10/2026 20:58 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "หุ้นสหรัฐฯ ส่วนใหญ่สูงขึ้นเนื่องจากเครดิตของ AI กังวลลดลง",
-        "หุ้นสหรัฐฯ ส่วนใหญ่สูงขึ้นเนื่องจากเครดิตของ AI กังวลลดลง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. Stocks Mostly Higher as AI Credit Worries Abate\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-      "title_en": "Basic Materials Roundup: Market Talk",
-      "summary": "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/d7192cfe-562b-30df-89af-59602850e51c/basic-materials-roundup%3A.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T20:55:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (19/10/2026 20:55 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Basic Materials Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
+      "id": "news-11",
       "title": "Apple ประกาศงานเปิดตัวผลิตภัณฑ์ในวันที่ 28 ต.ค. นักวิเคราะห์คาดว่าแล็ปท็อปหน้าจอสัมผัส",
       "title_en": "Apple announces product launch event for Oct. 28. Analysts expect touchscreen laptop",
       "summary": "Apple ส่งคำเชิญเข้าร่วมกิจกรรมในสัปดาห์หน้า โดยเรียกว่า \"Pro and tell\"",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/19/apple-product-launch-event-oct-28-analysts-expect-touchscreen-laptop.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T19:46:07Z",
       "category": "TECH",
       "tickers": [
@@ -287,13 +312,13 @@
       ]
     },
     {
-      "id": "news-11",
+      "id": "news-12",
       "title": "ผู้หญิงอาจเสี่ยงต่อการตกงานด้าน AI มากขึ้น ผู้ให้บริการสวิตช์โทรศัพท์และพีซีแสดงสาเหตุ",
       "title_en": "Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why",
       "summary": "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/19/ai-job-losses-women-automation-risk.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T18:36:21Z",
       "category": "TECH",
       "tickers": [
@@ -313,33 +338,6 @@
         "ผู้หญิงอาจเสี่ยงต่อการตกงานด้าน AI มากขึ้น ผู้ให้บริการสวิตช์โทรศัพท์และพีซีแสดงสาเหตุ",
         "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "iPhone Duo ของ Apple กำลังพิสูจน์ตัวเองว่าเป็นตัวเร่งปฏิกิริยาที่ Jim Cramer กล่าวว่าจะเป็นได้",
-      "title_en": "Apple's iPhone Duo is proving itself the catalyst that Jim Cramer said it would be",
-      "summary": "การสั่งซื้อ iPhone Duo ของ Apple ล่วงหน้าเป็นการพิสูจน์ว่า Jim Cramer ถูกต้อง เนื่องจากสัญญาณบ่งชี้ในช่วงแรกแสดงให้เห็นถึงความต้องการที่แข็งแกร่ง",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/19/apples-iphone-duo-is-proving-the-catalyst-that-jim-cramer-said-it-would-be.html",
-      "time": "5 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T17:25:20Z",
-      "category": "TECH",
-      "tickers": [
-        "AAPL"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "การสั่งซื้อ iPhone Duo ของ Apple ล่วงหน้าเป็นการพิสูจน์ว่า Jim Cramer ถูกต้อง เนื่องจากสัญญาณบ่งชี้ในช่วงแรกแสดงให้เห็นถึงความต้องการที่แข็งแกร่ง",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 17:25 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
-      ],
-      "fullArticle": [
-        "iPhone Duo ของ Apple กำลังพิสูจน์ตัวเองว่าเป็นตัวเร่งปฏิกิริยาที่ Jim Cramer กล่าวว่าจะเป็นได้",
-        "การสั่งซื้อ iPhone Duo ของ Apple ล่วงหน้าเป็นการพิสูจน์ว่า Jim Cramer ถูกต้อง เนื่องจากสัญญาณบ่งชี้ในช่วงแรกแสดงให้เห็นถึงความต้องการที่แข็งแกร่ง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple's iPhone Duo is proving itself the catalyst that Jim Cramer said it would be\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
