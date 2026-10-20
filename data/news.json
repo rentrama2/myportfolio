@@ -1,72 +1,76 @@
 {
-  "updated_at": "2026-10-20T20:42:01Z",
-  "updated_at_thai": "21 ต.ค. 2569 03:42 น.",
+  "updated_at": "2026-10-20T23:27:02Z",
+  "updated_at_thai": "21 ต.ค. 2569 06:27 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "รายรับของ SpaceX เพิ่มขึ้น 161% ขับเคลื่อนโดย Starlink และ AI: การอัปเดตสด",
-      "title_en": "SpaceX revenue jumps 161% driven by Starlink and AI: Live updates",
-      "summary": "ติดตามผลประกอบการไตรมาสที่ 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html",
-      "time": "5 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T20:36:23Z",
+      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq ร่วงลงเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
+      "title_en": "Stock market today: Dow, S&P 500 rise, Nasdaq slips as investors await SpaceX, Netflix earnings",
+      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq ร่วงลงเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-dow-rises-sp-500-nasdaq-climb-as-dip-buying-resumes-165236471.html",
+      "time": "7 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T23:19:49Z",
       "category": "EARNINGS",
       "tickers": [
         "SPY",
-        "DIA"
+        "QQQ",
+        "DIA",
+        "NFLX"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": true,
       "points": [
-        "ติดตามผลประกอบการไตรมาสที่ 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 20:36 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+        "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq ร่วงลงเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (20/10/2026 23:19 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA #NFLX"
       ],
       "fullArticle": [
-        "รายรับของ SpaceX เพิ่มขึ้น 161% ขับเคลื่อนโดย Starlink และ AI: การอัปเดตสด",
-        "ติดตามผลประกอบการไตรมาสที่ 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX revenue jumps 161% driven by Starlink and AI: Live updates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq ร่วงลงเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
+        "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq ร่วงลงเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500 rise, Nasdaq slips as investors await SpaceX, Netflix earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "Netflix ประกาศผลประกอบการไตรมาสสามพุ่งสูงขึ้น แต่หุ้นตกลงจากการโฆษณาและคำแนะนำด้านรายได้",
-      "title_en": "Netflix posts third-quarter earnings beat, but shares fall on advertising and revenue guidance",
-      "summary": "Wall Street และนักลงทุนจะมองหา Netflix เพื่อให้รายละเอียดเพิ่มเติมเกี่ยวกับกลยุทธ์ของบริษัทภายหลังการเปลี่ยนแปลงองค์กรครั้งล่าสุด",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/netflix-nflx-earnings-q3-2026.html",
-      "time": "11 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T20:30:51Z",
-      "category": "EARNINGS",
+      "title": "Dow Jones Futures: หุ้น AI กระโดดขึ้นไปบน SpaceX, Supermicro; เทสลา เมต้าบนดาดฟ้า",
+      "title_en": "Dow Jones Futures: AI Stocks Jump On SpaceX, Supermicro; Tesla, Meta On Deck",
+      "summary": "Dow Jones Futures: หุ้น AI กระโดดขึ้นไปบน SpaceX, Supermicro; เทสลา เมต้าบนดาดฟ้า",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/40378091-9f13-35f6-a4eb-65961ef4434c/dow-jones-futures%3A-ai-stocks.html",
+      "time": "18 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T23:08:41Z",
+      "category": "TECH",
       "tickers": [
-        "NFLX"
+        "META",
+        "TSLA",
+        "DIA"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "Wall Street และนักลงทุนจะมองหา Netflix เพื่อให้รายละเอียดเพิ่มเติมเกี่ยวกับกลยุทธ์ของบริษัทภายหลังการเปลี่ยนแปลงองค์กรครั้งล่าสุด",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 20:30 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NFLX"
+        "Dow Jones Futures: หุ้น AI กระโดดขึ้นไปบน SpaceX, Supermicro; เทสลา เมต้าบนดาดฟ้า",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (20/10/2026 23:08 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #DIA"
       ],
       "fullArticle": [
-        "Netflix ประกาศผลประกอบการไตรมาสสามพุ่งสูงขึ้น แต่หุ้นตกลงจากการโฆษณาและคำแนะนำด้านรายได้",
-        "Wall Street และนักลงทุนจะมองหา Netflix เพื่อให้รายละเอียดเพิ่มเติมเกี่ยวกับกลยุทธ์ของบริษัทภายหลังการเปลี่ยนแปลงองค์กรครั้งล่าสุด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Netflix posts third-quarter earnings beat, but shares fall on advertising and revenue guidance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Dow Jones Futures: หุ้น AI กระโดดขึ้นไปบน SpaceX, Supermicro; เทสลา เมต้าบนดาดฟ้า",
+        "Dow Jones Futures: หุ้น AI กระโดดขึ้นไปบน SpaceX, Supermicro; เทสลา เมต้าบนดาดฟ้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures: AI Stocks Jump On SpaceX, Supermicro; Tesla, Meta On Deck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-3",
-      "title": "ดัชนีหุ้นสหรัฐฯ สำคัญๆ ปรับตัวอย่างไรในวันอังคารที่ 20/10/2026",
-      "title_en": "How major US stock indexes fared Tuesday 10/20/2026",
-      "summary": "ดัชนีหุ้นสหรัฐฯ สำคัญๆ ปรับตัวอย่างไรในวันอังคารที่ 20/10/2026",
-      "source": "Associated Press",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-202506799.html",
-      "time": "16 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T20:25:06Z",
+      "title": "นายธนาคารกลางออสเตรเลียกล่าวว่านโยบายใช้งานได้ แต่แนวโน้มเงินเฟ้อแย่ลง",
+      "title_en": "Australian central banker says policy working, but inflation outlook worse",
+      "summary": "นายธนาคารกลางออสเตรเลียกล่าวว่านโยบายใช้งานได้ แต่แนวโน้มเงินเฟ้อแย่ลง",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/economy/policy/articles/australia-central-banker-says-policy-221416518.html",
+      "time": "26 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T23:01:00Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -77,111 +81,160 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ดัชนีหุ้นสหรัฐฯ สำคัญๆ ปรับตัวอย่างไรในวันอังคารที่ 20/10/2026",
-        "แหล่งข่าวอ้างอิง: Associated Press (20/10/2026 20:25 UTC)",
+        "นายธนาคารกลางออสเตรเลียกล่าวว่านโยบายใช้งานได้ แต่แนวโน้มเงินเฟ้อแย่ลง",
+        "แหล่งข่าวอ้างอิง: Reuters (20/10/2026 23:01 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "ดัชนีหุ้นสหรัฐฯ สำคัญๆ ปรับตัวอย่างไรในวันอังคารที่ 20/10/2026",
-        "ดัชนีหุ้นสหรัฐฯ สำคัญๆ ปรับตัวอย่างไรในวันอังคารที่ 20/10/2026",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"How major US stock indexes fared Tuesday 10/20/2026\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "นายธนาคารกลางออสเตรเลียกล่าวว่านโยบายใช้งานได้ แต่แนวโน้มเงินเฟ้อแย่ลง",
+        "นายธนาคารกลางออสเตรเลียกล่าวว่านโยบายใช้งานได้ แต่แนวโน้มเงินเฟ้อแย่ลง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Australian central banker says policy working, but inflation outlook worse\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-4",
-      "title": "TSX Closer: ดัชนีเพิ่มขึ้นเนื่องจากหุ้นด้านการดูแลสุขภาพและหุ้นเทคโนโลยีเพิ่มขึ้น",
-      "title_en": "TSX Closer: The Index Gains as Healthcare, Technology Stocks Rise",
-      "summary": "TSX Closer: ดัชนีเพิ่มขึ้นเนื่องจากหุ้นด้านการดูแลสุขภาพและหุ้นเทคโนโลยีเพิ่มขึ้น",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/tsx-closer-index-gains-healthcare-202304293.html",
-      "time": "18 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T20:23:04Z",
-      "category": "TECH",
+      "title": "หุ้นมีการเคลื่อนไหวครั้งใหญ่ที่สุดหลังเวลาผ่านไป: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX และอีกมากมาย",
+      "title_en": "Stocks making the biggest moves after hours: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX & more",
+      "summary": "ต่อไปนี้คือบริษัทบางส่วนที่พาดหัวข่าวหลังระฆังปิด",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-after-hours-isrg-nflx-spcx.html",
+      "time": "31 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T22:55:27Z",
+      "category": "MACRO",
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
+        "NFLX"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "TSX Closer: ดัชนีเพิ่มขึ้นเนื่องจากหุ้นด้านการดูแลสุขภาพและหุ้นเทคโนโลยีเพิ่มขึ้น",
-        "แหล่งข่าวอ้างอิง: MT Newswires (20/10/2026 20:23 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+        "ต่อไปนี้คือบริษัทบางส่วนที่พาดหัวข่าวหลังระฆังปิด",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 22:55 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NFLX"
       ],
       "fullArticle": [
-        "TSX Closer: ดัชนีเพิ่มขึ้นเนื่องจากหุ้นด้านการดูแลสุขภาพและหุ้นเทคโนโลยีเพิ่มขึ้น",
-        "TSX Closer: ดัชนีเพิ่มขึ้นเนื่องจากหุ้นด้านการดูแลสุขภาพและหุ้นเทคโนโลยีเพิ่มขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"TSX Closer: The Index Gains as Healthcare, Technology Stocks Rise\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้นมีการเคลื่อนไหวครั้งใหญ่ที่สุดหลังเวลาผ่านไป: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX และอีกมากมาย",
+        "ต่อไปนี้คือบริษัทบางส่วนที่พาดหัวข่าวหลังระฆังปิด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves after hours: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-5",
-      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq หลุดเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
-      "title_en": "Stock market today: Dow, S&P 500 rise, Nasdaq slips as investors await SpaceX, Netflix earnings",
-      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq หลุดเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-dow-rises-sp-500-nasdaq-climb-as-dip-buying-resumes-165236471.html",
-      "time": "19 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T20:22:20Z",
+      "title": "Netflix ประกาศผลประกอบการไตรมาสสามพุ่งสูงขึ้น แต่หุ้นตกลงจากการโฆษณาและคำแนะนำด้านรายได้",
+      "title_en": "Netflix posts third-quarter earnings beat, but shares fall on advertising and revenue guidance",
+      "summary": "Wall Street และนักลงทุนจะมองหา Netflix เพื่อให้รายละเอียดเพิ่มเติมเกี่ยวกับกลยุทธ์ของบริษัทภายหลังการเปลี่ยนแปลงองค์กรครั้งล่าสุด",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/netflix-nflx-earnings-q3-2026.html",
+      "time": "57 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T22:29:45Z",
       "category": "EARNINGS",
       "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA",
         "NFLX"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq หลุดเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (20/10/2026 20:22 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA #NFLX"
+        "Wall Street และนักลงทุนจะมองหา Netflix เพื่อให้รายละเอียดเพิ่มเติมเกี่ยวกับกลยุทธ์ของบริษัทภายหลังการเปลี่ยนแปลงองค์กรครั้งล่าสุด",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 22:29 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NFLX"
       ],
       "fullArticle": [
-        "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq หลุดเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
-        "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq หลุดเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500 rise, Nasdaq slips as investors await SpaceX, Netflix earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Netflix ประกาศผลประกอบการไตรมาสสามพุ่งสูงขึ้น แต่หุ้นตกลงจากการโฆษณาและคำแนะนำด้านรายได้",
+        "Wall Street และนักลงทุนจะมองหา Netflix เพื่อให้รายละเอียดเพิ่มเติมเกี่ยวกับกลยุทธ์ของบริษัทภายหลังการเปลี่ยนแปลงองค์กรครั้งล่าสุด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Netflix posts third-quarter earnings beat, but shares fall on advertising and revenue guidance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-6",
-      "title": "3 หุ้นพลังงานสหรัฐที่นักลงทุนรายย่อยจับตาดูราคาน้ำมันขาขึ้น",
-      "title_en": "3 U.S. Energy Stocks Retail Investors Are Watching For Oil Price Upside",
-      "summary": "3 หุ้นพลังงานสหรัฐที่นักลงทุนรายย่อยจับตาดูราคาน้ำมันขาขึ้น",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/3-u-energy-stocks-retail-201117754.html",
-      "time": "30 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T20:11:17Z",
+      "title": "Musk กล่าวว่า Tesla และ SpaceX ได้จัดตั้งคณะกรรมการพิเศษเพื่อหารือเกี่ยวกับการควบรวมกิจการ: การอัปเดตสด",
+      "title_en": "Musk says Tesla and SpaceX formed special committees to discuss merger: Live updates",
+      "summary": "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T22:03:15Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 22:03 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "Musk กล่าวว่า Tesla และ SpaceX ได้จัดตั้งคณะกรรมการพิเศษเพื่อหารือเกี่ยวกับการควบรวมกิจการ: การอัปเดตสด",
+        "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Musk says Tesla and SpaceX formed special committees to discuss merger: Live updates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "หุ้นส่วนใหญ่ขึ้นตามน้ำมัน ส่วนสหรัฐฯ ให้ผลตอบแทนผ่อนคลาย หุ้นฝรั่งเศสตก",
+      "title_en": "Stocks mostly rise as oil, US yields ease; French stocks fall",
+      "summary": "หุ้นส่วนใหญ่ขึ้นตามน้ำมัน ส่วนสหรัฐฯ ให้ผลตอบแทนผ่อนคลาย หุ้นฝรั่งเศสตก",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asian-shares-tumble-oil-rises-021045839.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T22:01:32Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
         "CVX"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "3 หุ้นพลังงานสหรัฐที่นักลงทุนรายย่อยจับตาดูราคาน้ำมันขาขึ้น",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (20/10/2026 20:11 UTC)",
+        "หุ้นส่วนใหญ่ขึ้นตามน้ำมัน ส่วนสหรัฐฯ ให้ผลตอบแทนผ่อนคลาย หุ้นฝรั่งเศสตก",
+        "แหล่งข่าวอ้างอิง: Reuters (20/10/2026 22:01 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "3 หุ้นพลังงานสหรัฐที่นักลงทุนรายย่อยจับตาดูราคาน้ำมันขาขึ้น",
-        "3 หุ้นพลังงานสหรัฐที่นักลงทุนรายย่อยจับตาดูราคาน้ำมันขาขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 U.S. Energy Stocks Retail Investors Are Watching For Oil Price Upside\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้นส่วนใหญ่ขึ้นตามน้ำมัน ส่วนสหรัฐฯ ให้ผลตอบแทนผ่อนคลาย หุ้นฝรั่งเศสตก",
+        "หุ้นส่วนใหญ่ขึ้นตามน้ำมัน ส่วนสหรัฐฯ ให้ผลตอบแทนผ่อนคลาย หุ้นฝรั่งเศสตก",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks mostly rise as oil, US yields ease; French stocks fall\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-7",
+      "id": "news-8",
+      "title": "อัปเดต: ดัชนีหุ้นสหรัฐผสมกับความอ่อนแอในบริการการสื่อสาร เทคโนโลยียับยั้ง Nasdaq Composite",
+      "title_en": "Update: US Equity Indexes Mixed as Weakness in Communications Services, Technology Restrains Nasdaq Composite",
+      "summary": "อัปเดต: ดัชนีหุ้นสหรัฐผสมกับความอ่อนแอในบริการการสื่อสาร เทคโนโลยียับยั้ง Nasdaq Composite",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-weakness-213459750.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T21:34:59Z",
+      "category": "TECH",
+      "tickers": [
+        "QQQ"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "อัปเดต: ดัชนีหุ้นสหรัฐผสมกับความอ่อนแอในบริการการสื่อสาร เทคโนโลยียับยั้ง Nasdaq Composite",
+        "แหล่งข่าวอ้างอิง: MT Newswires (20/10/2026 21:34 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
+      ],
+      "fullArticle": [
+        "อัปเดต: ดัชนีหุ้นสหรัฐผสมกับความอ่อนแอในบริการการสื่อสาร เทคโนโลยียับยั้ง Nasdaq Composite",
+        "อัปเดต: ดัชนีหุ้นสหรัฐผสมกับความอ่อนแอในบริการการสื่อสาร เทคโนโลยียับยั้ง Nasdaq Composite",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Indexes Mixed as Weakness in Communications Services, Technology Restrains Nasdaq Composite\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
       "title": "Salesforce ประกาศข้อตกลงมูลค่า 5.66 พันล้านดอลลาร์สำหรับ Braze ส่งผลให้หุ้น BRZE ทะยานขึ้น 51%",
       "title_en": "Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 51%",
       "summary": "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/salesforce-braze-acquisition-deal.html",
-      "time": "31 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-20T20:10:30Z",
       "category": "TECH",
       "tickers": [
@@ -202,41 +255,13 @@
       ]
     },
     {
-      "id": "news-8",
-      "title": "ตลาดหุ้นสหรัฐฯ ผันผวนท่ามกลางผลประกอบการรายไตรมาส ราคาน้ำมันที่ลดลง",
-      "title_en": "US Equity Markets Mixed Amid Quarterly Results, Lower Oil Prices",
-      "summary": "ตลาดหุ้นสหรัฐฯ ผันผวนท่ามกลางผลประกอบการรายไตรมาส ราคาน้ำมันที่ลดลง",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-mixed-amid-200958616.html",
-      "time": "32 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T20:09:58Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นสหรัฐฯ ผันผวนท่ามกลางผลประกอบการรายไตรมาส ราคาน้ำมันที่ลดลง",
-        "แหล่งข่าวอ้างอิง: MT Newswires (20/10/2026 20:09 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นสหรัฐฯ ผันผวนท่ามกลางผลประกอบการรายไตรมาส ราคาน้ำมันที่ลดลง",
-        "ตลาดหุ้นสหรัฐฯ ผันผวนท่ามกลางผลประกอบการรายไตรมาส ราคาน้ำมันที่ลดลง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"US Equity Markets Mixed Amid Quarterly Results, Lower Oil Prices\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
+      "id": "news-10",
       "title": "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
       "title_en": "General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance",
       "summary": "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
-      "time": "33 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-20T20:08:44Z",
       "category": "EARNINGS",
       "tickers": [
@@ -258,13 +283,13 @@
       ]
     },
     {
-      "id": "news-10",
+      "id": "news-11",
       "title": "ที่อยู่อาศัยกำลังส่งสัญญาณเตือนภัยกระพริบในขณะที่เฟดชั่งน้ำหนักการปรับขึ้นอัตราดอกเบี้ยมากขึ้น",
       "title_en": "Housing is flashing warning signs just as the Fed weighs more interest rate hikes",
       "summary": "ข้อมูลที่อยู่อาศัยเสื่อมลงอีกในเดือนกันยายนตามรายงานแยกกันเมื่อวันอังคาร",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/housing-mortgage-rates-real-estate-federal-reserve.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-20T19:28:43Z",
       "category": "MACRO",
       "tickers": [
@@ -287,13 +312,13 @@
       ]
     },
     {
-      "id": "news-11",
-      "title": "สิ่งที่ Amazon ต้องทำเพื่อให้หุ้นที่สะดุดกลับกลับมาทำสถิติสูงสุดและเหนือกว่านั้น",
+      "id": "news-12",
+      "title": "สิ่งที่ Amazon ต้องทำเพื่อให้หุ้นที่สะดุดกลับขึ้นสู่ระดับสูงสุดเป็นประวัติการณ์และเหนือกว่านั้น",
       "title_en": "What Amazon must do to get its stumbling stock back to record highs and beyond",
       "summary": "ประสิทธิภาพของ Amazon Web Services คือกุญแจสำคัญ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/20/what-amazon-must-do-to-get-its-stumbling-stock-back-to-record-highs-and-beyond.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-20T16:49:28Z",
       "category": "TECH",
       "tickers": [
@@ -308,38 +333,9 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AMZN"
       ],
       "fullArticle": [
-        "สิ่งที่ Amazon ต้องทำเพื่อให้หุ้นที่สะดุดกลับกลับมาทำสถิติสูงสุดและเหนือกว่านั้น",
+        "สิ่งที่ Amazon ต้องทำเพื่อให้หุ้นที่สะดุดกลับขึ้นสู่ระดับสูงสุดเป็นประวัติการณ์และเหนือกว่านั้น",
         "ประสิทธิภาพของ Amazon Web Services คือกุญแจสำคัญ",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"What Amazon must do to get its stumbling stock back to record highs and beyond\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "หุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน: Hasbro, Northrop Grumman, Equifax, General Motors และอีกมากมาย",
-      "title_en": "Stocks making the biggest moves midday: Hasbro, Northrop Grumman, Equifax, General Motors & more",
-      "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-midday-has-noc-efx-gm.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T16:45:06Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 16:45 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "หุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน: Hasbro, Northrop Grumman, Equifax, General Motors และอีกมากมาย",
-        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves midday: Hasbro, Northrop Grumman, Equifax, General Motors & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
