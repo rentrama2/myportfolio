@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-20T14:41:06Z",
-  "updated_at_thai": "20 ต.ค. 2569 21:41 น.",
+  "updated_at": "2026-10-20T17:18:38Z",
+  "updated_at_thai": "21 ต.ค. 2569 00:18 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq เปลี่ยนเป็นสีเขียวเมื่อกลับมาซื้อต่อ",
-      "title_en": "Stock market today: Dow rises, S&P 500, Nasdaq turn green as dip buying resumes",
-      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq เปลี่ยนเป็นสีเขียวเมื่อกลับมาซื้อต่อ",
+      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq ไต่ขึ้นตามราคาน้ำมันที่ผ่อนคลาย",
+      "title_en": "Stock market today: Dow rises, S&P 500, Nasdaq climb as oil prices ease",
+      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq ไต่ขึ้นตามราคาน้ำมันที่ผ่อนคลาย",
       "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/copy-stock-market-today-dow-sp-500-nasdaq-futures-mixed-amid-volatile-week-111612062.html",
-      "time": "15 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T14:25:20Z",
-      "category": "MACRO",
+      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-dow-rises-sp-500-nasdaq-climb-as-dip-buying-resumes-165236471.html",
+      "time": "4 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T17:14:20Z",
+      "category": "COMMODITIES",
       "tickers": [
         "SPY",
         "QQQ",
@@ -22,25 +22,83 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": true,
       "points": [
-        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq เปลี่ยนเป็นสีเขียวเมื่อกลับมาซื้อต่อ",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (20/10/2026 14:25 UTC)",
+        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq ไต่ขึ้นตามราคาน้ำมันที่ผ่อนคลาย",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (20/10/2026 17:14 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
       ],
       "fullArticle": [
-        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq เปลี่ยนเป็นสีเขียวเมื่อกลับมาซื้อต่อ",
-        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq เปลี่ยนเป็นสีเขียวเมื่อกลับมาซื้อต่อ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow rises, S&P 500, Nasdaq turn green as dip buying resumes\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq ไต่ขึ้นตามราคาน้ำมันที่ผ่อนคลาย",
+        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq ไต่ขึ้นตามราคาน้ำมันที่ผ่อนคลาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow rises, S&P 500, Nasdaq climb as oil prices ease\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "การอัปเดตรายได้ของ SpaceX แบบสด: การเติบโตของ Starlink, รายได้ AI และการเก็งกำไรในการควบรวมกิจการ",
-      "title_en": "SpaceX earnings live updates: Starlink growth, AI revenue and merger speculation",
-      "summary": "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
+      "title": "กองทุนที่ซื้อขายแลกเปลี่ยนได้รับกำไรเมื่อหุ้นสหรัฐพุ่งสูงขึ้นหลังเที่ยงวัน",
+      "title_en": "Exchange-Traded Funds Gain as US Equities Advance After Midday",
+      "summary": "กองทุนที่ซื้อขายแลกเปลี่ยนได้รับกำไรเมื่อหุ้นสหรัฐพุ่งสูงขึ้นหลังเที่ยงวัน",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-gain-us-171124946.html",
+      "time": "7 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T17:11:24Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "กองทุนที่ซื้อขายแลกเปลี่ยนได้รับกำไรเมื่อหุ้นสหรัฐพุ่งสูงขึ้นหลังเที่ยงวัน",
+        "แหล่งข่าวอ้างอิง: MT Newswires (20/10/2026 17:11 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "กองทุนที่ซื้อขายแลกเปลี่ยนได้รับกำไรเมื่อหุ้นสหรัฐพุ่งสูงขึ้นหลังเที่ยงวัน",
+        "กองทุนที่ซื้อขายแลกเปลี่ยนได้รับกำไรเมื่อหุ้นสหรัฐพุ่งสูงขึ้นหลังเที่ยงวัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Exchange-Traded Funds Gain as US Equities Advance After Midday\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "หุ้น Cryptocurrency เพิ่มขึ้นแม้ว่า Piper Sandler จะลดราคาเป้าหมาย: MARA และ Hut 8 เพิ่มขึ้น 4% แต่ Riot ทรงตัว",
+      "title_en": "Cryptocurrency Stocks Rise Despite Piper Sandler Price Target Cuts: MARA and Hut 8 Gain 4%, Riot Holds Flat",
+      "summary": "หุ้น Cryptocurrency เพิ่มขึ้นแม้ว่า Piper Sandler จะลดราคาเป้าหมาย: MARA และ Hut 8 เพิ่มขึ้น 4% แต่ Riot ทรงตัว",
+      "source": "24/7 Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/cryptocurrency-stocks-rise-despite-piper-170515556.html",
+      "time": "13 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T17:05:15Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "หุ้น Cryptocurrency เพิ่มขึ้นแม้ว่า Piper Sandler จะลดราคาเป้าหมาย: MARA และ Hut 8 เพิ่มขึ้น 4% แต่ Riot ทรงตัว",
+        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (20/10/2026 17:05 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "หุ้น Cryptocurrency เพิ่มขึ้นแม้ว่า Piper Sandler จะลดราคาเป้าหมาย: MARA และ Hut 8 เพิ่มขึ้น 4% แต่ Riot ทรงตัว",
+        "หุ้น Cryptocurrency เพิ่มขึ้นแม้ว่า Piper Sandler จะลดราคาเป้าหมาย: MARA และ Hut 8 เพิ่มขึ้น 4% แต่ Riot ทรงตัว",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Cryptocurrency Stocks Rise Despite Piper Sandler Price Target Cuts: MARA and Hut 8 Gain 4%, Riot Holds Flat\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "การอัปเดตรายได้ของ SpaceX แบบสด: นี่คือสาเหตุที่นักวิเคราะห์มีความมั่นใจก่อนรายงาน",
+      "title_en": "SpaceX earnings live updates: Here's why analysts are bullish ahead of the report",
+      "summary": "ติดตามผลประกอบการไตรมาสที่ 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html",
-      "time": "20 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T14:20:31Z",
+      "time": "15 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T17:03:06Z",
       "category": "EARNINGS",
       "tickers": [
         "SPY",
@@ -50,52 +108,219 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 14:20 UTC)",
+        "ติดตามผลประกอบการไตรมาสที่ 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 17:03 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "การอัปเดตรายได้ของ SpaceX แบบสด: การเติบโตของ Starlink, รายได้ AI และการเก็งกำไรในการควบรวมกิจการ",
-        "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX earnings live updates: Starlink growth, AI revenue and merger speculation\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "การอัปเดตรายได้ของ SpaceX แบบสด: นี่คือสาเหตุที่นักวิเคราะห์มีความมั่นใจก่อนรายงาน",
+        "ติดตามผลประกอบการไตรมาสที่ 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX earnings live updates: Here's why analysts are bullish ahead of the report\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-3",
-      "title": "ตลาดหุ้นร่วงลงเมื่อน้ำมันขึ้นอีกครั้ง",
-      "title_en": "Stock markets retreat as oil rises again",
-      "summary": "ตลาดหุ้นร่วงลงเมื่อน้ำมันขึ้นอีกครั้ง",
-      "source": "AFP",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/tech-firms-bear-brunt-selling-025048690.html",
-      "time": "27 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T14:13:11Z",
+      "id": "news-5",
+      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่ง, น้ำมันตกจากความหวังสหรัฐฯ-อิหร่าน; รายการล้างหุ้นด้านการดูแลสุขภาพเหล่านี้ (การรายงานสด)",
+      "title_en": "Stock Market Today: Dow Jumps, Oil Falls On U.S.-Iran Hopes; These Healthcare Stocks Clear Entries (Live Coverage)",
+      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่ง, น้ำมันตกจากความหวังสหรัฐฯ-อิหร่าน; รายการล้างหุ้นด้านการดูแลสุขภาพเหล่านี้ (การรายงานสด)",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/f3498525-5b31-3702-9e4b-aa8f358f4086/stock-market-today%3A-dow.html",
+      "time": "17 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T17:00:45Z",
       "category": "COMMODITIES",
       "tickers": [
-        "XOM",
-        "CVX"
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่ง, น้ำมันตกจากความหวังสหรัฐฯ-อิหร่าน; รายการล้างหุ้นด้านการดูแลสุขภาพเหล่านี้ (การรายงานสด)",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (20/10/2026 17:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #DIA"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่ง, น้ำมันตกจากความหวังสหรัฐฯ-อิหร่าน; รายการล้างหุ้นด้านการดูแลสุขภาพเหล่านี้ (การรายงานสด)",
+        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่ง, น้ำมันตกจากความหวังสหรัฐฯ-อิหร่าน; รายการล้างหุ้นด้านการดูแลสุขภาพเหล่านี้ (การรายงานสด)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Dow Jumps, Oil Falls On U.S.-Iran Hopes; These Healthcare Stocks Clear Entries (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "อัปเดต: ดัชนีหุ้นสหรัฐฯ เพิ่มขึ้นเนื่องจากผลประกอบการรายไตรมาสที่แข็งแกร่งช่วยยกระดับความเชื่อมั่นด้านความเสี่ยง",
+      "title_en": "Update: US Equity Indexes Rise as Strong Quarterly Results Help Lift Risk Sentiment",
+      "summary": "อัปเดต: ดัชนีหุ้นสหรัฐฯ เพิ่มขึ้นเนื่องจากผลประกอบการรายไตรมาสที่แข็งแกร่งช่วยยกระดับความเชื่อมั่นด้านความเสี่ยง",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-rise-strong-165905709.html",
+      "time": "19 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T16:59:05Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ตลาดหุ้นร่วงลงเมื่อน้ำมันขึ้นอีกครั้ง",
-        "แหล่งข่าวอ้างอิง: AFP (20/10/2026 14:13 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "อัปเดต: ดัชนีหุ้นสหรัฐฯ เพิ่มขึ้นเนื่องจากผลประกอบการรายไตรมาสที่แข็งแกร่งช่วยยกระดับความเชื่อมั่นด้านความเสี่ยง",
+        "แหล่งข่าวอ้างอิง: MT Newswires (20/10/2026 16:59 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "ตลาดหุ้นร่วงลงเมื่อน้ำมันขึ้นอีกครั้ง",
-        "ตลาดหุ้นร่วงลงเมื่อน้ำมันขึ้นอีกครั้ง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock markets retreat as oil rises again\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "อัปเดต: ดัชนีหุ้นสหรัฐฯ เพิ่มขึ้นเนื่องจากผลประกอบการรายไตรมาสที่แข็งแกร่งช่วยยกระดับความเชื่อมั่นด้านความเสี่ยง",
+        "อัปเดต: ดัชนีหุ้นสหรัฐฯ เพิ่มขึ้นเนื่องจากผลประกอบการรายไตรมาสที่แข็งแกร่งช่วยยกระดับความเชื่อมั่นด้านความเสี่ยง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Indexes Rise as Strong Quarterly Results Help Lift Risk Sentiment\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-7",
+      "title": "สิ่งที่ Amazon ต้องทำเพื่อให้หุ้นที่สะดุดกลับกลับมาทำสถิติสูงสุดและเหนือกว่านั้น",
+      "title_en": "What Amazon must do to get its stumbling stock back to record highs and beyond",
+      "summary": "ประสิทธิภาพของ Amazon Web Services คือกุญแจสำคัญ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/20/what-amazon-must-do-to-get-its-stumbling-stock-back-to-record-highs-and-beyond.html",
+      "time": "29 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T16:49:28Z",
+      "category": "TECH",
+      "tickers": [
+        "AMZN"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ประสิทธิภาพของ Amazon Web Services คือกุญแจสำคัญ",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 16:49 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AMZN"
+      ],
+      "fullArticle": [
+        "สิ่งที่ Amazon ต้องทำเพื่อให้หุ้นที่สะดุดกลับกลับมาทำสถิติสูงสุดและเหนือกว่านั้น",
+        "ประสิทธิภาพของ Amazon Web Services คือกุญแจสำคัญ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"What Amazon must do to get its stumbling stock back to record highs and beyond\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "หุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน: Hasbro, Northrop Grumman, Equifax, General Motors และอีกมากมาย",
+      "title_en": "Stocks making the biggest moves midday: Hasbro, Northrop Grumman, Equifax, General Motors & more",
+      "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-midday-has-noc-efx-gm.html",
+      "time": "33 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T16:45:06Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 16:45 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "หุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน: Hasbro, Northrop Grumman, Equifax, General Motors และอีกมากมาย",
+        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวมากที่สุดในช่วงเที่ยงวัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves midday: Hasbro, Northrop Grumman, Equifax, General Motors & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: RTX, General Motors, Northrop Grumman, Steel Dynamics และอื่นๆ",
+      "title_en": "Stocks making the biggest moves premarket: RTX, General Motors, Northrop Grumman, Steel Dynamics & more",
+      "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-premarket-rtx-gm-noc-stld.html",
+      "time": "42 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T16:35:41Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 16:35 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: RTX, General Motors, Northrop Grumman, Steel Dynamics และอื่นๆ",
+        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: RTX, General Motors, Northrop Grumman, Steel Dynamics & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
+      "title": "สิ่งที่คาดหวังได้เมื่อ Netflix รายงานรายได้หลังระฆังดัง",
+      "title_en": "Here's what to expect when Netflix reports earnings after the bell",
+      "summary": "นักลงทุนจะมองหาข้อมูลอัปเดตเกี่ยวกับธุรกิจที่สนับสนุนโฆษณาของ Netflix ตัวชี้วัดการมีส่วนร่วม และวิธีที่บริษัทสตรีมมิ่งยักษ์ใหญ่ยังคงมองการควบรวมกิจการที่มีศักยภาพต่อไป",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/netflix-nflx-earnings-q3-2026.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T16:00:01Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "NFLX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "นักลงทุนจะมองหาข้อมูลอัปเดตเกี่ยวกับธุรกิจที่สนับสนุนโฆษณาของ Netflix ตัวชี้วัดการมีส่วนร่วม และวิธีที่บริษัทสตรีมมิ่งยักษ์ใหญ่ยังคงมองการควบรวมกิจการที่มีศักยภาพต่อไป",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 16:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NFLX"
+      ],
+      "fullArticle": [
+        "สิ่งที่คาดหวังได้เมื่อ Netflix รายงานรายได้หลังระฆังดัง",
+        "นักลงทุนจะมองหาข้อมูลอัปเดตเกี่ยวกับธุรกิจที่สนับสนุนโฆษณาของ Netflix ตัวชี้วัดการมีส่วนร่วม และวิธีที่บริษัทสตรีมมิ่งยักษ์ใหญ่ยังคงมองการควบรวมกิจการที่มีศักยภาพต่อไป",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Here's what to expect when Netflix reports earnings after the bell\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
+      "title": "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
+      "title_en": "General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance",
+      "summary": "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T15:43:44Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 15:43 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
+        "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-12",
       "title": "Anthropic กำลังเจรจากับ neocloud Nscale เกี่ยวกับข้อตกลงมูลค่าหลายพันล้านดอลลาร์ครั้งที่สอง แหล่งข่าวกล่าวกับ CNBC",
       "title_en": "Anthropic in talks with neocloud Nscale over second multibillion-dollar deal, source tells CNBC",
       "summary": "ก่อนหน้านี้ Anthropic และ Nscale ได้ลงนามข้อตกลงที่คล้ายกันสำหรับศูนย์ข้อมูลบนไซต์เดียวกันในสหรัฐอเมริกา",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/anthropic-nscale-data-center-deal.html",
-      "time": "28 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-20T14:12:38Z",
       "category": "TECH",
       "tickers": [
@@ -115,229 +340,6 @@
         "Anthropic กำลังเจรจากับ neocloud Nscale เกี่ยวกับข้อตกลงมูลค่าหลายพันล้านดอลลาร์ครั้งที่สอง แหล่งข่าวกล่าวกับ CNBC",
         "ก่อนหน้านี้ Anthropic และ Nscale ได้ลงนามข้อตกลงที่คล้ายกันสำหรับศูนย์ข้อมูลบนไซต์เดียวกันในสหรัฐอเมริกา",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic in talks with neocloud Nscale over second multibillion-dollar deal, source tells CNBC\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "หุ้นน้ำมันที่น่าจับตามองเนื่องจากราคาน้ำมันดิบที่สูงทดสอบแผนกระแสเงินสด",
-      "title_en": "Oil Stocks Worth Watching As High Crude Prices Test Cash Flow Plans",
-      "summary": "หุ้นน้ำมันที่น่าจับตามองเนื่องจากราคาน้ำมันดิบที่สูงทดสอบแผนกระแสเงินสด",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-stocks-worth-watching-high-141053789.html",
-      "time": "30 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T14:10:53Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "หุ้นน้ำมันที่น่าจับตามองเนื่องจากราคาน้ำมันดิบที่สูงทดสอบแผนกระแสเงินสด",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (20/10/2026 14:10 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "หุ้นน้ำมันที่น่าจับตามองเนื่องจากราคาน้ำมันดิบที่สูงทดสอบแผนกระแสเงินสด",
-        "หุ้นน้ำมันที่น่าจับตามองเนื่องจากราคาน้ำมันดิบที่สูงทดสอบแผนกระแสเงินสด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Stocks Worth Watching As High Crude Prices Test Cash Flow Plans\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "Salesforce ประกาศข้อตกลงมูลค่า 5.66 พันล้านดอลลาร์สำหรับ Braze ส่งผลให้หุ้น BRZE ทะยานขึ้น 50%",
-      "title_en": "Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 50%",
-      "summary": "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/salesforce-braze-acquisition-deal.html",
-      "time": "31 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T14:09:16Z",
-      "category": "TECH",
-      "tickers": [
-        "CRM"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 14:09 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CRM"
-      ],
-      "fullArticle": [
-        "Salesforce ประกาศข้อตกลงมูลค่า 5.66 พันล้านดอลลาร์สำหรับ Braze ส่งผลให้หุ้น BRZE ทะยานขึ้น 50%",
-        "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 50%\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "BC-น้ำมันดิบล่วงหน้า",
-      "title_en": "BC-Crude Oil Futures",
-      "summary": "BC-น้ำมันดิบล่วงหน้า",
-      "source": "Associated Press",
-      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/bc-crude-oil-futures-140017299.html",
-      "time": "40 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T14:00:17Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "BC-น้ำมันดิบล่วงหน้า",
-        "แหล่งข่าวอ้างอิง: Associated Press (20/10/2026 14:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "BC-น้ำมันดิบล่วงหน้า",
-        "BC-น้ำมันดิบล่วงหน้า",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BC-Crude Oil Futures\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "ราคาน้ำมันสูงสุดในรอบ 5 เดือนถือเป็นภาษีสำหรับครัวเรือน เว้นแต่คุณจะเป็นเจ้าของหุ้นพลังงาน",
-      "title_en": "Oil's 5-Month High Is a Tax on Households, Unless You Own Energy Stocks",
-      "summary": "ราคาน้ำมันสูงสุดในรอบ 5 เดือนถือเป็นภาษีสำหรับครัวเรือน เว้นแต่คุณจะเป็นเจ้าของหุ้นพลังงาน",
-      "source": "BeInCrypto",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oils-5-month-high-tax-140000170.html",
-      "time": "41 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T14:00:00Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ราคาน้ำมันสูงสุดในรอบ 5 เดือนถือเป็นภาษีสำหรับครัวเรือน เว้นแต่คุณจะเป็นเจ้าของหุ้นพลังงาน",
-        "แหล่งข่าวอ้างอิง: BeInCrypto (20/10/2026 14:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ราคาน้ำมันสูงสุดในรอบ 5 เดือนถือเป็นภาษีสำหรับครัวเรือน เว้นแต่คุณจะเป็นเจ้าของหุ้นพลังงาน",
-        "ราคาน้ำมันสูงสุดในรอบ 5 เดือนถือเป็นภาษีสำหรับครัวเรือน เว้นแต่คุณจะเป็นเจ้าของหุ้นพลังงาน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil's 5-Month High Is a Tax on Households, Unless You Own Energy Stocks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
-      "title_en": "General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance",
-      "summary": "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
-      "time": "54 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T13:46:36Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 13:46 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
-        "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "อดีตผู้บริหาร OpenAI ได้สร้างสตาร์ทอัพมูลค่า 1.5 พันล้านดอลลาร์อย่างเงียบๆ การเดิมพันว่า AI สามารถฟื้นฟูการผลิตในสหรัฐฯ ได้",
-      "title_en": "Former OpenAI exec has quietly built $1.5 billion startup, betting AI can revive U.S. manufacturing",
-      "summary": "Bob McGrew อดีตผู้บริหาร OpenAI เปิดตัว Arda ที่มูลค่า 1.5 พันล้านดอลลาร์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/ex-openai-executive-builds-1point5-billion-ai-manufacturing-startup-arda.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T13:03:31Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Bob McGrew อดีตผู้บริหาร OpenAI เปิดตัว Arda ที่มูลค่า 1.5 พันล้านดอลลาร์",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 13:03 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "อดีตผู้บริหาร OpenAI ได้สร้างสตาร์ทอัพมูลค่า 1.5 พันล้านดอลลาร์อย่างเงียบๆ การเดิมพันว่า AI สามารถฟื้นฟูการผลิตในสหรัฐฯ ได้",
-        "Bob McGrew อดีตผู้บริหาร OpenAI เปิดตัว Arda ที่มูลค่า 1.5 พันล้านดอลลาร์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Former OpenAI exec has quietly built $1.5 billion startup, betting AI can revive U.S. manufacturing\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "AITX โครงการหักคุ้มทุนจากการดำเนินงานรายเดือนในเดือนมกราคม 2027 นำหน้า RAIA, SARA และ ROAMEO รายได้ที่เพิ่มขึ้น",
-      "title_en": "AITX Projects Monthly Operating Cash Breakeven in January 2027 Ahead of RAIA, SARA and ROAMEO Revenue Ramp",
-      "summary": "AITX โครงการหักคุ้มทุนจากการดำเนินงานรายเดือนในเดือนมกราคม 2027 นำหน้า RAIA, SARA และ ROAMEO รายได้ที่เพิ่มขึ้น",
-      "source": "TMX Newsfile",
-      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitx-projects-monthly-operating-cash-124000166.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T12:40:00Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "AITX โครงการหักคุ้มทุนจากการดำเนินงานรายเดือนในเดือนมกราคม 2027 นำหน้า RAIA, SARA และ ROAMEO รายได้ที่เพิ่มขึ้น",
-        "แหล่งข่าวอ้างอิง: TMX Newsfile (20/10/2026 12:40 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "AITX โครงการหักคุ้มทุนจากการดำเนินงานรายเดือนในเดือนมกราคม 2027 นำหน้า RAIA, SARA และ ROAMEO รายได้ที่เพิ่มขึ้น",
-        "AITX โครงการหักคุ้มทุนจากการดำเนินงานรายเดือนในเดือนมกราคม 2027 นำหน้า RAIA, SARA และ ROAMEO รายได้ที่เพิ่มขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX Projects Monthly Operating Cash Breakeven in January 2027 Ahead of RAIA, SARA and ROAMEO Revenue Ramp\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "Apple เพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo เนื่องจากอุปทานยังมีจำกัด",
-      "title_en": "Apple adds U.S. titanium supplier for iPhone Duo as supply stays tight",
-      "summary": "Apple กำลังเพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo ใหม่และขยายการผลิตส่วนประกอบกล้องสำหรับ iPhone 18 Pro ในประเทศ",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/apple-adds-us-titanium-supplier-for-iphone-duo.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T12:29:26Z",
-      "category": "TECH",
-      "tickers": [
-        "AAPL"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Apple กำลังเพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo ใหม่และขยายการผลิตส่วนประกอบกล้องสำหรับ iPhone 18 Pro ในประเทศ",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 12:29 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
-      ],
-      "fullArticle": [
-        "Apple เพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo เนื่องจากอุปทานยังมีจำกัด",
-        "Apple กำลังเพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo ใหม่และขยายการผลิตส่วนประกอบกล้องสำหรับ iPhone 18 Pro ในประเทศ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple adds U.S. titanium supplier for iPhone Duo as supply stays tight\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
