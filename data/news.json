@@ -1,17 +1,46 @@
 {
-  "updated_at": "2026-10-20T12:17:04Z",
-  "updated_at_thai": "20 ต.ค. 2569 19:17 น.",
+  "updated_at": "2026-10-20T14:41:06Z",
+  "updated_at_thai": "20 ต.ค. 2569 21:41 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
-      "title_en": "General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance",
-      "summary": "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
+      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq เปลี่ยนเป็นสีเขียวเมื่อกลับมาซื้อต่อ",
+      "title_en": "Stock market today: Dow rises, S&P 500, Nasdaq turn green as dip buying resumes",
+      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq เปลี่ยนเป็นสีเขียวเมื่อกลับมาซื้อต่อ",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/live/copy-stock-market-today-dow-sp-500-nasdaq-futures-mixed-amid-volatile-week-111612062.html",
+      "time": "15 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T14:25:20Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": true,
+      "points": [
+        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq เปลี่ยนเป็นสีเขียวเมื่อกลับมาซื้อต่อ",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (20/10/2026 14:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq เปลี่ยนเป็นสีเขียวเมื่อกลับมาซื้อต่อ",
+        "ตลาดหุ้นวันนี้: ดาวโจนส์พุ่งขึ้น, S&P 500, Nasdaq เปลี่ยนเป็นสีเขียวเมื่อกลับมาซื้อต่อ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow rises, S&P 500, Nasdaq turn green as dip buying resumes\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "การอัปเดตรายได้ของ SpaceX แบบสด: การเติบโตของ Starlink, รายได้ AI และการเก็งกำไรในการควบรวมกิจการ",
+      "title_en": "SpaceX earnings live updates: Starlink growth, AI revenue and merger speculation",
+      "summary": "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
-      "time": "5 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T12:11:32Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html",
+      "time": "20 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T14:20:31Z",
       "category": "EARNINGS",
       "tickers": [
         "SPY",
@@ -19,10 +48,206 @@
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
+      "isHero": false,
+      "points": [
+        "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 14:20 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "การอัปเดตรายได้ของ SpaceX แบบสด: การเติบโตของ Starlink, รายได้ AI และการเก็งกำไรในการควบรวมกิจการ",
+        "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX earnings live updates: Starlink growth, AI revenue and merger speculation\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "ตลาดหุ้นร่วงลงเมื่อน้ำมันขึ้นอีกครั้ง",
+      "title_en": "Stock markets retreat as oil rises again",
+      "summary": "ตลาดหุ้นร่วงลงเมื่อน้ำมันขึ้นอีกครั้ง",
+      "source": "AFP",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/tech-firms-bear-brunt-selling-025048690.html",
+      "time": "27 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T14:13:11Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ตลาดหุ้นร่วงลงเมื่อน้ำมันขึ้นอีกครั้ง",
+        "แหล่งข่าวอ้างอิง: AFP (20/10/2026 14:13 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นร่วงลงเมื่อน้ำมันขึ้นอีกครั้ง",
+        "ตลาดหุ้นร่วงลงเมื่อน้ำมันขึ้นอีกครั้ง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock markets retreat as oil rises again\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "Anthropic กำลังเจรจากับ neocloud Nscale เกี่ยวกับข้อตกลงมูลค่าหลายพันล้านดอลลาร์ครั้งที่สอง แหล่งข่าวกล่าวกับ CNBC",
+      "title_en": "Anthropic in talks with neocloud Nscale over second multibillion-dollar deal, source tells CNBC",
+      "summary": "ก่อนหน้านี้ Anthropic และ Nscale ได้ลงนามข้อตกลงที่คล้ายกันสำหรับศูนย์ข้อมูลบนไซต์เดียวกันในสหรัฐอเมริกา",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/anthropic-nscale-data-center-deal.html",
+      "time": "28 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T14:12:38Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ก่อนหน้านี้ Anthropic และ Nscale ได้ลงนามข้อตกลงที่คล้ายกันสำหรับศูนย์ข้อมูลบนไซต์เดียวกันในสหรัฐอเมริกา",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 14:12 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "Anthropic กำลังเจรจากับ neocloud Nscale เกี่ยวกับข้อตกลงมูลค่าหลายพันล้านดอลลาร์ครั้งที่สอง แหล่งข่าวกล่าวกับ CNBC",
+        "ก่อนหน้านี้ Anthropic และ Nscale ได้ลงนามข้อตกลงที่คล้ายกันสำหรับศูนย์ข้อมูลบนไซต์เดียวกันในสหรัฐอเมริกา",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Anthropic in talks with neocloud Nscale over second multibillion-dollar deal, source tells CNBC\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "หุ้นน้ำมันที่น่าจับตามองเนื่องจากราคาน้ำมันดิบที่สูงทดสอบแผนกระแสเงินสด",
+      "title_en": "Oil Stocks Worth Watching As High Crude Prices Test Cash Flow Plans",
+      "summary": "หุ้นน้ำมันที่น่าจับตามองเนื่องจากราคาน้ำมันดิบที่สูงทดสอบแผนกระแสเงินสด",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-stocks-worth-watching-high-141053789.html",
+      "time": "30 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T14:10:53Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "หุ้นน้ำมันที่น่าจับตามองเนื่องจากราคาน้ำมันดิบที่สูงทดสอบแผนกระแสเงินสด",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (20/10/2026 14:10 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "หุ้นน้ำมันที่น่าจับตามองเนื่องจากราคาน้ำมันดิบที่สูงทดสอบแผนกระแสเงินสด",
+        "หุ้นน้ำมันที่น่าจับตามองเนื่องจากราคาน้ำมันดิบที่สูงทดสอบแผนกระแสเงินสด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Stocks Worth Watching As High Crude Prices Test Cash Flow Plans\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "Salesforce ประกาศข้อตกลงมูลค่า 5.66 พันล้านดอลลาร์สำหรับ Braze ส่งผลให้หุ้น BRZE ทะยานขึ้น 50%",
+      "title_en": "Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 50%",
+      "summary": "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/salesforce-braze-acquisition-deal.html",
+      "time": "31 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T14:09:16Z",
+      "category": "TECH",
+      "tickers": [
+        "CRM"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 14:09 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CRM"
+      ],
+      "fullArticle": [
+        "Salesforce ประกาศข้อตกลงมูลค่า 5.66 พันล้านดอลลาร์สำหรับ Braze ส่งผลให้หุ้น BRZE ทะยานขึ้น 50%",
+        "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 50%\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "BC-น้ำมันดิบล่วงหน้า",
+      "title_en": "BC-Crude Oil Futures",
+      "summary": "BC-น้ำมันดิบล่วงหน้า",
+      "source": "Associated Press",
+      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/bc-crude-oil-futures-140017299.html",
+      "time": "40 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T14:00:17Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "BC-น้ำมันดิบล่วงหน้า",
+        "แหล่งข่าวอ้างอิง: Associated Press (20/10/2026 14:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "BC-น้ำมันดิบล่วงหน้า",
+        "BC-น้ำมันดิบล่วงหน้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BC-Crude Oil Futures\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "ราคาน้ำมันสูงสุดในรอบ 5 เดือนถือเป็นภาษีสำหรับครัวเรือน เว้นแต่คุณจะเป็นเจ้าของหุ้นพลังงาน",
+      "title_en": "Oil's 5-Month High Is a Tax on Households, Unless You Own Energy Stocks",
+      "summary": "ราคาน้ำมันสูงสุดในรอบ 5 เดือนถือเป็นภาษีสำหรับครัวเรือน เว้นแต่คุณจะเป็นเจ้าของหุ้นพลังงาน",
+      "source": "BeInCrypto",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oils-5-month-high-tax-140000170.html",
+      "time": "41 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T14:00:00Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ราคาน้ำมันสูงสุดในรอบ 5 เดือนถือเป็นภาษีสำหรับครัวเรือน เว้นแต่คุณจะเป็นเจ้าของหุ้นพลังงาน",
+        "แหล่งข่าวอ้างอิง: BeInCrypto (20/10/2026 14:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ราคาน้ำมันสูงสุดในรอบ 5 เดือนถือเป็นภาษีสำหรับครัวเรือน เว้นแต่คุณจะเป็นเจ้าของหุ้นพลังงาน",
+        "ราคาน้ำมันสูงสุดในรอบ 5 เดือนถือเป็นภาษีสำหรับครัวเรือน เว้นแต่คุณจะเป็นเจ้าของหุ้นพลังงาน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil's 5-Month High Is a Tax on Households, Unless You Own Energy Stocks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
+      "title_en": "General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance",
+      "summary": "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
+      "time": "54 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T13:46:36Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
       "points": [
         "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 12:11 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 13:46 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
@@ -32,14 +257,71 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-10",
+      "title": "อดีตผู้บริหาร OpenAI ได้สร้างสตาร์ทอัพมูลค่า 1.5 พันล้านดอลลาร์อย่างเงียบๆ การเดิมพันว่า AI สามารถฟื้นฟูการผลิตในสหรัฐฯ ได้",
+      "title_en": "Former OpenAI exec has quietly built $1.5 billion startup, betting AI can revive U.S. manufacturing",
+      "summary": "Bob McGrew อดีตผู้บริหาร OpenAI เปิดตัว Arda ที่มูลค่า 1.5 พันล้านดอลลาร์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/ex-openai-executive-builds-1point5-billion-ai-manufacturing-startup-arda.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T13:03:31Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Bob McGrew อดีตผู้บริหาร OpenAI เปิดตัว Arda ที่มูลค่า 1.5 พันล้านดอลลาร์",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 13:03 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "อดีตผู้บริหาร OpenAI ได้สร้างสตาร์ทอัพมูลค่า 1.5 พันล้านดอลลาร์อย่างเงียบๆ การเดิมพันว่า AI สามารถฟื้นฟูการผลิตในสหรัฐฯ ได้",
+        "Bob McGrew อดีตผู้บริหาร OpenAI เปิดตัว Arda ที่มูลค่า 1.5 พันล้านดอลลาร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Former OpenAI exec has quietly built $1.5 billion startup, betting AI can revive U.S. manufacturing\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
+      "title": "AITX โครงการหักคุ้มทุนจากการดำเนินงานรายเดือนในเดือนมกราคม 2027 นำหน้า RAIA, SARA และ ROAMEO รายได้ที่เพิ่มขึ้น",
+      "title_en": "AITX Projects Monthly Operating Cash Breakeven in January 2027 Ahead of RAIA, SARA and ROAMEO Revenue Ramp",
+      "summary": "AITX โครงการหักคุ้มทุนจากการดำเนินงานรายเดือนในเดือนมกราคม 2027 นำหน้า RAIA, SARA และ ROAMEO รายได้ที่เพิ่มขึ้น",
+      "source": "TMX Newsfile",
+      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitx-projects-monthly-operating-cash-124000166.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T12:40:00Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "AITX โครงการหักคุ้มทุนจากการดำเนินงานรายเดือนในเดือนมกราคม 2027 นำหน้า RAIA, SARA และ ROAMEO รายได้ที่เพิ่มขึ้น",
+        "แหล่งข่าวอ้างอิง: TMX Newsfile (20/10/2026 12:40 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "AITX โครงการหักคุ้มทุนจากการดำเนินงานรายเดือนในเดือนมกราคม 2027 นำหน้า RAIA, SARA และ ROAMEO รายได้ที่เพิ่มขึ้น",
+        "AITX โครงการหักคุ้มทุนจากการดำเนินงานรายเดือนในเดือนมกราคม 2027 นำหน้า RAIA, SARA และ ROAMEO รายได้ที่เพิ่มขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX Projects Monthly Operating Cash Breakeven in January 2027 Ahead of RAIA, SARA and ROAMEO Revenue Ramp\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-12",
       "title": "Apple เพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo เนื่องจากอุปทานยังมีจำกัด",
       "title_en": "Apple adds U.S. titanium supplier for iPhone Duo as supply stays tight",
       "summary": "Apple กำลังเพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo ใหม่และขยายการผลิตส่วนประกอบกล้องสำหรับ iPhone 18 Pro ในประเทศ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/apple-adds-us-titanium-supplier-for-iphone-duo.html",
-      "time": "17 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T12:00:02Z",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T12:29:26Z",
       "category": "TECH",
       "tickers": [
         "AAPL"
@@ -49,298 +331,13 @@
       "isHero": false,
       "points": [
         "Apple กำลังเพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo ใหม่และขยายการผลิตส่วนประกอบกล้องสำหรับ iPhone 18 Pro ในประเทศ",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 12:00 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 12:29 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
       ],
       "fullArticle": [
         "Apple เพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo เนื่องจากอุปทานยังมีจำกัด",
         "Apple กำลังเพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo ใหม่และขยายการผลิตส่วนประกอบกล้องสำหรับ iPhone 18 Pro ในประเทศ",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple adds U.S. titanium supplier for iPhone Duo as supply stays tight\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: RTX, General Motors, Northrop Grumman, Steel Dynamics และอื่นๆ",
-      "title_en": "Stocks making the biggest moves premarket: RTX, General Motors, Northrop Grumman, Steel Dynamics & more",
-      "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-premarket-rtx-gm-noc-stld.html",
-      "time": "19 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T11:57:52Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 11:57 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: RTX, General Motors, Northrop Grumman, Steel Dynamics และอื่นๆ",
-        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: RTX, General Motors, Northrop Grumman, Steel Dynamics & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "3M ยกการคาดการณ์กำไรประจำปีจากการควบคุมต้นทุนการขึ้นราคา",
-      "title_en": "3M lifts annual profit forecast on cost controls, price hikes",
-      "summary": "3M เพิ่มกำไรต่อหุ้นที่ปรับปรุงแล้วทั้งปีที่คาดหวังไว้ที่ 9.10 ดอลลาร์เป็น 9.15 ดอลลาร์ จากการคาดการณ์ก่อนหน้านี้ที่ 8.80 ดอลลาร์เป็น 8.95 ดอลลาร์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/3m-mmm-earnings-q3-2026.html",
-      "time": "36 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T11:40:22Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "3M เพิ่มกำไรต่อหุ้นที่ปรับปรุงแล้วทั้งปีที่คาดหวังไว้ที่ 9.10 ดอลลาร์เป็น 9.15 ดอลลาร์ จากการคาดการณ์ก่อนหน้านี้ที่ 8.80 ดอลลาร์เป็น 8.95 ดอลลาร์",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 11:40 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "3M ยกการคาดการณ์กำไรประจำปีจากการควบคุมต้นทุนการขึ้นราคา",
-        "3M เพิ่มกำไรต่อหุ้นที่ปรับปรุงแล้วทั้งปีที่คาดหวังไว้ที่ 9.10 ดอลลาร์เป็น 9.15 ดอลลาร์ จากการคาดการณ์ก่อนหน้านี้ที่ 8.80 ดอลลาร์เป็น 8.95 ดอลลาร์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3M lifts annual profit forecast on cost controls, price hikes\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "การชุมนุมของ AI หายไปจาก Wall Street เนื่องจากการเสนอขายหุ้น IPO เพียงเล็กน้อยทำให้เกิดคลื่นลูกใหญ่",
-      "title_en": "AI rally fades away from Wall Street as a tiny IPO makes big waves",
-      "summary": "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/ai-rally-fades-elice-ipo-dives.html",
-      "time": "43 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T11:34:03Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 11:34 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "การชุมนุมของ AI หายไปจาก Wall Street เนื่องจากการเสนอขายหุ้น IPO เพียงเล็กน้อยทำให้เกิดคลื่นลูกใหญ่",
-        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AI rally fades away from Wall Street as a tiny IPO makes big waves\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "CEO ของ HSBC เตือนว่าการเติบโตอย่างรวดเร็วของ AI จะไม่ทำให้ทุกศูนย์ข้อมูลเป็นทางออกที่ดี",
-      "title_en": "HSBC CEO warns the AI boom won’t make every data center a good bet",
-      "summary": "วิทยาเขตศูนย์ข้อมูลเป็นที่ตั้งของเซิร์ฟเวอร์ที่ขับเคลื่อน AI และการประมวลผลแบบคลาวด์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/data-center-financing-ai-debt-hsbc.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T10:39:17Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "วิทยาเขตศูนย์ข้อมูลเป็นที่ตั้งของเซิร์ฟเวอร์ที่ขับเคลื่อน AI และการประมวลผลแบบคลาวด์",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 10:39 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "CEO ของ HSBC เตือนว่าการเติบโตอย่างรวดเร็วของ AI จะไม่ทำให้ทุกศูนย์ข้อมูลเป็นทางออกที่ดี",
-        "วิทยาเขตศูนย์ข้อมูลเป็นที่ตั้งของเซิร์ฟเวอร์ที่ขับเคลื่อน AI และการประมวลผลแบบคลาวด์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"HSBC CEO warns the AI boom won’t make every data center a good bet\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "สหรัฐฯ สั่งแบน DeepSeek จากระบบหน่วยงานรัฐบาล ท่ามกลางความขัดแย้งด้าน AI กับจีน",
-      "title_en": "U.S. bans DeepSeek from government agency systems amid AI rift with China",
-      "summary": "กระทรวงความมั่นคงแห่งมาตุภูมิของสหรัฐอเมริกาได้สั่งห้ามเทคโนโลยีที่เกี่ยวข้องกับ DeepSeek จากระบบไอทีของหน่วยงานพลเรือนของรัฐบาลกลาง",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/us-deepseek-federal-agency-ban.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T08:17:14Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "กระทรวงความมั่นคงแห่งมาตุภูมิของสหรัฐอเมริกาได้สั่งห้ามเทคโนโลยีที่เกี่ยวข้องกับ DeepSeek จากระบบไอทีของหน่วยงานพลเรือนของรัฐบาลกลาง",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 08:17 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "สหรัฐฯ สั่งแบน DeepSeek จากระบบหน่วยงานรัฐบาล ท่ามกลางความขัดแย้งด้าน AI กับจีน",
-        "กระทรวงความมั่นคงแห่งมาตุภูมิของสหรัฐอเมริกาได้สั่งห้ามเทคโนโลยีที่เกี่ยวข้องกับ DeepSeek จากระบบไอทีของหน่วยงานพลเรือนของรัฐบาลกลาง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. bans DeepSeek from government agency systems amid AI rift with China\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "หัวหน้าฝ่ายการเงินของโลกมองเห็นความเสี่ยงใหม่ๆ — และความกังวลของจีนน้อยลง",
-      "title_en": "The world’s finance chiefs see new risks — and less China angst",
-      "summary": "หนี้, AI และยูเครนครอบงำการสนทนาในการประชุม IMF-World Bank ในกรุงเทพฯ ในขณะที่จีนซึ่งเป็นประเด็นสำคัญในปี 2561 กลับกลายเป็นเบื้องหลัง",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/imf-debt-yields-russia-china-takeaway-.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T05:27:53Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "หนี้, AI และยูเครนครอบงำการสนทนาในการประชุม IMF-World Bank ในกรุงเทพฯ ในขณะที่จีนซึ่งเป็นประเด็นสำคัญในปี 2561 กลับกลายเป็นเบื้องหลัง",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 05:27 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "หัวหน้าฝ่ายการเงินของโลกมองเห็นความเสี่ยงใหม่ๆ — และความกังวลของจีนน้อยลง",
-        "หนี้, AI และยูเครนครอบงำการสนทนาในการประชุม IMF-World Bank ในกรุงเทพฯ ในขณะที่จีนซึ่งเป็นประเด็นสำคัญในปี 2561 กลับกลายเป็นเบื้องหลัง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"The world’s finance chiefs see new risks — and less China angst\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "'เปิดประตูสู่ AI': นายกรัฐมนตรีเยอรมันเรียกร้องให้ธุรกิจต่างๆ ยอมรับ AI เนื่องจาก Nvidia ประกาศการลงทุนครั้งใหม่",
-      "title_en": "‘Open your doors for AI’: German chancellor urges businesses to embrace AI as Nvidia announces new investments",
-      "summary": "Nvidia ประกาศแผนการลงทุนในสตาร์ทอัพสัญชาติเยอรมัน 4 แห่ง ขณะที่นายกรัฐมนตรี Friedrich Merz กระตุ้นให้ธุรกิจต่างๆ ยอมรับ AI ในการประชุมสุดยอดอุตสาหกรรมในกรุงเบอร์ลิน",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/german-chancellor-urges-businesses-to-embrace-ai.html",
-      "time": "10 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T02:16:25Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Nvidia ประกาศแผนการลงทุนในสตาร์ทอัพสัญชาติเยอรมัน 4 แห่ง ขณะที่นายกรัฐมนตรี Friedrich Merz กระตุ้นให้ธุรกิจต่างๆ ยอมรับ AI ในการประชุมสุดยอดอุตสาหกรรมในกรุงเบอร์ลิน",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 02:16 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
-      ],
-      "fullArticle": [
-        "'เปิดประตูสู่ AI': นายกรัฐมนตรีเยอรมันเรียกร้องให้ธุรกิจต่างๆ ยอมรับ AI เนื่องจาก Nvidia ประกาศการลงทุนครั้งใหม่",
-        "Nvidia ประกาศแผนการลงทุนในสตาร์ทอัพสัญชาติเยอรมัน 4 แห่ง ขณะที่นายกรัฐมนตรี Friedrich Merz กระตุ้นให้ธุรกิจต่างๆ ยอมรับ AI ในการประชุมสุดยอดอุตสาหกรรมในกรุงเบอร์ลิน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"‘Open your doors for AI’: German chancellor urges businesses to embrace AI as Nvidia announces new investments\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "Jim Cramer บอกว่าอย่าเพิ่งไล่ตามการฟื้นตัวของ AI นี่คือสิ่งที่ต้องเกิดขึ้นก่อน",
-      "title_en": "Jim Cramer says don't chase the AI rebound just yet. Here's what needs to happen first",
-      "summary": "Jim Cramer จาก CNBC เตือนนักลงทุนไม่ให้รีบกลับเข้าไปในหุ้น AI",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/jim-cramer-dont-chase-ai-rebound-yet.html",
-      "time": "13 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T22:46:33Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Jim Cramer จาก CNBC เตือนนักลงทุนไม่ให้รีบกลับเข้าไปในหุ้น AI",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 22:46 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "Jim Cramer บอกว่าอย่าเพิ่งไล่ตามการฟื้นตัวของ AI นี่คือสิ่งที่ต้องเกิดขึ้นก่อน",
-        "Jim Cramer จาก CNBC เตือนนักลงทุนไม่ให้รีบกลับเข้าไปในหุ้น AI",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer says don't chase the AI rebound just yet. Here's what needs to happen first\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
-      "title_en": "Where Will VTI Be in 20 Years? Here's What History Suggests",
-      "summary": "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
-      "source": "Motley Fool",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/where-vti-20-years-heres-214300311.html",
-      "time": "14 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T21:43:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "VTI"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
-        "แหล่งข่าวอ้างอิง: Motley Fool (19/10/2026 21:43 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #VTI"
-      ],
-      "fullArticle": [
-        "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
-        "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Where Will VTI Be in 20 Years? Here's What History Suggests\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "ผู้หญิงอาจเสี่ยงต่อการตกงานด้าน AI มากขึ้น ผู้ให้บริการสวิตช์โทรศัพท์และพีซีแสดงสาเหตุ",
-      "title_en": "Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why",
-      "summary": "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/ai-job-losses-women-automation-risk.html",
-      "time": "17 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T18:36:21Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 18:36 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "ผู้หญิงอาจเสี่ยงต่อการตกงานด้าน AI มากขึ้น ผู้ให้บริการสวิตช์โทรศัพท์และพีซีแสดงสาเหตุ",
-        "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
