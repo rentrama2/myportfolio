@@ -1,45 +1,187 @@
 {
-  "updated_at": "2026-10-20T06:41:08Z",
-  "updated_at_thai": "20 ต.ค. 2569 13:41 น.",
+  "updated_at": "2026-10-20T12:17:04Z",
+  "updated_at_thai": "20 ต.ค. 2569 19:17 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "น้ำมันดิบเบรนต์ทรงตัวใกล้ระดับสูงสุดในรอบ 5 เดือนจากความตึงเครียดในตะวันออกกลาง",
-      "title_en": "Brent crude holds near five-month high on Middle East tension",
-      "summary": "น้ำมันดิบเบรนต์ทรงตัวใกล้ระดับสูงสุดในรอบ 5 เดือนจากความตึงเครียดในตะวันออกกลาง",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-eases-markets-assess-potential-005750414.html",
+      "title": "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
+      "title_en": "General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance",
+      "summary": "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
       "time": "5 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T06:35:42Z",
-      "category": "COMMODITIES",
+      "publishedAt": "2026-10-20T12:11:32Z",
+      "category": "EARNINGS",
       "tickers": [
-        "XOM",
-        "CVX"
+        "SPY",
+        "DIA"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": true,
       "points": [
-        "น้ำมันดิบเบรนต์ทรงตัวใกล้ระดับสูงสุดในรอบ 5 เดือนจากความตึงเครียดในตะวันออกกลาง",
-        "แหล่งข่าวอ้างอิง: Reuters (20/10/2026 06:35 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 12:11 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "น้ำมันดิบเบรนต์ทรงตัวใกล้ระดับสูงสุดในรอบ 5 เดือนจากความตึงเครียดในตะวันออกกลาง",
-        "น้ำมันดิบเบรนต์ทรงตัวใกล้ระดับสูงสุดในรอบ 5 เดือนจากความตึงเครียดในตะวันออกกลาง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Brent crude holds near five-month high on Middle East tension\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
+        "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
+      "title": "Apple เพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo เนื่องจากอุปทานยังมีจำกัด",
+      "title_en": "Apple adds U.S. titanium supplier for iPhone Duo as supply stays tight",
+      "summary": "Apple กำลังเพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo ใหม่และขยายการผลิตส่วนประกอบกล้องสำหรับ iPhone 18 Pro ในประเทศ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/apple-adds-us-titanium-supplier-for-iphone-duo.html",
+      "time": "17 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T12:00:02Z",
+      "category": "TECH",
+      "tickers": [
+        "AAPL"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Apple กำลังเพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo ใหม่และขยายการผลิตส่วนประกอบกล้องสำหรับ iPhone 18 Pro ในประเทศ",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 12:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL"
+      ],
+      "fullArticle": [
+        "Apple เพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo เนื่องจากอุปทานยังมีจำกัด",
+        "Apple กำลังเพิ่มซัพพลายเออร์ไทเทเนียมในสหรัฐฯ สำหรับ iPhone Duo ใหม่และขยายการผลิตส่วนประกอบกล้องสำหรับ iPhone 18 Pro ในประเทศ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Apple adds U.S. titanium supplier for iPhone Duo as supply stays tight\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: RTX, General Motors, Northrop Grumman, Steel Dynamics และอื่นๆ",
+      "title_en": "Stocks making the biggest moves premarket: RTX, General Motors, Northrop Grumman, Steel Dynamics & more",
+      "summary": "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-premarket-rtx-gm-noc-stld.html",
+      "time": "19 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T11:57:52Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 11:57 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "หุ้นที่มีการเคลื่อนไหวสูงสุดก่อนการตลาด: RTX, General Motors, Northrop Grumman, Steel Dynamics และอื่นๆ",
+        "เหล่านี้เป็นหุ้นที่มีการเคลื่อนไหวที่ใหญ่ที่สุดในการซื้อขายช่วงแรก",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves premarket: RTX, General Motors, Northrop Grumman, Steel Dynamics & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "3M ยกการคาดการณ์กำไรประจำปีจากการควบคุมต้นทุนการขึ้นราคา",
+      "title_en": "3M lifts annual profit forecast on cost controls, price hikes",
+      "summary": "3M เพิ่มกำไรต่อหุ้นที่ปรับปรุงแล้วทั้งปีที่คาดหวังไว้ที่ 9.10 ดอลลาร์เป็น 9.15 ดอลลาร์ จากการคาดการณ์ก่อนหน้านี้ที่ 8.80 ดอลลาร์เป็น 8.95 ดอลลาร์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/3m-mmm-earnings-q3-2026.html",
+      "time": "36 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T11:40:22Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "3M เพิ่มกำไรต่อหุ้นที่ปรับปรุงแล้วทั้งปีที่คาดหวังไว้ที่ 9.10 ดอลลาร์เป็น 9.15 ดอลลาร์ จากการคาดการณ์ก่อนหน้านี้ที่ 8.80 ดอลลาร์เป็น 8.95 ดอลลาร์",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 11:40 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "3M ยกการคาดการณ์กำไรประจำปีจากการควบคุมต้นทุนการขึ้นราคา",
+        "3M เพิ่มกำไรต่อหุ้นที่ปรับปรุงแล้วทั้งปีที่คาดหวังไว้ที่ 9.10 ดอลลาร์เป็น 9.15 ดอลลาร์ จากการคาดการณ์ก่อนหน้านี้ที่ 8.80 ดอลลาร์เป็น 8.95 ดอลลาร์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3M lifts annual profit forecast on cost controls, price hikes\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "การชุมนุมของ AI หายไปจาก Wall Street เนื่องจากการเสนอขายหุ้น IPO เพียงเล็กน้อยทำให้เกิดคลื่นลูกใหญ่",
+      "title_en": "AI rally fades away from Wall Street as a tiny IPO makes big waves",
+      "summary": "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/ai-rally-fades-elice-ipo-dives.html",
+      "time": "43 นาทีที่แล้ว",
+      "publishedAt": "2026-10-20T11:34:03Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 11:34 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "การชุมนุมของ AI หายไปจาก Wall Street เนื่องจากการเสนอขายหุ้น IPO เพียงเล็กน้อยทำให้เกิดคลื่นลูกใหญ่",
+        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AI rally fades away from Wall Street as a tiny IPO makes big waves\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "CEO ของ HSBC เตือนว่าการเติบโตอย่างรวดเร็วของ AI จะไม่ทำให้ทุกศูนย์ข้อมูลเป็นทางออกที่ดี",
+      "title_en": "HSBC CEO warns the AI boom won’t make every data center a good bet",
+      "summary": "วิทยาเขตศูนย์ข้อมูลเป็นที่ตั้งของเซิร์ฟเวอร์ที่ขับเคลื่อน AI และการประมวลผลแบบคลาวด์",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/data-center-financing-ai-debt-hsbc.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T10:39:17Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "วิทยาเขตศูนย์ข้อมูลเป็นที่ตั้งของเซิร์ฟเวอร์ที่ขับเคลื่อน AI และการประมวลผลแบบคลาวด์",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 10:39 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "CEO ของ HSBC เตือนว่าการเติบโตอย่างรวดเร็วของ AI จะไม่ทำให้ทุกศูนย์ข้อมูลเป็นทางออกที่ดี",
+        "วิทยาเขตศูนย์ข้อมูลเป็นที่ตั้งของเซิร์ฟเวอร์ที่ขับเคลื่อน AI และการประมวลผลแบบคลาวด์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"HSBC CEO warns the AI boom won’t make every data center a good bet\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
       "title": "สหรัฐฯ สั่งแบน DeepSeek จากระบบหน่วยงานรัฐบาล ท่ามกลางความขัดแย้งด้าน AI กับจีน",
       "title_en": "U.S. bans DeepSeek from government agency systems amid AI rift with China",
       "summary": "กระทรวงความมั่นคงแห่งมาตุภูมิของสหรัฐอเมริกาได้สั่งห้ามเทคโนโลยีที่เกี่ยวข้องกับ DeepSeek จากระบบไอทีของหน่วยงานพลเรือนของรัฐบาลกลาง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/us-deepseek-federal-agency-ban.html",
-      "time": "15 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T06:25:26Z",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T08:17:14Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -51,7 +193,7 @@
       "isHero": false,
       "points": [
         "กระทรวงความมั่นคงแห่งมาตุภูมิของสหรัฐอเมริกาได้สั่งห้ามเทคโนโลยีที่เกี่ยวข้องกับ DeepSeek จากระบบไอทีของหน่วยงานพลเรือนของรัฐบาลกลาง",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 06:25 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 08:17 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
@@ -61,99 +203,13 @@
       ]
     },
     {
-      "id": "news-3",
-      "title": "หุ้นนิวเคลียร์ของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
-      "title_en": "Top 3 Canadian Nuclear Stocks To Watch In October 2026",
-      "summary": "หุ้นนิวเคลียร์ของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/top-3-canadian-nuclear-stocks-061224986.html",
-      "time": "28 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T06:12:24Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "หุ้นนิวเคลียร์ของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (20/10/2026 06:12 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "หุ้นนิวเคลียร์ของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
-        "หุ้นนิวเคลียร์ของแคนาดา 3 อันดับแรกที่น่าจับตามองในเดือนตุลาคม 2026",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Top 3 Canadian Nuclear Stocks To Watch In October 2026\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "ลักษณะการเปลี่ยนแปลงของอิทธิพลของจีนต่อตลาดสินค้าโภคภัณฑ์",
-      "title_en": "The Changing Nature of China’s Influence on Commodity Markets",
-      "summary": "ลักษณะการเปลี่ยนแปลงของอิทธิพลของจีนต่อตลาดสินค้าโภคภัณฑ์",
-      "source": "CME Group",
-      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/changing-nature-china-influence-commodity-060000373.html",
-      "time": "41 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T06:00:00Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ลักษณะการเปลี่ยนแปลงของอิทธิพลของจีนต่อตลาดสินค้าโภคภัณฑ์",
-        "แหล่งข่าวอ้างอิง: CME Group (20/10/2026 06:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ลักษณะการเปลี่ยนแปลงของอิทธิพลของจีนต่อตลาดสินค้าโภคภัณฑ์",
-        "ลักษณะการเปลี่ยนแปลงของอิทธิพลของจีนต่อตลาดสินค้าโภคภัณฑ์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"The Changing Nature of China’s Influence on Commodity Markets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "ธนาคารแห่งประเทศญี่ปุ่นอาจเพิ่มการคาดการณ์อัตราเงินเฟ้อ ยืนหยัดในเรื่องอัตราดอกเบี้ย แหล่งข่าวกล่าว",
-      "title_en": "Bank of Japan may raise inflation forecast, stand pat on rates, sources say",
-      "summary": "ธนาคารแห่งประเทศญี่ปุ่นอาจเพิ่มการคาดการณ์อัตราเงินเฟ้อ ยืนหยัดในเรื่องอัตราดอกเบี้ย แหล่งข่าวกล่าว",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/economy/policy/articles/bank-japan-may-raise-inflation-055159213.html",
-      "time": "49 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T05:51:59Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ธนาคารแห่งประเทศญี่ปุ่นอาจเพิ่มการคาดการณ์อัตราเงินเฟ้อ ยืนหยัดในเรื่องอัตราดอกเบี้ย แหล่งข่าวกล่าว",
-        "แหล่งข่าวอ้างอิง: Reuters (20/10/2026 05:51 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "ธนาคารแห่งประเทศญี่ปุ่นอาจเพิ่มการคาดการณ์อัตราเงินเฟ้อ ยืนหยัดในเรื่องอัตราดอกเบี้ย แหล่งข่าวกล่าว",
-        "ธนาคารแห่งประเทศญี่ปุ่นอาจเพิ่มการคาดการณ์อัตราเงินเฟ้อ ยืนหยัดในเรื่องอัตราดอกเบี้ย แหล่งข่าวกล่าว",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Bank of Japan may raise inflation forecast, stand pat on rates, sources say\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
+      "id": "news-8",
       "title": "หัวหน้าฝ่ายการเงินของโลกมองเห็นความเสี่ยงใหม่ๆ — และความกังวลของจีนน้อยลง",
       "title_en": "The world’s finance chiefs see new risks — and less China angst",
       "summary": "หนี้, AI และยูเครนครอบงำการสนทนาในการประชุม IMF-World Bank ในกรุงเทพฯ ในขณะที่จีนซึ่งเป็นประเด็นสำคัญในปี 2561 กลับกลายเป็นเบื้องหลัง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/imf-debt-yields-russia-china-takeaway-.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-20T05:27:53Z",
       "category": "TECH",
       "tickers": [
@@ -176,69 +232,13 @@
       ]
     },
     {
-      "id": "news-7",
-      "title": "หุ้นสะดุด น้ำมันขึ้น นักลงทุนรอผลประกอบการกลุ่ม AI",
-      "title_en": "Shares stumble, oil rises as investors await AI sector earnings",
-      "summary": "หุ้นสะดุด น้ำมันขึ้น นักลงทุนรอผลประกอบการกลุ่ม AI",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asian-shares-tumble-oil-rises-021045839.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T05:02:23Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "หุ้นสะดุด น้ำมันขึ้น นักลงทุนรอผลประกอบการกลุ่ม AI",
-        "แหล่งข่าวอ้างอิง: Reuters (20/10/2026 05:02 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "หุ้นสะดุด น้ำมันขึ้น นักลงทุนรอผลประกอบการกลุ่ม AI",
-        "หุ้นสะดุด น้ำมันขึ้น นักลงทุนรอผลประกอบการกลุ่ม AI",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Shares stumble, oil rises as investors await AI sector earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "เจนเนอรัล มอเตอร์ส เตรียมรายงานผลประกอบการก่อนระฆัง นี่คือสิ่งที่วอลล์สตรีทคาดหวัง",
-      "title_en": "General Motors is set to report earnings before the bell. Here's what Wall Street expects",
-      "summary": "ผลประกอบการไตรมาสสามปี 2568 ของ GM ประกอบด้วยรายรับ 48.59 พันล้านดอลลาร์ กำไรสุทธิที่เป็นของผู้ถือหุ้น 1.3 พันล้านดอลลาร์ และกำไรต่อหุ้น (EPS) ที่ปรับปรุงแล้ว 2.80 ดอลลาร์",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T04:01:01Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ผลประกอบการไตรมาสสามปี 2568 ของ GM ประกอบด้วยรายรับ 48.59 พันล้านดอลลาร์ กำไรสุทธิที่เป็นของผู้ถือหุ้น 1.3 พันล้านดอลลาร์ และกำไรต่อหุ้น (EPS) ที่ปรับปรุงแล้ว 2.80 ดอลลาร์",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 04:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "เจนเนอรัล มอเตอร์ส เตรียมรายงานผลประกอบการก่อนระฆัง นี่คือสิ่งที่วอลล์สตรีทคาดหวัง",
-        "ผลประกอบการไตรมาสสามปี 2568 ของ GM ประกอบด้วยรายรับ 48.59 พันล้านดอลลาร์ กำไรสุทธิที่เป็นของผู้ถือหุ้น 1.3 พันล้านดอลลาร์ และกำไรต่อหุ้น (EPS) ที่ปรับปรุงแล้ว 2.80 ดอลลาร์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"General Motors is set to report earnings before the bell. Here's what Wall Street expects\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
       "id": "news-9",
-      "title": "'เปิดประตูสู่ AI': นายกรัฐมนตรีเยอรมนีเรียกร้องให้ธุรกิจต่างๆ ยอมรับ AI เนื่องจาก Nvidia ประกาศการลงทุนครั้งใหม่",
+      "title": "'เปิดประตูสู่ AI': นายกรัฐมนตรีเยอรมันเรียกร้องให้ธุรกิจต่างๆ ยอมรับ AI เนื่องจาก Nvidia ประกาศการลงทุนครั้งใหม่",
       "title_en": "‘Open your doors for AI’: German chancellor urges businesses to embrace AI as Nvidia announces new investments",
       "summary": "Nvidia ประกาศแผนการลงทุนในสตาร์ทอัพสัญชาติเยอรมัน 4 แห่ง ขณะที่นายกรัฐมนตรี Friedrich Merz กระตุ้นให้ธุรกิจต่างๆ ยอมรับ AI ในการประชุมสุดยอดอุตสาหกรรมในกรุงเบอร์ลิน",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/german-chancellor-urges-businesses-to-embrace-ai.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-20T02:16:25Z",
       "category": "TECH",
       "tickers": [
@@ -253,7 +253,7 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
       ],
       "fullArticle": [
-        "'เปิดประตูสู่ AI': นายกรัฐมนตรีเยอรมนีเรียกร้องให้ธุรกิจต่างๆ ยอมรับ AI เนื่องจาก Nvidia ประกาศการลงทุนครั้งใหม่",
+        "'เปิดประตูสู่ AI': นายกรัฐมนตรีเยอรมันเรียกร้องให้ธุรกิจต่างๆ ยอมรับ AI เนื่องจาก Nvidia ประกาศการลงทุนครั้งใหม่",
         "Nvidia ประกาศแผนการลงทุนในสตาร์ทอัพสัญชาติเยอรมัน 4 แห่ง ขณะที่นายกรัฐมนตรี Friedrich Merz กระตุ้นให้ธุรกิจต่างๆ ยอมรับ AI ในการประชุมสุดยอดอุตสาหกรรมในกรุงเบอร์ลิน",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"‘Open your doors for AI’: German chancellor urges businesses to embrace AI as Nvidia announces new investments\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
@@ -265,7 +265,7 @@
       "summary": "Jim Cramer จาก CNBC เตือนนักลงทุนไม่ให้รีบกลับเข้าไปในหุ้น AI",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/19/jim-cramer-dont-chase-ai-rebound-yet.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "13 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T22:46:33Z",
       "category": "TECH",
       "tickers": [
@@ -289,41 +289,12 @@
     },
     {
       "id": "news-11",
-      "title": "Jim Cramer กล่าวว่าการขายหุ้น AI เมื่อเร็ว ๆ นี้สะท้อนบทเรียนที่สำคัญจากความล้มเหลวของตลาดในปี 1987",
-      "title_en": "Jim Cramer says the recent AI stock sell-off echoes a crucial lesson from the 1987 market crash",
-      "summary": "Jim Cramer จาก CNBC กล่าวว่าการล่มสลายของตลาดหุ้นในปี 1987 ถือเป็นบทเรียนสำคัญที่สามารถนำไปใช้กับการขาย AI เมื่อเร็ว ๆ นี้",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/19/cramer-recent-ai-sell-off-echoes-lesson-1987-crash.html",
-      "time": "8 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-19T22:22:45Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "Jim Cramer จาก CNBC กล่าวว่าการล่มสลายของตลาดหุ้นในปี 1987 ถือเป็นบทเรียนสำคัญที่สามารถนำไปใช้กับการขาย AI เมื่อเร็ว ๆ นี้",
-        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 22:22 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "Jim Cramer กล่าวว่าการขายหุ้น AI เมื่อเร็ว ๆ นี้สะท้อนบทเรียนที่สำคัญจากความล้มเหลวของตลาดในปี 1987",
-        "Jim Cramer จาก CNBC กล่าวว่าการล่มสลายของตลาดหุ้นในปี 1987 ถือเป็นบทเรียนสำคัญที่สามารถนำไปใช้กับการขาย AI เมื่อเร็ว ๆ นี้",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jim Cramer says the recent AI stock sell-off echoes a crucial lesson from the 1987 market crash\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
       "title": "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
       "title_en": "Where Will VTI Be in 20 Years? Here's What History Suggests",
       "summary": "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
       "source": "Motley Fool",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/where-vti-20-years-heres-214300311.html",
-      "time": "8 ชั่วโมงที่แล้ว",
+      "time": "14 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-19T21:43:00Z",
       "category": "MACRO",
       "tickers": [
@@ -341,6 +312,35 @@
         "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
         "VTI จะอยู่ที่ไหนในอีก 20 ปีข้างหน้า? นี่คือสิ่งที่ประวัติศาสตร์แนะนำ",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Where Will VTI Be in 20 Years? Here's What History Suggests\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-12",
+      "title": "ผู้หญิงอาจเสี่ยงต่อการตกงานด้าน AI มากขึ้น ผู้ให้บริการสวิตช์โทรศัพท์และพีซีแสดงสาเหตุ",
+      "title_en": "Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why",
+      "summary": "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/19/ai-job-losses-women-automation-risk.html",
+      "time": "17 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-19T18:36:21Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
+        "แหล่งข่าวอ้างอิง: CNBC (19/10/2026 18:36 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "ผู้หญิงอาจเสี่ยงต่อการตกงานด้าน AI มากขึ้น ผู้ให้บริการสวิตช์โทรศัพท์และพีซีแสดงสาเหตุ",
+        "ประวัติความเป็นมาของความก้าวหน้าทางเทคโนโลยีชี้ให้เห็นว่าเมื่อ AI แพร่กระจาย ผลกระทบในการจ้างงานจะส่งผลกระทบต่อผู้หญิงมากกว่าผู้ชาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
