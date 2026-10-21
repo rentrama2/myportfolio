@@ -3525,6 +3525,10 @@
             <!-- Global Quick Actions Controls -->
             <div class="d-flex align-items-center gap-1 gap-md-2 flex-wrap justify-content-end">
                 <span id="activePortBadgeHeader" style="display: none;"></span>
+                <!-- Global 1-Click System Update Button (อัปเดตทุกอย่างในคลิกเดียว: ข่าว, ราคา, ภาพรวมตลาด, เรทเงิน) -->
+                <button id="btnGlobalSystemUpdate" class="btn btn-sm btn-primary rounded-pill px-3 py-1 fw-bold d-flex align-items-center gap-1.5 shadow-sm text-nowrap" onclick="triggerFullSystemUpdate(true)" title="คลิกเพื่ออัปเดตทุกอย่างในระบบพร้อมกันทันที: ราคาหุ้น, ข่าวสาร, Market Overview, ดัชนี, เรทเงิน" style="font-size: 0.78rem;">
+                    <span id="globalUpdateIcon">⚡</span> <span id="globalUpdateText">อัปเดตทั้งระบบ</span>
+                </button>
                 <button id="btnPrivacyToggle" class="btn btn-sm btn-outline-secondary rounded-pill px-2.5 px-md-3 py-1 fw-bold" onclick="togglePrivacyMode()" title="ซ่อน/แสดงตัวเลขเงิน เหมาะสำหรับแคปหน้าจอหรือเปิดในที่สาธารณะ (ชี้เมาส์เพื่อแอบดูได้)" style="font-size: 0.78rem;">
                     👁️ ซ่อนตัวเลข
                 </button>
@@ -4091,8 +4095,8 @@
                         <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(300)">⚡ ทุก 5 นาที</a></li>
                     </ul>
                 </div>
-                <button class="btn btn-sm btn-dark py-0 px-2 rounded-pill text-white fw-bold" onclick="updateAllPricesAndFx(true)" title="ดึงราคาสดล่าสุดทันที (Bypass Cache)" style="font-size: 0.72rem;">
-                    🔄 ดึงราคาสด
+                <button class="btn btn-sm btn-primary py-0 px-2.5 rounded-pill text-white fw-bold shadow-xs d-flex align-items-center gap-1" onclick="triggerFullSystemUpdate(true)" title="อัปเดตทุกระบบพร้อมกัน (ราคาหุ้น, ข่าวตลาด, Market Overview, เรทเงิน)" style="font-size: 0.72rem;">
+                    ⚡ อัปเดตทั้งระบบ
                 </button>
             </div>
         </div>
@@ -4402,7 +4406,10 @@
                                         <span class="text-muted fw-bold" style="font-size: 0.74rem;">฿/USD:</span>
                                         <input type="number" id="liveFxInput" class="fx-input border-0 bg-transparent fw-bolder text-primary text-center p-0 m-0" value="33.2291" step="any" onclick="this.select()" style="width: 62px; font-size: 0.78rem; outline: none;">
                                     </div>
-                                    <button class="btn btn-dark btn-sm rounded-pill px-2.5 py-1 fw-bold d-flex align-items-center gap-1 shadow-2xs" id="btnUpdateAllPrices" title="ดึงราคาหุ้นและเรทเงินล่าสุดอัตโนมัติ" style="font-size: 0.78rem;">
+                                    <button class="btn btn-primary btn-sm rounded-pill px-2.5 py-1 fw-bold d-flex align-items-center gap-1 shadow-2xs text-nowrap" onclick="triggerFullSystemUpdate(true)" title="อัปเดตทุกระบบพร้อมกัน (ราคาหุ้น, ข่าวตลาด, ภาพรวมตลาด, เรทเงิน)" style="font-size: 0.78rem;">
+                                        <span>⚡</span> <span>อัปเดตทั้งระบบ</span>
+                                    </button>
+                                    <button class="btn btn-dark btn-sm rounded-pill px-2.5 py-1 fw-bold d-flex align-items-center gap-1 shadow-2xs" id="btnUpdateAllPrices" onclick="triggerFullSystemUpdate(true)" title="ดึงราคาหุ้นและเรทเงินล่าสุดอัตโนมัติ" style="font-size: 0.78rem;">
                                         <span id="btnUpdateIcon">🔄</span> <span id="btnUpdateText">อัปเดตราคา</span>
                                     </button>
                                     <span id="lastUpdatedBadge" class="badge rounded-pill bg-light text-muted border px-2 py-1" style="font-size: 0.72rem;">(ยังไม่อัปเดต)</span>
@@ -9759,17 +9766,57 @@
             return updatedCount;
         };
 
-        window.updateAllPricesAndFx = async function(isManual = true) {
-            const btn = document.getElementById('btnUpdateAllPrices');
-            const icon = document.getElementById('btnUpdateIcon');
-            const text = document.getElementById('btnUpdateText');
+        // Floating Toast Notification System
+        window.showNotification = function(message, type = 'success') {
+            try {
+                let container = document.getElementById('appToastContainer');
+                if (!container) {
+                    container = document.createElement('div');
+                    container.id = 'appToastContainer';
+                    container.style.cssText = 'position: fixed; bottom: 24px; right: 24px; z-index: 10999; display: flex; flex-direction: column; gap: 8px; max-width: 420px; pointer-events: none;';
+                    document.body.appendChild(container);
+                }
+                const toast = document.createElement('div');
+                const isWarn = type === 'warning' || type === 'danger';
+                const bg = isWarn ? '#b91c1c' : '#0f172a';
+                toast.style.cssText = `background: ${bg}; color: #ffffff; padding: 12px 18px; border-radius: 12px; font-size: 0.84rem; font-weight: 600; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.35); opacity: 0; transform: translateY(12px); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); pointer-events: auto; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.18);`;
+                toast.innerHTML = `<span style="font-size: 1.1rem;">${isWarn ? '⚠️' : '⚡'}</span><span>${message}</span>`;
+                container.appendChild(toast);
+                
+                requestAnimationFrame(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translateY(0)';
+                });
+                
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateY(8px)';
+                    setTimeout(() => toast.remove(), 350);
+                }, 3500);
+            } catch(e) {
+                console.log(message);
+            }
+        };
+
+        // 1-CLICK ALL-IN-ONE SYSTEM UPDATE (อัปเดตทุกอย่างในคลิกเดียว: ข่าว, ราคาหุ้น, ภาพรวมตลาด, เรทเงิน, ดัชนี, เทคนิคอล)
+        window.triggerFullSystemUpdate = async function(isManual = true) {
+            const globalBtn = document.getElementById('btnGlobalSystemUpdate');
+            const globalIcon = document.getElementById('globalUpdateIcon');
+            const globalText = document.getElementById('globalUpdateText');
+            
+            const priceBtn = document.getElementById('btnUpdateAllPrices');
+            const priceIcon = document.getElementById('btnUpdateIcon');
+            const priceText = document.getElementById('btnUpdateText');
             const badge = document.getElementById('lastUpdatedBadge');
 
-            if (btn) btn.disabled = true;
-            if (icon) icon.innerText = '⏳';
-            if (text) text.innerText = 'กำลังอัปเดต...';
+            if (globalBtn) globalBtn.disabled = true;
+            if (priceBtn) priceBtn.disabled = true;
+            if (globalIcon) globalIcon.innerText = '⏳';
+            if (globalText) globalText.innerText = 'กำลังอัปเดตทั้งระบบ...';
+            if (priceIcon) priceIcon.innerText = '⏳';
+            if (priceText) priceText.innerText = 'กำลังอัปเดต...';
             if (badge) {
-                badge.innerText = '(กำลังดึงข้อมูล...)';
+                badge.innerText = '(กำลังอัปเดตทุกระบบ...)';
                 badge.className = 'badge bg-warning bg-opacity-10 text-warning border border-warning py-1 px-2';
             }
 
@@ -9778,100 +9825,148 @@
 
             try {
                 // 1. ดึงเรทแลกเปลี่ยน USD/THB ล่าสุดแบบ Real-time
-                const newFx = await fetchLiveFxRate();
-                if (newFx && newFx > 0) {
-                    liveFxRate = newFx;
-                    localStorage.setItem('myLiveFxRate', liveFxRate);
-                    const fxInput = document.getElementById('liveFxInput');
-                    if (fxInput) fxInput.value = liveFxRate.toFixed(4);
-                    fxUpdated = true;
+                try {
+                    const newFx = await fetchLiveFxRate();
+                    if (newFx && newFx > 0) {
+                        liveFxRate = newFx;
+                        localStorage.setItem('myLiveFxRate', liveFxRate);
+                        const fxInput = document.getElementById('liveFxInput');
+                        if (fxInput) fxInput.value = liveFxRate.toFixed(4);
+                        fxUpdated = true;
+                    }
+                } catch(e) {}
+
+                // 2. ดึงราคาหุ้นและดัชนีล่าสุด (Static Prices & Indices from GitHub Raw / Cache bypass)
+                try {
+                    const staticRes = await loadStaticPrices();
+                    if (staticRes && staticRes.count > 0) {
+                        updatedCount += staticRes.count;
+                    }
+                } catch(e) {}
+
+                // 3. ดึงข่าวสารตลาดสดล่าสุด (Live Market News)
+                try {
+                    if (typeof loadLiveMarketNews === 'function') {
+                        await loadLiveMarketNews(false);
+                    }
+                } catch(e) {}
+
+                // 4. ดึงดัชนีตลาดหลักสหรัฐฯ (^DJI, ^GSPC, ^IXIC) และตรวจสถานะตลาด
+                try {
+                    if (typeof refreshMarketIndices === 'function') {
+                        await refreshMarketIndices(false);
+                    }
+                } catch(e) {}
+                if (typeof updateUSMarketStatusUI === 'function') {
+                    updateUSMarketStatusUI();
                 }
 
-                // 2. ดึงราคาหุ้นล่าสุดจาก JSON (อัปเดตอัตโนมัติจาก GitHub Actions / Yahoo Finance)
-                const staticRes = await loadStaticPrices();
-                if (staticRes && staticRes.count > 0) {
-                    updatedCount += staticRes.count;
+                // 5. คำนวณสรุปพอร์ต โครงสร้าง และตารางหุ้นทั้งหมด (Holdings & Summary)
+                if (typeof updateSummaryAndChart === 'function') {
+                    updateSummaryAndChart();
+                }
+                if (typeof renderHoldingsTable === 'function') {
+                    renderHoldingsTable();
+                } else if (typeof renderTable === 'function') {
+                    renderTable();
+                }
+                if (typeof renderPortfolioCards === 'function') {
+                    renderPortfolioCards();
+                }
+                if (typeof renderDividends === 'function') {
+                    try { renderDividends(); } catch(e) {}
+                }
+                if (typeof renderPreMarketMoversCard === 'function') {
+                    try { renderPreMarketMoversCard(); } catch(e) {}
                 }
 
-                // 3. ตรวจสอบหุ้นในพอร์ต ดึงราคาสดล่าสุดแบบคู่ขนาน (Parallel Real-time Fetch)
-                const tickersToFetch = new Set();
-                transactions.forEach(t => {
-                    if (t.ticker && t.ticker !== 'CASH' && t.type !== 'DEPOSIT' && t.type !== 'WITHDRAW') {
-                        tickersToFetch.add(t.ticker.toUpperCase().trim());
-                    }
-                });
-                Object.keys(marketPrices).forEach(t => {
-                    if (t && t !== 'CASH') tickersToFetch.add(t.toUpperCase().trim());
-                });
+                // 6. อัปเดตมุมมอง Market Overview (12 Sector Cards, Fear & Greed, Top 100/ETF)
+                if (typeof switchMarketSubView === 'function' && typeof currentMarketSubView !== 'undefined') {
+                    try { switchMarketSubView(currentMarketSubView); } catch(e) {}
+                }
+                if (typeof renderSectorsView === 'function') {
+                    try { renderSectorsView(); } catch(e) {}
+                }
+                if (typeof renderFearAndGreedMeter === 'function') {
+                    try { renderFearAndGreedMeter(true); } catch(e) {}
+                }
+                if (typeof renderMacroIndices === 'function') {
+                    try { renderMacroIndices(); } catch(e) {}
+                }
 
-                const tickerList = Array.from(tickersToFetch);
-                const shouldForceFetch = isManual; // หากผู้ใช้กดเองหรือ Auto ให้ดึงสดข้ามแคช
-                
-                await Promise.all(tickerList.map(async tk => {
-                    if (!marketPrices[tk] || marketPrices[tk] <= 0) {
-                        const price = await fetchStockPrice(tk, shouldForceFetch);
-                        if (price && price > 0) {
-                            marketPrices[tk] = price;
-                            if (tk.includes('.')) marketPrices[tk.replace('.', '-')] = price;
-                            if (tk.includes('-')) marketPrices[tk.replace('-', '.')] = price;
-                            updatedCount++;
-                        }
-                    }
-                }));
-
-                // อัปเดตดัชนีตลาดหุ้นสหรัฐฯ (^DJI, ^GSPC, ^IXIC)
-                try {
-                    await refreshMarketIndices(false);
-                } catch(e) {}
-                // อัปเดตข่าวสารตลาดสดล่าสุด (Live Market News)
-                try {
-                    if (typeof loadLiveMarketNews === 'function') await loadLiveMarketNews(false);
-                } catch(e) {}
-                updateUSMarketStatusUI();
-
-                localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
-                updateSummaryAndChart();
+                // 7. อัปเดตข้อมูล Technical Analysis & กราฟแท่งเทียน
                 if (typeof renderTechWatchlist === 'function') {
-                    try {
-                        renderTechWatchlist();
-                        renderActiveTechnicalChart();
-                        renderTrendGauges(activeTechTicker);
-                    } catch(e) {}
+                    try { renderTechWatchlist(); } catch(e) {}
+                }
+                if (typeof renderActiveTechnicalChart === 'function') {
+                    try { renderActiveTechnicalChart(); } catch(e) {}
+                }
+                if (typeof renderTrendGauges === 'function' && typeof activeTechTicker !== 'undefined') {
+                    try { renderTrendGauges(activeTechTicker); } catch(e) {}
                 }
 
+                // 8. อัปเดตปฏิทินผลประกอบการ (Earnings Calendar)
+                if (typeof renderEarningsCalendar === 'function') {
+                    try { renderEarningsCalendar(); } catch(e) {}
+                }
+                if (typeof renderEarningsSidebar === 'function') {
+                    try { renderEarningsSidebar(); } catch(e) {}
+                }
+
+                // 9. แสดงป้ายเวลาและข้อความ
                 const now = new Date();
                 const timeStr = now.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' });
                 const timeEl = document.getElementById('marketIndicesTime');
-                if (timeEl && isManual) {
-                    timeEl.innerText = `อัปเดตสด ${timeStr} น.`;
-                }
+                if (timeEl) timeEl.innerText = `อัปเดตสด ${timeStr} น.`;
 
                 if (badge) {
-                    if (updatedCount > 0 || fxUpdated || lastPricesSyncTime) {
-                        const syncLabel = isManual ? `อัปเดตสด ${timeStr} น.` : (lastPricesSyncTime ? `อัปเดต ${lastPricesSyncTime}` : `อัปเดต ${timeStr} น.`);
-                        badge.innerText = `(${syncLabel} | ฿${liveFxRate.toFixed(2)})`;
-                        badge.className = 'badge bg-success bg-opacity-10 text-success border border-success py-1 px-2';
-                    } else {
-                        badge.innerText = `(อัปเดตไม่สำเร็จ - โปรดลองใหม่)`;
-                        badge.className = 'badge bg-warning bg-opacity-10 text-warning border border-warning py-1 px-2';
-                    }
+                    const fxDisplay = typeof liveFxRate === 'number' && !isNaN(liveFxRate) ? ` | ฿${liveFxRate.toFixed(2)}` : '';
+                    badge.innerText = `(อัปเดตทั้งระบบ ${timeStr} น.${fxDisplay})`;
+                    badge.className = 'badge bg-success bg-opacity-10 text-success border border-success py-1 px-2';
                 }
+
+                if (globalIcon) globalIcon.innerText = '✅';
+                if (globalText) globalText.innerText = 'อัปเดตครบแล้ว!';
+                if (priceIcon) priceIcon.innerText = '✅';
+                if (priceText) priceText.innerText = 'ดึงราคา & เรทเงินล่าสุด';
+
+                if (isManual && typeof showNotification === 'function') {
+                    showNotification(`⚡ อัปเดตครบทุกระบบแล้ว! (${timeStr} น. ทั้งข่าว, ราคาหุ้น, Market Overview, ดัชนี)`);
+                }
+
+                setTimeout(() => {
+                    if (globalIcon) globalIcon.innerText = '⚡';
+                    if (globalText) globalText.innerText = 'อัปเดตทั้งระบบ';
+                    if (priceIcon) priceIcon.innerText = '🔄';
+                    if (globalBtn) globalBtn.disabled = false;
+                    if (priceBtn) priceBtn.disabled = false;
+                }, 2500);
+
             } catch (err) {
-                console.warn('Auto update issue:', err);
+                console.warn('System update issue:', err);
                 if (badge) {
                     badge.innerText = `(อัปเดตไม่สมบูรณ์)`;
                     badge.className = 'badge bg-danger bg-opacity-10 text-danger border border-danger py-1 px-2';
                 }
-            } finally {
-                if (btn) btn.disabled = false;
-                if (icon) {
-                    icon.innerText = isManual ? '✅' : '🔄';
-                    if (isManual) {
-                        setTimeout(() => { if (icon) icon.innerText = '🔄'; }, 2500);
-                    }
-                }
-                if (text) text.innerText = 'ดึงราคา & เรทเงินล่าสุด';
+                if (globalIcon) globalIcon.innerText = '⚠️';
+                if (globalText) globalText.innerText = 'ลองใหม่อีกครั้ง';
+                setTimeout(() => {
+                    if (globalIcon) globalIcon.innerText = '⚡';
+                    if (globalText) globalText.innerText = 'อัปเดตทั้งระบบ';
+                    if (priceIcon) priceIcon.innerText = '🔄';
+                    if (priceText) priceText.innerText = 'ดึงราคา & เรทเงินล่าสุด';
+                    if (globalBtn) globalBtn.disabled = false;
+                    if (priceBtn) priceBtn.disabled = false;
+                }, 2500);
             }
+        };
+
+        window.updateAllPricesAndFx = async function(isManual = true) {
+            return await window.triggerFullSystemUpdate(isManual);
+        };
+
+        window.refreshTechnicalData = async function() {
+            return await window.triggerFullSystemUpdate(true);
         };
 
         document.getElementById('btnUpdateAllPrices').addEventListener('click', function() {
@@ -14534,11 +14629,10 @@
             const btns = document.querySelectorAll('[onclick*="refreshMarketNewsData"]');
             btns.forEach(b => {
                 b.disabled = true;
-                b.innerHTML = '🔄 กำลังดึงข่าว...';
+                b.innerHTML = '⏳ กำลังอัปเดต...';
             });
-
             try {
-                await window.loadLiveMarketNews(showToast);
+                await window.triggerFullSystemUpdate(true);
             } finally {
                 btns.forEach(b => {
                     b.disabled = false;
@@ -14554,22 +14648,11 @@
                 btn.innerHTML = '⏳ กำลังดึงสด...';
             }
             try {
-                if (typeof loadStaticPrices === 'function') {
-                    await loadStaticPrices();
-                }
-                if (typeof refreshMarketIndices === 'function') {
-                    await refreshMarketIndices(false);
-                }
-            } catch(e) {
-                console.warn("Market overview refresh error:", e);
+                await window.triggerFullSystemUpdate(true);
             } finally {
-                switchMarketSubView(currentMarketSubView);
                 if (btn) {
                     btn.disabled = false;
                     btn.innerHTML = '🔄 รีเฟรชข้อมูล';
-                }
-                if (showToast && typeof showNotification === 'function') {
-                    showNotification("อัปเดตข้อมูลภาพรวมตลาดแบบ Real-time เรียบร้อยแล้ว ⚡");
                 }
             }
         };
