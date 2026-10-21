@@ -1,16 +1,70 @@
 {
-  "updated_at": "2026-10-21T22:08:18Z",
-  "updated_at_thai": "22 ต.ค. 2569 05:08 น.",
+  "updated_at": "2026-10-21T22:27:32Z",
+  "updated_at_thai": "22 ต.ค. 2569 05:27 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "IBM เอาชนะทั้งด้านบนและด้านล่างในขณะที่ CEO Krishna กล่าวถึงแนวคิด 'Super Intelligence'",
+      "title": "Tesla เอาชนะทั้งรายได้และยอดขาย แม้ว่ารายได้รถยนต์จะลดลงก็ตาม",
+      "title_en": "Tesla beats on earnings and sales even as auto revenue declines",
+      "summary": "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html",
+      "time": "10 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T22:16:40Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 22:16 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "Tesla เอาชนะทั้งรายได้และยอดขาย แม้ว่ารายได้รถยนต์จะลดลงก็ตาม",
+        "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla beats on earnings and sales even as auto revenue declines\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "Zuckerberg มุ่งมั่นที่จะอยู่ในแคลิฟอร์เนียเป็นเวลา 8 ปีโดยเป็นส่วนหนึ่งของการสร้างการแบ่งปัน Meta ระดับใหม่: การอัปเดตสด",
+      "title_en": "Zuckerberg commits to staying in California for 8 years as part of creation of new class of Meta shares: Live updates",
+      "summary": "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/meta-earnings-q3-2026-live-updates.html",
+      "time": "13 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T22:14:10Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "META"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 22:14 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
+      ],
+      "fullArticle": [
+        "Zuckerberg มุ่งมั่นที่จะอยู่ในแคลิฟอร์เนียเป็นเวลา 8 ปีโดยเป็นส่วนหนึ่งของการสร้างการแบ่งปัน Meta ระดับใหม่: การอัปเดตสด",
+        "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Zuckerberg commits to staying in California for 8 years as part of creation of new class of Meta shares: Live updates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "IBM เอาชนะทั้งด้านบนและด้านล่างเมื่อ CEO Krishna กล่าวถึงแนวคิด 'Super Intelligence'",
       "title_en": "IBM beats on top and bottom lines as CEO Krishna touts 'Super Intelligence' traction",
       "summary": "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html",
-      "time": "4 นาทีที่แล้ว",
+      "time": "23 นาทีที่แล้ว",
       "publishedAt": "2026-10-21T22:03:37Z",
       "category": "TECH",
       "tickers": [
@@ -20,26 +74,26 @@
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
         "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 22:03 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "IBM เอาชนะทั้งด้านบนและด้านล่างในขณะที่ CEO Krishna กล่าวถึงแนวคิด 'Super Intelligence'",
+        "IBM เอาชนะทั้งด้านบนและด้านล่างเมื่อ CEO Krishna กล่าวถึงแนวคิด 'Super Intelligence'",
         "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"IBM beats on top and bottom lines as CEO Krishna touts 'Super Intelligence' traction\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-4",
       "title": "รายงานพลังงานชายหาดเพิ่มขึ้น 21% ในการผลิตน้ำมันจากฝั่งตะวันตก การสำรวจและพัฒนาแคมเปญที่จะเพิ่มมากขึ้น",
       "title_en": "BEACH ENERGY REPORT 21% INCREASE IN OIL PRODUCTION FROM WESTERN FLANK. EXPLORATION AND DEVELOPMENT CAMPAIGN TO BE INCREASED",
       "summary": "รายงานพลังงานชายหาดเพิ่มขึ้น 21% ในการผลิตน้ำมันจากฝั่งตะวันตก การสำรวจและพัฒนาแคมเปญที่จะเพิ่มมากขึ้น",
       "source": "CNW Group",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/beach-energy-report-21-increase-220200682.html",
-      "time": "6 นาทีที่แล้ว",
+      "time": "25 นาทีที่แล้ว",
       "publishedAt": "2026-10-21T22:02:00Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -61,64 +115,10 @@
       ]
     },
     {
-      "id": "news-3",
-      "title": "Tesla เอาชนะทั้งรายได้และยอดขาย แม้ว่ารายได้รถยนต์จะลดลงก็ตาม",
-      "title_en": "Tesla beats on earnings and sales even as auto revenue declines",
-      "summary": "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html",
-      "time": "7 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T22:00:39Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 22:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "Tesla เอาชนะทั้งรายได้และยอดขาย แม้ว่ารายได้รถยนต์จะลดลงก็ตาม",
-        "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla beats on earnings and sales even as auto revenue declines\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "Meta โพสต์รายรับในไตรมาสที่ 3 และคำแนะนำที่แข็งแกร่ง: การอัปเดตสด",
-      "title_en": "Meta posts Q3 revenue beat and strong guidance: Live updates",
-      "summary": "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/meta-earnings-q3-2026-live-updates.html",
-      "time": "37 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T21:31:04Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "META"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 21:31 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
-      ],
-      "fullArticle": [
-        "Meta โพสต์รายรับในไตรมาสที่ 3 และคำแนะนำที่แข็งแกร่ง: การอัปเดตสด",
-        "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta posts Q3 revenue beat and strong guidance: Live updates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
       "id": "news-5",
-      "title": "หุ้นสหรัฐฯ พุ่งขึ้นขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
+      "title": "หุ้นสหรัฐฯ พุ่งขึ้นในขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
       "title_en": "U.S. Stocks Rise as SpaceX Spurs AI Relief Rally",
-      "summary": "หุ้นสหรัฐฯ พุ่งขึ้นขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
+      "summary": "หุ้นสหรัฐฯ พุ่งขึ้นในขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
       "source": "The Wall Street Journal",
       "sourceUrl": "https://finance.yahoo.com/m/2d7ac23c-f99d-3bce-bad1-3e09aaaa3624/u.s.-stocks-rise-as-spacex.html",
       "time": "1 ชั่วโมงที่แล้ว",
@@ -133,13 +133,13 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "หุ้นสหรัฐฯ พุ่งขึ้นขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
+        "หุ้นสหรัฐฯ พุ่งขึ้นในขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
         "แหล่งข่าวอ้างอิง: The Wall Street Journal (21/10/2026 20:41 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "หุ้นสหรัฐฯ พุ่งขึ้นขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
-        "หุ้นสหรัฐฯ พุ่งขึ้นขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
+        "หุ้นสหรัฐฯ พุ่งขึ้นในขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
+        "หุ้นสหรัฐฯ พุ่งขึ้นในขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. Stocks Rise as SpaceX Spurs AI Relief Rally\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
@@ -179,7 +179,7 @@
       "summary": "คอขวดของพลังงานที่แท้จริงไม่ใช่น้ำมันดิบ แต่เป็นเชื้อเพลิง ซีอีโอของคูเวตกล่าว",
       "source": "Barrons.com",
       "sourceUrl": "https://finance.yahoo.com/m/d53b00ee-3efc-36da-bed5-adc7902eb41c/the-real-energy-bottleneck.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T20:20:00Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -207,7 +207,7 @@
       "summary": "หุ้น 10 S&P 500 ที่มีการประมาณการการปรับขึ้นครั้งใหญ่ที่สุดก่อนผลประกอบการ",
       "source": "Investor's Business Daily",
       "sourceUrl": "https://finance.yahoo.com/m/be2350b1-4088-3d38-9714-6aefbda0d087/10-s%26p-500-stocks-seeing-the.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T20:19:40Z",
       "category": "EARNINGS",
       "tickers": [
@@ -231,7 +231,7 @@
       "id": "news-9",
       "title": "Meta สั่งให้จ่ายค่าปรับ 25 พันล้านดอลลาร์ในคดี New Mexico Cambridge Analytica",
       "title_en": "Meta ordered to pay $25 billion penalty in New Mexico Cambridge Analytica case",
-      "summary": "Meta จะต้องจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
+      "summary": "Meta จะจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
       "time": "2 ชั่วโมงที่แล้ว",
@@ -244,13 +244,13 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Meta จะต้องจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
+        "Meta จะจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
         "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 20:04 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
       ],
       "fullArticle": [
         "Meta สั่งให้จ่ายค่าปรับ 25 พันล้านดอลลาร์ในคดี New Mexico Cambridge Analytica",
-        "Meta จะต้องจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
+        "Meta จะจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta ordered to pay $25 billion penalty in New Mexico Cambridge Analytica case\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
@@ -311,7 +311,7 @@
     },
     {
       "id": "news-12",
-      "title": "Intel บรรลุเป้าหมายสำคัญในการก่อสร้างโรงงานชิปในรัฐโอไฮโอซึ่งช้ากว่ากำหนดอย่างน้อย 5 ปี",
+      "title": "Intel บรรลุเป้าหมายสำคัญในการก่อสร้างโรงงานชิปในรัฐโอไฮโอซึ่งล่าช้ากว่ากำหนดอย่างน้อย 5 ปี",
       "title_en": "Intel hits construction milestone at Ohio chip fab that’s at least 5 years behind schedule",
       "summary": "Intel ได้ติดตั้งโครงนั่งร้านโครงสร้างหลักชุดแรกที่โรงงานชิปในรัฐโอไฮโอที่ล่าช้า แต่บริษัทยังไม่ได้ประกาศลูกค้าภายนอกรายใหญ่",
       "source": "CNBC",
@@ -331,7 +331,7 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #INTC"
       ],
       "fullArticle": [
-        "Intel บรรลุเป้าหมายสำคัญในการก่อสร้างโรงงานชิปในรัฐโอไฮโอซึ่งช้ากว่ากำหนดอย่างน้อย 5 ปี",
+        "Intel บรรลุเป้าหมายสำคัญในการก่อสร้างโรงงานชิปในรัฐโอไฮโอซึ่งล่าช้ากว่ากำหนดอย่างน้อย 5 ปี",
         "Intel ได้ติดตั้งโครงนั่งร้านโครงสร้างหลักชุดแรกที่โรงงานชิปในรัฐโอไฮโอที่ล่าช้า แต่บริษัทยังไม่ได้ประกาศลูกค้าภายนอกรายใหญ่",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Intel hits construction milestone at Ohio chip fab that’s at least 5 years behind schedule\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
