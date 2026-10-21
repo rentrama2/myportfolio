@@ -1,132 +1,72 @@
 {
-  "updated_at": "2026-10-21T06:57:28Z",
-  "updated_at_thai": "21 ต.ค. 2569 13:57 น.",
+  "updated_at": "2026-10-21T12:46:10Z",
+  "updated_at_thai": "21 ต.ค. 2569 19:46 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "อัตราเงินเฟ้อของสหราชอาณาจักรเพิ่มขึ้นเป็น 3.5% - สอดคล้องกับการคาดการณ์การปรับขึ้นอัตราดอกเบี้ย",
-      "title_en": "UK inflation jumps to 3.5% — cementing rate hike expectations",
-      "summary": "อัตราเงินเฟ้อของสหราชอาณาจักรเพิ่มขึ้นร้อนกว่าที่คาดไว้ 3.5% ในช่วง 12 เดือนถึงเดือนกันยายน โดยได้แรงหนุนจากต้นทุนเชื้อเพลิงเครื่องยนต์ที่เพิ่มขึ้น",
+      "title": "Nvidia ประกาศชั้นวาง Vera Rubin แบบ Plug and Play ที่สามารถจัดส่งบนรถบรรทุกได้",
+      "title_en": "Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck",
+      "summary": "Nvidia กล่าวว่า DSX Pod AI Factory ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์ สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/inflation-uk-cpi-interest-rates.html",
-      "time": "27 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T06:30:27Z",
-      "category": "MACRO",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/nvidia-announces-vera-rubin-racks-that-can-be-shipped-on-a-truck-.html",
+      "time": "2 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T12:43:49Z",
+      "category": "TECH",
       "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
+        "NVDA"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": true,
       "points": [
-        "อัตราเงินเฟ้อของสหราชอาณาจักรเพิ่มขึ้นร้อนกว่าที่คาดไว้ 3.5% ในช่วง 12 เดือนถึงเดือนกันยายน โดยได้แรงหนุนจากต้นทุนเชื้อเพลิงเครื่องยนต์ที่เพิ่มขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 06:30 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+        "Nvidia กล่าวว่า DSX Pod AI Factory ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์ สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:43 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
       ],
       "fullArticle": [
-        "อัตราเงินเฟ้อของสหราชอาณาจักรเพิ่มขึ้นเป็น 3.5% - สอดคล้องกับการคาดการณ์การปรับขึ้นอัตราดอกเบี้ย",
-        "อัตราเงินเฟ้อของสหราชอาณาจักรเพิ่มขึ้นร้อนกว่าที่คาดไว้ 3.5% ในช่วง 12 เดือนถึงเดือนกันยายน โดยได้แรงหนุนจากต้นทุนเชื้อเพลิงเครื่องยนต์ที่เพิ่มขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"UK inflation jumps to 3.5% — cementing rate hike expectations\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Nvidia ประกาศชั้นวาง Vera Rubin แบบ Plug and Play ที่สามารถจัดส่งบนรถบรรทุกได้",
+        "Nvidia กล่าวว่า DSX Pod AI Factory ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์ สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "Asia FX อ่อนตัวลงเนื่องจากค่าเงินดอลลาร์แข็งค่าใกล้ระดับต่ำสุดในรอบ 3 สัปดาห์ เงินรูปีแข็งค่าขึ้น",
-      "title_en": "Asia FX subdued as dollar hovers near 3-week low, rupee extends rally",
-      "summary": "Asia FX อ่อนตัวลงเนื่องจากค่าเงินดอลลาร์แข็งค่าใกล้ระดับต่ำสุดในรอบ 3 สัปดาห์ เงินรูปีแข็งค่าขึ้น",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/markets/currencies/articles/asia-fx-subdued-dollar-hovers-054841042.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T05:48:41Z",
-      "category": "MACRO",
+      "title": "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
+      "title_en": "AITX Q2 FY2027: Revenue Excluding Largest Customer Up 61% Year-Over-Year; Revenue Up 8% Sequentially",
+      "summary": "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
+      "source": "TMX Newsfile",
+      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitx-q2-fy2027-revenue-excluding-124000412.html",
+      "time": "6 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T12:40:00Z",
+      "category": "EARNINGS",
       "tickers": [
         "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Asia FX อ่อนตัวลงเนื่องจากค่าเงินดอลลาร์แข็งค่าใกล้ระดับต่ำสุดในรอบ 3 สัปดาห์ เงินรูปีแข็งค่าขึ้น",
-        "แหล่งข่าวอ้างอิง: Investing.com (21/10/2026 05:48 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "Asia FX อ่อนตัวลงเนื่องจากค่าเงินดอลลาร์แข็งค่าใกล้ระดับต่ำสุดในรอบ 3 สัปดาห์ เงินรูปีแข็งค่าขึ้น",
-        "Asia FX อ่อนตัวลงเนื่องจากค่าเงินดอลลาร์แข็งค่าใกล้ระดับต่ำสุดในรอบ 3 สัปดาห์ เงินรูปีแข็งค่าขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asia FX subdued as dollar hovers near 3-week low, rupee extends rally\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "ราคาน้ำมันพุ่งขึ้นเหนือ 110 ดอลลาร์ เนื่องจากความกังวลเรื่องอุปทานในตะวันออกกลางยังคงมีอยู่",
-      "title_en": "Oil Prices Climb Above $110 as Middle East Supply Fears Persist",
-      "summary": "ราคาน้ำมันพุ่งขึ้นเหนือ 110 ดอลลาร์ เนื่องจากความกังวลเรื่องอุปทานในตะวันออกกลางยังคงมีอยู่",
-      "source": "Oilprice.com",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-climb-above-110-051127951.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T05:11:27Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ราคาน้ำมันพุ่งขึ้นเหนือ 110 ดอลลาร์ เนื่องจากความกังวลเรื่องอุปทานในตะวันออกกลางยังคงมีอยู่",
-        "แหล่งข่าวอ้างอิง: Oilprice.com (21/10/2026 05:11 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ราคาน้ำมันพุ่งขึ้นเหนือ 110 ดอลลาร์ เนื่องจากความกังวลเรื่องอุปทานในตะวันออกกลางยังคงมีอยู่",
-        "ราคาน้ำมันพุ่งขึ้นเหนือ 110 ดอลลาร์ เนื่องจากความกังวลเรื่องอุปทานในตะวันออกกลางยังคงมีอยู่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Prices Climb Above $110 as Middle East Supply Fears Persist\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "Dow Jones Futures: SpaceX, Supermicro Revive AI หุ้น; เทสลา เมต้าบนดาดฟ้า",
-      "title_en": "Dow Jones Futures: SpaceX, Supermicro Revive AI Stocks; Tesla, Meta On Deck",
-      "summary": "Dow Jones Futures: SpaceX, Supermicro Revive AI หุ้น; เทสลา เมต้าบนดาดฟ้า",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/40378091-9f13-35f6-a4eb-65961ef4434c/dow-jones-futures%3A-spacex%2C.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T04:40:13Z",
-      "category": "TECH",
-      "tickers": [
-        "META",
-        "TSLA",
         "DIA"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Dow Jones Futures: SpaceX, Supermicro Revive AI หุ้น; เทสลา เมต้าบนดาดฟ้า",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (21/10/2026 04:40 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #DIA"
+        "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
+        "แหล่งข่าวอ้างอิง: TMX Newsfile (21/10/2026 12:40 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "Dow Jones Futures: SpaceX, Supermicro Revive AI หุ้น; เทสลา เมต้าบนดาดฟ้า",
-        "Dow Jones Futures: SpaceX, Supermicro Revive AI หุ้น; เทสลา เมต้าบนดาดฟ้า",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures: SpaceX, Supermicro Revive AI Stocks; Tesla, Meta On Deck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
+        "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX Q2 FY2027: Revenue Excluding Largest Customer Up 61% Year-Over-Year; Revenue Up 8% Sequentially\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-5",
-      "title": "ญี่ปุ่นบันทึกการขาดดุลการค้าเนื่องจากการนำเข้าน้ำมันพุ่งสูงขึ้นเนื่องจากความขัดแย้งในตะวันออกกลาง",
-      "title_en": "Japan records a trade deficit as oil imports soar because of conflict in the Middle East",
-      "summary": "ญี่ปุ่นบันทึกการขาดดุลการค้าเนื่องจากการนำเข้าน้ำมันพุ่งสูงขึ้นเนื่องจากความขัดแย้งในตะวันออกกลาง",
-      "source": "Associated Press",
-      "sourceUrl": "https://finance.yahoo.com/economy/policy/articles/japan-records-trade-deficit-oil-043017045.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T04:30:17Z",
+      "id": "news-3",
+      "title": "การซื้อขายหุ้นแบบ Tokenized ได้รับความนิยมในต่างประเทศ เนื่องจาก Goldman บริษัทอื่นๆ ในสหรัฐฯ คัดค้าน",
+      "title_en": "Tokenized stock trading takes off overseas as Goldman, other U.S. companies object",
+      "summary": "หุ้น Tokenized กำลังได้รับแรงผลักดันในตลาดต่างประเทศ แม้ว่าบริษัทรายใหญ่ในสหรัฐฯ จะต่อต้านความพยายามในการแนะนำหุ้นเหล่านี้ในประเทศก็ตาม",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/tokenized-stocks-us-companies-object.html",
+      "time": "12 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T12:33:34Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
@@ -136,82 +76,194 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ญี่ปุ่นบันทึกการขาดดุลการค้าเนื่องจากการนำเข้าน้ำมันพุ่งสูงขึ้นเนื่องจากความขัดแย้งในตะวันออกกลาง",
-        "แหล่งข่าวอ้างอิง: Associated Press (21/10/2026 04:30 UTC)",
+        "หุ้น Tokenized กำลังได้รับแรงผลักดันในตลาดต่างประเทศ แม้ว่าบริษัทรายใหญ่ในสหรัฐฯ จะต่อต้านความพยายามในการแนะนำหุ้นเหล่านี้ในประเทศก็ตาม",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:33 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "ญี่ปุ่นบันทึกการขาดดุลการค้าเนื่องจากการนำเข้าน้ำมันพุ่งสูงขึ้นเนื่องจากความขัดแย้งในตะวันออกกลาง",
-        "ญี่ปุ่นบันทึกการขาดดุลการค้าเนื่องจากการนำเข้าน้ำมันพุ่งสูงขึ้นเนื่องจากความขัดแย้งในตะวันออกกลาง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Japan records a trade deficit as oil imports soar because of conflict in the Middle East\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "การซื้อขายหุ้นแบบ Tokenized ได้รับความนิยมในต่างประเทศ เนื่องจาก Goldman บริษัทอื่นๆ ในสหรัฐฯ คัดค้าน",
+        "หุ้น Tokenized กำลังได้รับแรงผลักดันในตลาดต่างประเทศ แม้ว่าบริษัทรายใหญ่ในสหรัฐฯ จะต่อต้านความพยายามในการแนะนำหุ้นเหล่านี้ในประเทศก็ตาม",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tokenized stock trading takes off overseas as Goldman, other U.S. companies object\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "SpaceX เพิ่มขึ้น 8% ในตลาดล่วงหน้าหลังจากรายรับพุ่งสูงขึ้น และ Musk บอกเป็นนัยเกี่ยวกับการผูกมัดกับ Tesla",
+      "title_en": "SpaceX up 8% in premarket after earnings beat and Musk hints at Tesla tie-up",
+      "summary": "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/spacex-spcx-stock-musk-merger-tesla.html",
+      "time": "22 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T12:23:13Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:23 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "SpaceX เพิ่มขึ้น 8% ในตลาดล่วงหน้าหลังจากรายรับพุ่งสูงขึ้น และ Musk บอกเป็นนัยเกี่ยวกับการผูกมัดกับ Tesla",
+        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX up 8% in premarket after earnings beat and Musk hints at Tesla tie-up\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "ฟิวเจอร์ส TSX พุ่งสูงขึ้นท่ามกลางราคาน้ำมันที่สูงขึ้น",
+      "title_en": "TSX futures tick higher amid elevated oil prices",
+      "summary": "ฟิวเจอร์ส TSX พุ่งสูงขึ้นท่ามกลางราคาน้ำมันที่สูงขึ้น",
+      "source": "Investing.com",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/tsx-futures-tick-higher-amid-122209478.html",
+      "time": "24 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T12:22:09Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ฟิวเจอร์ส TSX พุ่งสูงขึ้นท่ามกลางราคาน้ำมันที่สูงขึ้น",
+        "แหล่งข่าวอ้างอิง: Investing.com (21/10/2026 12:22 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ฟิวเจอร์ส TSX พุ่งสูงขึ้นท่ามกลางราคาน้ำมันที่สูงขึ้น",
+        "ฟิวเจอร์ส TSX พุ่งสูงขึ้นท่ามกลางราคาน้ำมันที่สูงขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"TSX futures tick higher amid elevated oil prices\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-6",
-      "title": "หุ้นของ NextDC ผู้ดำเนินการศูนย์ข้อมูลในออสเตรเลียร่วงลง 40% หลังจากปรับลดประมาณการกำไร",
-      "title_en": "Australian data center operator NextDC's shares plunge 40% after it slashes earnings forecast",
-      "summary": "บริษัทอ้างถึงความล่าช้าในการจ่ายไฟที่โรงงานในเมลเบิร์น ท่ามกลางการต่อต้านของชุมชนท้องถิ่นและผู้มีส่วนได้ส่วนเสียในการลดการคาดการณ์รายได้",
+      "title": "นักลงทุนกำลังตั้งคำถามกับรูปแบบธุรกิจของ Neoclouds แต่ Nebius กล่าวว่าราคาการประมวลผลของ AI กำลังสูงขึ้น",
+      "title_en": "Investors are questioning neoclouds' business model but Nebius says AI computing prices are rising",
+      "summary": "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/australia-data-center-operator-nexdc-datacenter.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T02:55:38Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "บริษัทอ้างถึงความล่าช้าในการจ่ายไฟที่โรงงานในเมลเบิร์น ท่ามกลางการต่อต้านของชุมชนท้องถิ่นและผู้มีส่วนได้ส่วนเสียในการลดการคาดการณ์รายได้",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 02:55 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "หุ้นของ NextDC ผู้ดำเนินการศูนย์ข้อมูลในออสเตรเลียร่วงลง 40% หลังจากปรับลดประมาณการกำไร",
-        "บริษัทอ้างถึงความล่าช้าในการจ่ายไฟที่โรงงานในเมลเบิร์น ท่ามกลางการต่อต้านของชุมชนท้องถิ่นและผู้มีส่วนได้ส่วนเสียในการลดการคาดการณ์รายได้",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Australian data center operator NextDC's shares plunge 40% after it slashes earnings forecast\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "ผู้ซื้อรถยนต์ต้องการราคาที่ต่ำกว่าและเทคโนโลยีที่ดีกว่า ผู้ผลิตรถยนต์จะต้องส่งมอบทั้งสองอย่าง",
-      "title_en": "Car buyers are demanding lower prices and better tech. Automakers must deliver both",
-      "summary": "Bain กล่าวว่าเทคโนโลยีเป็นผู้นำในการพิจารณาซื้อในจีน ในขณะที่ราคายังคงเป็นที่ 1 ในสหรัฐอเมริกาและยุโรป เนื่องจากแรงกดดันต่อผู้ผลิตรถยนต์ของชาติตะวันตก",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/car-buyers-china-tech-price-europe.html",
-      "time": "5 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T01:01:01Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/nebius-ai-computing-nvidia-gpu-prices.html",
+      "time": "25 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T12:21:07Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
         "AAPL",
         "MSFT"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Bain กล่าวว่าเทคโนโลยีเป็นผู้นำในการพิจารณาซื้อในจีน ในขณะที่ราคายังคงเป็นที่ 1 ในสหรัฐอเมริกาและยุโรป เนื่องจากแรงกดดันต่อผู้ผลิตรถยนต์ของชาติตะวันตก",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 01:01 UTC)",
+        "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:21 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "ผู้ซื้อรถยนต์ต้องการราคาที่ต่ำกว่าและเทคโนโลยีที่ดีกว่า ผู้ผลิตรถยนต์จะต้องส่งมอบทั้งสองอย่าง",
-        "Bain กล่าวว่าเทคโนโลยีเป็นผู้นำในการพิจารณาซื้อในจีน ในขณะที่ราคายังคงเป็นที่ 1 ในสหรัฐอเมริกาและยุโรป เนื่องจากแรงกดดันต่อผู้ผลิตรถยนต์ของชาติตะวันตก",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Car buyers are demanding lower prices and better tech. Automakers must deliver both\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "นักลงทุนกำลังตั้งคำถามกับรูปแบบธุรกิจของ Neoclouds แต่ Nebius กล่าวว่าราคาการประมวลผลของ AI กำลังสูงขึ้น",
+        "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Investors are questioning neoclouds' business model but Nebius says AI computing prices are rising\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "OpenAI เพื่อนำโมเดล AI มาสู่คลาวด์ของ Google ในการขยายเพิ่มเติมนอกเหนือจาก Microsoft",
+      "title_en": "OpenAI to bring AI models to Google's cloud, in further expansion beyond Microsoft",
+      "summary": "ขณะนี้ OpenAI จะมีโมเดลบนคลาวด์ชั้นนำทั้งสามแห่ง ทำให้นักพัฒนาองค์กรมีทางเลือกมากขึ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
+      "time": "25 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T12:20:13Z",
+      "category": "TECH",
+      "tickers": [
+        "MSFT",
+        "GOOGL"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ขณะนี้ OpenAI จะมีโมเดลบนคลาวด์ชั้นนำทั้งสามแห่ง ทำให้นักพัฒนาองค์กรมีทางเลือกมากขึ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:20 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #MSFT #GOOGL"
+      ],
+      "fullArticle": [
+        "OpenAI เพื่อนำโมเดล AI มาสู่คลาวด์ของ Google ในการขยายเพิ่มเติมนอกเหนือจาก Microsoft",
+        "ขณะนี้ OpenAI จะมีโมเดลบนคลาวด์ชั้นนำทั้งสามแห่ง ทำให้นักพัฒนาองค์กรมีทางเลือกมากขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI to bring AI models to Google's cloud, in further expansion beyond Microsoft\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-8",
+      "title": "ตลาดหุ้นวันนี้: ฟิวเจอร์สเทคโนโลยีเพิ่มขึ้นพร้อมรายรับของ SpaceX; Meta, Tesla ตั้งค่าให้รายงานในภายหลัง (ถ่ายทอดสด)",
+      "title_en": "Stock Market Today: Tech Futures Rise With SpaceX Earnings; Meta, Tesla Set To Report Later (Live Coverage)",
+      "summary": "ตลาดหุ้นวันนี้: ฟิวเจอร์สเทคโนโลยีเพิ่มขึ้นพร้อมรายรับของ SpaceX; Meta, Tesla ตั้งค่าให้รายงานในภายหลัง (ถ่ายทอดสด)",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/3cb9e8ae-4da0-30bd-9cec-6a0531abd9df/stock-market-today%3A-tech.html",
+      "time": "27 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T12:18:33Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "META",
+        "TSLA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ตลาดหุ้นวันนี้: ฟิวเจอร์สเทคโนโลยีเพิ่มขึ้นพร้อมรายรับของ SpaceX; Meta, Tesla ตั้งค่าให้รายงานในภายหลัง (ถ่ายทอดสด)",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (21/10/2026 12:18 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: ฟิวเจอร์สเทคโนโลยีเพิ่มขึ้นพร้อมรายรับของ SpaceX; Meta, Tesla ตั้งค่าให้รายงานในภายหลัง (ถ่ายทอดสด)",
+        "ตลาดหุ้นวันนี้: ฟิวเจอร์สเทคโนโลยีเพิ่มขึ้นพร้อมรายรับของ SpaceX; Meta, Tesla ตั้งค่าให้รายงานในภายหลัง (ถ่ายทอดสด)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Tech Futures Rise With SpaceX Earnings; Meta, Tesla Set To Report Later (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "Dow Jones Futures เพิ่มขึ้นในขณะที่ SpaceX, Supermicro Revive AI Stocks; เทสลา เมต้าบนดาดฟ้า",
+      "title_en": "Dow Jones Futures Rise As SpaceX, Supermicro Revive AI Stocks; Tesla, Meta On Deck",
+      "summary": "Dow Jones Futures เพิ่มขึ้นในขณะที่ SpaceX, Supermicro Revive AI Stocks; เทสลา เมต้าบนดาดฟ้า",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/40378091-9f13-35f6-a4eb-65961ef4434c/dow-jones-futures-rise-as.html",
+      "time": "27 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T12:18:29Z",
+      "category": "TECH",
+      "tickers": [
+        "META",
+        "TSLA",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Dow Jones Futures เพิ่มขึ้นในขณะที่ SpaceX, Supermicro Revive AI Stocks; เทสลา เมต้าบนดาดฟ้า",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (21/10/2026 12:18 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #DIA"
+      ],
+      "fullArticle": [
+        "Dow Jones Futures เพิ่มขึ้นในขณะที่ SpaceX, Supermicro Revive AI Stocks; เทสลา เมต้าบนดาดฟ้า",
+        "Dow Jones Futures เพิ่มขึ้นในขณะที่ SpaceX, Supermicro Revive AI Stocks; เทสลา เมต้าบนดาดฟ้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures Rise As SpaceX, Supermicro Revive AI Stocks; Tesla, Meta On Deck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
       "title": "Musk กล่าวว่า Tesla และ SpaceX ได้จัดตั้งคณะกรรมการพิเศษเพื่อหารือเกี่ยวกับการควบรวมกิจการ: การอัปเดตสด",
       "title_en": "Musk says Tesla and SpaceX formed special committees to discuss merger: Live updates",
       "summary": "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทเอาชนะรายได้และออกคำแนะนำที่ดีขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T00:42:08Z",
+      "time": "37 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T12:08:16Z",
       "category": "EARNINGS",
       "tickers": [
         "TSLA"
@@ -221,7 +273,7 @@
       "isHero": false,
       "points": [
         "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทเอาชนะรายได้และออกคำแนะนำที่ดีขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 00:42 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:08 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
       ],
       "fullArticle": [
@@ -231,112 +283,59 @@
       ]
     },
     {
-      "id": "news-9",
-      "title": "ไตรมาสที่แข็งแกร่งของ Capital One และการรวม Discover ที่ก้าวหน้าได้รับรางวัลใน Wall Street",
-      "title_en": "Capital One's strong quarter and progressing Discover integration are rewarded on Wall Street",
-      "summary": "รายได้ดอกเบี้ยสุทธิและผลการดำเนินงานด้านเครดิตที่แข็งแกร่งขึ้นถือเป็นปัจจัยสำคัญในผลประกอบการของธนาคาร",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/20/capital-one-strong-quarter-and-progressing-discover-integration-are-rewarded.html",
-      "time": "7 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T23:34:14Z",
+      "id": "news-11",
+      "title": "ฤดูผลประกอบการ อัตราผลตอบแทนพันธบัตรที่มั่นคง หนุนตลาดหุ้นยุโรปในช่วงเที่ยงวัน",
+      "title_en": "Earnings Season, Stable Bond Yields Lift European Bourses Midday",
+      "summary": "ฤดูผลประกอบการ อัตราผลตอบแทนพันธบัตรที่มั่นคง หนุนตลาดหุ้นยุโรปในช่วงเที่ยงวัน",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/earnings-season-stable-bond-yields-115222212.html",
+      "time": "53 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T11:52:22Z",
       "category": "EARNINGS",
       "tickers": [
         "SPY",
         "DIA"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "รายได้ดอกเบี้ยสุทธิและผลการดำเนินงานด้านเครดิตที่แข็งแกร่งขึ้นถือเป็นปัจจัยสำคัญในผลประกอบการของธนาคาร",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 23:34 UTC)",
+        "ฤดูผลประกอบการ อัตราผลตอบแทนพันธบัตรที่มั่นคง หนุนตลาดหุ้นยุโรปในช่วงเที่ยงวัน",
+        "แหล่งข่าวอ้างอิง: MT Newswires (21/10/2026 11:52 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "ไตรมาสที่แข็งแกร่งของ Capital One และการรวม Discover ที่ก้าวหน้าได้รับรางวัลใน Wall Street",
-        "รายได้ดอกเบี้ยสุทธิและผลการดำเนินงานด้านเครดิตที่แข็งแกร่งขึ้นถือเป็นปัจจัยสำคัญในผลประกอบการของธนาคาร",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Capital One's strong quarter and progressing Discover integration are rewarded on Wall Street\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "หุ้นมีการเคลื่อนไหวครั้งใหญ่ที่สุดหลังเวลาผ่านไป: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX และอีกมากมาย",
-      "title_en": "Stocks making the biggest moves after hours: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX & more",
-      "summary": "ต่อไปนี้คือบริษัทบางส่วนที่พาดหัวข่าวหลังเสียงระฆังปิด",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-after-hours-isrg-nflx-spcx.html",
-      "time": "8 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T22:55:27Z",
-      "category": "MACRO",
-      "tickers": [
-        "NFLX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ต่อไปนี้คือบริษัทบางส่วนที่พาดหัวข่าวหลังเสียงระฆังปิด",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 22:55 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NFLX"
-      ],
-      "fullArticle": [
-        "หุ้นมีการเคลื่อนไหวครั้งใหญ่ที่สุดหลังเวลาผ่านไป: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX และอีกมากมาย",
-        "ต่อไปนี้คือบริษัทบางส่วนที่พาดหัวข่าวหลังเสียงระฆังปิด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks making the biggest moves after hours: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX & more\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "Netflix ประกาศผลประกอบการไตรมาสสามพุ่งสูงขึ้น แต่หุ้นตกลงจากการโฆษณาและคำแนะนำด้านรายได้",
-      "title_en": "Netflix posts third-quarter earnings beat, but shares fall on advertising and revenue guidance",
-      "summary": "Wall Street และนักลงทุนจะมองหา Netflix เพื่อให้รายละเอียดเพิ่มเติมเกี่ยวกับกลยุทธ์ของบริษัทภายหลังการเปลี่ยนแปลงองค์กรครั้งล่าสุด",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/netflix-nflx-earnings-q3-2026.html",
-      "time": "8 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T22:29:45Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "NFLX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Wall Street และนักลงทุนจะมองหา Netflix เพื่อให้รายละเอียดเพิ่มเติมเกี่ยวกับกลยุทธ์ของบริษัทภายหลังการเปลี่ยนแปลงองค์กรครั้งล่าสุด",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 22:29 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NFLX"
-      ],
-      "fullArticle": [
-        "Netflix ประกาศผลประกอบการไตรมาสสามพุ่งสูงขึ้น แต่หุ้นตกลงจากการโฆษณาและคำแนะนำด้านรายได้",
-        "Wall Street และนักลงทุนจะมองหา Netflix เพื่อให้รายละเอียดเพิ่มเติมเกี่ยวกับกลยุทธ์ของบริษัทภายหลังการเปลี่ยนแปลงองค์กรครั้งล่าสุด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Netflix posts third-quarter earnings beat, but shares fall on advertising and revenue guidance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ฤดูผลประกอบการ อัตราผลตอบแทนพันธบัตรที่มั่นคง หนุนตลาดหุ้นยุโรปในช่วงเที่ยงวัน",
+        "ฤดูผลประกอบการ อัตราผลตอบแทนพันธบัตรที่มั่นคง หนุนตลาดหุ้นยุโรปในช่วงเที่ยงวัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Earnings Season, Stable Bond Yields Lift European Bourses Midday\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-12",
-      "title": "Salesforce ประกาศข้อตกลงมูลค่า 5.66 พันล้านดอลลาร์สำหรับ Braze ส่งผลให้หุ้น BRZE ทะยานขึ้น 51%",
-      "title_en": "Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 51%",
-      "summary": "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/salesforce-braze-acquisition-deal.html",
-      "time": "10 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T20:10:30Z",
-      "category": "TECH",
+      "title": "Southwest และ American Airlines เผชิญกับการทดสอบเชื้อเพลิงเครื่องบินเมื่อรายได้มาถึง",
+      "title_en": "Southwest and American Airlines Face a Jet Fuel Test as Earnings Arrive",
+      "summary": "Southwest และ American Airlines เผชิญกับการทดสอบเชื้อเพลิงเครื่องบินเมื่อรายได้มาถึง",
+      "source": "24/7 Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/southwest-american-airlines-face-jet-115038259.html",
+      "time": "55 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T11:50:38Z",
+      "category": "EARNINGS",
       "tickers": [
-        "CRM"
+        "SPY",
+        "DIA"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 20:10 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CRM"
+        "Southwest และ American Airlines เผชิญกับการทดสอบเชื้อเพลิงเครื่องบินเมื่อรายได้มาถึง",
+        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (21/10/2026 11:50 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "Salesforce ประกาศข้อตกลงมูลค่า 5.66 พันล้านดอลลาร์สำหรับ Braze ส่งผลให้หุ้น BRZE ทะยานขึ้น 51%",
-        "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 51%\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Southwest และ American Airlines เผชิญกับการทดสอบเชื้อเพลิงเครื่องบินเมื่อรายได้มาถึง",
+        "Southwest และ American Airlines เผชิญกับการทดสอบเชื้อเพลิงเครื่องบินเมื่อรายได้มาถึง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Southwest and American Airlines Face a Jet Fuel Test as Earnings Arrive\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
