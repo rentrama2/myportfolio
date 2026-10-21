@@ -2,13 +2,12 @@ name: Update Stock Prices & FX
 
 on:
   schedule:
-    # Run every 10 minutes
-    - cron: '*/10 * * * *'
+    # Run every 5 minutes
+    - cron: '*/5 * * * *'
   workflow_dispatch:
   push:
-    paths:
-      - 'scripts/**'
-      - '.github/workflows/**'
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -42,4 +41,3 @@ jobs:
             git pull --rebase origin main || true
             git push
           fi
-
