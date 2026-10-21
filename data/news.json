@@ -1,126 +1,242 @@
 {
-  "updated_at": "2026-10-21T14:34:21Z",
-  "updated_at_thai": "21 ต.ค. 2569 21:34 น.",
+  "updated_at": "2026-10-21T18:54:26Z",
+  "updated_at_thai": "22 ต.ค. 2569 01:54 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ราคาน้ำมันพุ่งขึ้นจากความเสี่ยงในการขนส่งในตะวันออกกลางและการดึงสต็อกของสหรัฐฯ",
-      "title_en": "Oil prices climb on Middle East shipping risks and US stock draws",
-      "summary": "ราคาน้ำมันพุ่งขึ้นจากความเสี่ยงในการขนส่งในตะวันออกกลางและการดึงสต็อกของสหรัฐฯ",
-      "source": "Offshore Technology",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-climb-middle-east-142505218.html",
-      "time": "9 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T14:25:05Z",
-      "category": "COMMODITIES",
+      "title": "Meta สั่งให้จ่ายค่าปรับ 25 พันล้านดอลลาร์ในคดี New Mexico Cambridge Analytica",
+      "title_en": "Meta ordered to pay $25 billion penalty in New Mexico Cambridge Analytica case",
+      "summary": "Meta จะจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
+      "time": "1 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T18:52:44Z",
+      "category": "TECH",
       "tickers": [
-        "XOM",
-        "CVX"
+        "META"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": true,
       "points": [
-        "ราคาน้ำมันพุ่งขึ้นจากความเสี่ยงในการขนส่งในตะวันออกกลางและการดึงสต็อกของสหรัฐฯ",
-        "แหล่งข่าวอ้างอิง: Offshore Technology (21/10/2026 14:25 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "Meta จะจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 18:52 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
       ],
       "fullArticle": [
-        "ราคาน้ำมันพุ่งขึ้นจากความเสี่ยงในการขนส่งในตะวันออกกลางและการดึงสต็อกของสหรัฐฯ",
-        "ราคาน้ำมันพุ่งขึ้นจากความเสี่ยงในการขนส่งในตะวันออกกลางและการดึงสต็อกของสหรัฐฯ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices climb on Middle East shipping risks and US stock draws\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Meta สั่งให้จ่ายค่าปรับ 25 พันล้านดอลลาร์ในคดี New Mexico Cambridge Analytica",
+        "Meta จะจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta ordered to pay $25 billion penalty in New Mexico Cambridge Analytica case\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "หุ้น SpaceX พุ่งขึ้น 8% หลังจากผลประกอบการพุ่งสูงขึ้น และ Musk บอกเป็นนัยถึงการควบรวมกิจการกับ Tesla",
-      "title_en": "SpaceX stock jumps 8% after earnings beat and Musk hints at Tesla tie-up",
-      "summary": "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/spacex-spcx-stock-musk-merger-tesla.html",
-      "time": "12 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T14:21:39Z",
-      "category": "EARNINGS",
+      "title": "น้ำมันไหลผ่านอ่าวเปอร์เซียมากกว่าก่อนเกิดสงคราม ราคายังคงสูงอยู่",
+      "title_en": "More Oil is Flowing Through the Persian Gulf Than Before the War. Prices are Still High.",
+      "summary": "น้ำมันไหลผ่านอ่าวเปอร์เซียมากกว่าก่อนเกิดสงคราม ราคายังคงสูงอยู่",
+      "source": "International Business Times",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/more-oil-flowing-persian-gulf-183858775.html",
+      "time": "15 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T18:38:58Z",
+      "category": "COMMODITIES",
       "tickers": [
-        "TSLA"
+        "XOM",
+        "CVX"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 14:21 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+        "น้ำมันไหลผ่านอ่าวเปอร์เซียมากกว่าก่อนเกิดสงคราม ราคายังคงสูงอยู่",
+        "แหล่งข่าวอ้างอิง: International Business Times (21/10/2026 18:38 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "หุ้น SpaceX พุ่งขึ้น 8% หลังจากผลประกอบการพุ่งสูงขึ้น และ Musk บอกเป็นนัยถึงการควบรวมกิจการกับ Tesla",
-        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX stock jumps 8% after earnings beat and Musk hints at Tesla tie-up\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "น้ำมันไหลผ่านอ่าวเปอร์เซียมากกว่าก่อนเกิดสงคราม ราคายังคงสูงอยู่",
+        "น้ำมันไหลผ่านอ่าวเปอร์เซียมากกว่าก่อนเกิดสงคราม ราคายังคงสูงอยู่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"More Oil is Flowing Through the Persian Gulf Than Before the War. Prices are Still High.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-3",
-      "title": "Chevron (CVX): สัญญา LNG ระยะยาวสามารถทำให้กระแสเงินสดคาดเดาได้มากขึ้นหรือไม่?",
-      "title_en": "Chevron (CVX): Can Long-Term LNG Contracts Make Cash Flow More Predictable?",
-      "summary": "Chevron (CVX): สัญญา LNG ระยะยาวสามารถทำให้กระแสเงินสดคาดเดาได้มากขึ้นหรือไม่?",
-      "source": "Insider Monkey",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/chevron-cvx-long-term-lng-142131338.html",
-      "time": "12 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T14:21:31Z",
+      "title": "ตลาดหุ้นวันนี้: Nasdaq เป็นผู้นำของ Dow ด้วยผลกำไร Meta ข้างหน้า; ExxonMobil Near New High (รายงานสด)",
+      "title_en": "Stock Market Today: Nasdaq Leads Dow With Meta Earnings Ahead; ExxonMobil Near New High (Live Coverage)",
+      "summary": "ตลาดหุ้นวันนี้: Nasdaq เป็นผู้นำของ Dow ด้วยผลกำไร Meta ข้างหน้า; ExxonMobil Near New High (รายงานสด)",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/3cb9e8ae-4da0-30bd-9cec-6a0531abd9df/stock-market-today%3A-nasdaq.html",
+      "time": "18 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T18:36:17Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "META",
+        "QQQ",
+        "DIA",
+        "XOM"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ตลาดหุ้นวันนี้: Nasdaq เป็นผู้นำของ Dow ด้วยผลกำไร Meta ข้างหน้า; ExxonMobil Near New High (รายงานสด)",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (21/10/2026 18:36 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #QQQ #DIA #XOM"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: Nasdaq เป็นผู้นำของ Dow ด้วยผลกำไร Meta ข้างหน้า; ExxonMobil Near New High (รายงานสด)",
+        "ตลาดหุ้นวันนี้: Nasdaq เป็นผู้นำของ Dow ด้วยผลกำไร Meta ข้างหน้า; ExxonMobil Near New High (รายงานสด)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Nasdaq Leads Dow With Meta Earnings Ahead; ExxonMobil Near New High (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "Netflix ก้าวเข้าสู่วงการละครแล้ว พร้อมจะโดดแล้วหรือยัง?",
+      "title_en": "Netflix has dipped its toe into theatrical. Is it ready to jump in?",
+      "summary": "Ted Sarandos ซีอีโอร่วมกล่าวว่าสตรีมเมอร์ต้องการช่องทางใหม่ในการเติบโตและปรับปรุงการดำเนินการตามกลยุทธ์เนื้อหา",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/netflix-theatrical-strategy.html",
+      "time": "22 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T18:32:12Z",
+      "category": "TECH",
+      "tickers": [
+        "NFLX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Ted Sarandos ซีอีโอร่วมกล่าวว่าสตรีมเมอร์ต้องการช่องทางใหม่ในการเติบโตและปรับปรุงการดำเนินการตามกลยุทธ์เนื้อหา",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 18:32 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NFLX"
+      ],
+      "fullArticle": [
+        "Netflix ก้าวเข้าสู่วงการละครแล้ว พร้อมจะโดดแล้วหรือยัง?",
+        "Ted Sarandos ซีอีโอร่วมกล่าวว่าสตรีมเมอร์ต้องการช่องทางใหม่ในการเติบโตและปรับปรุงการดำเนินการตามกลยุทธ์เนื้อหา",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Netflix has dipped its toe into theatrical. Is it ready to jump in?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "การอัปเดตสดของรายได้ Meta: การใช้จ่ายของ AI รายได้จากโฆษณา และปฏิกิริยาสต็อก",
+      "title_en": "Meta earnings live updates: AI spending, ad revenue and stock reaction",
+      "summary": "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/meta-earnings-q3-2026-live-updates.html",
+      "time": "26 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T18:28:04Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "META"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 18:28 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
+      ],
+      "fullArticle": [
+        "การอัปเดตสดของรายได้ Meta: การใช้จ่ายของ AI รายได้จากโฆษณา และปฏิกิริยาสต็อก",
+        "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta earnings live updates: AI spending, ad revenue and stock reaction\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "Capital One มีผลประกอบการไตรมาสที่แข็งแกร่ง เหตุใดเราจึงยังไม่ประกาศชัยชนะ",
+      "title_en": "Capital One delivered a strong quarter. Why we're not declaring victory just yet",
+      "summary": "Capital One รายงานผลประกอบการที่แข็งแกร่ง แต่ข้อกังวลที่ใหญ่ที่สุดประการหนึ่งของเรายังคงอยู่",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/21/capital-one-delivered-a-strong-quarter-why-were-not-declaring-victory-just-yet.html",
+      "time": "47 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T18:06:31Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Capital One รายงานผลประกอบการที่แข็งแกร่ง แต่ข้อกังวลที่ใหญ่ที่สุดประการหนึ่งของเรายังคงอยู่",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 18:06 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "Capital One มีผลประกอบการไตรมาสที่แข็งแกร่ง เหตุใดเราจึงยังไม่ประกาศชัยชนะ",
+        "Capital One รายงานผลประกอบการที่แข็งแกร่ง แต่ข้อกังวลที่ใหญ่ที่สุดประการหนึ่งของเรายังคงอยู่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Capital One delivered a strong quarter. Why we're not declaring victory just yet\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "การอัปเดตกลุ่ม: หุ้นพลังงานขยับสูงขึ้นในการซื้อขายช่วงบ่าย",
+      "title_en": "Sector Update: Energy Stocks Edge Higher in Afternoon Trading",
+      "summary": "การอัปเดตกลุ่ม: หุ้นพลังงานขยับสูงขึ้นในการซื้อขายช่วงบ่าย",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-edge-higher-175839953.html",
+      "time": "55 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T17:58:39Z",
       "category": "MACRO",
       "tickers": [
-        "CVX"
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "การอัปเดตกลุ่ม: หุ้นพลังงานขยับสูงขึ้นในการซื้อขายช่วงบ่าย",
+        "แหล่งข่าวอ้างอิง: MT Newswires (21/10/2026 17:58 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "การอัปเดตกลุ่ม: หุ้นพลังงานขยับสูงขึ้นในการซื้อขายช่วงบ่าย",
+        "การอัปเดตกลุ่ม: หุ้นพลังงานขยับสูงขึ้นในการซื้อขายช่วงบ่าย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Sector Update: Energy Stocks Edge Higher in Afternoon Trading\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "Reliance กล่าวว่า Ambanis และ Rubio หารือเกี่ยวกับพลังงานและศูนย์ข้อมูลทั่วโลกที่มาเยือน",
+      "title_en": "Reliance says Ambanis and Rubio discussed global energy, data centres in visit",
+      "summary": "Reliance กล่าวว่า Ambanis และ Rubio หารือเกี่ยวกับพลังงานและศูนย์ข้อมูลทั่วโลกที่มาเยือน",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/news/reliance-says-ambanis-rubio-discussed-175257958.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-21T17:52:57Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Chevron (CVX): สัญญา LNG ระยะยาวสามารถทำให้กระแสเงินสดคาดเดาได้มากขึ้นหรือไม่?",
-        "แหล่งข่าวอ้างอิง: Insider Monkey (21/10/2026 14:21 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX"
+        "Reliance กล่าวว่า Ambanis และ Rubio หารือเกี่ยวกับพลังงานและศูนย์ข้อมูลทั่วโลกที่มาเยือน",
+        "แหล่งข่าวอ้างอิง: Reuters (21/10/2026 17:52 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "Chevron (CVX): สัญญา LNG ระยะยาวสามารถทำให้กระแสเงินสดคาดเดาได้มากขึ้นหรือไม่?",
-        "Chevron (CVX): สัญญา LNG ระยะยาวสามารถทำให้กระแสเงินสดคาดเดาได้มากขึ้นหรือไม่?",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Chevron (CVX): Can Long-Term LNG Contracts Make Cash Flow More Predictable?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Reliance กล่าวว่า Ambanis และ Rubio หารือเกี่ยวกับพลังงานและศูนย์ข้อมูลทั่วโลกที่มาเยือน",
+        "Reliance กล่าวว่า Ambanis และ Rubio หารือเกี่ยวกับพลังงานและศูนย์ข้อมูลทั่วโลกที่มาเยือน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Reliance says Ambanis and Rubio discussed global energy, data centres in visit\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-4",
-      "title": "ตลาดหุ้นวันนี้: Nasdaq ทำกำไรจากจรวด SpaceX; Super Micro Shares Vault สูงกว่า (การรายงานข่าวสด)",
-      "title_en": "Stock Market Today: Nasdaq Pares Its Gains As SpaceX Rockets; Super Micro Shares Vault Higher (Live Coverage)",
-      "summary": "ตลาดหุ้นวันนี้: Nasdaq ทำกำไรจากจรวด SpaceX; Super Micro Shares Vault สูงกว่า (การรายงานข่าวสด)",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/3cb9e8ae-4da0-30bd-9cec-6a0531abd9df/stock-market-today%3A-nasdaq.html",
-      "time": "13 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T14:20:42Z",
-      "category": "TECH",
-      "tickers": [
-        "QQQ"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้: Nasdaq ทำกำไรจากจรวด SpaceX; Super Micro Shares Vault สูงกว่า (การรายงานข่าวสด)",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (21/10/2026 14:20 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: Nasdaq ทำกำไรจากจรวด SpaceX; Super Micro Shares Vault สูงกว่า (การรายงานข่าวสด)",
-        "ตลาดหุ้นวันนี้: Nasdaq ทำกำไรจากจรวด SpaceX; Super Micro Shares Vault สูงกว่า (การรายงานข่าวสด)",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Nasdaq Pares Its Gains As SpaceX Rockets; Super Micro Shares Vault Higher (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "BC-น้ำมันดิบล่วงหน้า",
-      "title_en": "BC-Crude Oil Futures",
-      "summary": "BC-น้ำมันดิบล่วงหน้า",
-      "source": "Associated Press",
-      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/bc-crude-oil-futures-140016983.html",
-      "time": "34 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T14:00:16Z",
+      "id": "news-9",
+      "title": "อัปเดต: ดัชนีหุ้นสหรัฐฯ ก้าวหน้าเนื่องจากผลลัพธ์ที่โด่งดังของ SpaceX ช่วยเพิ่มความเชื่อมั่นด้านความเสี่ยง การถอยน้ำมันดิบ",
+      "title_en": "Update: US Equity Indexes Advance as SpaceX's Blockbuster Results Boost Risk Sentiment, Crude Oil Retreats",
+      "summary": "อัปเดต: ดัชนีหุ้นสหรัฐฯ ก้าวหน้าเนื่องจากผลลัพธ์ที่โด่งดังของ SpaceX ช่วยเพิ่มความเชื่อมั่นด้านความเสี่ยง การถอยน้ำมันดิบ",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-advance-spacex-174739807.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-21T17:47:39Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
@@ -130,54 +246,79 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "BC-น้ำมันดิบล่วงหน้า",
-        "แหล่งข่าวอ้างอิง: Associated Press (21/10/2026 14:00 UTC)",
+        "อัปเดต: ดัชนีหุ้นสหรัฐฯ ก้าวหน้าเนื่องจากผลลัพธ์ที่โด่งดังของ SpaceX ช่วยเพิ่มความเชื่อมั่นด้านความเสี่ยง การถอยน้ำมันดิบ",
+        "แหล่งข่าวอ้างอิง: MT Newswires (21/10/2026 17:47 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "BC-น้ำมันดิบล่วงหน้า",
-        "BC-น้ำมันดิบล่วงหน้า",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BC-Crude Oil Futures\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "อัปเดต: ดัชนีหุ้นสหรัฐฯ ก้าวหน้าเนื่องจากผลลัพธ์ที่โด่งดังของ SpaceX ช่วยเพิ่มความเชื่อมั่นด้านความเสี่ยง การถอยน้ำมันดิบ",
+        "อัปเดต: ดัชนีหุ้นสหรัฐฯ ก้าวหน้าเนื่องจากผลลัพธ์ที่โด่งดังของ SpaceX ช่วยเพิ่มความเชื่อมั่นด้านความเสี่ยง การถอยน้ำมันดิบ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Indexes Advance as SpaceX's Blockbuster Results Boost Risk Sentiment, Crude Oil Retreats\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-6",
-      "title": "นักลงทุนกำลังตั้งคำถามเกี่ยวกับรูปแบบธุรกิจของ Neoclouds แต่ Nebius กล่าวว่าราคาการประมวลผลของ AI กำลังสูงขึ้น",
-      "title_en": "Investors are questioning neoclouds' business model but Nebius says AI computing prices are rising",
-      "summary": "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
+      "id": "news-10",
+      "title": "Intel บรรลุเป้าหมายสำคัญในการก่อสร้างโรงงานชิปในรัฐโอไฮโอซึ่งล่าช้ากว่ากำหนดอย่างน้อย 5 ปี",
+      "title_en": "Intel hits construction milestone at Ohio chip fab that’s at least 5 years behind schedule",
+      "summary": "Intel ได้ติดตั้งโครงนั่งร้านโครงสร้างหลักชุดแรกที่โรงงานชิปในรัฐโอไฮโอที่ล่าช้า แต่บริษัทยังไม่ได้ประกาศลูกค้าภายนอกรายใหญ่",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/nebius-ai-computing-nvidia-gpu-prices.html",
-      "time": "50 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T13:44:12Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/intel-hits-construction-milestone-at-delayed-ohio-chip-fab-.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-21T16:55:51Z",
       "category": "TECH",
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
+        "INTC"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 13:44 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+        "Intel ได้ติดตั้งโครงนั่งร้านโครงสร้างหลักชุดแรกที่โรงงานชิปในรัฐโอไฮโอที่ล่าช้า แต่บริษัทยังไม่ได้ประกาศลูกค้าภายนอกรายใหญ่",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 16:55 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #INTC"
       ],
       "fullArticle": [
-        "นักลงทุนกำลังตั้งคำถามเกี่ยวกับรูปแบบธุรกิจของ Neoclouds แต่ Nebius กล่าวว่าราคาการประมวลผลของ AI กำลังสูงขึ้น",
-        "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Investors are questioning neoclouds' business model but Nebius says AI computing prices are rising\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Intel บรรลุเป้าหมายสำคัญในการก่อสร้างโรงงานชิปในรัฐโอไฮโอซึ่งล่าช้ากว่ากำหนดอย่างน้อย 5 ปี",
+        "Intel ได้ติดตั้งโครงนั่งร้านโครงสร้างหลักชุดแรกที่โรงงานชิปในรัฐโอไฮโอที่ล่าช้า แต่บริษัทยังไม่ได้ประกาศลูกค้าภายนอกรายใหญ่",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Intel hits construction milestone at Ohio chip fab that’s at least 5 years behind schedule\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-7",
+      "id": "news-11",
+      "title": "รายได้ของ Tesla ปรากฏขึ้นหลังจากที่ Musk เรียกการควบรวมกิจการ SpaceX ว่าเป็น \"ความคิดที่ดี\"",
+      "title_en": "Tesla earnings loom after Musk calls SpaceX merger a 'good idea'",
+      "summary": "หนึ่งวันหลังจากที่ SpaceX ของ Elon Musk รายงานผลประกอบการไตรมาสสาม Tesla มีกำหนดจะอัปเดตนักลงทุน",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-21T16:01:25Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "หนึ่งวันหลังจากที่ SpaceX ของ Elon Musk รายงานผลประกอบการไตรมาสสาม Tesla มีกำหนดจะอัปเดตนักลงทุน",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 16:01 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "รายได้ของ Tesla ปรากฏขึ้นหลังจากที่ Musk เรียกการควบรวมกิจการ SpaceX ว่าเป็น \"ความคิดที่ดี\"",
+        "หนึ่งวันหลังจากที่ SpaceX ของ Elon Musk รายงานผลประกอบการไตรมาสสาม Tesla มีกำหนดจะอัปเดตนักลงทุน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla earnings loom after Musk calls SpaceX merger a 'good idea'\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-12",
       "title": "Goldman Sachs, JPMorgan และ Morgan Stanley กำลังครองการเติบโตของหุ้น AI นี่คือข้อได้เปรียบของพวกเขา",
       "title_en": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
-      "summary": "Big Three ของ Wall Street สร้างรายได้จากการซื้อขายหุ้นถึง 52 พันล้านดอลลาร์ในปีนี้ โดยครองตลาดได้ประมาณ 80% จากการปล่อยสินเชื่อเพื่อประกันความเสี่ยงให้กับกองทุนเฮดจ์ฟันด์ที่เพิ่มขึ้น",
+      "summary": "Big Three ของ Wall Street สร้างรายได้จากการซื้อขายตราสารทุน 52 พันล้านดอลลาร์ในปีนี้ โดยครองตลาดได้ประมาณ 80% จากการปล่อยสินเชื่อเพื่อกองทุนเฮดจ์ฟันด์ที่เพิ่มขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/goldman-sachs-jpmorgan-morgan-stanley-ai-trading.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T13:30:57Z",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-21T15:30:50Z",
       "category": "COMMODITIES",
       "tickers": [
         "JPM",
@@ -187,152 +328,14 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Big Three ของ Wall Street สร้างรายได้จากการซื้อขายหุ้นถึง 52 พันล้านดอลลาร์ในปีนี้ โดยครองตลาดได้ประมาณ 80% จากการปล่อยสินเชื่อเพื่อประกันความเสี่ยงให้กับกองทุนเฮดจ์ฟันด์ที่เพิ่มขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 13:30 UTC)",
+        "Big Three ของ Wall Street สร้างรายได้จากการซื้อขายตราสารทุน 52 พันล้านดอลลาร์ในปีนี้ โดยครองตลาดได้ประมาณ 80% จากการปล่อยสินเชื่อเพื่อกองทุนเฮดจ์ฟันด์ที่เพิ่มขึ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 15:30 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM #GS"
       ],
       "fullArticle": [
         "Goldman Sachs, JPMorgan และ Morgan Stanley กำลังครองการเติบโตของหุ้น AI นี่คือข้อได้เปรียบของพวกเขา",
-        "Big Three ของ Wall Street สร้างรายได้จากการซื้อขายหุ้นถึง 52 พันล้านดอลลาร์ในปีนี้ โดยครองตลาดได้ประมาณ 80% จากการปล่อยสินเชื่อเพื่อประกันความเสี่ยงให้กับกองทุนเฮดจ์ฟันด์ที่เพิ่มขึ้น",
+        "Big Three ของ Wall Street สร้างรายได้จากการซื้อขายตราสารทุน 52 พันล้านดอลลาร์ในปีนี้ โดยครองตลาดได้ประมาณ 80% จากการปล่อยสินเชื่อเพื่อกองทุนเฮดจ์ฟันด์ที่เพิ่มขึ้น",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "ฟิวเจอร์สโคจรรอบ SpaceX ในขณะที่การควบรวมกิจการของ Tesla ให้กำลังใจนักลงทุน",
-      "title_en": "Futures orbit around SpaceX as Tesla merger talk cheers investors",
-      "summary": "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/futures-orbit-around-spacex-as-tesla-merger-talk-cheers-investors.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T12:44:19Z",
-      "category": "TECH",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:44 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "ฟิวเจอร์สโคจรรอบ SpaceX ในขณะที่การควบรวมกิจการของ Tesla ให้กำลังใจนักลงทุน",
-        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Futures orbit around SpaceX as Tesla merger talk cheers investors\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "Nvidia ประกาศชั้นวาง Vera Rubin แบบ Plug and Play ที่สามารถจัดส่งบนรถบรรทุกได้",
-      "title_en": "Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck",
-      "summary": "Nvidia กล่าวว่าโรงงาน DSX Pod AI ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/nvidia-announces-vera-rubin-racks-that-can-be-shipped-on-a-truck-.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T12:43:49Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Nvidia กล่าวว่าโรงงาน DSX Pod AI ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:43 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
-      ],
-      "fullArticle": [
-        "Nvidia ประกาศชั้นวาง Vera Rubin แบบ Plug and Play ที่สามารถจัดส่งบนรถบรรทุกได้",
-        "Nvidia กล่าวว่าโรงงาน DSX Pod AI ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
-      "title_en": "AITX Q2 FY2027: Revenue Excluding Largest Customer Up 61% Year-Over-Year; Revenue Up 8% Sequentially",
-      "summary": "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
-      "source": "TMX Newsfile",
-      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitx-q2-fy2027-revenue-excluding-124000412.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T12:40:00Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
-        "แหล่งข่าวอ้างอิง: TMX Newsfile (21/10/2026 12:40 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
-        "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX Q2 FY2027: Revenue Excluding Largest Customer Up 61% Year-Over-Year; Revenue Up 8% Sequentially\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "การซื้อขายหุ้นแบบ Tokenized ได้รับความนิยมในต่างประเทศ เนื่องจาก Goldman บริษัทอื่นๆ ในสหรัฐฯ คัดค้าน",
-      "title_en": "Tokenized stock trading takes off overseas as Goldman, other U.S. companies object",
-      "summary": "หุ้น Tokenized กำลังได้รับแรงผลักดันในตลาดต่างประเทศ แม้ว่าบริษัทรายใหญ่ในสหรัฐฯ จะต่อต้านความพยายามในการแนะนำหุ้นเหล่านี้ในประเทศก็ตาม",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/tokenized-stocks-us-companies-object.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T12:33:34Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "หุ้น Tokenized กำลังได้รับแรงผลักดันในตลาดต่างประเทศ แม้ว่าบริษัทรายใหญ่ในสหรัฐฯ จะต่อต้านความพยายามในการแนะนำหุ้นเหล่านี้ในประเทศก็ตาม",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:33 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "การซื้อขายหุ้นแบบ Tokenized ได้รับความนิยมในต่างประเทศ เนื่องจาก Goldman บริษัทอื่นๆ ในสหรัฐฯ คัดค้าน",
-        "หุ้น Tokenized กำลังได้รับแรงผลักดันในตลาดต่างประเทศ แม้ว่าบริษัทรายใหญ่ในสหรัฐฯ จะต่อต้านความพยายามในการแนะนำหุ้นเหล่านี้ในประเทศก็ตาม",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tokenized stock trading takes off overseas as Goldman, other U.S. companies object\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "OpenAI เพื่อนำโมเดล AI มาสู่คลาวด์ของ Google ในการขยายเพิ่มเติมนอกเหนือจาก Microsoft",
-      "title_en": "OpenAI to bring AI models to Google's cloud, in further expansion beyond Microsoft",
-      "summary": "ขณะนี้ OpenAI จะมีโมเดลบนคลาวด์ชั้นนำทั้งสามแห่ง ทำให้นักพัฒนาองค์กรมีทางเลือกมากขึ้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T12:20:13Z",
-      "category": "TECH",
-      "tickers": [
-        "MSFT",
-        "GOOGL"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ขณะนี้ OpenAI จะมีโมเดลบนคลาวด์ชั้นนำทั้งสามแห่ง ทำให้นักพัฒนาองค์กรมีทางเลือกมากขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:20 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #MSFT #GOOGL"
-      ],
-      "fullArticle": [
-        "OpenAI เพื่อนำโมเดล AI มาสู่คลาวด์ของ Google ในการขยายเพิ่มเติมนอกเหนือจาก Microsoft",
-        "ขณะนี้ OpenAI จะมีโมเดลบนคลาวด์ชั้นนำทั้งสามแห่ง ทำให้นักพัฒนาองค์กรมีทางเลือกมากขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI to bring AI models to Google's cloud, in further expansion beyond Microsoft\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
