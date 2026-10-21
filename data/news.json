@@ -1,16 +1,237 @@
 {
-  "updated_at": "2026-10-21T12:46:10Z",
-  "updated_at_thai": "21 ต.ค. 2569 19:46 น.",
+  "updated_at": "2026-10-21T14:34:21Z",
+  "updated_at_thai": "21 ต.ค. 2569 21:34 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "ราคาน้ำมันพุ่งขึ้นจากความเสี่ยงในการขนส่งในตะวันออกกลางและการดึงสต็อกของสหรัฐฯ",
+      "title_en": "Oil prices climb on Middle East shipping risks and US stock draws",
+      "summary": "ราคาน้ำมันพุ่งขึ้นจากความเสี่ยงในการขนส่งในตะวันออกกลางและการดึงสต็อกของสหรัฐฯ",
+      "source": "Offshore Technology",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-climb-middle-east-142505218.html",
+      "time": "9 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T14:25:05Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "ราคาน้ำมันพุ่งขึ้นจากความเสี่ยงในการขนส่งในตะวันออกกลางและการดึงสต็อกของสหรัฐฯ",
+        "แหล่งข่าวอ้างอิง: Offshore Technology (21/10/2026 14:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ราคาน้ำมันพุ่งขึ้นจากความเสี่ยงในการขนส่งในตะวันออกกลางและการดึงสต็อกของสหรัฐฯ",
+        "ราคาน้ำมันพุ่งขึ้นจากความเสี่ยงในการขนส่งในตะวันออกกลางและการดึงสต็อกของสหรัฐฯ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices climb on Middle East shipping risks and US stock draws\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "หุ้น SpaceX พุ่งขึ้น 8% หลังจากผลประกอบการพุ่งสูงขึ้น และ Musk บอกเป็นนัยถึงการควบรวมกิจการกับ Tesla",
+      "title_en": "SpaceX stock jumps 8% after earnings beat and Musk hints at Tesla tie-up",
+      "summary": "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/spacex-spcx-stock-musk-merger-tesla.html",
+      "time": "12 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T14:21:39Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 14:21 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "หุ้น SpaceX พุ่งขึ้น 8% หลังจากผลประกอบการพุ่งสูงขึ้น และ Musk บอกเป็นนัยถึงการควบรวมกิจการกับ Tesla",
+        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX stock jumps 8% after earnings beat and Musk hints at Tesla tie-up\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "Chevron (CVX): สัญญา LNG ระยะยาวสามารถทำให้กระแสเงินสดคาดเดาได้มากขึ้นหรือไม่?",
+      "title_en": "Chevron (CVX): Can Long-Term LNG Contracts Make Cash Flow More Predictable?",
+      "summary": "Chevron (CVX): สัญญา LNG ระยะยาวสามารถทำให้กระแสเงินสดคาดเดาได้มากขึ้นหรือไม่?",
+      "source": "Insider Monkey",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/chevron-cvx-long-term-lng-142131338.html",
+      "time": "12 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T14:21:31Z",
+      "category": "MACRO",
+      "tickers": [
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Chevron (CVX): สัญญา LNG ระยะยาวสามารถทำให้กระแสเงินสดคาดเดาได้มากขึ้นหรือไม่?",
+        "แหล่งข่าวอ้างอิง: Insider Monkey (21/10/2026 14:21 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX"
+      ],
+      "fullArticle": [
+        "Chevron (CVX): สัญญา LNG ระยะยาวสามารถทำให้กระแสเงินสดคาดเดาได้มากขึ้นหรือไม่?",
+        "Chevron (CVX): สัญญา LNG ระยะยาวสามารถทำให้กระแสเงินสดคาดเดาได้มากขึ้นหรือไม่?",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Chevron (CVX): Can Long-Term LNG Contracts Make Cash Flow More Predictable?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "ตลาดหุ้นวันนี้: Nasdaq ทำกำไรจากจรวด SpaceX; Super Micro Shares Vault สูงกว่า (การรายงานข่าวสด)",
+      "title_en": "Stock Market Today: Nasdaq Pares Its Gains As SpaceX Rockets; Super Micro Shares Vault Higher (Live Coverage)",
+      "summary": "ตลาดหุ้นวันนี้: Nasdaq ทำกำไรจากจรวด SpaceX; Super Micro Shares Vault สูงกว่า (การรายงานข่าวสด)",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/3cb9e8ae-4da0-30bd-9cec-6a0531abd9df/stock-market-today%3A-nasdaq.html",
+      "time": "13 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T14:20:42Z",
+      "category": "TECH",
+      "tickers": [
+        "QQQ"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ตลาดหุ้นวันนี้: Nasdaq ทำกำไรจากจรวด SpaceX; Super Micro Shares Vault สูงกว่า (การรายงานข่าวสด)",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (21/10/2026 14:20 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: Nasdaq ทำกำไรจากจรวด SpaceX; Super Micro Shares Vault สูงกว่า (การรายงานข่าวสด)",
+        "ตลาดหุ้นวันนี้: Nasdaq ทำกำไรจากจรวด SpaceX; Super Micro Shares Vault สูงกว่า (การรายงานข่าวสด)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Nasdaq Pares Its Gains As SpaceX Rockets; Super Micro Shares Vault Higher (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "BC-น้ำมันดิบล่วงหน้า",
+      "title_en": "BC-Crude Oil Futures",
+      "summary": "BC-น้ำมันดิบล่วงหน้า",
+      "source": "Associated Press",
+      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/bc-crude-oil-futures-140016983.html",
+      "time": "34 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T14:00:16Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "BC-น้ำมันดิบล่วงหน้า",
+        "แหล่งข่าวอ้างอิง: Associated Press (21/10/2026 14:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "BC-น้ำมันดิบล่วงหน้า",
+        "BC-น้ำมันดิบล่วงหน้า",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BC-Crude Oil Futures\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "นักลงทุนกำลังตั้งคำถามเกี่ยวกับรูปแบบธุรกิจของ Neoclouds แต่ Nebius กล่าวว่าราคาการประมวลผลของ AI กำลังสูงขึ้น",
+      "title_en": "Investors are questioning neoclouds' business model but Nebius says AI computing prices are rising",
+      "summary": "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/nebius-ai-computing-nvidia-gpu-prices.html",
+      "time": "50 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T13:44:12Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 13:44 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "นักลงทุนกำลังตั้งคำถามเกี่ยวกับรูปแบบธุรกิจของ Neoclouds แต่ Nebius กล่าวว่าราคาการประมวลผลของ AI กำลังสูงขึ้น",
+        "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Investors are questioning neoclouds' business model but Nebius says AI computing prices are rising\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "Goldman Sachs, JPMorgan และ Morgan Stanley กำลังครองการเติบโตของหุ้น AI นี่คือข้อได้เปรียบของพวกเขา",
+      "title_en": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
+      "summary": "Big Three ของ Wall Street สร้างรายได้จากการซื้อขายหุ้นถึง 52 พันล้านดอลลาร์ในปีนี้ โดยครองตลาดได้ประมาณ 80% จากการปล่อยสินเชื่อเพื่อประกันความเสี่ยงให้กับกองทุนเฮดจ์ฟันด์ที่เพิ่มขึ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/goldman-sachs-jpmorgan-morgan-stanley-ai-trading.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-21T13:30:57Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "JPM",
+        "GS"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Big Three ของ Wall Street สร้างรายได้จากการซื้อขายหุ้นถึง 52 พันล้านดอลลาร์ในปีนี้ โดยครองตลาดได้ประมาณ 80% จากการปล่อยสินเชื่อเพื่อประกันความเสี่ยงให้กับกองทุนเฮดจ์ฟันด์ที่เพิ่มขึ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 13:30 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #JPM #GS"
+      ],
+      "fullArticle": [
+        "Goldman Sachs, JPMorgan และ Morgan Stanley กำลังครองการเติบโตของหุ้น AI นี่คือข้อได้เปรียบของพวกเขา",
+        "Big Three ของ Wall Street สร้างรายได้จากการซื้อขายหุ้นถึง 52 พันล้านดอลลาร์ในปีนี้ โดยครองตลาดได้ประมาณ 80% จากการปล่อยสินเชื่อเพื่อประกันความเสี่ยงให้กับกองทุนเฮดจ์ฟันด์ที่เพิ่มขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "ฟิวเจอร์สโคจรรอบ SpaceX ในขณะที่การควบรวมกิจการของ Tesla ให้กำลังใจนักลงทุน",
+      "title_en": "Futures orbit around SpaceX as Tesla merger talk cheers investors",
+      "summary": "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/futures-orbit-around-spacex-as-tesla-merger-talk-cheers-investors.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-21T12:44:19Z",
+      "category": "TECH",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:44 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "ฟิวเจอร์สโคจรรอบ SpaceX ในขณะที่การควบรวมกิจการของ Tesla ให้กำลังใจนักลงทุน",
+        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Futures orbit around SpaceX as Tesla merger talk cheers investors\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
       "title": "Nvidia ประกาศชั้นวาง Vera Rubin แบบ Plug and Play ที่สามารถจัดส่งบนรถบรรทุกได้",
       "title_en": "Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck",
-      "summary": "Nvidia กล่าวว่า DSX Pod AI Factory ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์ สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
+      "summary": "Nvidia กล่าวว่าโรงงาน DSX Pod AI ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/nvidia-announces-vera-rubin-racks-that-can-be-shipped-on-a-truck-.html",
-      "time": "2 นาทีที่แล้ว",
+      "time": "1 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T12:43:49Z",
       "category": "TECH",
       "tickers": [
@@ -18,26 +239,26 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
-        "Nvidia กล่าวว่า DSX Pod AI Factory ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์ สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
+        "Nvidia กล่าวว่าโรงงาน DSX Pod AI ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
         "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:43 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
       ],
       "fullArticle": [
         "Nvidia ประกาศชั้นวาง Vera Rubin แบบ Plug and Play ที่สามารถจัดส่งบนรถบรรทุกได้",
-        "Nvidia กล่าวว่า DSX Pod AI Factory ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์ สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
+        "Nvidia กล่าวว่าโรงงาน DSX Pod AI ซึ่งรวมชั้นวาง Vera Rubin เจ็ดตู้ไว้ในตู้คอนเทนเนอร์สามารถลดเวลาในการเริ่มให้บริการโทเค็น AI เหลือ 14 วัน",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-10",
       "title": "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
       "title_en": "AITX Q2 FY2027: Revenue Excluding Largest Customer Up 61% Year-Over-Year; Revenue Up 8% Sequentially",
       "summary": "AITX ไตรมาสที่ 2 ปีงบฯ 2027: รายได้ไม่รวมลูกค้ารายใหญ่ที่สุดเพิ่มขึ้น 61% เมื่อเทียบเป็นรายปี; รายรับเพิ่มขึ้น 8% ตามลำดับ",
       "source": "TMX Newsfile",
       "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitx-q2-fy2027-revenue-excluding-124000412.html",
-      "time": "6 นาทีที่แล้ว",
+      "time": "1 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T12:40:00Z",
       "category": "EARNINGS",
       "tickers": [
@@ -59,13 +280,13 @@
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-11",
       "title": "การซื้อขายหุ้นแบบ Tokenized ได้รับความนิยมในต่างประเทศ เนื่องจาก Goldman บริษัทอื่นๆ ในสหรัฐฯ คัดค้าน",
       "title_en": "Tokenized stock trading takes off overseas as Goldman, other U.S. companies object",
       "summary": "หุ้น Tokenized กำลังได้รับแรงผลักดันในตลาดต่างประเทศ แม้ว่าบริษัทรายใหญ่ในสหรัฐฯ จะต่อต้านความพยายามในการแนะนำหุ้นเหล่านี้ในประเทศก็ตาม",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/tokenized-stocks-us-companies-object.html",
-      "time": "12 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T12:33:34Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -87,97 +308,13 @@
       ]
     },
     {
-      "id": "news-4",
-      "title": "SpaceX เพิ่มขึ้น 8% ในตลาดล่วงหน้าหลังจากรายรับพุ่งสูงขึ้น และ Musk บอกเป็นนัยเกี่ยวกับการผูกมัดกับ Tesla",
-      "title_en": "SpaceX up 8% in premarket after earnings beat and Musk hints at Tesla tie-up",
-      "summary": "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/spacex-spcx-stock-musk-merger-tesla.html",
-      "time": "22 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T12:23:13Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:23 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "SpaceX เพิ่มขึ้น 8% ในตลาดล่วงหน้าหลังจากรายรับพุ่งสูงขึ้น และ Musk บอกเป็นนัยเกี่ยวกับการผูกมัดกับ Tesla",
-        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทรายงานการเติบโตของรายได้ที่เพิ่มขึ้นในไตรมาสที่สาม และเจ้าของ Elon Musk ลอยตัวในการควบรวมกิจการ SpaceX-Tesla ที่อาจเกิดขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX up 8% in premarket after earnings beat and Musk hints at Tesla tie-up\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "ฟิวเจอร์ส TSX พุ่งสูงขึ้นท่ามกลางราคาน้ำมันที่สูงขึ้น",
-      "title_en": "TSX futures tick higher amid elevated oil prices",
-      "summary": "ฟิวเจอร์ส TSX พุ่งสูงขึ้นท่ามกลางราคาน้ำมันที่สูงขึ้น",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/tsx-futures-tick-higher-amid-122209478.html",
-      "time": "24 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T12:22:09Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ฟิวเจอร์ส TSX พุ่งสูงขึ้นท่ามกลางราคาน้ำมันที่สูงขึ้น",
-        "แหล่งข่าวอ้างอิง: Investing.com (21/10/2026 12:22 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ฟิวเจอร์ส TSX พุ่งสูงขึ้นท่ามกลางราคาน้ำมันที่สูงขึ้น",
-        "ฟิวเจอร์ส TSX พุ่งสูงขึ้นท่ามกลางราคาน้ำมันที่สูงขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"TSX futures tick higher amid elevated oil prices\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "นักลงทุนกำลังตั้งคำถามกับรูปแบบธุรกิจของ Neoclouds แต่ Nebius กล่าวว่าราคาการประมวลผลของ AI กำลังสูงขึ้น",
-      "title_en": "Investors are questioning neoclouds' business model but Nebius says AI computing prices are rising",
-      "summary": "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/nebius-ai-computing-nvidia-gpu-prices.html",
-      "time": "25 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T12:21:07Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:21 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "นักลงทุนกำลังตั้งคำถามกับรูปแบบธุรกิจของ Neoclouds แต่ Nebius กล่าวว่าราคาการประมวลผลของ AI กำลังสูงขึ้น",
-        "ความคิดเห็นดังกล่าวเกิดขึ้นเมื่อนักลงทุนพิจารณาหนี้ ต้นทุนการกู้ยืม และเศรษฐศาสตร์ของบริษัทที่สร้างโครงสร้างพื้นฐาน AI",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Investors are questioning neoclouds' business model but Nebius says AI computing prices are rising\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
+      "id": "news-12",
       "title": "OpenAI เพื่อนำโมเดล AI มาสู่คลาวด์ของ Google ในการขยายเพิ่มเติมนอกเหนือจาก Microsoft",
       "title_en": "OpenAI to bring AI models to Google's cloud, in further expansion beyond Microsoft",
       "summary": "ขณะนี้ OpenAI จะมีโมเดลบนคลาวด์ชั้นนำทั้งสามแห่ง ทำให้นักพัฒนาองค์กรมีทางเลือกมากขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
-      "time": "25 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T12:20:13Z",
       "category": "TECH",
       "tickers": [
@@ -196,146 +333,6 @@
         "OpenAI เพื่อนำโมเดล AI มาสู่คลาวด์ของ Google ในการขยายเพิ่มเติมนอกเหนือจาก Microsoft",
         "ขณะนี้ OpenAI จะมีโมเดลบนคลาวด์ชั้นนำทั้งสามแห่ง ทำให้นักพัฒนาองค์กรมีทางเลือกมากขึ้น",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI to bring AI models to Google's cloud, in further expansion beyond Microsoft\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "ตลาดหุ้นวันนี้: ฟิวเจอร์สเทคโนโลยีเพิ่มขึ้นพร้อมรายรับของ SpaceX; Meta, Tesla ตั้งค่าให้รายงานในภายหลัง (ถ่ายทอดสด)",
-      "title_en": "Stock Market Today: Tech Futures Rise With SpaceX Earnings; Meta, Tesla Set To Report Later (Live Coverage)",
-      "summary": "ตลาดหุ้นวันนี้: ฟิวเจอร์สเทคโนโลยีเพิ่มขึ้นพร้อมรายรับของ SpaceX; Meta, Tesla ตั้งค่าให้รายงานในภายหลัง (ถ่ายทอดสด)",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/3cb9e8ae-4da0-30bd-9cec-6a0531abd9df/stock-market-today%3A-tech.html",
-      "time": "27 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T12:18:33Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "META",
-        "TSLA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้: ฟิวเจอร์สเทคโนโลยีเพิ่มขึ้นพร้อมรายรับของ SpaceX; Meta, Tesla ตั้งค่าให้รายงานในภายหลัง (ถ่ายทอดสด)",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (21/10/2026 12:18 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: ฟิวเจอร์สเทคโนโลยีเพิ่มขึ้นพร้อมรายรับของ SpaceX; Meta, Tesla ตั้งค่าให้รายงานในภายหลัง (ถ่ายทอดสด)",
-        "ตลาดหุ้นวันนี้: ฟิวเจอร์สเทคโนโลยีเพิ่มขึ้นพร้อมรายรับของ SpaceX; Meta, Tesla ตั้งค่าให้รายงานในภายหลัง (ถ่ายทอดสด)",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Tech Futures Rise With SpaceX Earnings; Meta, Tesla Set To Report Later (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "Dow Jones Futures เพิ่มขึ้นในขณะที่ SpaceX, Supermicro Revive AI Stocks; เทสลา เมต้าบนดาดฟ้า",
-      "title_en": "Dow Jones Futures Rise As SpaceX, Supermicro Revive AI Stocks; Tesla, Meta On Deck",
-      "summary": "Dow Jones Futures เพิ่มขึ้นในขณะที่ SpaceX, Supermicro Revive AI Stocks; เทสลา เมต้าบนดาดฟ้า",
-      "source": "Investor's Business Daily",
-      "sourceUrl": "https://finance.yahoo.com/m/40378091-9f13-35f6-a4eb-65961ef4434c/dow-jones-futures-rise-as.html",
-      "time": "27 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T12:18:29Z",
-      "category": "TECH",
-      "tickers": [
-        "META",
-        "TSLA",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Dow Jones Futures เพิ่มขึ้นในขณะที่ SpaceX, Supermicro Revive AI Stocks; เทสลา เมต้าบนดาดฟ้า",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (21/10/2026 12:18 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #DIA"
-      ],
-      "fullArticle": [
-        "Dow Jones Futures เพิ่มขึ้นในขณะที่ SpaceX, Supermicro Revive AI Stocks; เทสลา เมต้าบนดาดฟ้า",
-        "Dow Jones Futures เพิ่มขึ้นในขณะที่ SpaceX, Supermicro Revive AI Stocks; เทสลา เมต้าบนดาดฟ้า",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Dow Jones Futures Rise As SpaceX, Supermicro Revive AI Stocks; Tesla, Meta On Deck\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "Musk กล่าวว่า Tesla และ SpaceX ได้จัดตั้งคณะกรรมการพิเศษเพื่อหารือเกี่ยวกับการควบรวมกิจการ: การอัปเดตสด",
-      "title_en": "Musk says Tesla and SpaceX formed special committees to discuss merger: Live updates",
-      "summary": "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทเอาชนะรายได้และออกคำแนะนำที่ดีขึ้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html",
-      "time": "37 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T12:08:16Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทเอาชนะรายได้และออกคำแนะนำที่ดีขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 12:08 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "Musk กล่าวว่า Tesla และ SpaceX ได้จัดตั้งคณะกรรมการพิเศษเพื่อหารือเกี่ยวกับการควบรวมกิจการ: การอัปเดตสด",
-        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทเอาชนะรายได้และออกคำแนะนำที่ดีขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Musk says Tesla and SpaceX formed special committees to discuss merger: Live updates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "ฤดูผลประกอบการ อัตราผลตอบแทนพันธบัตรที่มั่นคง หนุนตลาดหุ้นยุโรปในช่วงเที่ยงวัน",
-      "title_en": "Earnings Season, Stable Bond Yields Lift European Bourses Midday",
-      "summary": "ฤดูผลประกอบการ อัตราผลตอบแทนพันธบัตรที่มั่นคง หนุนตลาดหุ้นยุโรปในช่วงเที่ยงวัน",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/earnings-season-stable-bond-yields-115222212.html",
-      "time": "53 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T11:52:22Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ฤดูผลประกอบการ อัตราผลตอบแทนพันธบัตรที่มั่นคง หนุนตลาดหุ้นยุโรปในช่วงเที่ยงวัน",
-        "แหล่งข่าวอ้างอิง: MT Newswires (21/10/2026 11:52 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "ฤดูผลประกอบการ อัตราผลตอบแทนพันธบัตรที่มั่นคง หนุนตลาดหุ้นยุโรปในช่วงเที่ยงวัน",
-        "ฤดูผลประกอบการ อัตราผลตอบแทนพันธบัตรที่มั่นคง หนุนตลาดหุ้นยุโรปในช่วงเที่ยงวัน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Earnings Season, Stable Bond Yields Lift European Bourses Midday\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "Southwest และ American Airlines เผชิญกับการทดสอบเชื้อเพลิงเครื่องบินเมื่อรายได้มาถึง",
-      "title_en": "Southwest and American Airlines Face a Jet Fuel Test as Earnings Arrive",
-      "summary": "Southwest และ American Airlines เผชิญกับการทดสอบเชื้อเพลิงเครื่องบินเมื่อรายได้มาถึง",
-      "source": "24/7 Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/southwest-american-airlines-face-jet-115038259.html",
-      "time": "55 นาทีที่แล้ว",
-      "publishedAt": "2026-10-21T11:50:38Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Southwest และ American Airlines เผชิญกับการทดสอบเชื้อเพลิงเครื่องบินเมื่อรายได้มาถึง",
-        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (21/10/2026 11:50 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "Southwest และ American Airlines เผชิญกับการทดสอบเชื้อเพลิงเครื่องบินเมื่อรายได้มาถึง",
-        "Southwest และ American Airlines เผชิญกับการทดสอบเชื้อเพลิงเครื่องบินเมื่อรายได้มาถึง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Southwest and American Airlines Face a Jet Fuel Test as Earnings Arrive\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
