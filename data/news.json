@@ -1,47 +1,17 @@
 {
-  "updated_at": "2026-10-20T23:27:02Z",
-  "updated_at_thai": "21 ต.ค. 2569 06:27 น.",
+  "updated_at": "2026-10-21T01:50:47Z",
+  "updated_at_thai": "21 ต.ค. 2569 08:50 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq ร่วงลงเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
-      "title_en": "Stock market today: Dow, S&P 500 rise, Nasdaq slips as investors await SpaceX, Netflix earnings",
-      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq ร่วงลงเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-dow-rises-sp-500-nasdaq-climb-as-dip-buying-resumes-165236471.html",
-      "time": "7 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T23:19:49Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA",
-        "NFLX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
-      "points": [
-        "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq ร่วงลงเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (20/10/2026 23:19 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA #NFLX"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq ร่วงลงเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
-        "ตลาดหุ้นวันนี้: ดาวโจนส์, S&P 500 เพิ่มขึ้น, Nasdaq ร่วงลงเนื่องจากนักลงทุนรอ SpaceX, ผลประกอบการของ Netflix",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500 rise, Nasdaq slips as investors await SpaceX, Netflix earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-2",
       "title": "Dow Jones Futures: หุ้น AI กระโดดขึ้นไปบน SpaceX, Supermicro; เทสลา เมต้าบนดาดฟ้า",
       "title_en": "Dow Jones Futures: AI Stocks Jump On SpaceX, Supermicro; Tesla, Meta On Deck",
       "summary": "Dow Jones Futures: หุ้น AI กระโดดขึ้นไปบน SpaceX, Supermicro; เทสลา เมต้าบนดาดฟ้า",
       "source": "Investor's Business Daily",
       "sourceUrl": "https://finance.yahoo.com/m/40378091-9f13-35f6-a4eb-65961ef4434c/dow-jones-futures%3A-ai-stocks.html",
-      "time": "18 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T23:08:41Z",
+      "time": "1 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T01:48:54Z",
       "category": "TECH",
       "tickers": [
         "META",
@@ -50,10 +20,10 @@
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
+      "isHero": true,
       "points": [
         "Dow Jones Futures: หุ้น AI กระโดดขึ้นไปบน SpaceX, Supermicro; เทสลา เมต้าบนดาดฟ้า",
-        "แหล่งข่าวอ้างอิง: Investor's Business Daily (20/10/2026 23:08 UTC)",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (21/10/2026 01:48 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #DIA"
       ],
       "fullArticle": [
@@ -63,14 +33,42 @@
       ]
     },
     {
+      "id": "news-2",
+      "title": "หุ้นของ NextDC ผู้ดำเนินการศูนย์ข้อมูลในออสเตรเลียร่วงลง 40% หลังจากปรับลดประมาณการกำไร",
+      "title_en": "Australian data center operator NextDC's shares plunge 40% after it slashes earnings forecast",
+      "summary": "บริษัทอ้างถึงความล่าช้าในการจ่ายไฟที่โรงงานในเมลเบิร์น ท่ามกลางความขัดแย้งของชุมชนท้องถิ่นและผู้มีส่วนได้ส่วนเสียในการลดการคาดการณ์รายได้",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/australia-data-center-operator-nexdc-datacenter.html",
+      "time": "6 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T01:44:42Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "บริษัทอ้างถึงความล่าช้าในการจ่ายไฟที่โรงงานในเมลเบิร์น ท่ามกลางความขัดแย้งของชุมชนท้องถิ่นและผู้มีส่วนได้ส่วนเสียในการลดการคาดการณ์รายได้",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 01:44 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "หุ้นของ NextDC ผู้ดำเนินการศูนย์ข้อมูลในออสเตรเลียร่วงลง 40% หลังจากปรับลดประมาณการกำไร",
+        "บริษัทอ้างถึงความล่าช้าในการจ่ายไฟที่โรงงานในเมลเบิร์น ท่ามกลางความขัดแย้งของชุมชนท้องถิ่นและผู้มีส่วนได้ส่วนเสียในการลดการคาดการณ์รายได้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Australian data center operator NextDC's shares plunge 40% after it slashes earnings forecast\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
       "id": "news-3",
-      "title": "นายธนาคารกลางออสเตรเลียกล่าวว่านโยบายใช้งานได้ แต่แนวโน้มเงินเฟ้อแย่ลง",
-      "title_en": "Australian central banker says policy working, but inflation outlook worse",
-      "summary": "นายธนาคารกลางออสเตรเลียกล่าวว่านโยบายใช้งานได้ แต่แนวโน้มเงินเฟ้อแย่ลง",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/economy/policy/articles/australia-central-banker-says-policy-221416518.html",
-      "time": "26 นาทีที่แล้ว",
-      "publishedAt": "2026-10-20T23:01:00Z",
+      "title": "แนวโน้มอัตราเงินเฟ้อของออสเตรเลีย 'แย่ลงอย่างมาก' รองผู้อำนวยการ RBA เฮาเซอร์กล่าว",
+      "title_en": "Australia inflation outlook ‘materially worse’, RBA deputy Hauser says",
+      "summary": "แนวโน้มอัตราเงินเฟ้อของออสเตรเลีย 'แย่ลงอย่างมาก' รองผู้อำนวยการ RBA เฮาเซอร์กล่าว",
+      "source": "Investing.com",
+      "sourceUrl": "https://finance.yahoo.com/economy/policy/articles/australia-inflation-outlook-materially-worse-013456334.html",
+      "time": "15 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T01:34:56Z",
       "category": "MACRO",
       "tickers": [
         "SPY",
@@ -81,24 +79,193 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "นายธนาคารกลางออสเตรเลียกล่าวว่านโยบายใช้งานได้ แต่แนวโน้มเงินเฟ้อแย่ลง",
-        "แหล่งข่าวอ้างอิง: Reuters (20/10/2026 23:01 UTC)",
+        "แนวโน้มอัตราเงินเฟ้อของออสเตรเลีย 'แย่ลงอย่างมาก' รองผู้อำนวยการ RBA เฮาเซอร์กล่าว",
+        "แหล่งข่าวอ้างอิง: Investing.com (21/10/2026 01:34 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "นายธนาคารกลางออสเตรเลียกล่าวว่านโยบายใช้งานได้ แต่แนวโน้มเงินเฟ้อแย่ลง",
-        "นายธนาคารกลางออสเตรเลียกล่าวว่านโยบายใช้งานได้ แต่แนวโน้มเงินเฟ้อแย่ลง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Australian central banker says policy working, but inflation outlook worse\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "แนวโน้มอัตราเงินเฟ้อของออสเตรเลีย 'แย่ลงอย่างมาก' รองผู้อำนวยการ RBA เฮาเซอร์กล่าว",
+        "แนวโน้มอัตราเงินเฟ้อของออสเตรเลีย 'แย่ลงอย่างมาก' รองผู้อำนวยการ RBA เฮาเซอร์กล่าว",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Australia inflation outlook ‘materially worse’, RBA deputy Hauser says\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-4",
+      "title": "ราคาน้ำมันสูงขึ้นจากความตึงเครียด M.East, การดึงสินค้าคงคลังของสหรัฐฯ",
+      "title_en": "Oil prices rise on M.East tensions, U.S. inventory draw",
+      "summary": "ราคาน้ำมันสูงขึ้นจากความตึงเครียด M.East, การดึงสินค้าคงคลังของสหรัฐฯ",
+      "source": "Investing.com",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-rise-m-east-011922470.html",
+      "time": "31 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T01:19:22Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ราคาน้ำมันสูงขึ้นจากความตึงเครียด M.East, การดึงสินค้าคงคลังของสหรัฐฯ",
+        "แหล่งข่าวอ้างอิง: Investing.com (21/10/2026 01:19 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ราคาน้ำมันสูงขึ้นจากความตึงเครียด M.East, การดึงสินค้าคงคลังของสหรัฐฯ",
+        "ราคาน้ำมันสูงขึ้นจากความตึงเครียด M.East, การดึงสินค้าคงคลังของสหรัฐฯ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices rise on M.East tensions, U.S. inventory draw\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "ผู้ซื้อรถยนต์ต้องการราคาที่ต่ำกว่าและเทคโนโลยีที่ดีกว่า ผู้ผลิตรถยนต์จะต้องส่งมอบทั้งสองอย่าง",
+      "title_en": "Car buyers are demanding lower prices and better tech. Automakers must deliver both",
+      "summary": "Bain กล่าวว่าเทคโนโลยีเป็นผู้นำในการพิจารณาซื้อในจีน ในขณะที่ราคายังคงเป็นที่ 1 ในสหรัฐอเมริกาและยุโรป เนื่องจากแรงกดดันต่อผู้ผลิตรถยนต์ของชาติตะวันตก",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/car-buyers-china-tech-price-europe.html",
+      "time": "49 นาทีที่แล้ว",
+      "publishedAt": "2026-10-21T01:01:01Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "Bain กล่าวว่าเทคโนโลยีเป็นผู้นำในการพิจารณาซื้อในจีน ในขณะที่ราคายังคงเป็นที่ 1 ในสหรัฐอเมริกาและยุโรป เนื่องจากแรงกดดันต่อผู้ผลิตรถยนต์ของชาติตะวันตก",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 01:01 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "ผู้ซื้อรถยนต์ต้องการราคาที่ต่ำกว่าและเทคโนโลยีที่ดีกว่า ผู้ผลิตรถยนต์จะต้องส่งมอบทั้งสองอย่าง",
+        "Bain กล่าวว่าเทคโนโลยีเป็นผู้นำในการพิจารณาซื้อในจีน ในขณะที่ราคายังคงเป็นที่ 1 ในสหรัฐอเมริกาและยุโรป เนื่องจากแรงกดดันต่อผู้ผลิตรถยนต์ของชาติตะวันตก",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Car buyers are demanding lower prices and better tech. Automakers must deliver both\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "Musk กล่าวว่า Tesla และ SpaceX ได้จัดตั้งคณะกรรมการพิเศษเพื่อหารือเกี่ยวกับการควบรวมกิจการ: การอัปเดตสด",
+      "title_en": "Musk says Tesla and SpaceX formed special committees to discuss merger: Live updates",
+      "summary": "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทเอาชนะรายได้และออกคำแนะนำที่ดีขึ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-21T00:42:08Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทเอาชนะรายได้และออกคำแนะนำที่ดีขึ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 00:42 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "Musk กล่าวว่า Tesla และ SpaceX ได้จัดตั้งคณะกรรมการพิเศษเพื่อหารือเกี่ยวกับการควบรวมกิจการ: การอัปเดตสด",
+        "หุ้น SpaceX พุ่งขึ้นหลังจากที่บริษัทเอาชนะรายได้และออกคำแนะนำที่ดีขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Musk says Tesla and SpaceX formed special committees to discuss merger: Live updates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "นายธนาคารกลางออสเตรเลียกล่าวว่าแนวโน้มเงินเฟ้อแย่ลง ไม่แน่ใจเกี่ยวกับการขึ้นอัตราดอกเบี้ยในเดือนพฤศจิกายน",
+      "title_en": "Australian central banker says inflation outlook worse, unsure about November rate hike",
+      "summary": "นายธนาคารกลางออสเตรเลียกล่าวว่าแนวโน้มเงินเฟ้อแย่ลง ไม่แน่ใจเกี่ยวกับการขึ้นอัตราดอกเบี้ยในเดือนพฤศจิกายน",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/economy/policy/articles/australia-central-banker-says-policy-221416518.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-21T00:27:25Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "นายธนาคารกลางออสเตรเลียกล่าวว่าแนวโน้มเงินเฟ้อแย่ลง ไม่แน่ใจเกี่ยวกับการขึ้นอัตราดอกเบี้ยในเดือนพฤศจิกายน",
+        "แหล่งข่าวอ้างอิง: Reuters (21/10/2026 00:27 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "นายธนาคารกลางออสเตรเลียกล่าวว่าแนวโน้มเงินเฟ้อแย่ลง ไม่แน่ใจเกี่ยวกับการขึ้นอัตราดอกเบี้ยในเดือนพฤศจิกายน",
+        "นายธนาคารกลางออสเตรเลียกล่าวว่าแนวโน้มเงินเฟ้อแย่ลง ไม่แน่ใจเกี่ยวกับการขึ้นอัตราดอกเบี้ยในเดือนพฤศจิกายน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Australian central banker says inflation outlook worse, unsure about November rate hike\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "โพสต์ของ Beach Energy บันทึกรายรับรายไตรมาสที่ 565 ล้านดอลลาร์ เนื่องจากราคาการผลิตและราคาก๊าซสูงขึ้น",
+      "title_en": "Beach Energy posts record $565 million quarterly revenue as production and gas prices rise",
+      "summary": "โพสต์ของ Beach Energy บันทึกรายรับรายไตรมาสที่ 565 ล้านดอลลาร์ เนื่องจากราคาการผลิตและราคาก๊าซสูงขึ้น",
+      "source": "Proactive",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/beach-energy-posts-record-565-000700241.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-21T00:07:00Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "โพสต์ของ Beach Energy บันทึกรายรับรายไตรมาสที่ 565 ล้านดอลลาร์ เนื่องจากราคาการผลิตและราคาก๊าซสูงขึ้น",
+        "แหล่งข่าวอ้างอิง: Proactive (21/10/2026 00:07 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "โพสต์ของ Beach Energy บันทึกรายรับรายไตรมาสที่ 565 ล้านดอลลาร์ เนื่องจากราคาการผลิตและราคาก๊าซสูงขึ้น",
+        "โพสต์ของ Beach Energy บันทึกรายรับรายไตรมาสที่ 565 ล้านดอลลาร์ เนื่องจากราคาการผลิตและราคาก๊าซสูงขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Beach Energy posts record $565 million quarterly revenue as production and gas prices rise\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "ไตรมาสที่แข็งแกร่งของ Capital One และการรวม Discover ที่ก้าวหน้าได้รับรางวัลใน Wall Street",
+      "title_en": "Capital One's strong quarter and progressing Discover integration are rewarded on Wall Street",
+      "summary": "รายได้ดอกเบี้ยสุทธิและผลการดำเนินงานด้านเครดิตที่แข็งแกร่งขึ้นถือเป็นปัจจัยสำคัญในรายได้ของธนาคาร",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/20/capital-one-strong-quarter-and-progressing-discover-integration-are-rewarded.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-20T23:34:14Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "รายได้ดอกเบี้ยสุทธิและผลการดำเนินงานด้านเครดิตที่แข็งแกร่งขึ้นถือเป็นปัจจัยสำคัญในรายได้ของธนาคาร",
+        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 23:34 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "ไตรมาสที่แข็งแกร่งของ Capital One และการรวม Discover ที่ก้าวหน้าได้รับรางวัลใน Wall Street",
+        "รายได้ดอกเบี้ยสุทธิและผลการดำเนินงานด้านเครดิตที่แข็งแกร่งขึ้นถือเป็นปัจจัยสำคัญในรายได้ของธนาคาร",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Capital One's strong quarter and progressing Discover integration are rewarded on Wall Street\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
       "title": "หุ้นมีการเคลื่อนไหวครั้งใหญ่ที่สุดหลังเวลาผ่านไป: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX และอีกมากมาย",
       "title_en": "Stocks making the biggest moves after hours: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX & more",
       "summary": "ต่อไปนี้คือบริษัทบางส่วนที่พาดหัวข่าวหลังระฆังปิด",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-after-hours-isrg-nflx-spcx.html",
-      "time": "31 นาทีที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-20T22:55:27Z",
       "category": "MACRO",
       "tickers": [
@@ -119,13 +286,13 @@
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-11",
       "title": "Netflix ประกาศผลประกอบการไตรมาสสามพุ่งสูงขึ้น แต่หุ้นตกลงจากการโฆษณาและคำแนะนำด้านรายได้",
       "title_en": "Netflix posts third-quarter earnings beat, but shares fall on advertising and revenue guidance",
       "summary": "Wall Street และนักลงทุนจะมองหา Netflix เพื่อให้รายละเอียดเพิ่มเติมเกี่ยวกับกลยุทธ์ของบริษัทภายหลังการเปลี่ยนแปลงองค์กรครั้งล่าสุด",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/netflix-nflx-earnings-q3-2026.html",
-      "time": "57 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-20T22:29:45Z",
       "category": "EARNINGS",
       "tickers": [
@@ -146,95 +313,13 @@
       ]
     },
     {
-      "id": "news-6",
-      "title": "Musk กล่าวว่า Tesla และ SpaceX ได้จัดตั้งคณะกรรมการพิเศษเพื่อหารือเกี่ยวกับการควบรวมกิจการ: การอัปเดตสด",
-      "title_en": "Musk says Tesla and SpaceX formed special committees to discuss merger: Live updates",
-      "summary": "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T22:03:15Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 22:03 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "Musk กล่าวว่า Tesla และ SpaceX ได้จัดตั้งคณะกรรมการพิเศษเพื่อหารือเกี่ยวกับการควบรวมกิจการ: การอัปเดตสด",
-        "ติดตามผลประกอบการไตรมาส 3 ปี 2569 ของ SpaceX แบบถ่ายทอดสด พร้อมอัปเดตเกี่ยวกับรายได้, Starlink, การใช้จ่ายด้าน AI, Starship, คำแนะนำ และหุ้น SPCX",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Musk says Tesla and SpaceX formed special committees to discuss merger: Live updates\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "หุ้นส่วนใหญ่ขึ้นตามน้ำมัน ส่วนสหรัฐฯ ให้ผลตอบแทนผ่อนคลาย หุ้นฝรั่งเศสตก",
-      "title_en": "Stocks mostly rise as oil, US yields ease; French stocks fall",
-      "summary": "หุ้นส่วนใหญ่ขึ้นตามน้ำมัน ส่วนสหรัฐฯ ให้ผลตอบแทนผ่อนคลาย หุ้นฝรั่งเศสตก",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asian-shares-tumble-oil-rises-021045839.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T22:01:32Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "หุ้นส่วนใหญ่ขึ้นตามน้ำมัน ส่วนสหรัฐฯ ให้ผลตอบแทนผ่อนคลาย หุ้นฝรั่งเศสตก",
-        "แหล่งข่าวอ้างอิง: Reuters (20/10/2026 22:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "หุ้นส่วนใหญ่ขึ้นตามน้ำมัน ส่วนสหรัฐฯ ให้ผลตอบแทนผ่อนคลาย หุ้นฝรั่งเศสตก",
-        "หุ้นส่วนใหญ่ขึ้นตามน้ำมัน ส่วนสหรัฐฯ ให้ผลตอบแทนผ่อนคลาย หุ้นฝรั่งเศสตก",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks mostly rise as oil, US yields ease; French stocks fall\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "อัปเดต: ดัชนีหุ้นสหรัฐผสมกับความอ่อนแอในบริการการสื่อสาร เทคโนโลยียับยั้ง Nasdaq Composite",
-      "title_en": "Update: US Equity Indexes Mixed as Weakness in Communications Services, Technology Restrains Nasdaq Composite",
-      "summary": "อัปเดต: ดัชนีหุ้นสหรัฐผสมกับความอ่อนแอในบริการการสื่อสาร เทคโนโลยียับยั้ง Nasdaq Composite",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-weakness-213459750.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T21:34:59Z",
-      "category": "TECH",
-      "tickers": [
-        "QQQ"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "อัปเดต: ดัชนีหุ้นสหรัฐผสมกับความอ่อนแอในบริการการสื่อสาร เทคโนโลยียับยั้ง Nasdaq Composite",
-        "แหล่งข่าวอ้างอิง: MT Newswires (20/10/2026 21:34 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
-      ],
-      "fullArticle": [
-        "อัปเดต: ดัชนีหุ้นสหรัฐผสมกับความอ่อนแอในบริการการสื่อสาร เทคโนโลยียับยั้ง Nasdaq Composite",
-        "อัปเดต: ดัชนีหุ้นสหรัฐผสมกับความอ่อนแอในบริการการสื่อสาร เทคโนโลยียับยั้ง Nasdaq Composite",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Indexes Mixed as Weakness in Communications Services, Technology Restrains Nasdaq Composite\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
+      "id": "news-12",
       "title": "Salesforce ประกาศข้อตกลงมูลค่า 5.66 พันล้านดอลลาร์สำหรับ Braze ส่งผลให้หุ้น BRZE ทะยานขึ้น 51%",
       "title_en": "Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 51%",
       "summary": "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/20/salesforce-braze-acquisition-deal.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-20T20:10:30Z",
       "category": "TECH",
       "tickers": [
@@ -252,90 +337,6 @@
         "Salesforce ประกาศข้อตกลงมูลค่า 5.66 พันล้านดอลลาร์สำหรับ Braze ส่งผลให้หุ้น BRZE ทะยานขึ้น 51%",
         "การเข้าซื้อกิจการครั้งล่าสุดของบริษัทคาดว่าจะปิดตัวลงในปีงบประมาณ 2571 และผู้ถือหุ้นของ Braze จะได้รับเงินสด 47.50 ดอลลาร์ต่อหุ้น",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 51%\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
-      "title_en": "General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance",
-      "summary": "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T20:08:44Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 20:08 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "เจนเนอรัลมอเตอร์สเอาชนะการคาดการณ์ผลประกอบการไตรมาส 3 ของวอลล์สตรีทและปรับคำแนะนำทั้งปีให้แคบลง",
-        "จีเอ็ม จำกัด คำแนะนำผลประกอบการปี 2569 ให้แคบลงและเพิ่มแนวโน้มกระแสเงินสดอิสระของยานยนต์ที่ปรับแล้วหลังจากสูงกว่าประมาณการไตรมาสสามของวอลล์สตรีท",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "ที่อยู่อาศัยกำลังส่งสัญญาณเตือนภัยกระพริบในขณะที่เฟดชั่งน้ำหนักการปรับขึ้นอัตราดอกเบี้ยมากขึ้น",
-      "title_en": "Housing is flashing warning signs just as the Fed weighs more interest rate hikes",
-      "summary": "ข้อมูลที่อยู่อาศัยเสื่อมลงอีกในเดือนกันยายนตามรายงานแยกกันเมื่อวันอังคาร",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/20/housing-mortgage-rates-real-estate-federal-reserve.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T19:28:43Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "ข้อมูลที่อยู่อาศัยเสื่อมลงอีกในเดือนกันยายนตามรายงานแยกกันเมื่อวันอังคาร",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 19:28 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "ที่อยู่อาศัยกำลังส่งสัญญาณเตือนภัยกระพริบในขณะที่เฟดชั่งน้ำหนักการปรับขึ้นอัตราดอกเบี้ยมากขึ้น",
-        "ข้อมูลที่อยู่อาศัยเสื่อมลงอีกในเดือนกันยายนตามรายงานแยกกันเมื่อวันอังคาร",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Housing is flashing warning signs just as the Fed weighs more interest rate hikes\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "สิ่งที่ Amazon ต้องทำเพื่อให้หุ้นที่สะดุดกลับขึ้นสู่ระดับสูงสุดเป็นประวัติการณ์และเหนือกว่านั้น",
-      "title_en": "What Amazon must do to get its stumbling stock back to record highs and beyond",
-      "summary": "ประสิทธิภาพของ Amazon Web Services คือกุญแจสำคัญ",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/20/what-amazon-must-do-to-get-its-stumbling-stock-back-to-record-highs-and-beyond.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-20T16:49:28Z",
-      "category": "TECH",
-      "tickers": [
-        "AMZN"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ประสิทธิภาพของ Amazon Web Services คือกุญแจสำคัญ",
-        "แหล่งข่าวอ้างอิง: CNBC (20/10/2026 16:49 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AMZN"
-      ],
-      "fullArticle": [
-        "สิ่งที่ Amazon ต้องทำเพื่อให้หุ้นที่สะดุดกลับขึ้นสู่ระดับสูงสุดเป็นประวัติการณ์และเหนือกว่านั้น",
-        "ประสิทธิภาพของ Amazon Web Services คือกุญแจสำคัญ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"What Amazon must do to get its stumbling stock back to record highs and beyond\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
