@@ -9114,6 +9114,7 @@
 
         async function loadStaticPrices() {
             const urls = [
+                `https://raw.githubusercontent.com/rentrama2/myportfolio/main/data/prices.json?t=${Date.now()}`,
                 `./data/prices.json?t=${Date.now()}`,
                 `https://rentrama2.github.io/myportfolio/data/prices.json?t=${Date.now()}`
             ];
@@ -9164,6 +9165,8 @@
                                 localStorage.setItem('myExtendedHoursPrices', JSON.stringify(extendedHoursPrices));
                             }
                             localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
+                            if (typeof updateSummaryAndChart === 'function') updateSummaryAndChart();
+                            if (typeof renderHoldingsTable === 'function') renderHoldingsTable();
                             if (typeof renderTechWatchlist === 'function') {
                                 try {
                                     renderTechWatchlist();
@@ -9805,7 +9808,7 @@
                 const shouldForceFetch = isManual; // หากผู้ใช้กดเองหรือ Auto ให้ดึงสดข้ามแคช
                 
                 await Promise.all(tickerList.map(async tk => {
-                    if (shouldForceFetch || !marketPrices[tk] || marketPrices[tk] <= 0) {
+                    if (!marketPrices[tk] || marketPrices[tk] <= 0) {
                         const price = await fetchStockPrice(tk, shouldForceFetch);
                         if (price && price > 0) {
                             marketPrices[tk] = price;
@@ -9844,7 +9847,7 @@
                 }
 
                 if (badge) {
-                    if (updatedCount > 0 || fxUpdated) {
+                    if (updatedCount > 0 || fxUpdated || lastPricesSyncTime) {
                         const syncLabel = isManual ? `อัปเดตสด ${timeStr} น.` : (lastPricesSyncTime ? `อัปเดต ${lastPricesSyncTime}` : `อัปเดต ${timeStr} น.`);
                         badge.innerText = `(${syncLabel} | ฿${liveFxRate.toFixed(2)})`;
                         badge.className = 'badge bg-success bg-opacity-10 text-success border border-success py-1 px-2';
@@ -14468,6 +14471,7 @@
             isFetchingLiveMarketNews = true;
 
             const urls = [
+                `https://raw.githubusercontent.com/rentrama2/myportfolio/main/data/news.json?t=${Date.now()}`,
                 `./data/news.json?t=${Date.now()}`,
                 `https://rentrama2.github.io/myportfolio/data/news.json?t=${Date.now()}`
             ];
