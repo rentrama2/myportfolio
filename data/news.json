@@ -1,46 +1,130 @@
 {
-  "updated_at": "2026-10-22T05:25:00Z",
-  "updated_at_thai": "22 ต.ค. 2569 12:25 น.",
+  "updated_at": "2026-10-22T10:28:04Z",
+  "updated_at_thai": "22 ต.ค. 2569 17:28 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "หุ้นเอเชียร่วงลงเนื่องจากความกระวนกระวายใจของ AI ส่งผลกระทบต่อผู้ผลิตชิปเกาหลี",
-      "title_en": "Asia stocks slide as AI jitters hit Korean chipmakers",
-      "summary": "หุ้นเอเชียร่วงลงเนื่องจากความกระวนกระวายใจของ AI ส่งผลกระทบต่อผู้ผลิตชิปเกาหลี",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/asia-stocks-slide-ai-jitters-042543916.html",
-      "time": "59 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T04:25:43Z",
+      "title": "Jensen Huang ซีอีโอของ Nvidia กล่าวว่าอุปสงค์ของ Neocloud นั้น 'ไม่อยู่ในแผนภูมิ' แต่เงินทุนยังหายาก",
+      "title_en": "Nvidia CEO Jensen Huang says neocloud demand is 'off the charts' but capital is scarce",
+      "summary": "Jensen Huang ซีอีโอของ Nvidia กล่าวกับ CNBC เมื่อวันพฤหัสบดีว่าความต้องการบริษัท Neocloud นั้น \"ไม่อยู่ในแผน\" แต่เงินทุนที่ขาดแคลนกำลังขัดขวางการเติบโต",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/22/nvidia-jensen-huang-neocloud-demand-capital.html",
+      "time": "8 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T10:19:05Z",
       "category": "TECH",
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
+        "NVDA"
       ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": true,
       "points": [
-        "หุ้นเอเชียร่วงลงเนื่องจากความกระวนกระวายใจของ AI ส่งผลกระทบต่อผู้ผลิตชิปเกาหลี",
-        "แหล่งข่าวอ้างอิง: Investing.com (22/10/2026 04:25 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+        "Jensen Huang ซีอีโอของ Nvidia กล่าวกับ CNBC เมื่อวันพฤหัสบดีว่าความต้องการบริษัท Neocloud นั้น \"ไม่อยู่ในแผน\" แต่เงินทุนที่ขาดแคลนกำลังขัดขวางการเติบโต",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 10:19 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
       ],
       "fullArticle": [
-        "หุ้นเอเชียร่วงลงเนื่องจากความกระวนกระวายใจของ AI ส่งผลกระทบต่อผู้ผลิตชิปเกาหลี",
-        "หุ้นเอเชียร่วงลงเนื่องจากความกระวนกระวายใจของ AI ส่งผลกระทบต่อผู้ผลิตชิปเกาหลี",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asia stocks slide as AI jitters hit Korean chipmakers\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Jensen Huang ซีอีโอของ Nvidia กล่าวว่าอุปสงค์ของ Neocloud นั้น 'ไม่อยู่ในแผนภูมิ' แต่เงินทุนยังหายาก",
+        "Jensen Huang ซีอีโอของ Nvidia กล่าวกับ CNBC เมื่อวันพฤหัสบดีว่าความต้องการบริษัท Neocloud นั้น \"ไม่อยู่ในแผน\" แต่เงินทุนที่ขาดแคลนกำลังขัดขวางการเติบโต",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia CEO Jensen Huang says neocloud demand is 'off the charts' but capital is scarce\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "หุ้นพลังงานของสหราชอาณาจักรที่น่าจับตามอง เนื่องจากราคาน้ำมันและอัตราเงินเฟ้อยังคงอยู่ในโฟกัส",
-      "title_en": "UK Energy Stocks To Watch As Oil Prices And Inflation Stay In Focus",
-      "summary": "หุ้นพลังงานของสหราชอาณาจักรที่น่าจับตามอง เนื่องจากราคาน้ำมันและอัตราเงินเฟ้อยังคงอยู่ในโฟกัส",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/uk-energy-stocks-watch-oil-042531842.html",
-      "time": "59 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T04:25:31Z",
+      "title": "Commerzbank กล่าวว่าคลังได้รับเพิ่มขึ้น ส่วนสัญญาซื้อขายล่วงหน้าหุ้นสหรัฐร่วงลงเนื่องจากราคาน้ำมันปรับตัวสูงขึ้น",
+      "title_en": "Commerzbank Says Treasuries Gain, US Equity Futures Fall as Oil Prices Rise",
+      "summary": "Commerzbank กล่าวว่าคลังได้รับเพิ่มขึ้น ส่วนสัญญาซื้อขายล่วงหน้าหุ้นสหรัฐร่วงลงเนื่องจากราคาน้ำมันปรับตัวสูงขึ้น",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/economy/articles/commerzbank-says-treasuries-gain-us-101810738.html",
+      "time": "9 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T10:18:10Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Commerzbank กล่าวว่าคลังได้รับเพิ่มขึ้น ส่วนสัญญาซื้อขายล่วงหน้าหุ้นสหรัฐร่วงลงเนื่องจากราคาน้ำมันปรับตัวสูงขึ้น",
+        "แหล่งข่าวอ้างอิง: MT Newswires (22/10/2026 10:18 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "Commerzbank กล่าวว่าคลังได้รับเพิ่มขึ้น ส่วนสัญญาซื้อขายล่วงหน้าหุ้นสหรัฐร่วงลงเนื่องจากราคาน้ำมันปรับตัวสูงขึ้น",
+        "Commerzbank กล่าวว่าคลังได้รับเพิ่มขึ้น ส่วนสัญญาซื้อขายล่วงหน้าหุ้นสหรัฐร่วงลงเนื่องจากราคาน้ำมันปรับตัวสูงขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Commerzbank Says Treasuries Gain, US Equity Futures Fall as Oil Prices Rise\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเนื่องจากผู้ค้าประเมินกำไรของ Tesla, Meta",
+      "title_en": "Stock market today: Dow, S&P 500, Nasdaq futures fall as traders assess Tesla, Meta earnings",
+      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเนื่องจากผู้ค้าประเมินกำไรของ Tesla, Meta",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-21-dow-sp-500-nasdaq-tesla-meta-094500493.html",
+      "time": "43 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T09:45:00Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "META",
+        "TSLA",
+        "SPY",
+        "QQQ",
+        "DIA"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเนื่องจากผู้ค้าประเมินกำไรของ Tesla, Meta",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (22/10/2026 09:45 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #SPY #QQQ #DIA"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเนื่องจากผู้ค้าประเมินกำไรของ Tesla, Meta",
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเนื่องจากผู้ค้าประเมินกำไรของ Tesla, Meta",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq futures fall as traders assess Tesla, Meta earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "ฟิวเจอร์ส Nasdaq ลดลงกว่า 1% เนื่องจากความกังวลของ AI กลับมาอีกครั้ง และน้ำมันก็พุ่งสูงขึ้น",
+      "title_en": "Nasdaq futures drop over 1% as AI worries resurface, oil climbs",
+      "summary": "ฟิวเจอร์ส Nasdaq ลดลงกว่า 1% เนื่องจากความกังวลของ AI กลับมาอีกครั้ง และน้ำมันก็พุ่งสูงขึ้น",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-drop-over-1-093849296.html",
+      "time": "49 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T09:38:49Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "QQQ"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ฟิวเจอร์ส Nasdaq ลดลงกว่า 1% เนื่องจากความกังวลของ AI กลับมาอีกครั้ง และน้ำมันก็พุ่งสูงขึ้น",
+        "แหล่งข่าวอ้างอิง: Reuters (22/10/2026 09:38 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
+      ],
+      "fullArticle": [
+        "ฟิวเจอร์ส Nasdaq ลดลงกว่า 1% เนื่องจากความกังวลของ AI กลับมาอีกครั้ง และน้ำมันก็พุ่งสูงขึ้น",
+        "ฟิวเจอร์ส Nasdaq ลดลงกว่า 1% เนื่องจากความกังวลของ AI กลับมาอีกครั้ง และน้ำมันก็พุ่งสูงขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nasdaq futures drop over 1% as AI worries resurface, oil climbs\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "STOXX 600 ของยุโรปร่วงลงเนื่องจากผลประกอบการที่หลากหลายและอารมณ์เปรี้ยวของน้ำมันที่เพิ่มขึ้น",
+      "title_en": "Europe's STOXX 600 slips as mixed earnings and rising oil sour mood",
+      "summary": "STOXX 600 ของยุโรปร่วงลงเนื่องจากผลประกอบการที่หลากหลายและอารมณ์เปรี้ยวของน้ำมันที่เพิ่มขึ้น",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/stoxx-600-slips-barclays-hermes-072407788.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T09:23:19Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
@@ -50,111 +134,53 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "หุ้นพลังงานของสหราชอาณาจักรที่น่าจับตามอง เนื่องจากราคาน้ำมันและอัตราเงินเฟ้อยังคงอยู่ในโฟกัส",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (22/10/2026 04:25 UTC)",
+        "STOXX 600 ของยุโรปร่วงลงเนื่องจากผลประกอบการที่หลากหลายและอารมณ์เปรี้ยวของน้ำมันที่เพิ่มขึ้น",
+        "แหล่งข่าวอ้างอิง: Reuters (22/10/2026 09:23 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "หุ้นพลังงานของสหราชอาณาจักรที่น่าจับตามอง เนื่องจากราคาน้ำมันและอัตราเงินเฟ้อยังคงอยู่ในโฟกัส",
-        "หุ้นพลังงานของสหราชอาณาจักรที่น่าจับตามอง เนื่องจากราคาน้ำมันและอัตราเงินเฟ้อยังคงอยู่ในโฟกัส",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"UK Energy Stocks To Watch As Oil Prices And Inflation Stay In Focus\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "เหตุใดหุ้น MRNA, CVX, V จึงพุ่งแตะระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
-      "title_en": "Why Did MRNA, CVX, V Stocks Jump To 52-Week Highs Today?",
-      "summary": "เหตุใดหุ้น MRNA, CVX, V จึงพุ่งแตะระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
-      "source": "Stocktwits",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/why-did-mrna-cvx-v-040107227.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T04:01:07Z",
-      "category": "MACRO",
-      "tickers": [
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "เหตุใดหุ้น MRNA, CVX, V จึงพุ่งแตะระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
-        "แหล่งข่าวอ้างอิง: Stocktwits (22/10/2026 04:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX"
-      ],
-      "fullArticle": [
-        "เหตุใดหุ้น MRNA, CVX, V จึงพุ่งแตะระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
-        "เหตุใดหุ้น MRNA, CVX, V จึงพุ่งแตะระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why Did MRNA, CVX, V Stocks Jump To 52-Week Highs Today?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "Dow, S&P 500, การซื้อขาย Nasdaq Futures หลังจาก META, TSLA Earnings เป็นอย่างไร",
-      "title_en": "How Are Dow, S&P 500, Nasdaq Futures Trading After META, TSLA Earnings?",
-      "summary": "Dow, S&P 500, การซื้อขาย Nasdaq Futures หลังจาก META, TSLA Earnings เป็นอย่างไร",
-      "source": "Stocktwits",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/dow-p-500-nasdaq-futures-031110870.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T03:11:10Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "META",
-        "TSLA",
-        "SPY",
-        "QQQ",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Dow, S&P 500, การซื้อขาย Nasdaq Futures หลังจาก META, TSLA Earnings เป็นอย่างไร",
-        "แหล่งข่าวอ้างอิง: Stocktwits (22/10/2026 03:11 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #SPY #QQQ #DIA"
-      ],
-      "fullArticle": [
-        "Dow, S&P 500, การซื้อขาย Nasdaq Futures หลังจาก META, TSLA Earnings เป็นอย่างไร",
-        "Dow, S&P 500, การซื้อขาย Nasdaq Futures หลังจาก META, TSLA Earnings เป็นอย่างไร",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"How Are Dow, S&P 500, Nasdaq Futures Trading After META, TSLA Earnings?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "หุ้นเอเชียกลับฟื้นตัวตามอารมณ์เทคโนโลยีกลับมาอีกครั้ง",
-      "title_en": "Asian stocks back in retreat as tech mood sours again",
-      "summary": "หุ้นเอเชียกลับฟื้นตัวตามอารมณ์เทคโนโลยีกลับมาอีกครั้ง",
-      "source": "AFP",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-back-retreat-tech-024129180.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T02:41:29Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "หุ้นเอเชียกลับฟื้นตัวตามอารมณ์เทคโนโลยีกลับมาอีกครั้ง",
-        "แหล่งข่าวอ้างอิง: AFP (22/10/2026 02:41 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "หุ้นเอเชียกลับฟื้นตัวตามอารมณ์เทคโนโลยีกลับมาอีกครั้ง",
-        "หุ้นเอเชียกลับฟื้นตัวตามอารมณ์เทคโนโลยีกลับมาอีกครั้ง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asian stocks back in retreat as tech mood sours again\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "STOXX 600 ของยุโรปร่วงลงเนื่องจากผลประกอบการที่หลากหลายและอารมณ์เปรี้ยวของน้ำมันที่เพิ่มขึ้น",
+        "STOXX 600 ของยุโรปร่วงลงเนื่องจากผลประกอบการที่หลากหลายและอารมณ์เปรี้ยวของน้ำมันที่เพิ่มขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Europe's STOXX 600 slips as mixed earnings and rising oil sour mood\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-6",
+      "title": "บล็อกของนักวิเคราะห์ Zacks เน้นเรื่อง DIVN, LVHI, GCOW, KNGZ และ FDV",
+      "title_en": "The Zacks Analyst Blog Highlights DIVN, LVHI, GCOW, KNGZ and FDV",
+      "summary": "บล็อกของนักวิเคราะห์ Zacks เน้นเรื่อง DIVN, LVHI, GCOW, KNGZ และ FDV",
+      "source": "Zacks",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-divn-090500010.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T09:05:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "บล็อกของนักวิเคราะห์ Zacks เน้นเรื่อง DIVN, LVHI, GCOW, KNGZ และ FDV",
+        "แหล่งข่าวอ้างอิง: Zacks (22/10/2026 09:05 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "บล็อกของนักวิเคราะห์ Zacks เน้นเรื่อง DIVN, LVHI, GCOW, KNGZ และ FDV",
+        "บล็อกของนักวิเคราะห์ Zacks เน้นเรื่อง DIVN, LVHI, GCOW, KNGZ และ FDV",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"The Zacks Analyst Blog Highlights DIVN, LVHI, GCOW, KNGZ and FDV\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
       "title": "เอเชียตะวันออกเฉียงใต้กำลังหิวโหยสำหรับ AI และเงินไม่ได้อยู่แค่ในการสมัครรับข้อมูลเท่านั้น",
       "title_en": "Southeast Asia is hungry for AI — and the money isn't just in subscriptions",
       "summary": "การนำ AI มาใช้อย่างรวดเร็วในเอเชียตะวันออกเฉียงใต้กำลังสร้างโอกาสทางธุรกิจนอกเหนือจากการสมัครสมาชิกแบบชำระเงิน พันธมิตรของ Bain & Company กล่าวกับ CNBC",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/southeasaisa-singapore-bain-temasek-google-.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "8 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-22T02:01:48Z",
       "category": "TECH",
       "tickers": [
@@ -177,13 +203,13 @@
       ]
     },
     {
-      "id": "news-7",
+      "id": "news-8",
       "title": "ข้อบกพร่องด้านความปลอดภัยบนเว็บที่สำคัญทำให้เกิดความตื่นตระหนกทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนอง",
       "title_en": "Critical web security flaws spark global alarm as Google, OpenAI and Amazon respond",
       "summary": "ข้อบกพร่องด้านความปลอดภัยที่สำคัญของ PHP ทำให้เกิดคำเตือนทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนองต่อภัยคุกคามทางไซเบอร์ที่อาจเกิดขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/php-google-openai-and-amazon-cyber.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-22T01:05:15Z",
       "category": "TECH",
       "tickers": [
@@ -205,13 +231,13 @@
       ]
     },
     {
-      "id": "news-8",
+      "id": "news-9",
       "title": "Meta ได้จัดทำแผนงานอันทะเยอทะยานในการสร้างรายได้ของ Muse หลังจากไตรมาสและแนวทางที่แข็งแกร่ง",
       "title_en": "Meta put out an ambitious roadmap to Muse monetization after strong quarter and guide",
       "summary": "นักลงทุนชอบสิ่งที่พวกเขาเห็น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/21/meta-put-out-an-ambitious-roadmap-to-muse-monetization-after-strong-quarter-and-guide.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-22T00:53:01Z",
       "category": "EARNINGS",
       "tickers": [
@@ -232,13 +258,13 @@
       ]
     },
     {
-      "id": "news-9",
+      "id": "news-10",
       "title": "Meta รายงานรายรับในไตรมาสสามที่พุ่งสูงขึ้นและออกแนวทางที่แข็งแกร่ง",
       "title_en": "Meta reports third-quarter revenue beat and issues strong guidance",
       "summary": "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/meta-earnings-q3-2026-live-updates.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T23:45:42Z",
       "category": "EARNINGS",
       "tickers": [
@@ -259,13 +285,13 @@
       ]
     },
     {
-      "id": "news-10",
+      "id": "news-11",
       "title": "Tesla เอาชนะทั้งรายได้และยอดขาย แม้ว่ารายได้รถยนต์จะลดลงก็ตาม",
       "title_en": "Tesla beats on earnings and sales even as auto revenue declines",
       "summary": "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T23:32:04Z",
       "category": "EARNINGS",
       "tickers": [
@@ -286,13 +312,13 @@
       ]
     },
     {
-      "id": "news-11",
+      "id": "news-12",
       "title": "IBM เอาชนะทั้งด้านบนและด้านล่างเมื่อ CEO Krishna กล่าวถึงแนวคิด 'Super Intelligence'",
       "title_en": "IBM beats on top and bottom lines as CEO Krishna touts 'Super Intelligence' traction",
       "summary": "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "12 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T22:03:37Z",
       "category": "TECH",
       "tickers": [
@@ -312,33 +338,6 @@
         "IBM เอาชนะทั้งด้านบนและด้านล่างเมื่อ CEO Krishna กล่าวถึงแนวคิด 'Super Intelligence'",
         "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"IBM beats on top and bottom lines as CEO Krishna touts 'Super Intelligence' traction\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "Meta สั่งให้จ่ายค่าปรับ 25 พันล้านดอลลาร์ในคดี New Mexico Cambridge Analytica",
-      "title_en": "Meta ordered to pay $25 billion penalty in New Mexico Cambridge Analytica case",
-      "summary": "Meta จะต้องจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
-      "time": "9 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T20:04:07Z",
-      "category": "TECH",
-      "tickers": [
-        "META"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Meta จะต้องจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 20:04 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
-      ],
-      "fullArticle": [
-        "Meta สั่งให้จ่ายค่าปรับ 25 พันล้านดอลลาร์ในคดี New Mexico Cambridge Analytica",
-        "Meta จะต้องจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta ordered to pay $25 billion penalty in New Mexico Cambridge Analytica case\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
