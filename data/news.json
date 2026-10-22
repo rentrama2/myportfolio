@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-10-22T19:27:07Z",
-  "updated_at_thai": "23 ต.ค. 2569 02:27 น.",
+  "updated_at": "2026-10-22T22:39:54Z",
+  "updated_at_thai": "23 ต.ค. 2569 05:39 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "หุ้น Meta ร่วงลง 8% เนื่องจากการใช้จ่ายของ AI ส่งผลให้กระแสเงินสดอิสระติดลบ",
-      "title_en": "Meta stock sinks 8% as AI spend pushes free cash flow negative",
-      "summary": "ราคาของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นระยะเวลา 5 ปีของยักษ์ใหญ่โซเชียลมีเดียกำลังแตะระดับสูงสุดเป็นประวัติการณ์ เนื่องจากนักลงทุนส่งสัญญาณถึงความกังวลด้านเครดิตที่เพิ่มมากขึ้น",
+      "title": "ข้อตกลงของ Meta ที่จะเก็บ Zuckerberg ไว้ในแคลิฟอร์เนียเพิ่มเชื้อเพลิงให้กับการอภิปรายเรื่องภาษีความมั่งคั่งก่อนการเลือกตั้ง",
+      "title_en": "Meta’s deal to keep Zuckerberg in California adds fuel to wealth tax debate ahead of election",
+      "summary": "เมื่อไม่ถึงสองสัปดาห์ก่อนการเลือกตั้งกลางภาค Meta ได้ชี้แจงอย่างชัดเจนว่า Mark Zuckerberg ยังคงอยู่ในแคลิฟอร์เนียหากภาษีทรัพย์สินผ่าน",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/meta-stock-q3-earnings-free-cash-flow.html",
-      "time": "15 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T19:11:23Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/22/meta-mark-zuckerberg-california-billionaire-tax.html",
+      "time": "18 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T22:21:08Z",
       "category": "TECH",
       "tickers": [
         "META"
@@ -20,55 +20,81 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": true,
       "points": [
-        "ราคาของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นระยะเวลา 5 ปีของยักษ์ใหญ่โซเชียลมีเดียกำลังแตะระดับสูงสุดเป็นประวัติการณ์ เนื่องจากนักลงทุนส่งสัญญาณถึงความกังวลด้านเครดิตที่เพิ่มมากขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 19:11 UTC)",
+        "เมื่อไม่ถึงสองสัปดาห์ก่อนการเลือกตั้งกลางภาค Meta ได้ชี้แจงอย่างชัดเจนว่า Mark Zuckerberg ยังคงอยู่ในแคลิฟอร์เนียหากภาษีทรัพย์สินผ่าน",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 22:21 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
       ],
       "fullArticle": [
-        "หุ้น Meta ร่วงลง 8% เนื่องจากการใช้จ่ายของ AI ส่งผลให้กระแสเงินสดอิสระติดลบ",
-        "ราคาของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นระยะเวลา 5 ปีของยักษ์ใหญ่โซเชียลมีเดียกำลังแตะระดับสูงสุดเป็นประวัติการณ์ เนื่องจากนักลงทุนส่งสัญญาณถึงความกังวลด้านเครดิตที่เพิ่มมากขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta stock sinks 8% as AI spend pushes free cash flow negative\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ข้อตกลงของ Meta ที่จะเก็บ Zuckerberg ไว้ในแคลิฟอร์เนียเพิ่มเชื้อเพลิงให้กับการอภิปรายเรื่องภาษีความมั่งคั่งก่อนการเลือกตั้ง",
+        "เมื่อไม่ถึงสองสัปดาห์ก่อนการเลือกตั้งกลางภาค Meta ได้ชี้แจงอย่างชัดเจนว่า Mark Zuckerberg ยังคงอยู่ในแคลิฟอร์เนียหากภาษีทรัพย์สินผ่าน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta’s deal to keep Zuckerberg in California adds fuel to wealth tax debate ahead of election\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงเนื่องจากหุ้นเทคโนโลยีจม, Meta ลดลง 8%",
-      "title_en": "Stock market today: Dow, S&P 500, Nasdaq tumble as tech stocks sink, Meta plummets 8%",
-      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงเนื่องจากหุ้นเทคโนโลยีจม, Meta ลดลง 8%",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html",
-      "time": "16 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T19:10:20Z",
-      "category": "TECH",
+      "title": "3 หุ้นเติบโตที่มีการเติบโตของรายได้อย่างน้อย 29%",
+      "title_en": "3 Growth Stocks With At Least 29% Earnings Growth",
+      "summary": "3 หุ้นเติบโตที่มีการเติบโตของรายได้อย่างน้อย 29%",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-growth-stocks-least-29-221708738.html",
+      "time": "22 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T22:17:08Z",
+      "category": "EARNINGS",
       "tickers": [
-        "META",
         "SPY",
-        "QQQ",
         "DIA"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงเนื่องจากหุ้นเทคโนโลยีจม, Meta ลดลง 8%",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (22/10/2026 19:10 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #SPY #QQQ #DIA"
+        "3 หุ้นเติบโตที่มีการเติบโตของรายได้อย่างน้อย 29%",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (22/10/2026 22:17 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงเนื่องจากหุ้นเทคโนโลยีจม, Meta ลดลง 8%",
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงเนื่องจากหุ้นเทคโนโลยีจม, Meta ลดลง 8%",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq tumble as tech stocks sink, Meta plummets 8%\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "3 หุ้นเติบโตที่มีการเติบโตของรายได้อย่างน้อย 29%",
+        "3 หุ้นเติบโตที่มีการเติบโตของรายได้อย่างน้อย 29%",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Growth Stocks With At Least 29% Earnings Growth\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-3",
+      "title": "ผู้ก่อตั้งชาวออสเตรเลีย 3 รายนำหุ้นที่มีรายได้สูงถึง A$2.9b",
+      "title_en": "3 Australian Founder Led Stocks With Revenue Up To A$2.9b",
+      "summary": "ผู้ก่อตั้งชาวออสเตรเลีย 3 รายนำหุ้นที่มีรายได้สูงถึง A$2.9b",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-australian-founder-led-stocks-221450059.html",
+      "time": "25 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T22:14:50Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ผู้ก่อตั้งชาวออสเตรเลีย 3 รายนำหุ้นที่มีรายได้สูงถึง A$2.9b",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (22/10/2026 22:14 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "ผู้ก่อตั้งชาวออสเตรเลีย 3 รายนำหุ้นที่มีรายได้สูงถึง A$2.9b",
+        "ผู้ก่อตั้งชาวออสเตรเลีย 3 รายนำหุ้นที่มีรายได้สูงถึง A$2.9b",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Australian Founder Led Stocks With Revenue Up To A$2.9b\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
       "title": "SpaceX และ Tesla เดิมพันสูงในการเลือกตั้ง เนื่องจาก Elon Musk ทุ่มเงิน 366 ล้านดอลลาร์ให้กับแคมเปญ",
       "title_en": "SpaceX and Tesla have high election stakes as Elon Musk pours $366 million into campaigns",
       "summary": "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลกระทบต่อ SpaceX และ Tesla",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/elon-musk-midterm-election-spacex-tesla.html",
-      "time": "17 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T19:09:11Z",
+      "time": "41 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T21:58:42Z",
       "category": "MACRO",
       "tickers": [
         "TSLA"
@@ -78,7 +104,7 @@
       "isHero": false,
       "points": [
         "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลกระทบต่อ SpaceX และ Tesla",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 19:09 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 21:58 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
       ],
       "fullArticle": [
@@ -88,41 +114,179 @@
       ]
     },
     {
-      "id": "news-4",
-      "title": "บีซี-ออยส์",
-      "title_en": "BC-OILS",
-      "summary": "บีซี-ออยส์",
-      "source": "Associated Press",
-      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/bc-oils-190018195.html",
-      "time": "26 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T19:00:18Z",
-      "category": "COMMODITIES",
+      "id": "news-5",
+      "title": "ตลาด Crypto วันนี้ 22 ตุลาคม: Bitcoin และ Altcoins เลื่อนลงเนื่องจากความกลัวของ Wall Street ทะลักเข้าสู่ตลาด Crypto",
+      "title_en": "Crypto Market Today, Oct. 22: Bitcoin and Altcoins Slide as Wall Street Fears Spill Into Crypto Markets",
+      "summary": "ตลาด Crypto วันนี้ 22 ตุลาคม: Bitcoin และ Altcoins เลื่อนลงเนื่องจากความกลัวของ Wall Street ทะลักเข้าสู่ตลาด Crypto",
+      "source": "Motley Fool",
+      "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-oct-22-215002279.html",
+      "time": "49 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T21:50:02Z",
+      "category": "MACRO",
       "tickers": [
-        "XOM",
-        "CVX"
+        "COIN"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "บีซี-ออยส์",
-        "แหล่งข่าวอ้างอิง: Associated Press (22/10/2026 19:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+        "ตลาด Crypto วันนี้ 22 ตุลาคม: Bitcoin และ Altcoins เลื่อนลงเนื่องจากความกลัวของ Wall Street ทะลักเข้าสู่ตลาด Crypto",
+        "แหล่งข่าวอ้างอิง: Motley Fool (22/10/2026 21:50 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #COIN"
       ],
       "fullArticle": [
-        "บีซี-ออยส์",
-        "บีซี-ออยส์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BC-OILS\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตลาด Crypto วันนี้ 22 ตุลาคม: Bitcoin และ Altcoins เลื่อนลงเนื่องจากความกลัวของ Wall Street ทะลักเข้าสู่ตลาด Crypto",
+        "ตลาด Crypto วันนี้ 22 ตุลาคม: Bitcoin และ Altcoins เลื่อนลงเนื่องจากความกลัวของ Wall Street ทะลักเข้าสู่ตลาด Crypto",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Crypto Market Today, Oct. 22: Bitcoin and Altcoins Slide as Wall Street Fears Spill Into Crypto Markets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-5",
-      "title": "การปะทะกันของ Musk กับยูเครนเร่งความต้องการทางเลือก Starlink มีน้อยคนนัก",
+      "id": "news-6",
+      "title": "สรุปการโทรผลประกอบการของ Valero Energy Corporation ไตรมาสที่ 3 ปี 2569",
+      "title_en": "Valero Energy Corporation Q3 2026 Earnings Call Summary",
+      "summary": "สรุปการโทรผลประกอบการของ Valero Energy Corporation ไตรมาสที่ 3 ปี 2569",
+      "source": "Moby",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/valero-energy-corporation-q3-2026-212548457.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T21:25:48Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "สรุปการโทรผลประกอบการของ Valero Energy Corporation ไตรมาสที่ 3 ปี 2569",
+        "แหล่งข่าวอ้างอิง: Moby (22/10/2026 21:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "สรุปการโทรผลประกอบการของ Valero Energy Corporation ไตรมาสที่ 3 ปี 2569",
+        "สรุปการโทรผลประกอบการของ Valero Energy Corporation ไตรมาสที่ 3 ปี 2569",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Valero Energy Corporation Q3 2026 Earnings Call Summary\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "อัปเดต: ดัชนีหุ้นสหรัฐปะปนกันในขณะที่นักลงทุนหมุนเวียนจากการค้า AI ไปสู่พันธบัตรรัฐบาล น้ำมันดิบพุ่งขึ้น",
+      "title_en": "Update: US Equity Indexes Mixed as Investors Rotate From AI Trade to Government Bonds; Crude Oil Surges",
+      "summary": "อัปเดต: ดัชนีหุ้นสหรัฐปะปนกันในขณะที่นักลงทุนหมุนเวียนจากการค้า AI ไปสู่พันธบัตรรัฐบาล น้ำมันดิบพุ่งขึ้น",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-investors-211833642.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T21:18:33Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "อัปเดต: ดัชนีหุ้นสหรัฐปะปนกันในขณะที่นักลงทุนหมุนเวียนจากการค้า AI ไปสู่พันธบัตรรัฐบาล น้ำมันดิบพุ่งขึ้น",
+        "แหล่งข่าวอ้างอิง: MT Newswires (22/10/2026 21:18 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+      ],
+      "fullArticle": [
+        "อัปเดต: ดัชนีหุ้นสหรัฐปะปนกันในขณะที่นักลงทุนหมุนเวียนจากการค้า AI ไปสู่พันธบัตรรัฐบาล น้ำมันดิบพุ่งขึ้น",
+        "อัปเดต: ดัชนีหุ้นสหรัฐปะปนกันในขณะที่นักลงทุนหมุนเวียนจากการค้า AI ไปสู่พันธบัตรรัฐบาล น้ำมันดิบพุ่งขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: US Equity Indexes Mixed as Investors Rotate From AI Trade to Government Bonds; Crude Oil Surges\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "OpenAI ใกล้ระดมทุนรอบ 3 หมื่นล้านดอลลาร์ด้วยการประเมินมูลค่า 1.25 ล้านล้านดอลลาร์ นำโดยนักลงทุนในสหรัฐอาหรับเอมิเรตส์",
+      "title_en": "OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors",
+      "summary": "OpenAI ใกล้จะสรุปการระดมทุนรอบใหม่ซึ่งมีวัตถุประสงค์เพื่อเป็นสะพานเชื่อมสู่การเสนอขายหุ้น IPO ในปี 2570 แหล่งข่าวที่คุ้นเคยกับเรื่องนี้บอกกับ CNBC",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T20:41:37Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "OpenAI ใกล้จะสรุปการระดมทุนรอบใหม่ซึ่งมีวัตถุประสงค์เพื่อเป็นสะพานเชื่อมสู่การเสนอขายหุ้น IPO ในปี 2570 แหล่งข่าวที่คุ้นเคยกับเรื่องนี้บอกกับ CNBC",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 20:41 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "OpenAI ใกล้ระดมทุนรอบ 3 หมื่นล้านดอลลาร์ด้วยการประเมินมูลค่า 1.25 ล้านล้านดอลลาร์ นำโดยนักลงทุนในสหรัฐอาหรับเอมิเรตส์",
+        "OpenAI ใกล้จะสรุปการระดมทุนรอบใหม่ซึ่งมีวัตถุประสงค์เพื่อเป็นสะพานเชื่อมสู่การเสนอขายหุ้น IPO ในปี 2570 แหล่งข่าวที่คุ้นเคยกับเรื่องนี้บอกกับ CNBC",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "Comcast เหนือความคาดหมายด้านรายได้เนื่องจากรายได้จากสื่อชดเชยจุดอ่อนในการเชื่อมต่อ",
+      "title_en": "Comcast beats earnings expectations as media revenue offsets weakness in connectivity",
+      "summary": "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/22/comcast-cmcsa-earnings-q3-2026.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T20:04:51Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 20:04 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "Comcast เหนือความคาดหมายด้านรายได้เนื่องจากรายได้จากสื่อชดเชยจุดอ่อนในการเชื่อมต่อ",
+        "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Comcast beats earnings expectations as media revenue offsets weakness in connectivity\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
+      "title": "หุ้น Meta ร่วงลงเกือบ 7% เนื่องจากการใช้จ่ายของ AI ส่งผลให้กระแสเงินสดอิสระติดลบ",
+      "title_en": "Meta stock sinks nearly 7% as AI spend pushes free cash flow negative",
+      "summary": "ราคาของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นระยะเวลา 5 ปีของยักษ์ใหญ่โซเชียลมีเดียกำลังแตะระดับสูงสุดเป็นประวัติการณ์ เนื่องจากนักลงทุนส่งสัญญาณถึงความกังวลด้านเครดิตที่เพิ่มมากขึ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/22/meta-stock-q3-earnings-free-cash-flow.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T20:03:03Z",
+      "category": "TECH",
+      "tickers": [
+        "META"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ราคาของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นระยะเวลา 5 ปีของยักษ์ใหญ่โซเชียลมีเดียกำลังแตะระดับสูงสุดเป็นประวัติการณ์ เนื่องจากนักลงทุนส่งสัญญาณถึงความกังวลด้านเครดิตที่เพิ่มมากขึ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 20:03 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
+      ],
+      "fullArticle": [
+        "หุ้น Meta ร่วงลงเกือบ 7% เนื่องจากการใช้จ่ายของ AI ส่งผลให้กระแสเงินสดอิสระติดลบ",
+        "ราคาของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นระยะเวลา 5 ปีของยักษ์ใหญ่โซเชียลมีเดียกำลังแตะระดับสูงสุดเป็นประวัติการณ์ เนื่องจากนักลงทุนส่งสัญญาณถึงความกังวลด้านเครดิตที่เพิ่มมากขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta stock sinks nearly 7% as AI spend pushes free cash flow negative\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
+      "title": "การปะทะกันของ Musk กับยูเครนเร่งความต้องการทางเลือก Starlink Few exist",
       "title_en": "Musk's clash with Ukraine accelerates demand for Starlink alternatives. Few exist",
-      "summary": "รัฐบาลหรือบริษัทที่กำลังมองหาทางเลือกอื่นนอกเหนือจาก Starlink ของ SpaceX ต้องเผชิญกับทางเลือกเพียงไม่กี่ทาง เนื่องจาก Amazon, Eutelsat และบริษัทอื่นๆ ยังตามหลังอยู่มาก",
+      "summary": "รัฐบาลหรือบริษัทที่กำลังมองหาทางเลือกอื่นแทน Starlink ของ SpaceX ต้องเผชิญกับทางเลือกเพียงไม่กี่ทาง เนื่องจาก Amazon, Eutelsat และบริษัทอื่นๆ ยังตามหลังอยู่มาก",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/elon-musk-ukraine-starlink-alternatives.html",
-      "time": "31 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-22T18:55:38Z",
       "category": "TECH",
       "tickers": [
@@ -132,109 +296,24 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "รัฐบาลหรือบริษัทที่กำลังมองหาทางเลือกอื่นนอกเหนือจาก Starlink ของ SpaceX ต้องเผชิญกับทางเลือกเพียงไม่กี่ทาง เนื่องจาก Amazon, Eutelsat และบริษัทอื่นๆ ยังตามหลังอยู่มาก",
+        "รัฐบาลหรือบริษัทที่กำลังมองหาทางเลือกอื่นแทน Starlink ของ SpaceX ต้องเผชิญกับทางเลือกเพียงไม่กี่ทาง เนื่องจาก Amazon, Eutelsat และบริษัทอื่นๆ ยังตามหลังอยู่มาก",
         "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 18:55 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AMZN"
       ],
       "fullArticle": [
-        "การปะทะกันของ Musk กับยูเครนเร่งความต้องการทางเลือก Starlink มีน้อยคนนัก",
-        "รัฐบาลหรือบริษัทที่กำลังมองหาทางเลือกอื่นนอกเหนือจาก Starlink ของ SpaceX ต้องเผชิญกับทางเลือกเพียงไม่กี่ทาง เนื่องจาก Amazon, Eutelsat และบริษัทอื่นๆ ยังตามหลังอยู่มาก",
+        "การปะทะกันของ Musk กับยูเครนเร่งความต้องการทางเลือก Starlink Few exist",
+        "รัฐบาลหรือบริษัทที่กำลังมองหาทางเลือกอื่นแทน Starlink ของ SpaceX ต้องเผชิญกับทางเลือกเพียงไม่กี่ทาง เนื่องจาก Amazon, Eutelsat และบริษัทอื่นๆ ยังตามหลังอยู่มาก",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Musk's clash with Ukraine accelerates demand for Starlink alternatives. Few exist\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-6",
-      "title": "ราคาน้ำมันล่วงหน้าสำหรับปี 2027 พุ่งขึ้นเกือบ 20% ผู้ค้าเชื่อว่าการบรรเทาทุกข์อาจใช้เวลานานกว่าที่คาดไว้",
-      "title_en": "Oil Futures For 2027 Have Jumped Almost 20%. Traders Believe Relief Could Take Longer Than Expected.",
-      "summary": "ราคาน้ำมันล่วงหน้าสำหรับปี 2027 พุ่งขึ้นเกือบ 20% ผู้ค้าเชื่อว่าการบรรเทาทุกข์อาจใช้เวลานานกว่าที่คาดไว้",
-      "source": "International Business Times",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-futures-2027-jumped-almost-185153998.html",
-      "time": "35 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T18:51:53Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ราคาน้ำมันล่วงหน้าสำหรับปี 2027 พุ่งขึ้นเกือบ 20% ผู้ค้าเชื่อว่าการบรรเทาทุกข์อาจใช้เวลานานกว่าที่คาดไว้",
-        "แหล่งข่าวอ้างอิง: International Business Times (22/10/2026 18:51 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ราคาน้ำมันล่วงหน้าสำหรับปี 2027 พุ่งขึ้นเกือบ 20% ผู้ค้าเชื่อว่าการบรรเทาทุกข์อาจใช้เวลานานกว่าที่คาดไว้",
-        "ราคาน้ำมันล่วงหน้าสำหรับปี 2027 พุ่งขึ้นเกือบ 20% ผู้ค้าเชื่อว่าการบรรเทาทุกข์อาจใช้เวลานานกว่าที่คาดไว้",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Futures For 2027 Have Jumped Almost 20%. Traders Believe Relief Could Take Longer Than Expected.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "2 หุ้นพลังงานที่ให้ผลตอบแทนสูงแบบไม่ต้องคิดมากที่จะซื้อตอนนี้ เริ่มต้นด้วยการถ่ายโอนพลังงาน",
-      "title_en": "2 No-Brainer High-Yield Energy Stocks to Buy Right Now, Starting With Energy Transfer",
-      "summary": "2 หุ้นพลังงานที่ให้ผลตอบแทนสูงแบบไม่ต้องคิดมากที่จะซื้อตอนนี้ เริ่มต้นด้วยการถ่ายโอนพลังงาน",
-      "source": "Motley Fool",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/2-no-brainer-high-yield-185000373.html",
-      "time": "37 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T18:50:00Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "2 หุ้นพลังงานที่ให้ผลตอบแทนสูงแบบไม่ต้องคิดมากที่จะซื้อตอนนี้ เริ่มต้นด้วยการถ่ายโอนพลังงาน",
-        "แหล่งข่าวอ้างอิง: Motley Fool (22/10/2026 18:50 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "2 หุ้นพลังงานที่ให้ผลตอบแทนสูงแบบไม่ต้องคิดมากที่จะซื้อตอนนี้ เริ่มต้นด้วยการถ่ายโอนพลังงาน",
-        "2 หุ้นพลังงานที่ให้ผลตอบแทนสูงแบบไม่ต้องคิดมากที่จะซื้อตอนนี้ เริ่มต้นด้วยการถ่ายโอนพลังงาน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"2 No-Brainer High-Yield Energy Stocks to Buy Right Now, Starting With Energy Transfer\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "เยนพุ่งขึ้นเนื่องจากน้ำมัน AI และฝรั่งเศสสร้างความกังวลให้กับตลาดที่สั่นคลอน",
-      "title_en": "Yen jumps as oil, AI and France worries rattle markets",
-      "summary": "เยนพุ่งขึ้นเนื่องจากน้ำมัน AI และฝรั่งเศสสร้างความกังวลให้กับตลาดที่สั่นคลอน",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/currencies/articles/yen-set-biggest-rally-month-082728467.html",
-      "time": "44 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T18:42:44Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "เยนพุ่งขึ้นเนื่องจากน้ำมัน AI และฝรั่งเศสสร้างความกังวลให้กับตลาดที่สั่นคลอน",
-        "แหล่งข่าวอ้างอิง: Reuters (22/10/2026 18:42 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "เยนพุ่งขึ้นเนื่องจากน้ำมัน AI และฝรั่งเศสสร้างความกังวลให้กับตลาดที่สั่นคลอน",
-        "เยนพุ่งขึ้นเนื่องจากน้ำมัน AI และฝรั่งเศสสร้างความกังวลให้กับตลาดที่สั่นคลอน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Yen jumps as oil, AI and France worries rattle markets\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "ผู้ประเมินบุคคลที่สามพบช่องโหว่ในระบบตรวจสอบ OpenAI ในระหว่างการทดสอบนำร่อง",
+      "id": "news-12",
+      "title": "ผู้ประเมินบุคคลที่สามพบช่องโหว่ในระบบการตรวจสอบ OpenAI ในระหว่างการทดสอบนำร่อง",
       "title_en": "Third-party evaluators found vulnerabilities in OpenAI monitoring system during test pilot",
       "summary": "Sam Altman ซีอีโอของ OpenAI ให้คำมั่นที่จะให้ผู้ประเมินอิสระ \"เข้าถึงเหมือนพนักงาน\" ให้กับบริษัท เพื่อช่วยแก้ไขข้อกังวลด้านความปลอดภัยที่เพิ่มขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/metr-redwood-research-open-ai-test.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-22T17:37:47Z",
       "category": "TECH",
       "tickers": [
@@ -251,96 +330,9 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "ผู้ประเมินบุคคลที่สามพบช่องโหว่ในระบบตรวจสอบ OpenAI ในระหว่างการทดสอบนำร่อง",
+        "ผู้ประเมินบุคคลที่สามพบช่องโหว่ในระบบการตรวจสอบ OpenAI ในระหว่างการทดสอบนำร่อง",
         "Sam Altman ซีอีโอของ OpenAI ให้คำมั่นที่จะให้ผู้ประเมินอิสระ \"เข้าถึงเหมือนพนักงาน\" ให้กับบริษัท เพื่อช่วยแก้ไขข้อกังวลด้านความปลอดภัยที่เพิ่มขึ้น",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Third-party evaluators found vulnerabilities in OpenAI monitoring system during test pilot\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "การขอรับสวัสดิการว่างงานใกล้ระดับต่ำสุดนับตั้งแต่ทศวรรษ 1960 เนื่องจากแนวโน้มไฟป่ายังลดลงอย่างต่อเนื่อง",
-      "title_en": "Jobless claims near the lowest since the 1960s as low-fire trend continues",
-      "summary": "การยื่นฟ้องเบื้องต้นสำหรับการประกันการว่างงานลดลงเหลือ 194,000 ที่ปรับตามฤดูกาล",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/jobless-claims-record-low-weekly.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T16:40:09Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "การยื่นฟ้องเบื้องต้นสำหรับการประกันการว่างงานลดลงเหลือ 194,000 ที่ปรับตามฤดูกาล",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 16:40 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "การขอรับสวัสดิการว่างงานใกล้ระดับต่ำสุดนับตั้งแต่ทศวรรษ 1960 เนื่องจากแนวโน้มไฟป่ายังลดลงอย่างต่อเนื่อง",
-        "การยื่นฟ้องเบื้องต้นสำหรับการประกันการว่างงานลดลงเหลือ 194,000 ที่ปรับตามฤดูกาล",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Jobless claims near the lowest since the 1960s as low-fire trend continues\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "เหตุใดรัฐบาลจึงดึงเว็บไซต์ออฟไลน์เนื่องจากภาษาโปรแกรม PHP ที่มีอายุหลายสิบปี",
-      "title_en": "Why governments pulled websites offline over the decades-old PHP programming language",
-      "summary": "เซิร์ฟเวอร์ที่ใช้ภาษาการเขียนโปรแกรม PHP ยอดนิยมเผชิญกับข้อบกพร่องด้านความปลอดภัยที่สำคัญ เว็บไซต์หลายล้านแห่งมีข้อมูลตกอยู่ในความเสี่ยง",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/php2shell-vulnerability-what-is-it-and-is-your-data-at-risk.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T16:19:34Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "เซิร์ฟเวอร์ที่ใช้ภาษาการเขียนโปรแกรม PHP ยอดนิยมเผชิญกับข้อบกพร่องด้านความปลอดภัยที่สำคัญ เว็บไซต์หลายล้านแห่งมีข้อมูลตกอยู่ในความเสี่ยง",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 16:19 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "เหตุใดรัฐบาลจึงดึงเว็บไซต์ออฟไลน์เนื่องจากภาษาโปรแกรม PHP ที่มีอายุหลายสิบปี",
-        "เซิร์ฟเวอร์ที่ใช้ภาษาการเขียนโปรแกรม PHP ยอดนิยมเผชิญกับข้อบกพร่องด้านความปลอดภัยที่สำคัญ เว็บไซต์หลายล้านแห่งมีข้อมูลตกอยู่ในความเสี่ยง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why governments pulled websites offline over the decades-old PHP programming language\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "American Airlines คาดการณ์ขาดทุนมากขึ้นในปี 2569 จากราคาน้ำมันที่เพิ่มขึ้น และมีแผนชะลอการเติบโตในปีหน้า",
-      "title_en": "American Airlines forecasts bigger loss in 2026 on fuel spike, plans to slow growth next year",
-      "summary": "เป็นสายการบินรายใหญ่รายที่ 4 ของสหรัฐฯ ที่จะปรับลดการคาดการณ์ในปี 2026 ในเดือนนี้ เนื่องจากราคาเชื้อเพลิงพุ่งสูงขึ้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/american-airlines-aal-q3-2026-earnings.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T14:52:09Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "เป็นสายการบินรายใหญ่รายที่ 4 ของสหรัฐฯ ที่จะปรับลดการคาดการณ์ในปี 2026 ในเดือนนี้ เนื่องจากราคาเชื้อเพลิงพุ่งสูงขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 14:52 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "American Airlines คาดการณ์ขาดทุนมากขึ้นในปี 2569 จากราคาน้ำมันที่เพิ่มขึ้น และมีแผนชะลอการเติบโตในปีหน้า",
-        "เป็นสายการบินรายใหญ่รายที่ 4 ของสหรัฐฯ ที่จะปรับลดการคาดการณ์ในปี 2026 ในเดือนนี้ เนื่องจากราคาเชื้อเพลิงพุ่งสูงขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"American Airlines forecasts bigger loss in 2026 on fuel spike, plans to slow growth next year\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
