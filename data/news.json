@@ -1,16 +1,244 @@
 {
-  "updated_at": "2026-10-22T00:41:00Z",
-  "updated_at_thai": "22 ต.ค. 2569 07:41 น.",
+  "updated_at": "2026-10-22T05:25:00Z",
+  "updated_at_thai": "22 ต.ค. 2569 12:25 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "หุ้นเอเชียร่วงลงเนื่องจากความกระวนกระวายใจของ AI ส่งผลกระทบต่อผู้ผลิตชิปเกาหลี",
+      "title_en": "Asia stocks slide as AI jitters hit Korean chipmakers",
+      "summary": "หุ้นเอเชียร่วงลงเนื่องจากความกระวนกระวายใจของ AI ส่งผลกระทบต่อผู้ผลิตชิปเกาหลี",
+      "source": "Investing.com",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/asia-stocks-slide-ai-jitters-042543916.html",
+      "time": "59 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T04:25:43Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "หุ้นเอเชียร่วงลงเนื่องจากความกระวนกระวายใจของ AI ส่งผลกระทบต่อผู้ผลิตชิปเกาหลี",
+        "แหล่งข่าวอ้างอิง: Investing.com (22/10/2026 04:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "หุ้นเอเชียร่วงลงเนื่องจากความกระวนกระวายใจของ AI ส่งผลกระทบต่อผู้ผลิตชิปเกาหลี",
+        "หุ้นเอเชียร่วงลงเนื่องจากความกระวนกระวายใจของ AI ส่งผลกระทบต่อผู้ผลิตชิปเกาหลี",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asia stocks slide as AI jitters hit Korean chipmakers\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "หุ้นพลังงานของสหราชอาณาจักรที่น่าจับตามอง เนื่องจากราคาน้ำมันและอัตราเงินเฟ้อยังคงอยู่ในโฟกัส",
+      "title_en": "UK Energy Stocks To Watch As Oil Prices And Inflation Stay In Focus",
+      "summary": "หุ้นพลังงานของสหราชอาณาจักรที่น่าจับตามอง เนื่องจากราคาน้ำมันและอัตราเงินเฟ้อยังคงอยู่ในโฟกัส",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/uk-energy-stocks-watch-oil-042531842.html",
+      "time": "59 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T04:25:31Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "หุ้นพลังงานของสหราชอาณาจักรที่น่าจับตามอง เนื่องจากราคาน้ำมันและอัตราเงินเฟ้อยังคงอยู่ในโฟกัส",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (22/10/2026 04:25 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "หุ้นพลังงานของสหราชอาณาจักรที่น่าจับตามอง เนื่องจากราคาน้ำมันและอัตราเงินเฟ้อยังคงอยู่ในโฟกัส",
+        "หุ้นพลังงานของสหราชอาณาจักรที่น่าจับตามอง เนื่องจากราคาน้ำมันและอัตราเงินเฟ้อยังคงอยู่ในโฟกัส",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"UK Energy Stocks To Watch As Oil Prices And Inflation Stay In Focus\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "เหตุใดหุ้น MRNA, CVX, V จึงพุ่งแตะระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
+      "title_en": "Why Did MRNA, CVX, V Stocks Jump To 52-Week Highs Today?",
+      "summary": "เหตุใดหุ้น MRNA, CVX, V จึงพุ่งแตะระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
+      "source": "Stocktwits",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/why-did-mrna-cvx-v-040107227.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T04:01:07Z",
+      "category": "MACRO",
+      "tickers": [
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "เหตุใดหุ้น MRNA, CVX, V จึงพุ่งแตะระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
+        "แหล่งข่าวอ้างอิง: Stocktwits (22/10/2026 04:01 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #CVX"
+      ],
+      "fullArticle": [
+        "เหตุใดหุ้น MRNA, CVX, V จึงพุ่งแตะระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
+        "เหตุใดหุ้น MRNA, CVX, V จึงพุ่งแตะระดับสูงสุดในรอบ 52 สัปดาห์ในวันนี้",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why Did MRNA, CVX, V Stocks Jump To 52-Week Highs Today?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "Dow, S&P 500, การซื้อขาย Nasdaq Futures หลังจาก META, TSLA Earnings เป็นอย่างไร",
+      "title_en": "How Are Dow, S&P 500, Nasdaq Futures Trading After META, TSLA Earnings?",
+      "summary": "Dow, S&P 500, การซื้อขาย Nasdaq Futures หลังจาก META, TSLA Earnings เป็นอย่างไร",
+      "source": "Stocktwits",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/dow-p-500-nasdaq-futures-031110870.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T03:11:10Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "META",
+        "TSLA",
+        "SPY",
+        "QQQ",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Dow, S&P 500, การซื้อขาย Nasdaq Futures หลังจาก META, TSLA Earnings เป็นอย่างไร",
+        "แหล่งข่าวอ้างอิง: Stocktwits (22/10/2026 03:11 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #SPY #QQQ #DIA"
+      ],
+      "fullArticle": [
+        "Dow, S&P 500, การซื้อขาย Nasdaq Futures หลังจาก META, TSLA Earnings เป็นอย่างไร",
+        "Dow, S&P 500, การซื้อขาย Nasdaq Futures หลังจาก META, TSLA Earnings เป็นอย่างไร",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"How Are Dow, S&P 500, Nasdaq Futures Trading After META, TSLA Earnings?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "หุ้นเอเชียกลับฟื้นตัวตามอารมณ์เทคโนโลยีกลับมาอีกครั้ง",
+      "title_en": "Asian stocks back in retreat as tech mood sours again",
+      "summary": "หุ้นเอเชียกลับฟื้นตัวตามอารมณ์เทคโนโลยีกลับมาอีกครั้ง",
+      "source": "AFP",
+      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-back-retreat-tech-024129180.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T02:41:29Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "หุ้นเอเชียกลับฟื้นตัวตามอารมณ์เทคโนโลยีกลับมาอีกครั้ง",
+        "แหล่งข่าวอ้างอิง: AFP (22/10/2026 02:41 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "หุ้นเอเชียกลับฟื้นตัวตามอารมณ์เทคโนโลยีกลับมาอีกครั้ง",
+        "หุ้นเอเชียกลับฟื้นตัวตามอารมณ์เทคโนโลยีกลับมาอีกครั้ง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asian stocks back in retreat as tech mood sours again\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "เอเชียตะวันออกเฉียงใต้กำลังหิวโหยสำหรับ AI และเงินไม่ได้อยู่แค่ในการสมัครรับข้อมูลเท่านั้น",
+      "title_en": "Southeast Asia is hungry for AI — and the money isn't just in subscriptions",
+      "summary": "การนำ AI มาใช้อย่างรวดเร็วในเอเชียตะวันออกเฉียงใต้กำลังสร้างโอกาสทางธุรกิจนอกเหนือจากการสมัครสมาชิกแบบชำระเงิน พันธมิตรของ Bain & Company กล่าวกับ CNBC",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/22/southeasaisa-singapore-bain-temasek-google-.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T02:01:48Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "การนำ AI มาใช้อย่างรวดเร็วในเอเชียตะวันออกเฉียงใต้กำลังสร้างโอกาสทางธุรกิจนอกเหนือจากการสมัครสมาชิกแบบชำระเงิน พันธมิตรของ Bain & Company กล่าวกับ CNBC",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 02:01 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "เอเชียตะวันออกเฉียงใต้กำลังหิวโหยสำหรับ AI และเงินไม่ได้อยู่แค่ในการสมัครรับข้อมูลเท่านั้น",
+        "การนำ AI มาใช้อย่างรวดเร็วในเอเชียตะวันออกเฉียงใต้กำลังสร้างโอกาสทางธุรกิจนอกเหนือจากการสมัครสมาชิกแบบชำระเงิน พันธมิตรของ Bain & Company กล่าวกับ CNBC",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Southeast Asia is hungry for AI — and the money isn't just in subscriptions\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "ข้อบกพร่องด้านความปลอดภัยบนเว็บที่สำคัญทำให้เกิดความตื่นตระหนกทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนอง",
+      "title_en": "Critical web security flaws spark global alarm as Google, OpenAI and Amazon respond",
+      "summary": "ข้อบกพร่องด้านความปลอดภัยที่สำคัญของ PHP ทำให้เกิดคำเตือนทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนองต่อภัยคุกคามทางไซเบอร์ที่อาจเกิดขึ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/22/php-google-openai-and-amazon-cyber.html",
+      "time": "4 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T01:05:15Z",
+      "category": "TECH",
+      "tickers": [
+        "GOOGL",
+        "AMZN"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "ข้อบกพร่องด้านความปลอดภัยที่สำคัญของ PHP ทำให้เกิดคำเตือนทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนองต่อภัยคุกคามทางไซเบอร์ที่อาจเกิดขึ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 01:05 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #GOOGL #AMZN"
+      ],
+      "fullArticle": [
+        "ข้อบกพร่องด้านความปลอดภัยบนเว็บที่สำคัญทำให้เกิดความตื่นตระหนกทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนอง",
+        "ข้อบกพร่องด้านความปลอดภัยที่สำคัญของ PHP ทำให้เกิดคำเตือนทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนองต่อภัยคุกคามทางไซเบอร์ที่อาจเกิดขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Critical web security flaws spark global alarm as Google, OpenAI and Amazon respond\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "Meta ได้จัดทำแผนงานอันทะเยอทะยานในการสร้างรายได้ของ Muse หลังจากไตรมาสและแนวทางที่แข็งแกร่ง",
+      "title_en": "Meta put out an ambitious roadmap to Muse monetization after strong quarter and guide",
+      "summary": "นักลงทุนชอบสิ่งที่พวกเขาเห็น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/21/meta-put-out-an-ambitious-roadmap-to-muse-monetization-after-strong-quarter-and-guide.html",
+      "time": "4 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-22T00:53:01Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "META"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "นักลงทุนชอบสิ่งที่พวกเขาเห็น",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 00:53 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
+      ],
+      "fullArticle": [
+        "Meta ได้จัดทำแผนงานอันทะเยอทะยานในการสร้างรายได้ของ Muse หลังจากไตรมาสและแนวทางที่แข็งแกร่ง",
+        "นักลงทุนชอบสิ่งที่พวกเขาเห็น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta put out an ambitious roadmap to Muse monetization after strong quarter and guide\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
       "title": "Meta รายงานรายรับในไตรมาสสามที่พุ่งสูงขึ้นและออกแนวทางที่แข็งแกร่ง",
       "title_en": "Meta reports third-quarter revenue beat and issues strong guidance",
       "summary": "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/meta-earnings-q3-2026-live-updates.html",
-      "time": "55 นาทีที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T23:45:42Z",
       "category": "EARNINGS",
       "tickers": [
@@ -18,7 +246,7 @@
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
         "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 23:45 UTC)",
@@ -31,42 +259,13 @@
       ]
     },
     {
-      "id": "news-2",
-      "title": "Petrobras จะยังคงเป็นเจ้าของโดยรัฐภายใต้ Bolsonaro ที่ปรึกษากล่าว",
-      "title_en": "Petrobras to Remain State-Owned Under Bolsonaro, Adviser Says",
-      "summary": "Petrobras จะยังคงเป็นเจ้าของโดยรัฐภายใต้ Bolsonaro ที่ปรึกษากล่าว",
-      "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/petrobras-remain-state-owned-under-233722225.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T23:37:22Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Petrobras จะยังคงเป็นเจ้าของโดยรัฐภายใต้ Bolsonaro ที่ปรึกษากล่าว",
-        "แหล่งข่าวอ้างอิง: MT Newswires (21/10/2026 23:37 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "Petrobras จะยังคงเป็นเจ้าของโดยรัฐภายใต้ Bolsonaro ที่ปรึกษากล่าว",
-        "Petrobras จะยังคงเป็นเจ้าของโดยรัฐภายใต้ Bolsonaro ที่ปรึกษากล่าว",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Petrobras to Remain State-Owned Under Bolsonaro, Adviser Says\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
+      "id": "news-10",
       "title": "Tesla เอาชนะทั้งรายได้และยอดขาย แม้ว่ารายได้รถยนต์จะลดลงก็ตาม",
       "title_en": "Tesla beats on earnings and sales even as auto revenue declines",
       "summary": "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T23:32:04Z",
       "category": "EARNINGS",
       "tickers": [
@@ -87,13 +286,13 @@
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-11",
       "title": "IBM เอาชนะทั้งด้านบนและด้านล่างเมื่อ CEO Krishna กล่าวถึงแนวคิด 'Super Intelligence'",
       "title_en": "IBM beats on top and bottom lines as CEO Krishna touts 'Super Intelligence' traction",
-      "summary": "CEO Arvind Krishna ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
+      "summary": "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T22:03:37Z",
       "category": "TECH",
       "tickers": [
@@ -105,139 +304,24 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "CEO Arvind Krishna ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
+        "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
         "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 22:03 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
         "IBM เอาชนะทั้งด้านบนและด้านล่างเมื่อ CEO Krishna กล่าวถึงแนวคิด 'Super Intelligence'",
-        "CEO Arvind Krishna ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
+        "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"IBM beats on top and bottom lines as CEO Krishna touts 'Super Intelligence' traction\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-5",
-      "title": "รายงานพลังงานชายหาดเพิ่มขึ้น 21% ในการผลิตน้ำมันจากฝั่งตะวันตก การสำรวจและพัฒนาแคมเปญที่จะเพิ่มมากขึ้น",
-      "title_en": "BEACH ENERGY REPORT 21% INCREASE IN OIL PRODUCTION FROM WESTERN FLANK. EXPLORATION AND DEVELOPMENT CAMPAIGN TO BE INCREASED",
-      "summary": "รายงานพลังงานชายหาดเพิ่มขึ้น 21% ในการผลิตน้ำมันจากฝั่งตะวันตก การสำรวจและพัฒนาแคมเปญที่จะเพิ่มมากขึ้น",
-      "source": "CNW Group",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/beach-energy-report-21-increase-220200682.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T22:02:00Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "รายงานพลังงานชายหาดเพิ่มขึ้น 21% ในการผลิตน้ำมันจากฝั่งตะวันตก การสำรวจและพัฒนาแคมเปญที่จะเพิ่มมากขึ้น",
-        "แหล่งข่าวอ้างอิง: CNW Group (21/10/2026 22:02 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "รายงานพลังงานชายหาดเพิ่มขึ้น 21% ในการผลิตน้ำมันจากฝั่งตะวันตก การสำรวจและพัฒนาแคมเปญที่จะเพิ่มมากขึ้น",
-        "รายงานพลังงานชายหาดเพิ่มขึ้น 21% ในการผลิตน้ำมันจากฝั่งตะวันตก การสำรวจและพัฒนาแคมเปญที่จะเพิ่มมากขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BEACH ENERGY REPORT 21% INCREASE IN OIL PRODUCTION FROM WESTERN FLANK. EXPLORATION AND DEVELOPMENT CAMPAIGN TO BE INCREASED\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-      "title_en": "Basic Materials Roundup: Market Talk",
-      "summary": "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/5d4a00eb-6e39-38fb-bdc3-18d7c85cecdb/basic-materials-roundup%3A.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T21:16:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (21/10/2026 21:16 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-        "สรุปวัสดุพื้นฐาน: การพูดคุยเรื่องตลาด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Basic Materials Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "หุ้นสหรัฐฯ พุ่งขึ้นในขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
-      "title_en": "U.S. Stocks Rise as SpaceX Spurs AI Relief Rally",
-      "summary": "หุ้นสหรัฐฯ พุ่งขึ้นในขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/2d7ac23c-f99d-3bce-bad1-3e09aaaa3624/u.s.-stocks-rise-as-spacex.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T20:41:00Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "หุ้นสหรัฐฯ พุ่งขึ้นในขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (21/10/2026 20:41 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "หุ้นสหรัฐฯ พุ่งขึ้นในขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
-        "หุ้นสหรัฐฯ พุ่งขึ้นในขณะที่ SpaceX กระตุ้นการชุมนุมบรรเทาทุกข์ด้วย AI",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"U.S. Stocks Rise as SpaceX Spurs AI Relief Rally\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "ฤดูใบไม้ร่วงปีหน้าของหุ้น Western Digital จะยิ่งใหญ่ขนาดไหน?",
-      "title_en": "How Big Could Western Digital Stock's Next Fall Be?",
-      "summary": "ฤดูใบไม้ร่วงปีหน้าของหุ้น Western Digital จะยิ่งใหญ่ขนาดไหน?",
-      "source": "Trefis",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/big-could-western-digital-stocks-204028946.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T20:40:28Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "ฤดูใบไม้ร่วงปีหน้าของหุ้น Western Digital จะยิ่งใหญ่ขนาดไหน?",
-        "แหล่งข่าวอ้างอิง: Trefis (21/10/2026 20:40 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "ฤดูใบไม้ร่วงปีหน้าของหุ้น Western Digital จะยิ่งใหญ่ขนาดไหน?",
-        "ฤดูใบไม้ร่วงปีหน้าของหุ้น Western Digital จะยิ่งใหญ่ขนาดไหน?",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"How Big Could Western Digital Stock's Next Fall Be?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
+      "id": "news-12",
       "title": "Meta สั่งให้จ่ายค่าปรับ 25 พันล้านดอลลาร์ในคดี New Mexico Cambridge Analytica",
       "title_en": "Meta ordered to pay $25 billion penalty in New Mexico Cambridge Analytica case",
-      "summary": "Meta จะจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
+      "summary": "Meta จะต้องจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-21T20:04:07Z",
       "category": "TECH",
       "tickers": [
@@ -247,96 +331,14 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Meta จะจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
+        "Meta จะต้องจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
         "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 20:04 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
       ],
       "fullArticle": [
         "Meta สั่งให้จ่ายค่าปรับ 25 พันล้านดอลลาร์ในคดี New Mexico Cambridge Analytica",
-        "Meta จะจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
+        "Meta จะต้องจ่ายค่าปรับ 25 พันล้านดอลลาร์ในการลงโทษที่เกี่ยวข้องกับเรื่องอื้อฉาวของ Cambridge Analytica ในนิวเม็กซิโก",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta ordered to pay $25 billion penalty in New Mexico Cambridge Analytica case\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "Netflix ก้าวเข้าสู่วงการละครแล้ว พร้อมจะโดดแล้วหรือยัง?",
-      "title_en": "Netflix has dipped its toe into theatrical. Is it ready to jump in?",
-      "summary": "Ted Sarandos ซีอีโอร่วมกล่าวว่าสตรีมเมอร์ต้องการช่องทางใหม่ในการเติบโตและปรับปรุงการดำเนินการตามกลยุทธ์เนื้อหา",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/netflix-theatrical-strategy.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T18:32:12Z",
-      "category": "TECH",
-      "tickers": [
-        "NFLX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Ted Sarandos ซีอีโอร่วมกล่าวว่าสตรีมเมอร์ต้องการช่องทางใหม่ในการเติบโตและปรับปรุงการดำเนินการตามกลยุทธ์เนื้อหา",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 18:32 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NFLX"
-      ],
-      "fullArticle": [
-        "Netflix ก้าวเข้าสู่วงการละครแล้ว พร้อมจะโดดแล้วหรือยัง?",
-        "Ted Sarandos ซีอีโอร่วมกล่าวว่าสตรีมเมอร์ต้องการช่องทางใหม่ในการเติบโตและปรับปรุงการดำเนินการตามกลยุทธ์เนื้อหา",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Netflix has dipped its toe into theatrical. Is it ready to jump in?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "Capital One มีผลประกอบการไตรมาสที่แข็งแกร่ง เหตุใดเราจึงยังไม่ประกาศชัยชนะ",
-      "title_en": "Capital One delivered a strong quarter. Why we're not declaring victory just yet",
-      "summary": "Capital One รายงานผลประกอบการที่แข็งแกร่ง แต่ข้อกังวลที่ใหญ่ที่สุดประการหนึ่งของเรายังคงอยู่",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/21/capital-one-delivered-a-strong-quarter-why-were-not-declaring-victory-just-yet.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T18:06:31Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Capital One รายงานผลประกอบการที่แข็งแกร่ง แต่ข้อกังวลที่ใหญ่ที่สุดประการหนึ่งของเรายังคงอยู่",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 18:06 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "Capital One มีผลประกอบการไตรมาสที่แข็งแกร่ง เหตุใดเราจึงยังไม่ประกาศชัยชนะ",
-        "Capital One รายงานผลประกอบการที่แข็งแกร่ง แต่ข้อกังวลที่ใหญ่ที่สุดประการหนึ่งของเรายังคงอยู่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Capital One delivered a strong quarter. Why we're not declaring victory just yet\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "Intel ประสบความสำเร็จในการก่อสร้างที่ Ohio chip fab ซึ่งช้ากว่ากำหนดอย่างน้อย 5 ปี",
-      "title_en": "Intel hits construction milestone at Ohio chip fab that’s at least 5 years behind schedule",
-      "summary": "Intel ได้ติดตั้งโครงนั่งร้านโครงสร้างหลักชุดแรกที่โรงงานชิปในรัฐโอไฮโอที่ล่าช้า แต่บริษัทยังไม่ได้ประกาศลูกค้าภายนอกรายใหญ่",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/intel-hits-construction-milestone-at-delayed-ohio-chip-fab-.html",
-      "time": "7 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T16:55:51Z",
-      "category": "TECH",
-      "tickers": [
-        "INTC"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Intel ได้ติดตั้งโครงนั่งร้านโครงสร้างหลักชุดแรกที่โรงงานชิปในรัฐโอไฮโอที่ล่าช้า แต่บริษัทยังไม่ได้ประกาศลูกค้าภายนอกรายใหญ่",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 16:55 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #INTC"
-      ],
-      "fullArticle": [
-        "Intel ประสบความสำเร็จในการก่อสร้างที่ Ohio chip fab ซึ่งช้ากว่ากำหนดอย่างน้อย 5 ปี",
-        "Intel ได้ติดตั้งโครงนั่งร้านโครงสร้างหลักชุดแรกที่โรงงานชิปในรัฐโอไฮโอที่ล่าช้า แต่บริษัทยังไม่ได้ประกาศลูกค้าภายนอกรายใหญ่",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Intel hits construction milestone at Ohio chip fab that’s at least 5 years behind schedule\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
