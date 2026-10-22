@@ -1,44 +1,74 @@
 {
-  "updated_at": "2026-10-22T10:28:04Z",
-  "updated_at_thai": "22 ต.ค. 2569 17:28 น.",
+  "updated_at": "2026-10-22T13:15:41Z",
+  "updated_at_thai": "22 ต.ค. 2569 20:15 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "Jensen Huang ซีอีโอของ Nvidia กล่าวว่าอุปสงค์ของ Neocloud นั้น 'ไม่อยู่ในแผนภูมิ' แต่เงินทุนยังหายาก",
-      "title_en": "Nvidia CEO Jensen Huang says neocloud demand is 'off the charts' but capital is scarce",
-      "summary": "Jensen Huang ซีอีโอของ Nvidia กล่าวกับ CNBC เมื่อวันพฤหัสบดีว่าความต้องการบริษัท Neocloud นั้น \"ไม่อยู่ในแผน\" แต่เงินทุนที่ขาดแคลนกำลังขัดขวางการเติบโต",
+      "title": "Comcast เหนือความคาดหมายด้านรายได้เนื่องจากรายได้จากสื่อชดเชยจุดอ่อนในการเชื่อมต่อ",
+      "title_en": "Comcast beats earnings expectations as media revenue offsets weakness in connectivity",
+      "summary": "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/nvidia-jensen-huang-neocloud-demand-capital.html",
-      "time": "8 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T10:19:05Z",
-      "category": "TECH",
+      "sourceUrl": "https://www.cnbc.com/2026/10/22/comcast-cmcsa-earnings-q3-2026.html",
+      "time": "5 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T13:10:07Z",
+      "category": "EARNINGS",
       "tickers": [
-        "NVDA"
+        "SPY",
+        "DIA"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": true,
       "points": [
-        "Jensen Huang ซีอีโอของ Nvidia กล่าวกับ CNBC เมื่อวันพฤหัสบดีว่าความต้องการบริษัท Neocloud นั้น \"ไม่อยู่ในแผน\" แต่เงินทุนที่ขาดแคลนกำลังขัดขวางการเติบโต",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 10:19 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
+        "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 13:10 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "Jensen Huang ซีอีโอของ Nvidia กล่าวว่าอุปสงค์ของ Neocloud นั้น 'ไม่อยู่ในแผนภูมิ' แต่เงินทุนยังหายาก",
-        "Jensen Huang ซีอีโอของ Nvidia กล่าวกับ CNBC เมื่อวันพฤหัสบดีว่าความต้องการบริษัท Neocloud นั้น \"ไม่อยู่ในแผน\" แต่เงินทุนที่ขาดแคลนกำลังขัดขวางการเติบโต",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia CEO Jensen Huang says neocloud demand is 'off the charts' but capital is scarce\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Comcast เหนือความคาดหมายด้านรายได้เนื่องจากรายได้จากสื่อชดเชยจุดอ่อนในการเชื่อมต่อ",
+        "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Comcast beats earnings expectations as media revenue offsets weakness in connectivity\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-2",
-      "title": "Commerzbank กล่าวว่าคลังได้รับเพิ่มขึ้น ส่วนสัญญาซื้อขายล่วงหน้าหุ้นสหรัฐร่วงลงเนื่องจากราคาน้ำมันปรับตัวสูงขึ้น",
-      "title_en": "Commerzbank Says Treasuries Gain, US Equity Futures Fall as Oil Prices Rise",
-      "summary": "Commerzbank กล่าวว่าคลังได้รับเพิ่มขึ้น ส่วนสัญญาซื้อขายล่วงหน้าหุ้นสหรัฐร่วงลงเนื่องจากราคาน้ำมันปรับตัวสูงขึ้น",
+      "title": "อัพเดตภาคส่วน: พลังงาน",
+      "title_en": "Sector Update: Energy",
+      "summary": "อัพเดตภาคส่วน: พลังงาน",
       "source": "MT Newswires",
-      "sourceUrl": "https://finance.yahoo.com/economy/articles/commerzbank-says-treasuries-gain-us-101810738.html",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/sector-energy-130555725.html",
       "time": "9 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T10:18:10Z",
+      "publishedAt": "2026-10-22T13:05:55Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "อัพเดตภาคส่วน: พลังงาน",
+        "แหล่งข่าวอ้างอิง: MT Newswires (22/10/2026 13:05 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "อัพเดตภาคส่วน: พลังงาน",
+        "อัพเดตภาคส่วน: พลังงาน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Sector Update: Energy\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "Wall St ตั้งค่าให้เปิดต่ำลงเมื่อ AI กระวนกระวายใจและน้ำมันเพิ่มขึ้น",
+      "title_en": "Wall St set for lower open as AI jitters rekindle, oil gains",
+      "summary": "Wall St ตั้งค่าให้เปิดต่ำลงเมื่อ AI กระวนกระวายใจและน้ำมันเพิ่มขึ้น",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-drop-over-1-093849296.html",
+      "time": "10 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T13:05:12Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
@@ -48,26 +78,82 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "Commerzbank กล่าวว่าคลังได้รับเพิ่มขึ้น ส่วนสัญญาซื้อขายล่วงหน้าหุ้นสหรัฐร่วงลงเนื่องจากราคาน้ำมันปรับตัวสูงขึ้น",
-        "แหล่งข่าวอ้างอิง: MT Newswires (22/10/2026 10:18 UTC)",
+        "Wall St ตั้งค่าให้เปิดต่ำลงเมื่อ AI กระวนกระวายใจและน้ำมันเพิ่มขึ้น",
+        "แหล่งข่าวอ้างอิง: Reuters (22/10/2026 13:05 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "Commerzbank กล่าวว่าคลังได้รับเพิ่มขึ้น ส่วนสัญญาซื้อขายล่วงหน้าหุ้นสหรัฐร่วงลงเนื่องจากราคาน้ำมันปรับตัวสูงขึ้น",
-        "Commerzbank กล่าวว่าคลังได้รับเพิ่มขึ้น ส่วนสัญญาซื้อขายล่วงหน้าหุ้นสหรัฐร่วงลงเนื่องจากราคาน้ำมันปรับตัวสูงขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Commerzbank Says Treasuries Gain, US Equity Futures Fall as Oil Prices Rise\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Wall St ตั้งค่าให้เปิดต่ำลงเมื่อ AI กระวนกระวายใจและน้ำมันเพิ่มขึ้น",
+        "Wall St ตั้งค่าให้เปิดต่ำลงเมื่อ AI กระวนกระวายใจและน้ำมันเพิ่มขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Wall St set for lower open as AI jitters rekindle, oil gains\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-3",
-      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเนื่องจากผู้ค้าประเมินกำไรของ Tesla, Meta",
-      "title_en": "Stock market today: Dow, S&P 500, Nasdaq futures fall as traders assess Tesla, Meta earnings",
-      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเนื่องจากผู้ค้าประเมินกำไรของ Tesla, Meta",
+      "id": "news-4",
+      "title": "ราคาน้ำมันพุ่งแตะ 110 ดอลลาร์ จากความกังวลอิหร่าน-สหรัฐฯ พุ่งสูงขึ้นหลังกลางภาค",
+      "title_en": "Oil prices top $110 on worries of Iran-US escalations after midterms",
+      "summary": "ราคาน้ำมันพุ่งแตะ 110 ดอลลาร์ จากความกังวลอิหร่าน-สหรัฐฯ พุ่งสูงขึ้นหลังกลางภาค",
       "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-21-dow-sp-500-nasdaq-tesla-meta-094500493.html",
-      "time": "43 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T09:45:00Z",
-      "category": "EARNINGS",
+      "sourceUrl": "https://finance.yahoo.com/markets/article/oil-price-gains-on-possible-escalation-of-iran-us-tensions-after-midterms-120738560.html",
+      "time": "16 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T12:59:34Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ราคาน้ำมันพุ่งแตะ 110 ดอลลาร์ จากความกังวลอิหร่าน-สหรัฐฯ พุ่งสูงขึ้นหลังกลางภาค",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (22/10/2026 12:59 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ราคาน้ำมันพุ่งแตะ 110 ดอลลาร์ จากความกังวลอิหร่าน-สหรัฐฯ พุ่งสูงขึ้นหลังกลางภาค",
+        "ราคาน้ำมันพุ่งแตะ 110 ดอลลาร์ จากความกังวลอิหร่าน-สหรัฐฯ พุ่งสูงขึ้นหลังกลางภาค",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices top $110 on worries of Iran-US escalations after midterms\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "อัปเดต: ความตึงเครียดในตะวันออกกลาง ราคาน้ำมันที่สูงขึ้น ส่งผลให้สัญญาซื้อขายล่วงหน้าหุ้นสหรัฐลดลง Pre-Bell",
+      "title_en": "Update: Middle East Tensions, Rising Oil Prices Drag US Equity Futures Lower Pre-Bell",
+      "summary": "อัปเดต: ความตึงเครียดในตะวันออกกลาง ราคาน้ำมันที่สูงขึ้น ส่งผลให้สัญญาซื้อขายล่วงหน้าหุ้นสหรัฐลดลง Pre-Bell",
+      "source": "MT Newswires",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/middle-east-tensions-rising-oil-125616408.html",
+      "time": "19 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T12:56:16Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "อัปเดต: ความตึงเครียดในตะวันออกกลาง ราคาน้ำมันที่สูงขึ้น ส่งผลให้สัญญาซื้อขายล่วงหน้าหุ้นสหรัฐลดลง Pre-Bell",
+        "แหล่งข่าวอ้างอิง: MT Newswires (22/10/2026 12:56 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "อัปเดต: ความตึงเครียดในตะวันออกกลาง ราคาน้ำมันที่สูงขึ้น ส่งผลให้สัญญาซื้อขายล่วงหน้าหุ้นสหรัฐลดลง Pre-Bell",
+        "อัปเดต: ความตึงเครียดในตะวันออกกลาง ราคาน้ำมันที่สูงขึ้น ส่งผลให้สัญญาซื้อขายล่วงหน้าหุ้นสหรัฐลดลง Pre-Bell",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Update: Middle East Tensions, Rising Oil Prices Drag US Equity Futures Lower Pre-Bell\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเมื่อน้ำมันพุ่งขึ้น, นักลงทุนชั่งน้ำหนัก Tesla, Meta กำไร",
+      "title_en": "Stock market today: Dow, S&P 500, Nasdaq futures tumble as oil climbs, investors weigh Tesla, Meta earnings",
+      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเมื่อน้ำมันพุ่งขึ้น, นักลงทุนชั่งน้ำหนัก Tesla, Meta กำไร",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html",
+      "time": "27 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T12:47:49Z",
+      "category": "COMMODITIES",
       "tickers": [
         "META",
         "TSLA",
@@ -75,142 +161,29 @@
         "QQQ",
         "DIA"
       ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเนื่องจากผู้ค้าประเมินกำไรของ Tesla, Meta",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (22/10/2026 09:45 UTC)",
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเมื่อน้ำมันพุ่งขึ้น, นักลงทุนชั่งน้ำหนัก Tesla, Meta กำไร",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (22/10/2026 12:47 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #TSLA #SPY #QQQ #DIA"
       ],
       "fullArticle": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเนื่องจากผู้ค้าประเมินกำไรของ Tesla, Meta",
-        "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเนื่องจากผู้ค้าประเมินกำไรของ Tesla, Meta",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq futures fall as traders assess Tesla, Meta earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "ฟิวเจอร์ส Nasdaq ลดลงกว่า 1% เนื่องจากความกังวลของ AI กลับมาอีกครั้ง และน้ำมันก็พุ่งสูงขึ้น",
-      "title_en": "Nasdaq futures drop over 1% as AI worries resurface, oil climbs",
-      "summary": "ฟิวเจอร์ส Nasdaq ลดลงกว่า 1% เนื่องจากความกังวลของ AI กลับมาอีกครั้ง และน้ำมันก็พุ่งสูงขึ้น",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-drop-over-1-093849296.html",
-      "time": "49 นาทีที่แล้ว",
-      "publishedAt": "2026-10-22T09:38:49Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "QQQ"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ฟิวเจอร์ส Nasdaq ลดลงกว่า 1% เนื่องจากความกังวลของ AI กลับมาอีกครั้ง และน้ำมันก็พุ่งสูงขึ้น",
-        "แหล่งข่าวอ้างอิง: Reuters (22/10/2026 09:38 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #QQQ"
-      ],
-      "fullArticle": [
-        "ฟิวเจอร์ส Nasdaq ลดลงกว่า 1% เนื่องจากความกังวลของ AI กลับมาอีกครั้ง และน้ำมันก็พุ่งสูงขึ้น",
-        "ฟิวเจอร์ส Nasdaq ลดลงกว่า 1% เนื่องจากความกังวลของ AI กลับมาอีกครั้ง และน้ำมันก็พุ่งสูงขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nasdaq futures drop over 1% as AI worries resurface, oil climbs\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "STOXX 600 ของยุโรปร่วงลงเนื่องจากผลประกอบการที่หลากหลายและอารมณ์เปรี้ยวของน้ำมันที่เพิ่มขึ้น",
-      "title_en": "Europe's STOXX 600 slips as mixed earnings and rising oil sour mood",
-      "summary": "STOXX 600 ของยุโรปร่วงลงเนื่องจากผลประกอบการที่หลากหลายและอารมณ์เปรี้ยวของน้ำมันที่เพิ่มขึ้น",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/stoxx-600-slips-barclays-hermes-072407788.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T09:23:19Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "STOXX 600 ของยุโรปร่วงลงเนื่องจากผลประกอบการที่หลากหลายและอารมณ์เปรี้ยวของน้ำมันที่เพิ่มขึ้น",
-        "แหล่งข่าวอ้างอิง: Reuters (22/10/2026 09:23 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "STOXX 600 ของยุโรปร่วงลงเนื่องจากผลประกอบการที่หลากหลายและอารมณ์เปรี้ยวของน้ำมันที่เพิ่มขึ้น",
-        "STOXX 600 ของยุโรปร่วงลงเนื่องจากผลประกอบการที่หลากหลายและอารมณ์เปรี้ยวของน้ำมันที่เพิ่มขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Europe's STOXX 600 slips as mixed earnings and rising oil sour mood\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "บล็อกของนักวิเคราะห์ Zacks เน้นเรื่อง DIVN, LVHI, GCOW, KNGZ และ FDV",
-      "title_en": "The Zacks Analyst Blog Highlights DIVN, LVHI, GCOW, KNGZ and FDV",
-      "summary": "บล็อกของนักวิเคราะห์ Zacks เน้นเรื่อง DIVN, LVHI, GCOW, KNGZ และ FDV",
-      "source": "Zacks",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-divn-090500010.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T09:05:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "บล็อกของนักวิเคราะห์ Zacks เน้นเรื่อง DIVN, LVHI, GCOW, KNGZ และ FDV",
-        "แหล่งข่าวอ้างอิง: Zacks (22/10/2026 09:05 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "บล็อกของนักวิเคราะห์ Zacks เน้นเรื่อง DIVN, LVHI, GCOW, KNGZ และ FDV",
-        "บล็อกของนักวิเคราะห์ Zacks เน้นเรื่อง DIVN, LVHI, GCOW, KNGZ และ FDV",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"The Zacks Analyst Blog Highlights DIVN, LVHI, GCOW, KNGZ and FDV\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเมื่อน้ำมันพุ่งขึ้น, นักลงทุนชั่งน้ำหนัก Tesla, Meta กำไร",
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, ฟิวเจอร์ส Nasdaq ร่วงลงเมื่อน้ำมันพุ่งขึ้น, นักลงทุนชั่งน้ำหนัก Tesla, Meta กำไร",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq futures tumble as oil climbs, investors weigh Tesla, Meta earnings\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-7",
-      "title": "เอเชียตะวันออกเฉียงใต้กำลังหิวโหยสำหรับ AI และเงินไม่ได้อยู่แค่ในการสมัครรับข้อมูลเท่านั้น",
-      "title_en": "Southeast Asia is hungry for AI — and the money isn't just in subscriptions",
-      "summary": "การนำ AI มาใช้อย่างรวดเร็วในเอเชียตะวันออกเฉียงใต้กำลังสร้างโอกาสทางธุรกิจนอกเหนือจากการสมัครสมาชิกแบบชำระเงิน พันธมิตรของ Bain & Company กล่าวกับ CNBC",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/southeasaisa-singapore-bain-temasek-google-.html",
-      "time": "8 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T02:01:48Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "การนำ AI มาใช้อย่างรวดเร็วในเอเชียตะวันออกเฉียงใต้กำลังสร้างโอกาสทางธุรกิจนอกเหนือจากการสมัครสมาชิกแบบชำระเงิน พันธมิตรของ Bain & Company กล่าวกับ CNBC",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 02:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "เอเชียตะวันออกเฉียงใต้กำลังหิวโหยสำหรับ AI และเงินไม่ได้อยู่แค่ในการสมัครรับข้อมูลเท่านั้น",
-        "การนำ AI มาใช้อย่างรวดเร็วในเอเชียตะวันออกเฉียงใต้กำลังสร้างโอกาสทางธุรกิจนอกเหนือจากการสมัครสมาชิกแบบชำระเงิน พันธมิตรของ Bain & Company กล่าวกับ CNBC",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Southeast Asia is hungry for AI — and the money isn't just in subscriptions\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "ข้อบกพร่องด้านความปลอดภัยบนเว็บที่สำคัญทำให้เกิดความตื่นตระหนกทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนอง",
-      "title_en": "Critical web security flaws spark global alarm as Google, OpenAI and Amazon respond",
+      "title": "ข้อบกพร่องด้านความปลอดภัยบนเว็บ PHP ที่สำคัญทำให้เกิดความตื่นตระหนกทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนอง",
+      "title_en": "Critical PHP web security flaws spark global alarm as Google, OpenAI and Amazon respond",
       "summary": "ข้อบกพร่องด้านความปลอดภัยที่สำคัญของ PHP ทำให้เกิดคำเตือนทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนองต่อภัยคุกคามทางไซเบอร์ที่อาจเกิดขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/php-google-openai-and-amazon-cyber.html",
-      "time": "9 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T01:05:15Z",
+      "time": "29 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T12:46:15Z",
       "category": "TECH",
       "tickers": [
         "GOOGL",
@@ -221,24 +194,24 @@
       "isHero": false,
       "points": [
         "ข้อบกพร่องด้านความปลอดภัยที่สำคัญของ PHP ทำให้เกิดคำเตือนทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนองต่อภัยคุกคามทางไซเบอร์ที่อาจเกิดขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 01:05 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 12:46 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #GOOGL #AMZN"
       ],
       "fullArticle": [
-        "ข้อบกพร่องด้านความปลอดภัยบนเว็บที่สำคัญทำให้เกิดความตื่นตระหนกทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนอง",
+        "ข้อบกพร่องด้านความปลอดภัยบนเว็บ PHP ที่สำคัญทำให้เกิดความตื่นตระหนกทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนอง",
         "ข้อบกพร่องด้านความปลอดภัยที่สำคัญของ PHP ทำให้เกิดคำเตือนทั่วโลกในขณะที่ Google, OpenAI และ Amazon ตอบสนองต่อภัยคุกคามทางไซเบอร์ที่อาจเกิดขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Critical web security flaws spark global alarm as Google, OpenAI and Amazon respond\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Critical PHP web security flaws spark global alarm as Google, OpenAI and Amazon respond\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-9",
+      "id": "news-8",
       "title": "Meta ได้จัดทำแผนงานอันทะเยอทะยานในการสร้างรายได้ของ Muse หลังจากไตรมาสและแนวทางที่แข็งแกร่ง",
       "title_en": "Meta put out an ambitious roadmap to Muse monetization after strong quarter and guide",
       "summary": "นักลงทุนชอบสิ่งที่พวกเขาเห็น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/21/meta-put-out-an-ambitious-roadmap-to-muse-monetization-after-strong-quarter-and-guide.html",
-      "time": "9 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T00:53:01Z",
+      "time": "30 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T12:45:06Z",
       "category": "EARNINGS",
       "tickers": [
         "META"
@@ -248,7 +221,7 @@
       "isHero": false,
       "points": [
         "นักลงทุนชอบสิ่งที่พวกเขาเห็น",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 00:53 UTC)",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 12:45 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
       ],
       "fullArticle": [
@@ -258,86 +231,118 @@
       ]
     },
     {
-      "id": "news-10",
-      "title": "Meta รายงานรายรับในไตรมาสสามที่พุ่งสูงขึ้นและออกแนวทางที่แข็งแกร่ง",
-      "title_en": "Meta reports third-quarter revenue beat and issues strong guidance",
-      "summary": "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
+      "id": "news-9",
+      "title": "คะแนนการอนุมัติของทรัมป์ในด้านเศรษฐกิจแตะระดับต่ำสุดเป็นประวัติการณ์เมื่อถึงกลางภาค: การสำรวจของ CNBC",
+      "title_en": "Trump's approval rating on economy hits all-time low as midterm looms: CNBC survey",
+      "summary": "ขณะนี้ชาวอเมริกันแปดใน 10 คนให้คะแนนเศรษฐกิจว่ายุติธรรมหรือยากจน หนึ่งในผลการวิจัยหลายรายการในการสำรวจของ CNBC ที่แสดงให้เห็นว่าเหตุใดผู้สมัครจากพรรครีพับลิกันจึงต้องเผชิญกับการต่อสู้ที่ยากลำบาก",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/meta-earnings-q3-2026-live-updates.html",
-      "time": "10 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T23:45:42Z",
-      "category": "EARNINGS",
+      "sourceUrl": "https://www.cnbc.com/2026/10/22/trump-economic-approval-rating-midterms-poll.html",
+      "time": "31 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T12:44:34Z",
+      "category": "MACRO",
       "tickers": [
-        "META"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 23:45 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
-      ],
-      "fullArticle": [
-        "Meta รายงานรายรับในไตรมาสสามที่พุ่งสูงขึ้นและออกแนวทางที่แข็งแกร่ง",
-        "ติดตามรายได้สดของ Meta ในไตรมาสที่ 3 ปี 2026 รวมถึงรายได้ EPS การใช้จ่าย AI การเติบโตของโฆษณา คำแนะนำ และปฏิกิริยาต่อหุ้นของ META",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta reports third-quarter revenue beat and issues strong guidance\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "Tesla เอาชนะทั้งรายได้และยอดขาย แม้ว่ารายได้รถยนต์จะลดลงก็ตาม",
-      "title_en": "Tesla beats on earnings and sales even as auto revenue declines",
-      "summary": "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html",
-      "time": "10 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T23:32:04Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "TSLA"
+        "SPY",
+        "QQQ",
+        "TLT"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 23:32 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+        "ขณะนี้ชาวอเมริกันแปดใน 10 คนให้คะแนนเศรษฐกิจว่ายุติธรรมหรือยากจน หนึ่งในผลการวิจัยหลายรายการในการสำรวจของ CNBC ที่แสดงให้เห็นว่าเหตุใดผู้สมัครจากพรรครีพับลิกันจึงต้องเผชิญกับการต่อสู้ที่ยากลำบาก",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 12:44 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
       ],
       "fullArticle": [
-        "Tesla เอาชนะทั้งรายได้และยอดขาย แม้ว่ารายได้รถยนต์จะลดลงก็ตาม",
-        "Tesla รายงานผลประกอบการไตรมาส 3 ดีกว่าคาด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tesla beats on earnings and sales even as auto revenue declines\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "คะแนนการอนุมัติของทรัมป์ในด้านเศรษฐกิจแตะระดับต่ำสุดเป็นประวัติการณ์เมื่อถึงกลางภาค: การสำรวจของ CNBC",
+        "ขณะนี้ชาวอเมริกันแปดใน 10 คนให้คะแนนเศรษฐกิจว่ายุติธรรมหรือยากจน หนึ่งในผลการวิจัยหลายรายการในการสำรวจของ CNBC ที่แสดงให้เห็นว่าเหตุใดผู้สมัครจากพรรครีพับลิกันจึงต้องเผชิญกับการต่อสู้ที่ยากลำบาก",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Trump's approval rating on economy hits all-time low as midterm looms: CNBC survey\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-12",
-      "title": "IBM เอาชนะทั้งด้านบนและด้านล่างเมื่อ CEO Krishna กล่าวถึงแนวคิด 'Super Intelligence'",
-      "title_en": "IBM beats on top and bottom lines as CEO Krishna touts 'Super Intelligence' traction",
-      "summary": "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
+      "id": "news-10",
+      "title": "Southwest Airlines ปรับลดคาดการณ์กำไรปี 2569 จากเชื้อเพลิงที่สูงขึ้น",
+      "title_en": "Southwest Airlines cuts 2026 profit forecast on higher fuel",
+      "summary": "เซาท์เวสต์ แอร์ไลน์ส กลายเป็นสายการบินรายใหญ่อันดับ 3 ของสหรัฐฯ ในเดือนนี้ที่ปรับลดประมาณการกำไรปี 2569 เนื่องจากราคาน้ำมันที่สูงขึ้น",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html",
-      "time": "12 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-21T22:03:37Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/21/southwest-airlines-luv-3q-2026-earnings.html",
+      "time": "33 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T12:42:01Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "เซาท์เวสต์ แอร์ไลน์ส กลายเป็นสายการบินรายใหญ่อันดับ 3 ของสหรัฐฯ ในเดือนนี้ที่ปรับลดประมาณการกำไรปี 2569 เนื่องจากราคาน้ำมันที่สูงขึ้น",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 12:42 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "Southwest Airlines ปรับลดคาดการณ์กำไรปี 2569 จากเชื้อเพลิงที่สูงขึ้น",
+        "เซาท์เวสต์ แอร์ไลน์ส กลายเป็นสายการบินรายใหญ่อันดับ 3 ของสหรัฐฯ ในเดือนนี้ที่ปรับลดประมาณการกำไรปี 2569 เนื่องจากราคาน้ำมันที่สูงขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Southwest Airlines cuts 2026 profit forecast on higher fuel\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-11",
+      "title": "RAD ของ AITX ได้รับคำสั่งซื้อจากสามกลุ่มผลิตภัณฑ์",
+      "title_en": "AITX's RAD Secures Orders Across Three Product Lines",
+      "summary": "RAD ของ AITX ได้รับคำสั่งซื้อจากสามกลุ่มผลิตภัณฑ์",
+      "source": "TMX Newsfile",
+      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/aitxs-rad-secures-orders-across-124000979.html",
+      "time": "35 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T12:40:00Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
         "AAPL",
         "MSFT"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
-        "แหล่งข่าวอ้างอิง: CNBC (21/10/2026 22:03 UTC)",
+        "RAD ของ AITX ได้รับคำสั่งซื้อจากสามกลุ่มผลิตภัณฑ์",
+        "แหล่งข่าวอ้างอิง: TMX Newsfile (22/10/2026 12:40 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "IBM เอาชนะทั้งด้านบนและด้านล่างเมื่อ CEO Krishna กล่าวถึงแนวคิด 'Super Intelligence'",
-        "Arvind Krishna ซีอีโอ ระบุว่า IBM กำลังช่วยเหลือลูกค้าในด้านปัญญาประดิษฐ์",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"IBM beats on top and bottom lines as CEO Krishna touts 'Super Intelligence' traction\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "RAD ของ AITX ได้รับคำสั่งซื้อจากสามกลุ่มผลิตภัณฑ์",
+        "RAD ของ AITX ได้รับคำสั่งซื้อจากสามกลุ่มผลิตภัณฑ์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AITX's RAD Secures Orders Across Three Product Lines\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-12",
+      "title": "เหตุใดรัฐบาลจึงดึงเว็บไซต์ออฟไลน์เนื่องจากภาษาโปรแกรม PHP ที่มีอายุหลายสิบปี",
+      "title_en": "Why governments pulled websites offline over the decades-old PHP programming language",
+      "summary": "เซิร์ฟเวอร์ที่ใช้ภาษาการเขียนโปรแกรม PHP ยอดนิยมเผชิญกับข้อบกพร่องด้านความปลอดภัยที่สำคัญ เว็บไซต์หลายล้านแห่งมีข้อมูลตกอยู่ในความเสี่ยง",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/22/php2shell-vulnerability-what-is-it-and-is-your-data-at-risk.html",
+      "time": "40 นาทีที่แล้ว",
+      "publishedAt": "2026-10-22T12:35:08Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "เซิร์ฟเวอร์ที่ใช้ภาษาการเขียนโปรแกรม PHP ยอดนิยมเผชิญกับข้อบกพร่องด้านความปลอดภัยที่สำคัญ เว็บไซต์หลายล้านแห่งมีข้อมูลตกอยู่ในความเสี่ยง",
+        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 12:35 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "เหตุใดรัฐบาลจึงดึงเว็บไซต์ออฟไลน์เนื่องจากภาษาโปรแกรม PHP ที่มีอายุหลายสิบปี",
+        "เซิร์ฟเวอร์ที่ใช้ภาษาการเขียนโปรแกรม PHP ยอดนิยมเผชิญกับข้อบกพร่องด้านความปลอดภัยที่สำคัญ เว็บไซต์หลายล้านแห่งมีข้อมูลตกอยู่ในความเสี่ยง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Why governments pulled websites offline over the decades-old PHP programming language\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
