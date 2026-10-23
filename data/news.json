@@ -1,214 +1,129 @@
 {
-  "updated_at": "2026-10-23T05:55:58Z",
-  "updated_at_thai": "23 ต.ค. 2569 12:55 น.",
+  "updated_at": "2026-10-23T11:17:22Z",
+  "updated_at_thai": "23 ต.ค. 2569 18:17 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ราคาน้ำมันปรับตัวสูงขึ้นเนื่องจากความกังวลด้านอุปทานยังคงอยู่ท่ามกลางการโจมตีของฮูตีในซาอุดิอาระเบีย",
-      "title_en": "Oil prices rise as supply concerns linger amid Houthi attacks on Saudi Arabia",
-      "summary": "ราคาน้ำมันปรับตัวสูงขึ้นเนื่องจากความกังวลด้านอุปทานยังคงอยู่ท่ามกลางการโจมตีของฮูตีในซาอุดิอาระเบีย",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-rise-supply-concerns-052617190.html",
-      "time": "29 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T05:26:17Z",
+      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq Futures โยกเยกหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว",
+      "title_en": "Stock market today: Dow, S&P 500, Nasdaq futures wobble after sharp tech sell-off",
+      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq Futures โยกเยกหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-23-dow-sp-500-nasdaq-tesla-meta-093000521.html",
+      "time": "3 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T11:14:01Z",
+      "category": "TECH",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq Futures โยกเยกหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (23/10/2026 11:14 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq Futures โยกเยกหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว",
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq Futures โยกเยกหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq futures wobble after sharp tech sell-off\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "ราคาน้ำมันใกล้ระดับ 115 ดอลลาร์ โดยหุ้นปะปนกับกำไรและ AI",
+      "title_en": "Oil nears $115 with stocks mixed on earnings, AI",
+      "summary": "ราคาน้ำมันใกล้ระดับ 115 ดอลลาร์ โดยหุ้นปะปนกับกำไรและ AI",
+      "source": "AFP",
+      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-head-weekend-low-024730943.html",
+      "time": "3 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T11:13:50Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
         "CVX"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
       "points": [
-        "ราคาน้ำมันปรับตัวสูงขึ้นเนื่องจากความกังวลด้านอุปทานยังคงอยู่ท่ามกลางการโจมตีของฮูตีในซาอุดิอาระเบีย",
-        "แหล่งข่าวอ้างอิง: Reuters (23/10/2026 05:26 UTC)",
+        "ราคาน้ำมันใกล้ระดับ 115 ดอลลาร์ โดยหุ้นปะปนกับกำไรและ AI",
+        "แหล่งข่าวอ้างอิง: AFP (23/10/2026 11:13 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "ราคาน้ำมันปรับตัวสูงขึ้นเนื่องจากความกังวลด้านอุปทานยังคงอยู่ท่ามกลางการโจมตีของฮูตีในซาอุดิอาระเบีย",
-        "ราคาน้ำมันปรับตัวสูงขึ้นเนื่องจากความกังวลด้านอุปทานยังคงอยู่ท่ามกลางการโจมตีของฮูตีในซาอุดิอาระเบีย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices rise as supply concerns linger amid Houthi attacks on Saudi Arabia\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-2",
-      "title": "เยนคาดว่าจะเพิ่มขึ้นทุกสัปดาห์เนื่องจากความกระวนกระวายใจของ AI กระตุ้นให้เกิดความเร่งรีบ",
-      "title_en": "Yen set for weekly gain as AI jitters spur safe-haven rush",
-      "summary": "เยนคาดว่าจะเพิ่มขึ้นทุกสัปดาห์เนื่องจากความกระวนกระวายใจของ AI กระตุ้นให้เกิดความเร่งรีบ",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/currencies/articles/yen-shines-ai-jitters-spur-020808692.html",
-      "time": "36 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T05:19:51Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "เยนคาดว่าจะเพิ่มขึ้นทุกสัปดาห์เนื่องจากความกระวนกระวายใจของ AI กระตุ้นให้เกิดความเร่งรีบ",
-        "แหล่งข่าวอ้างอิง: Reuters (23/10/2026 05:19 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "เยนคาดว่าจะเพิ่มขึ้นทุกสัปดาห์เนื่องจากความกระวนกระวายใจของ AI กระตุ้นให้เกิดความเร่งรีบ",
-        "เยนคาดว่าจะเพิ่มขึ้นทุกสัปดาห์เนื่องจากความกระวนกระวายใจของ AI กระตุ้นให้เกิดความเร่งรีบ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Yen set for weekly gain as AI jitters spur safe-haven rush\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ราคาน้ำมันใกล้ระดับ 115 ดอลลาร์ โดยหุ้นปะปนกับกำไรและ AI",
+        "ราคาน้ำมันใกล้ระดับ 115 ดอลลาร์ โดยหุ้นปะปนกับกำไรและ AI",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil nears $115 with stocks mixed on earnings, AI\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-3",
-      "title": "ราคาน้ำมันพุ่งสูงกว่า 113 ดอลลาร์ เนื่องจาก AI เทขายหุ้นและนักลงทุนซื้อพันธบัตร",
-      "title_en": "Oil prices climb above $113 as AI sell-off rattles stocks and investors buy bonds",
-      "summary": "ราคาน้ำมันพุ่งสูงกว่า 113 ดอลลาร์ เนื่องจาก AI เทขายหุ้นและนักลงทุนซื้อพันธบัตร",
-      "source": "Euronews",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-climb-above-113-050815674.html",
-      "time": "47 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T05:08:15Z",
+      "title": "ราคาทองคำวันนี้ วันศุกร์ที่ 23 ต.ค. 2569 ทองคำเปิดต่ำสุดรอบ 3 เดือน หลังราคาน้ำมันพุ่งขึ้นต่อเนื่อง",
+      "title_en": "Gold price today, Friday, October 23, 2026: Gold opens at 3-month lows as oil prices keep rising",
+      "summary": "ราคาทองคำวันนี้ วันศุกร์ที่ 23 ต.ค. 2569 ทองคำเปิดต่ำสุดรอบ 3 เดือน หลังราคาน้ำมันพุ่งขึ้นต่อเนื่อง",
+      "source": "Yahoo Personal Finance",
+      "sourceUrl": "https://finance.yahoo.com/personal-finance/investing/article/gold-price-today-friday-october-23-2026-gold-opens-at-3-month-lows-as-oil-prices-keep-rising-111248003.html",
+      "time": "4 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T11:12:48Z",
       "category": "COMMODITIES",
       "tickers": [
-        "TLT"
+        "XOM",
+        "CVX"
       ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "ราคาน้ำมันพุ่งสูงกว่า 113 ดอลลาร์ เนื่องจาก AI เทขายหุ้นและนักลงทุนซื้อพันธบัตร",
-        "แหล่งข่าวอ้างอิง: Euronews (23/10/2026 05:08 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+        "ราคาทองคำวันนี้ วันศุกร์ที่ 23 ต.ค. 2569 ทองคำเปิดต่ำสุดรอบ 3 เดือน หลังราคาน้ำมันพุ่งขึ้นต่อเนื่อง",
+        "แหล่งข่าวอ้างอิง: Yahoo Personal Finance (23/10/2026 11:12 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "ราคาน้ำมันพุ่งสูงกว่า 113 ดอลลาร์ เนื่องจาก AI เทขายหุ้นและนักลงทุนซื้อพันธบัตร",
-        "ราคาน้ำมันพุ่งสูงกว่า 113 ดอลลาร์ เนื่องจาก AI เทขายหุ้นและนักลงทุนซื้อพันธบัตร",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices climb above $113 as AI sell-off rattles stocks and investors buy bonds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ราคาทองคำวันนี้ วันศุกร์ที่ 23 ต.ค. 2569 ทองคำเปิดต่ำสุดรอบ 3 เดือน หลังราคาน้ำมันพุ่งขึ้นต่อเนื่อง",
+        "ราคาทองคำวันนี้ วันศุกร์ที่ 23 ต.ค. 2569 ทองคำเปิดต่ำสุดรอบ 3 เดือน หลังราคาน้ำมันพุ่งขึ้นต่อเนื่อง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Gold price today, Friday, October 23, 2026: Gold opens at 3-month lows as oil prices keep rising\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-4",
-      "title": "หุ้น SK Hynix ดีดตัวขึ้นหลังจากที่แผนการ IPO ของ Solidigm ลดลงครั้งแรก",
-      "title_en": "SK Hynix shares rebound after initial drop on scrapped Solidigm IPO plans",
-      "summary": "หุ้น SK Hynix ดีดตัวขึ้นหลังจากการซื้อขายในช่วงแรกลดลง หลังจากการทบทวนแผนการ IPO ของ Solidigm ในสหรัฐอเมริกา",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html",
-      "time": "54 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T05:01:31Z",
-      "category": "TECH",
+      "title": "การวิเคราะห์เงินปันผลของ Tortoise Energy Infrastructure Corp",
+      "title_en": "Tortoise Energy Infrastructure Corp's Dividend Analysis",
+      "summary": "การวิเคราะห์เงินปันผลของ Tortoise Energy Infrastructure Corp",
+      "source": "GuruFocus.com",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/tortoise-energy-infrastructure-corps-dividend-110849751.html",
+      "time": "8 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T11:08:49Z",
+      "category": "MACRO",
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
+        "SCHD"
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "หุ้น SK Hynix ดีดตัวขึ้นหลังจากการซื้อขายในช่วงแรกลดลง หลังจากการทบทวนแผนการ IPO ของ Solidigm ในสหรัฐอเมริกา",
-        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 05:01 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+        "การวิเคราะห์เงินปันผลของ Tortoise Energy Infrastructure Corp",
+        "แหล่งข่าวอ้างอิง: GuruFocus.com (23/10/2026 11:08 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SCHD"
       ],
       "fullArticle": [
-        "หุ้น SK Hynix ดีดตัวขึ้นหลังจากที่แผนการ IPO ของ Solidigm ลดลงครั้งแรก",
-        "หุ้น SK Hynix ดีดตัวขึ้นหลังจากการซื้อขายในช่วงแรกลดลง หลังจากการทบทวนแผนการ IPO ของ Solidigm ในสหรัฐอเมริกา",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SK Hynix shares rebound after initial drop on scrapped Solidigm IPO plans\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "การวิเคราะห์เงินปันผลของ Tortoise Energy Infrastructure Corp",
+        "การวิเคราะห์เงินปันผลของ Tortoise Energy Infrastructure Corp",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Tortoise Energy Infrastructure Corp's Dividend Analysis\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-5",
-      "title": "3 หุ้นการเติบโตของอินเดียที่มีการเติบโตของรายได้สูงถึง 27%",
-      "title_en": "3 Indian Growth Stocks With Revenue Growth Up To 27%",
-      "summary": "3 หุ้นการเติบโตของอินเดียที่มีการเติบโตของรายได้สูงถึง 27%",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-indian-growth-stocks-revenue-042718546.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T04:27:18Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "3 หุ้นการเติบโตของอินเดียที่มีการเติบโตของรายได้สูงถึง 27%",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (23/10/2026 04:27 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "3 หุ้นการเติบโตของอินเดียที่มีการเติบโตของรายได้สูงถึง 27%",
-        "3 หุ้นการเติบโตของอินเดียที่มีการเติบโตของรายได้สูงถึง 27%",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Indian Growth Stocks With Revenue Growth Up To 27%\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "หุ้นเอเชียร่วงลงเมื่อ AI ถล่มเกาหลีใต้ ญี่ปุ่นกลัว CPI ที่แข็งแกร่ง",
-      "title_en": "Asia stocks fall as AI rout batters S.Korea; Japan spooked by strong CPI",
-      "summary": "หุ้นเอเชียร่วงลงเมื่อ AI ถล่มเกาหลีใต้ ญี่ปุ่นกลัว CPI ที่แข็งแกร่ง",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asia-stocks-fall-ai-rout-035546998.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T03:55:46Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "หุ้นเอเชียร่วงลงเมื่อ AI ถล่มเกาหลีใต้ ญี่ปุ่นกลัว CPI ที่แข็งแกร่ง",
-        "แหล่งข่าวอ้างอิง: Investing.com (23/10/2026 03:55 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "หุ้นเอเชียร่วงลงเมื่อ AI ถล่มเกาหลีใต้ ญี่ปุ่นกลัว CPI ที่แข็งแกร่ง",
-        "หุ้นเอเชียร่วงลงเมื่อ AI ถล่มเกาหลีใต้ ญี่ปุ่นกลัว CPI ที่แข็งแกร่ง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asia stocks fall as AI rout batters S.Korea; Japan spooked by strong CPI\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "SpaceX ได้รับเงินลงทุน 561 ล้านดอลลาร์จากการถือหุ้นใน Boring Co. ของ Elon Musk",
-      "title_en": "SpaceX records $561 million investment gain from stake in Elon Musk's Boring Co.",
-      "summary": "สัดส่วนการถือหุ้นของ SpaceX ใน Boring Co. ช่วยเพิ่มรายได้สุทธิในไตรมาสที่สาม",
+      "title": "การค้นหาที่หลบภัยจะมีขึ้นในวันศุกร์ เนื่องจากนักลงทุนหมุนเวียนกันอย่างต่อเนื่อง",
+      "title_en": "Safe haven search is on Friday as investors keep rotating",
+      "summary": "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/spacex-records-561-million-investment-gain-from-stake-in-boring-co.html",
-      "time": "5 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T00:46:09Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "สัดส่วนการถือหุ้นของ SpaceX ใน Boring Co. ช่วยเพิ่มรายได้สุทธิในไตรมาสที่สาม",
-        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 00:46 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "SpaceX ได้รับเงินลงทุน 561 ล้านดอลลาร์จากการถือหุ้นใน Boring Co. ของ Elon Musk",
-        "สัดส่วนการถือหุ้นของ SpaceX ใน Boring Co. ช่วยเพิ่มรายได้สุทธิในไตรมาสที่สาม",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX records $561 million investment gain from stake in Elon Musk's Boring Co.\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "Etsy แบนสูตรอาหารและรูปแบบที่สร้างโดย AI จากตลาดออนไลน์",
-      "title_en": "Etsy bans AI-generated recipes and patterns from its online marketplace",
-      "summary": "Etsy ยังวางกฎที่ชัดเจนยิ่งขึ้นเกี่ยวกับการใช้งาน AI บนแพลตฟอร์ม รวมถึงการห้ามผู้ขายไม่ให้สร้างรายการสินค้าที่สร้างโดยบอทโดยไม่ต้องมีมนุษย์เข้าไปเกี่ยวข้อง",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/etsy-bans-ai-generated-recipes-patterns-from-its-online-marketplace.html",
-      "time": "6 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T23:45:50Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/safe-haven-search-is-on-friday-as-investors-keep-rotating.html",
+      "time": "12 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T11:05:13Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -219,25 +134,79 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "Etsy ยังวางกฎที่ชัดเจนยิ่งขึ้นเกี่ยวกับการใช้งาน AI บนแพลตฟอร์ม รวมถึงการห้ามผู้ขายไม่ให้สร้างรายการสินค้าที่สร้างโดยบอทโดยไม่ต้องมีมนุษย์เข้าไปเกี่ยวข้อง",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 23:45 UTC)",
+        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 11:05 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "Etsy แบนสูตรอาหารและรูปแบบที่สร้างโดย AI จากตลาดออนไลน์",
-        "Etsy ยังวางกฎที่ชัดเจนยิ่งขึ้นเกี่ยวกับการใช้งาน AI บนแพลตฟอร์ม รวมถึงการห้ามผู้ขายไม่ให้สร้างรายการสินค้าที่สร้างโดยบอทโดยไม่ต้องมีมนุษย์เข้าไปเกี่ยวข้อง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Etsy bans AI-generated recipes and patterns from its online marketplace\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "การค้นหาที่หลบภัยจะมีขึ้นในวันศุกร์ เนื่องจากนักลงทุนหมุนเวียนกันอย่างต่อเนื่อง",
+        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Safe haven search is on Friday as investors keep rotating\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-9",
-      "title": "ข้อตกลงของ Meta ที่จะเก็บ Zuckerberg ไว้ในแคลิฟอร์เนียเพิ่มเชื้อเพลิงให้กับการอภิปรายเรื่องภาษีความมั่งคั่งก่อนการเลือกตั้ง",
-      "title_en": "Meta’s deal to keep Zuckerberg in California adds fuel to wealth tax debate ahead of election",
-      "summary": "เมื่อไม่ถึงสองสัปดาห์ก่อนการเลือกตั้งกลางภาค Meta ได้ชี้แจงอย่างชัดเจนว่า Mark Zuckerberg ยังคงอยู่ในแคลิฟอร์เนียหากภาษีทรัพย์สินผ่าน",
+      "id": "news-6",
+      "title": "ภาคพื้นดินที่ Nvidia GTC Berlin: Jensen Huang หุ่นยนต์เป็ดและความทุกข์จากนีโอคลาวด์",
+      "title_en": "On the ground at Nvidia GTC Berlin: Jensen Huang, robot ducks and neocloud distress",
+      "summary": "คำพูดจากการประชุมผลงานชิ้นเอกของ Nvidia ในเยอรมนี",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/meta-mark-zuckerberg-california-billionaire-tax.html",
-      "time": "7 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T22:21:08Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/jensen-huang-gtc-robot-ducks-neocloud-distress.html",
+      "time": "15 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T11:02:16Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "คำพูดจากการประชุมผลงานชิ้นเอกของ Nvidia ในเยอรมนี",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 11:02 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
+      ],
+      "fullArticle": [
+        "ภาคพื้นดินที่ Nvidia GTC Berlin: Jensen Huang หุ่นยนต์เป็ดและความทุกข์จากนีโอคลาวด์",
+        "คำพูดจากการประชุมผลงานชิ้นเอกของ Nvidia ในเยอรมนี",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"On the ground at Nvidia GTC Berlin: Jensen Huang, robot ducks and neocloud distress\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "ด้วยรายได้ในกระจกมองหลัง การพูดคุยควบรวมกิจการของ SpaceX-Tesla จึงกลายเป็นเวทีกลาง",
+      "title_en": "With earnings in rearview mirror, SpaceX-Tesla merger chatter takes center stage",
+      "summary": "การควบรวมกิจการของ Tesla-SpaceX อาจอยู่ในระหว่างดำเนินการ แต่บริษัทต่างๆ ต้องเผชิญกับการเจรจาและการทบทวนกฎระเบียบที่ยาวนาน",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/spacex-tesla-merger-chatter-takes-center-stage-after-earnings.html",
+      "time": "17 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T11:00:01Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "การควบรวมกิจการของ Tesla-SpaceX อาจอยู่ในระหว่างดำเนินการ แต่บริษัทต่างๆ ต้องเผชิญกับการเจรจาและการทบทวนกฎระเบียบที่ยาวนาน",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 11:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "ด้วยรายได้ในกระจกมองหลัง การพูดคุยควบรวมกิจการของ SpaceX-Tesla จึงกลายเป็นเวทีกลาง",
+        "การควบรวมกิจการของ Tesla-SpaceX อาจอยู่ในระหว่างดำเนินการ แต่บริษัทต่างๆ ต้องเผชิญกับการเจรจาและการทบทวนกฎระเบียบที่ยาวนาน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"With earnings in rearview mirror, SpaceX-Tesla merger chatter takes center stage\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "Moderna, Meta, SpaceX, AT&T, CoreWeave, Sandisk และหุ้นอื่นๆ ที่อธิบายตลาดในปัจจุบัน",
+      "title_en": "Moderna, Meta, SpaceX, AT&T, CoreWeave, Sandisk, and More Stocks That Explain Today’s Market",
+      "summary": "Moderna, Meta, SpaceX, AT&T, CoreWeave, Sandisk และหุ้นอื่นๆ ที่อธิบายตลาดในปัจจุบัน",
+      "source": "Barrons.com",
+      "sourceUrl": "https://finance.yahoo.com/m/f96806d8-9583-3620-89cf-a7ccb8de8237/moderna%2C-meta%2C-spacex%2C-at%26t%2C.html",
+      "time": "32 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T10:45:00Z",
       "category": "TECH",
       "tickers": [
         "META"
@@ -246,52 +215,109 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "เมื่อไม่ถึงสองสัปดาห์ก่อนการเลือกตั้งกลางภาค Meta ได้ชี้แจงอย่างชัดเจนว่า Mark Zuckerberg ยังคงอยู่ในแคลิฟอร์เนียหากภาษีทรัพย์สินผ่าน",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 22:21 UTC)",
+        "Moderna, Meta, SpaceX, AT&T, CoreWeave, Sandisk และหุ้นอื่นๆ ที่อธิบายตลาดในปัจจุบัน",
+        "แหล่งข่าวอ้างอิง: Barrons.com (23/10/2026 10:45 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
       ],
       "fullArticle": [
-        "ข้อตกลงของ Meta ที่จะเก็บ Zuckerberg ไว้ในแคลิฟอร์เนียเพิ่มเชื้อเพลิงให้กับการอภิปรายเรื่องภาษีความมั่งคั่งก่อนการเลือกตั้ง",
-        "เมื่อไม่ถึงสองสัปดาห์ก่อนการเลือกตั้งกลางภาค Meta ได้ชี้แจงอย่างชัดเจนว่า Mark Zuckerberg ยังคงอยู่ในแคลิฟอร์เนียหากภาษีทรัพย์สินผ่าน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta’s deal to keep Zuckerberg in California adds fuel to wealth tax debate ahead of election\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Moderna, Meta, SpaceX, AT&T, CoreWeave, Sandisk และหุ้นอื่นๆ ที่อธิบายตลาดในปัจจุบัน",
+        "Moderna, Meta, SpaceX, AT&T, CoreWeave, Sandisk และหุ้นอื่นๆ ที่อธิบายตลาดในปัจจุบัน",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Moderna, Meta, SpaceX, AT&T, CoreWeave, Sandisk, and More Stocks That Explain Today’s Market\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "Volvo Cars ดิ่งลง 27% ขณะที่ซีอีโอกล่าวว่ายอดขายในจีนตกต่ำมา 'เร็วกว่าที่เราคิด'",
+      "title_en": "Volvo Cars plunges 27% as CEO says China sales slump came 'faster than we thought'",
+      "summary": "ผู้ผลิตรถยนต์สัญชาติสวีเดนรายนี้อ้างถึงสภาพแวดล้อมที่ย่ำแย่ซึ่งนำโดยสภาวะตลาดที่ \"เข้มงวดขึ้น\" ในจีนและสหรัฐอเมริกา ซึ่ง \"ส่งผลเสียต่อกระแสเงินสดอิสระ\"",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/volvo-cars-q3-earnings-job-cuts.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T09:41:01Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "ผู้ผลิตรถยนต์สัญชาติสวีเดนรายนี้อ้างถึงสภาพแวดล้อมที่ย่ำแย่ซึ่งนำโดยสภาวะตลาดที่ \"เข้มงวดขึ้น\" ในจีนและสหรัฐอเมริกา ซึ่ง \"ส่งผลเสียต่อกระแสเงินสดอิสระ\"",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 09:41 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "Volvo Cars ดิ่งลง 27% ขณะที่ซีอีโอกล่าวว่ายอดขายในจีนตกต่ำมา 'เร็วกว่าที่เราคิด'",
+        "ผู้ผลิตรถยนต์สัญชาติสวีเดนรายนี้อ้างถึงสภาพแวดล้อมที่ย่ำแย่ซึ่งนำโดยสภาวะตลาดที่ \"เข้มงวดขึ้น\" ในจีนและสหรัฐอเมริกา ซึ่ง \"ส่งผลเสียต่อกระแสเงินสดอิสระ\"",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Volvo Cars plunges 27% as CEO says China sales slump came 'faster than we thought'\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-10",
-      "title": "SpaceX และ Tesla เดิมพันสูงในการเลือกตั้ง เนื่องจาก Elon Musk ทุ่มเงิน 366 ล้านดอลลาร์ให้กับแคมเปญ",
-      "title_en": "SpaceX and Tesla have high election stakes as Elon Musk pours $366 million into campaigns",
-      "summary": "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดทิศทางการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลต่อ SpaceX และ Tesla",
+      "title": "Huang จาก Nvidia มุ่งหน้าไปยังคาซัคสถานเป็นครั้งแรก และเขาไม่ใช่คนเดียวที่มีแผนการใหญ่โต",
+      "title_en": "Nvidia's Huang heads to Kazakhstan for the first time — and he's not the only one with big plans",
+      "summary": "การเยือนคาซัคสถานครั้งแรกของ Jensen Huang เน้นย้ำถึงความทะเยอทะยานด้าน AI ที่เพิ่มขึ้นของประเทศและความน่าดึงดูดทางธุรกิจระดับโลก",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/elon-musk-midterm-election-spacex-tesla.html",
-      "time": "7 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T21:58:42Z",
-      "category": "MACRO",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/nvidia-huang-investment-kazakhstan-.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T09:21:59Z",
+      "category": "TECH",
       "tickers": [
-        "TSLA"
+        "NVDA"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดทิศทางการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลต่อ SpaceX และ Tesla",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 21:58 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+        "การเยือนคาซัคสถานครั้งแรกของ Jensen Huang เน้นย้ำถึงความทะเยอทะยานด้าน AI ที่เพิ่มขึ้นของประเทศและความน่าดึงดูดทางธุรกิจระดับโลก",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 09:21 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA"
       ],
       "fullArticle": [
-        "SpaceX และ Tesla เดิมพันสูงในการเลือกตั้ง เนื่องจาก Elon Musk ทุ่มเงิน 366 ล้านดอลลาร์ให้กับแคมเปญ",
-        "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดทิศทางการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลต่อ SpaceX และ Tesla",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX and Tesla have high election stakes as Elon Musk pours $366 million into campaigns\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "Huang จาก Nvidia มุ่งหน้าไปยังคาซัคสถานเป็นครั้งแรก และเขาไม่ใช่คนเดียวที่มีแผนการใหญ่โต",
+        "การเยือนคาซัคสถานครั้งแรกของ Jensen Huang เน้นย้ำถึงความทะเยอทะยานด้าน AI ที่เพิ่มขึ้นของประเทศและความน่าดึงดูดทางธุรกิจระดับโลก",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nvidia's Huang heads to Kazakhstan for the first time — and he's not the only one with big plans\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
       "id": "news-11",
-      "title": "OpenAI ใกล้ระดมทุนรอบ 3 หมื่นล้านดอลลาร์ด้วยการประเมินมูลค่า 1.25 ล้านล้านดอลลาร์ นำโดยนักลงทุนในสหรัฐอาหรับเอมิเรตส์",
-      "title_en": "OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors",
-      "summary": "OpenAI ใกล้จะสรุปการระดมทุนรอบใหม่ซึ่งมีวัตถุประสงค์เพื่อเป็นสะพานเชื่อมสู่การเสนอขายหุ้น IPO ในปี 2570 แหล่งข่าวที่คุ้นเคยกับเรื่องนี้บอกกับ CNBC",
+      "title": "Saab ยักษ์ใหญ่ด้านกลาโหมเห็นคำสั่งซื้อเพิ่มขึ้นสามเท่าหลังจากเครื่องบินขับไล่กริพเพนทำข้อตกลงกับยูเครน",
+      "title_en": "Defense giant Saab sees orders triple after Gripen fighter jet deal with Ukraine",
+      "summary": "รัฐบาลยุโรปเร่งเปลี่ยนคำมั่นสัญญาการใช้จ่ายด้านกลาโหมเป็นขีดความสามารถทางการทหาร ส่งเสริมคำสั่งซื้อของบริษัทต่างๆ",
       "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html",
-      "time": "9 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T20:41:37Z",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/saab-q3-earnings-figther-jet-maker-beats-expectations-as-orders-triple.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T08:10:27Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "รัฐบาลยุโรปเร่งเปลี่ยนคำมั่นสัญญาการใช้จ่ายด้านกลาโหมเป็นขีดความสามารถทางการทหาร ส่งเสริมคำสั่งซื้อของบริษัทต่างๆ",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 08:10 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "Saab ยักษ์ใหญ่ด้านกลาโหมเห็นคำสั่งซื้อเพิ่มขึ้นสามเท่าหลังจากเครื่องบินขับไล่กริพเพนทำข้อตกลงกับยูเครน",
+        "รัฐบาลยุโรปเร่งเปลี่ยนคำมั่นสัญญาการใช้จ่ายด้านกลาโหมเป็นขีดความสามารถทางการทหาร ส่งเสริมคำสั่งซื้อของบริษัทต่างๆ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Defense giant Saab sees orders triple after Gripen fighter jet deal with Ukraine\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-12",
+      "title": "หุ้น SK Hynix พุ่งขึ้นมากกว่า 4% หลังจากการขาดทุนในช่วงต้นเนื่องจากผู้ผลิตชิปยกเลิกแผนการ IPO ของ Solidigm",
+      "title_en": "SK Hynix shares jump over 4% after early losses as chipmaker scraps Solidigm IPO plans",
+      "summary": "หุ้น SK Hynix ปิดสูงขึ้น 4% หลังจากการซื้อขายในช่วงแรกลดลงเนื่องจากผู้ผลิตชิปหยุดการทบทวนแผนการ IPO ของ Solidigm ในสหรัฐอเมริกา",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html",
+      "time": "4 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T06:45:04Z",
       "category": "TECH",
       "tickers": [
         "NVDA",
@@ -302,42 +328,14 @@
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
       "isHero": false,
       "points": [
-        "OpenAI ใกล้จะสรุปการระดมทุนรอบใหม่ซึ่งมีวัตถุประสงค์เพื่อเป็นสะพานเชื่อมสู่การเสนอขายหุ้น IPO ในปี 2570 แหล่งข่าวที่คุ้นเคยกับเรื่องนี้บอกกับ CNBC",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 20:41 UTC)",
+        "หุ้น SK Hynix ปิดสูงขึ้น 4% หลังจากการซื้อขายในช่วงแรกลดลงเนื่องจากผู้ผลิตชิปหยุดการทบทวนแผนการ IPO ของ Solidigm ในสหรัฐอเมริกา",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 06:45 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
       ],
       "fullArticle": [
-        "OpenAI ใกล้ระดมทุนรอบ 3 หมื่นล้านดอลลาร์ด้วยการประเมินมูลค่า 1.25 ล้านล้านดอลลาร์ นำโดยนักลงทุนในสหรัฐอาหรับเอมิเรตส์",
-        "OpenAI ใกล้จะสรุปการระดมทุนรอบใหม่ซึ่งมีวัตถุประสงค์เพื่อเป็นสะพานเชื่อมสู่การเสนอขายหุ้น IPO ในปี 2570 แหล่งข่าวที่คุ้นเคยกับเรื่องนี้บอกกับ CNBC",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "Comcast เหนือความคาดหมายด้านรายได้เนื่องจากรายได้จากสื่อชดเชยจุดอ่อนในการเชื่อมต่อ",
-      "title_en": "Comcast beats earnings expectations as media revenue offsets weakness in connectivity",
-      "summary": "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/comcast-cmcsa-earnings-q3-2026.html",
-      "time": "9 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T20:04:51Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 20:04 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "Comcast เหนือความคาดหมายด้านรายได้เนื่องจากรายได้จากสื่อชดเชยจุดอ่อนในการเชื่อมต่อ",
-        "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Comcast beats earnings expectations as media revenue offsets weakness in connectivity\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "หุ้น SK Hynix พุ่งขึ้นมากกว่า 4% หลังจากการขาดทุนในช่วงต้นเนื่องจากผู้ผลิตชิปยกเลิกแผนการ IPO ของ Solidigm",
+        "หุ้น SK Hynix ปิดสูงขึ้น 4% หลังจากการซื้อขายในช่วงแรกลดลงเนื่องจากผู้ผลิตชิปหยุดการทบทวนแผนการ IPO ของ Solidigm ในสหรัฐอเมริกา",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SK Hynix shares jump over 4% after early losses as chipmaker scraps Solidigm IPO plans\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
