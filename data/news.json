@@ -1,16 +1,271 @@
 {
-  "updated_at": "2026-10-23T15:47:21Z",
-  "updated_at_thai": "23 ต.ค. 2569 22:47 น.",
+  "updated_at": "2026-10-23T19:34:56Z",
+  "updated_at_thai": "24 ต.ค. 2569 02:34 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว, ราคาน้ำมันพุ่งสูงขึ้น",
+      "title_en": "Stock market today: Dow, S&P 500, Nasdaq drop after sharp tech sell-off, oil prices rise",
+      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว, ราคาน้ำมันพุ่งสูงขึ้น",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-drop-nasdaq-rises-after-sharp-tech-sell-off-160940864.html",
+      "time": "4 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T19:30:11Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว, ราคาน้ำมันพุ่งสูงขึ้น",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (23/10/2026 19:30 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว, ราคาน้ำมันพุ่งสูงขึ้น",
+        "ตลาดหุ้นวันนี้: Dow, S&P 500, Nasdaq ร่วงลงหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว, ราคาน้ำมันพุ่งสูงขึ้น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500, Nasdaq drop after sharp tech sell-off, oil prices rise\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "น้ำมันดิบเบรนต์แตะระดับ 116 ดอลลาร์เนื่องจากราคาผู้ค้าเพิ่มความขัดแย้งในตะวันออกกลาง",
+      "title_en": "Brent crude tops $116 as traders price escalating Middle East conflict",
+      "summary": "น้ำมันดิบเบรนต์แตะระดับ 116 ดอลลาร์เนื่องจากราคาผู้ค้าเพิ่มความขัดแย้งในตะวันออกกลาง",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/article/brent-crude-tops-116-as-traders-price-in-middle-east-escalation-192101547.html",
+      "time": "6 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T19:28:00Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "น้ำมันดิบเบรนต์แตะระดับ 116 ดอลลาร์เนื่องจากราคาผู้ค้าเพิ่มความขัดแย้งในตะวันออกกลาง",
+        "แหล่งข่าวอ้างอิง: Yahoo Finance (23/10/2026 19:28 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "น้ำมันดิบเบรนต์แตะระดับ 116 ดอลลาร์เนื่องจากราคาผู้ค้าเพิ่มความขัดแย้งในตะวันออกกลาง",
+        "น้ำมันดิบเบรนต์แตะระดับ 116 ดอลลาร์เนื่องจากราคาผู้ค้าเพิ่มความขัดแย้งในตะวันออกกลาง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Brent crude tops $116 as traders price escalating Middle East conflict\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง 600 จุด ขณะที่น้ำมันพุ่ง; Samsara Breaks Out (ถ่ายทอดสด)",
+      "title_en": "Stock Market Today: Dow Sheds 600 Points As Oil Jumps; Samsara Breaks Out (Live Coverage)",
+      "summary": "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง 600 จุด ขณะที่น้ำมันพุ่ง; Samsara Breaks Out (ถ่ายทอดสด)",
+      "source": "Investor's Business Daily",
+      "sourceUrl": "https://finance.yahoo.com/m/81c00f86-3a6b-31fa-a8aa-5d5650c74f9c/stock-market-today%3A-dow-sheds.html",
+      "time": "17 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T19:17:16Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง 600 จุด ขณะที่น้ำมันพุ่ง; Samsara Breaks Out (ถ่ายทอดสด)",
+        "แหล่งข่าวอ้างอิง: Investor's Business Daily (23/10/2026 19:17 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #DIA"
+      ],
+      "fullArticle": [
+        "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง 600 จุด ขณะที่น้ำมันพุ่ง; Samsara Breaks Out (ถ่ายทอดสด)",
+        "ตลาดหุ้นวันนี้: ดาวโจนส์ร่วง 600 จุด ขณะที่น้ำมันพุ่ง; Samsara Breaks Out (ถ่ายทอดสด)",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock Market Today: Dow Sheds 600 Points As Oil Jumps; Samsara Breaks Out (Live Coverage)\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "บีซี-ออยส์",
+      "title_en": "BC-OILS",
+      "summary": "บีซี-ออยส์",
+      "source": "Associated Press",
+      "sourceUrl": "https://finance.yahoo.com/markets/commodities/articles/bc-oils-190017528.html",
+      "time": "34 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T19:00:17Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "บีซี-ออยส์",
+        "แหล่งข่าวอ้างอิง: Associated Press (23/10/2026 19:00 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "บีซี-ออยส์",
+        "บีซี-ออยส์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"BC-OILS\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "SpaceX ของ Musk ยังคงจำกัด Starlink ในยูเครน และยอดผู้เสียชีวิตก็เพิ่มขึ้น",
+      "title_en": "Musk's SpaceX is still restricting Starlink in Ukraine and the toll is rising",
+      "summary": "ตั้งแต่สัปดาห์ที่แล้ว ยูเครนได้รายงานข้อจำกัดเกี่ยวกับเวอร์ชัน Starshield ซึ่งเป็นเวอร์ชันของ Starlink ของ SpaceX ซึ่งขัดขวางปฏิบัติการทางทหารต่อรัสเซีย",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/ukraine-says-starlink-restrictions-remain-despite-trump-assurances.html",
+      "time": "35 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T18:59:53Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ตั้งแต่สัปดาห์ที่แล้ว ยูเครนได้รายงานข้อจำกัดเกี่ยวกับเวอร์ชัน Starshield ซึ่งเป็นเวอร์ชันของ Starlink ของ SpaceX ซึ่งขัดขวางปฏิบัติการทางทหารต่อรัสเซีย",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 18:59 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "SpaceX ของ Musk ยังคงจำกัด Starlink ในยูเครน และยอดผู้เสียชีวิตก็เพิ่มขึ้น",
+        "ตั้งแต่สัปดาห์ที่แล้ว ยูเครนได้รายงานข้อจำกัดเกี่ยวกับเวอร์ชัน Starshield ซึ่งเป็นเวอร์ชันของ Starlink ของ SpaceX ซึ่งขัดขวางปฏิบัติการทางทหารต่อรัสเซีย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Musk's SpaceX is still restricting Starlink in Ukraine and the toll is rising\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "ในการตามล่าหาทางเลือก Starlink ยูเครนร่วมมือกับ Nokia และผู้ผลิตดาวเทียม ICEYE",
+      "title_en": "In hunt for Starlink alternative, Ukraine partners with Nokia and satellite maker ICEYE",
+      "summary": "ด้วย SpaceX ที่จำกัดความเร็วบน Starlink ในยูเครน และขัดขวางการปฏิบัติการทางทหาร Kyiv กำลังมองหาทางเลือกอื่น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/ukraine-partners-with-nokia-and-iceye-for-starlink-alternative.html",
+      "time": "42 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T18:52:37Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ด้วย SpaceX ที่จำกัดความเร็วบน Starlink ในยูเครน และขัดขวางการปฏิบัติการทางทหาร Kyiv กำลังมองหาทางเลือกอื่น",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 18:52 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "ในการตามล่าหาทางเลือก Starlink ยูเครนร่วมมือกับ Nokia และผู้ผลิตดาวเทียม ICEYE",
+        "ด้วย SpaceX ที่จำกัดความเร็วบน Starlink ในยูเครน และขัดขวางการปฏิบัติการทางทหาร Kyiv กำลังมองหาทางเลือกอื่น",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"In hunt for Starlink alternative, Ukraine partners with Nokia and satellite maker ICEYE\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
+      "title": "หุ้นร้านอาหารที่น่าจับตามอง ตามข้อมูลของ Raymond James",
+      "title_en": "Top restaurant stocks to watch, according to Raymond James",
+      "summary": "หุ้นร้านอาหารที่น่าจับตามอง ตามข้อมูลของ Raymond James",
+      "source": "Investing.com",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/top-restaurant-stocks-watch-according-184424881.html",
+      "time": "50 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T18:44:24Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "หุ้นร้านอาหารที่น่าจับตามอง ตามข้อมูลของ Raymond James",
+        "แหล่งข่าวอ้างอิง: Investing.com (23/10/2026 18:44 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "หุ้นร้านอาหารที่น่าจับตามอง ตามข้อมูลของ Raymond James",
+        "หุ้นร้านอาหารที่น่าจับตามอง ตามข้อมูลของ Raymond James",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Top restaurant stocks to watch, according to Raymond James\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-8",
+      "title": "การแข่งขันวุฒิสภาเท็กซัส: โฆษณา Talarico ใหม่ฉีกการผลักดัน 'เงินมืด' ของ Elon Musk",
+      "title_en": "Texas Senate race: New Talarico ad rips Elon Musk 'dark money' push",
+      "summary": "James Talarico ตอบโต้การโจมตีของ Elon Musk และใช้จ่ายในโฆษณาใหม่โดยผู้ได้รับการเสนอชื่อจากพรรคเดโมแครตให้ดำรงตำแหน่งวุฒิสภาสหรัฐอเมริกาในเท็กซัส",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/james-talarico-campaign-ad-elon-musk-texas-senate-election.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T17:26:12Z",
+      "category": "TECH",
+      "tickers": [
+        "TSLA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "James Talarico ตอบโต้การโจมตีของ Elon Musk และใช้จ่ายในโฆษณาใหม่โดยผู้ได้รับการเสนอชื่อจากพรรคเดโมแครตให้ดำรงตำแหน่งวุฒิสภาสหรัฐอเมริกาในเท็กซัส",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 17:26 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
+      ],
+      "fullArticle": [
+        "การแข่งขันวุฒิสภาเท็กซัส: โฆษณา Talarico ใหม่ฉีกการผลักดัน 'เงินมืด' ของ Elon Musk",
+        "James Talarico ตอบโต้การโจมตีของ Elon Musk และใช้จ่ายในโฆษณาใหม่โดยผู้ได้รับการเสนอชื่อจากพรรคเดโมแครตให้ดำรงตำแหน่งวุฒิสภาสหรัฐอเมริกาในเท็กซัส",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Texas Senate race: New Talarico ad rips Elon Musk 'dark money' push\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-9",
+      "title": "Saab ยักษ์ใหญ่ด้านกลาโหมเห็นคำสั่งซื้อเพิ่มขึ้นสามเท่าหลังจากเครื่องบินขับไล่กริพเพนทำข้อตกลงกับยูเครน",
+      "title_en": "Defense giant Saab sees orders triple after Gripen fighter jet deal with Ukraine",
+      "summary": "รัฐบาลยุโรปเร่งเปลี่ยนคำมั่นสัญญาการใช้จ่ายด้านกลาโหมเป็นขีดความสามารถทางการทหาร ส่งเสริมคำสั่งซื้อของบริษัทต่างๆ",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/saab-q3-earnings-figther-jet-maker-beats-expectations-as-orders-triple.html",
+      "time": "3 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T16:26:17Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "รัฐบาลยุโรปเร่งเปลี่ยนคำมั่นสัญญาการใช้จ่ายด้านกลาโหมเป็นขีดความสามารถทางการทหาร ส่งเสริมคำสั่งซื้อของบริษัทต่างๆ",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 16:26 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "Saab ยักษ์ใหญ่ด้านกลาโหมเห็นคำสั่งซื้อเพิ่มขึ้นสามเท่าหลังจากเครื่องบินขับไล่กริพเพนทำข้อตกลงกับยูเครน",
+        "รัฐบาลยุโรปเร่งเปลี่ยนคำมั่นสัญญาการใช้จ่ายด้านกลาโหมเป็นขีดความสามารถทางการทหาร ส่งเสริมคำสั่งซื้อของบริษัทต่างๆ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Defense giant Saab sees orders triple after Gripen fighter jet deal with Ukraine\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-10",
       "title": "Volvo Cars ดิ่งลง 24% ขณะที่ซีอีโอกล่าวว่ายอดขายในจีนตกต่ำมา 'เร็วกว่าที่เราคิด'",
       "title_en": "Volvo Cars plunges 24% as CEO says China sales slump came 'faster than we thought'",
       "summary": "ผู้ผลิตรถยนต์สัญชาติสวีเดนรายนี้อ้างถึงสภาพแวดล้อมที่ย่ำแย่ซึ่งนำโดยสภาวะตลาดที่ \"เข้มงวดขึ้น\" ในจีนและสหรัฐอเมริกา ซึ่ง \"ส่งผลเสียต่อกระแสเงินสดอิสระ\"",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/volvo-cars-q3-earnings-job-cuts.html",
-      "time": "6 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T15:40:54Z",
       "category": "EARNINGS",
       "tickers": [
@@ -19,7 +274,7 @@
       ],
       "sentiment": "BEARISH",
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "ผู้ผลิตรถยนต์สัญชาติสวีเดนรายนี้อ้างถึงสภาพแวดล้อมที่ย่ำแย่ซึ่งนำโดยสภาวะตลาดที่ \"เข้มงวดขึ้น\" ในจีนและสหรัฐอเมริกา ซึ่ง \"ส่งผลเสียต่อกระแสเงินสดอิสระ\"",
         "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 15:40 UTC)",
@@ -32,13 +287,13 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-11",
       "title": "TikTok US กำลังมองหาความสามารถในการประมวลผลหลายกิกะวัตต์ แหล่งข่าวบอกกับ CNBC",
       "title_en": "TikTok U.S. hunts for multiple gigawatts of computing capacity, sources tell CNBC",
       "summary": "ผู้ดำเนินการแพลตฟอร์มโซเชียลมีเดียในสหรัฐอเมริกาได้มองหาโอกาสที่จะได้รับขีดความสามารถในช่วงหลายปีข้างหน้า",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/tiktok-us-compute-capacity.html",
-      "time": "11 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T15:35:36Z",
       "category": "TECH",
       "tickers": [
@@ -61,13 +316,13 @@
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-12",
       "title": "พรรคเดโมแครตใน Silicon Valley เรียกร้องให้มีการสอบสวนข้อ จำกัด ของ Starlink ในยูเครน",
       "title_en": "Silicon Valley Democrats demand investigation into Starlink restrictions in Ukraine",
       "summary": "จดหมายเรียกร้องให้มีการสอบสวนระบุว่าพรรคเดโมแครตจะให้ความสำคัญกับการสืบสวนการหยุดชะงักของ Starlink เป็นเรื่องสำคัญที่สุด หากพวกเขาชนะการควบคุมสภาผู้แทนราษฎร",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/starlink-ukraine-musk-trump-congress.html",
-      "time": "13 นาทีที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T15:33:47Z",
       "category": "TECH",
       "tickers": [
@@ -87,261 +342,6 @@
         "พรรคเดโมแครตใน Silicon Valley เรียกร้องให้มีการสอบสวนข้อ จำกัด ของ Starlink ในยูเครน",
         "จดหมายเรียกร้องให้มีการสอบสวนระบุว่าพรรคเดโมแครตจะให้ความสำคัญกับการสืบสวนการหยุดชะงักของ Starlink เป็นเรื่องสำคัญที่สุด หากพวกเขาชนะการควบคุมสภาผู้แทนราษฎร",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Silicon Valley Democrats demand investigation into Starlink restrictions in Ukraine\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "ตลาดหุ้นวันนี้: Dow, S&P 500 หลุด, Nasdaq ทรงตัวหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว",
-      "title_en": "Stock market today: Dow, S&P 500 slip, Nasdaq stabilizes after sharp tech sell-off",
-      "summary": "ตลาดหุ้นวันนี้: Dow, S&P 500 หลุด, Nasdaq ทรงตัวหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-23-dow-sp-500-nasdaq-tesla-meta-093000521.html",
-      "time": "16 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T15:30:23Z",
-      "category": "TECH",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500 หลุด, Nasdaq ทรงตัวหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (23/10/2026 15:30 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #DIA"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: Dow, S&P 500 หลุด, Nasdaq ทรงตัวหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว",
-        "ตลาดหุ้นวันนี้: Dow, S&P 500 หลุด, Nasdaq ทรงตัวหลังจากเทขายเทคโนโลยีอย่างรวดเร็ว",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: Dow, S&P 500 slip, Nasdaq stabilizes after sharp tech sell-off\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "ทรัมป์กล่าวว่าการผลักดันการจัดหาเชื้อเพลิงใหม่จะทำให้ราคาลดลง มันจะได้ผลไหม?",
-      "title_en": "Trump says new fuel supply push will lower prices. Will it work?",
-      "summary": "ทรัมป์กล่าวว่าการผลักดันการจัดหาเชื้อเพลิงใหม่จะทำให้ราคาลดลง มันจะได้ผลไหม?",
-      "source": "CBS News",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/trump-says-fuel-supply-push-152445447.html",
-      "time": "22 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T15:24:45Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ทรัมป์กล่าวว่าการผลักดันการจัดหาเชื้อเพลิงใหม่จะทำให้ราคาลดลง มันจะได้ผลไหม?",
-        "แหล่งข่าวอ้างอิง: CBS News (23/10/2026 15:24 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "ทรัมป์กล่าวว่าการผลักดันการจัดหาเชื้อเพลิงใหม่จะทำให้ราคาลดลง มันจะได้ผลไหม?",
-        "ทรัมป์กล่าวว่าการผลักดันการจัดหาเชื้อเพลิงใหม่จะทำให้ราคาลดลง มันจะได้ผลไหม?",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Trump says new fuel supply push will lower prices. Will it work?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "น้ำมันดิบ Brent เพิ่มขึ้น 4% เป็น $113 ทรัมป์ทุ่มเงิน 150 ล้านดอลลาร์ใส่โรงกลั่นน้ำมัน",
-      "title_en": "Brent Crude Jumped 4% to $113. Trump Is Throwing $150 Million at Refiners",
-      "summary": "น้ำมันดิบ Brent เพิ่มขึ้น 4% เป็น $113 ทรัมป์ทุ่มเงิน 150 ล้านดอลลาร์ใส่โรงกลั่นน้ำมัน",
-      "source": "24/7 Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/brent-crude-jumped-4-113-151505883.html",
-      "time": "32 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T15:15:05Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "น้ำมันดิบ Brent เพิ่มขึ้น 4% เป็น $113 ทรัมป์ทุ่มเงิน 150 ล้านดอลลาร์ใส่โรงกลั่นน้ำมัน",
-        "แหล่งข่าวอ้างอิง: 24/7 Wall St. (23/10/2026 15:15 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "น้ำมันดิบ Brent เพิ่มขึ้น 4% เป็น $113 ทรัมป์ทุ่มเงิน 150 ล้านดอลลาร์ใส่โรงกลั่นน้ำมัน",
-        "น้ำมันดิบ Brent เพิ่มขึ้น 4% เป็น $113 ทรัมป์ทุ่มเงิน 150 ล้านดอลลาร์ใส่โรงกลั่นน้ำมัน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Brent Crude Jumped 4% to $113. Trump Is Throwing $150 Million at Refiners\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "ร้านค้าควรเริ่มคิดถึงการดึงสินค้าคงคลังรองเท้ากลับเมื่อราคาสูงขึ้นหรือไม่?",
-      "title_en": "Should Stores Start to Think About a Pull Back on Shoe Inventory as Prices Inch Higher?",
-      "summary": "ร้านค้าควรเริ่มคิดถึงการดึงสินค้าคงคลังรองเท้ากลับเมื่อราคาสูงขึ้นหรือไม่?",
-      "source": "Footwear News",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/stores-start-think-pull-back-150551465.html",
-      "time": "41 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T15:05:51Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ร้านค้าควรเริ่มคิดถึงการดึงสินค้าคงคลังรองเท้ากลับเมื่อราคาสูงขึ้นหรือไม่?",
-        "แหล่งข่าวอ้างอิง: Footwear News (23/10/2026 15:05 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "ร้านค้าควรเริ่มคิดถึงการดึงสินค้าคงคลังรองเท้ากลับเมื่อราคาสูงขึ้นหรือไม่?",
-        "ร้านค้าควรเริ่มคิดถึงการดึงสินค้าคงคลังรองเท้ากลับเมื่อราคาสูงขึ้นหรือไม่?",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Should Stores Start to Think About a Pull Back on Shoe Inventory as Prices Inch Higher?\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
-      "title": "สิ่งที่ ENI (E) กล่าวในการเรียกผลประกอบการไตรมาส 3",
-      "title_en": "What ENI (E) Said on Its Q3 Earnings Call",
-      "summary": "สิ่งที่ ENI (E) กล่าวในการเรียกผลประกอบการไตรมาส 3",
-      "source": "MarketBeat",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/eni-e-said-q3-earnings-150430178.html",
-      "time": "42 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T15:04:30Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "สิ่งที่ ENI (E) กล่าวในการเรียกผลประกอบการไตรมาส 3",
-        "แหล่งข่าวอ้างอิง: MarketBeat (23/10/2026 15:04 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
-      ],
-      "fullArticle": [
-        "สิ่งที่ ENI (E) กล่าวในการเรียกผลประกอบการไตรมาส 3",
-        "สิ่งที่ ENI (E) กล่าวในการเรียกผลประกอบการไตรมาส 3",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"What ENI (E) Said on Its Q3 Earnings Call\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-9",
-      "title": "ตัวแทน AI อาจขัดขวางการฝากเงินในธนาคาร เหตุใด Wall Street จึงอาจมีปฏิกิริยามากเกินไป",
-      "title_en": "AI agents could disrupt bank deposits. Why Wall Street may be overreacting",
-      "summary": "นักวิเคราะห์กล่าวว่าความกลัวว่าตัวแทน AI อาจขัดขวางอุตสาหกรรมการธนาคารนั้นมีมากเกินไปในตอนนี้",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/23/ai-agents-could-disrupt-bank-deposits-why-wall-street-may-be-overreacting.html",
-      "time": "46 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T15:00:49Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "นักวิเคราะห์กล่าวว่าความกลัวว่าตัวแทน AI อาจขัดขวางอุตสาหกรรมการธนาคารนั้นมีมากเกินไปในตอนนี้",
-        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 15:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "ตัวแทน AI อาจขัดขวางการฝากเงินในธนาคาร เหตุใด Wall Street จึงอาจมีปฏิกิริยามากเกินไป",
-        "นักวิเคราะห์กล่าวว่าความกลัวว่าตัวแทน AI อาจขัดขวางอุตสาหกรรมการธนาคารนั้นมีมากเกินไปในตอนนี้",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"AI agents could disrupt bank deposits. Why Wall Street may be overreacting\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-10",
-      "title": "การแข่งขันวุฒิสภาเท็กซัส: โฆษณา Talarico ใหม่ฉีกการผลักดัน 'เงินมืด' ของ Elon Musk",
-      "title_en": "Texas Senate race: New Talarico ad rips Elon Musk 'dark money' push",
-      "summary": "James Talarico ตอบโต้การโจมตีของ Elon Musk และใช้จ่ายในโฆษณาใหม่โดยผู้ได้รับการเสนอชื่อจากพรรคเดโมแครตให้ดำรงตำแหน่งวุฒิสภาสหรัฐอเมริกาในเท็กซัส",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/23/james-talarico-campaign-ad-elon-musk-texas-senate-election.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T14:34:37Z",
-      "category": "TECH",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "James Talarico ตอบโต้การโจมตีของ Elon Musk และใช้จ่ายในโฆษณาใหม่โดยผู้ได้รับการเสนอชื่อจากพรรคเดโมแครตให้ดำรงตำแหน่งวุฒิสภาสหรัฐอเมริกาในเท็กซัส",
-        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 14:34 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "การแข่งขันวุฒิสภาเท็กซัส: โฆษณา Talarico ใหม่ฉีกการผลักดัน 'เงินมืด' ของ Elon Musk",
-        "James Talarico ตอบโต้การโจมตีของ Elon Musk และใช้จ่ายในโฆษณาใหม่โดยผู้ได้รับการเสนอชื่อจากพรรคเดโมแครตให้ดำรงตำแหน่งวุฒิสภาสหรัฐอเมริกาในเท็กซัส",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Texas Senate race: New Talarico ad rips Elon Musk 'dark money' push\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-11",
-      "title": "การค้นหาที่หลบภัยจะมีขึ้นในวันศุกร์ เนื่องจากนักลงทุนหมุนเวียนกันอย่างต่อเนื่อง",
-      "title_en": "Safe haven search is on Friday as investors keep rotating",
-      "summary": "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/23/safe-haven-search-is-on-friday-as-investors-keep-rotating.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T11:05:13Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 11:05 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "การค้นหาที่หลบภัยจะมีขึ้นในวันศุกร์ เนื่องจากนักลงทุนหมุนเวียนกันอย่างต่อเนื่อง",
-        "นี่คือสิ่งสำคัญที่นักลงทุนจำเป็นต้องรู้เพื่อเริ่มต้นวันซื้อขาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Safe haven search is on Friday as investors keep rotating\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "ด้วยรายได้ในกระจกมองหลัง การพูดคุยเรื่องการควบรวมกิจการของ SpaceX-Tesla จึงกลายเป็นจุดศูนย์กลาง",
-      "title_en": "With earnings in rearview mirror, SpaceX-Tesla merger chatter takes center stage",
-      "summary": "การควบรวมกิจการของ Tesla-SpaceX อาจอยู่ในระหว่างดำเนินการ แต่บริษัทต่างๆ ต้องเผชิญกับการเจรจาและการทบทวนกฎระเบียบที่ยาวนาน",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/23/spacex-tesla-merger-chatter-takes-center-stage-after-earnings.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T11:00:01Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "TSLA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "การควบรวมกิจการของ Tesla-SpaceX อาจอยู่ในระหว่างดำเนินการ แต่บริษัทต่างๆ ต้องเผชิญกับการเจรจาและการทบทวนกฎระเบียบที่ยาวนาน",
-        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 11:00 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
-      ],
-      "fullArticle": [
-        "ด้วยรายได้ในกระจกมองหลัง การพูดคุยเรื่องการควบรวมกิจการของ SpaceX-Tesla จึงกลายเป็นจุดศูนย์กลาง",
-        "การควบรวมกิจการของ Tesla-SpaceX อาจอยู่ในระหว่างดำเนินการ แต่บริษัทต่างๆ ต้องเผชิญกับการเจรจาและการทบทวนกฎระเบียบที่ยาวนาน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"With earnings in rearview mirror, SpaceX-Tesla merger chatter takes center stage\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
