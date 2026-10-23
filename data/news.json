@@ -1,16 +1,186 @@
 {
-  "updated_at": "2026-10-23T00:58:47Z",
-  "updated_at_thai": "23 ต.ค. 2569 07:58 น.",
+  "updated_at": "2026-10-23T05:55:58Z",
+  "updated_at_thai": "23 ต.ค. 2569 12:55 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "ราคาน้ำมันปรับตัวสูงขึ้นเนื่องจากความกังวลด้านอุปทานยังคงอยู่ท่ามกลางการโจมตีของฮูตีในซาอุดิอาระเบีย",
+      "title_en": "Oil prices rise as supply concerns linger amid Houthi attacks on Saudi Arabia",
+      "summary": "ราคาน้ำมันปรับตัวสูงขึ้นเนื่องจากความกังวลด้านอุปทานยังคงอยู่ท่ามกลางการโจมตีของฮูตีในซาอุดิอาระเบีย",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-rise-supply-concerns-052617190.html",
+      "time": "29 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T05:26:17Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": true,
+      "points": [
+        "ราคาน้ำมันปรับตัวสูงขึ้นเนื่องจากความกังวลด้านอุปทานยังคงอยู่ท่ามกลางการโจมตีของฮูตีในซาอุดิอาระเบีย",
+        "แหล่งข่าวอ้างอิง: Reuters (23/10/2026 05:26 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
+      ],
+      "fullArticle": [
+        "ราคาน้ำมันปรับตัวสูงขึ้นเนื่องจากความกังวลด้านอุปทานยังคงอยู่ท่ามกลางการโจมตีของฮูตีในซาอุดิอาระเบีย",
+        "ราคาน้ำมันปรับตัวสูงขึ้นเนื่องจากความกังวลด้านอุปทานยังคงอยู่ท่ามกลางการโจมตีของฮูตีในซาอุดิอาระเบีย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices rise as supply concerns linger amid Houthi attacks on Saudi Arabia\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "เยนคาดว่าจะเพิ่มขึ้นทุกสัปดาห์เนื่องจากความกระวนกระวายใจของ AI กระตุ้นให้เกิดความเร่งรีบ",
+      "title_en": "Yen set for weekly gain as AI jitters spur safe-haven rush",
+      "summary": "เยนคาดว่าจะเพิ่มขึ้นทุกสัปดาห์เนื่องจากความกระวนกระวายใจของ AI กระตุ้นให้เกิดความเร่งรีบ",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/markets/currencies/articles/yen-shines-ai-jitters-spur-020808692.html",
+      "time": "36 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T05:19:51Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "เยนคาดว่าจะเพิ่มขึ้นทุกสัปดาห์เนื่องจากความกระวนกระวายใจของ AI กระตุ้นให้เกิดความเร่งรีบ",
+        "แหล่งข่าวอ้างอิง: Reuters (23/10/2026 05:19 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "เยนคาดว่าจะเพิ่มขึ้นทุกสัปดาห์เนื่องจากความกระวนกระวายใจของ AI กระตุ้นให้เกิดความเร่งรีบ",
+        "เยนคาดว่าจะเพิ่มขึ้นทุกสัปดาห์เนื่องจากความกระวนกระวายใจของ AI กระตุ้นให้เกิดความเร่งรีบ",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Yen set for weekly gain as AI jitters spur safe-haven rush\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "ราคาน้ำมันพุ่งสูงกว่า 113 ดอลลาร์ เนื่องจาก AI เทขายหุ้นและนักลงทุนซื้อพันธบัตร",
+      "title_en": "Oil prices climb above $113 as AI sell-off rattles stocks and investors buy bonds",
+      "summary": "ราคาน้ำมันพุ่งสูงกว่า 113 ดอลลาร์ เนื่องจาก AI เทขายหุ้นและนักลงทุนซื้อพันธบัตร",
+      "source": "Euronews",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-prices-climb-above-113-050815674.html",
+      "time": "47 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T05:08:15Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "TLT"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "ราคาน้ำมันพุ่งสูงกว่า 113 ดอลลาร์ เนื่องจาก AI เทขายหุ้นและนักลงทุนซื้อพันธบัตร",
+        "แหล่งข่าวอ้างอิง: Euronews (23/10/2026 05:08 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TLT"
+      ],
+      "fullArticle": [
+        "ราคาน้ำมันพุ่งสูงกว่า 113 ดอลลาร์ เนื่องจาก AI เทขายหุ้นและนักลงทุนซื้อพันธบัตร",
+        "ราคาน้ำมันพุ่งสูงกว่า 113 ดอลลาร์ เนื่องจาก AI เทขายหุ้นและนักลงทุนซื้อพันธบัตร",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil prices climb above $113 as AI sell-off rattles stocks and investors buy bonds\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "หุ้น SK Hynix ดีดตัวขึ้นหลังจากที่แผนการ IPO ของ Solidigm ลดลงครั้งแรก",
+      "title_en": "SK Hynix shares rebound after initial drop on scrapped Solidigm IPO plans",
+      "summary": "หุ้น SK Hynix ดีดตัวขึ้นหลังจากการซื้อขายในช่วงแรกลดลง หลังจากการทบทวนแผนการ IPO ของ Solidigm ในสหรัฐอเมริกา",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html",
+      "time": "54 นาทีที่แล้ว",
+      "publishedAt": "2026-10-23T05:01:31Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "หุ้น SK Hynix ดีดตัวขึ้นหลังจากการซื้อขายในช่วงแรกลดลง หลังจากการทบทวนแผนการ IPO ของ Solidigm ในสหรัฐอเมริกา",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 05:01 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "หุ้น SK Hynix ดีดตัวขึ้นหลังจากที่แผนการ IPO ของ Solidigm ลดลงครั้งแรก",
+        "หุ้น SK Hynix ดีดตัวขึ้นหลังจากการซื้อขายในช่วงแรกลดลง หลังจากการทบทวนแผนการ IPO ของ Solidigm ในสหรัฐอเมริกา",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SK Hynix shares rebound after initial drop on scrapped Solidigm IPO plans\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-5",
+      "title": "3 หุ้นการเติบโตของอินเดียที่มีการเติบโตของรายได้สูงถึง 27%",
+      "title_en": "3 Indian Growth Stocks With Revenue Growth Up To 27%",
+      "summary": "3 หุ้นการเติบโตของอินเดียที่มีการเติบโตของรายได้สูงถึง 27%",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-indian-growth-stocks-revenue-042718546.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T04:27:18Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": false,
+      "points": [
+        "3 หุ้นการเติบโตของอินเดียที่มีการเติบโตของรายได้สูงถึง 27%",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (23/10/2026 04:27 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
+      ],
+      "fullArticle": [
+        "3 หุ้นการเติบโตของอินเดียที่มีการเติบโตของรายได้สูงถึง 27%",
+        "3 หุ้นการเติบโตของอินเดียที่มีการเติบโตของรายได้สูงถึง 27%",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Indian Growth Stocks With Revenue Growth Up To 27%\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "หุ้นเอเชียร่วงลงเมื่อ AI ถล่มเกาหลีใต้ ญี่ปุ่นกลัว CPI ที่แข็งแกร่ง",
+      "title_en": "Asia stocks fall as AI rout batters S.Korea; Japan spooked by strong CPI",
+      "summary": "หุ้นเอเชียร่วงลงเมื่อ AI ถล่มเกาหลีใต้ ญี่ปุ่นกลัว CPI ที่แข็งแกร่ง",
+      "source": "Investing.com",
+      "sourceUrl": "https://finance.yahoo.com/markets/world-indices/articles/asia-stocks-fall-ai-rout-035546998.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T03:55:46Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "หุ้นเอเชียร่วงลงเมื่อ AI ถล่มเกาหลีใต้ ญี่ปุ่นกลัว CPI ที่แข็งแกร่ง",
+        "แหล่งข่าวอ้างอิง: Investing.com (23/10/2026 03:55 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "หุ้นเอเชียร่วงลงเมื่อ AI ถล่มเกาหลีใต้ ญี่ปุ่นกลัว CPI ที่แข็งแกร่ง",
+        "หุ้นเอเชียร่วงลงเมื่อ AI ถล่มเกาหลีใต้ ญี่ปุ่นกลัว CPI ที่แข็งแกร่ง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Asia stocks fall as AI rout batters S.Korea; Japan spooked by strong CPI\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-7",
       "title": "SpaceX ได้รับเงินลงทุน 561 ล้านดอลลาร์จากการถือหุ้นใน Boring Co. ของ Elon Musk",
       "title_en": "SpaceX records $561 million investment gain from stake in Elon Musk's Boring Co.",
       "summary": "สัดส่วนการถือหุ้นของ SpaceX ใน Boring Co. ช่วยเพิ่มรายได้สุทธิในไตรมาสที่สาม",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/spacex-records-561-million-investment-gain-from-stake-in-boring-co.html",
-      "time": "12 นาทีที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T00:46:09Z",
       "category": "EARNINGS",
       "tickers": [
@@ -18,7 +188,7 @@
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "สัดส่วนการถือหุ้นของ SpaceX ใน Boring Co. ช่วยเพิ่มรายได้สุทธิในไตรมาสที่สาม",
         "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 00:46 UTC)",
@@ -31,100 +201,13 @@
       ]
     },
     {
-      "id": "news-2",
-      "title": "กลุ่มดาวพลังงานและหุ้นพลังงานนิวเคลียร์ชั้นนำอีก 2 รายการ",
-      "title_en": "Constellation Energy And 2 Other Top Nuclear Power Stocks",
-      "summary": "กลุ่มดาวพลังงานและหุ้นพลังงานนิวเคลียร์ชั้นนำอีก 2 รายการ",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/constellation-energy-2-other-top-001640294.html",
-      "time": "42 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T00:16:40Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "กลุ่มดาวพลังงานและหุ้นพลังงานนิวเคลียร์ชั้นนำอีก 2 รายการ",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (23/10/2026 00:16 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "กลุ่มดาวพลังงานและหุ้นพลังงานนิวเคลียร์ชั้นนำอีก 2 รายการ",
-        "กลุ่มดาวพลังงานและหุ้นพลังงานนิวเคลียร์ชั้นนำอีก 2 รายการ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Constellation Energy And 2 Other Top Nuclear Power Stocks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "Nikkei Falls 2.2% ลากโดย Chip หุ้นธนาคาร",
-      "title_en": "Nikkei Falls 2.2%, Dragged by Chip, Bank Stocks",
-      "summary": "Nikkei Falls 2.2% ลากโดย Chip หุ้นธนาคาร",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/8c0252d5-d469-354a-8235-8d0e89845be5/nikkei-falls-2.2%25%2C-dragged-by.html",
-      "time": "43 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T00:15:00Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "Nikkei Falls 2.2% ลากโดย Chip หุ้นธนาคาร",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (23/10/2026 00:15 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
-      ],
-      "fullArticle": [
-        "Nikkei Falls 2.2% ลากโดย Chip หุ้นธนาคาร",
-        "Nikkei Falls 2.2% ลากโดย Chip หุ้นธนาคาร",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nikkei Falls 2.2%, Dragged by Chip, Bank Stocks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "อัตราเงินเฟ้อผู้บริโภคของญี่ปุ่นที่เพิ่มขึ้นส่งผลให้การปรับขึ้นอัตราดอกเบี้ยของ BOJ",
-      "title_en": "Japan Consumer Inflation Uptick Offers Tailwind for BOJ Rate Hike",
-      "summary": "อัตราเงินเฟ้อผู้บริโภคของญี่ปุ่นที่เพิ่มขึ้นส่งผลให้การปรับขึ้นอัตราดอกเบี้ยของ BOJ",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/98e771d2-4db8-3b89-8b69-b66ada9a530b/japan-consumer-inflation.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T23:58:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "อัตราเงินเฟ้อผู้บริโภคของญี่ปุ่นที่เพิ่มขึ้นส่งผลให้การปรับขึ้นอัตราดอกเบี้ยของ BOJ",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (22/10/2026 23:58 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "อัตราเงินเฟ้อผู้บริโภคของญี่ปุ่นที่เพิ่มขึ้นส่งผลให้การปรับขึ้นอัตราดอกเบี้ยของ BOJ",
-        "อัตราเงินเฟ้อผู้บริโภคของญี่ปุ่นที่เพิ่มขึ้นส่งผลให้การปรับขึ้นอัตราดอกเบี้ยของ BOJ",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Japan Consumer Inflation Uptick Offers Tailwind for BOJ Rate Hike\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
+      "id": "news-8",
       "title": "Etsy แบนสูตรอาหารและรูปแบบที่สร้างโดย AI จากตลาดออนไลน์",
       "title_en": "Etsy bans AI-generated recipes and patterns from its online marketplace",
       "summary": "Etsy ยังวางกฎที่ชัดเจนยิ่งขึ้นเกี่ยวกับการใช้งาน AI บนแพลตฟอร์ม รวมถึงการห้ามผู้ขายไม่ให้สร้างรายการสินค้าที่สร้างโดยบอทโดยไม่ต้องมีมนุษย์เข้าไปเกี่ยวข้อง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/etsy-bans-ai-generated-recipes-patterns-from-its-online-marketplace.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-22T23:45:50Z",
       "category": "TECH",
       "tickers": [
@@ -147,70 +230,13 @@
       ]
     },
     {
-      "id": "news-6",
-      "title": "Nasdaq 100 Clocks วันที่แย่ที่สุดในรอบสี่เดือน เนื่องจากนักลงทุนเริ่มเบื่อหน่ายกับรายจ่ายฝ่ายทุน หนี้ที่สูงขึ้น - META, SPCX, BE, MRNA In Focus",
-      "title_en": "Nasdaq 100 Clocks Worst Day In Four Months As Investors Grow Weary Of Capex, Elevated Debt — META, SPCX, BE, MRNA In Focus",
-      "summary": "Nasdaq 100 Clocks วันที่แย่ที่สุดในรอบสี่เดือน เนื่องจากนักลงทุนเริ่มเบื่อหน่ายกับรายจ่ายฝ่ายทุน หนี้ที่สูงขึ้น - META, SPCX, BE, MRNA In Focus",
-      "source": "Stocktwits",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-100-clocks-worst-day-234448333.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T23:44:48Z",
-      "category": "MACRO",
-      "tickers": [
-        "META",
-        "QQQ"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "Nasdaq 100 Clocks วันที่แย่ที่สุดในรอบสี่เดือน เนื่องจากนักลงทุนเริ่มเบื่อหน่ายกับรายจ่ายฝ่ายทุน หนี้ที่สูงขึ้น - META, SPCX, BE, MRNA In Focus",
-        "แหล่งข่าวอ้างอิง: Stocktwits (22/10/2026 23:44 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #QQQ"
-      ],
-      "fullArticle": [
-        "Nasdaq 100 Clocks วันที่แย่ที่สุดในรอบสี่เดือน เนื่องจากนักลงทุนเริ่มเบื่อหน่ายกับรายจ่ายฝ่ายทุน หนี้ที่สูงขึ้น - META, SPCX, BE, MRNA In Focus",
-        "Nasdaq 100 Clocks วันที่แย่ที่สุดในรอบสี่เดือน เนื่องจากนักลงทุนเริ่มเบื่อหน่ายกับรายจ่ายฝ่ายทุน หนี้ที่สูงขึ้น - META, SPCX, BE, MRNA In Focus",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Nasdaq 100 Clocks Worst Day In Four Months As Investors Grow Weary Of Capex, Elevated Debt — META, SPCX, BE, MRNA In Focus\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-7",
-      "title": "ตลาดหุ้นวันนี้: S&P 500, ถัง Nasdaq เนื่องจากหุ้นเทคโนโลยีจมลงท่ามกลางความกังวลด้านการค้าของ AI, หุ้น Meta ร่วงลง",
-      "title_en": "Stock market today: S&P 500, Nasdaq tanks as tech stocks sink amid AI trade worries, Meta shares plummet",
-      "summary": "ตลาดหุ้นวันนี้: S&P 500, ถัง Nasdaq เนื่องจากหุ้นเทคโนโลยีจมลงท่ามกลางความกังวลด้านการค้าของ AI, หุ้น Meta ร่วงลง",
-      "source": "Yahoo Finance",
-      "sourceUrl": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T23:10:58Z",
-      "category": "TECH",
-      "tickers": [
-        "META",
-        "SPY",
-        "QQQ"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "ตลาดหุ้นวันนี้: S&P 500, ถัง Nasdaq เนื่องจากหุ้นเทคโนโลยีจมลงท่ามกลางความกังวลด้านการค้าของ AI, หุ้น Meta ร่วงลง",
-        "แหล่งข่าวอ้างอิง: Yahoo Finance (22/10/2026 23:10 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META #SPY #QQQ"
-      ],
-      "fullArticle": [
-        "ตลาดหุ้นวันนี้: S&P 500, ถัง Nasdaq เนื่องจากหุ้นเทคโนโลยีจมลงท่ามกลางความกังวลด้านการค้าของ AI, หุ้น Meta ร่วงลง",
-        "ตลาดหุ้นวันนี้: S&P 500, ถัง Nasdaq เนื่องจากหุ้นเทคโนโลยีจมลงท่ามกลางความกังวลด้านการค้าของ AI, หุ้น Meta ร่วงลง",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stock market today: S&P 500, Nasdaq tanks as tech stocks sink amid AI trade worries, Meta shares plummet\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-8",
+      "id": "news-9",
       "title": "ข้อตกลงของ Meta ที่จะเก็บ Zuckerberg ไว้ในแคลิฟอร์เนียเพิ่มเชื้อเพลิงให้กับการอภิปรายเรื่องภาษีความมั่งคั่งก่อนการเลือกตั้ง",
       "title_en": "Meta’s deal to keep Zuckerberg in California adds fuel to wealth tax debate ahead of election",
       "summary": "เมื่อไม่ถึงสองสัปดาห์ก่อนการเลือกตั้งกลางภาค Meta ได้ชี้แจงอย่างชัดเจนว่า Mark Zuckerberg ยังคงอยู่ในแคลิฟอร์เนียหากภาษีทรัพย์สินผ่าน",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/meta-mark-zuckerberg-california-billionaire-tax.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-22T22:21:08Z",
       "category": "TECH",
       "tickers": [
@@ -231,13 +257,13 @@
       ]
     },
     {
-      "id": "news-9",
+      "id": "news-10",
       "title": "SpaceX และ Tesla เดิมพันสูงในการเลือกตั้ง เนื่องจาก Elon Musk ทุ่มเงิน 366 ล้านดอลลาร์ให้กับแคมเปญ",
       "title_en": "SpaceX and Tesla have high election stakes as Elon Musk pours $366 million into campaigns",
-      "summary": "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลกระทบต่อ SpaceX และ Tesla",
+      "summary": "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดทิศทางการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลต่อ SpaceX และ Tesla",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/elon-musk-midterm-election-spacex-tesla.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-22T21:58:42Z",
       "category": "MACRO",
       "tickers": [
@@ -247,24 +273,24 @@
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลกระทบต่อ SpaceX และ Tesla",
+        "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดทิศทางการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลต่อ SpaceX และ Tesla",
         "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 21:58 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #TSLA"
       ],
       "fullArticle": [
         "SpaceX และ Tesla เดิมพันสูงในการเลือกตั้ง เนื่องจาก Elon Musk ทุ่มเงิน 366 ล้านดอลลาร์ให้กับแคมเปญ",
-        "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลกระทบต่อ SpaceX และ Tesla",
+        "เดิมพันทางการเมืองที่ใหญ่ที่สุดของ Musk อยู่ที่วุฒิสภา ซึ่งการควบคุมสามารถกำหนดทิศทางการสืบสวนในอนาคต การใช้จ่ายของรัฐบาลกลาง และกฎระเบียบที่ส่งผลต่อ SpaceX และ Tesla",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"SpaceX and Tesla have high election stakes as Elon Musk pours $366 million into campaigns\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-10",
+      "id": "news-11",
       "title": "OpenAI ใกล้ระดมทุนรอบ 3 หมื่นล้านดอลลาร์ด้วยการประเมินมูลค่า 1.25 ล้านล้านดอลลาร์ นำโดยนักลงทุนในสหรัฐอาหรับเอมิเรตส์",
       "title_en": "OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors",
       "summary": "OpenAI ใกล้จะสรุปการระดมทุนรอบใหม่ซึ่งมีวัตถุประสงค์เพื่อเป็นสะพานเชื่อมสู่การเสนอขายหุ้น IPO ในปี 2570 แหล่งข่าวที่คุ้นเคยกับเรื่องนี้บอกกับ CNBC",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-22T20:41:37Z",
       "category": "TECH",
       "tickers": [
@@ -287,13 +313,13 @@
       ]
     },
     {
-      "id": "news-11",
-      "title": "Comcast เหนือความคาดหมายด้านรายได้ เนื่องจากรายได้จากสื่อชดเชยจุดอ่อนในการเชื่อมต่อ",
+      "id": "news-12",
+      "title": "Comcast เหนือความคาดหมายด้านรายได้เนื่องจากรายได้จากสื่อชดเชยจุดอ่อนในการเชื่อมต่อ",
       "title_en": "Comcast beats earnings expectations as media revenue offsets weakness in connectivity",
       "summary": "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/comcast-cmcsa-earnings-q3-2026.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-22T20:04:51Z",
       "category": "EARNINGS",
       "tickers": [
@@ -309,36 +335,9 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "Comcast เหนือความคาดหมายด้านรายได้ เนื่องจากรายได้จากสื่อชดเชยจุดอ่อนในการเชื่อมต่อ",
+        "Comcast เหนือความคาดหมายด้านรายได้เนื่องจากรายได้จากสื่อชดเชยจุดอ่อนในการเชื่อมต่อ",
         "Comcast กำลังอยู่ในระหว่างการแยกธุรกิจสื่อออกไปเป็นบริษัทมหาชนที่แยกจากกัน",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Comcast beats earnings expectations as media revenue offsets weakness in connectivity\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "หุ้น Meta ร่วงลงเกือบ 7% เนื่องจากการใช้จ่ายของ AI ส่งผลให้กระแสเงินสดอิสระติดลบ",
-      "title_en": "Meta stock sinks nearly 7% as AI spend pushes free cash flow negative",
-      "summary": "ราคาของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นระยะเวลา 5 ปีของยักษ์ใหญ่โซเชียลมีเดียกำลังแตะระดับสูงสุดเป็นประวัติการณ์ เนื่องจากนักลงทุนส่งสัญญาณถึงความกังวลด้านเครดิตที่เพิ่มมากขึ้น",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/22/meta-stock-q3-earnings-free-cash-flow.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-22T20:03:03Z",
-      "category": "TECH",
-      "tickers": [
-        "META"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "ราคาของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นระยะเวลา 5 ปีของยักษ์ใหญ่โซเชียลมีเดียกำลังแตะระดับสูงสุดเป็นประวัติการณ์ เนื่องจากนักลงทุนส่งสัญญาณถึงความกังวลด้านเครดิตที่เพิ่มมากขึ้น",
-        "แหล่งข่าวอ้างอิง: CNBC (22/10/2026 20:03 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #META"
-      ],
-      "fullArticle": [
-        "หุ้น Meta ร่วงลงเกือบ 7% เนื่องจากการใช้จ่ายของ AI ส่งผลให้กระแสเงินสดอิสระติดลบ",
-        "ราคาของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นระยะเวลา 5 ปีของยักษ์ใหญ่โซเชียลมีเดียกำลังแตะระดับสูงสุดเป็นประวัติการณ์ เนื่องจากนักลงทุนส่งสัญญาณถึงความกังวลด้านเครดิตที่เพิ่มมากขึ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Meta stock sinks nearly 7% as AI spend pushes free cash flow negative\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     }
   ]
