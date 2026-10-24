@@ -110,6 +110,48 @@
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2), 0 6px 14px rgba(59, 130, 246, 0.12) !important;
             background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
         }
+        .portfolio-card[draggable="true"] {
+            cursor: grab;
+        }
+        .portfolio-card.dragging {
+            opacity: 0.45 !important;
+            transform: scale(0.96) !important;
+            cursor: grabbing !important;
+            border: 2px dashed #3b82f6 !important;
+        }
+        .portfolio-card.drag-over {
+            border: 2px dashed #2563eb !important;
+            background: rgba(59, 130, 246, 0.08) !important;
+            transform: translateY(-4px) scale(1.02) !important;
+            box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3) !important;
+        }
+        .port-drag-handle {
+            cursor: grab;
+            opacity: 0.35;
+            transition: all 0.2s;
+            font-size: 0.85rem;
+            user-select: none;
+            padding: 0 2px;
+        }
+        .port-drag-handle:hover {
+            opacity: 0.9;
+            color: #3b82f6;
+        }
+        .reorder-item {
+            transition: all 0.2s ease;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 10px 14px;
+        }
+        .reorder-item:hover {
+            border-color: #94a3b8;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        [data-bs-theme="dark"] .reorder-item {
+            background: #1e293b !important;
+            border-color: #334155 !important;
+        }
         .portfolio-card-add {
             background: #fafafa;
             border: 2px dashed #cbd5e1;
@@ -3390,6 +3432,52 @@
         </div>
     </div>
 
+    <!-- Modal: Reorder Portfolios (จัดลำดับการ์ดพอร์ตการลงทุน) -->
+    <div class="modal fade" id="reorderPortfoliosModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 460px;">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 18px;">
+                <div class="modal-header border-bottom py-3 px-4 d-flex justify-content-between align-items-center bg-body-tertiary">
+                    <div class="d-flex align-items-center gap-2">
+                        <span style="font-size: 1.3rem;">⇄</span>
+                        <div>
+                            <h5 class="fw-bold mb-0" style="font-size: 1.05rem;">จัดลำดับพอร์ตการลงทุน</h5>
+                            <small class="text-muted" style="font-size: 0.76rem;">กดปุ่ม ⬆️ / ⬇️ เพื่อเลื่อนตำแหน่งการ์ดพอร์ตตามลำดับที่ต้องการ</small>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-3 px-4">
+                    <!-- Quick Presets -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 p-2 rounded-3 bg-body-secondary border">
+                        <span class="text-muted fw-bold" style="font-size: 0.74rem;">จัดเรียงด่วน:</span>
+                        <div class="d-flex gap-1">
+                            <button type="button" class="btn btn-sm btn-light border rounded-pill py-0 px-2 fw-bold" style="font-size: 0.72rem;" onclick="sortPortfoliosBy('VALUE')" title="เรียงตามมูลค่าพอร์ตจากมากไปน้อย">
+                                💰 ตามมูลค่า ($)
+                            </button>
+                            <button type="button" class="btn btn-sm btn-light border rounded-pill py-0 px-2 fw-bold" style="font-size: 0.72rem;" onclick="sortPortfoliosBy('NAME')" title="เรียงตามชื่อพอร์ต A-Z">
+                                🔤 ตามชื่อ (A-Z)
+                            </button>
+                            <button type="button" class="btn btn-sm btn-light border rounded-pill py-0 px-2 text-muted" style="font-size: 0.72rem;" onclick="sortPortfoliosBy('DEFAULT')" title="รีเซ็ตเป็นลำดับมาตรฐาน">
+                                🔄 ตั้งต้น
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Portfolios Order List -->
+                    <div id="reorderPortListContainer" class="d-flex flex-column gap-2 mb-2" style="max-height: 380px; overflow-y: auto;">
+                        <!-- Injected dynamically by renderReorderPortList() -->
+                    </div>
+                </div>
+                <div class="modal-footer border-top py-2.5 px-4 d-flex justify-content-between align-items-center bg-body-tertiary">
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+                    <button type="button" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold shadow-sm" onclick="saveReorderedPortfolios()">
+                        💾 บันทึกลำดับพอร์ต
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal: Quick Move Stock (ย้ายหุ้นไปยังพอร์ตอื่นทันที) -->
     <div class="modal fade" id="quickMoveModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered" style="max-width: 390px;">
@@ -4020,6 +4108,12 @@
             <div id="portfolioTitleRow" class="d-flex justify-content-between align-items-center mb-1 px-1">
                 <div class="d-flex align-items-center gap-2">
                     <span class="fw-bold text-muted" style="font-size: 0.85rem;">📁 การ์ดพอร์ตการลงทุน:</span>
+                    <small class="text-muted d-none d-md-inline" style="font-size: 0.72rem;">(ลากการ์ดสลับตำแหน่งได้)</small>
+                </div>
+                <div class="d-flex align-items-center gap-1.5">
+                    <button class="btn btn-sm btn-outline-secondary rounded-pill py-0 px-2.5 fw-bold d-flex align-items-center gap-1 shadow-2xs" style="font-size: 0.72rem;" onclick="openReorderPortfoliosModal(event)" title="จัดลำดับตำแหน่งการ์ดพอร์ต หรือจัดเรียงตามมูลค่า">
+                        <span>⇄</span> <span>จัดลำดับพอร์ต</span>
+                    </button>
                 </div>
             </div>
             
@@ -5352,6 +5446,175 @@
             }
         }
 
+        // =====================================================================
+        // PORTFOLIO REORDERING & DRAG-AND-DROP SYSTEM
+        // =====================================================================
+        let _draggedPortId = null;
+
+        window.handlePortCardDragStart = function(event, portId) {
+            _draggedPortId = portId;
+            event.dataTransfer.effectAllowed = 'move';
+            event.dataTransfer.setData('text/plain', portId);
+            const card = event.currentTarget;
+            setTimeout(() => card.classList.add('dragging'), 0);
+        };
+
+        window.handlePortCardDragOver = function(event) {
+            event.preventDefault();
+            event.dataTransfer.dropEffect = 'move';
+            const card = event.currentTarget;
+            if (!card.classList.contains('dragging') && !card.classList.contains('drag-over')) {
+                card.classList.add('drag-over');
+            }
+        };
+
+        window.handlePortCardDragLeave = function(event) {
+            event.currentTarget.classList.remove('drag-over');
+        };
+
+        window.handlePortCardDragEnd = function(event) {
+            _draggedPortId = null;
+            document.querySelectorAll('.portfolio-card').forEach(c => {
+                c.classList.remove('dragging', 'drag-over');
+            });
+        };
+
+        window.handlePortCardDrop = function(event, targetPortId) {
+            event.preventDefault();
+            event.currentTarget.classList.remove('drag-over');
+            const sourceId = _draggedPortId || event.dataTransfer.getData('text/plain');
+            if (!sourceId || sourceId === targetPortId) return;
+
+            const fromIndex = portfolios.findIndex(p => p.id === sourceId);
+            const toIndex = portfolios.findIndex(p => p.id === targetPortId);
+            if (fromIndex === -1 || toIndex === -1) return;
+
+            const [movedPort] = portfolios.splice(fromIndex, 1);
+            portfolios.splice(toIndex, 0, movedPort);
+
+            savePortfolios();
+            renderPortfolioCards();
+            populatePortfolioDropdown();
+            if (typeof showNotification === 'function') {
+                showNotification(`ย้ายตำแหน่งพอร์ต "${movedPort.name}" เรียบร้อยแล้ว ⇄`);
+            }
+        };
+
+        window.movePortfolio = function(portId, direction, event) {
+            if (event) event.stopPropagation();
+            const idx = portfolios.findIndex(p => p.id === portId);
+            if (idx === -1) return;
+            const targetIdx = idx + direction;
+            if (targetIdx < 0 || targetIdx >= portfolios.length) return;
+
+            const temp = portfolios[idx];
+            portfolios[idx] = portfolios[targetIdx];
+            portfolios[targetIdx] = temp;
+
+            savePortfolios();
+            renderPortfolioCards();
+            populatePortfolioDropdown();
+            if (typeof showNotification === 'function') {
+                showNotification(`ย้ายตำแหน่งพอร์ต "${temp.name}" เรียบร้อยแล้ว ⇄`);
+            }
+        };
+
+        // Modal Reorder logic
+        let tempReorderPortfolios = [];
+
+        window.openReorderPortfoliosModal = function(event) {
+            if (event) event.stopPropagation();
+            tempReorderPortfolios = JSON.parse(JSON.stringify(portfolios));
+            renderReorderPortList();
+            const modalEl = document.getElementById('reorderPortfoliosModal');
+            if (modalEl) {
+                bootstrap.Modal.getOrCreateInstance(modalEl).show();
+            }
+        };
+
+        window.renderReorderPortList = function() {
+            const container = document.getElementById('reorderPortListContainer');
+            if (!container) return;
+
+            let html = '';
+            tempReorderPortfolios.forEach((p, idx) => {
+                const m = calcPortfolioMetrics(p.id);
+                const isFirst = (idx === 0);
+                const isLast = (idx === tempReorderPortfolios.length - 1);
+                const color = p.color || '#3b82f6';
+
+                html += `
+                    <div class="reorder-item d-flex align-items-center justify-content-between gap-2 shadow-2xs">
+                        <div class="d-flex align-items-center gap-2.5 overflow-hidden">
+                            <span class="badge rounded-pill bg-body-secondary text-secondary fw-bold" style="font-size: 0.72rem; min-width: 24px;">#${idx + 1}</span>
+                            <span class="rounded-circle flex-shrink-0" style="width: 10px; height: 10px; background-color: ${color};"></span>
+                            <div class="text-truncate">
+                                <div class="fw-bold" style="font-size: 0.88rem;">${p.name}</div>
+                                <div class="text-muted text-truncate" style="font-size: 0.72rem;">${m.assetCount} สินทรัพย์ • $${m.totalMktUSD.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-1 flex-shrink-0">
+                            <button type="button" class="btn btn-sm btn-light border py-1 px-2.5 text-primary fw-bold" 
+                                    onclick="moveTempPortfolio(${idx}, -1)" ${isFirst ? 'disabled style="opacity: 0.3;"' : ''} title="เลื่อนขึ้นด้านบน">
+                                ⬆️
+                            </button>
+                            <button type="button" class="btn btn-sm btn-light border py-1 px-2.5 text-primary fw-bold" 
+                                    onclick="moveTempPortfolio(${idx}, 1)" ${isLast ? 'disabled style="opacity: 0.3;"' : ''} title="เลื่อนลงด้านล่าง">
+                                ⬇️
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        };
+
+        window.moveTempPortfolio = function(fromIdx, direction) {
+            const toIdx = fromIdx + direction;
+            if (toIdx < 0 || toIdx >= tempReorderPortfolios.length) return;
+            const temp = tempReorderPortfolios[fromIdx];
+            tempReorderPortfolios[fromIdx] = tempReorderPortfolios[toIdx];
+            tempReorderPortfolios[toIdx] = temp;
+            renderReorderPortList();
+        };
+
+        window.sortPortfoliosBy = function(mode) {
+            if (mode === 'VALUE') {
+                tempReorderPortfolios.sort((a, b) => {
+                    const mA = calcPortfolioMetrics(a.id);
+                    const mB = calcPortfolioMetrics(b.id);
+                    return mB.totalMktUSD - mA.totalMktUSD;
+                });
+            } else if (mode === 'NAME') {
+                tempReorderPortfolios.sort((a, b) => a.name.localeCompare(b.name, 'th'));
+            } else if (mode === 'DEFAULT') {
+                const defaultOrder = ['core', 'stocks', 'satellite', 'retirement'];
+                tempReorderPortfolios.sort((a, b) => {
+                    const idxA = defaultOrder.indexOf(a.id);
+                    const idxB = defaultOrder.indexOf(b.id);
+                    return (idxA !== -1 ? idxA : 99) - (idxB !== -1 ? idxB : 99);
+                });
+            }
+            renderReorderPortList();
+        };
+
+        window.saveReorderedPortfolios = function() {
+            if (tempReorderPortfolios && tempReorderPortfolios.length > 0) {
+                portfolios = JSON.parse(JSON.stringify(tempReorderPortfolios));
+                savePortfolios();
+                renderPortfolioCards();
+                populatePortfolioDropdown();
+                const modalEl = document.getElementById('reorderPortfoliosModal');
+                if (modalEl) {
+                    bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+                }
+                if (typeof showNotification === 'function') {
+                    showNotification('บันทึกลำดับพอร์ตการลงทุนเรียบร้อยแล้ว ⇄');
+                }
+            }
+        };
+
         function calcPortfolioMetrics(portId) {
             let portTxns = (portId === 'ALL')
                 ? transactions
@@ -5459,7 +5722,7 @@
             `;
 
             // Individual Portfolios (Core Port, Satellite Port, Custom Ports)
-            portfolios.forEach(p => {
+            portfolios.forEach((p, index) => {
                 const m = calcPortfolioMetrics(p.id);
                 const isActive = (activePortfolioId === p.id);
                 const sign = m.plUSD >= 0 ? '+' : '';
@@ -5481,10 +5744,20 @@
                 }
 
                 html += `
-                    <div class="portfolio-card ${isActive ? 'active-port' : ''}" onclick="selectPortfolio('${p.id}')">
+                    <div class="portfolio-card ${isActive ? 'active-port' : ''}" 
+                         draggable="true" 
+                         data-port-id="${p.id}"
+                         ondragstart="handlePortCardDragStart(event, '${p.id}')"
+                         ondragover="handlePortCardDragOver(event)"
+                         ondragleave="handlePortCardDragLeave(event)"
+                         ondrop="handlePortCardDrop(event, '${p.id}')"
+                         ondragend="handlePortCardDragEnd(event)"
+                         onclick="selectPortfolio('${p.id}')"
+                         title="คลิกเพื่อเลือกพอร์ต หรือคลิกลากการ์ดเพื่อย้ายสลับตำแหน่ง">
                         <div>
                             <div class="d-flex justify-content-between align-items-center mb-1">
-                                <div class="d-flex align-items-center gap-2 flex-grow-1 overflow-hidden me-2">
+                                <div class="d-flex align-items-center gap-1.5 flex-grow-1 overflow-hidden me-2">
+                                    <span class="port-drag-handle me-0.5" title="คลิกลากเพื่อย้ายสลับตำแหน่งพอร์ต">⋮⋮</span>
                                     <span class="fw-bold fs-5 text-truncate" title="${p.name}">${p.name}</span>
                                     ${(p.tag && p.tag.toLowerCase() !== p.name.toLowerCase()) ? `<span class="port-tag-pill flex-shrink-0">${p.tag}</span>` : ''}
                                 </div>
@@ -5493,6 +5766,11 @@
                                         •••
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="border-radius: 12px; font-size: 0.85rem;">
+                                        <li><h6 class="dropdown-header text-uppercase fw-bold text-muted py-1" style="font-size: 0.68rem;">⇄ จัดลำดับตำแหน่ง</h6></li>
+                                        ${index > 0 ? `<li><a class="dropdown-item fw-bold" href="javascript:void(0)" onclick="movePortfolio('${p.id}', -1, event)">⬅️ เลื่อนไปทางซ้าย</a></li>` : ''}
+                                        ${index < portfolios.length - 1 ? `<li><a class="dropdown-item fw-bold" href="javascript:void(0)" onclick="movePortfolio('${p.id}', 1, event)">➡️ เลื่อนไปทางขวา</a></li>` : ''}
+                                        <li><a class="dropdown-item text-primary fw-bold" href="javascript:void(0)" onclick="openReorderPortfoliosModal(event)">⇄ จัดลำดับพอร์ตทั้งหมด...</a></li>
+                                        <li><hr class="dropdown-divider my-1"></li>
                                         <li><a class="dropdown-item" href="javascript:void(0)" onclick="openPortfolioModal('${p.id}')">✏️ แก้ไขชื่อ/โน้ต</a></li>
                                         <li><a class="dropdown-item fw-bold text-primary" href="javascript:void(0)" onclick="openStockAllocatorModal('${p.id}', event)">📦 จัดการ/ย้ายหุ้นเข้าพอร์ตนี้</a></li>
                                         ${(p.name.toLowerCase().includes('retire') && m.tickers.some(tk => ['GRID', 'XLV', 'SPMO'].includes(tk))) ? `
