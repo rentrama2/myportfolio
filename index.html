@@ -14463,6 +14463,49 @@
             return `<span class="news-sentiment-neutral">⚪ เกาะติดสถานการณ์</span>`;
         }
 
+        function sanitizeNewsThai(text) {
+            if (!text || typeof text !== 'string') return text || '';
+            return text
+                .replace(/\bตัวอักษร\s*\((?:GOOGL|GOOG)\)/gi, 'Alphabet (GOOGL)')
+                .replace(/ตัวอักษร\s*\(\s*GOOGL\s*\)/gi, 'Alphabet (GOOGL)')
+                .replace(/ห้องปฏิบัติการจรวด/gi, 'Rocket Lab')
+                .replace(/ผู้ถลกหนัง/gi, 'กลุ่มพ่อค้าเก็งกำไร (Scalpers)')
+                .replace(/สัญญาแลกเปลี่ยนเครดิตเริ่มต้น/gi, 'สัญญาประกันการผิดนัดชำระหนี้ (Credit Default Swaps / CDS)')
+                .replace(/การดึง\s*IPO/gi, 'การระงับแผนเข้าตลาดหุ้น IPO')
+                .replace(/ดึง\s*IPO/gi, 'ถอนการยื่นเสนอขายหุ้น IPO')
+                .replace(/การบรรยายสรุป/gi, 'สรุปภาพรวม')
+                .replace(/ตัวขับเคลื่อนตลาด/gi, 'ปัจจัยขับเคลื่อนตลาด')
+                .replace(/ทำให้เกิดความกลัวต่อ/gi, 'สร้างความกังวลต่อ')
+                .replace(/ทำให้เกิดความกลัว/gi, 'จุดชนวนความกังวล')
+                .replace(/การสร้าง AI/gi, 'การขยายโครงสร้างพื้นฐาน AI (AI Build-out)')
+                .replace(/เบื้องหลังความต้องการ/gi, 'เพื่อรองรับอุปสงค์')
+                .replace(/เมื่อถึงกลางภาค/gi, 'ก่อนการเลือกตั้งกลางเทอม (Midterms)')
+                .replace(/คะแนนการอนุมัติ/gi, 'คะแนนความนิยม (Approval Rating)')
+                .replace(/ยุติธรรมหรือยากจน/gi, 'ปานกลางถึงย่ำแย่')
+                .replace(/ในการตามล่าหา/gi, 'ในการมองหาทางเลือกทดแทน')
+                .replace(/ส่งผลเสียต่อกระแสเงินสดอิสระ/gi, 'กดดันกระแสเงินสดอิสระ (Free Cash Flow)')
+                .replace(/ไฮเปอร์สเกลเลอร์/gi, 'ผู้ให้บริการคลาวด์ยักษ์ใหญ่ (Hyperscalers)')
+                .replace(/นีโอคลาวด์/gi, 'กลุ่มผู้ให้บริการคลาวด์รุ่นใหม่ (Neoclouds)')
+                .replace(/การตกต่ำของหุ้น/gi, 'การปรับตัวลงของราคาหุ้น')
+                .replace(/สเปรดที่เพิ่มขึ้น/gi, 'ส่วนต่างอัตราผลตอบแทน (Credit Spread) ที่กว้างขึ้น')
+                .replace(/ตลาดหมี/gi, 'ตลาดขาลง (Bear Market)')
+                .replace(/ตลาดกระทิง/gi, 'ตลาดขาขึ้น (Bull Market)')
+                .replace(/ดิ่งลง/gi, 'ร่วงลงแรง');
+        }
+
+        function sanitizeNewsItem(item) {
+            if (!item) return item;
+            if (item.title) item.title = sanitizeNewsThai(item.title);
+            if (item.summary) item.summary = sanitizeNewsThai(item.summary);
+            if (item.points && Array.isArray(item.points)) {
+                item.points = item.points.map(sanitizeNewsThai);
+            }
+            if (item.fullArticle && Array.isArray(item.fullArticle)) {
+                item.fullArticle = item.fullArticle.map(sanitizeNewsThai);
+            }
+            return item;
+        }
+
         window.openBreakingNewsDetail = function() {
             const hero = marketNewsData.find(x => x.isHero) || marketNewsData[0];
             if (hero) openNewsDetailModal(hero.id);
@@ -14517,14 +14560,37 @@
                 });
             }
 
-            const paragraphs = item.fullArticle || [item.summary];
-            const bulletPoints = item.points || [item.summary];
+            // Deduplicate and sanitize paragraphs
+            const rawParagraphs = (item.fullArticle && item.fullArticle.length > 0) ? item.fullArticle : [item.summary || item.title];
+            const paragraphs = [];
+            const seenPara = new Set();
+            for (const p of rawParagraphs) {
+                const cleaned = sanitizeNewsThai(p).trim();
+                if (cleaned && !seenPara.has(cleaned)) {
+                    seenPara.add(cleaned);
+                    paragraphs.push(cleaned);
+                }
+            }
+            if (paragraphs.length === 0) paragraphs.push(sanitizeNewsThai(item.title));
+
+            // Deduplicate and sanitize bullet points
+            const rawPoints = (item.points && item.points.length > 0) ? item.points : [item.summary || item.title];
+            const bulletPoints = [];
+            const seenPoints = new Set();
+            for (const pt of rawPoints) {
+                const cleaned = sanitizeNewsThai(pt).trim();
+                if (cleaned && !seenPoints.has(cleaned)) {
+                    seenPoints.add(cleaned);
+                    bulletPoints.push(cleaned);
+                }
+            }
+            if (bulletPoints.length === 0) bulletPoints.push(sanitizeNewsThai(item.summary || item.title));
 
             if (modalBody) {
                 modalBody.innerHTML = `
                     <div class="mb-2">
                         <h4 class="fw-bold mb-2 text-body" style="line-height: 1.45; letter-spacing: -0.3px;">
-                            ${item.title}
+                            ${sanitizeNewsThai(item.title)}
                         </h4>
 
                         <div class="d-flex align-items-center gap-2 mb-3 flex-wrap">
@@ -14841,6 +14907,9 @@
                                 if (item.publishedAt) {
                                     item.time = formatNewsTimeAgo(item.publishedAt);
                                 }
+                                if (typeof sanitizeNewsItem === 'function') {
+                                    sanitizeNewsItem(item);
+                                }
                             });
                             marketNewsData = data.news;
                             localStorage.setItem('myMarketNewsData', JSON.stringify(data.news));
@@ -14864,6 +14933,9 @@
                             parsed.forEach(item => {
                                 if (item.publishedAt) {
                                     item.time = formatNewsTimeAgo(item.publishedAt);
+                                }
+                                if (typeof sanitizeNewsItem === 'function') {
+                                    sanitizeNewsItem(item);
                                 }
                             });
                             marketNewsData = parsed;
