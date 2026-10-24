@@ -1,16 +1,45 @@
 {
-  "updated_at": "2026-10-24T13:46:39Z",
-  "updated_at_thai": "24 ต.ค. 2569 20:46 น.",
+  "updated_at": "2026-10-24T17:02:05Z",
+  "updated_at_thai": "25 ต.ค. 2569 00:02 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "การระดมทุนของ AI เกรงว่าวอลล์สตรีทจะสั่นสะเทือน ต่อไปนี้คือวิธีที่เราปรับเปลี่ยนพอร์ตโฟลิโอของเรา",
+      "title_en": "AI funding fears rattle Wall Street. Here's how we're adjusting our portfolio",
+      "summary": "การหมุนเวียนหุ้น AI ส่งผลดีต่อหุ้นสโมสรแนวรับหลายหุ้น",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/investingclub/2026/10/24/ai-funding-fears-rattle-wall-street-heres-how-were-adjusting-our-portfolio.html",
+      "time": "48 นาทีที่แล้ว",
+      "publishedAt": "2026-10-24T16:14:00Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "📌 สาระสำคัญ: การหมุนเวียนหุ้น AI ส่งผลดีต่อหุ้นสโมสรแนวรับหลายหุ้น",
+        "📊 นัยสำคัญต่อตลาด: ความคืบหน้าของอุตสาหกรรมเทคโนโลยีที่ส่งผลต่อโมเมนตัมของตลาดและการแข่งขันในระดับสากล",
+        "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #NVDA #AAPL #MSFT ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
+      ],
+      "fullArticle": [
+        "การระดมทุนของ AI เกรงว่าวอลล์สตรีทจะสั่นสะเทือน ต่อไปนี้คือวิธีที่เราปรับเปลี่ยนพอร์ตโฟลิโอของเรา โดยมีรายงานว่า การหมุนเวียนหุ้น AI ส่งผลดีต่อหุ้นสโมสรแนวรับหลายหุ้น",
+        "รายงานจาก CNBC ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมเทคโนโลยีและปัญญาประดิษฐ์ (AI) ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
+        "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #NVDA #AAPL #MSFT อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"AI funding fears rattle Wall Street. Here's how we're adjusting our portfolio\")"
+      ]
+    },
+    {
+      "id": "news-2",
       "title": "ค่าเชื้อเพลิงที่สูงขึ้นของ Norwegian Cruise Line Holdings (NCLH) มีความหมายต่อนักลงทุนอย่างไร?",
       "title_en": "What Does Norwegian Cruise Line Holdings (NCLH) Higher Fuel Bill Mean For Investors?",
       "summary": "ค่าเชื้อเพลิงที่สูงขึ้นของ Norwegian Cruise Line Holdings (NCLH) มีความหมายต่อนักลงทุนอย่างไร?",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/does-norwegian-cruise-line-holdings-131134784.html",
-      "time": "35 นาทีที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-24T13:11:34Z",
       "category": "MACRO",
       "tickers": [
@@ -20,7 +49,7 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "📌 สาระสำคัญ: ค่าเชื้อเพลิงที่สูงขึ้นของ Norwegian Cruise Line Holdings (NCLH) มีความหมายต่อนักลงทุนอย่างไร?",
         "📊 นัยสำคัญต่อตลาด: สะท้อนความไม่แน่นอนของปัจจัยเศรษฐกิจและนโยบายการเงินที่ตลาดยังคงรอดูความชัดเจนเพื่อประเมินทิศทางต่อไป",
@@ -33,13 +62,13 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-3",
       "title": "Country Garden Services Holdings และหุ้นเพนนีอีก 2 หุ้นที่น่าจับตามอง",
       "title_en": "Country Garden Services Holdings And 2 More Penny Stocks To Watch",
       "summary": "Country Garden Services Holdings และหุ้นเพนนีอีก 2 หุ้นที่น่าจับตามอง",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/country-garden-services-holdings-2-111344819.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-24T11:13:44Z",
       "category": "MACRO",
       "tickers": [
@@ -62,13 +91,13 @@
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-4",
       "title": "บทบาทของ Nvidia ในฐานะนักการเงิน AI เผชิญกับการทดสอบครั้งใหญ่ครั้งแรกเมื่อ กลุ่ม Neoclouds เข้าสู่ตลาด",
       "title_en": "Nvidia's role as AI financier faces first big test as neoclouds take market hit",
       "summary": "เนื่องจาก Nvidia เปลี่ยนจากผู้ผลิตชิปมาเป็นนักการเงินในอุตสาหกรรม นักลงทุนบางรายมองว่าบริษัทรับความเสี่ยงเกินขนาดซึ่งเชื่อมโยงกับการขยายโครงสร้างพื้นฐาน AI (AI Build-out)",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/24/nvidias-role-as-ai-financier-faces-first-big-test-as-neoclouds-take-market-hit.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-24T11:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -89,13 +118,13 @@
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-5",
       "title": "หุ้น EV 3 ตัวที่น่าจับตามองพร้อมการเติบโตของรายได้สูงถึง 33%",
       "title_en": "3 EV Stocks To Watch With Revenue Growth Up To 33%",
       "summary": "หุ้น EV 3 ตัวที่น่าจับตามองพร้อมการเติบโตของรายได้สูงถึง 33%",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-ev-stocks-watch-revenue-091208015.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-24T09:12:08Z",
       "category": "EARNINGS",
       "tickers": [
@@ -117,13 +146,13 @@
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-6",
       "title": "Sansan และหุ้นการเติบโตของญี่ปุ่นอีก 2 ตัวที่น่าจับตามอง",
       "title_en": "Sansan And 2 Other Japanese Growth Stocks To Watch",
       "summary": "Sansan และหุ้นการเติบโตของญี่ปุ่นอีก 2 ตัวที่น่าจับตามอง",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/sansan-2-other-japanese-growth-081102129.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "8 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-24T08:11:02Z",
       "category": "MACRO",
       "tickers": [
@@ -146,13 +175,13 @@
       ]
     },
     {
-      "id": "news-6",
+      "id": "news-7",
       "title": "3 หุ้นการเติบโตของแคนาดาพร้อมการเติบโตของรายได้สูงถึง 65%",
       "title_en": "3 Canadian Growth Stocks With Earnings Growth Up To 65%",
       "summary": "3 หุ้นการเติบโตของแคนาดาพร้อมการเติบโตของรายได้สูงถึง 65%",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-growth-stocks-earnings-071210194.html",
-      "time": "6 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-24T07:12:10Z",
       "category": "EARNINGS",
       "tickers": [
@@ -174,13 +203,13 @@
       ]
     },
     {
-      "id": "news-7",
+      "id": "news-8",
       "title": "ความวุ่นวายกระทบต่อการขยายโครงสร้างพื้นฐาน AI (AI Build-out) เมื่อ กลุ่ม Neoclouds เผชิญกับแรงกดดัน ความเสี่ยงด้านเครดิตเพิ่มขึ้น และ Solidigm ถอนการยื่นเสนอขายหุ้น IPO",
       "title_en": "Turmoil hits AI buildout as neoclouds face pressure, credit risks mount and Solidigm pulls IPO",
       "summary": "หุ้นตกต่ำ ถอนการยื่นเสนอขายหุ้น IPO ออกมา และส่วนต่างอัตราผลตอบแทน (Credit Spread) ที่กว้างขึ้นใน สัญญาประกันหนี้เสีย (CDS) สัปดาห์นี้ทำให้เกิดรายได้ กลุ่มผู้ให้บริการคลาวด์ยักษ์ใหญ่ (Hyperscalers)",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/ai-turmoil-neoclouds-struggle-credit-risks-jump-solidigm-pulls-ipo.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-24T06:41:14Z",
       "category": "TECH",
       "tickers": [
@@ -203,13 +232,13 @@
       ]
     },
     {
-      "id": "news-8",
+      "id": "news-9",
       "title": "วันแห่งการบริการลูกค้าจะเป็นอย่างไร — เมื่อ AI เปลี่ยนแปลงทุกสิ่ง",
       "title_en": "What a day in customer service looks like — as AI changes everything",
       "summary": "การบริการลูกค้าอาจเป็น \"งานที่ยากจริงๆ\" AI จะทำให้ง่ายขึ้น — หรือทำให้เกิดอาการปวดหัวมากขึ้นหรือไม่?",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/24/ai-customer-service-jobs-work.html",
-      "time": "8 ชั่วโมงที่แล้ว",
+      "time": "12 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-24T05:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -232,13 +261,13 @@
       ]
     },
     {
-      "id": "news-9",
+      "id": "news-10",
       "title": "ในการมองหาทางเลือกทดแทนทางเลือก Starlink ยูเครนร่วมมือกับ Nokia และผู้ผลิตดาวเทียม ICEYE",
       "title_en": "In hunt for Starlink alternative, Ukraine partners with Nokia and satellite maker ICEYE",
       "summary": "ด้วย SpaceX การจำกัดความเร็วบน Starlink ในยูเครน และการขัดขวางการปฏิบัติการทางทหาร เคียฟกำลังมองหาทางเลือกอื่น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/ukraine-partners-with-nokia-and-iceye-for-starlink-alternative.html",
-      "time": "16 ชั่วโมงที่แล้ว",
+      "time": "20 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T20:52:23Z",
       "category": "TECH",
       "tickers": [
@@ -261,13 +290,13 @@
       ]
     },
     {
-      "id": "news-10",
+      "id": "news-11",
       "title": "คะแนนนิยมด้านเศรษฐกิจของ ทรัมป์ (Trump) ต่ำเป็นประวัติการณ์เมื่อ การเลือกตั้งกลางเทอม (Midterms) ปรากฏ: การสำรวจของ CNBC",
       "title_en": "Trump's approval rating on economy hits all-time low as midterm looms: CNBC survey",
       "summary": "ขณะนี้ชาวอเมริกันแปดใน 10 คนให้คะแนนเศรษฐกิจว่าปานกลางถึงย่ำแย่ หนึ่งในผลการวิจัยหลายรายการในการสำรวจของ CNBC ที่แสดงให้เห็นว่าเหตุใดผู้สมัครจากพรรครีพับลิกันจึงต้องเผชิญกับศึกหนักในการแข่งขัน",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/trump-economic-approval-rating-midterms-poll.html",
-      "time": "16 ชั่วโมงที่แล้ว",
+      "time": "20 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T20:49:42Z",
       "category": "MACRO",
       "tickers": [
@@ -290,13 +319,13 @@
       ]
     },
     {
-      "id": "news-11",
+      "id": "news-12",
       "title": "กลุ่มพ่อค้าเก็งกำไร (Scalpers) เสนอผู้ซื้อ Apple Apple iPhone Duo เพิ่มอีกหลายร้อยคนนอกการเปิดตัวที่ปักกิ่ง",
       "title_en": "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
       "summary": "การเปิดตัว Apple iPhone Duo แบบพับได้ทั่วโลกของ Apple ทำให้ กลุ่มพ่อค้าเก็งกำไร (Scalpers) มาที่ร้านเรือธงในปักกิ่งที่ต้องการจ่ายเงินก้อนโตสำหรับอุปกรณ์ที่มีราคาแพงอยู่แล้ว",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/apple-iphone-duo-china-launch.html",
-      "time": "17 ชั่วโมงที่แล้ว",
+      "time": "20 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T20:06:37Z",
       "category": "TECH",
       "tickers": [
@@ -314,35 +343,6 @@
         "กลุ่มพ่อค้าเก็งกำไร (Scalpers) เสนอผู้ซื้อ Apple Apple iPhone Duo เพิ่มอีกหลายร้อยคนนอกการเปิดตัวที่ปักกิ่ง โดยมีรายงานว่า การเปิดตัว Apple iPhone Duo แบบพับได้ทั่วโลกของ Apple ทำให้ กลุ่มพ่อค้าเก็งกำไร (Scalpers) มาที่ร้านเรือธงในปักกิ่งที่ต้องการจ่ายเงินก้อนโตสำหรับอุปกรณ์ที่มีราคาแพงอยู่แล้ว",
         "รายงานจาก CNBC ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมเทคโนโลยีและปัญญาประดิษฐ์ (AI) ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
         "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #AAPL อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch\")"
-      ]
-    },
-    {
-      "id": "news-12",
-      "title": "มัสก์ (Musk) SpaceX ยังคงจำกัด Starlink ในยูเครน และค่าผ่านทางก็เพิ่มขึ้น",
-      "title_en": "Musk's SpaceX is still restricting Starlink in Ukraine and the toll is rising",
-      "summary": "ตั้งแต่สัปดาห์ที่แล้ว ยูเครนได้รายงานข้อจำกัดเกี่ยวกับ Starshield ซึ่งเป็นเวอร์ชันหนึ่งของ Starlink ของ SpaceX ซึ่งขัดขวางปฏิบัติการทางทหารต่อรัสเซีย",
-      "source": "CNBC",
-      "sourceUrl": "https://www.cnbc.com/2026/10/23/ukraine-says-starlink-restrictions-remain-despite-trump-assurances.html",
-      "time": "17 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T19:50:26Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "📌 สาระสำคัญ: ตั้งแต่สัปดาห์ที่แล้ว ยูเครนได้รายงานข้อจำกัดเกี่ยวกับ Starshield ซึ่งเป็นเวอร์ชันหนึ่งของ Starlink ของ SpaceX ซึ่งขัดขวางปฏิบัติการทางทหารต่อรัสเซีย",
-        "📊 นัยสำคัญต่อตลาด: ความคืบหน้าของอุตสาหกรรมเทคโนโลยีที่ส่งผลต่อโมเมนตัมของตลาดและการแข่งขันในระดับสากล",
-        "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #NVDA #AAPL #MSFT ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
-      ],
-      "fullArticle": [
-        "มัสก์ (Musk) SpaceX ยังคงจำกัด Starlink ในยูเครน และค่าผ่านทางก็เพิ่มขึ้น โดยมีรายงานว่า ตั้งแต่สัปดาห์ที่แล้ว ยูเครนได้รายงานข้อจำกัดเกี่ยวกับ Starshield ซึ่งเป็นเวอร์ชันหนึ่งของ Starlink ของ SpaceX ซึ่งขัดขวางปฏิบัติการทางทหารต่อรัสเซีย",
-        "รายงานจาก CNBC ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมเทคโนโลยีและปัญญาประดิษฐ์ (AI) ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
-        "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #NVDA #AAPL #MSFT อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"Musk's SpaceX is still restricting Starlink in Ukraine and the toll is rising\")"
       ]
     }
   ]
