@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-24T01:05:30Z",
-  "updated_at_thai": "24 ต.ค. 2569 08:05 น.",
+  "updated_at": "2026-10-24T01:42:08Z",
+  "updated_at_thai": "24 ต.ค. 2569 08:42 น.",
   "fx": {
     "USDTHB": 33.74
   },
@@ -28,9 +28,9 @@
     },
     "DX-Y.NYB": {
       "price": 101.75,
-      "prevClose": 101.61,
-      "change": 0.14,
-      "changePct": 0.14,
+      "prevClose": 101.81,
+      "change": -0.06,
+      "changePct": -0.06,
       "name": "DXY Index"
     },
     "^GSPC": {

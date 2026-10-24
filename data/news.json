@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-24T01:05:32Z",
-  "updated_at_thai": "24 ต.ค. 2569 08:05 น.",
+  "updated_at": "2026-10-24T01:42:11Z",
+  "updated_at_thai": "24 ต.ค. 2569 08:42 น.",
   "news_count": 12,
   "news": [
     {
@@ -10,7 +10,7 @@
       "summary": "ตัวอักษร (GOOGL): การลงทุนเบื้องหลังความต้องการ AI และการเติบโตของ TPU",
       "source": "Insider Monkey",
       "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/alphabet-googl-investing-behind-ai-165149716.html",
-      "time": "33 นาทีที่แล้ว",
+      "time": "1 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-24T00:31:49Z",
       "category": "TECH",
       "tickers": [
@@ -61,12 +61,39 @@
     },
     {
       "id": "news-3",
+      "title": "ทบทวนและดูตัวอย่าง: จุดเปลี่ยนของดาวโจนส์",
+      "title_en": "Review & Preview: The Dow’s Turn",
+      "summary": "ทบทวนและดูตัวอย่าง: จุดเปลี่ยนของดาวโจนส์",
+      "source": "Barrons.com",
+      "sourceUrl": "https://finance.yahoo.com/m/e0fe5a77-6816-38a8-b2cb-9878c9cd341d/review-%26-preview%3A-the-dow%E2%80%99s.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T23:55:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "ทบทวนและดูตัวอย่าง: จุดเปลี่ยนของดาวโจนส์",
+        "แหล่งข่าวอ้างอิง: Barrons.com (23/10/2026 23:55 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #DIA"
+      ],
+      "fullArticle": [
+        "ทบทวนและดูตัวอย่าง: จุดเปลี่ยนของดาวโจนส์",
+        "ทบทวนและดูตัวอย่าง: จุดเปลี่ยนของดาวโจนส์",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Review & Preview: The Dow’s Turn\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
       "title": "Rocket Lab และ 2 หุ้นอวกาศยอดนิยมที่น่าจับตามอง",
       "title_en": "Rocket Lab And 2 Top Space Stocks To Watch",
       "summary": "Rocket Lab และ 2 หุ้นอวกาศยอดนิยมที่น่าจับตามอง",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-2-top-space-231051195.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T23:10:51Z",
       "category": "MACRO",
       "tickers": [
@@ -89,7 +116,7 @@
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-5",
       "title": "ความวุ่นวายส่งผลกระทบต่อการสร้าง AI เนื่องจาก Neocloud เผชิญกับแรงกดดัน ความเสี่ยงด้านเครดิตเพิ่มขึ้น และ Solidigm ถอน IPO",
       "title_en": "Turmoil hits AI build-out as neoclouds face pressure, credit risks mount and Solidigm pulls IPO",
       "summary": "การตกต่ำของหุ้น การดึง IPO และสเปรดที่เพิ่มขึ้นจากสัญญาแลกเปลี่ยนเครดิตเริ่มต้นในสัปดาห์นี้ ทำให้เกิดรายได้แบบไฮเปอร์สเกลเลอร์",
@@ -117,13 +144,13 @@
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-6",
       "title": "S&P 500, ดาวโจนส์ร่วงลงเนื่องจากราคาน้ำมันที่สูงขึ้นทำให้เกิดความกลัวต่อการประชุมเฟดในสัปดาห์หน้า - AAPL, AXP, CART, UBER In Focus",
       "title_en": "S&P 500, Dow Drop As Elevated Oil Prices Stoke Inflation Fears Ahead Of Fed Meeting Next Week — AAPL, AXP, CART, UBER In Focus",
       "summary": "S&P 500, ดาวโจนส์ร่วงลงเนื่องจากราคาน้ำมันที่สูงขึ้นทำให้เกิดความกลัวต่อการประชุมเฟดในสัปดาห์หน้า - AAPL, AXP, CART, UBER In Focus",
       "source": "Stocktwits",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/p-500-dow-drop-elevated-223557989.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T22:35:57Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -143,34 +170,6 @@
         "S&P 500, ดาวโจนส์ร่วงลงเนื่องจากราคาน้ำมันที่สูงขึ้นทำให้เกิดความกลัวต่อการประชุมเฟดในสัปดาห์หน้า - AAPL, AXP, CART, UBER In Focus",
         "S&P 500, ดาวโจนส์ร่วงลงเนื่องจากราคาน้ำมันที่สูงขึ้นทำให้เกิดความกลัวต่อการประชุมเฟดในสัปดาห์หน้า - AAPL, AXP, CART, UBER In Focus",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"S&P 500, Dow Drop As Elevated Oil Prices Stoke Inflation Fears Ahead Of Fed Meeting Next Week — AAPL, AXP, CART, UBER In Focus\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "ราคาน้ำมันสิ้นสุดสัปดาห์ที่สูงขึ้นจากความกังวลว่าสหรัฐฯ-อิหร่านจะบานปลาย",
-      "title_en": "Oil Prices End the Week Higher on Fears of U.S.-Iran Escalation",
-      "summary": "ราคาน้ำมันสิ้นสุดสัปดาห์ที่สูงขึ้นจากความกังวลว่าสหรัฐฯ-อิหร่านจะบานปลาย",
-      "source": "Barrons.com",
-      "sourceUrl": "https://finance.yahoo.com/m/58ed09fb-a618-380f-92a8-0119019e0cd5/oil-prices-end-the-week.html",
-      "time": "2 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T22:24:00Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BULLISH",
-      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": false,
-      "points": [
-        "ราคาน้ำมันสิ้นสุดสัปดาห์ที่สูงขึ้นจากความกังวลว่าสหรัฐฯ-อิหร่านจะบานปลาย",
-        "แหล่งข่าวอ้างอิง: Barrons.com (23/10/2026 22:24 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
-      ],
-      "fullArticle": [
-        "ราคาน้ำมันสิ้นสุดสัปดาห์ที่สูงขึ้นจากความกังวลว่าสหรัฐฯ-อิหร่านจะบานปลาย",
-        "ราคาน้ำมันสิ้นสุดสัปดาห์ที่สูงขึ้นจากความกังวลว่าสหรัฐฯ-อิหร่านจะบานปลาย",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Prices End the Week Higher on Fears of U.S.-Iran Escalation\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
@@ -238,7 +237,7 @@
       "summary": "การเปิดตัว iPhone Duo แบบพับได้ทั่วโลกของ Apple ได้นำผู้ถลกหนังมาที่ร้านค้าเรือธงในปักกิ่งที่ต้องการจ่ายเงินจำนวนมากสำหรับอุปกรณ์ที่มีราคาแพงอยู่แล้ว",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/apple-iphone-duo-china-launch.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T20:06:37Z",
       "category": "TECH",
       "tickers": [
@@ -294,7 +293,7 @@
       "summary": "รัฐบาลยุโรปเร่งเปลี่ยนคำมั่นสัญญาการใช้จ่ายด้านกลาโหมเป็นขีดความสามารถทางการทหาร ส่งเสริมคำสั่งซื้อของบริษัทต่างๆ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/saab-q3-earnings-figther-jet-maker-beats-expectations-as-orders-triple.html",
-      "time": "8 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T16:26:17Z",
       "category": "TECH",
       "tickers": [
@@ -323,7 +322,7 @@
       "summary": "ผู้ผลิตรถยนต์สัญชาติสวีเดนรายนี้อ้างถึงสภาพแวดล้อมที่ย่ำแย่ซึ่งนำโดยสภาวะตลาดที่ \"เข้มงวดขึ้น\" ในจีนและสหรัฐอเมริกา ซึ่ง \"ส่งผลเสียต่อกระแสเงินสดอิสระ\"",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/volvo-cars-q3-earnings-job-cuts.html",
-      "time": "9 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T15:40:54Z",
       "category": "EARNINGS",
       "tickers": [
