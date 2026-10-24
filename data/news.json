@@ -1,17 +1,102 @@
 {
-  "updated_at": "2026-10-23T22:37:30Z",
-  "updated_at_thai": "24 ต.ค. 2569 05:37 น.",
+  "updated_at": "2026-10-24T01:05:32Z",
+  "updated_at_thai": "24 ต.ค. 2569 08:05 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
-      "title": "ความวุ่นวายกระทบต่อการสร้าง AI เนื่องจาก Neocloud เผชิญกับแรงกดดัน ความเสี่ยงด้านเครดิตเพิ่มขึ้น และ Solidigm ถอน IPO",
+      "title": "ตัวอักษร (GOOGL): การลงทุนเบื้องหลังความต้องการ AI และการเติบโตของ TPU",
+      "title_en": "Alphabet (GOOGL): Investing Behind AI Demand and TPU Growth",
+      "summary": "ตัวอักษร (GOOGL): การลงทุนเบื้องหลังความต้องการ AI และการเติบโตของ TPU",
+      "source": "Insider Monkey",
+      "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/alphabet-googl-investing-behind-ai-165149716.html",
+      "time": "33 นาทีที่แล้ว",
+      "publishedAt": "2026-10-24T00:31:49Z",
+      "category": "TECH",
+      "tickers": [
+        "GOOGL"
+      ],
+      "sentiment": "BULLISH",
+      "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
+      "isHero": true,
+      "points": [
+        "ตัวอักษร (GOOGL): การลงทุนเบื้องหลังความต้องการ AI และการเติบโตของ TPU",
+        "แหล่งข่าวอ้างอิง: Insider Monkey (24/10/2026 00:31 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #GOOGL"
+      ],
+      "fullArticle": [
+        "ตัวอักษร (GOOGL): การลงทุนเบื้องหลังความต้องการ AI และการเติบโตของ TPU",
+        "ตัวอักษร (GOOGL): การลงทุนเบื้องหลังความต้องการ AI และการเติบโตของ TPU",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Alphabet (GOOGL): Investing Behind AI Demand and TPU Growth\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-2",
+      "title": "Stocktwits Fintech Pulse: การบรรยายสรุป Fintech ประจำสัปดาห์ของสหรัฐฯ และตัวขับเคลื่อนตลาด",
+      "title_en": "Stocktwits Fintech Pulse: US Fintech Weekly Briefing And Market Drivers",
+      "summary": "Stocktwits Fintech Pulse: การบรรยายสรุป Fintech ประจำสัปดาห์ของสหรัฐฯ และตัวขับเคลื่อนตลาด",
+      "source": "Stocktwits",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/stocktwits-fintech-pulse-us-fintech-000436414.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-24T00:04:36Z",
+      "category": "TECH",
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Stocktwits Fintech Pulse: การบรรยายสรุป Fintech ประจำสัปดาห์ของสหรัฐฯ และตัวขับเคลื่อนตลาด",
+        "แหล่งข่าวอ้างอิง: Stocktwits (24/10/2026 00:04 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #NVDA #AAPL #MSFT"
+      ],
+      "fullArticle": [
+        "Stocktwits Fintech Pulse: การบรรยายสรุป Fintech ประจำสัปดาห์ของสหรัฐฯ และตัวขับเคลื่อนตลาด",
+        "Stocktwits Fintech Pulse: การบรรยายสรุป Fintech ประจำสัปดาห์ของสหรัฐฯ และตัวขับเคลื่อนตลาด",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocktwits Fintech Pulse: US Fintech Weekly Briefing And Market Drivers\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-3",
+      "title": "Rocket Lab และ 2 หุ้นอวกาศยอดนิยมที่น่าจับตามอง",
+      "title_en": "Rocket Lab And 2 Top Space Stocks To Watch",
+      "summary": "Rocket Lab และ 2 หุ้นอวกาศยอดนิยมที่น่าจับตามอง",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-2-top-space-231051195.html",
+      "time": "1 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T23:10:51Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": false,
+      "points": [
+        "Rocket Lab และ 2 หุ้นอวกาศยอดนิยมที่น่าจับตามอง",
+        "แหล่งข่าวอ้างอิง: Simply Wall St. (23/10/2026 23:10 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
+      ],
+      "fullArticle": [
+        "Rocket Lab และ 2 หุ้นอวกาศยอดนิยมที่น่าจับตามอง",
+        "Rocket Lab และ 2 หุ้นอวกาศยอดนิยมที่น่าจับตามอง",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Rocket Lab And 2 Top Space Stocks To Watch\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-4",
+      "title": "ความวุ่นวายส่งผลกระทบต่อการสร้าง AI เนื่องจาก Neocloud เผชิญกับแรงกดดัน ความเสี่ยงด้านเครดิตเพิ่มขึ้น และ Solidigm ถอน IPO",
       "title_en": "Turmoil hits AI build-out as neoclouds face pressure, credit risks mount and Solidigm pulls IPO",
-      "summary": "การตกต่ำของหุ้น การดึง IPO และสเปรดที่เพิ่มขึ้นของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นในสัปดาห์นี้ทำให้เกิดรายได้แบบไฮเปอร์สเกลเลอร์",
+      "summary": "การตกต่ำของหุ้น การดึง IPO และสเปรดที่เพิ่มขึ้นจากสัญญาแลกเปลี่ยนเครดิตเริ่มต้นในสัปดาห์นี้ ทำให้เกิดรายได้แบบไฮเปอร์สเกลเลอร์",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/ai-turmoil-neoclouds-struggle-credit-risks-jump-solidigm-pulls-ipo.html",
-      "time": "1 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T22:36:23Z",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T22:49:04Z",
       "category": "COMMODITIES",
       "tickers": [
         "XOM",
@@ -19,156 +104,73 @@
       ],
       "sentiment": "BEARISH",
       "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": true,
+      "isHero": false,
       "points": [
-        "การตกต่ำของหุ้น การดึง IPO และสเปรดที่เพิ่มขึ้นของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นในสัปดาห์นี้ทำให้เกิดรายได้แบบไฮเปอร์สเกลเลอร์",
-        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 22:36 UTC)",
+        "การตกต่ำของหุ้น การดึง IPO และสเปรดที่เพิ่มขึ้นจากสัญญาแลกเปลี่ยนเครดิตเริ่มต้นในสัปดาห์นี้ ทำให้เกิดรายได้แบบไฮเปอร์สเกลเลอร์",
+        "แหล่งข่าวอ้างอิง: CNBC (23/10/2026 22:49 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "ความวุ่นวายกระทบต่อการสร้าง AI เนื่องจาก Neocloud เผชิญกับแรงกดดัน ความเสี่ยงด้านเครดิตเพิ่มขึ้น และ Solidigm ถอน IPO",
-        "การตกต่ำของหุ้น การดึง IPO และสเปรดที่เพิ่มขึ้นของสัญญาแลกเปลี่ยนเครดิตเริ่มต้นในสัปดาห์นี้ทำให้เกิดรายได้แบบไฮเปอร์สเกลเลอร์",
+        "ความวุ่นวายส่งผลกระทบต่อการสร้าง AI เนื่องจาก Neocloud เผชิญกับแรงกดดัน ความเสี่ยงด้านเครดิตเพิ่มขึ้น และ Solidigm ถอน IPO",
+        "การตกต่ำของหุ้น การดึง IPO และสเปรดที่เพิ่มขึ้นจากสัญญาแลกเปลี่ยนเครดิตเริ่มต้นในสัปดาห์นี้ ทำให้เกิดรายได้แบบไฮเปอร์สเกลเลอร์",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Turmoil hits AI build-out as neoclouds face pressure, credit risks mount and Solidigm pulls IPO\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
-      "id": "news-2",
-      "title": "Webull และหุ้นที่มีการเติบโตของข้อมูลภายในชั้นนำอีก 2 หุ้น",
-      "title_en": "Webull And 2 Other Top Insider Growth Stocks",
-      "summary": "Webull และหุ้นที่มีการเติบโตของข้อมูลภายในชั้นนำอีก 2 หุ้น",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/webull-2-other-top-insider-221201540.html",
-      "time": "25 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T22:12:01Z",
-      "category": "MACRO",
+      "id": "news-5",
+      "title": "S&P 500, ดาวโจนส์ร่วงลงเนื่องจากราคาน้ำมันที่สูงขึ้นทำให้เกิดความกลัวต่อการประชุมเฟดในสัปดาห์หน้า - AAPL, AXP, CART, UBER In Focus",
+      "title_en": "S&P 500, Dow Drop As Elevated Oil Prices Stoke Inflation Fears Ahead Of Fed Meeting Next Week — AAPL, AXP, CART, UBER In Focus",
+      "summary": "S&P 500, ดาวโจนส์ร่วงลงเนื่องจากราคาน้ำมันที่สูงขึ้นทำให้เกิดความกลัวต่อการประชุมเฟดในสัปดาห์หน้า - AAPL, AXP, CART, UBER In Focus",
+      "source": "Stocktwits",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/p-500-dow-drop-elevated-223557989.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T22:35:57Z",
+      "category": "COMMODITIES",
       "tickers": [
+        "AAPL",
         "SPY",
-        "QQQ",
-        "TLT"
+        "DIA"
+      ],
+      "sentiment": "BEARISH",
+      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
+      "isHero": false,
+      "points": [
+        "S&P 500, ดาวโจนส์ร่วงลงเนื่องจากราคาน้ำมันที่สูงขึ้นทำให้เกิดความกลัวต่อการประชุมเฟดในสัปดาห์หน้า - AAPL, AXP, CART, UBER In Focus",
+        "แหล่งข่าวอ้างอิง: Stocktwits (23/10/2026 22:35 UTC)",
+        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #AAPL #SPY #DIA"
+      ],
+      "fullArticle": [
+        "S&P 500, ดาวโจนส์ร่วงลงเนื่องจากราคาน้ำมันที่สูงขึ้นทำให้เกิดความกลัวต่อการประชุมเฟดในสัปดาห์หน้า - AAPL, AXP, CART, UBER In Focus",
+        "S&P 500, ดาวโจนส์ร่วงลงเนื่องจากราคาน้ำมันที่สูงขึ้นทำให้เกิดความกลัวต่อการประชุมเฟดในสัปดาห์หน้า - AAPL, AXP, CART, UBER In Focus",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"S&P 500, Dow Drop As Elevated Oil Prices Stoke Inflation Fears Ahead Of Fed Meeting Next Week — AAPL, AXP, CART, UBER In Focus\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+      ]
+    },
+    {
+      "id": "news-6",
+      "title": "ราคาน้ำมันสิ้นสุดสัปดาห์ที่สูงขึ้นจากความกังวลว่าสหรัฐฯ-อิหร่านจะบานปลาย",
+      "title_en": "Oil Prices End the Week Higher on Fears of U.S.-Iran Escalation",
+      "summary": "ราคาน้ำมันสิ้นสุดสัปดาห์ที่สูงขึ้นจากความกังวลว่าสหรัฐฯ-อิหร่านจะบานปลาย",
+      "source": "Barrons.com",
+      "sourceUrl": "https://finance.yahoo.com/m/58ed09fb-a618-380f-92a8-0119019e0cd5/oil-prices-end-the-week.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-23T22:24:00Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
       "isHero": false,
       "points": [
-        "Webull และหุ้นที่มีการเติบโตของข้อมูลภายในชั้นนำอีก 2 หุ้น",
-        "แหล่งข่าวอ้างอิง: Simply Wall St. (23/10/2026 22:12 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "Webull และหุ้นที่มีการเติบโตของข้อมูลภายในชั้นนำอีก 2 หุ้น",
-        "Webull และหุ้นที่มีการเติบโตของข้อมูลภายในชั้นนำอีก 2 หุ้น",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Webull And 2 Other Top Insider Growth Stocks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-3",
-      "title": "หุ้นตกแต่หุ้นเทคโนโลยีทรงตัวหลังเทขาย น้ำมันพุ่งสูงสุดรอบเกือบหกเดือน",
-      "title_en": "Stocks fall, but tech shares steady after selloff; oil hits highest in nearly six months",
-      "summary": "หุ้นตกแต่หุ้นเทคโนโลยีทรงตัวหลังเทขาย น้ำมันพุ่งสูงสุดรอบเกือบหกเดือน",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/markets/articles/tech-selloff-relents-oil-five-103308077.html",
-      "time": "58 นาทีที่แล้ว",
-      "publishedAt": "2026-10-23T21:39:06Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "หุ้นตกแต่หุ้นเทคโนโลยีทรงตัวหลังเทขาย น้ำมันพุ่งสูงสุดรอบเกือบหกเดือน",
-        "แหล่งข่าวอ้างอิง: Reuters (23/10/2026 21:39 UTC)",
+        "ราคาน้ำมันสิ้นสุดสัปดาห์ที่สูงขึ้นจากความกังวลว่าสหรัฐฯ-อิหร่านจะบานปลาย",
+        "แหล่งข่าวอ้างอิง: Barrons.com (23/10/2026 22:24 UTC)",
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM #CVX"
       ],
       "fullArticle": [
-        "หุ้นตกแต่หุ้นเทคโนโลยีทรงตัวหลังเทขาย น้ำมันพุ่งสูงสุดรอบเกือบหกเดือน",
-        "หุ้นตกแต่หุ้นเทคโนโลยีทรงตัวหลังเทขาย น้ำมันพุ่งสูงสุดรอบเกือบหกเดือน",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Stocks fall, but tech shares steady after selloff; oil hits highest in nearly six months\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-4",
-      "title": "3 หุ้นพลังงานที่จะซื้อและถือในทศวรรษหน้า เริ่มที่ ExxonMobil",
-      "title_en": "3 Energy Stocks to Buy and Hold for the Next Decade, Starting With ExxonMobil",
-      "summary": "3 หุ้นพลังงานที่จะซื้อและถือในทศวรรษหน้า เริ่มที่ ExxonMobil",
-      "source": "Motley Fool",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/3-energy-stocks-buy-hold-213500990.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T21:35:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "XOM"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "3 หุ้นพลังงานที่จะซื้อและถือในทศวรรษหน้า เริ่มที่ ExxonMobil",
-        "แหล่งข่าวอ้างอิง: Motley Fool (23/10/2026 21:35 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #XOM"
-      ],
-      "fullArticle": [
-        "3 หุ้นพลังงานที่จะซื้อและถือในทศวรรษหน้า เริ่มที่ ExxonMobil",
-        "3 หุ้นพลังงานที่จะซื้อและถือในทศวรรษหน้า เริ่มที่ ExxonMobil",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"3 Energy Stocks to Buy and Hold for the Next Decade, Starting With ExxonMobil\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-5",
-      "title": "'เหรียญแบงเกอร์' ท้าทายน้ำมันตกขณะทองคำจม",
-      "title_en": "'Banker coin' defies oil shock as gold sinks",
-      "summary": "'เหรียญแบงเกอร์' ท้าทายน้ำมันตกขณะทองคำจม",
-      "source": "TheStreet",
-      "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/banker-coin-defies-oil-shock-213403754.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T21:34:03Z",
-      "category": "COMMODITIES",
-      "tickers": [
-        "COIN"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "'เหรียญแบงเกอร์' ท้าทายน้ำมันตกขณะทองคำจม",
-        "แหล่งข่าวอ้างอิง: TheStreet (23/10/2026 21:34 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #COIN"
-      ],
-      "fullArticle": [
-        "'เหรียญแบงเกอร์' ท้าทายน้ำมันตกขณะทองคำจม",
-        "'เหรียญแบงเกอร์' ท้าทายน้ำมันตกขณะทองคำจม",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"'Banker coin' defies oil shock as gold sinks\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
-      ]
-    },
-    {
-      "id": "news-6",
-      "title": "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
-      "title_en": "Energy & Utilities Roundup: Market Talk",
-      "summary": "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
-      "source": "The Wall Street Journal",
-      "sourceUrl": "https://finance.yahoo.com/m/6d6e1268-8def-342d-ab53-d9799f6b4bb8/energy-%26-utilities-roundup%3A.html",
-      "time": "1 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-23T21:32:00Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
-        "แหล่งข่าวอ้างอิง: The Wall Street Journal (23/10/2026 21:32 UTC)",
-        "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #QQQ #TLT"
-      ],
-      "fullArticle": [
-        "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
-        "สรุปพลังงานและสาธารณูปโภค: การพูดคุยเรื่องตลาด",
-        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Energy & Utilities Roundup: Market Talk\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
+        "ราคาน้ำมันสิ้นสุดสัปดาห์ที่สูงขึ้นจากความกังวลว่าสหรัฐฯ-อิหร่านจะบานปลาย",
+        "ราคาน้ำมันสิ้นสุดสัปดาห์ที่สูงขึ้นจากความกังวลว่าสหรัฐฯ-อิหร่านจะบานปลาย",
+        "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Oil Prices End the Week Higher on Fears of U.S.-Iran Escalation\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
     },
     {
@@ -178,7 +180,7 @@
       "summary": "ด้วย SpaceX ที่จำกัดความเร็วบน Starlink ในยูเครน และขัดขวางการปฏิบัติการทางทหาร Kyiv กำลังมองหาทางเลือกอื่น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/ukraine-partners-with-nokia-and-iceye-for-starlink-alternative.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T20:52:23Z",
       "category": "TECH",
       "tickers": [
@@ -207,7 +209,7 @@
       "summary": "ขณะนี้ชาวอเมริกันแปดใน 10 คนให้คะแนนเศรษฐกิจว่ายุติธรรมหรือยากจน หนึ่งในผลการวิจัยหลายรายการในการสำรวจของ CNBC ที่แสดงให้เห็นว่าเหตุใดผู้สมัครจากพรรครีพับลิกันจึงต้องเผชิญกับการต่อสู้ที่ยากลำบาก",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/22/trump-economic-approval-rating-midterms-poll.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T20:49:42Z",
       "category": "MACRO",
       "tickers": [
@@ -236,7 +238,7 @@
       "summary": "การเปิดตัว iPhone Duo แบบพับได้ทั่วโลกของ Apple ได้นำผู้ถลกหนังมาที่ร้านค้าเรือธงในปักกิ่งที่ต้องการจ่ายเงินจำนวนมากสำหรับอุปกรณ์ที่มีราคาแพงอยู่แล้ว",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/apple-iphone-duo-china-launch.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T20:06:37Z",
       "category": "TECH",
       "tickers": [
@@ -263,7 +265,7 @@
       "summary": "ตั้งแต่สัปดาห์ที่แล้ว ยูเครนได้รายงานข้อจำกัดเกี่ยวกับ Starshield ซึ่งเป็นเวอร์ชันหนึ่งของ Starlink ของ SpaceX ซึ่งขัดขวางปฏิบัติการทางทหารต่อรัสเซีย",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/ukraine-says-starlink-restrictions-remain-despite-trump-assurances.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T19:50:26Z",
       "category": "TECH",
       "tickers": [
@@ -292,7 +294,7 @@
       "summary": "รัฐบาลยุโรปเร่งเปลี่ยนคำมั่นสัญญาการใช้จ่ายด้านกลาโหมเป็นขีดความสามารถทางการทหาร ส่งเสริมคำสั่งซื้อของบริษัทต่างๆ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/saab-q3-earnings-figther-jet-maker-beats-expectations-as-orders-triple.html",
-      "time": "6 ชั่วโมงที่แล้ว",
+      "time": "8 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T16:26:17Z",
       "category": "TECH",
       "tickers": [
@@ -316,12 +318,12 @@
     },
     {
       "id": "news-12",
-      "title": "Volvo Cars ร่วง 24% ขณะที่ CEO กล่าวว่ายอดขายในจีนตกต่ำมา 'เร็วกว่าที่เราคิด'",
+      "title": "Volvo Cars ดิ่งลง 24% ขณะที่ซีอีโอกล่าวว่ายอดขายในจีนตกต่ำมา 'เร็วกว่าที่เราคิด'",
       "title_en": "Volvo Cars plunges 24% as CEO says China sales slump came 'faster than we thought'",
       "summary": "ผู้ผลิตรถยนต์สัญชาติสวีเดนรายนี้อ้างถึงสภาพแวดล้อมที่ย่ำแย่ซึ่งนำโดยสภาวะตลาดที่ \"เข้มงวดขึ้น\" ในจีนและสหรัฐอเมริกา ซึ่ง \"ส่งผลเสียต่อกระแสเงินสดอิสระ\"",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/23/volvo-cars-q3-earnings-job-cuts.html",
-      "time": "6 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-23T15:40:54Z",
       "category": "EARNINGS",
       "tickers": [
@@ -337,7 +339,7 @@
         "กลุ่มสินทรัพย์และหุ้นที่เกี่ยวข้อง: #SPY #DIA"
       ],
       "fullArticle": [
-        "Volvo Cars ร่วง 24% ขณะที่ CEO กล่าวว่ายอดขายในจีนตกต่ำมา 'เร็วกว่าที่เราคิด'",
+        "Volvo Cars ดิ่งลง 24% ขณะที่ซีอีโอกล่าวว่ายอดขายในจีนตกต่ำมา 'เร็วกว่าที่เราคิด'",
         "ผู้ผลิตรถยนต์สัญชาติสวีเดนรายนี้อ้างถึงสภาพแวดล้อมที่ย่ำแย่ซึ่งนำโดยสภาวะตลาดที่ \"เข้มงวดขึ้น\" ในจีนและสหรัฐอเมริกา ซึ่ง \"ส่งผลเสียต่อกระแสเงินสดอิสระ\"",
         "รายงานต้นฉบับภาษาอังกฤษระบุว่า: \"Volvo Cars plunges 24% as CEO says China sales slump came 'faster than we thought'\" ซึ่งนักวิเคราะห์ในตลาดกำลังจับตาดูผลกระทบต่อทิศทางราคาและผลตอบแทนในระยะสั้นถึงระยะกลาง"
       ]
