@@ -1,16 +1,44 @@
 {
-  "updated_at": "2026-10-25T16:47:16Z",
-  "updated_at_thai": "25 ต.ค. 2569 23:47 น.",
+  "updated_at": "2026-10-25T19:21:03Z",
+  "updated_at_thai": "26 ต.ค. 2569 02:21 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "ความเสี่ยงในการจัดหาน้ำมันทำให้หุ้น Phillips 66 และสาขาพลังงานหลักทั่วโลกได้รับความสนใจ",
+      "title_en": "Oil Supply Risks Put Phillips 66 Stock And Global Energy Majors In Focus",
+      "summary": "ความเสี่ยงในการจัดหาน้ำมันทำให้หุ้น Phillips 66 และสาขาพลังงานหลักทั่วโลกได้รับความสนใจ",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/oil-supply-risks-put-phillips-170844973.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-10-25T17:08:44Z",
+      "category": "COMMODITIES",
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "📌 สาระสำคัญ: ความเสี่ยงในการจัดหาน้ำมันทำให้หุ้น Phillips 66 และสาขาพลังงานหลักทั่วโลกได้รับความสนใจ",
+        "📊 นัยสำคัญต่อตลาด: ความผันผวนของราคาสินค้าโภคภัณฑ์ยังคงขึ้นอยู่กับประเด็นภูมิรัฐศาสตร์และนโยบายการผลิตระดับโลก",
+        "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #XOM #CVX ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
+      ],
+      "fullArticle": [
+        "ความเสี่ยงในการจัดหาน้ำมันทำให้หุ้น Phillips 66 และสาขาพลังงานหลักทั่วโลกได้รับความสนใจ ซึ่งเป็นหนึ่งในประเด็นสำคัญที่ตลาดการเงินและนักลงทุนทั่วโลกกำลังให้ความสนใจอย่างใกล้ชิดในรอบวัน",
+        "รายงานจาก Simply Wall St. ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมพลังงานและสินค้าโภคภัณฑ์ ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
+        "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #XOM #CVX อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"Oil Supply Risks Put Phillips 66 Stock And Global Energy Majors In Focus\")"
+      ]
+    },
+    {
+      "id": "news-2",
       "title": "คาดว่าจะเพิ่มกำไร 88% ในวันที่ 28 ต.ค.: เหตุใด Vista Energy ที่ได้รับการสนับสนุนจาก Peter Thiel จึงเป็น Shale Play ยอดนิยมของ Wall Street",
       "title_en": "88% Profit Surge Expected on Oct. 28: Why Peter Thiel-Backed Vista Energy is Wall Street’s Favorite Shale Play",
       "summary": "คาดว่าจะเพิ่มกำไร 88% ในวันที่ 28 ต.ค.: เหตุใด Vista Energy ที่ได้รับการสนับสนุนจาก Peter Thiel จึงเป็น Shale Play ยอดนิยมของ Wall Street",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/88-profit-surge-expected-oct-154448383.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-25T15:44:48Z",
       "category": "EARNINGS",
       "tickers": [
@@ -19,7 +47,7 @@
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "📌 สาระสำคัญ: คาดว่าจะเพิ่มกำไร 88% ในวันที่ 28 ต.ค.: เหตุใด Vista Energy ที่ได้รับการสนับสนุนจาก Peter Thiel จึงเป็น Shale Play ยอดนิยมของ Wall Street",
         "📊 นัยสำคัญต่อตลาด: ผลการดำเนินงานหรือยอดคำสั่งซื้อเติบโตโดดเด่น หนุนมุมมองเชิงบวกของนักวิเคราะห์ต่อแนวโน้มกำไร",
@@ -32,13 +60,13 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-3",
       "title": "คำทำนาย: ตลาดหุ้นกำลังจะล่มสลาย นี่คือสิ่งที่นักลงทุนควรทำตามคำแนะนำของ Warren Buffett",
       "title_en": "Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Warren Buffett's Advice.",
       "summary": "คำทำนาย: ตลาดหุ้นกำลังจะล่มสลาย นี่คือสิ่งที่นักลงทุนควรทำตามคำแนะนำของ Warren Buffett",
       "source": "Motley Fool",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/prediction-stock-market-crash-coming-135400302.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-25T13:54:00Z",
       "category": "MACRO",
       "tickers": [
@@ -61,13 +89,13 @@
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-4",
       "title": "ทำไมวัฏจักรตลาดถัดไปของ Bitcoin อาจดูแตกต่างออกไปมาก – BloFin CEO",
       "title_en": "Why Bitcoin's Next Market Cycle May Look Very Different – BloFin CEO",
       "summary": "ทำไมวัฏจักรตลาดถัดไปของ Bitcoin อาจดูแตกต่างออกไปมาก – BloFin CEO",
       "source": "BeInCrypto",
       "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/why-bitcoins-next-market-cycle-125327671.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-25T12:53:27Z",
       "category": "MACRO",
       "tickers": [
@@ -88,13 +116,13 @@
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-5",
       "title": "เมื่อราคาน้ำมันสูงขึ้น Bitcoin ยังคงติดอยู่ต่ำกว่า 85,000 ดอลลาร์ นี่คือเหตุผลว่าทำไมฉันถึงยังซื้อ Bitcoin อยู่ตอนนี้",
       "title_en": "With Oil Prices Rising, Bitcoin Remains Stuck Below $85,000. Here's Why I'm Still Buying Bitcoin Right Now.",
       "summary": "เมื่อราคาน้ำมันสูงขึ้น Bitcoin ยังคงติดอยู่ต่ำกว่า 85,000 ดอลลาร์ นี่คือเหตุผลว่าทำไมฉันถึงยังซื้อ Bitcoin อยู่ตอนนี้",
       "source": "Motley Fool",
       "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/oil-prices-rising-bitcoin-remains-122100745.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-25T12:21:00Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -115,42 +143,13 @@
       ]
     },
     {
-      "id": "news-5",
-      "title": "Ryanair Holdings (ISE:RYA) สูงกว่ามูลค่ายุติธรรมหลังการปรับขึ้นค่าโดยสารหรือไม่",
-      "title_en": "Is Ryanair Holdings (ISE:RYA) Above Fair Value After Fare Hikes?",
-      "summary": "Ryanair Holdings (ISE:RYA) สูงกว่ามูลค่ายุติธรรมหลังการปรับขึ้นค่าโดยสารหรือไม่",
-      "source": "Simply Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/ryanair-holdings-ise-rya-above-120955994.html",
-      "time": "4 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-10-25T12:09:55Z",
-      "category": "MACRO",
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "TLT"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "📌 สาระสำคัญ: Ryanair Holdings (ISE:RYA) สูงกว่ามูลค่ายุติธรรมหลังการปรับขึ้นค่าโดยสารหรือไม่",
-        "📊 นัยสำคัญต่อตลาด: สะท้อนความไม่แน่นอนของปัจจัยเศรษฐกิจและนโยบายการเงินที่ตลาดยังคงรอดูความชัดเจนเพื่อประเมินทิศทางต่อไป",
-        "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #SPY #QQQ #TLT ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
-      ],
-      "fullArticle": [
-        "Ryanair Holdings (ISE:RYA) สูงกว่ามูลค่ายุติธรรมหลังการปรับขึ้นค่าโดยสารหรือไม่ ซึ่งเป็นหนึ่งในประเด็นสำคัญที่ตลาดการเงินและนักลงทุนทั่วโลกกำลังให้ความสนใจอย่างใกล้ชิดในรอบวัน",
-        "รายงานจาก Simply Wall St. ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมเศรษฐกิจมหภาคและนโยบายการเงิน ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
-        "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #SPY #QQQ #TLT อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"Is Ryanair Holdings (ISE:RYA) Above Fair Value After Fare Hikes?\")"
-      ]
-    },
-    {
       "id": "news-6",
       "title": "Playbook รายได้: Alphabet, Microsoft, Amazon และอื่นๆ รายงานในสัปดาห์นี้ นี่คือสิ่งที่คาดหวัง",
       "title_en": "Earnings playbook: Alphabet, Microsoft, Amazon and more report this week. Here's what to expect",
       "summary": "Megacaps คือบางส่วนของบริษัท S&P 500 จำนวน 160 แห่งที่คาดว่าจะรายงานในช่วงเวลาที่สำคัญสำหรับเทคโนโลยีและตลาด",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/10/25/earnings-week-alphabet-microsoft-amazon.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-10-25T11:54:08Z",
       "category": "TECH",
       "tickers": [
