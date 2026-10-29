@@ -38,8 +38,14 @@ if ($existing.indices) {
     }
 }
 
+$nowUtc = [DateTime]::UtcNow
+$nyTz = [TimeZoneInfo]::FindSystemTimeZoneById("Eastern Standard Time")
+$nyTime = [TimeZoneInfo]::ConvertTimeFromUtc($nowUtc, $nyTz)
+$nyMins = $nyTime.Hour * 60 + $nyTime.Minute
+$isRegularTrading = ($nyMins -ge 570 -and $nyMins -lt 960 -and $nyTime.DayOfWeek -ne 'Saturday' -and $nyTime.DayOfWeek -ne 'Sunday')
+
 $extended = @{}
-if ($existing.extended_hours) {
+if (-not $isRegularTrading -and $existing.extended_hours) {
     foreach ($prop in $existing.extended_hours.psobject.Properties) {
         $extended[$prop.Name] = $prop.Value
     }
