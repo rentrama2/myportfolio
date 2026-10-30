@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -1178,6 +1178,23 @@
             }
         }
 
+        @keyframes flashGreenAnim {
+            0% { background-color: rgba(34, 197, 94, 0.4) !important; color: #15803d !important; transform: scale(1.04); }
+            100% { background-color: #f9fafb !important; color: #3b82f6 !important; transform: scale(1); }
+        }
+        @keyframes flashRedAnim {
+            0% { background-color: rgba(239, 68, 68, 0.4) !important; color: #b91c1c !important; transform: scale(1.04); }
+            100% { background-color: #f9fafb !important; color: #3b82f6 !important; transform: scale(1); }
+        }
+        .price-flash-up {
+            animation: flashGreenAnim 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            border-color: #22c55e !important;
+        }
+        .price-flash-down {
+            animation: flashRedAnim 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            border-color: #ef4444 !important;
+        }
+
         .market-snapshot-scroller {
             display: flex;
             gap: 12px;
@@ -2306,6 +2323,83 @@
                     <div class="d-flex gap-2">
                         <button type="button" class="btn btn-primary w-100 fw-bold py-2" style="border-radius: 10px;" onclick="applySmartSync()">💾 บันทึกและปรับจูนทันที</button>
                         <button type="button" class="btn btn-light w-50 fw-bold py-2 border" style="border-radius: 10px;" data-bs-dismiss="modal">ยกเลิก</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Real-Time Live Data Source Settings -->
+    <div class="modal fade" id="realtimeSettingsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-header border-0 pb-0 px-4 pt-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge rounded-circle p-2 bg-success-subtle text-success fs-5">⚡</span>
+                        <div>
+                            <h5 class="fw-bold m-0" style="color: #111827;">ตั้งค่าราคา Real-Time สด (Live Market)</h5>
+                            <small class="text-muted">ดึงราคาตลาดสหรัฐฯ สดตรงเข้าหน้าจอเบราว์เซอร์ระดับวินาที</small>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <!-- Option 1: Finnhub API Key -->
+                    <div class="card p-3 mb-3 border-0 bg-light" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <label class="form-label fw-bold m-0 text-dark" style="font-size: 0.88rem;">
+                                🔑 Finnhub.io API Key <span class="badge bg-success-subtle text-success border border-success-subtle py-0 px-2 fw-bold" style="font-size: 0.68rem;">แนะนำ ฟรี 100%</span>
+                            </label>
+                            <a href="https://finnhub.io/register" target="_blank" rel="noopener noreferrer" class="text-primary fw-bold text-decoration-none" style="font-size: 0.75rem;">
+                                สมัครรับ Key ฟรี (10 วิ) ↗
+                            </a>
+                        </div>
+                        <p class="text-muted mb-2" style="font-size: 0.75rem; line-height: 1.35;">
+                            ดึงราคาหุ้นสหรัฐฯ สดตรงจากตลาด (BATS Exchange) โดยตรง ไม่ผ่าน Proxy ฟรี 60 ครั้ง/นาที ไม่ต้องใส่บัตรเครดิต
+                        </p>
+                        <div class="input-group input-group-sm">
+                            <input type="password" id="inputFinnhubApiKey" class="form-control fw-bold font-monospace" placeholder="วาง Finnhub API Key เช่น c123abc456..." style="border-radius: 8px 0 0 8px;">
+                            <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility('inputFinnhubApiKey')">👁️</button>
+                        </div>
+                    </div>
+
+                    <!-- Option 2: Custom Cloudflare Worker Proxy -->
+                    <div class="card p-3 mb-3 border-0 bg-light" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <label class="form-label fw-bold m-0 text-dark" style="font-size: 0.88rem;">
+                                🌐 Custom Proxy / Cloudflare Worker
+                            </label>
+                            <span class="badge bg-secondary-subtle text-secondary py-0 px-2 fw-normal" style="font-size: 0.68rem;">ทางเลือกเสริม</span>
+                        </div>
+                        <p class="text-muted mb-2" style="font-size: 0.75rem; line-height: 1.35;">
+                            ใส่ URL ของ Cloudflare Worker ส่วนตัวเพื่อดึง Yahoo Finance สดพร้อมข้อมูล Pre/Post Market (ดูโค้ดที่ <code>scripts/cloudflare_worker_proxy.js</code>)
+                        </p>
+                        <input type="text" id="inputCustomProxyUrl" class="form-control form-control-sm fw-bold" placeholder="เช่น https://my-stock-proxy.workers.dev" style="border-radius: 8px;">
+                    </div>
+
+                    <!-- Polling Frequency -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-muted mb-1" style="font-size: 0.82rem;">ความถี่ในการรีเฟรชขณะเปิดหน้าจอ (Polling Interval)</label>
+                        <select id="selectRealtimeFreq" class="form-select form-select-sm fw-bold" style="border-radius: 8px;">
+                            <option value="15">🟢 15 วินาที (Live Fast - กะพริบสดทันที)</option>
+                            <option value="30" selected>🟢 30 วินาที (Live มาตรฐาน - แนะนำ)</option>
+                            <option value="60">⚡ 1 นาที (Auto-refresh)</option>
+                            <option value="180">⚡ 3 นาที</option>
+                            <option value="300">⚡ 5 นาที</option>
+                            <option value="0">⏸️ ปิด Auto-Refresh (กดมือเอง)</option>
+                        </select>
+                    </div>
+
+                    <!-- Live Test Result Box -->
+                    <div id="realtimeTestResult" class="p-2.5 rounded-3 mb-3" style="display: none; font-size: 0.8rem;"></div>
+
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-outline-primary btn-sm flex-fill fw-bold rounded-3 py-2" onclick="testRealtimeConnection()">
+                            🧪 ทดสอบเชื่อมต่อ (Test)
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm flex-fill fw-bold rounded-3 py-2" onclick="saveRealtimeSettings()">
+                            💾 บันทึกการตั้งค่า
+                        </button>
                     </div>
                 </div>
             </div>
@@ -4169,12 +4263,16 @@
                     <button id="btnAutoRefreshToggle" class="btn btn-sm btn-outline-secondary py-0 px-2 rounded-pill fw-bold dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.72rem;">
                         ⚡ Auto: ปิด
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="font-size: 0.8rem; border-radius: 10px; min-width: 190px;">
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="font-size: 0.8rem; border-radius: 10px; min-width: 215px;">
                         <li><h6 class="dropdown-header py-1 text-muted" style="font-size: 0.7rem;">⚡ รีเฟรชราคาอัตโนมัติ (Live Polling)</h6></li>
-                        <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(0)">⚪ ปิด Auto-Refresh (ดึงเอง)</a></li>
-                        <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(60)">⚡ ทุก 1 นาที (Real-time)</a></li>
+                        <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(0)">⏸️ ปิด Auto-Refresh (กดมือเอง)</a></li>
+                        <li><a class="dropdown-item py-1 fw-bold text-success" href="javascript:void(0)" onclick="setAutoRefreshInterval(15)"><span class="live-pulse-dot me-1"></span> ทุก 15 วินาที (Live Fast)</a></li>
+                        <li><a class="dropdown-item py-1 fw-bold text-success" href="javascript:void(0)" onclick="setAutoRefreshInterval(30)"><span class="live-pulse-dot me-1"></span> ทุก 30 วินาที (Live แนะนำ)</a></li>
+                        <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(60)">⚡ ทุก 1 นาที</a></li>
                         <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(180)">⚡ ทุก 3 นาที</a></li>
                         <li><a class="dropdown-item py-1" href="javascript:void(0)" onclick="setAutoRefreshInterval(300)">⚡ ทุก 5 นาที</a></li>
+                        <li><hr class="dropdown-divider my-1"></li>
+                        <li><a class="dropdown-item py-1 text-primary fw-bold" href="javascript:void(0)" onclick="openRealtimeSettingsModal()">⚙️ ตั้งค่า Live Data (Finnhub / Proxy)...</a></li>
                     </ul>
                 </div>
             </div>
@@ -9990,21 +10088,313 @@
             }
         };
 
-        // --- ระบบ Auto-Refresh ดึงราคาอัตโนมัติตามรอบเวลา ---
+        // --- REAL-TIME LIVE MARKET ENGINE & AUTO-REFRESH ---
         let autoRefreshTimer = null;
-        let autoRefreshIntervalSec = parseInt(localStorage.getItem('myAutoRefreshInterval') || '0', 10);
+        let autoRefreshIntervalSec = parseInt(localStorage.getItem('myAutoRefreshInterval') || '30', 10);
+        let isPollingLivePrices = false;
+
+        window.togglePasswordVisibility = function(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.type = el.type === 'password' ? 'text' : 'password';
+        };
+
+        window.openRealtimeSettingsModal = function() {
+            const fhKey = localStorage.getItem('myFinnhubApiKey') || '';
+            const customProxy = localStorage.getItem('myCustomProxyUrl') || '';
+            const interval = localStorage.getItem('myAutoRefreshInterval') || '30';
+
+            const fhInput = document.getElementById('inputFinnhubApiKey');
+            const proxyInput = document.getElementById('inputCustomProxyUrl');
+            const freqSelect = document.getElementById('selectRealtimeFreq');
+            const resBox = document.getElementById('realtimeTestResult');
+
+            if (fhInput) fhInput.value = fhKey;
+            if (proxyInput) proxyInput.value = customProxy;
+            if (freqSelect) freqSelect.value = interval;
+            if (resBox) {
+                resBox.style.display = 'none';
+                resBox.innerHTML = '';
+            }
+
+            const modalEl = document.getElementById('realtimeSettingsModal');
+            if (modalEl) {
+                const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+                modal.show();
+            }
+        };
+
+        window.saveRealtimeSettings = function() {
+            const fhKey = (document.getElementById('inputFinnhubApiKey')?.value || '').trim();
+            const customProxy = (document.getElementById('inputCustomProxyUrl')?.value || '').trim();
+            const interval = parseInt(document.getElementById('selectRealtimeFreq')?.value || '30', 10);
+
+            localStorage.setItem('myFinnhubApiKey', fhKey);
+            localStorage.setItem('myCustomProxyUrl', customProxy);
+            setAutoRefreshInterval(interval);
+
+            const modalEl = document.getElementById('realtimeSettingsModal');
+            if (modalEl) {
+                const modal = bootstrap.Modal.getInstance(modalEl);
+                if (modal) modal.hide();
+            }
+
+            if (typeof showNotification === 'function') {
+                showNotification('บันทึกการตั้งค่า Real-Time สำเร็จแล้ว!');
+            }
+            
+            if (interval > 0 && typeof pollLivePortfolioPrices === 'function') {
+                pollLivePortfolioPrices(true);
+            }
+        };
+
+        window.testRealtimeConnection = async function() {
+            const fhKey = (document.getElementById('inputFinnhubApiKey')?.value || '').trim();
+            const customProxy = (document.getElementById('inputCustomProxyUrl')?.value || '').trim();
+            const resBox = document.getElementById('realtimeTestResult');
+            if (!resBox) return;
+
+            resBox.style.display = 'block';
+            resBox.className = 'p-2.5 rounded-3 mb-3 bg-light border text-muted';
+            resBox.innerHTML = '<div class="spinner-border spinner-border-sm me-2 text-primary" role="status"></div> กำลังทดสอบยิงดึงราคา NVDA...';
+
+            const t0 = performance.now();
+            let testPrice = null;
+            let sourceUsed = '';
+
+            // 1. Test Finnhub if key provided
+            if (fhKey) {
+                try {
+                    const res = await fetchWithTimeout(`https://finnhub.io/api/v1/quote?symbol=NVDA&token=${fhKey}`, {}, 4000);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data && typeof data.c === 'number' && data.c > 0) {
+                            testPrice = data.c;
+                            sourceUsed = 'Finnhub.io (Direct CORS)';
+                        }
+                    }
+                } catch(e) {}
+            }
+
+            // 2. Test Custom Proxy if provided
+            if (!testPrice && customProxy) {
+                try {
+                    let pUrl = customProxy;
+                    if (pUrl.includes('{symbol}')) pUrl = pUrl.replace('{symbol}', 'NVDA');
+                    else if (pUrl.endsWith('/')) pUrl = `${pUrl}NVDA`;
+                    else if (pUrl.includes('?')) pUrl = `${pUrl}&symbol=NVDA`;
+                    else pUrl = `${pUrl}?symbol=NVDA`;
+
+                    const res = await fetchWithTimeout(pUrl, {}, 4000);
+                    if (res.ok) {
+                        const data = await res.json();
+                        const meta = (data.chart && data.chart.result && data.chart.result[0]) ? data.chart.result[0].meta : data;
+                        const p = meta.regularMarketPrice || meta.c || meta.price;
+                        if (p) {
+                            testPrice = p;
+                            sourceUsed = 'Custom Proxy / Cloudflare Worker';
+                        }
+                    }
+                } catch(e) {}
+            }
+
+            // 3. Fallback to existing fetchStockPrice
+            if (!testPrice) {
+                try {
+                    const p = await fetchStockPrice('NVDA', true);
+                    if (p) {
+                        testPrice = p;
+                        sourceUsed = 'Yahoo Finance (Proxy Fallback)';
+                    }
+                } catch(e) {}
+            }
+
+            const latency = Math.round(performance.now() - t0);
+
+            if (testPrice) {
+                resBox.className = 'p-2.5 rounded-3 mb-3 bg-success-subtle text-success border border-success-subtle fw-bold';
+                resBox.innerHTML = `✅ เชื่อมต่อสำเร็จ! ราคา NVDA ล่าสุด: <strong>$${Number(testPrice).toFixed(2)}</strong> (${latency}ms) [${sourceUsed}]`;
+            } else {
+                resBox.className = 'p-2.5 rounded-3 mb-3 bg-danger-subtle text-danger border border-danger-subtle fw-bold';
+                resBox.innerHTML = `❌ ไม่สามารถเชื่อมต่อได้โดยตรง กรุณาตรวจสอบ API Key หรือ Worker URL (ระบบจะใช้ราคาสำรองจาก GitHub อัตโนมัติ)`;
+            }
+        };
+
+        window.fetchLiveStockQuote = async function(ticker) {
+            if (!ticker || ticker === 'CASH') return null;
+            const cleanSym = ticker.trim().toUpperCase().replace(/\s+/g, '');
+            const yahooSym = cleanSym.replace('.', '-');
+
+            // 1. Finnhub (Direct Browser CORS)
+            const fhKey = (localStorage.getItem('myFinnhubApiKey') || '').trim();
+            if (fhKey) {
+                try {
+                    const res = await fetchWithTimeout(`https://finnhub.io/api/v1/quote?symbol=${cleanSym}&token=${fhKey}`, {}, 3200);
+                    if (res.ok) {
+                        const d = await res.json();
+                        if (d && typeof d.c === 'number' && d.c > 0) {
+                            return {
+                                price: Number(d.c.toFixed(2)),
+                                change: Number(d.d?.toFixed(2) || 0),
+                                changePct: Number(d.dp?.toFixed(2) || 0),
+                                prevClose: Number(d.pc?.toFixed(2) || d.c.toFixed(2)),
+                                high: d.h,
+                                low: d.l,
+                                source: 'finnhub'
+                            };
+                        }
+                    }
+                } catch(e) {}
+            }
+
+            // 2. Custom Proxy / Cloudflare Worker
+            const customProxy = (localStorage.getItem('myCustomProxyUrl') || '').trim();
+            if (customProxy) {
+                try {
+                    let pUrl = customProxy;
+                    if (pUrl.includes('{symbol}')) pUrl = pUrl.replace('{symbol}', yahooSym);
+                    else if (pUrl.endsWith('/')) pUrl = `${pUrl}${yahooSym}`;
+                    else if (pUrl.includes('?')) pUrl = `${pUrl}&symbol=${yahooSym}`;
+                    else pUrl = `${pUrl}?symbol=${yahooSym}`;
+
+                    const res = await fetchWithTimeout(pUrl, {}, 3500);
+                    if (res.ok) {
+                        const d = await res.json();
+                        const meta = (d.chart && d.chart.result && d.chart.result[0]) ? d.chart.result[0].meta : d;
+                        const p = meta.regularMarketPrice || meta.c || meta.price;
+                        if (p && typeof p === 'number') {
+                            const prev = meta.chartPreviousClose || meta.previousClose || meta.pc || p;
+                            return {
+                                price: Number(p.toFixed(2)),
+                                change: Number((p - prev).toFixed(2)),
+                                changePct: prev > 0 ? Number((((p - prev) / prev) * 100).toFixed(2)) : 0,
+                                prevClose: Number(prev.toFixed(2)),
+                                source: 'custom_proxy'
+                            };
+                        }
+                    }
+                } catch(e) {}
+            }
+
+            // 3. Fallback to existing fetchStockPrice
+            try {
+                const livePrice = await fetchStockPrice(ticker, true);
+                if (livePrice && typeof livePrice === 'number' && livePrice > 0) {
+                    return {
+                        price: Number(livePrice.toFixed(2)),
+                        source: 'yahoo_proxy'
+                    };
+                }
+            } catch(e) {}
+
+            return null;
+        };
+
+        window.triggerPriceFlashAnimations = function(priceChanges) {
+            if (!priceChanges || Object.keys(priceChanges).length === 0) return;
+            requestAnimationFrame(() => {
+                for (const [ticker, info] of Object.entries(priceChanges)) {
+                    const normTk = ticker.replace('.', '-');
+                    const inputEl = document.getElementById(`priceInput_${ticker}`) || 
+                                    document.getElementById(`priceInput_${normTk}`);
+                    if (inputEl) {
+                        const animClass = info.diff >= 0 ? 'price-flash-up' : 'price-flash-down';
+                        inputEl.classList.remove('price-flash-up', 'price-flash-down');
+                        void inputEl.offsetWidth; // trigger DOM reflow
+                        inputEl.classList.add(animClass);
+                        setTimeout(() => inputEl.classList.remove(animClass), 1300);
+                    }
+                }
+            });
+        };
+
+        window.pollLivePortfolioPrices = async function(isManual = false) {
+            if (isPollingLivePrices) return 0;
+            isPollingLivePrices = true;
+
+            try {
+                // Get unique active tickers in user transactions
+                const holdingTickers = [...new Set((transactions || []).map(t => t.ticker).filter(t => t && t !== 'CASH'))];
+                if (holdingTickers.length === 0) return 0;
+
+                let updatedCount = 0;
+                const priceChanges = {};
+
+                // Batch fetch holding tickers (batches of 4 to keep network light and smooth)
+                const batchSize = 4;
+                for (let i = 0; i < holdingTickers.length; i += batchSize) {
+                    const batch = holdingTickers.slice(i, i + batchSize);
+                    await Promise.all(batch.map(async (tk) => {
+                        try {
+                            const quote = await window.fetchLiveStockQuote(tk);
+                            if (quote && quote.price && typeof quote.price === 'number' && quote.price > 0) {
+                                const oldPrice = marketPrices[tk];
+                                if (oldPrice && Math.abs(quote.price - oldPrice) > 0.0001) {
+                                    priceChanges[tk] = {
+                                        oldPrice,
+                                        newPrice: quote.price,
+                                        diff: quote.price - oldPrice
+                                    };
+                                }
+                                marketPrices[tk] = quote.price;
+                                if (tk.includes('-')) marketPrices[tk.replace('-', '.')] = quote.price;
+                                if (tk.includes('.')) marketPrices[tk.replace('.', '-')] = quote.price;
+                                updatedCount++;
+                            }
+                        } catch(e) {}
+                    }));
+                }
+
+                if (updatedCount > 0) {
+                    const nowStr = new Date().toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' น. (Live)';
+                    lastPricesSyncTime = nowStr;
+                    localStorage.setItem('myPortfolioPrices', JSON.stringify(marketPrices));
+
+                    if (typeof updateSummaryAndChart === 'function') updateSummaryAndChart();
+                    if (typeof renderHoldingsTable === 'function') renderHoldingsTable();
+                    else if (typeof renderTable === 'function') renderTable();
+
+                    window.triggerPriceFlashAnimations(priceChanges);
+
+                    const timeEl = document.getElementById('marketIndicesTime');
+                    if (timeEl) {
+                        timeEl.innerHTML = `<span class="live-pulse-dot me-1"></span> อัปเดตสด ${nowStr}`;
+                    }
+
+                    if (isManual && typeof showNotification === 'function') {
+                        showNotification(`อัปเดตราคาตลาดสด Real-Time เรียบร้อย (${updatedCount} ตัว)`);
+                    }
+                }
+
+                return updatedCount;
+            } finally {
+                isPollingLivePrices = false;
+            }
+        };
 
         window.setAutoRefreshInterval = function(seconds) {
             autoRefreshIntervalSec = seconds;
             localStorage.setItem('myAutoRefreshInterval', seconds);
             updateAutoRefreshUI();
             startAutoRefreshTimer();
+            if (seconds > 0) {
+                if (typeof showNotification === 'function') {
+                    showNotification('เปิด Real-time Polling: อัปเดตราคาทุก ' + (seconds >= 60 ? (seconds/60) + ' นาที' : seconds + ' วินาที'));
+                }
+                window.pollLivePortfolioPrices(false);
+            }
         };
 
         window.updateAutoRefreshUI = function() {
             const btn = document.getElementById('btnAutoRefreshToggle');
             if (!btn) return;
-            if (autoRefreshIntervalSec === 60) {
+            if (autoRefreshIntervalSec === 15) {
+                btn.innerHTML = '<span class="live-pulse-dot me-1"></span> Live: 15 วิ';
+                btn.className = 'btn btn-sm btn-success py-0 px-2 rounded-pill fw-bold dropdown-toggle shadow-sm';
+            } else if (autoRefreshIntervalSec === 30) {
+                btn.innerHTML = '<span class="live-pulse-dot me-1"></span> Live: 30 วิ';
+                btn.className = 'btn btn-sm btn-success py-0 px-2 rounded-pill fw-bold dropdown-toggle shadow-sm';
+            } else if (autoRefreshIntervalSec === 60) {
                 btn.innerHTML = '⚡ Auto: 1 นาที';
                 btn.className = 'btn btn-sm btn-success py-0 px-2 rounded-pill fw-bold dropdown-toggle';
             } else if (autoRefreshIntervalSec === 180) {
@@ -10025,9 +10415,13 @@
                 autoRefreshTimer = null;
             }
             if (autoRefreshIntervalSec > 0) {
-                autoRefreshTimer = setInterval(() => {
-                    if (!document.hidden && typeof window.updateAllPricesAndFx === 'function') {
-                        window.updateAllPricesAndFx(false);
+                autoRefreshTimer = setInterval(async () => {
+                    if (!document.hidden) {
+                        if (autoRefreshIntervalSec <= 30 && typeof window.pollLivePortfolioPrices === 'function') {
+                            await window.pollLivePortfolioPrices(false);
+                        } else if (typeof window.updateAllPricesAndFx === 'function') {
+                            window.updateAllPricesAndFx(false);
+                        }
                     }
                 }, autoRefreshIntervalSec * 1000);
             }
@@ -10142,9 +10536,13 @@
                     }
                 } catch(e) {}
 
-                // 2. ดึงราคาหุ้นและดัชนีล่าสุด (Static Prices & Indices from GitHub Raw / Cache bypass)
+                // 2. ดึงราคาหุ้นและดัชนีล่าสุด (Static Prices from GitHub + Live In-Browser Polling)
                 try {
                     const staticRes = await loadStaticPrices();
+                    if (typeof pollLivePortfolioPrices === 'function') {
+                        const liveCount = await pollLivePortfolioPrices(isManual);
+                        if (liveCount > 0) updatedCount += liveCount;
+                    }
                     if (staticRes && staticRes.count > 0) {
                         updatedCount += staticRes.count;
                     }
