@@ -4874,25 +4874,77 @@
                                     <div id="chartTooltip" style="display: none; position: absolute; pointer-events: none; z-index: 20; background: rgba(15, 23, 42, 0.95); border: 1px solid #334155; border-radius: 8px; padding: 6px 10px; font-size: 0.72rem; color: #f8fafc; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.5);"></div>
                                 </div>
 
-                                <!-- Support, Resistance & Stop Loss Cards -->
+                                <!-- Support, Resistance & Stop Loss Cards (Multi-Level) -->
                                 <div class="row g-2 mt-2">
                                     <div class="col-4">
                                         <div class="p-2 text-center rounded-3 tech-metric-support">
-                                            <div class="tech-metric-title">แนวรับ (Support)</div>
-                                            <div class="fw-bold text-success" id="valSupportLevel" style="font-size: 0.88rem;">$218.40</div>
+                                            <div class="tech-metric-title">แนวรับ (S1 / S2)</div>
+                                            <div class="fw-bold text-success text-truncate" id="valSupportLevel" style="font-size: 0.80rem;">$0.00 / $0.00</div>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="p-2 text-center rounded-3 tech-metric-resistance">
-                                            <div class="tech-metric-title">แนวต้าน (Resistance)</div>
-                                            <div class="fw-bold text-danger" id="valResistanceLevel" style="font-size: 0.88rem;">$238.50</div>
+                                            <div class="tech-metric-title">แนวต้าน (R1 / R2)</div>
+                                            <div class="fw-bold text-danger text-truncate" id="valResistanceLevel" style="font-size: 0.80rem;">$0.00 / $0.00</div>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="p-2 text-center rounded-3 tech-metric-sl">
-                                            <div class="tech-metric-title">จุดตัดขาดทุน (SL)</div>
-                                            <div class="fw-bold text-warning-emphasis" id="valStopLossLevel" style="font-size: 0.88rem;">$212.00</div>
+                                            <div class="tech-metric-title">SL / TP (R:R)</div>
+                                            <div class="fw-bold text-warning-emphasis text-truncate" id="valStopLossLevel" style="font-size: 0.80rem;">$0.00 / 1:1.5</div>
                                         </div>
+                                    </div>
+                                </div>
+
+                                <!-- Detailed Price Structure & Trade Plan Table (ตามรูปแบบที่แนะนำ) -->
+                                <div class="card mt-2.5 border-0 shadow-2xs rounded-3 overflow-hidden" style="background: var(--bs-card-bg, #ffffff); border: 1px solid var(--bs-border-color, rgba(0,0,0,0.08)) !important;">
+                                    <div class="d-flex align-items-center justify-content-between p-2 px-3 bg-light-subtle border-bottom">
+                                        <span class="fw-bold" style="font-size: 0.75rem;">📊 โครงสร้างกรอบราคา & แผนเทรด (Price Structure)</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill px-2 py-0.5" style="font-size: 0.65rem;" id="valTechAtrBadge">ATR 14: $0.00</span>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-hover align-middle mb-0" style="font-size: 0.74rem;">
+                                            <thead class="table-light text-muted" style="font-size: 0.68rem;">
+                                                <tr>
+                                                    <th class="ps-3 py-1 fw-bold">รายการ</th>
+                                                    <th class="text-end pe-3 py-1 fw-bold">ราคา</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-muted ps-3 py-1.5 fw-medium">ราคาปัจจุบัน</td>
+                                                    <td class="text-end pe-3 py-1.5 fw-bold" id="tblValCurPrice">$0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ps-3 py-1.5 text-danger fw-semibold">แนวต้าน R2 <small class="text-muted fw-normal">(Major High 50 แท่ง)</small></td>
+                                                    <td class="text-end pe-3 py-1.5 fw-bold text-danger" id="tblValR2">$0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ps-3 py-1.5 text-danger fw-semibold">แนวต้าน R1 <small class="text-muted fw-normal">(Short-Term 20 แท่ง)</small></td>
+                                                    <td class="text-end pe-3 py-1.5 fw-bold text-danger" id="tblValR1">$0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ps-3 py-1.5 text-success fw-semibold">แนวรับ S1 <small class="text-muted fw-normal">(Short-Term 20 แท่ง)</small></td>
+                                                    <td class="text-end pe-3 py-1.5 fw-bold text-success" id="tblValS1">$0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ps-3 py-1.5 text-success fw-semibold">แนวรับ S2 <small class="text-muted fw-normal">(Major Base 50 แท่ง)</small></td>
+                                                    <td class="text-end pe-3 py-1.5 fw-bold text-success" id="tblValS2">$0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ps-3 py-1.5 text-warning-emphasis fw-semibold">Stop Loss <small class="text-muted fw-normal">(S1 - 1.0×ATR)</small></td>
+                                                    <td class="text-end pe-3 py-1.5 fw-bold text-warning-emphasis" id="tblValSL">$0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ps-3 py-1.5 text-info-emphasis fw-semibold">Take Profit <small class="text-muted fw-normal">(เป้า R2 / R:R ≥ 1:1.5)</small></td>
+                                                    <td class="text-end pe-3 py-1.5 fw-bold text-info-emphasis" id="tblValTP">$0.00</td>
+                                                </tr>
+                                                <tr class="table-light">
+                                                    <td class="text-muted ps-3 py-1.5 fw-medium">Risk / Reward</td>
+                                                    <td class="text-end pe-3 py-1.5 fw-bold text-primary" id="tblValRR">1:1.5</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
 
@@ -16089,7 +16141,7 @@
                 return x - Math.floor(x);
             }
 
-            let count = (tf === '1D') ? 24 : (tf === '1W' ? 30 : (tf === '1M' ? 35 : (tf === '3M' ? 40 : 45)));
+            let count = (tf === '1D') ? 30 : (tf === '1W' ? 40 : (tf === '1M' ? 50 : (tf === '3M' ? 55 : 60)));
             let candles = [];
             let priceWalk = curPrice;
             let walkHistory = [];
@@ -16141,13 +16193,78 @@
             let ema50 = calcEMA(35);
             let ema200 = calcEMA(50);
 
-            let recentBars = candles.slice(-15);
-            let lows = recentBars.map(c => c.low);
-            let highs = recentBars.map(c => c.high);
-            let support = Math.min(...lows);
-            let resistance = Math.max(...highs);
-            let stopLoss = Number((support * 0.965).toFixed(2));
-            let targetTP = Number((resistance * 1.055).toFixed(2));
+            // 1. คำนวณ ATR 14 (Average True Range) เพื่อวัดความผันผวนจริง
+            let trArr = [];
+            for (let i = 0; i < candles.length; i++) {
+                if (i === 0) {
+                    trArr.push(candles[i].high - candles[i].low);
+                } else {
+                    let hl = candles[i].high - candles[i].low;
+                    let hc = Math.abs(candles[i].high - candles[i - 1].close);
+                    let lc = Math.abs(candles[i].low - candles[i - 1].close);
+                    trArr.push(Math.max(hl, hc, lc));
+                }
+            }
+            let atrPeriod = Math.min(14, candles.length);
+            let recentTR = trArr.slice(-atrPeriod);
+            let atr14 = Number((recentTR.reduce((a, b) => a + b, 0) / atrPeriod).toFixed(2));
+            if (atr14 <= 0) atr14 = Number((curPrice * 0.025).toFixed(2));
+
+            // 2. แยกแนวรับ-แนวต้านเป็น 2 ระดับ: Short-term (20 แท่ง) vs Medium/Long-term (50 แท่ง)
+            let shortBars = candles.slice(-20);
+            let rawS1 = Math.min(...shortBars.map(c => c.low));
+            let rawR1 = Math.max(...shortBars.map(c => c.high));
+
+            let allLows = candles.map(c => c.low);
+            let allHighs = candles.map(c => c.high);
+            let rawS2 = Math.min(...allLows);
+            let rawR2 = Math.max(...allHighs);
+
+            // ปรับระดับราคาให้สมเหตุสมผลเทียบกับราคาปัจจุบัน
+            let s1 = (rawS1 < curPrice) ? rawS1 : Number((curPrice - (1.1 * atr14)).toFixed(2));
+            let s2 = (rawS2 < s1) ? rawS2 : Number((s1 - (1.4 * atr14)).toFixed(2));
+            let r1 = (rawR1 > curPrice) ? rawR1 : Number((curPrice + (1.1 * atr14)).toFixed(2));
+            let r2 = (rawR2 > r1) ? rawR2 : Number((r1 + (1.4 * atr14)).toFixed(2));
+
+            // ตบแต่งระดับจิตวิทยา Round Numbers
+            function roundPsych(val) {
+                let round5 = Math.round(val / 5) * 5;
+                if (Math.abs(val - round5) / val < 0.007) return round5;
+                let round1 = Math.round(val);
+                if (Math.abs(val - round1) / val < 0.003) return round1;
+                return val;
+            }
+            s1 = roundPsych(s1);
+            s2 = roundPsych(s2);
+            r1 = roundPsych(r1);
+            r2 = roundPsych(r2);
+
+            // 3. Stop Loss: คำนวณจาก ATR และแนวรับโครงสร้าง S1 (วางใต้ S1 ลบระยะ Buffer เพื่อกัน Noise)
+            let stopLoss = Number((s1 - (0.90 * atr14)).toFixed(2));
+            if (stopLoss >= curPrice) {
+                stopLoss = Number((curPrice - (1.5 * atr14)).toFixed(2));
+            }
+
+            // 4. Take Profit: กำหนดจาก Risk/Reward อิงเป้าหมายแนวต้าน R2 (อย่างน้อย 1:1.5)
+            let risk = curPrice - stopLoss;
+            if (risk <= 0) risk = curPrice * 0.025;
+
+            let minReward = risk * 1.5;
+            let targetTP = r2;
+            if (targetTP <= curPrice || (targetTP - curPrice) < minReward) {
+                targetTP = Number((curPrice + minReward).toFixed(2));
+            }
+
+            let actualReward = targetTP - curPrice;
+            let rrRatio = actualReward / risk;
+            if (rrRatio < 1.0) {
+                targetTP = Number((curPrice + risk * 1.5).toFixed(2));
+                actualReward = targetTP - curPrice;
+                rrRatio = 1.5;
+            }
+            let riskReward = '1:' + rrRatio.toFixed(1);
+            let support = s1;
+            let resistance = r1;
 
             let scores = {};
             if (rankedItem) {
@@ -16203,8 +16320,14 @@
                 ema20,
                 ema50,
                 ema200,
-                support: Number(support.toFixed(2)),
-                resistance: Number(resistance.toFixed(2)),
+                support: Number(s1.toFixed(2)),
+                resistance: Number(r1.toFixed(2)),
+                s1: Number(s1.toFixed(2)),
+                s2: Number(s2.toFixed(2)),
+                r1: Number(r1.toFixed(2)),
+                r2: Number(r2.toFixed(2)),
+                atr14: Number(atr14.toFixed(2)),
+                riskReward,
                 stopLoss,
                 targetTP,
                 scores
@@ -16280,23 +16403,50 @@
             const elSup = document.getElementById('valSupportLevel');
             const elRes = document.getElementById('valResistanceLevel');
             const elSL = document.getElementById('valStopLossLevel');
-            if (elSup) elSup.innerText = `$${data.support.toFixed(2)}`;
-            if (elRes) elRes.innerText = `$${data.resistance.toFixed(2)}`;
-            if (elSL) elSL.innerText = `$${data.stopLoss.toFixed(2)}`;
+            if (elSup) elSup.innerHTML = `S1: $${(data.s1 || data.support).toFixed(2)} <span class="text-muted fw-normal" style="font-size:0.70rem;">| S2: $${(data.s2 || data.support).toFixed(2)}</span>`;
+            if (elRes) elRes.innerHTML = `R1: $${(data.r1 || data.resistance).toFixed(2)} <span class="text-muted fw-normal" style="font-size:0.70rem;">| R2: $${(data.r2 || data.resistance).toFixed(2)}</span>`;
+            if (elSL) elSL.innerHTML = `SL: $${data.stopLoss.toFixed(2)} <span class="text-muted fw-normal" style="font-size:0.70rem;">| TP: $${data.targetTP.toFixed(2)}</span>`;
+
+            // Populate Detailed Price Structure & Trade Plan Table
+            const elTblCur = document.getElementById('tblValCurPrice');
+            const elTblR2 = document.getElementById('tblValR2');
+            const elTblR1 = document.getElementById('tblValR1');
+            const elTblS1 = document.getElementById('tblValS1');
+            const elTblS2 = document.getElementById('tblValS2');
+            const elTblSL = document.getElementById('tblValSL');
+            const elTblTP = document.getElementById('tblValTP');
+            const elTblRR = document.getElementById('tblValRR');
+            const elAtrBadge = document.getElementById('valTechAtrBadge');
+
+            if (elTblCur) elTblCur.innerText = `$${data.price.toFixed(2)}`;
+            if (elTblR2) elTblR2.innerText = `$${(data.r2 || data.resistance).toFixed(2)}`;
+            if (elTblR1) elTblR1.innerText = `$${(data.r1 || data.resistance).toFixed(2)}`;
+            if (elTblS1) elTblS1.innerText = `$${(data.s1 || data.support).toFixed(2)}`;
+            if (elTblS2) elTblS2.innerText = `$${(data.s2 || data.support).toFixed(2)}`;
+            if (elTblSL) elTblSL.innerText = `$${data.stopLoss.toFixed(2)}`;
+            if (elTblTP) elTblTP.innerText = `$${data.targetTP.toFixed(2)}`;
+            if (elTblRR) elTblRR.innerText = data.riskReward || '1:1.5';
+            if (elAtrBadge) elAtrBadge.innerText = `ATR 14: $${(data.atr14 || 0).toFixed(2)}`;
 
             const elInsight = document.getElementById('techChartInsight');
             if (elInsight) {
+                let s1Val = (data.s1 || data.support).toFixed(2);
+                let s2Val = (data.s2 || data.support).toFixed(2);
+                let r1Val = (data.r1 || data.resistance).toFixed(2);
+                let r2Val = (data.r2 || data.resistance).toFixed(2);
+                let atrVal = (data.atr14 || 0).toFixed(2);
+                let rrVal = data.riskReward || '1:1.5';
+
                 let msg = '';
                 if (data.signal === 'BUY') {
-                    msg = `<strong>กลยุทธ์:</strong> ราคายืนเหนือ EMA 20 & EMA 50 โมเมนตัมขาขึ้นแข็งแกร่ง แนะนำถือต่อและรอซื้อเพิ่มบริเวณแนวรับ $${data.support.toFixed(2)}`;
+                    msg = `<strong>กลยุทธ์:</strong> โมเมนตัมขาขึ้นยืนเหนือ EMA มองกรอบต้านสั้น R1 ($${r1Val}) และต้านหลัก R2 ($${r2Val}) รับแรก S1 ($${s1Val}) โดยวาง Stop Loss ที่ $${data.stopLoss.toFixed(2)} (อิง ATR 14: $${atrVal}) ได้อัตราส่วน Risk/Reward คุ้มค่าที่ ${rrVal}`;
                 } else if (data.signal === 'SELL') {
-                    msg = `<strong>กลยุทธ์:</strong> ราคาหลุดต่ำกว่าเส้น EMA แนะนำทยอยลดพอร์ต หรือตั้งจุดตัดขาดทุนที่ $${data.stopLoss.toFixed(2)}`;
+                    msg = `<strong>กลยุทธ์:</strong> ราคาอ่อนแอกว่าเส้นเฉลี่ย ระวังการหลุดแนวรับ S1 ($${s1Val}) ลงไปหา S2 ($${s2Val}) แนะนำทยอยทำกำไรหรือตัดขาดทุนที่ $${data.stopLoss.toFixed(2)}`;
                 } else {
-                    msg = `<strong>กลยุทธ์:</strong> ราคาวิ่งไซด์เวย์ในกรอบ $${data.support.toFixed(2)} - $${data.resistance.toFixed(2)} รอทะลุกรอบก่อนเข้าสะสม`;
+                    msg = `<strong>กลยุทธ์:</strong> ราคาวิ่งสะสมกำลังในกรอบ S1 ($${s1Val}) ถึง R1 ($${r1Val}) แนะนำรอ Breakout ทะลุ R1 ก่อน Follow Buy หรือตั้งรับใกล้ S1 วางจุด Cut Loss ที่ $${data.stopLoss.toFixed(2)}`;
                 }
                 elInsight.innerHTML = msg;
             }
-
             drawCandlestickCanvas();
         };
 
@@ -16342,8 +16492,8 @@
             let minP = Math.min(...candles.map(c => c.low));
             let maxP = Math.max(...candles.map(c => c.high));
             if (techLayers.sr) {
-                minP = Math.min(minP, activeCandleData.stopLoss, activeCandleData.support);
-                maxP = Math.max(maxP, activeCandleData.resistance);
+                minP = Math.min(minP, activeCandleData.stopLoss, activeCandleData.s2 || activeCandleData.support);
+                maxP = Math.max(maxP, activeCandleData.targetTP, activeCandleData.r2 || activeCandleData.resistance);
             }
             const range = maxP - minP || 1;
             const minBound = minP - range * 0.05;
@@ -16374,34 +16524,71 @@
             }
 
             if (techLayers.sr) {
-                let ySup = getY(activeCandleData.support);
+                // R2: Major Resistance
+                let r2Val = activeCandleData.r2 || activeCandleData.resistance;
+                let yR2 = getY(r2Val);
                 ctx.save();
-                ctx.strokeStyle = '#10b981';
-                ctx.lineWidth = 1.2;
+                ctx.strokeStyle = '#f87171';
+                ctx.lineWidth = 1.0;
                 ctx.setLineDash([4, 4]);
                 ctx.beginPath();
-                ctx.moveTo(padLeft, ySup);
-                ctx.lineTo(width - padRight, ySup);
+                ctx.moveTo(padLeft, yR2);
+                ctx.lineTo(width - padRight, yR2);
                 ctx.stroke();
-                ctx.fillStyle = '#10b981';
+                ctx.fillStyle = '#f87171';
                 ctx.font = 'bold 9px "Segoe UI", sans-serif';
-                ctx.fillText(`รับ $${activeCandleData.support.toFixed(1)}`, width - padRight + 4, ySup + 3);
+                ctx.fillText(`ต้าน R2 $${r2Val.toFixed(1)}`, width - padRight + 4, yR2 + 3);
                 ctx.restore();
 
-                let yRes = getY(activeCandleData.resistance);
+                // R1: Short-term Resistance
+                let r1Val = activeCandleData.r1 || activeCandleData.resistance;
+                let yR1 = getY(r1Val);
                 ctx.save();
                 ctx.strokeStyle = '#ef4444';
                 ctx.lineWidth = 1.2;
                 ctx.setLineDash([4, 4]);
                 ctx.beginPath();
-                ctx.moveTo(padLeft, yRes);
-                ctx.lineTo(width - padRight, yRes);
+                ctx.moveTo(padLeft, yR1);
+                ctx.lineTo(width - padRight, yR1);
                 ctx.stroke();
                 ctx.fillStyle = '#ef4444';
                 ctx.font = 'bold 9px "Segoe UI", sans-serif';
-                ctx.fillText(`ต้าน $${activeCandleData.resistance.toFixed(1)}`, width - padRight + 4, yRes + 3);
+                ctx.fillText(`ต้าน R1 $${r1Val.toFixed(1)}`, width - padRight + 4, yR1 + 3);
                 ctx.restore();
 
+                // S1: Short-term Support
+                let s1Val = activeCandleData.s1 || activeCandleData.support;
+                let yS1 = getY(s1Val);
+                ctx.save();
+                ctx.strokeStyle = '#10b981';
+                ctx.lineWidth = 1.2;
+                ctx.setLineDash([4, 4]);
+                ctx.beginPath();
+                ctx.moveTo(padLeft, yS1);
+                ctx.lineTo(width - padRight, yS1);
+                ctx.stroke();
+                ctx.fillStyle = '#10b981';
+                ctx.font = 'bold 9px "Segoe UI", sans-serif';
+                ctx.fillText(`รับ S1 $${s1Val.toFixed(1)}`, width - padRight + 4, yS1 + 3);
+                ctx.restore();
+
+                // S2: Major Support Base
+                let s2Val = activeCandleData.s2 || activeCandleData.support;
+                let yS2 = getY(s2Val);
+                ctx.save();
+                ctx.strokeStyle = '#34d399';
+                ctx.lineWidth = 1.0;
+                ctx.setLineDash([4, 4]);
+                ctx.beginPath();
+                ctx.moveTo(padLeft, yS2);
+                ctx.lineTo(width - padRight, yS2);
+                ctx.stroke();
+                ctx.fillStyle = '#34d399';
+                ctx.font = 'bold 9px "Segoe UI", sans-serif';
+                ctx.fillText(`รับ S2 $${s2Val.toFixed(1)}`, width - padRight + 4, yS2 + 3);
+                ctx.restore();
+
+                // SL: Stop Loss
                 let ySL = getY(activeCandleData.stopLoss);
                 ctx.save();
                 ctx.strokeStyle = '#f59e0b';
@@ -16415,6 +16602,23 @@
                 ctx.font = 'bold 9px "Segoe UI", sans-serif';
                 ctx.fillText(`SL $${activeCandleData.stopLoss.toFixed(1)}`, width - padRight + 4, ySL + 3);
                 ctx.restore();
+
+                // TP: Take Profit
+                if (activeCandleData.targetTP) {
+                    let yTP = getY(activeCandleData.targetTP);
+                    ctx.save();
+                    ctx.strokeStyle = '#06b6d4';
+                    ctx.lineWidth = 1.2;
+                    ctx.setLineDash([3, 3]);
+                    ctx.beginPath();
+                    ctx.moveTo(padLeft, yTP);
+                    ctx.lineTo(width - padRight, yTP);
+                    ctx.stroke();
+                    ctx.fillStyle = '#06b6d4';
+                    ctx.font = 'bold 9px "Segoe UI", sans-serif';
+                    ctx.fillText(`TP $${activeCandleData.targetTP.toFixed(1)}`, width - padRight + 4, yTP + 3);
+                    ctx.restore();
+                }
             }
 
             function drawCurve(arr, color, lw = 1.6) {
