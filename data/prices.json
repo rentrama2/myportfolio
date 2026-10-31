@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-31T13:28:02Z",
-  "updated_at_thai": "31 ต.ค. 2569 20:28 น.",
+  "updated_at": "2026-10-31T17:53:29Z",
+  "updated_at_thai": "1 พ.ย. 2569 00:53 น.",
   "fx": {
     "USDTHB": 33.74
   },
@@ -42,8 +42,8 @@
     },
     "^DJI": {
       "price": 51770.31,
-      "prevClose": 52342.6,
-      "change": -572.29,
+      "prevClose": 52342.56,
+      "change": -572.25,
       "changePct": -1.09,
       "name": "Dow Jones"
     },
