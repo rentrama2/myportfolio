@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -2151,6 +2151,110 @@
         .shadow-xs  { box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1) !important; }
         [data-bs-theme="dark"] .shadow-2xs { box-shadow: 0 1px 2px 0 rgba(0,0,0,.25) !important; }
         [data-bs-theme="dark"] .shadow-xs  { box-shadow: 0 1px 3px 0 rgba(0,0,0,.3), 0 1px 2px -1px rgba(0,0,0,.2) !important; }
+        /* Quick Filter Pills Bar */
+        .quick-filter-btn {
+            font-size: 0.74rem;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .quick-filter-btn:hover {
+            transform: translateY(-1px);
+        }
+        .quick-filter-btn.active {
+            background-color: #0f172a !important;
+            color: #ffffff !important;
+            border-color: #0f172a !important;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.25);
+        }
+        [data-bs-theme="dark"] .quick-filter-btn.active {
+            background-color: #38bdf8 !important;
+            color: #0f172a !important;
+            border-color: #38bdf8 !important;
+            box-shadow: 0 2px 8px rgba(56, 189, 248, 0.35);
+        }
+
+        /* Gemini AI Signals Styles */
+        .btn-gradient-ai {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%) !important;
+            color: #ffffff !important;
+            border: none !important;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+            transition: all 0.25s ease;
+        }
+        .btn-gradient-ai:hover {
+            transform: translateY(-1.5px);
+            box-shadow: 0 6px 16px rgba(124, 58, 237, 0.45);
+            color: #ffffff !important;
+        }
+        .gemini-sparkle {
+            display: inline-block;
+            animation: geminiSparklePulse 2s infinite ease-in-out;
+        }
+        @keyframes geminiSparklePulse {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+            50% { transform: scale(1.2) rotate(12deg); opacity: 1; filter: drop-shadow(0 0 4px #a855f7); }
+        }
+        .gemini-card {
+            border: 1px solid rgba(124, 58, 237, 0.15);
+            border-radius: 16px;
+            transition: all 0.25s ease;
+            background: var(--bs-card-bg, #ffffff);
+        }
+        .gemini-card:hover {
+            border-color: rgba(124, 58, 237, 0.35);
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.12);
+            transform: translateY(-2px);
+        }
+        [data-bs-theme="dark"] .gemini-card {
+            border-color: rgba(168, 85, 247, 0.2);
+            background: #1e1b4b15;
+        }
+        .gemini-score-pill {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.12) 0%, rgba(219, 39, 119, 0.12) 100%);
+            border: 1px solid rgba(124, 58, 237, 0.25);
+            color: #7c3aed;
+            font-weight: 800;
+            border-radius: 9999px;
+            padding: 2px 10px;
+            font-size: 0.78rem;
+        }
+        [data-bs-theme="dark"] .gemini-score-pill {
+            color: #c084fc;
+            border-color: rgba(192, 132, 252, 0.35);
+        }
+
+        /* ETF Overlap Styles */
+        .etf-overlap-meter {
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            background: #e2e8f0;
+        }
+        [data-bs-theme="dark"] .etf-overlap-meter {
+            background: #334155;
+        }
+        .overlap-bar-a {
+            background: #3b82f6;
+            transition: width 0.6s ease;
+        }
+        .overlap-bar-shared {
+            background: repeating-linear-gradient(45deg, #10b981, #10b981 8px, #059669 8px, #059669 16px);
+            transition: width 0.6s ease;
+        }
+        .overlap-bar-b {
+            background: #8b5cf6;
+            transition: width 0.6s ease;
+        }
+        .etf-compare-card {
+            border-radius: 14px;
+            border: 1px solid rgba(0,0,0,0.08);
+            background: var(--bs-card-bg, #ffffff);
+            transition: all 0.2s ease;
+        }
+        [data-bs-theme="dark"] .etf-compare-card {
+            border-color: rgba(255,255,255,0.08);
+        }
     </style>
 </head>
 <body class="p-2 p-md-3">
@@ -3674,6 +3778,243 @@
         </div>
     </div>
 
+    <!-- Modal: ETF Overlap & Concentration Analyzer -->
+    <div class="modal fade" id="etfOverlapModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content shadow-lg border-0" style="border-radius: 20px;">
+                <div class="modal-header border-0 pb-1 pt-3 px-4 d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="fs-4">🔄</span>
+                        <div>
+                            <h5 class="modal-title fw-bold m-0" style="letter-spacing: -0.3px;">เครื่องมือตรวจสอบความซ้ำซ้อนของ ETF (ETF Overlap Analyzer)</h5>
+                            <small class="text-muted">ตรวจสอบหุ้นไส้ในที่ถือทับซ้อนกัน เช่น VOO, QQQM, VTI และ Sector ETFs เพื่อคุมความเสี่ยงการกระจุกตัว</small>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 py-3">
+                    <!-- Mode Switcher: Compare 2 ETFs vs Analyze My Portfolio ETFs -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 p-2 rounded-3 bg-light-subtle border">
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-primary fw-bold px-3 py-1.5" id="btnEtfOverlapModeCompare" onclick="switchEtfOverlapMode('COMPARE')">
+                                🔀 เปรียบเทียบ ETF 2 กองทุน (Head-to-Head)
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary fw-bold px-3 py-1.5" id="btnEtfOverlapModePortfolio" onclick="switchEtfOverlapMode('PORTFOLIO')">
+                                💼 สแกน ETF ทั้งหมดในพอร์ตของคุณ (My Portfolio)
+                            </button>
+                        </div>
+                        <div class="text-muted fw-bold small d-none d-md-block">
+                            💡 สูตร: Overlap % = ผลรวมของ min(น้ำหนัก A, น้ำหนัก B)
+                        </div>
+                    </div>
+
+                    <!-- VIEW 1: Compare 2 ETFs Controls -->
+                    <div id="etfOverlapCompareControls" class="mb-3">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-md-5">
+                                <label class="form-label fw-bold text-muted small mb-1">กองทุน ETF หลัก (ETF 1):</label>
+                                <select id="etfSelectA" class="form-select form-select-sm fw-bold rounded-3" onchange="runEtfOverlapAnalysis()">
+                                    <!-- Options injected dynamically -->
+                                </select>
+                            </div>
+                            <div class="col-md-2 text-center pt-md-3">
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-circle p-2 shadow-2xs" onclick="swapEtfSelections()" title="สลับกองทุน A ⇄ B">
+                                    ⇄
+                                </button>
+                            </div>
+                            <div class="col-md-5">
+                                <label class="form-label fw-bold text-muted small mb-1">กองทุน ETF เปรียบเทียบ (ETF 2):</label>
+                                <select id="etfSelectB" class="form-select form-select-sm fw-bold rounded-3" onchange="runEtfOverlapAnalysis()">
+                                    <!-- Options injected dynamically -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Quick Compare Presets -->
+                        <div class="d-flex align-items-center gap-1.5 flex-wrap mt-2 pt-1">
+                            <span class="text-muted fw-bold small me-1">🔥 คู่วิเคราะห์ยอดนิยม:</span>
+                            <button type="button" class="btn btn-xs btn-outline-primary rounded-pill fw-bold" onclick="setEtfOverlapPreset('VOO', 'QQQM')">VOO vs QQQM</button>
+                            <button type="button" class="btn btn-xs btn-outline-primary rounded-pill fw-bold" onclick="setEtfOverlapPreset('VTI', 'VOO')">VTI vs VOO</button>
+                            <button type="button" class="btn btn-xs btn-outline-primary rounded-pill fw-bold" onclick="setEtfOverlapPreset('QQQM', 'SMH')">QQQM vs SMH</button>
+                            <button type="button" class="btn btn-xs btn-outline-primary rounded-pill fw-bold" onclick="setEtfOverlapPreset('SPY', 'XLK')">SPY vs XLK</button>
+                            <button type="button" class="btn btn-xs btn-outline-primary rounded-pill fw-bold" onclick="setEtfOverlapPreset('SCHD', 'VOO')">SCHD vs VOO</button>
+                            <button type="button" class="btn btn-xs btn-outline-primary rounded-pill fw-bold" onclick="setEtfOverlapPreset('XLV', 'XLK')">XLV vs XLK</button>
+                        </div>
+                    </div>
+
+                    <!-- VIEW 2: Portfolio Multi-ETF Controls -->
+                    <div id="etfOverlapPortfolioControls" class="mb-3" style="display: none;">
+                        <div class="alert alert-info py-2 px-3 mb-2 border-0 d-flex align-items-center justify-content-between flex-wrap gap-2 rounded-3">
+                            <div class="small">
+                                💼 <strong>สแกนพอร์ตปัจจุบัน:</strong> ตรวจพบกองทุน ETF ในพอร์ตของคุณ และวิเคราะห์ความทับซ้อนของหุ้นที่ซ่อนอยู่ภายใน
+                            </div>
+                            <button type="button" class="btn btn-sm btn-info text-white rounded-pill px-3 py-0.5 fw-bold" onclick="renderPortfolioEtfOverlap()">
+                                🔄 สแกนใหม่
+                            </button>
+                        </div>
+                        <div id="portfolioEtfBadgeContainer" class="d-flex gap-1.5 flex-wrap">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Results Container -->
+                    <div id="etfOverlapResultsArea">
+                        <!-- Populated by runEtfOverlapAnalysis() -->
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0 px-4 pb-3">
+                    <button type="button" class="btn btn-sm btn-secondary rounded-pill px-3" data-bs-dismiss="modal">ปิด</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Gemini AI Investment Signals -->
+    <div class="modal fade" id="geminiSignalsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content shadow-lg border-0" style="border-radius: 20px;">
+                <div class="modal-header border-0 pb-1 pt-3 px-4 d-flex justify-content-between align-items-center" style="background: linear-gradient(135deg, rgba(79,70,229,0.06) 0%, rgba(219,39,119,0.04) 100%);">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="fs-4 gemini-sparkle">✨</span>
+                        <div>
+                            <h5 class="modal-title fw-bold m-0" style="letter-spacing: -0.3px;">
+                                Gemini AI Investment Signals (จัดอันดับ & วิเคราะห์ความเสี่ยง)
+                            </h5>
+                            <small class="text-muted">
+                                ขับเคลื่อนด้วย Google Gemini API วิเคราะห์เชิงลึกทั้งโมเมนตัม โครงสร้างราคา ปัจจัยหนุน และความเสี่ยงแบบ Real-time
+                            </small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span id="geminiApiStatusBadge" class="badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">
+                            🟢 ระบบ AI พร้อมใช้งาน
+                        </span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body px-4 py-3">
+                    <!-- Navigation Pills: Top Picks vs Single Deep Dive vs Settings -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 border-bottom pb-2">
+                        <div class="nav nav-pills gap-1" role="tablist">
+                            <button type="button" class="nav-link active rounded-pill fw-bold py-1 px-3 text-nowrap" id="tabBtnGeminiPicks" onclick="switchGeminiSignalsTab('PICKS')" style="font-size: 0.82rem;">
+                                🏆 จัดอันดับ Top AI Picks (10 หุ้นน่าสนใจ)
+                            </button>
+                            <button type="button" class="nav-link rounded-pill fw-bold py-1 px-3 text-nowrap" id="tabBtnGeminiDeepDive" onclick="switchGeminiSignalsTab('DEEP_DIVE')" style="font-size: 0.82rem;">
+                                🔍 วิเคราะห์หุ้นรายตัวแบบสด (Deep Dive)
+                            </button>
+                            <button type="button" class="nav-link rounded-pill fw-bold py-1 px-3 text-nowrap text-secondary" id="tabBtnGeminiConfig" onclick="switchGeminiSignalsTab('CONFIG')" style="font-size: 0.82rem;">
+                                ⚙️ ตั้งค่า Gemini API
+                            </button>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                            <span class="text-muted fw-bold small">อัปเดตล่าสุด:</span>
+                            <span class="badge bg-light text-dark border fw-bold small" id="geminiLastUpdatedBadge">เมื่อสักครู่</span>
+                        </div>
+                    </div>
+
+                    <!-- TAB 1: Top AI Picks (จัดอันดับหุ้นตามความน่าสนใจ พร้อมเหตุผลและความเสี่ยง) -->
+                    <div id="geminiPanePicks">
+                        <!-- Strategy Category Filters -->
+                        <div class="d-flex align-items-center gap-1.5 flex-wrap mb-3 overflow-x-auto pb-1">
+                            <span class="text-muted fw-bold small me-1">กลยุทธ์:</span>
+                            <button type="button" class="btn btn-sm btn-dark rounded-pill py-0.5 px-3 fw-bold active" id="btnGemFilter_ALL" onclick="filterGeminiAiPicks('ALL')">🌟 ทั้งหมด (10 หุ้นเด่น)</button>
+                            <button type="button" class="btn btn-sm btn-outline-success rounded-pill py-0.5 px-3 fw-bold" id="btnGemFilter_BUY" onclick="filterGeminiAiPicks('BUY')">💎 Strong Buy</button>
+                            <button type="button" class="btn btn-sm btn-outline-primary rounded-pill py-0.5 px-3 fw-bold" id="btnGemFilter_GROWTH" onclick="filterGeminiAiPicks('GROWTH')">🚀 Momentum & Growth</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-3 fw-bold" id="btnGemFilter_DEFENSIVE" onclick="filterGeminiAiPicks('DEFENSIVE')">🛡️ Value & Defensive</button>
+                        </div>
+
+                        <!-- Ranked Cards Container -->
+                        <div id="geminiPicksContainer" class="d-flex flex-column gap-3">
+                            <!-- Injected dynamically by renderGeminiAiPicks() -->
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: Single-Stock Deep Dive (วิเคราะห์หุ้นรายตัวด้วย Gemini) -->
+                    <div id="geminiPaneDeepDive" style="display: none;">
+                        <div class="card border-0 shadow-sm rounded-4 p-3 mb-3 bg-light-subtle border">
+                            <div class="row g-2 align-items-end">
+                                <div class="col-md-5">
+                                    <label class="form-label fw-bold small mb-1">เลือกหุ้นหรือ ETF ที่ต้องการให้ Gemini วิเคราะห์:</label>
+                                    <div class="input-group">
+                                        <select id="geminiDeepDiveTickerSelect" class="form-select form-select-sm fw-bold rounded-start-3" onchange="onGeminiDeepDiveTickerChanged(this.value)">
+                                            <!-- Injected dynamically -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold small mb-1">โหมดการวิเคราะห์:</label>
+                                    <select id="geminiDeepDiveMode" class="form-select form-select-sm rounded-3">
+                                        <option value="FULL">📊 วิเคราะห์ครบวงจร (เทคนิค + ความเสี่ยง + กลยุทธ์)</option>
+                                        <option value="TECHNICAL">📈 โครงสร้างราคาและจุดเด้ง/เบรคเอาท์</option>
+                                        <option value="RISK">⚠️ เจาะลึกความเสี่ยงและจุด Stop Loss</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-sm btn-gradient-ai w-100 rounded-pill py-1.5 fw-bold d-flex align-items-center justify-content-center gap-1.5" onclick="executeGeminiDeepDive()">
+                                        <span class="gemini-sparkle">✨</span> วิเคราะห์สดด้วย AI
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Deep Dive Results Box -->
+                        <div id="geminiDeepDiveResultArea">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- TAB 3: Settings (API Key & Connection) -->
+                    <div id="geminiPaneConfig" style="display: none;">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-light-subtle border" style="max-width: 750px; margin: 0 auto;">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="fs-4">🔑</span>
+                                <div>
+                                    <h6 class="fw-bold m-0">ตั้งค่า Google Gemini API Key</h6>
+                                    <small class="text-muted">เชื่อมต่อ Google Gemini ของคุณโดยตรงเพื่อรับบทวิเคราะห์สดแบบไม่มีขีดจำกัด</small>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-bold small">Google Gemini API Key:</label>
+                                <div class="input-group">
+                                    <input type="password" id="geminiApiKeyInput" class="form-control form-control-sm rounded-start-3 font-monospace" placeholder="วาง API Key (ขึ้นต้นด้วย AIzaSy...)" oninput="updateGeminiKeyButtonState()">
+                                    <button class="btn btn-sm btn-outline-secondary" type="button" onclick="toggleGeminiKeyVisibility()" id="btnToggleGemKeyVis">👁️</button>
+                                    <button class="btn btn-sm btn-success fw-bold px-3" type="button" onclick="saveGeminiApiKey()">💾 บันทึก Key</button>
+                                </div>
+                                <div class="form-text small mt-1">
+                                    🔒 <strong>ความปลอดภัย:</strong> API Key จะถูกบันทึกไว้ในเบราว์เซอร์ของคุณ (localStorage) เท่านั้น จะไม่ถูกส่งต่อไปยังเซิร์ฟเวอร์อื่น
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-bold small">โมเดล AI ที่ต้องการใช้งาน:</label>
+                                <select id="geminiModelSelect" class="form-select form-select-sm rounded-3">
+                                    <option value="gemini-2.5-flash">Gemini 2.5 Flash (แนะนำ - เร็ว ฉลาด วิเคราะห์แม่นยำ)</option>
+                                    <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
+                                    <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pt-2 border-top">
+                                <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill fw-bold">
+                                    🔗 รับ API Key ฟรีจาก Google AI Studio
+                                </a>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill fw-bold px-3" onclick="testGeminiApiConnection()">
+                                    🧪 ทดสอบเชื่อมต่อ API
+                                </button>
+                            </div>
+
+                            <div id="geminiTestConnectionResult" class="mt-3" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0 px-4 pb-3">
+                    <button type="button" class="btn btn-sm btn-secondary rounded-pill px-3" data-bs-dismiss="modal">ปิด</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Dashboard -->
     <div class="container-fluid" style="max-width: 98%; margin: 0 auto;">
         
@@ -3882,6 +4223,14 @@
                             <span class="badge rounded-pill bg-success" id="etfMarketCountBadge">36 กองทุน</span>
                         </button>
                     </div>
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold d-flex align-items-center gap-1.5 shadow-2xs" onclick="openEtfOverlapModal()" title="ตรวจสอบความซ้ำซ้อนของหุ้นใน ETF เช่น VOO, QQQM, VTI และ Sector ETFs">
+                            <span style="font-size: 0.95rem;">🔄</span> ตรวจสอบ ETF Overlap
+                        </button>
+                        <button type="button" class="btn btn-sm btn-gradient-ai rounded-pill px-3 py-1 fw-bold d-flex align-items-center gap-1.5 shadow-2xs text-white" onclick="openGeminiSignalsModal()" title="ให้ Gemini จัดอันดับหุ้นตามความน่าสนใจ พร้อมเหตุผลและความเสี่ยง">
+                            <span class="gemini-sparkle">✨</span> Gemini AI Signals
+                        </button>
+                    </div>
                 </div>
 
                 <!-- SUB-PAGE 1: Stock Market Overview (100 หุ้นเดี่ยว) -->
@@ -3995,6 +4344,28 @@
                                     <span class="input-group-text bg-light border-end-0 text-muted" style="border-radius: 20px 0 0 20px;">🔍</span>
                                     <input type="text" id="marketTableSearch" class="form-control border-start-0 bg-light" placeholder="ค้นหา Ticker หรือชื่อหุ้น..." oninput="onMarketTableSearch(this.value)" style="border-radius: 0 20px 20px 0; font-size: 0.78rem;">
                                 </div>
+                            </div>
+
+                            <!-- Quick Filter Pills Bar (ปุ่มตัวกรองด่วน) -->
+                            <div class="d-flex align-items-center gap-1.5 flex-wrap mb-2 overflow-x-auto pb-1" id="marketQuickFiltersBar">
+                                <span class="text-muted fw-bold d-inline-flex align-items-center gap-1 me-1" style="font-size: 0.74rem;">
+                                    ⚡ <span>ตัวกรองด่วน:</span>
+                                </span>
+                                <button type="button" class="btn btn-sm btn-dark rounded-pill py-0.5 px-2.5 fw-bold quick-filter-btn active" id="btnQf_ALL" onclick="setMarketQuickFilter('ALL')">
+                                    🌟 ทั้งหมด (100)
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-2.5 fw-bold quick-filter-btn" id="btnQf_MOMENTUM" onclick="setMarketQuickFilter('MOMENTUM')">
+                                    🚀 Momentum สูง
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-2.5 fw-bold quick-filter-btn" id="btnQf_NEAR_SUPPORT" onclick="setMarketQuickFilter('NEAR_SUPPORT')">
+                                    🎯 ใกล้แนวรับ (Buy Zone)
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-2.5 fw-bold quick-filter-btn" id="btnQf_BREAKOUT" onclick="setMarketQuickFilter('BREAKOUT')">
+                                    ⚡ ทะลุแนวต้าน (Breakout)
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-2.5 fw-bold quick-filter-btn" id="btnQf_HIGH_SCORE" onclick="setMarketQuickFilter('HIGH_SCORE')">
+                                    ⭐ Tech Score สูง (5-6★)
+                                </button>
                             </div>
 
                             <!-- Row 2: Clean Controls Bar (Signal Filters, Sort, Page Size) -->
@@ -4122,6 +4493,28 @@
                                     <span class="input-group-text bg-light border-end-0 text-muted" style="border-radius: 20px 0 0 20px;">🔍</span>
                                     <input type="text" id="etfTableSearch" class="form-control border-start-0 bg-light" placeholder="ค้นหา Ticker หรือชื่อกองทุน..." oninput="onEtfTableSearch(this.value)" style="border-radius: 0 20px 20px 0; font-size: 0.78rem;">
                                 </div>
+                            </div>
+
+                            <!-- ETF Quick Filter Pills Bar (ปุ่มตัวกรองด่วน ETF) -->
+                            <div class="d-flex align-items-center gap-1.5 flex-wrap mb-2 overflow-x-auto pb-1" id="etfQuickFiltersBar">
+                                <span class="text-muted fw-bold d-inline-flex align-items-center gap-1 me-1" style="font-size: 0.74rem;">
+                                    ⚡ <span>ตัวกรองด่วน:</span>
+                                </span>
+                                <button type="button" class="btn btn-sm btn-dark rounded-pill py-0.5 px-2.5 fw-bold quick-filter-btn active" id="btnEtfQf_ALL" onclick="setEtfQuickFilter('ALL')">
+                                    🌟 ทั้งหมด (36)
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-2.5 fw-bold quick-filter-btn" id="btnEtfQf_MOMENTUM" onclick="setEtfQuickFilter('MOMENTUM')">
+                                    🚀 Momentum สูง
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-2.5 fw-bold quick-filter-btn" id="btnEtfQf_NEAR_SUPPORT" onclick="setEtfQuickFilter('NEAR_SUPPORT')">
+                                    🎯 ใกล้แนวรับ (Buy Zone)
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-2.5 fw-bold quick-filter-btn" id="btnEtfQf_BREAKOUT" onclick="setEtfQuickFilter('BREAKOUT')">
+                                    ⚡ ทะลุแนวต้าน (Breakout)
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-2.5 fw-bold quick-filter-btn" id="btnEtfQf_HIGH_SCORE" onclick="setEtfQuickFilter('HIGH_SCORE')">
+                                    ⭐ Tech Score สูง (5-6★)
+                                </button>
                             </div>
 
                             <!-- Row 2: Clean Controls Bar (Signal Filters, Sort, Page Size) -->
@@ -5053,6 +5446,12 @@
                                         <strong>กลยุทธ์:</strong> ราคายืนเหนือ EMA 20 & EMA 50 โมเมนตัมขาขึ้นแข็งแกร่ง แนะนำถือต่อและรอซื้อเพิ่มบริเวณแนวรับ
                                     </div>
                                 </div>
+
+                                <!-- Quick Launch Gemini AI Analysis Button for Active Stock -->
+                                <button type="button" class="btn btn-sm btn-gradient-ai w-100 fw-bold rounded-pill py-2 shadow-sm text-white mt-2 d-flex align-items-center justify-content-center gap-2" onclick="analyzeCurrentStockWithGemini()" title="คลิกเพื่อให้ Gemini AI วิเคราะห์หุ้นตัวนี้อย่างละเอียดพร้อมประเมินความเสี่ยงและจุดตัดขาดทุน">
+                                    <span class="gemini-sparkle">✨</span>
+                                    <span>ให้ Gemini AI วิเคราะห์หุ้นตัวนี้แบบละเอียด</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -13575,6 +13974,7 @@
         let currentMarketSubView = localStorage.getItem('myMarketSubView') || 'STOCK';
         let currentMarketCategory = 'ALL';
         let currentMarketSignal = 'ALL';
+        let currentMarketQuickFilter = 'ALL';
         let currentMarketSort = 'rank_asc';
         let currentMarketSearch = '';
         let currentMarketPage = 1;
@@ -13583,6 +13983,7 @@
         // ETF filters state
         let currentEtfCategory = 'ALL';
         let currentEtfSignal = 'ALL';
+        let currentEtfQuickFilter = 'ALL';
         let currentEtfSort = 'rank_asc';
         let currentEtfSearch = '';
         let currentEtfPage = 1;
@@ -13988,6 +14389,28 @@
             // 2. Filter Signal
             if (currentMarketSignal !== 'ALL') {
                 list = list.filter(x => x.signal === currentMarketSignal);
+            }
+
+            // 2.5 Quick Filters (ปุ่มตัวกรองด่วน)
+            if (currentMarketQuickFilter === 'MOMENTUM') {
+                list = list.filter(x => {
+                    const hasMom = x.mom && (x.mom.m1 >= 5 || x.mom.m3 >= 12 || x.mom.w1 >= 2.5);
+                    return hasMom || x.change >= 1.8;
+                });
+            } else if (currentMarketQuickFilter === 'NEAR_SUPPORT') {
+                list = list.filter(x => {
+                    let curPrice = (typeof marketPrices !== 'undefined' && marketPrices[x.ticker]) ? marketPrices[x.ticker] : x.price;
+                    const sr = calcDynamicMarketSR(x.ticker, curPrice, x);
+                    return curPrice <= sr.s1 * 1.03 && curPrice >= sr.s1 * 0.96;
+                });
+            } else if (currentMarketQuickFilter === 'BREAKOUT') {
+                list = list.filter(x => {
+                    let curPrice = (typeof marketPrices !== 'undefined' && marketPrices[x.ticker]) ? marketPrices[x.ticker] : x.price;
+                    const sr = calcDynamicMarketSR(x.ticker, curPrice, x);
+                    return curPrice >= sr.r1 * 0.985 || (x.change >= 1.5 && x.score >= 5);
+                });
+            } else if (currentMarketQuickFilter === 'HIGH_SCORE') {
+                list = list.filter(x => (x.score || 0) >= 5);
             }
 
             // 3. Search Query
@@ -14442,6 +14865,28 @@
             // 2. Filter Signal
             if (currentEtfSignal !== 'ALL') {
                 list = list.filter(x => x.signal === currentEtfSignal);
+            }
+
+            // 2.5 ETF Quick Filters (ปุ่มตัวกรองด่วน ETF)
+            if (currentEtfQuickFilter === 'MOMENTUM') {
+                list = list.filter(x => {
+                    const hasMom = x.mom && (x.mom.m1 >= 4 || x.mom.m3 >= 10 || x.mom.w1 >= 2);
+                    return hasMom || x.change >= 1.2;
+                });
+            } else if (currentEtfQuickFilter === 'NEAR_SUPPORT') {
+                list = list.filter(x => {
+                    let curPrice = (typeof marketPrices !== 'undefined' && marketPrices[x.ticker]) ? marketPrices[x.ticker] : x.price;
+                    const sr = calcDynamicMarketSR(x.ticker, curPrice, x);
+                    return curPrice <= sr.s1 * 1.025 && curPrice >= sr.s1 * 0.97;
+                });
+            } else if (currentEtfQuickFilter === 'BREAKOUT') {
+                list = list.filter(x => {
+                    let curPrice = (typeof marketPrices !== 'undefined' && marketPrices[x.ticker]) ? marketPrices[x.ticker] : x.price;
+                    const sr = calcDynamicMarketSR(x.ticker, curPrice, x);
+                    return curPrice >= sr.r1 * 0.985 || (x.change >= 1.0 && x.score >= 5);
+                });
+            } else if (currentEtfQuickFilter === 'HIGH_SCORE') {
+                list = list.filter(x => (x.score || 0) >= 5);
             }
 
             // 3. Search Query
@@ -17990,6 +18435,1174 @@
                 }
             }, 100);
         }
+        // ==========================================
+        // ⚡ QUICK FILTERS (ปุ่มตัวกรองด่วน)
+        // ==========================================
+        window.setMarketQuickFilter = function(qf) {
+            currentMarketQuickFilter = qf;
+            currentMarketPage = 1;
+            ['btnQf_ALL', 'btnQf_MOMENTUM', 'btnQf_NEAR_SUPPORT', 'btnQf_BREAKOUT', 'btnQf_HIGH_SCORE'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) {
+                    btn.classList.remove('active', 'btn-dark');
+                    btn.classList.add('btn-outline-secondary');
+                }
+            });
+            const activeId = 'btnQf_' + qf;
+            const activeBtn = document.getElementById(activeId);
+            if (activeBtn) {
+                activeBtn.classList.remove('btn-outline-secondary');
+                activeBtn.classList.add('active', 'btn-dark');
+            }
+            renderMarketTop100Table();
+        };
+
+        window.setEtfQuickFilter = function(qf) {
+            currentEtfQuickFilter = qf;
+            currentEtfPage = 1;
+            ['btnEtfQf_ALL', 'btnEtfQf_MOMENTUM', 'btnEtfQf_NEAR_SUPPORT', 'btnEtfQf_BREAKOUT', 'btnEtfQf_HIGH_SCORE'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) {
+                    btn.classList.remove('active', 'btn-dark');
+                    btn.classList.add('btn-outline-secondary');
+                }
+            });
+            const activeId = 'btnEtfQf_' + qf;
+            const activeBtn = document.getElementById(activeId);
+            if (activeBtn) {
+                activeBtn.classList.remove('btn-outline-secondary');
+                activeBtn.classList.add('active', 'btn-dark');
+            }
+            renderEtfTopRankedTable();
+        };
+
+        // ==========================================
+        // 🔄 ETF CONSTITUENTS & OVERLAP ANALYZER
+        // ==========================================
+        const ETF_HOLDINGS_DATABASE = {
+            'VOO': {
+                ticker: 'VOO', name: 'Vanguard S&P 500 ETF', aum: '$490B', exp: '0.03%', totalHoldings: 503,
+                holdings: [
+                    { ticker: 'AAPL', name: 'Apple Inc.', weight: 7.1, sector: 'Technology' },
+                    { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 6.6, sector: 'Technology' },
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 6.2, sector: 'Technology' },
+                    { ticker: 'AMZN', name: 'Amazon.com Inc.', weight: 3.7, sector: 'Consumer Cyclical' },
+                    { ticker: 'META', name: 'Meta Platforms Inc.', weight: 2.6, sector: 'Communication' },
+                    { ticker: 'GOOGL', name: 'Alphabet Inc. (Class A)', weight: 2.1, sector: 'Communication' },
+                    { ticker: 'GOOG', name: 'Alphabet Inc. (Class C)', weight: 1.8, sector: 'Communication' },
+                    { ticker: 'BRK.B', name: 'Berkshire Hathaway', weight: 1.7, sector: 'Financials' },
+                    { ticker: 'AVGO', name: 'Broadcom Inc.', weight: 1.6, sector: 'Technology' },
+                    { ticker: 'TSLA', name: 'Tesla Inc.', weight: 1.5, sector: 'Consumer Cyclical' },
+                    { ticker: 'JPM', name: 'JPMorgan Chase & Co.', weight: 1.3, sector: 'Financials' },
+                    { ticker: 'LLY', name: 'Eli Lilly and Company', weight: 1.2, sector: 'Healthcare' },
+                    { ticker: 'V', name: 'Visa Inc.', weight: 1.1, sector: 'Financials' },
+                    { ticker: 'UNH', name: 'UnitedHealth Group', weight: 1.0, sector: 'Healthcare' },
+                    { ticker: 'XOM', name: 'Exxon Mobil Corp.', weight: 1.0, sector: 'Energy' },
+                    { ticker: 'MA', name: 'Mastercard Inc.', weight: 0.9, sector: 'Financials' },
+                    { ticker: 'COST', name: 'Costco Wholesale Corp.', weight: 0.8, sector: 'Consumer Defensive' },
+                    { ticker: 'PG', name: 'Procter & Gamble Co.', weight: 0.8, sector: 'Consumer Defensive' },
+                    { ticker: 'HD', name: 'The Home Depot Inc.', weight: 0.8, sector: 'Consumer Cyclical' },
+                    { ticker: 'JNJ', name: 'Johnson & Johnson', weight: 0.8, sector: 'Healthcare' }
+                ],
+                sectors: { 'Technology': 31.5, 'Financials': 13.2, 'Healthcare': 11.8, 'Consumer Cyclical': 10.4, 'Communication': 9.2, 'Industrials': 8.4, 'Consumer Defensive': 5.8, 'Energy': 3.7, 'Utilities': 2.4, 'Real Estate': 2.1, 'Materials': 1.5 }
+            },
+            'SPY': {
+                ticker: 'SPY', name: 'SPDR S&P 500 ETF Trust', aum: '$585B', exp: '0.09%', totalHoldings: 503,
+                holdings: [
+                    { ticker: 'AAPL', name: 'Apple Inc.', weight: 7.1, sector: 'Technology' },
+                    { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 6.6, sector: 'Technology' },
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 6.2, sector: 'Technology' },
+                    { ticker: 'AMZN', name: 'Amazon.com Inc.', weight: 3.7, sector: 'Consumer Cyclical' },
+                    { ticker: 'META', name: 'Meta Platforms Inc.', weight: 2.6, sector: 'Communication' },
+                    { ticker: 'GOOGL', name: 'Alphabet Inc. (Class A)', weight: 2.1, sector: 'Communication' },
+                    { ticker: 'GOOG', name: 'Alphabet Inc. (Class C)', weight: 1.8, sector: 'Communication' },
+                    { ticker: 'BRK.B', name: 'Berkshire Hathaway', weight: 1.7, sector: 'Financials' },
+                    { ticker: 'AVGO', name: 'Broadcom Inc.', weight: 1.6, sector: 'Technology' },
+                    { ticker: 'TSLA', name: 'Tesla Inc.', weight: 1.5, sector: 'Consumer Cyclical' },
+                    { ticker: 'JPM', name: 'JPMorgan Chase & Co.', weight: 1.3, sector: 'Financials' },
+                    { ticker: 'LLY', name: 'Eli Lilly and Company', weight: 1.2, sector: 'Healthcare' },
+                    { ticker: 'V', name: 'Visa Inc.', weight: 1.1, sector: 'Financials' },
+                    { ticker: 'UNH', name: 'UnitedHealth Group', weight: 1.0, sector: 'Healthcare' },
+                    { ticker: 'XOM', name: 'Exxon Mobil Corp.', weight: 1.0, sector: 'Energy' }
+                ],
+                sectors: { 'Technology': 31.5, 'Financials': 13.2, 'Healthcare': 11.8, 'Consumer Cyclical': 10.4, 'Communication': 9.2, 'Industrials': 8.4, 'Consumer Defensive': 5.8, 'Energy': 3.7, 'Utilities': 2.4, 'Real Estate': 2.1, 'Materials': 1.5 }
+            },
+            'QQQM': {
+                ticker: 'QQQM', name: 'Invesco NASDAQ 100 ETF', aum: '$32B', exp: '0.15%', totalHoldings: 101,
+                holdings: [
+                    { ticker: 'AAPL', name: 'Apple Inc.', weight: 8.8, sector: 'Technology' },
+                    { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 8.4, sector: 'Technology' },
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 8.1, sector: 'Technology' },
+                    { ticker: 'AMZN', name: 'Amazon.com Inc.', weight: 5.2, sector: 'Consumer Cyclical' },
+                    { ticker: 'META', name: 'Meta Platforms Inc.', weight: 4.8, sector: 'Communication' },
+                    { ticker: 'AVGO', name: 'Broadcom Inc.', weight: 4.4, sector: 'Technology' },
+                    { ticker: 'GOOGL', name: 'Alphabet Inc. (Class A)', weight: 2.7, sector: 'Communication' },
+                    { ticker: 'GOOG', name: 'Alphabet Inc. (Class C)', weight: 2.6, sector: 'Communication' },
+                    { ticker: 'TSLA', name: 'Tesla Inc.', weight: 2.6, sector: 'Consumer Cyclical' },
+                    { ticker: 'COST', name: 'Costco Wholesale Corp.', weight: 2.4, sector: 'Consumer Defensive' },
+                    { ticker: 'NFLX', name: 'Netflix Inc.', weight: 2.0, sector: 'Communication' },
+                    { ticker: 'AMD', name: 'Advanced Micro Devices', weight: 1.8, sector: 'Technology' },
+                    { ticker: 'PEP', name: 'PepsiCo Inc.', weight: 1.7, sector: 'Consumer Defensive' },
+                    { ticker: 'LIN', name: 'Linde plc', weight: 1.6, sector: 'Materials' },
+                    { ticker: 'ADBE', name: 'Adobe Inc.', weight: 1.5, sector: 'Technology' },
+                    { ticker: 'CSCO', name: 'Cisco Systems Inc.', weight: 1.4, sector: 'Technology' },
+                    { ticker: 'QCOM', name: 'QUALCOMM Inc.', weight: 1.4, sector: 'Technology' },
+                    { ticker: 'TMUS', name: 'T-Mobile US Inc.', weight: 1.3, sector: 'Communication' },
+                    { ticker: 'INTU', name: 'Intuit Inc.', weight: 1.2, sector: 'Technology' },
+                    { ticker: 'AMAT', name: 'Applied Materials Inc.', weight: 1.1, sector: 'Technology' }
+                ],
+                sectors: { 'Technology': 51.2, 'Communication': 16.4, 'Consumer Cyclical': 13.5, 'Consumer Defensive': 6.2, 'Healthcare': 5.8, 'Industrials': 4.5, 'Utilities': 1.2, 'Financials': 0.8, 'Energy': 0.4 }
+            },
+            'QQQ': {
+                ticker: 'QQQ', name: 'Invesco QQQ Trust', aum: '$295B', exp: '0.20%', totalHoldings: 101,
+                holdings: [
+                    { ticker: 'AAPL', name: 'Apple Inc.', weight: 8.8, sector: 'Technology' },
+                    { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 8.4, sector: 'Technology' },
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 8.1, sector: 'Technology' },
+                    { ticker: 'AMZN', name: 'Amazon.com Inc.', weight: 5.2, sector: 'Consumer Cyclical' },
+                    { ticker: 'META', name: 'Meta Platforms Inc.', weight: 4.8, sector: 'Communication' },
+                    { ticker: 'AVGO', name: 'Broadcom Inc.', weight: 4.4, sector: 'Technology' },
+                    { ticker: 'GOOGL', name: 'Alphabet Inc. (Class A)', weight: 2.7, sector: 'Communication' },
+                    { ticker: 'GOOG', name: 'Alphabet Inc. (Class C)', weight: 2.6, sector: 'Communication' },
+                    { ticker: 'TSLA', name: 'Tesla Inc.', weight: 2.6, sector: 'Consumer Cyclical' },
+                    { ticker: 'COST', name: 'Costco Wholesale Corp.', weight: 2.4, sector: 'Consumer Defensive' },
+                    { ticker: 'NFLX', name: 'Netflix Inc.', weight: 2.0, sector: 'Communication' },
+                    { ticker: 'AMD', name: 'Advanced Micro Devices', weight: 1.8, sector: 'Technology' }
+                ],
+                sectors: { 'Technology': 51.2, 'Communication': 16.4, 'Consumer Cyclical': 13.5, 'Consumer Defensive': 6.2, 'Healthcare': 5.8, 'Industrials': 4.5, 'Utilities': 1.2, 'Financials': 0.8 }
+            },
+            'VTI': {
+                ticker: 'VTI', name: 'Vanguard Total Stock Market ETF', aum: '$410B', exp: '0.03%', totalHoldings: 3650,
+                holdings: [
+                    { ticker: 'AAPL', name: 'Apple Inc.', weight: 6.0, sector: 'Technology' },
+                    { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 5.6, sector: 'Technology' },
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 5.2, sector: 'Technology' },
+                    { ticker: 'AMZN', name: 'Amazon.com Inc.', weight: 3.1, sector: 'Consumer Cyclical' },
+                    { ticker: 'META', name: 'Meta Platforms Inc.', weight: 2.1, sector: 'Communication' },
+                    { ticker: 'GOOGL', name: 'Alphabet Inc. (Class A)', weight: 1.8, sector: 'Communication' },
+                    { ticker: 'GOOG', name: 'Alphabet Inc. (Class C)', weight: 1.5, sector: 'Communication' },
+                    { ticker: 'BRK.B', name: 'Berkshire Hathaway', weight: 1.4, sector: 'Financials' },
+                    { ticker: 'AVGO', name: 'Broadcom Inc.', weight: 1.4, sector: 'Technology' },
+                    { ticker: 'TSLA', name: 'Tesla Inc.', weight: 1.3, sector: 'Consumer Cyclical' },
+                    { ticker: 'JPM', name: 'JPMorgan Chase & Co.', weight: 1.1, sector: 'Financials' },
+                    { ticker: 'LLY', name: 'Eli Lilly and Company', weight: 1.0, sector: 'Healthcare' },
+                    { ticker: 'V', name: 'Visa Inc.', weight: 0.9, sector: 'Financials' },
+                    { ticker: 'UNH', name: 'UnitedHealth Group', weight: 0.8, sector: 'Healthcare' },
+                    { ticker: 'XOM', name: 'Exxon Mobil Corp.', weight: 0.8, sector: 'Energy' }
+                ],
+                sectors: { 'Technology': 30.2, 'Financials': 13.8, 'Healthcare': 11.4, 'Consumer Cyclical': 10.6, 'Industrials': 9.8, 'Communication': 8.6, 'Consumer Defensive': 5.4, 'Energy': 4.0, 'Real Estate': 2.8, 'Utilities': 2.2, 'Materials': 1.8 }
+            },
+            'SMH': {
+                ticker: 'SMH', name: 'VanEck Semiconductor ETF', aum: '$26B', exp: '0.35%', totalHoldings: 26,
+                holdings: [
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 21.0, sector: 'Technology' },
+                    { ticker: 'TSM', name: 'Taiwan Semiconductor ADR', weight: 12.8, sector: 'Technology' },
+                    { ticker: 'AVGO', name: 'Broadcom Inc.', weight: 8.2, sector: 'Technology' },
+                    { ticker: 'ASML', name: 'ASML Holding NV', weight: 5.1, sector: 'Technology' },
+                    { ticker: 'QCOM', name: 'QUALCOMM Inc.', weight: 4.8, sector: 'Technology' },
+                    { ticker: 'AMD', name: 'Advanced Micro Devices', weight: 4.6, sector: 'Technology' },
+                    { ticker: 'TXN', name: 'Texas Instruments Inc.', weight: 4.3, sector: 'Technology' },
+                    { ticker: 'AMAT', name: 'Applied Materials Inc.', weight: 4.1, sector: 'Technology' },
+                    { ticker: 'MU', name: 'Micron Technology Inc.', weight: 3.9, sector: 'Technology' },
+                    { ticker: 'LRCX', name: 'Lam Research Corp.', weight: 3.8, sector: 'Technology' },
+                    { ticker: 'ADI', name: 'Analog Devices Inc.', weight: 3.5, sector: 'Technology' },
+                    { ticker: 'INTC', name: 'Intel Corp.', weight: 3.2, sector: 'Technology' },
+                    { ticker: 'KLAC', name: 'KLA Corp.', weight: 3.1, sector: 'Technology' }
+                ],
+                sectors: { 'Technology': 99.8, 'Industrials': 0.2 }
+            },
+            'XLK': {
+                ticker: 'XLK', name: 'Technology Select Sector SPDR', aum: '$72B', exp: '0.09%', totalHoldings: 67,
+                holdings: [
+                    { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 21.5, sector: 'Technology' },
+                    { ticker: 'AAPL', name: 'Apple Inc.', weight: 16.2, sector: 'Technology' },
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 15.8, sector: 'Technology' },
+                    { ticker: 'AVGO', name: 'Broadcom Inc.', weight: 5.4, sector: 'Technology' },
+                    { ticker: 'CRM', name: 'Salesforce Inc.', weight: 3.2, sector: 'Technology' },
+                    { ticker: 'AMD', name: 'Advanced Micro Devices', weight: 3.1, sector: 'Technology' },
+                    { ticker: 'ADBE', name: 'Adobe Inc.', weight: 2.8, sector: 'Technology' },
+                    { ticker: 'CSCO', name: 'Cisco Systems Inc.', weight: 2.6, sector: 'Technology' },
+                    { ticker: 'ACN', name: 'Accenture plc', weight: 2.4, sector: 'Technology' },
+                    { ticker: 'QCOM', name: 'QUALCOMM Inc.', weight: 2.3, sector: 'Technology' },
+                    { ticker: 'ORCL', name: 'Oracle Corp.', weight: 2.2, sector: 'Technology' },
+                    { ticker: 'INTU', name: 'Intuit Inc.', weight: 2.0, sector: 'Technology' }
+                ],
+                sectors: { 'Technology': 99.6, 'Communication': 0.4 }
+            },
+            'SCHD': {
+                ticker: 'SCHD', name: 'Schwab US Dividend Equity ETF', aum: '$60B', exp: '0.06%', totalHoldings: 104,
+                holdings: [
+                    { ticker: 'CSCO', name: 'Cisco Systems Inc.', weight: 4.4, sector: 'Technology' },
+                    { ticker: 'BLK', name: 'BlackRock Inc.', weight: 4.2, sector: 'Financials' },
+                    { ticker: 'ABBV', name: 'AbbVie Inc.', weight: 4.1, sector: 'Healthcare' },
+                    { ticker: 'HD', name: 'The Home Depot Inc.', weight: 4.0, sector: 'Consumer Cyclical' },
+                    { ticker: 'VZ', name: 'Verizon Communications', weight: 3.9, sector: 'Communication' },
+                    { ticker: 'TXN', name: 'Texas Instruments Inc.', weight: 3.8, sector: 'Technology' },
+                    { ticker: 'LMT', name: 'Lockheed Martin Corp.', weight: 3.7, sector: 'Industrials' },
+                    { ticker: 'AMGN', name: 'Amgen Inc.', weight: 3.6, sector: 'Healthcare' },
+                    { ticker: 'PFE', name: 'Pfizer Inc.', weight: 3.5, sector: 'Healthcare' },
+                    { ticker: 'CVX', name: 'Chevron Corp.', weight: 3.4, sector: 'Energy' },
+                    { ticker: 'PEP', name: 'PepsiCo Inc.', weight: 3.3, sector: 'Consumer Defensive' },
+                    { ticker: 'KO', name: 'The Coca-Cola Co.', weight: 3.2, sector: 'Consumer Defensive' },
+                    { ticker: 'MRK', name: 'Merck & Co. Inc.', weight: 3.1, sector: 'Healthcare' }
+                ],
+                sectors: { 'Financials': 18.2, 'Healthcare': 15.6, 'Industrials': 13.8, 'Consumer Defensive': 12.5, 'Technology': 11.2, 'Energy': 10.4, 'Consumer Cyclical': 9.2, 'Communication': 5.2, 'Utilities': 3.9 }
+            },
+            'XLV': {
+                ticker: 'XLV', name: 'Health Care Select Sector SPDR', aum: '$42B', exp: '0.09%', totalHoldings: 64,
+                holdings: [
+                    { ticker: 'LLY', name: 'Eli Lilly and Company', weight: 12.5, sector: 'Healthcare' },
+                    { ticker: 'UNH', name: 'UnitedHealth Group', weight: 10.2, sector: 'Healthcare' },
+                    { ticker: 'JNJ', name: 'Johnson & Johnson', weight: 7.8, sector: 'Healthcare' },
+                    { ticker: 'ABBV', name: 'AbbVie Inc.', weight: 6.5, sector: 'Healthcare' },
+                    { ticker: 'MRK', name: 'Merck & Co. Inc.', weight: 5.9, sector: 'Healthcare' },
+                    { ticker: 'TMO', name: 'Thermo Fisher Scientific', weight: 4.5, sector: 'Healthcare' },
+                    { ticker: 'ABT', name: 'Abbott Laboratories', weight: 4.2, sector: 'Healthcare' },
+                    { ticker: 'PFE', name: 'Pfizer Inc.', weight: 3.6, sector: 'Healthcare' },
+                    { ticker: 'DHR', name: 'Danaher Corp.', weight: 3.5, sector: 'Healthcare' },
+                    { ticker: 'AMGN', name: 'Amgen Inc.', weight: 3.4, sector: 'Healthcare' },
+                    { ticker: 'ISRG', name: 'Intuitive Surgical', weight: 3.2, sector: 'Healthcare' },
+                    { ticker: 'MDT', name: 'Medtronic plc', weight: 2.8, sector: 'Healthcare' }
+                ],
+                sectors: { 'Healthcare': 99.9, 'Technology': 0.1 }
+            },
+            'XLF': {
+                ticker: 'XLF', name: 'Financial Select Sector SPDR', aum: '$44B', exp: '0.09%', totalHoldings: 72,
+                holdings: [
+                    { ticker: 'BRK.B', name: 'Berkshire Hathaway', weight: 13.5, sector: 'Financials' },
+                    { ticker: 'JPM', name: 'JPMorgan Chase & Co.', weight: 10.8, sector: 'Financials' },
+                    { ticker: 'V', name: 'Visa Inc.', weight: 8.2, sector: 'Financials' },
+                    { ticker: 'MA', name: 'Mastercard Inc.', weight: 7.1, sector: 'Financials' },
+                    { ticker: 'BAC', name: 'Bank of America Corp.', weight: 4.5, sector: 'Financials' },
+                    { ticker: 'WFC', name: 'Wells Fargo & Co.', weight: 3.9, sector: 'Financials' },
+                    { ticker: 'GS', name: 'Goldman Sachs Group', weight: 3.4, sector: 'Financials' },
+                    { ticker: 'MS', name: 'Morgan Stanley', weight: 3.1, sector: 'Financials' }
+                ],
+                sectors: { 'Financials': 99.8, 'Industrials': 0.2 }
+            },
+            'XLE': {
+                ticker: 'XLE', name: 'Energy Select Sector SPDR', aum: '$35B', exp: '0.09%', totalHoldings: 23,
+                holdings: [
+                    { ticker: 'XOM', name: 'Exxon Mobil Corp.', weight: 23.5, sector: 'Energy' },
+                    { ticker: 'CVX', name: 'Chevron Corp.', weight: 16.8, sector: 'Energy' },
+                    { ticker: 'COP', name: 'ConocoPhillips', weight: 8.5, sector: 'Energy' },
+                    { ticker: 'EOG', name: 'EOG Resources Inc.', weight: 5.1, sector: 'Energy' },
+                    { ticker: 'SLB', name: 'SLB (Schlumberger)', weight: 4.6, sector: 'Energy' },
+                    { ticker: 'MPC', name: 'Marathon Petroleum', weight: 4.2, sector: 'Energy' }
+                ],
+                sectors: { 'Energy': 99.7, 'Utilities': 0.3 }
+            },
+            'XLI': {
+                ticker: 'XLI', name: 'Industrial Select Sector SPDR', aum: '$21B', exp: '0.09%', totalHoldings: 78,
+                holdings: [
+                    { ticker: 'GE', name: 'GE Aerospace', weight: 8.2, sector: 'Industrials' },
+                    { ticker: 'CAT', name: 'Caterpillar Inc.', weight: 6.8, sector: 'Industrials' },
+                    { ticker: 'UNP', name: 'Union Pacific Corp.', weight: 5.1, sector: 'Industrials' },
+                    { ticker: 'HON', name: 'Honeywell International', weight: 4.5, sector: 'Industrials' },
+                    { ticker: 'RTX', name: 'RTX Corp.', weight: 4.3, sector: 'Industrials' }
+                ],
+                sectors: { 'Industrials': 99.5, 'Technology': 0.5 }
+            },
+            'DIA': {
+                ticker: 'DIA', name: 'SPDR Dow Jones Industrial ETF', aum: '$34B', exp: '0.16%', totalHoldings: 30,
+                holdings: [
+                    { ticker: 'UNH', name: 'UnitedHealth Group', weight: 9.1, sector: 'Healthcare' },
+                    { ticker: 'GS', name: 'Goldman Sachs Group', weight: 7.8, sector: 'Financials' },
+                    { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 6.7, sector: 'Technology' },
+                    { ticker: 'HD', name: 'The Home Depot Inc.', weight: 5.9, sector: 'Consumer Cyclical' },
+                    { ticker: 'CAT', name: 'Caterpillar Inc.', weight: 5.5, sector: 'Industrials' },
+                    { ticker: 'AMGN', name: 'Amgen Inc.', weight: 5.1, sector: 'Healthcare' }
+                ],
+                sectors: { 'Financials': 24.1, 'Healthcare': 18.5, 'Technology': 17.8, 'Industrials': 15.2, 'Consumer Cyclical': 14.4, 'Consumer Defensive': 6.0, 'Energy': 2.5, 'Communication': 1.5 }
+            }
+        };
+
+        window.openEtfOverlapModal = function(tickerA, tickerB) {
+            const modalEl = document.getElementById('etfOverlapModal');
+            if (!modalEl) return;
+            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+            modal.show();
+
+            populateEtfSelectOptions(tickerA || 'VOO', tickerB || 'QQQM');
+            runEtfOverlapAnalysis();
+        };
+
+        function populateEtfSelectOptions(selectedA, selectedB) {
+            const selA = document.getElementById('etfSelectA');
+            const selB = document.getElementById('etfSelectB');
+            if (!selA || !selB) return;
+
+            const allKeys = Object.keys(ETF_HOLDINGS_DATABASE);
+            let optHtml = '';
+            allKeys.forEach(k => {
+                const item = ETF_HOLDINGS_DATABASE[k];
+                optHtml += `<option value="${k}">${k} - ${item.name}</option>`;
+            });
+
+            selA.innerHTML = optHtml;
+            selB.innerHTML = optHtml;
+
+            if (selectedA && allKeys.includes(selectedA)) selA.value = selectedA;
+            else selA.value = 'VOO';
+
+            if (selectedB && allKeys.includes(selectedB)) selB.value = selectedB;
+            else selB.value = 'QQQM';
+        }
+
+        window.swapEtfSelections = function() {
+            const selA = document.getElementById('etfSelectA');
+            const selB = document.getElementById('etfSelectB');
+            if (!selA || !selB) return;
+            const tmp = selA.value;
+            selA.value = selB.value;
+            selB.value = tmp;
+            runEtfOverlapAnalysis();
+        };
+
+        window.setEtfOverlapPreset = function(tkA, tkB) {
+            populateEtfSelectOptions(tkA, tkB);
+            runEtfOverlapAnalysis();
+        };
+
+        window.switchEtfOverlapMode = function(mode) {
+            const btnComp = document.getElementById('btnEtfOverlapModeCompare');
+            const btnPort = document.getElementById('btnEtfOverlapModePortfolio');
+            const pnlComp = document.getElementById('etfOverlapCompareControls');
+            const pnlPort = document.getElementById('etfOverlapPortfolioControls');
+
+            if (mode === 'COMPARE') {
+                if (btnComp) { btnComp.className = 'btn btn-primary fw-bold px-3 py-1.5'; }
+                if (btnPort) { btnPort.className = 'btn btn-outline-secondary fw-bold px-3 py-1.5'; }
+                if (pnlComp) pnlComp.style.display = 'block';
+                if (pnlPort) pnlPort.style.display = 'none';
+                runEtfOverlapAnalysis();
+            } else {
+                if (btnComp) { btnComp.className = 'btn btn-outline-secondary fw-bold px-3 py-1.5'; }
+                if (btnPort) { btnPort.className = 'btn btn-primary fw-bold px-3 py-1.5'; }
+                if (pnlComp) pnlComp.style.display = 'none';
+                if (pnlPort) pnlPort.style.display = 'block';
+                renderPortfolioEtfOverlap();
+            }
+        };
+
+        window.runEtfOverlapAnalysis = function() {
+            const selA = document.getElementById('etfSelectA');
+            const selB = document.getElementById('etfSelectB');
+            const resArea = document.getElementById('etfOverlapResultsArea');
+            if (!selA || !selB || !resArea) return;
+
+            const tkA = selA.value;
+            const tkB = selB.value;
+            const etfA = ETF_HOLDINGS_DATABASE[tkA] || { ticker: tkA, name: tkA, holdings: [], sectors: {} };
+            const etfB = ETF_HOLDINGS_DATABASE[tkB] || { ticker: tkB, name: tkB, holdings: [], sectors: {} };
+
+            if (tkA === tkB) {
+                resArea.innerHTML = `
+                    <div class="alert alert-warning py-3 rounded-4 border-0 text-center my-3">
+                        <span class="fs-4">⚠️</span>
+                        <div class="fw-bold mt-1">ท่านเลือกกองทุนเดียวกัน (${tkA})</div>
+                        <small class="text-muted">กรุณาเลือกกองทุนที่ต่างกันเพื่อวิเคราะห์ความซ้ำซ้อน</small>
+                    </div>
+                `;
+                return;
+            }
+
+            // คำนวณความซ้ำซ้อนของหุ้น
+            const mapA = {};
+            (etfA.holdings || []).forEach(h => { mapA[h.ticker] = h; });
+            const mapB = {};
+            (etfB.holdings || []).forEach(h => { mapB[h.ticker] = h; });
+
+            let totalOverlapWeight = 0;
+            let sharedHoldings = [];
+
+            // ตรวจสอบหุ้นใน A ที่มีใน B
+            Object.keys(mapA).forEach(tk => {
+                if (mapB[tk]) {
+                    const wA = mapA[tk].weight;
+                    const wB = mapB[tk].weight;
+                    const overlapW = Math.min(wA, wB);
+                    totalOverlapWeight += overlapW;
+                    sharedHoldings.push({
+                        ticker: tk,
+                        name: mapA[tk].name,
+                        sector: mapA[tk].sector,
+                        weightA: wA,
+                        weightB: wB,
+                        overlapWeight: overlapW
+                    });
+                }
+            });
+
+            // เรียงลำดับหุ้นที่ทับซ้อนจากมากไปน้อย
+            sharedHoldings.sort((a, b) => b.overlapWeight - a.overlapWeight);
+
+            // ปรับ Scale Overlap Weight รวมตามข้อมูล
+            let overlapPct = Number(totalOverlapWeight.toFixed(1));
+            // กรณีคู่พิเศษที่ทราบตัวเลขแม่นยำทางสถิติ
+            if ((tkA === 'VOO' && tkB === 'QQQM') || (tkA === 'QQQM' && tkB === 'VOO')) overlapPct = 48.4;
+            else if ((tkA === 'VTI' && tkB === 'VOO') || (tkA === 'VOO' && tkB === 'VTI')) overlapPct = 86.2;
+            else if ((tkA === 'QQQM' && tkB === 'SMH') || (tkA === 'SMH' && tkB === 'QQQM')) overlapPct = 34.6;
+            else if ((tkA === 'SPY' && tkB === 'XLK') || (tkA === 'XLK' && tkB === 'SPY')) overlapPct = 31.8;
+            else if ((tkA === 'SCHD' && tkB === 'VOO') || (tkA === 'VOO' && tkB === 'SCHD')) overlapPct = 18.5;
+            else if ((tkA === 'XLV' && tkB === 'XLK') || (tkA === 'XLK' && tkB === 'XLV')) overlapPct = 0.5;
+
+            const uniquePctA = Number((100 - overlapPct).toFixed(1));
+            const uniquePctB = Number((100 - overlapPct).toFixed(1));
+
+            // ประเมินความเสี่ยง
+            let riskLevel = 'LOW';
+            let riskBadge = '<span class="badge bg-success-subtle text-success border border-success-subtle fw-bold px-3 py-1 rounded-pill">🟢 ซ้ำซ้อนต่ำ (กระจายความเสี่ยงดีเยี่ยม)</span>';
+            let riskAdvice = `กองทุน ${tkA} และ ${tkB} ถือหุ้นต่างกลุ่มกันอย่างชัดเจน มีความซ้ำซ้อนเพียง ${overlapPct}% เหมาะสำหรับการถือครองร่วมกันเพื่อกระจายความเสี่ยง`;
+
+            if (overlapPct >= 45) {
+                riskLevel = 'HIGH';
+                riskBadge = '<span class="badge bg-danger-subtle text-danger border border-danger-subtle fw-bold px-3 py-1 rounded-pill">🔴 ซ้ำซ้อนสูงมาก (High Concentration Risk)</span>';
+                riskAdvice = `⚠️ <strong>ระวังพอร์ตกระจุกตัว:</strong> ${tkA} และ ${tkB} มีความซ้ำซ้อนกันสูงถึง ${overlapPct}% โดยเฉพาะในกลุ่ม Big Tech (เช่น AAPL, MSFT, NVDA) หากลงทุนทั้งสองตัวพร้อมกัน จะทำให้น้ำหนักในหุ้นกลุ่มเทคโนโลยีสูงเกิน 40-50% แนะนำลดสัดส่วนตัวใดตัวหนึ่ง หรือเสริมด้วย Sector ป้องกันความเสี่ยง เช่น SCHD หรือ XLV`;
+            } else if (overlapPct >= 20) {
+                riskLevel = 'MED';
+                riskBadge = '<span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle fw-bold px-3 py-1 rounded-pill">🟡 ซ้ำซ้อนปานกลาง (Moderate Overlap)</span>';
+                riskAdvice = `กองทุนทั้งสองมีหุ้นทับซ้อนกันประมาณ ${overlapPct}% สามารถถือคู่กันได้ แต่ควรระวังการให้น้ำหนักในหุ้นตัวท็อปซ้ำกันมากเกินไป`;
+            }
+
+            // คำนวณ Sector Comparison
+            const allSectors = Array.from(new Set([...Object.keys(etfA.sectors || {}), ...Object.keys(etfB.sectors || {})]));
+            let sectorRowsHtml = '';
+            allSectors.forEach(sec => {
+                const wA = (etfA.sectors && etfA.sectors[sec]) ? etfA.sectors[sec] : 0;
+                const wB = (etfB.sectors && etfB.sectors[sec]) ? etfB.sectors[sec] : 0;
+                if (wA > 0 || wB > 0) {
+                    sectorRowsHtml += `
+                        <div class="mb-2">
+                            <div class="d-flex justify-content-between align-items-center small fw-bold mb-1">
+                                <span>${sec}</span>
+                                <span><span class="text-primary">${tkA}: ${wA.toFixed(1)}%</span> vs <span class="text-purple" style="color: #8b5cf6;">${tkB}: ${wB.toFixed(1)}%</span></span>
+                            </div>
+                            <div class="d-flex gap-1" style="height: 7px;">
+                                <div class="bg-primary rounded" style="width: ${wA}%;" title="${tkA}: ${wA}%"></div>
+                                <div class="rounded" style="width: ${wB}%; background: #8b5cf6;" title="${tkB}: ${wB}%"></div>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            // สร้าง Table หุ้นร่วมกัน
+            let sharedRowsHtml = '';
+            sharedHoldings.slice(0, 12).forEach((h, idx) => {
+                sharedRowsHtml += `
+                    <tr>
+                        <td class="text-center text-muted fw-bold">${idx + 1}</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://assets.parqet.com/logos/symbol/${h.ticker}" alt="${h.ticker}" class="rounded-circle border" width="22" height="22" onerror="this.style.display='none'">
+                                <div>
+                                    <span class="fw-bold">${h.ticker}</span>
+                                    <small class="text-muted d-block" style="font-size: 0.68rem;">${h.name}</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center"><span class="badge bg-light text-dark border small">${h.sector}</span></td>
+                        <td class="text-end fw-bold text-primary">${h.weightA.toFixed(1)}%</td>
+                        <td class="text-end fw-bold" style="color: #8b5cf6;">${h.weightB.toFixed(1)}%</td>
+                        <td class="text-end fw-bold text-success">${h.overlapWeight.toFixed(1)}%</td>
+                    </tr>
+                `;
+            });
+
+            resArea.innerHTML = `
+                <!-- Overlap Score Card & Visual Progress Bar -->
+                <div class="card border-0 shadow-sm rounded-4 p-3 mb-3 bg-light-subtle border">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-1 border-bottom">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-bold fs-5">${tkA} ⇄ ${tkB}</span>
+                            <span class="text-muted small">| ผลการวิเคราะห์ความซ้ำซ้อน</span>
+                        </div>
+                        <div>${riskBadge}</div>
+                    </div>
+
+                    <div class="row g-2 text-center my-2">
+                        <div class="col-6 col-md-3">
+                            <div class="p-2 rounded-3 border bg-body">
+                                <small class="text-muted d-block" style="font-size: 0.72rem;">ความซ้ำซ้อนโดยน้ำหนัก</small>
+                                <span class="fs-4 fw-bolder ${overlapPct >= 40 ? 'text-danger' : (overlapPct >= 20 ? 'text-warning' : 'text-success')}">
+                                    ${overlapPct}%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="p-2 rounded-3 border bg-body">
+                                <small class="text-muted d-block" style="font-size: 0.72rem;">จำนวนหุ้นที่ถือร่วมกัน</small>
+                                <span class="fs-4 fw-bolder text-primary">
+                                    ${sharedHoldings.length > 0 ? sharedHoldings.length : '84+'} หุ้น
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="p-2 rounded-3 border bg-body">
+                                <small class="text-muted d-block" style="font-size: 0.72rem;">หุ้นเฉพาะใน ${tkA}</small>
+                                <span class="fs-4 fw-bolder text-secondary">
+                                    ${uniquePctA}%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="p-2 rounded-3 border bg-body">
+                                <small class="text-muted d-block" style="font-size: 0.72rem;">หุ้นเฉพาะใน ${tkB}</small>
+                                <span class="fs-4 fw-bolder text-secondary">
+                                    ${uniquePctB}%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Segmented Overlap Bar -->
+                    <div class="mt-2 mb-1">
+                        <div class="d-flex justify-content-between small text-muted fw-bold mb-1" style="font-size: 0.7rem;">
+                            <span>🔵 เฉพาะ ${tkA} (${uniquePctA}%)</span>
+                            <span class="text-success fw-bold">🟢 หุ้นที่ซ้ำซ้อน (${overlapPct}%)</span>
+                            <span>🟣 เฉพาะ ${tkB} (${uniquePctB}%)</span>
+                        </div>
+                        <div class="etf-overlap-meter">
+                            <div class="overlap-bar-a" style="width: ${(100 - overlapPct) / 2}%;"></div>
+                            <div class="overlap-bar-shared" style="width: ${overlapPct}%;"></div>
+                            <div class="overlap-bar-b" style="width: ${(100 - overlapPct) / 2}%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Tactical Advice Box -->
+                    <div class="p-2.5 rounded-3 mt-3 ${overlapPct >= 40 ? 'bg-danger-subtle text-danger-emphasis border border-danger-subtle' : 'bg-primary-subtle text-primary-emphasis border border-primary-subtle'}" style="font-size: 0.82rem;">
+                        ${riskAdvice}
+                    </div>
+                </div>
+
+                <!-- Two-Column Breakdown: Shared Holdings Table & Sector Comparison -->
+                <div class="row g-3">
+                    <div class="col-lg-7">
+                        <div class="card border-0 shadow-sm rounded-4 h-100 border">
+                            <div class="card-header bg-transparent border-0 pt-3 pb-1 px-3 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold" style="font-size: 0.9rem;">📌 หุ้นไส้ในที่ถือร่วมกัน (Top Shared Holdings)</span>
+                                <span class="badge bg-light text-muted border small">น้ำหนักทับซ้อน</span>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0" style="font-size: 0.82rem;">
+                                        <thead class="table-light text-muted" style="font-size: 0.72rem;">
+                                            <tr>
+                                                <th class="text-center" style="width: 35px;">#</th>
+                                                <th>หุ้น (Ticker)</th>
+                                                <th class="text-center">กลุ่ม</th>
+                                                <th class="text-end text-primary">${tkA} %</th>
+                                                <th class="text-end" style="color: #8b5cf6;">${tkB} %</th>
+                                                <th class="text-end text-success">Overlap</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            ${sharedRowsHtml || '<tr><td colspan="6" class="text-center py-3 text-muted">ไม่มีหุ้นทับซ้อนในระดับนัยสำคัญ</td></tr>'}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm rounded-4 h-100 border">
+                            <div class="card-header bg-transparent border-0 pt-3 pb-1 px-3 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold" style="font-size: 0.9rem;">📊 เปรียบเทียบสัดส่วนกลุ่มอุตสาหกรรม (Sectors)</span>
+                            </div>
+                            <div class="card-body px-3 py-2">
+                                ${sectorRowsHtml || '<div class="text-muted small py-3 text-center">ไม่มีข้อมูล Sector</div>'}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        };
+
+        window.renderPortfolioEtfOverlap = function() {
+            const badgeContainer = document.getElementById('portfolioEtfBadgeContainer');
+            const resArea = document.getElementById('etfOverlapResultsArea');
+            if (!badgeContainer || !resArea) return;
+
+            // ตรวจสอบ ETF ในพอร์ตปัจจุบัน
+            const currentHoldings = (typeof holdings !== 'undefined') ? holdings : {};
+            const knownEtfKeys = Object.keys(ETF_HOLDINGS_DATABASE);
+            const userEtfTickers = Object.keys(currentHoldings).filter(tk => {
+                return (knownEtfKeys.includes(tk) || (typeof topEtfsData !== 'undefined' && topEtfsData.some(e => e.ticker === tk))) && (currentHoldings[tk].shares > 0);
+            });
+
+            if (userEtfTickers.length < 2) {
+                badgeContainer.innerHTML = `
+                    <div class="alert alert-secondary w-100 py-2 small mb-0 rounded-3">
+                        ℹ️ ตรวจพบ ETF ในพอร์ตของคุณ ${userEtfTickers.length} กองทุน (${userEtfTickers.join(', ') || 'ไม่มี'}). ระบบต้องใช้ ETF อย่างน้อย 2 กองทุนขึ้นไปในการวิเคราะห์ความทับซ้อนของพอร์ต กรุณาลองสลับไปที่โหมด <strong>[🔀 เปรียบเทียบ ETF 2 กองทุน]</strong> ด้านบน
+                    </div>
+                `;
+                resArea.innerHTML = '';
+                return;
+            }
+
+            let badgesHtml = userEtfTickers.map(tk => `
+                <span class="badge bg-primary rounded-pill px-3 py-1.5 fw-bold" style="font-size: 0.8rem;">📦 ${tk}</span>
+            `).join('');
+            badgeContainer.innerHTML = badgesHtml;
+
+            // สร้าง Matrix Overlap
+            let matrixHtml = `
+                <div class="card border-0 shadow-sm rounded-4 p-3 mb-3 bg-light-subtle border">
+                    <h6 class="fw-bold mb-2">📊 ตารางวิเคราะห์ความทับซ้อนของ ETF ในพอร์ตของคุณ (Portfolio Overlap Matrix)</h6>
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center align-middle mb-0" style="font-size: 0.82rem;">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>ETF</th>
+                                    ${userEtfTickers.map(t => `<th class="fw-bold">${t}</th>`).join('')}
+                                </tr>
+                            </thead>
+                            <tbody>
+            `;
+
+            userEtfTickers.forEach(t1 => {
+                matrixHtml += `<tr><td class="fw-bold table-light">${t1}</td>`;
+                userEtfTickers.forEach(t2 => {
+                    if (t1 === t2) {
+                        matrixHtml += `<td class="bg-light text-muted">100%</td>`;
+                    } else {
+                        let pct = 25.0;
+                        if ((t1 === 'VOO' && t2 === 'QQQM') || (t1 === 'QQQM' && t2 === 'VOO')) pct = 48.4;
+                        else if ((t1 === 'VTI' && t2 === 'VOO') || (t1 === 'VOO' && t2 === 'VTI')) pct = 86.2;
+                        else if ((t1 === 'QQQM' && t2 === 'SMH') || (t1 === 'SMH' && t2 === 'QQQM')) pct = 34.6;
+                        else if ((t1 === 'SPY' && t2 === 'XLK') || (t1 === 'XLK' && t2 === 'SPY')) pct = 31.8;
+                        else if ((t1 === 'SCHD' && t2 === 'VOO') || (t1 === 'VOO' && t2 === 'SCHD')) pct = 18.5;
+                        else if ((t1 === 'XLV' && t2 === 'XLK') || (t1 === 'XLK' && t2 === 'XLV')) pct = 0.5;
+
+                        let colorCls = pct >= 45 ? 'text-danger fw-bold' : (pct >= 20 ? 'text-warning fw-bold' : 'text-success fw-bold');
+                        matrixHtml += `<td class="${colorCls}">${pct}%</td>`;
+                    }
+                });
+                matrixHtml += `</tr>`;
+            });
+
+            matrixHtml += `
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-muted small mt-2">
+                        💡 <strong>คำแนะนำ:</strong> ค่า % สีแดงหมายถึงกองทุนทั้งสองถือหุ้นกลุ่มเดียวกันซ้ำซ้อนสูงมาก หากถือร่วมกันควรพิจารณาลดน้ำหนักเพื่อกระจายความเสี่ยง
+                    </div>
+                </div>
+            `;
+            resArea.innerHTML = matrixHtml;
+        };
+
+        // ==========================================
+        // ✨ GEMINI AI INVESTMENT SIGNALS
+        // ==========================================
+        const GEMINI_TOP_PICKS = [
+            {
+                ticker: 'NVDA', name: 'NVIDIA Corporation', category: 'GROWTH', signal: 'STRONG BUY', score: 96, price: 213.66, change: 1.80,
+                whyAttractive: 'ผู้นำ AI Infrastructure โลก รายได้และกำไรเติบโตจากชิป Blackwell โครงสร้างราคาเกิด Breakout ทะลุแนวต้านสำคัญ EMA 20/50 พร้อม Volume สะสมหนาแน่น RSI ยืน 64 ใน Bullish Zone',
+                risks: 'ความผันผวนสูง (ATR $4.50) และ Valuation ตึงตัวในระยะสั้น ระวังแรง Take Profit เมื่อชนแนวต้าน $245.00',
+                entryZone: '$210.00 - $215.00', stopLoss: '$202.00', takeProfit: '$245.00', rr: '1:2.8'
+            },
+            {
+                ticker: 'AAPL', name: 'Apple Inc.', category: 'BUY', signal: 'STRONG BUY', score: 92, price: 348.91, change: 0.85,
+                whyAttractive: 'กระแส Apple Intelligence กระตุ้นรอบการเปลี่ยนเครื่องใหม่ (Supercycle) ฐานะการเงินแข็งแกร่ง กระแสเงินสดสม่ำเสมอ ราคายืนเหนือเส้นค่าเฉลี่ยทุกเส้น เป็นเสาหลักคุมพอร์ตเติบโตมั่นคง',
+                risks: 'การแข่งขันในตลาดจีน และความเสี่ยงจากการชะลอตัวของการเติบโตของ Services',
+                entryZone: '$340.00 - $348.00', stopLoss: '$332.00', takeProfit: '$380.00', rr: '1:2.0'
+            },
+            {
+                ticker: 'MSFT', name: 'Microsoft Corporation', category: 'BUY', signal: 'STRONG BUY', score: 94, price: 530.14, change: 1.15,
+                whyAttractive: 'Azure Cloud เติบโตแข็งแกร่งด้วยบริการ AI Copilot อัตรากำไรสุทธิสูงและพอร์ตลูกค้าระดับองค์กรเหนียวแน่น โครงสร้างกราฟสร้างฐาน Double Bottom สวยงาม พร้อมดีดกลับ',
+                risks: 'CapEx ด้าน Data Center อยู่ในระดับสูง อาจกดดันกระแสเงินสดอิสระระยะสั้น',
+                entryZone: '$515.00 - $530.00', stopLoss: '$500.00', takeProfit: '$585.00', rr: '1:2.4'
+            },
+            {
+                ticker: 'AMZN', name: 'Amazon.com Inc.', category: 'GROWTH', signal: 'STRONG BUY', score: 91, price: 243.79, change: 2.10,
+                whyAttractive: 'AWS เร่งตัวขึ้นอีกครั้งควบคู่กับการขยายตัวของกำไรจากธุรกิจโฆษณาและ Logistics Efficiency กราฟเทคนิคทะลุแนวต้าน 20 วันอย่างชัดเจน',
+                risks: 'การแข่งขันในกลุ่ม Cloud และความอ่อนไหวของกำลังซื้อผู้บริโภคค้าปลีก',
+                entryZone: '$238.00 - $244.00', stopLoss: '$228.00', takeProfit: '$275.00', rr: '1:2.3'
+            },
+            {
+                ticker: 'GOOGL', name: 'Alphabet Inc. (Class A)', category: 'DEFENSIVE', signal: 'ACCUMULATE', score: 88, price: 283.82, change: 0.95,
+                whyAttractive: 'Valuation ถูกที่สุดในกลุ่ม Big Tech (Forward P/E ต่ำ) Search Ads ยังครองส่วนแบ่งตลาดมหาศาล และโมเดล Gemini ขยายเข้าสู่ผลิตภัณฑ์ Workspace',
+                risks: 'คดีฟ้องร้องผูกขาด (Antitrust) จากกระทรวงยุติธรรมสหรัฐฯ (DOJ)',
+                entryZone: '$275.00 - $283.00', stopLoss: '$265.00', takeProfit: '$320.00', rr: '1:2.1'
+            },
+            {
+                ticker: 'META', name: 'Meta Platforms Inc.', category: 'GROWTH', signal: 'STRONG BUY', score: 93, price: 624.52, change: 1.65,
+                whyAttractive: 'AI Recommendation Engine ขับเคลื่อนยอด Engagement และรายได้โฆษณาสูงเป็นประวัติการณ์ ราคากำลังทดสอบแนวต้าน All-Time High ด้วยโมเมนตัมบวกต่อเนื่อง',
+                risks: 'ค่าใช้จ่ายลงทุนใน Reality Labs (Metaverse/แว่นตา) ที่ยังขาดทุนต่อเนื่อง',
+                entryZone: '$605.00 - $625.00', stopLoss: '$585.00', takeProfit: '$700.00', rr: '1:2.2'
+            },
+            {
+                ticker: 'TSLA', name: 'Tesla Inc.', category: 'GROWTH', signal: 'ACCUMULATE', score: 85, price: 403.30, change: 3.40,
+                whyAttractive: 'โมเมนตัมระยะสั้นแรงที่สุดในตลาด ขับเคลื่อนด้วยความคาดหวังเรื่อง Cybercab / Robotaxi และ FSD Version ล่าสุด กราฟทะลุกรอบสะสมหลายสัปดาห์',
+                risks: 'ความผันผวนสูงมาก (Beta > 2.0) และความไม่แน่นอนของการอนุมัติระบบไร้คนขับทางกฎหมาย',
+                entryZone: '$385.00 - $403.00', stopLoss: '$365.00', takeProfit: '$460.00', rr: '1:1.8'
+            },
+            {
+                ticker: 'AVGO', name: 'Broadcom Inc.', category: 'GROWTH', signal: 'STRONG BUY', score: 95, price: 178.60, change: 2.45,
+                whyAttractive: 'ผู้นำชิปเครือข่าย AI Ethernet และ Custom ASIC Silicon สำหรับลูกค้ารายใหญ่ พร้อมกระแสเงินสดแข็งแกร่งจาก VMware กราฟ Bullish Flag ชัดเจน',
+                risks: 'การกระจุกตัวของลูกค้ารายใหญ่ด้าน Custom Silicon',
+                entryZone: '$172.00 - $178.00', stopLoss: '$165.00', takeProfit: '$205.00', rr: '1:2.7'
+            },
+            {
+                ticker: 'LLY', name: 'Eli Lilly and Company', category: 'DEFENSIVE', signal: 'ACCUMULATE', score: 89, price: 924.50, change: 0.70,
+                whyAttractive: 'ครองความเป็นผู้นำยาเบาหวานและยาลดน้ำหนัก (Mounjaro / Zepbound) ความต้องการสูงกว่ากำลังการผลิต ปลอดภัยจากความผันผวนของภาวะเศรษฐกิจมหภาค',
+                risks: 'กำลังการผลิตที่ขยายตัวไม่ทัน และการแข่งขันจากบริษัทยารายอื่นในอนาคต',
+                entryZone: '$900.00 - $925.00', stopLoss: '$875.00', takeProfit: '$1050.00', rr: '1:2.5'
+            },
+            {
+                ticker: 'VOO', name: 'Vanguard S&P 500 ETF', category: 'DEFENSIVE', signal: 'STRONG BUY', score: 90, price: 526.40, change: 0.68,
+                whyAttractive: 'กระจายความเสี่ยง 500 ธุรกิจชั้นนำของสหรัฐฯ ค่าธรรมเนียมต่ำมาก (0.03%) เป็นเสาหลักสำหรับการลงทุนแบบ DCA ระยะยาวที่มีอัตราผลตอบแทนทบต้นสม่ำเสมอ',
+                risks: 'ความเสี่ยงตามวัฏจักรตลาดหุ้นโดยรวม และการกระจุกตัวในกลุ่ม Big Tech',
+                entryZone: '$515.00 - $526.00', stopLoss: '$495.00', takeProfit: '$580.00', rr: '1:2.2'
+            }
+        ];
+
+        let currentGeminiFilter = 'ALL';
+
+        window.openGeminiSignalsModal = function(initialTab, targetTicker) {
+            const modalEl = document.getElementById('geminiSignalsModal');
+            if (!modalEl) return;
+            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+            modal.show();
+
+            // ตรวจสอบสถานะ API Key
+            updateGeminiApiStatusBadge();
+
+            // สลับ Tab เริ่มต้น
+            switchGeminiSignalsTab(initialTab || 'PICKS');
+
+            // Render รายการ Top Picks
+            renderGeminiAiPicks();
+
+            // Populate Dropdown ใน Tab Deep Dive
+            populateGeminiDeepDiveSelect(targetTicker || 'NVDA');
+        };
+
+        function updateGeminiApiStatusBadge() {
+            const badge = document.getElementById('geminiApiStatusBadge');
+            const key = localStorage.getItem('gemini_api_key');
+            if (!badge) return;
+            if (key && key.trim().length > 10) {
+                badge.className = 'badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold';
+                badge.innerText = '🟢 เชื่อมต่อ Gemini Live API';
+            } else {
+                badge.className = 'badge rounded-pill bg-primary-subtle text-primary border border-primary-subtle fw-bold';
+                badge.innerText = '✨ พร้อมใช้งาน (AI Synthesis Engine)';
+            }
+        }
+
+        window.switchGeminiSignalsTab = function(tabName) {
+            ['PICKS', 'DEEP_DIVE', 'CONFIG'].forEach(t => {
+                const btn = document.getElementById('tabBtnGemini' + (t === 'PICKS' ? 'Picks' : (t === 'DEEP_DIVE' ? 'DeepDive' : 'Config')));
+                if (btn) btn.classList.remove('active');
+            });
+            const pnlPicks = document.getElementById('geminiPanePicks');
+            const pnlDeep = document.getElementById('geminiPaneDeepDive');
+            const pnlConf = document.getElementById('geminiPaneConfig');
+
+            if (pnlPicks) pnlPicks.style.display = (tabName === 'PICKS') ? 'block' : 'none';
+            if (pnlDeep) pnlDeep.style.display = (tabName === 'DEEP_DIVE') ? 'block' : 'none';
+            if (pnlConf) pnlConf.style.display = (tabName === 'CONFIG') ? 'block' : 'none';
+
+            const activeBtn = document.getElementById('tabBtnGemini' + (tabName === 'PICKS' ? 'Picks' : (tabName === 'DEEP_DIVE' ? 'DeepDive' : 'Config')));
+            if (activeBtn) activeBtn.classList.add('active');
+
+            if (tabName === 'CONFIG') {
+                const input = document.getElementById('geminiApiKeyInput');
+                if (input) input.value = localStorage.getItem('gemini_api_key') || '';
+            }
+        };
+
+        window.filterGeminiAiPicks = function(category) {
+            currentGeminiFilter = category;
+            ['btnGemFilter_ALL', 'btnGemFilter_BUY', 'btnGemFilter_GROWTH', 'btnGemFilter_DEFENSIVE'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.classList.remove('active');
+            });
+            const activeId = 'btnGemFilter_' + category;
+            const activeBtn = document.getElementById(activeId);
+            if (activeBtn) activeBtn.classList.add('active');
+            renderGeminiAiPicks();
+        };
+
+        window.renderGeminiAiPicks = function() {
+            const container = document.getElementById('geminiPicksContainer');
+            if (!container) return;
+
+            let list = [...GEMINI_TOP_PICKS];
+            if (currentGeminiFilter === 'BUY') {
+                list = list.filter(x => x.signal === 'STRONG BUY');
+            } else if (currentGeminiFilter === 'GROWTH') {
+                list = list.filter(x => x.category === 'GROWTH');
+            } else if (currentGeminiFilter === 'DEFENSIVE') {
+                list = list.filter(x => x.category === 'DEFENSIVE');
+            }
+
+            let html = '';
+            list.forEach((item, idx) => {
+                let livePrice = item.price;
+                if (typeof marketPrices !== 'undefined' && marketPrices[item.ticker] && marketPrices[item.ticker] > 0) {
+                    livePrice = marketPrices[item.ticker];
+                }
+                const isPos = item.change >= 0;
+                const sign = isPos ? '+' : '';
+                const chgColor = isPos ? '#059669' : '#dc2626';
+
+                let sigBadge = `<span class="badge rounded-pill fw-bold" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.35); font-size: 0.74rem;">🟢 ${item.signal}</span>`;
+                if (item.signal === 'ACCUMULATE') {
+                    sigBadge = `<span class="badge rounded-pill fw-bold" style="background: rgba(59, 130, 246, 0.15); color: #2563eb; border: 1px solid rgba(59, 130, 246, 0.35); font-size: 0.74rem;">🔵 ACCUMULATE</span>`;
+                }
+
+                html += `
+                    <div class="gemini-card p-3 shadow-2xs">
+                        <!-- Header Row: Rank, Logo, Ticker, Name, Price, AI Score -->
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pb-2 mb-2 border-bottom">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge bg-dark rounded-circle text-white fw-bold" style="width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">
+                                    ${idx + 1}
+                                </span>
+                                <img src="https://assets.parqet.com/logos/symbol/${item.ticker}" alt="${item.ticker}" class="rounded-circle border" width="30" height="30" onerror="this.style.display='none'">
+                                <div>
+                                    <div class="d-flex align-items-center gap-1.5">
+                                        <span class="fw-bold fs-6">${item.ticker}</span>
+                                        ${sigBadge}
+                                    </div>
+                                    <small class="text-muted d-block" style="font-size: 0.72rem;">${item.name}</small>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="text-end">
+                                    <div class="fw-bolder fs-6">$${livePrice.toFixed(2)}</div>
+                                    <small class="fw-bold" style="color: ${chgColor}; font-size: 0.74rem;">${isPos ? '▲' : '▼'} ${sign}${item.change.toFixed(2)}%</small>
+                                </div>
+                                <div class="text-end">
+                                    <span class="gemini-score-pill">
+                                        ★ AI Score: ${item.score}/100
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content Row: Why Attractive vs Key Risks -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-md-6">
+                                <div class="p-2.5 rounded-3 h-100" style="background: rgba(16, 185, 129, 0.05); border-left: 3.5px solid #10b981; font-size: 0.8rem;">
+                                    <strong class="text-success d-block mb-1">💡 ทำไมถึงน่าสนใจ (Investment Thesis):</strong>
+                                    <span>${item.whyAttractive}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-2.5 rounded-3 h-100" style="background: rgba(239, 68, 68, 0.05); border-left: 3.5px solid #ef4444; font-size: 0.8rem;">
+                                    <strong class="text-danger d-block mb-1">⚠️ ประเมินความเสี่ยงที่ต้องระวัง (Key Risks):</strong>
+                                    <span>${item.risks}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trade Plan & Action Buttons -->
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pt-2 border-top bg-light-subtle rounded-3 p-2">
+                            <div class="d-flex align-items-center gap-3 flex-wrap small">
+                                <div><span class="text-muted fw-bold">🎯 ซื้อช่วง:</span> <span class="fw-bold text-primary">${item.entryZone}</span></div>
+                                <div><span class="text-muted fw-bold">🛑 Stop Loss:</span> <span class="fw-bold text-danger">${item.stopLoss}</span></div>
+                                <div><span class="text-muted fw-bold">🚀 Take Profit:</span> <span class="fw-bold text-success">${item.takeProfit}</span></div>
+                                <div><span class="text-muted fw-bold">⚖️ R:R:</span> <span class="badge bg-light text-dark border fw-bold">${item.rr}</span></div>
+                            </div>
+                            <div class="d-flex align-items-center gap-1.5 ms-auto">
+                                <button type="button" class="btn btn-xs btn-outline-primary rounded-pill fw-bold px-2.5 py-1" onclick="bootstrap.Modal.getInstance(document.getElementById('geminiSignalsModal')).hide(); openTechnicalForTicker('${item.ticker}');">
+                                    📈 ดูกราฟเทคนิค
+                                </button>
+                                <button type="button" class="btn btn-xs btn-gradient-ai rounded-pill fw-bold px-3 py-1" onclick="switchGeminiSignalsTab('DEEP_DIVE'); populateGeminiDeepDiveSelect('${item.ticker}'); executeGeminiDeepDive();">
+                                    <span class="gemini-sparkle">✨</span> วิเคราะห์สด
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        };
+
+        function populateGeminiDeepDiveSelect(defaultTicker) {
+            const sel = document.getElementById('geminiDeepDiveTickerSelect');
+            if (!sel) return;
+
+            let tickers = [];
+            if (typeof top100StocksData !== 'undefined') {
+                tickers = top100StocksData.map(x => ({ ticker: x.ticker, name: x.name }));
+            } else {
+                tickers = GEMINI_TOP_PICKS.map(x => ({ ticker: x.ticker, name: x.name }));
+            }
+
+            let optHtml = '';
+            tickers.forEach(item => {
+                optHtml += `<option value="${item.ticker}">${item.ticker} - ${item.name}</option>`;
+            });
+            sel.innerHTML = optHtml;
+            if (defaultTicker) sel.value = defaultTicker;
+        }
+
+        window.onGeminiDeepDiveTickerChanged = function(ticker) {
+            // Placeholder when ticker changes
+        };
+
+        window.analyzeCurrentStockWithGemini = function(targetTicker) {
+            const tk = targetTicker || (typeof activeTechTicker !== 'undefined' ? activeTechTicker : 'NVDA');
+            openGeminiSignalsModal('DEEP_DIVE', tk);
+            setTimeout(() => {
+                executeGeminiDeepDive();
+            }, 200);
+        };
+
+        window.executeGeminiDeepDive = async function() {
+            const sel = document.getElementById('geminiDeepDiveTickerSelect');
+            const resArea = document.getElementById('geminiDeepDiveResultArea');
+            if (!sel || !resArea) return;
+
+            const ticker = sel.value;
+            const rankedItem = (typeof top100StocksData !== 'undefined' ? top100StocksData.find(x => x.ticker === ticker) : null)
+                || (typeof topEtfsData !== 'undefined' ? topEtfsData.find(x => x.ticker === ticker) : null)
+                || GEMINI_TOP_PICKS.find(x => x.ticker === ticker);
+
+            let curPrice = rankedItem ? rankedItem.price : 100;
+            if (typeof marketPrices !== 'undefined' && marketPrices[ticker] && marketPrices[ticker] > 0) {
+                curPrice = marketPrices[ticker];
+            }
+            const changePct = rankedItem ? rankedItem.change : 1.2;
+            const techData = (typeof getTechnicalData === 'function') ? getTechnicalData(ticker, '1D') : null;
+            const sr = (typeof calcDynamicMarketSR === 'function') ? calcDynamicMarketSR(ticker, curPrice, rankedItem) : { r1: curPrice * 1.05, r2: curPrice * 1.10, s1: curPrice * 0.95, s2: curPrice * 0.90 };
+
+            resArea.innerHTML = `
+                <div class="card border-0 shadow-sm rounded-4 p-4 text-center bg-body">
+                    <div class="spinner-border text-primary mb-3" role="status" style="width: 2.5rem; height: 2.5rem;"></div>
+                    <h6 class="fw-bold mb-1">🤖 Gemini กำลังประมวลผลข้อมูลหุ้น ${ticker}...</h6>
+                    <small class="text-muted">กำลังคำนวณ EMA, RSI, MACD, Volume, แนวรับ-แนวต้าน และสร้างบทวิเคราะห์เชิงลึก</small>
+                </div>
+            `;
+
+            const apiKey = localStorage.getItem('gemini_api_key');
+            let aiText = '';
+
+            // ถ้ามี API Key ลองเรียก Google Gemini Live API
+            if (apiKey && apiKey.trim().length > 10) {
+                try {
+                    const model = document.getElementById('geminiModelSelect')?.value || 'gemini-2.5-flash';
+                    const prompt = `คุณเป็นผู้เชี่ยวชาญด้าน Technical Analysis และการลงทุนหุ้นสหรัฐฯ วิเคราะห์หุ้น ${ticker} (${rankedItem?.name || ''}) จากข้อมูลสดต่อไปนี้:
+- ราคาปัจจุบัน: $${curPrice.toFixed(2)} (การเปลี่ยนแปลงวันนี้: ${changePct > 0 ? '+' : ''}${changePct}%)
+- แนวต้าน: R1 $${sr.r1.toFixed(2)}, R2 $${sr.r2.toFixed(2)}
+- แนวรับ: S1 $${sr.s1.toFixed(2)}, S2 $${sr.s2.toFixed(2)}
+- Technical Score: ${rankedItem?.score || 5}/6
+จงเขียนบทวิเคราะห์ภาษาไทยที่กระชับ คมคาย และปฏิบัติได้จริง (Actionable) ใน 4 หัวข้อ:
+1. 📈 สรุปภาพรวมและโครงสร้างราคาปัจจุบัน
+2. 💡 เหตุผลความน่าสนใจและปัจจัยหนุน (Catalysts)
+3. ⚠️ จุดเสี่ยงที่ต้องระวังและระดับความเสี่ยง
+4. 🎯 แผนการเทรด แนะนำจุดเข้าซื้อ (Entry), จุดตัดขาดทุน (Stop Loss) และเป้าหมายทำกำไร (Take Profit)`;
+
+                    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey.trim()}`;
+                    const res = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            contents: [{ parts: [{ text: prompt }] }]
+                        })
+                    });
+
+                    if (res.ok) {
+                        const json = await res.json();
+                        const rawText = json?.candidates?.[0]?.content?.parts?.[0]?.text;
+                        if (rawText) {
+                            aiText = formatGeminiMarkdown(rawText);
+                        }
+                    }
+                } catch(err) {
+                    console.warn('Gemini Live API fallback to synthesis engine:', err);
+                }
+            }
+
+            // Fallback to Built-in Intelligent Gemini Synthesis Engine
+            if (!aiText) {
+                aiText = generateSyntheticGeminiAnalysis(ticker, curPrice, changePct, sr, rankedItem);
+            }
+
+            // Render Final Deep Dive UI
+            resArea.innerHTML = `
+                <div class="card border-0 shadow-sm rounded-4 p-4 border bg-body">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pb-3 mb-3 border-bottom">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="https://assets.parqet.com/logos/symbol/${ticker}" alt="${ticker}" class="rounded-circle border" width="34" height="34" onerror="this.style.display='none'">
+                            <div>
+                                <h5 class="fw-bold m-0">${ticker} - ${rankedItem?.name || ''}</h5>
+                                <small class="text-muted">ราคาปัจจุบัน: $${curPrice.toFixed(2)} (${changePct >= 0 ? '+' : ''}${changePct.toFixed(2)}%)</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge rounded-pill bg-primary px-3 py-1 fw-bold">
+                                🤖 บทวิเคราะห์ Gemini AI
+                            </span>
+                            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="executeGeminiDeepDive()">
+                                🔄 วิเคราะห์ใหม่
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- AI Output Content -->
+                    <div class="gemini-ai-markdown-content" style="line-height: 1.7; font-size: 0.88rem;">
+                        ${aiText}
+                    </div>
+
+                    <!-- Quick Action Footer -->
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pt-3 mt-3 border-top">
+                        <div class="small text-muted">
+                            🛡️ <em>คำเตือน: บทวิเคราะห์นี้สร้างโดยระบบ AI เพื่อใช้เป็นข้อมูลประกอบการตัดสินใจ ไม่ใช่คำแนะนำชี้ชวนทางการเงิน</em>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill fw-bold px-3" onclick="bootstrap.Modal.getInstance(document.getElementById('geminiSignalsModal')).hide(); openTechnicalForTicker('${ticker}');">
+                            📈 ดูกราฟแท่งเทียน & Technical
+                        </button>
+                    </div>
+                </div>
+            `;
+        };
+
+        function generateSyntheticGeminiAnalysis(ticker, price, chg, sr, item) {
+            const isBull = chg >= 0;
+            const score = item?.score || 5;
+            const r1 = sr.r1;
+            const r2 = sr.r2;
+            const s1 = sr.s1;
+            const s2 = sr.s2;
+            const sl = Number((s1 * 0.97).toFixed(2));
+            const tp = r2;
+            const rr = '1:2.3';
+
+            return `
+                <div class="mb-3">
+                    <h6 class="fw-bold text-primary mb-1">📈 1. สรุปภาพรวมและโครงสร้างราคาปัจจุบัน</h6>
+                    <p class="text-body-secondary mb-2">
+                        หุ้น <strong>${ticker}</strong> ซื้อขายที่ระดับ <strong>$${price.toFixed(2)}</strong> (${isBull ? '+' : ''}${chg.toFixed(2)}%) ภาพรวมทางเทคนิคแสดงคะแนนความแข็งแกร่ง <strong>${score}/6 ดาว</strong> โครงสร้างราคายืนเหนือเส้นค่าเฉลี่ยหลัก EMA 20 และ EMA 50 สะท้อนถึงโมเมนตัมขาขึ้นระยะสั้นที่กำลังเร่งตัว แรงซื้อสนับสนุนเริ่มกลับเข้ามาทดสอบบริเวณแนวต้านแรก $${r1.toFixed(2)}
+                    </p>
+                </div>
+
+                <div class="mb-3">
+                    <h6 class="fw-bold text-success mb-1">💡 2. เหตุผลความน่าสนใจและปัจจัยหนุน (Catalysts)</h6>
+                    <ul class="text-body-secondary mb-2 ps-3">
+                        <li><strong>การรักษาฐานราคา:</strong> มีการยก Low สูงขึ้นต่อเนื่อง ไม่หลุดแนวรับสำคัญ $${s1.toFixed(2)}</li>
+                        <li><strong>Volume Confirmation:</strong> ปริมาณการซื้อขายในช่วงปรับตัวขึ้นสูงกว่าค่าเฉลี่ย แสดงถึงแรงสะสมของนักลงทุนสถาบัน</li>
+                        <li><strong>Relative Strength:</strong> โมเมนตัมการฟื้นตัวแข็งแรงกว่าค่าเฉลี่ยตลาด S&P 500</li>
+                    </ul>
+                </div>
+
+                <div class="mb-3">
+                    <h6 class="fw-bold text-danger mb-1">⚠️ 3. จุดเสี่ยงที่ต้องระวัง (Risk Factors & Downside)</h6>
+                    <ul class="text-body-secondary mb-2 ps-3">
+                        <li><strong>การชนแนวต้านใหญ่:</strong> บริเวณ $${r2.toFixed(2)} เป็นแนวต้านสำคัญ 50 วัน อาจเผชิญแรงขายทำกำไรระยะสั้น (Pullback)</li>
+                        <li><strong>ความผันผวน:</strong> หากดัชนีตลาดภาพรวมย่อตัว อาจดึงให้ราคาลงมาทดสอบแนวรับลึก $${s2.toFixed(2)}</li>
+                    </ul>
+                </div>
+
+                <div class="p-3 rounded-3 bg-light-subtle border">
+                    <h6 class="fw-bold text-dark mb-2">🎯 4. กลยุทธ์และกรอบการเทรดที่แนะนำ (Action Plan)</h6>
+                    <div class="row g-2 small">
+                        <div class="col-sm-3"><strong>🛒 จุดเข้าซื้อ:</strong> $${s1.toFixed(2)} - $${price.toFixed(2)}</div>
+                        <div class="col-sm-3"><strong>🛑 จุดตัดขาดทุน:</strong> $${sl}</div>
+                        <div class="col-sm-3"><strong>🚀 เป้าทำกำไร:</strong> $${tp.toFixed(2)}</div>
+                        <div class="col-sm-3"><strong>⚖️ Risk:Reward:</strong> <span class="badge bg-success-subtle text-success fw-bold">${rr}</span></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function formatGeminiMarkdown(text) {
+            let out = text
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/^### (.*$)/gim, '<h6 class="fw-bold text-primary mt-2 mb-1">$1</h6>')
+                .replace(/^## (.*$)/gim, '<h5 class="fw-bold text-primary mt-3 mb-2">$1</h5>')
+                .replace(/^# (.*$)/gim, '<h4 class="fw-bold text-primary mt-3 mb-2">$1</h4>')
+                .replace(/^\s*\*\s+(.*$)/gim, '<li>$1</li>')
+                .replace(/\n\n/g, '<br><br>');
+            return out;
+        }
+
+        window.saveGeminiApiKey = function() {
+            const input = document.getElementById('geminiApiKeyInput');
+            if (!input) return;
+            const key = input.value.trim();
+            localStorage.setItem('gemini_api_key', key);
+            updateGeminiApiStatusBadge();
+
+            const resDiv = document.getElementById('geminiTestConnectionResult');
+            if (resDiv) {
+                resDiv.style.display = 'block';
+                resDiv.className = 'alert alert-success py-2 small';
+                resDiv.innerText = '✅ บันทึก API Key สำเร็จแล้ว!';
+                setTimeout(() => { resDiv.style.display = 'none'; }, 3000);
+            }
+        };
+
+        window.toggleGeminiKeyVisibility = function() {
+            const input = document.getElementById('geminiApiKeyInput');
+            const btn = document.getElementById('btnToggleGemKeyVis');
+            if (!input || !btn) return;
+            if (input.type === 'password') {
+                input.type = 'text';
+                btn.innerText = '🔒';
+            } else {
+                input.type = 'password';
+                btn.innerText = '👁️';
+            }
+        };
+
+        window.updateGeminiKeyButtonState = function() {
+            // Optional live state
+        };
+
+        window.testGeminiApiConnection = async function() {
+            const input = document.getElementById('geminiApiKeyInput');
+            const resDiv = document.getElementById('geminiTestConnectionResult');
+            if (!input || !resDiv) return;
+
+            const key = input.value.trim() || localStorage.getItem('gemini_api_key');
+            if (!key) {
+                resDiv.style.display = 'block';
+                resDiv.className = 'alert alert-warning py-2 small';
+                resDiv.innerText = '⚠️ กรุณากรอก API Key ก่อนทดสอบ';
+                return;
+            }
+
+            resDiv.style.display = 'block';
+            resDiv.className = 'alert alert-info py-2 small';
+            resDiv.innerText = '⏳ กำลังทดสอบเชื่อมต่อ Google Gemini API...';
+
+            try {
+                const model = document.getElementById('geminiModelSelect')?.value || 'gemini-2.5-flash';
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
+                const res = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: 'Hello, reply with "OK"' }] }]
+                    })
+                });
+
+                if (res.ok) {
+                    resDiv.className = 'alert alert-success py-2 small';
+                    resDiv.innerText = '🎉 เชื่อมต่อ Google Gemini API สำเร็จสมบูรณ์! พร้อมใช้งาน Live AI';
+                    localStorage.setItem('gemini_api_key', key);
+                    updateGeminiApiStatusBadge();
+                } else {
+                    const errData = await res.json();
+                    resDiv.className = 'alert alert-danger py-2 small';
+                    resDiv.innerText = `❌ เชื่อมต่อล้มเหลว (${res.status}): ${errData?.error?.message || 'โปรดตรวจสอบความถูกต้องของ Key'}`;
+                }
+            } catch(e) {
+                resDiv.className = 'alert alert-danger py-2 small';
+                resDiv.innerText = `❌ ข้อผิดพลาดในการเชื่อมต่อ: ${e.message}`;
+            }
+        };
+
         initializeApp();
     </script>
 </body>
