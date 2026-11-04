@@ -125,7 +125,21 @@ Write-Host "  USD/THB = $fxVal"
 
 $nowUtc = [DateTime]::UtcNow
 $nowThai = $nowUtc.AddHours(7)
-$thaiMonthChar = [string][char]0x0E15 + [string][char]0x0E04 + "."
+$thaiMonths = @(
+    "$([char]0x0E21).$([char]0x0E04).",             # ม.ค.
+    "$([char]0x0E01).$([char]0x0E1E).",             # ก.พ.
+    "$([char]0x0E21)$([char]0x0E35).$([char]0x0E04).", # มี.ค.
+    "$([char]0x0E40)$([char]0x0E21).$([char]0x0E22).", # เม.ย.
+    "$([char]0x0E1E).$([char]0x0E04).",             # พ.ค.
+    "$([char]0x0E21)$([char]0x0E34).$([char]0x0E22).", # มิ.ย.
+    "$([char]0x0E01).$([char]0x0E04).",             # ก.ค.
+    "$([char]0x0E2A).$([char]0x0E04).",             # ส.ค.
+    "$([char]0x0E01).$([char]0x0E22).",             # ก.ย.
+    "$([char]0x0E15).$([char]0x0E04).",             # ต.ค.
+    "$([char]0x0E1E).$([char]0x0E22).",             # พ.ย.
+    "$([char]0x0E18).$([char]0x0E04)."              # ธ.ค.
+)
+$thaiMonthChar = $thaiMonths[$nowThai.Month - 1]
 $thaiNahChar = [string][char]0x0E19 + "."
 $thaiStr = "$($nowThai.Day) $thaiMonthChar $($nowThai.Year + 543) $($nowThai.ToString('HH:mm')) $thaiNahChar"
 

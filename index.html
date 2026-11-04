@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -9957,6 +9957,7 @@
                                 for (let [sym, idxData] of Object.entries(data.indices)) {
                                     if (idxData && idxData.price) {
                                         if (data.updated_at_thai) idxData.updatedAt = data.updated_at_thai;
+                                        idxData.isLive = false;
                                         marketIndices[sym] = idxData;
                                     }
                                 }
@@ -10156,11 +10157,43 @@
         };
 
         window.fetchMarketIndexFromYahoo = async function(ticker) {
-            const encodedUrl = encodeURIComponent(`https://query2.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`);
+            // 1. Custom Proxy / Cloudflare Worker (If user configured one)
+            const customProxy = (localStorage.getItem('myCustomProxyUrl') || '').trim();
+            if (customProxy) {
+                try {
+                    let pUrl = customProxy;
+                    const encodedSym = encodeURIComponent(ticker);
+                    if (pUrl.includes('{symbol}')) pUrl = pUrl.replace('{symbol}', encodedSym);
+                    else if (pUrl.endsWith('/')) pUrl = `${pUrl}${encodedSym}`;
+                    else if (pUrl.includes('?')) pUrl = `${pUrl}&symbol=${encodedSym}`;
+                    else pUrl = `${pUrl}?symbol=${encodedSym}`;
+
+                    const res = await fetchWithTimeout(pUrl, {}, 3500);
+                    if (res.ok) {
+                        const d = await res.json();
+                        const meta = (d.chart && d.chart.result && d.chart.result[0]) ? d.chart.result[0].meta : d;
+                        const price = meta.regularMarketPrice || meta.chartPreviousClose || meta.previousClose || meta.price;
+                        const prev = meta.chartPreviousClose || meta.previousClose || price;
+                        if (price && typeof price === 'number') {
+                            const diff = price - prev;
+                            const pct = prev > 0 ? (diff / prev) * 100 : 0;
+                            return {
+                                price: Number(price.toFixed(2)),
+                                prevClose: Number(prev.toFixed(2)),
+                                change: Number(diff.toFixed(2)),
+                                changePct: Number(pct.toFixed(2)),
+                                isLive: true
+                            };
+                        }
+                    }
+                } catch(e) {}
+            }
+
+            // 2. Public Fallback Proxies
+            const encodedUrl = encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d`);
             const proxies = [
                 `https://api.allorigins.win/raw?url=${encodedUrl}`,
-                `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`,
-                `https://corsproxy.io/?url=${encodedUrl}`
+                `https://api.codetabs.com/v1/proxy?quest=${encodedUrl}`
             ];
 
             for (let proxyUrl of proxies) {
@@ -10179,7 +10212,8 @@
                                     price: Number(price.toFixed(2)),
                                     prevClose: Number(prev.toFixed(2)),
                                     change: Number(diff.toFixed(2)),
-                                    changePct: Number(pct.toFixed(2))
+                                    changePct: Number(pct.toFixed(2)),
+                                    isLive: true
                                 };
                             }
                         }
@@ -14002,6 +14036,7 @@
                 let displayVal = item.value;
                 let changePct = item.changePct;
                 let isLive = false;
+                const idxObj = (typeof marketIndices !== 'undefined' && marketIndices[item.symbol]) ? marketIndices[item.symbol] : null;
 
                 if (liveObj && liveObj.price) {
                     const prefix = item.prefix || (item.id === 'GOLD' || item.id === 'WTI' ? '$' : '');
@@ -14009,7 +14044,7 @@
                     if (typeof liveObj.changePct === 'number') {
                         changePct = liveObj.changePct;
                     }
-                    isLive = true;
+                    isLive = liveObj.isLive === true;
                 }
 
                 const isPos = changePct >= 0;
@@ -14703,16 +14738,17 @@
                 let curPrice = item.value;
                 let changePct = item.changePct;
                 let isLive = false;
+                const idxObj = (typeof marketIndices !== 'undefined' && marketIndices[item.symbol]) ? marketIndices[item.symbol] : null;
 
                 if (typeof marketPrices !== 'undefined' && marketPrices[item.symbol] && marketPrices[item.symbol] > 0) {
                     curPrice = marketPrices[item.symbol];
-                    isLive = true;
+                    isLive = false;
                 } else if (typeof marketIndices !== 'undefined' && marketIndices[item.symbol] && marketIndices[item.symbol].price) {
                     curPrice = marketIndices[item.symbol].price;
                     if (typeof marketIndices[item.symbol].changePct === 'number') {
                         changePct = marketIndices[item.symbol].changePct;
                     }
-                    isLive = true;
+                    isLive = (idxObj && idxObj.isLive === true);
                 }
 
                 const isPos = changePct >= 0;

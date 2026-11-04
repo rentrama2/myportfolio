@@ -2,6 +2,7 @@
 import json
 import os
 import urllib.request
+import urllib.parse
 import datetime
 
 # Tickers to fetch
@@ -24,7 +25,7 @@ def fetch_json(url, timeout=10):
         return json.loads(response.read().decode("utf-8"))
 
 def fetch_yahoo_price(ticker):
-    sym = ticker.replace('.', '-')
+    sym = urllib.parse.quote(ticker.replace('.', '-'))
     endpoints = [
         f"https://query2.finance.yahoo.com/v8/finance/chart/{sym}?interval=1d",
         f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?interval=1d",
@@ -43,7 +44,7 @@ def fetch_yahoo_price(ticker):
     return None
 
 def fetch_yahoo_stock(ticker):
-    sym = ticker.replace('.', '-')
+    sym = urllib.parse.quote(ticker.replace('.', '-'))
     endpoints = [
         f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range=1d&interval=1m&includePrePost=true",
         f"https://query2.finance.yahoo.com/v8/finance/chart/{sym}?range=1d&interval=1m&includePrePost=true",
@@ -122,6 +123,7 @@ def fetch_yahoo_stock(ticker):
     return None, None
 
 def fetch_yahoo_index(ticker):
+    ticker = urllib.parse.quote(ticker)
     endpoints = [
         f"https://query2.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d",
         f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d",

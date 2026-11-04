@@ -24,10 +24,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run Updaters
-        run: |
-          python scripts/update_prices.py
-          python scripts/update_news.py
+      - name: Run Update Prices
+        run: python scripts/update_prices.py || true
+
+      - name: Run Update News
+        run: python scripts/update_news.py || true
 
       - name: Commit and Push Changes
         run: |
