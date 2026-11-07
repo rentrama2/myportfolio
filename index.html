@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -5113,8 +5113,12 @@
                             </div>
                             <div class="row g-3 justify-content-between align-items-end">
                                 <div class="col-lg-3 col-md-5 col-12">
-                                    <label class="form-label text-primary fw-bold" style="font-size:0.8rem;">📁 พอร์ตการลงทุน (Portfolio)</label>
+                                    <label class="form-label text-primary fw-bold d-flex justify-content-between align-items-center" style="font-size:0.8rem;">
+                                        <span>📁 พอร์ตการลงทุน (Portfolio)</span>
+                                        <span id="autoDetectedPortBadge" class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-1.5 py-0.5 rounded-pill" style="font-size: 0.65rem; display: none;">✨ ตรวจพบอัตโนมัติ</span>
+                                    </label>
                                     <select id="txnPortfolio" class="form-select form-select-sm border-primary fw-bold" style="background-color: #eff6ff;"></select>
+                                    <div id="autoDetectedPortHint" class="text-success fw-bold mt-1" style="font-size: 0.70rem; display: none;"></div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-12">
                                     <label class="form-label text-danger fw-bold" id="lblTotalTHB" style="font-size:0.8rem;">เงินบาทที่จ่ายจริง (THB) - ข้ามได้</label>
@@ -9846,17 +9850,176 @@
             }
         });
 
+        // =====================================================================
+        // SMART PORTFOLIO AUTO-DETECTION ENGINE
+        // ตรวจจับอัตโนมัติว่าหุ้นหรือ ETF อยู่ในพอร์ตไหน โดยผู้ใช้ไม่ต้องเลือกเอง
+        // =====================================================================
+        window.detectPortfolioForTicker = function(ticker) {
+            if (!ticker) return null;
+            const sym = ticker.trim().toUpperCase().replace(/\s+/g, '').replace('BRK-B', 'BRK.B');
+            if (!sym || sym === 'CASH') return null;
+
+            // 1. ตรวจสอบประวัติการถือครองจริงของผู้ใช้เป็นอันดับแรก (Existing Holdings / Transactions)
+            const sharesByPort = {};
+            let latestPort = null;
+            if (typeof transactions !== 'undefined' && Array.isArray(transactions)) {
+                transactions.forEach(t => {
+                    if (!t || !t.ticker) return;
+                    const tSym = t.ticker.trim().toUpperCase().replace(/\s+/g, '').replace('BRK-B', 'BRK.B');
+                    if (tSym === sym) {
+                        const pId = t.portfolio || 'core';
+                        latestPort = pId;
+                        if (!sharesByPort[pId]) sharesByPort[pId] = 0;
+                        if (t.type === 'BUY') sharesByPort[pId] += (t.shares || 0);
+                        else if (t.type === 'SELL') sharesByPort[pId] -= (t.shares || 0);
+                    }
+                });
+
+                // หากมีจำนวนหุ้นคงเหลือจริงในพอร์ตใด เลือกพอร์ตนั้นทันที
+                for (const [pId, sh] of Object.entries(sharesByPort)) {
+                    if (sh > 0.0001 && portfolios.some(p => p.id === pId)) {
+                        const portObj = portfolios.find(p => p.id === pId);
+                        return { portfolioId: pId, portName: portObj ? portObj.name : pId, source: 'holding', reason: 'ตรวจพบมีหุ้นอยู่ในพอร์ตนี้' };
+                    }
+                }
+                // หากเคยซื้อขายหุ้นตัวนี้มาก่อนในอดีต (แม้ขายหมดแล้ว)
+                if (latestPort && portfolios.some(p => p.id === latestPort)) {
+                    const portObj = portfolios.find(p => p.id === latestPort);
+                    return { portfolioId: latestPort, portName: portObj ? portObj.name : latestPort, source: 'history', reason: 'ตรวจพบประวัติในพอร์ตนี้' };
+                }
+            }
+
+            // 2. หมวดหมู่มาตรฐานและกฎความเหมาะสมของพอร์ต (Default Categorization Rules)
+            const findPort = (predicate, fallbackId) => {
+                const found = portfolios.find(predicate);
+                if (found) return found;
+                const fallback = portfolios.find(p => p.id === fallbackId);
+                return fallback || portfolios[0];
+            };
+
+            // ก. กลุ่ม Core ETF (ดัชนีหลักเน้นสะสมระยะยาว: VTI, VOO, VXUS, SPY, IVV, VT, SPLG, DIA, IWM)
+            const coreEtfs = ['VTI', 'VOO', 'VXUS', 'SPY', 'IVV', 'VT', 'SPLG', 'DIA', 'IWM'];
+            if (coreEtfs.includes(sym)) {
+                const p = findPort(x => x.id === 'core' || x.name.toLowerCase().includes('core') || (x.tag && x.tag.toLowerCase().includes('core')), 'core');
+                return { portfolioId: p.id, portName: p.name, source: 'rule', reason: 'กองทุนดัชนีหลัก (Core ETF)' };
+            }
+
+            // ข. กลุ่ม Retirement ETF (ปันผลสูง / กระแสเงินสดเกษียณ: JEPQ, JEPI, SCHD, SPYD, VYM, DGRO, HDV, DIVO, TLT, BND, AGG, SHY)
+            const retirementEtfs = ['JEPQ', 'JEPI', 'SCHD', 'SPYD', 'VYM', 'DGRO', 'HDV', 'DIVO', 'TLT', 'BND', 'AGG', 'SHY'];
+            if (retirementEtfs.includes(sym)) {
+                const p = findPort(x => x.id === 'retirement' || x.name.toLowerCase().includes('retire') || x.name.toLowerCase().includes('dividend') || x.name.includes('เกษียณ') || x.name.includes('ปันผล'), 'retirement');
+                return { portfolioId: p.id, portName: p.name, source: 'rule', reason: 'กองทุนเงินปันผลเกษียณ (Retirement)' };
+            }
+
+            // ค. กลุ่ม Satellite ETF (ธีมเติบโต & กลุ่มอุตสาหกรรม: SPMO, XLV, GRID, SMH, SOXX, QQQ, QQQM, VGT, XLK, XLF, XLE, XLI, XLC, XLP, XLY, XLU, XLRE, XLB, ARKK, BOTZ, IGV, GLD)
+            const satelliteEtfs = ['SPMO', 'XLV', 'GRID', 'SMH', 'SOXX', 'QQQ', 'QQQM', 'VGT', 'XLK', 'XLF', 'XLE', 'XLI', 'XLC', 'XLP', 'XLY', 'XLU', 'XLRE', 'XLB', 'ARKK', 'BOTZ', 'IGV', 'GLD'];
+            if (satelliteEtfs.includes(sym)) {
+                const p = findPort(x => x.id === 'satellite' || x.name.toLowerCase().includes('satellite') || x.name.toLowerCase().includes('growth') || x.name.includes('เติบโต'), 'satellite');
+                return { portfolioId: p.id, portName: p.name, source: 'rule', reason: 'กองทุนธีมเติบโต (Satellite ETF)' };
+            }
+
+            // ง. ตรวจสอบใน portfolioMapping: หากถูกจัดเป็น ETF
+            const mappedGroup = (typeof portfolioMapping !== 'undefined') ? (portfolioMapping[sym] || portfolioMapping[sym.replace('.', '-')]) : null;
+            if (mappedGroup === 'ETF') {
+                const p = findPort(x => x.id === 'satellite' || x.name.toLowerCase().includes('satellite') || x.id === 'core', 'core');
+                return { portfolioId: p.id, portName: p.name, source: 'rule', reason: 'กองทุน ETF' };
+            }
+
+            // จ. หุ้นรายตัวสหรัฐฯ (Individual US Stocks)
+            const isKnownStock = (typeof stockNames !== 'undefined' && stockNames[sym]) || (mappedGroup === 'Stock') || (!coreEtfs.includes(sym) && !retirementEtfs.includes(sym) && !satelliteEtfs.includes(sym));
+            if (isKnownStock) {
+                const p = findPort(x => x.id === 'stocks' || x.name.toLowerCase().includes('stock') || x.name.includes('หุ้น'), 'stocks');
+                return { portfolioId: p.id, portName: p.name, source: 'rule', reason: 'หุ้นรายตัวสหรัฐฯ (US Stocks)' };
+            }
+
+            // ฉ. ค่าสำรอง (Active Portfolio หรือพอร์ตแรก)
+            if (typeof activePortfolioId !== 'undefined' && activePortfolioId !== 'ALL' && portfolios.some(p => p.id === activePortfolioId)) {
+                const p = portfolios.find(x => x.id === activePortfolioId);
+                return { portfolioId: p.id, portName: p.name, source: 'active', reason: 'พอร์ตที่เปิดใช้งานอยู่' };
+            }
+
+            const pDefault = portfolios[0] || { id: 'core', name: 'Core ETF' };
+            return { portfolioId: pDefault.id, portName: pDefault.name, source: 'default', reason: 'พอร์ตเริ่มต้น' };
+        };
+
+        window.autoDetectAndSelectPortfolio = function(ticker) {
+            if (!ticker) return;
+            const clean = ticker.trim().toUpperCase().replace(/\s+/g, '').replace('BRK-B', 'BRK.B');
+            if (!clean || clean === 'CASH') return;
+
+            const detected = detectPortfolioForTicker(clean);
+            if (!detected || !detected.portfolioId) return;
+
+            const portSel = document.getElementById('txnPortfolio');
+            if (!portSel) return;
+
+            portSel.value = detected.portfolioId;
+
+            // Visual feedback
+            const badgeEl = document.getElementById('autoDetectedPortBadge');
+            const hintEl = document.getElementById('autoDetectedPortHint');
+
+            if (badgeEl) {
+                badgeEl.style.display = 'inline-block';
+                badgeEl.innerHTML = `✨ ตรวจพบ: <strong>${detected.portName}</strong>`;
+                badgeEl.title = detected.reason;
+            }
+            if (hintEl) {
+                hintEl.style.display = 'block';
+                hintEl.className = 'text-success fw-bold mt-1';
+                hintEl.style.fontSize = '0.70rem';
+                hintEl.innerHTML = `✓ ระบบตรวจพบและเลือกพอร์ต <strong>${detected.portName}</strong> อัตโนมัติ (${detected.reason})`;
+            }
+
+            // Border highlight feedback
+            portSel.classList.remove('border-primary');
+            portSel.classList.add('border-success', 'shadow-sm');
+            setTimeout(() => {
+                portSel.classList.remove('shadow-sm');
+            }, 1200);
+        };
+
+        // เมื่อผู้ใช้เลือกเปลี่ยนพอร์ตเองแบบ Manual ให้แสดงสถานะชัดเจน
+        const portSelectEl = document.getElementById('txnPortfolio');
+        if (portSelectEl) {
+            portSelectEl.addEventListener('change', function() {
+                const badgeEl = document.getElementById('autoDetectedPortBadge');
+                const hintEl = document.getElementById('autoDetectedPortHint');
+                if (badgeEl) badgeEl.style.display = 'none';
+                if (hintEl) {
+                    const selPort = portfolios.find(p => p.id === this.value);
+                    hintEl.style.display = 'block';
+                    hintEl.className = 'text-muted mt-1';
+                    hintEl.style.fontSize = '0.70rem';
+                    hintEl.innerText = `⚙️ เลือกเองโดยผู้ใช้: ${selPort ? selPort.name : this.value}`;
+                }
+                this.classList.remove('border-success');
+                this.classList.add('border-primary');
+            });
+        }
+
         document.getElementById('txnTicker').addEventListener('input', function() {
             let val = this.value.toUpperCase().trim().replace(/\s+/g, '');
             if (val === 'BRK-B' || val === 'BRK/B' || val === 'BRK_B') val = 'BRK.B';
             const fn = (typeof getStockFullName === 'function') ? getStockFullName(val) : stockNames[val];
             document.getElementById('tickerHint').innerText = fn ? `(${fn})` : '';
+            if (val && val !== 'CASH') {
+                autoDetectAndSelectPortfolio(val);
+            } else {
+                const badgeEl = document.getElementById('autoDetectedPortBadge');
+                const hintEl = document.getElementById('autoDetectedPortHint');
+                if (badgeEl) badgeEl.style.display = 'none';
+                if (hintEl) hintEl.style.display = 'none';
+            }
         });
 
         document.getElementById('txnTicker').addEventListener('blur', function() {
             let val = this.value.toUpperCase().trim().replace(/\s+/g, '');
             if (val === 'BRK-B' || val === 'BRK/B' || val === 'BRK_B') val = 'BRK.B';
             this.value = val; 
+            if (val && val !== 'CASH') {
+                autoDetectAndSelectPortfolio(val);
+            }
             let p = (typeof getMarketPrice === 'function') ? getMarketPrice(val) : (marketPrices[val] || 0);
             const priceInp = document.getElementById('txnPrice');
             if(editingIndex === -1 && (!priceInp.value || parseFloat(priceInp.value) <= 0) && val && p > 0 && document.getElementById('txnType').value !== 'DIVIDEND') {
@@ -13221,6 +13384,15 @@
             
             document.getElementById('formTitleText').innerText = 'บันทึกรายการใหม่ (Transaction)';
             document.getElementById('formHeader').classList.remove('text-warning');
+            const autoBadge = document.getElementById('autoDetectedPortBadge');
+            const autoHint = document.getElementById('autoDetectedPortHint');
+            if (autoBadge) autoBadge.style.display = 'none';
+            if (autoHint) autoHint.style.display = 'none';
+            const portDropdown = document.getElementById('txnPortfolio');
+            if (portDropdown) {
+                portDropdown.classList.remove('border-success');
+                portDropdown.classList.add('border-primary');
+            }
         };
 
         document.getElementById('txnForm').addEventListener('submit', async function(e) {
@@ -13350,6 +13522,10 @@
                     document.getElementById('txnType').value = 'BUY'; 
                     document.getElementById('txnType').dispatchEvent(new Event('change')); 
                     if (document.getElementById('txnPortfolio')) document.getElementById('txnPortfolio').value = portVal; 
+                    const autoBadge = document.getElementById('autoDetectedPortBadge');
+                    const autoHint = document.getElementById('autoDetectedPortHint');
+                    if (autoBadge) autoBadge.style.display = 'none';
+                    if (autoHint) autoHint.style.display = 'none';
                 }
 
                 localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions)); 
@@ -13521,7 +13697,13 @@
                     if(!lines[i].trim()) continue;
                     let cols = lines[i].split(',');
                     if(cols.length >= 9) {
-                        let portCol = cols.length >= 10 ? cols[9].trim() : 'core';
+                        let portCol = cols.length >= 10 ? cols[9].trim() : '';
+                        if (!portCol && typeof detectPortfolioForTicker === 'function') {
+                            const detected = detectPortfolioForTicker(cols[2].trim());
+                            portCol = detected ? detected.portfolioId : 'core';
+                        } else if (!portCol) {
+                            portCol = 'core';
+                        }
                         newTxns.push({
                             date: cols[0].trim(), type: cols[1].trim(), ticker: cols[2].trim(), 
                             shares: parseFloat(cols[3])||0, price: parseFloat(cols[4])||0, 
