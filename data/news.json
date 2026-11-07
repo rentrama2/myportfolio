@@ -1,16 +1,45 @@
 {
-  "updated_at": "2026-11-07T02:11:22Z",
-  "updated_at_thai": "7 พ.ย. 2569 09:11 น.",
+  "updated_at": "2026-11-07T03:06:42Z",
+  "updated_at_thai": "7 พ.ย. 2569 10:06 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "การคาดการณ์ทางเศรษฐกิจ 'ใหญ่' 3 ประการของ Kevin O'Leary ในปี 2570: 'ฉันจะออกไปที่นี่'",
+      "title_en": "Kevin O'Leary's 3 'big' economic predictions for 2027: ‘I’m going out on a limb here’",
+      "summary": "การคาดการณ์ทางเศรษฐกิจ 'ใหญ่' 3 ประการของ Kevin O'Leary ในปี 2570: 'ฉันจะออกไปที่นี่'",
+      "source": "TheStreet",
+      "sourceUrl": "https://finance.yahoo.com/economy/policy/articles/kevin-olearys-3-big-economic-021700619.html",
+      "time": "49 นาทีที่แล้ว",
+      "publishedAt": "2026-11-07T02:17:00Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "📌 สาระสำคัญ: การคาดการณ์ทางเศรษฐกิจ 'ใหญ่' 3 ประการของ Kevin O'Leary ในปี 2570: 'ฉันจะออกไปที่นี่'",
+        "📊 นัยสำคัญต่อตลาด: สะท้อนความไม่แน่นอนของปัจจัยเศรษฐกิจและนโยบายการเงินที่ตลาดยังคงรอดูความชัดเจนเพื่อประเมินทิศทางต่อไป",
+        "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #SPY #QQQ #TLT ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
+      ],
+      "fullArticle": [
+        "การคาดการณ์ทางเศรษฐกิจ 'ใหญ่' 3 ประการของ Kevin O'Leary ในปี 2570: 'ฉันจะออกไปที่นี่' ซึ่งเป็นหนึ่งในประเด็นสำคัญที่ตลาดการเงินและนักลงทุนทั่วโลกกำลังให้ความสนใจอย่างใกล้ชิดในรอบวัน",
+        "รายงานจาก TheStreet ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมเศรษฐกิจมหภาคและนโยบายการเงิน ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
+        "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #SPY #QQQ #TLT อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"Kevin O'Leary's 3 'big' economic predictions for 2027: ‘I’m going out on a limb here’\")"
+      ]
+    },
+    {
+      "id": "news-2",
       "title": "Petrus Resources Ltd (PTRUF) (ไตรมาสที่ 3 ปี 2569) ไฮไลท์การรายงานผลประกอบการ: การผลิตแผ่นเสียงและการเติบโตอย่างรวดเร็ว ...",
       "title_en": "Petrus Resources Ltd (PTRUF) (Q3 2026) Earnings Call Highlights: Record Production and Surging ...",
       "summary": "Petrus Resources Ltd (PTRUF) (ไตรมาสที่ 3 ปี 2569) ไฮไลท์การรายงานผลประกอบการ: การผลิตแผ่นเสียงและการเติบโตอย่างรวดเร็ว ...",
       "source": "GuruFocus.com",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/petrus-resources-ltd-ptruf-q3-011709499.html",
-      "time": "54 นาทีที่แล้ว",
+      "time": "1 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-07T01:17:09Z",
       "category": "EARNINGS",
       "tickers": [
@@ -19,7 +48,7 @@
       ],
       "sentiment": "BULLISH",
       "impact": "เชิงบวกต่อบรรยากาศการลงทุนและสินทรัพย์เสี่ยง",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "📌 สาระสำคัญ: Petrus Resources Ltd (PTRUF) (ไตรมาสที่ 3 ปี 2569) ไฮไลท์การรายงานผลประกอบการ: การผลิตแผ่นเสียงและการเติบโตอย่างรวดเร็ว ...",
         "📊 นัยสำคัญต่อตลาด: ผลการดำเนินงานหรือยอดคำสั่งซื้อเติบโตโดดเด่น หนุนมุมมองเชิงบวกของนักวิเคราะห์ต่อแนวโน้มกำไร",
@@ -32,13 +61,13 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-3",
       "title": "แท่นขุดเจาะลุ่มน้ำนับหนึ่งเมื่อราคาลดลง",
       "title_en": "Basin rig count up one as prices drop",
       "summary": "แท่นขุดเจาะลุ่มน้ำนับหนึ่งเมื่อราคาลดลง",
       "source": "Odessa American, Texas",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/basin-rig-count-one-prices-010100109.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-07T01:01:00Z",
       "category": "MACRO",
       "tickers": [
@@ -61,13 +90,13 @@
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-4",
       "title": "นักวิเคราะห์น้ำมันชั้นนำกล่าวว่าก๊าซอาจลดลงเหลือ 3.65 ดอลลาร์/แกลลอน โดยอ้างถึงแรงกดดันทางการเมืองที่ 'สูงมาก' หลังจากพรรครีพับลิกัน การเลือกตั้งกลางเทอม (Midterms) พ่ายแพ้",
       "title_en": "Gas Could Drop to $3.65/Gallon, Says Top Oil Analyst, Citing ‘Very High’ Political Pressure Following Republican Midterm Setbacks",
       "summary": "นักวิเคราะห์น้ำมันชั้นนำกล่าวว่าก๊าซอาจลดลงเหลือ 3.65 ดอลลาร์/แกลลอน โดยอ้างถึงแรงกดดันทางการเมืองที่ 'สูงมาก' หลังจากพรรครีพับลิกัน การเลือกตั้งกลางเทอม (Midterms) พ่ายแพ้",
       "source": "Benzinga",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/gas-could-drop-3-65-003006160.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "2 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-07T00:30:06Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -89,13 +118,13 @@
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-5",
       "title": "ทรัพยากรธรรมชาติของแคนาดา (TSX:CNQ) ผลประกอบการไตรมาส 3 Mask A การเพิ่มผลกำไรแบบครั้งเดียว",
       "title_en": "Canadian Natural Resources (TSX:CNQ) Q3 Results Mask A One Off Profit Boost",
       "summary": "ทรัพยากรธรรมชาติของแคนาดา (TSX:CNQ) ผลประกอบการไตรมาส 3 Mask A การเพิ่มผลกำไรแบบครั้งเดียว",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/canadian-natural-resources-tsx-cnq-231600341.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-06T23:16:00Z",
       "category": "EARNINGS",
       "tickers": [
@@ -117,13 +146,13 @@
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-6",
       "title": "สัปดาห์ข้างหน้าของ Cramer: หุ้นศูนย์ข้อมูล AI เผชิญกับอุปสรรคอีกครั้ง และ เฟด (Fed) ก็เช่นกัน",
       "title_en": "Cramer’s week ahead: AI data center stocks face another hurdle and so does the Fed",
       "summary": "รายได้ของ CoreWeave และ Nebius ควบคู่ไปกับรายงานอัตราเงินเฟ้อที่สำคัญที่อาจกำหนดการตัดสินใจเรื่องอัตราดอกเบี้ยครั้งต่อไปของ เฟด (Fed) นั้นเป็นจุดสนใจ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/06/cramer-coreweave-nebius-earnings.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "3 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-06T23:13:10Z",
       "category": "TECH",
       "tickers": [
@@ -146,13 +175,13 @@
       ]
     },
     {
-      "id": "news-6",
+      "id": "news-7",
       "title": "SpaceX กล่าวว่า Google ผู้บริหาร Don Harrison ได้ลาออกจากคณะกรรมการแล้ว",
       "title_en": "SpaceX says Google exec Don Harrison has resigned from its board",
       "summary": "SpaceX ประกาศว่าดอน แฮร์ริสัน ผู้บริหาร Google ได้ลาออกจากคณะกรรมการบริหารของบริษัทแล้ว",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/06/tesdonald-harrison.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-06T22:30:22Z",
       "category": "TECH",
       "tickers": [
@@ -173,41 +202,13 @@
       ]
     },
     {
-      "id": "news-7",
-      "title": "ไฮไลท์ผลประกอบการไตรมาส 3 ของทรัพยากรธรรมชาติของแคนาดา",
-      "title_en": "Canadian Natural Resources Q3 Earnings Call Highlights",
-      "summary": "ไฮไลท์ผลประกอบการไตรมาส 3 ของทรัพยากรธรรมชาติของแคนาดา",
-      "source": "MarketBeat",
-      "sourceUrl": "https://finance.yahoo.com/energy/articles/canadian-natural-resources-q3-earnings-221436034.html",
-      "time": "3 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-11-06T22:14:36Z",
-      "category": "EARNINGS",
-      "tickers": [
-        "SPY",
-        "DIA"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "📌 สาระสำคัญ: ไฮไลท์ผลประกอบการไตรมาส 3 ของทรัพยากรธรรมชาติของแคนาดา",
-        "📊 นัยสำคัญต่อตลาด: ตลาดกำลังจับตารายละเอียดงบการเงินและคาดการณ์ผลการดำเนินงานในไตรมาสถัดไป",
-        "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #SPY #DIA ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
-      ],
-      "fullArticle": [
-        "ไฮไลท์ผลประกอบการไตรมาส 3 ของทรัพยากรธรรมชาติของแคนาดา ซึ่งเป็นหนึ่งในประเด็นสำคัญที่ตลาดการเงินและนักลงทุนทั่วโลกกำลังให้ความสนใจอย่างใกล้ชิดในรอบวัน",
-        "รายงานจาก MarketBeat ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมผลการดำเนินงานและผลประกอบการบริษัทจดทะเบียน ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
-        "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #SPY #DIA อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"Canadian Natural Resources Q3 Earnings Call Highlights\")"
-      ]
-    },
-    {
       "id": "news-8",
       "title": "ผู้ต้องสงสัยที่ดักฟัง OpenAI Alfozan อ้อนวอนไม่ผิด",
       "title_en": "OpenAI bugging suspect Alfozan pleads not guilty",
       "summary": "อับดุลราห์มาน อัลโฟซาน สัญชาติซาอุดีอาระเบียถูกตั้งข้อหาติดตั้งอุปกรณ์บันทึกเสียงในห้องประชุมของบริษัทปัญญาประดิษฐ์ยักษ์ใหญ่อย่าง OpenAI",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/06/openai-bugging-alfozan-saudi.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "5 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-06T21:15:47Z",
       "category": "TECH",
       "tickers": [
@@ -265,7 +266,7 @@
       "summary": "Nasdaq การเลื่อนเข้าสู่ขอบเขตการปรับฐานทำให้ประวัติศาสตร์การฟื้นตัวของบริษัทเน้นไปที่ นี่คือสิ่งที่ประวัติศาสตร์แสดงให้เห็น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/05/nasdaq-drops-into-correction-territory-heres-what-typically-happens-next.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-06T20:42:28Z",
       "category": "MACRO",
       "tickers": [
@@ -321,7 +322,7 @@
       "summary": "ซานฟรานซิสโก เฟด (Fed) ประธานาธิบดีแมรี ดาลี เรียกรายงานการจ้างงานเมื่อวันศุกร์ว่า \"ข่าวดีสำหรับคนงานชาวอเมริกัน\" แต่ตั้งข้อสังเกตว่าแรงกดดันเงินเฟ้อกำลังส่งผลกระทบต่อการเงินภาคครัวเรือน",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
-      "time": "7 ชั่วโมงที่แล้ว",
+      "time": "8 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-06T19:05:00Z",
       "category": "MACRO",
       "tickers": [
