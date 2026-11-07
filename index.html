@@ -4974,8 +4974,9 @@
                                 <div class="d-flex align-items-center gap-1.5 flex-wrap">
                                     <div class="d-inline-flex align-items-center gap-1 px-2.5 py-1 rounded-pill bg-light border shadow-2xs" title="คลิกเพื่อแก้ไขเรทเงินได้ด้วยตนเอง">
                                         <span class="text-muted fw-bold" style="font-size: 0.74rem;">฿/USD:</span>
-                                        <input type="number" id="liveFxInput" class="fx-input border-0 bg-transparent fw-bolder text-primary text-center p-0 m-0" value="33.2291" step="any" onclick="this.select()" style="width: 62px; font-size: 0.78rem; outline: none;">
+                                        <input type="number" id="liveFxInput" class="fx-input border-0 bg-transparent fw-bolder text-primary text-center p-0 m-0" value="33.47" step="any" onclick="this.select()" style="width: 62px; font-size: 0.78rem; outline: none;">
                                     </div>
+                                    <button type="button" class="btn btn-sm py-0.5 px-2.5 rounded-pill border shadow-2xs" id="btnFxDime" onclick="setFxRateToDime(33.47)" title="คลิกเพื่อตั้งเรทเป็น 33.47 ให้ยอดเงินบาทตรงกับแอป Dime วันนี้" style="font-size: 0.72rem; background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe !important; font-weight: 600;">📱 เรท Dime 33.47</button>
                                     <span id="lastUpdatedBadge" class="badge rounded-pill bg-light text-muted border px-2.5 py-1" style="font-size: 0.74rem; cursor: pointer;" onclick="triggerFullSystemUpdate(true)" title="คลิกเพื่ออัปเดตระบบ หรือใช้ปุ่ม '⚡ อัปเดตระบบ' ที่มุมขวาบน">(ยังไม่อัปเดต)</span>
                                 </div>
                             </div>
@@ -8615,7 +8616,7 @@
         let extendedHoursPrices = Object.assign({}, storedExtendedPrices);
         
         let liveFxRate = parseFloat(localStorage.getItem('myLiveFxRate'));
-        if(isNaN(liveFxRate) || liveFxRate <= 0) liveFxRate = 33.46;
+        if(isNaN(liveFxRate) || liveFxRate <= 0) liveFxRate = 33.47;
         document.getElementById('liveFxInput').value = liveFxRate;
 
         let currentCalcMode = localStorage.getItem('myCalcMode') || 'DIME';
@@ -9685,6 +9686,15 @@
         };
 
         // V52: แก้ปัญหาเปลี่ยนเรทเงินแล้วเด้ง (เปลี่ยนไปใช้ onblur แทน onchange เพื่อลดความจุกจิกตอนลบเลข)
+        window.setFxRateToDime = function(rate = 33.47) {
+            liveFxRate = rate;
+            localStorage.setItem('myLiveFxRate', liveFxRate);
+            localStorage.setItem('myLiveFxRateLock', 'true');
+            const fxInput = document.getElementById('liveFxInput');
+            if (fxInput) fxInput.value = liveFxRate;
+            updateSummaryAndChart();
+        };
+
         document.getElementById('liveFxInput').addEventListener('blur', function() {
             let newFx = parseFloat(this.value);
             if(!isNaN(newFx) && newFx > 0) {
@@ -10495,7 +10505,7 @@
                             if (data.updated_at_thai) {
                                 lastPricesSyncTime = data.updated_at_thai;
                             }
-                            if (data.fx && data.fx.USDTHB) {
+                            if (data.fx && data.fx.USDTHB && localStorage.getItem('myLiveFxRateLock') !== 'true') {
                                 liveFxRate = parseFloat(data.fx.USDTHB);
                                 localStorage.setItem('myLiveFxRate', liveFxRate);
                                 const fxInput = document.getElementById('liveFxInput');
