@@ -5082,7 +5082,10 @@
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-6">
                                     <label class="form-label text-muted fw-bold" style="font-size:0.8rem;">หุ้น (Ticker) <small id="tickerHint" class="text-success fw-bold"></small></label>
-                                    <input type="text" id="txnTicker" class="form-control form-control-sm" required placeholder="เช่น VTI" style="text-transform: uppercase;" list="tickerList" autocomplete="off">
+                                    <div class="position-relative">
+                                        <input type="text" id="txnTicker" class="form-control form-control-sm" required placeholder="เช่น VTI, JEPI" style="text-transform: uppercase;" autocomplete="off">
+                                        <div id="tickerAutoCompleteList" class="dropdown-menu shadow-lg p-1 border rounded-3 bg-white" style="position: absolute; left: 0; top: 100%; width: 100%; min-width: 290px; max-height: 290px; overflow-y: auto; z-index: 1060; display: none; margin-top: 4px; box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;"></div>
+                                    </div>
                                     <datalist id="tickerList"></datalist>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-6">
@@ -8595,7 +8598,17 @@
             const hyphen = clean.replace('.', '-');
             const name = (typeof stockNames === 'object' && stockNames) ? (stockNames[clean] || stockNames[dot] || stockNames[hyphen]) : '';
             if (name) return name;
-            return (groupName === 'ETF' ? `${clean} ETF` : `${clean} Corp`);
+            // 2. ตรวจสอบใน topEtfsData
+            if (typeof topEtfsData !== 'undefined' && Array.isArray(topEtfsData)) {
+                const etf = topEtfsData.find(e => e.ticker === clean || e.ticker === dot || e.ticker === hyphen);
+                if (etf && etf.name) return etf.name;
+            }
+            // 3. ตรวจสอบใน top100StocksData
+            if (typeof top100StocksData !== 'undefined' && Array.isArray(top100StocksData)) {
+                const stk = top100StocksData.find(s => s.ticker === clean || s.ticker === dot || s.ticker === hyphen);
+                if (stk && stk.name) return stk.name;
+            }
+            return '';
         };
 
         let storedExtendedPrices = JSON.parse(localStorage.getItem('myExtendedHoursPrices')) || {};
@@ -9423,6 +9436,9 @@
         const defaultGroupMapping = {
             'VTI': 'ETF', 'VXUS': 'ETF', 'VOO': 'ETF', 'SCHD': 'ETF', 'QQQ': 'ETF', 'QQQM': 'ETF',
             'JEPI': 'ETF', 'JEPQ': 'ETF', 'SPY': 'ETF', 'SPMO': 'ETF', 'XLV': 'ETF', 'GRID': 'ETF', 'SPYD': 'ETF',
+            'SMH': 'ETF', 'SOXX': 'ETF', 'XLK': 'ETF', 'XLF': 'ETF', 'XLE': 'ETF', 'XLU': 'ETF', 'XLI': 'ETF', 'XLP': 'ETF', 'XLY': 'ETF', 'XLB': 'ETF',
+            'VNQ': 'ETF', 'TLT': 'ETF', 'BND': 'ETF', 'VT': 'ETF', 'DIA': 'ETF', 'IWM': 'ETF', 'VYM': 'ETF', 'DGRO': 'ETF', 'HDV': 'ETF', 'DIVO': 'ETF',
+            'ARKK': 'ETF', 'BOTZ': 'ETF', 'AGG': 'ETF', 'SHY': 'ETF', 'IGV': 'ETF', 'GLD': 'ETF', 'SPLG': 'ETF', 'IVV': 'ETF',
             'NVDA': 'Stock', 'AAPL': 'Stock', 'MSFT': 'Stock', 'GOOGL': 'Stock', 'BRK.B': 'Stock', 'BRK-B': 'Stock',
             'VRT': 'Stock', 'MU': 'Stock', 'CIEN': 'Stock', 'CRWD': 'Stock', 'LLY': 'Stock'
         };
@@ -9926,7 +9942,27 @@
             }
 
             // จ. หุ้นรายตัวสหรัฐฯ (Individual US Stocks)
-            const isKnownStock = (typeof stockNames !== 'undefined' && stockNames[sym]) || (mappedGroup === 'Stock') || (!coreEtfs.includes(sym) && !retirementEtfs.includes(sym) && !satelliteEtfs.includes(sym));
+            // 2.1 ตรวจสอบใน topEtfsData
+            if (typeof topEtfsData !== 'undefined' && Array.isArray(topEtfsData)) {
+                const etfItem = topEtfsData.find(e => e.ticker === sym);
+                if (etfItem) {
+                    if (etfItem.category === 'DIVIDEND' || etfItem.category === 'DEFENSIVE') {
+                        const p = findPort(x => x.id === 'retirement' || x.name.toLowerCase().includes('retire') || x.name.includes('เกษียณ') || x.name.includes('ปันผล'), 'retirement');
+                        return { portfolioId: p.id, portName: p.name, source: 'rule', reason: 'กองทุนเงินปันผลเกษียณ (Retirement)' };
+                    } else if (etfItem.category === 'INDEX') {
+                        const p = findPort(x => x.id === 'core' || x.name.toLowerCase().includes('core') || (x.tag && x.tag.toLowerCase().includes('core')), 'core');
+                        return { portfolioId: p.id, portName: p.name, source: 'rule', reason: 'กองทุนดัชนีหลัก (Core ETF)' };
+                    } else {
+                        const p = findPort(x => x.id === 'satellite' || x.name.toLowerCase().includes('satellite') || x.name.toLowerCase().includes('growth') || x.name.includes('เติบโต'), 'satellite');
+                        return { portfolioId: p.id, portName: p.name, source: 'rule', reason: 'กองทุนธีมเติบโต (Satellite ETF)' };
+                    }
+                }
+            }
+
+            // 2.2 หุ้นรายตัวสหรัฐฯ ที่รู้จัก (Individual US Stocks)
+            const isKnownStock = (typeof stockNames !== 'undefined' && stockNames[sym] && mappedGroup !== 'ETF')
+                || (typeof top100StocksData !== 'undefined' && top100StocksData.some(s => s.ticker === sym))
+                || (mappedGroup === 'Stock');
             if (isKnownStock) {
                 const p = findPort(x => x.id === 'stocks' || x.name.toLowerCase().includes('stock') || x.name.includes('หุ้น'), 'stocks');
                 return { portfolioId: p.id, portName: p.name, source: 'rule', reason: 'หุ้นรายตัวสหรัฐฯ (US Stocks)' };
@@ -9938,6 +9974,18 @@
                 return { portfolioId: p.id, portName: p.name, source: 'active', reason: 'พอร์ตที่เปิดใช้งานอยู่' };
             }
 
+            // 2.3 หาก sym สั้นหรือตรงกับตัวขึ้นต้นของ ETF ในระบบ อย่าเพิ่งสรุปว่าเป็น US Stocks
+            const allKnownEtfs = [...coreEtfs, ...retirementEtfs, ...satelliteEtfs];
+            if (sym.length < 3 || allKnownEtfs.some(e => e.startsWith(sym))) {
+                return null;
+            }
+
+            // 2.4 หุ้นรายตัวอื่นๆ ที่ผู้ใช้พิมพ์เสร็จแล้ว
+            if (sym.length >= 2) {
+                const p = findPort(x => x.id === 'stocks' || x.name.toLowerCase().includes('stock') || x.name.includes('หุ้น'), 'stocks');
+                return { portfolioId: p.id, portName: p.name, source: 'rule', reason: 'หุ้นรายตัวสหรัฐฯ (US Stocks)' };
+            }
+
             const pDefault = portfolios[0] || { id: 'core', name: 'Core ETF' };
             return { portfolioId: pDefault.id, portName: pDefault.name, source: 'default', reason: 'พอร์ตเริ่มต้น' };
         };
@@ -9947,28 +9995,32 @@
             const clean = ticker.trim().toUpperCase().replace(/\s+/g, '').replace('BRK-B', 'BRK.B');
             if (!clean || clean === 'CASH') return;
 
-            const detected = detectPortfolioForTicker(clean);
-            if (!detected || !detected.portfolioId) return;
-
+            const badgeEl = document.getElementById('autoDetectedPortBadge');
+            const hintEl = document.getElementById('autoDetectedPortHint');
             const portSel = document.getElementById('txnPortfolio');
+
+            const detected = detectPortfolioForTicker(clean);
+            if (!detected || !detected.portfolioId) {
+                if (badgeEl) badgeEl.style.display = 'none';
+                if (hintEl) hintEl.style.display = 'none';
+                return;
+            }
+
             if (!portSel) return;
 
             portSel.value = detected.portfolioId;
 
             // Visual feedback
-            const badgeEl = document.getElementById('autoDetectedPortBadge');
-            const hintEl = document.getElementById('autoDetectedPortHint');
-
             if (badgeEl) {
                 badgeEl.style.display = 'inline-block';
-                badgeEl.innerHTML = `✨ ตรวจพบ: <strong>${detected.portName}</strong>`;
+                badgeEl.innerHTML = '\u2728 \u0E15\u0E23\u0E27\u0E08\u0E1E\u0E1A: <strong>' + detected.portName + '</strong>';
                 badgeEl.title = detected.reason;
             }
             if (hintEl) {
                 hintEl.style.display = 'block';
                 hintEl.className = 'text-success fw-bold mt-1';
                 hintEl.style.fontSize = '0.70rem';
-                hintEl.innerHTML = `✓ ระบบตรวจพบและเลือกพอร์ต <strong>${detected.portName}</strong> อัตโนมัติ (${detected.reason})`;
+                hintEl.innerHTML = '\u2713 \u0E23\u0E30\u0E1A\u0E1A\u0E15\u0E23\u0E27\u0E08\u0E1E\u0E1A\u0E41\u0E25\u0E30\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E1E\u0E2D\u0E23\u0E4C\u0E15 <strong>' + detected.portName + '</strong> \u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34 (' + detected.reason + ')';
             }
 
             // Border highlight feedback
@@ -9979,7 +10031,7 @@
             }, 1200);
         };
 
-        // เมื่อผู้ใช้เลือกเปลี่ยนพอร์ตเองแบบ Manual ให้แสดงสถานะชัดเจน
+        // Manual Portfolio Change listener
         const portSelectEl = document.getElementById('txnPortfolio');
         if (portSelectEl) {
             portSelectEl.addEventListener('change', function() {
@@ -9991,40 +10043,373 @@
                     hintEl.style.display = 'block';
                     hintEl.className = 'text-muted mt-1';
                     hintEl.style.fontSize = '0.70rem';
-                    hintEl.innerText = `⚙️ เลือกเองโดยผู้ใช้: ${selPort ? selPort.name : this.value}`;
+                    hintEl.innerText = '\u2699\uFE0F \u0E40\u0E25\u0E37\u0E2D\u0E01\u0E40\u0E2D\u0E07\u0E42\u0E14\u0E22\u0E1C\u0E39\u0E49\u0E43\u0E0A\u0E49: ' + (selPort ? selPort.name : this.value);
                 }
                 this.classList.remove('border-success');
                 this.classList.add('border-primary');
             });
         }
 
-        document.getElementById('txnTicker').addEventListener('input', function() {
-            let val = this.value.toUpperCase().trim().replace(/\s+/g, '');
-            if (val === 'BRK-B' || val === 'BRK/B' || val === 'BRK_B') val = 'BRK.B';
-            const fn = (typeof getStockFullName === 'function') ? getStockFullName(val) : stockNames[val];
-            document.getElementById('tickerHint').innerText = fn ? `(${fn})` : '';
-            if (val && val !== 'CASH') {
-                autoDetectAndSelectPortfolio(val);
-            } else {
-                const badgeEl = document.getElementById('autoDetectedPortBadge');
-                const hintEl = document.getElementById('autoDetectedPortHint');
-                if (badgeEl) badgeEl.style.display = 'none';
-                if (hintEl) hintEl.style.display = 'none';
+        // =====================================================================
+        // SMART TICKER AUTOCOMPLETE & THAI KEYBOARD TRANSLATION ENGINE
+        // =====================================================================
+        window.convertThaiKeyboardToEng = function(text) {
+            if (!text || typeof text !== 'string') return text;
+            const thaiToEng = {
+                '\u0E45': '1', '+': '!', '\u0E51': '@', '\u0E52': '#', '\u0E53': '$', '\u0E54': '%', '\u0E39': '^', '\u0E3F': '&', '\u0E55': '*', '\u0E56': '(', '\u0E57': ')', '\u0E58': '_', '\u0E59': '+',
+                '\u0E46': 'q', '\u0E50': 'Q', '\u0E44': 'w', '"': 'W', '\u0E33': 'e', '\u0E0E': 'E', '\u0E1E': 'r', '\u0E11': 'R', '\u0E30': 't', '\u0E18': 'T', '\u0E31': 'y', '\u0E4D': 'Y', '\u0E35': 'u', '\u0E4A': 'U', '\u0E23': 'i', '\u0E13': 'I', '\u0E19': 'o', '\u0E2F': 'O', '\u0E22': 'p', '\u0E0D': 'P', '\u0E1A': '[', '{': '{', '\u0E25': ']', '}': '}', '\u0E03': '\\', '\u0E05': '|',
+                '\u0E1F': 'a', '\u0E24': 'A', '\u0E2B': 's', '\u0E06': 'S', '\u0E01': 'd', '\u0E0F': 'D', '\u0E14': 'f', '\u0E42': 'F', '\u0E40': 'g', '\u0E0C': 'G', '\u0E49': 'h', '\u0E47': 'H', '\u0E48': 'j', '\u0E4B': 'J', '\u0E32': 'k', '\u0E29': 'K', '\u0E2A': 'l', '\u0E28': 'L', '\u0E27': ';', '\u0E0B': ':', '\'': '\'',
+                '\u0E1C': 'z', '(': 'Z', '\u0E1B': 'x', ')': 'X', '\u0E41': 'c', '\u0E09': 'C', '\u0E2D': 'v', '\u0E2E': 'V', '\u0E34': 'b', '\u0E3A': 'B', '\u0E37': 'n', '\u0E4C': 'N', '\u0E17': 'm', '?': 'M', '\u0E21': ',', '\u0E12': '<', '\u0E43': '.', '\u0E2C': '>', '\u0E1D': '/', '\u0E26': '?'
+            };
+            let res = '';
+            let hasThai = false;
+            for (let i = 0; i < text.length; i++) {
+                const ch = text[i];
+                if (thaiToEng[ch] !== undefined) {
+                    res += thaiToEng[ch];
+                    hasThai = true;
+                } else {
+                    res += ch;
+                }
             }
-        });
+            return hasThai ? res : text;
+        };
 
-        document.getElementById('txnTicker').addEventListener('blur', function() {
-            let val = this.value.toUpperCase().trim().replace(/\s+/g, '');
-            if (val === 'BRK-B' || val === 'BRK/B' || val === 'BRK_B') val = 'BRK.B';
-            this.value = val; 
-            if (val && val !== 'CASH') {
-                autoDetectAndSelectPortfolio(val);
+        window.getTickerCatalog = function() {
+            const map = new Map();
+
+            // 1. Top ETFs Data
+            if (typeof topEtfsData !== 'undefined' && Array.isArray(topEtfsData)) {
+                topEtfsData.forEach(e => {
+                    if (!e || !e.ticker) return;
+                    const tk = e.ticker.toUpperCase();
+                    map.set(tk, {
+                        ticker: tk,
+                        name: e.name || '',
+                        type: 'ETF',
+                        category: e.category || 'INDEX',
+                        price: e.price || 0,
+                        yield: e.yield || ''
+                    });
+                });
             }
-            let p = (typeof getMarketPrice === 'function') ? getMarketPrice(val) : (marketPrices[val] || 0);
+
+            // 2. Top 100 Stocks Data
+            if (typeof top100StocksData !== 'undefined' && Array.isArray(top100StocksData)) {
+                top100StocksData.forEach(s => {
+                    if (!s || !s.ticker) return;
+                    const tk = s.ticker.toUpperCase();
+                    if (!map.has(tk)) {
+                        map.set(tk, {
+                            ticker: tk,
+                            name: s.name || '',
+                            type: 'Stock',
+                            category: s.sector || 'US Stock',
+                            price: s.price || 0,
+                            yield: s.yield || ''
+                        });
+                    }
+                });
+            }
+
+            // 3. stockNames Dictionary
+            if (typeof stockNames === 'object' && stockNames) {
+                for (const [tkRaw, name] of Object.entries(stockNames)) {
+                    const tk = tkRaw.toUpperCase();
+                    if (!map.has(tk)) {
+                        const isEtf = (typeof portfolioMapping === 'object' && portfolioMapping && portfolioMapping[tk] === 'ETF');
+                        map.set(tk, {
+                            ticker: tk,
+                            name: name || '',
+                            type: isEtf ? 'ETF' : 'Stock',
+                            category: isEtf ? 'ETF' : 'Stock',
+                            price: 0,
+                            yield: ''
+                        });
+                    }
+                }
+            }
+
+            // 4. Existing User Holdings
+            if (typeof transactions !== 'undefined' && Array.isArray(transactions)) {
+                transactions.forEach(t => {
+                    if (!t || !t.ticker || t.ticker === 'CASH') return;
+                    const tk = t.ticker.toUpperCase();
+                    const existing = map.get(tk);
+                    if (existing) {
+                        existing.isHolding = true;
+                    } else {
+                        const isEtf = (typeof portfolioMapping === 'object' && portfolioMapping && portfolioMapping[tk] === 'ETF');
+                        map.set(tk, {
+                            ticker: tk,
+                            name: (typeof getStockFullName === 'function') ? getStockFullName(tk) : '',
+                            type: isEtf ? 'ETF' : 'Stock',
+                            category: 'User Portfolio',
+                            price: t.price || 0,
+                            yield: '',
+                            isHolding: true
+                        });
+                    }
+                });
+            }
+
+            return Array.from(map.values());
+        };
+
+        window.renderTickerSuggestions = function(query) {
+            const listEl = document.getElementById('tickerAutoCompleteList');
+            if (!listEl) return;
+
+            let q = (query || '').trim().toUpperCase();
+            if (q === 'BRK-B' || q === 'BRK/B' || q === 'BRK_B') q = 'BRK.B';
+
+            const catalog = getTickerCatalog();
+            let matches = [];
+
+            if (!q || q === 'CASH') {
+                const holdings = catalog.filter(x => x.isHolding);
+                const popularDefaults = ['VOO', 'VTI', 'QQQM', 'JEPI', 'JEPQ', 'SCHD', 'NVDA', 'AAPL', 'MSFT', 'SPMO'];
+                const populars = popularDefaults.map(sym => catalog.find(x => x.ticker === sym)).filter(Boolean);
+                const combined = [...holdings, ...populars];
+                const seen = new Set();
+                matches = combined.filter(x => {
+                    if (seen.has(x.ticker)) return false;
+                    seen.add(x.ticker);
+                    return true;
+                }).slice(0, 8);
+            } else if (q === 'ETF') {
+                matches = catalog.filter(x => x.type === 'ETF').slice(0, 10);
+            } else {
+                const prefixMatches = [];
+                const containsMatches = [];
+                const nameMatches = [];
+
+                catalog.forEach(item => {
+                    if (item.ticker === q) {
+                        prefixMatches.unshift(item);
+                    } else if (item.ticker.startsWith(q)) {
+                        prefixMatches.push(item);
+                    } else if (item.ticker.includes(q)) {
+                        containsMatches.push(item);
+                    } else if (item.name && item.name.toUpperCase().includes(q)) {
+                        nameMatches.push(item);
+                    }
+                });
+
+                matches = [...prefixMatches, ...containsMatches, ...nameMatches].slice(0, 8);
+            }
+
+            if (matches.length === 0) {
+                listEl.innerHTML = '<div class="p-2.5 text-center text-muted" style="font-size: 0.78rem;">' +
+                    '<span>\u0E44\u0E21\u0E48\u0E1E\u0E1A\u0E2B\u0E38\u0E49\u0E19\u0E2B\u0E23\u0E37\u0E2D ETF \u0E17\u0E35\u0E48\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A <strong>"' + q + '"</strong></span>' +
+                    '<div class="mt-1 text-secondary" style="font-size: 0.70rem;">\u0E1E\u0E34\u0E21\u0E1E\u0E4C\u0E0A\u0E37\u0E48\u0E2D\u0E40\u0E15\u0E47\u0E21\u0E41\u0E25\u0E49\u0E27\u0E01\u0E14 Enter \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E40\u0E1B\u0E47\u0E19\u0E2B\u0E38\u0E49\u0E19\u0E23\u0E32\u0E22\u0E15\u0E31\u0E27</div>' +
+                    '</div>';
+                listEl.style.display = 'block';
+                return;
+            }
+
+            let html = '';
+            matches.forEach((item, idx) => {
+                const detected = (typeof detectPortfolioForTicker === 'function') ? detectPortfolioForTicker(item.ticker) : null;
+                let badgeClass = 'bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-25';
+                let portLabel = detected ? detected.portName : item.type;
+                let portEmoji = '\uD83D\uDCCC';
+
+                if (detected && detected.portfolioId === 'retirement') {
+                    badgeClass = 'bg-success bg-opacity-10 text-success border border-success border-opacity-25';
+                    portEmoji = '\uD83D\uDCB5';
+                } else if (detected && detected.portfolioId === 'core') {
+                    badgeClass = 'bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25';
+                    portEmoji = '\uD83D\uDEE1\uFE0F';
+                } else if (detected && detected.portfolioId === 'satellite') {
+                    badgeClass = 'bg-info bg-opacity-10 text-info border border-info border-opacity-25';
+                    portEmoji = '\uD83D\uDE80';
+                } else if (detected && detected.portfolioId === 'stocks') {
+                    badgeClass = 'border border-opacity-25';
+                    portEmoji = '\uD83C\uDDFA\uD83C\uDDF8';
+                }
+
+                const priceDisplay = item.price > 0 ? ('$' + item.price.toFixed(2)) : '';
+                const holdingBadge = item.isHolding ? '<span class="badge bg-warning bg-opacity-10 text-dark border border-warning border-opacity-50 ms-1" style="font-size: 0.65rem;">\uD83D\uDCBC \u0E21\u0E35\u0E43\u0E19\u0E1E\u0E2D\u0E23\u0E4C\u0E15</span>' : '';
+
+                html += '<div class="ticker-suggest-item p-2 rounded-2 d-flex justify-content-between align-items-center mb-0.5" ' +
+                    'data-ticker="' + item.ticker + '" ' +
+                    'data-idx="' + idx + '" ' +
+                    'style="cursor: pointer; transition: all 0.15s ease;" ' +
+                    'onmouseover="this.style.backgroundColor=\'#eff6ff\'; this.style.transform=\'translateX(2px)\';" ' +
+                    'onmouseout="this.style.backgroundColor=\'transparent\'; this.style.transform=\'none\';" ' +
+                    'onmousedown="event.preventDefault(); selectTickerSuggestion(\'' + item.ticker + '\');">' +
+                    '<div class="d-flex flex-column text-truncate me-2" style="max-width: 78%;">' +
+                    '<div class="d-flex align-items-center gap-1.5 flex-wrap">' +
+                    '<span class="fw-bold text-dark" style="font-size: 0.88rem; letter-spacing: 0.5px;">' + item.ticker + '</span>' +
+                    '<span class="badge rounded-pill ' + badgeClass + ' py-0.5 px-1.5" style="font-size: 0.68rem; font-weight: 600;">' +
+                    portEmoji + ' ' + portLabel +
+                    '</span>' +
+                    holdingBadge +
+                    '</div>' +
+                    '<small class="text-muted text-truncate mt-0.5" style="font-size: 0.72rem;" title="' + (item.name || item.ticker) + '">' + (item.name || item.ticker) + '</small>' +
+                    '</div>' +
+                    (priceDisplay ? '<div class="text-end text-nowrap"><span class="badge bg-light text-dark border fw-semibold" style="font-size: 0.72rem;">' + priceDisplay + '</span></div>' : '') +
+                    '</div>';
+            });
+
+            listEl.innerHTML = html;
+            listEl.style.display = 'block';
+        };
+
+        window.selectTickerSuggestion = function(tk) {
+            if (!tk) return;
+            const inp = document.getElementById('txnTicker');
+            if (!inp) return;
+            inp.value = tk;
+
+            const listEl = document.getElementById('tickerAutoCompleteList');
+            if (listEl) listEl.style.display = 'none';
+
+            const fn = (typeof getStockFullName === 'function') ? getStockFullName(tk) : (stockNames[tk] || '');
+            const hintEl = document.getElementById('tickerHint');
+            if (hintEl) hintEl.innerText = fn ? ('(' + fn + ')') : '';
+
+            // Auto detect & select portfolio
+            autoDetectAndSelectPortfolio(tk);
+
+            // Auto fill price
             const priceInp = document.getElementById('txnPrice');
-            if(editingIndex === -1 && (!priceInp.value || parseFloat(priceInp.value) <= 0) && val && p > 0 && document.getElementById('txnType').value !== 'DIVIDEND') {
+            const txnType = document.getElementById('txnType').value;
+            let p = (typeof getMarketPrice === 'function') ? getMarketPrice(tk) : (marketPrices[tk] || 0);
+            if (p <= 0) {
+                const catalog = getTickerCatalog();
+                const item = catalog.find(x => x.ticker === tk);
+                if (item && item.price > 0) p = item.price;
+            }
+            if (editingIndex === -1 && (!priceInp.value || parseFloat(priceInp.value) <= 0) && p > 0 && txnType !== 'DIVIDEND') {
                 priceInp.value = p.toFixed(2);
                 autoCalculateDimeFees();
+            }
+
+            // Focus next field
+            if (txnType === 'DIVIDEND') {
+                priceInp.focus();
+            } else {
+                const shInp = document.getElementById('txnShares');
+                if (shInp) shInp.focus();
+            }
+        };
+
+        const txnTickerInput = document.getElementById('txnTicker');
+        let highlightedSuggestIndex = -1;
+
+        if (txnTickerInput) {
+            txnTickerInput.addEventListener('focus', function() {
+                if (this.disabled || this.readOnly || this.value === 'CASH') return;
+                renderTickerSuggestions(this.value);
+            });
+
+            txnTickerInput.addEventListener('input', function() {
+                let rawVal = this.value;
+                let converted = convertThaiKeyboardToEng(rawVal);
+                if (converted !== rawVal) {
+                    this.value = converted.toUpperCase();
+                }
+
+                let val = this.value.toUpperCase().trim().replace(/\s+/g, '');
+                if (val === 'BRK-B' || val === 'BRK/B' || val === 'BRK_B') val = 'BRK.B';
+
+                const fn = (typeof getStockFullName === 'function') ? getStockFullName(val) : (stockNames[val] || '');
+                const hintEl = document.getElementById('tickerHint');
+
+                if (fn) {
+                    hintEl.innerText = '(' + fn + ')';
+                } else if (val.length >= 2) {
+                    const catalog = getTickerCatalog();
+                    const matches = catalog.filter(x => x.ticker.startsWith(val));
+                    if (matches.length > 0) {
+                        hintEl.innerText = '(\u0E1E\u0E1A ' + matches.length + ' \u0E15\u0E31\u0E27\u0E40\u0E25\u0E37\u0E2D\u0E01 \u0E40\u0E0A\u0E48\u0E19 ' + matches[0].ticker + ')';
+                    } else {
+                        hintEl.innerText = '';
+                    }
+                } else {
+                    hintEl.innerText = '';
+                }
+
+                if (val && val !== 'CASH') {
+                    renderTickerSuggestions(val);
+                    autoDetectAndSelectPortfolio(val);
+                } else {
+                    renderTickerSuggestions('');
+                    const badgeEl = document.getElementById('autoDetectedPortBadge');
+                    const portHintEl = document.getElementById('autoDetectedPortHint');
+                    if (badgeEl) badgeEl.style.display = 'none';
+                    if (portHintEl) portHintEl.style.display = 'none';
+                }
+            });
+
+            txnTickerInput.addEventListener('keydown', function(e) {
+                const listEl = document.getElementById('tickerAutoCompleteList');
+                if (!listEl || listEl.style.display === 'none') return;
+
+                const items = listEl.querySelectorAll('.ticker-suggest-item');
+                if (items.length === 0) return;
+
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    highlightedSuggestIndex = (highlightedSuggestIndex + 1) % items.length;
+                    items.forEach((it, idx) => {
+                        it.style.backgroundColor = (idx === highlightedSuggestIndex) ? '#e0f2fe' : 'transparent';
+                    });
+                    items[highlightedSuggestIndex].scrollIntoView({ block: 'nearest' });
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    highlightedSuggestIndex = (highlightedSuggestIndex - 1 + items.length) % items.length;
+                    items.forEach((it, idx) => {
+                        it.style.backgroundColor = (idx === highlightedSuggestIndex) ? '#e0f2fe' : 'transparent';
+                    });
+                    items[highlightedSuggestIndex].scrollIntoView({ block: 'nearest' });
+                } else if (e.key === 'Enter') {
+                    if (highlightedSuggestIndex >= 0 && items[highlightedSuggestIndex]) {
+                        e.preventDefault();
+                        const tk = items[highlightedSuggestIndex].getAttribute('data-ticker');
+                        selectTickerSuggestion(tk);
+                    } else if (items.length === 1) {
+                        e.preventDefault();
+                        const tk = items[0].getAttribute('data-ticker');
+                        selectTickerSuggestion(tk);
+                    }
+                } else if (e.key === 'Escape') {
+                    listEl.style.display = 'none';
+                }
+            });
+
+            txnTickerInput.addEventListener('blur', function() {
+                let val = this.value.toUpperCase().trim().replace(/\s+/g, '');
+                if (val === 'BRK-B' || val === 'BRK/B' || val === 'BRK_B') val = 'BRK.B';
+                this.value = val;
+
+                setTimeout(() => {
+                    const listEl = document.getElementById('tickerAutoCompleteList');
+                    if (listEl) listEl.style.display = 'none';
+                    highlightedSuggestIndex = -1;
+                }, 250);
+
+                if (val && val !== 'CASH') {
+                    autoDetectAndSelectPortfolio(val);
+                }
+                let p = (typeof getMarketPrice === 'function') ? getMarketPrice(val) : (marketPrices[val] || 0);
+                const priceInp = document.getElementById('txnPrice');
+                if (editingIndex === -1 && (!priceInp.value || parseFloat(priceInp.value) <= 0) && val && p > 0 && document.getElementById('txnType').value !== 'DIVIDEND') {
+                    priceInp.value = p.toFixed(2);
+                    autoCalculateDimeFees();
+                }
+            });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const listEl = document.getElementById('tickerAutoCompleteList');
+            const inp = document.getElementById('txnTicker');
+            if (!listEl || !inp) return;
+            if (!listEl.contains(e.target) && e.target !== inp) {
+                listEl.style.display = 'none';
             }
         });
 
@@ -13388,6 +13773,10 @@
             const autoHint = document.getElementById('autoDetectedPortHint');
             if (autoBadge) autoBadge.style.display = 'none';
             if (autoHint) autoHint.style.display = 'none';
+            const tickerHint = document.getElementById('tickerHint');
+            if (tickerHint) tickerHint.innerText = '';
+            const tickerList = document.getElementById('tickerAutoCompleteList');
+            if (tickerList) tickerList.style.display = 'none';
             const portDropdown = document.getElementById('txnPortfolio');
             if (portDropdown) {
                 portDropdown.classList.remove('border-success');
@@ -13526,6 +13915,10 @@
                     const autoHint = document.getElementById('autoDetectedPortHint');
                     if (autoBadge) autoBadge.style.display = 'none';
                     if (autoHint) autoHint.style.display = 'none';
+            const tickerHint = document.getElementById('tickerHint');
+            if (tickerHint) tickerHint.innerText = '';
+            const tickerList = document.getElementById('tickerAutoCompleteList');
+            if (tickerList) tickerList.style.display = 'none';
                 }
 
                 localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions)); 
