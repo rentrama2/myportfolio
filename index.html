@@ -5372,19 +5372,19 @@
                         <span class="fs-3">&#129302;</span>
                         <div>
                             <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
-                                Gemini AI Investment Signals (à¸ˆà¸±à¸”à¸­à¸±à¸™à¸”à¸±à¸š & à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡)
+                                Gemini AI Investment Signals (จัดอันดับ & วิเคราะห์ความเสี่ยง)
                             </h4>
                             <small class="text-muted">
-                                à¸‚à¸±à¸šà¹€à¸„à¸¥à¸·à¹ˆà¸­à¸™à¸”à¹‰à¸§à¸¢ Google Gemini API à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¹€à¸Šà¸´à¸‡à¸¥à¸¶à¸à¸—à¸±à¹‰à¸‡à¹‚à¸¡à¹€à¸¡à¸™à¸•à¸±à¸¡ à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸£à¸²à¸„à¸² à¸›à¸±à¸ˆà¸ˆà¸±à¸¢à¸«à¸™à¸¸à¸™ à¹à¸¥à¸°à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¹à¸šà¸š Real-time
+                                ขับเคลื่อนด้วย Google Gemini API วิเคราะห์เชิงลึกทั้งโมเมนตัม โครงสร้างราคา ปัจจัยหนุน และความเสี่ยงแบบ Real-time
                             </small>
                         </div>
                     </div>
                     <div class="d-flex align-items-center gap-2">
                         <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">
-                            ðŸŸ¢ à¸£à¸°à¸šà¸š AI à¸žà¸£à¹‰à¸­à¸¡à¹ƒà¸Šà¹‰à¸‡à¸²à¸™
+                            🟢 ระบบ AI พร้อมใช้งาน
                         </span>
                         <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openGeminiSignalsModal('CONFIG')">
-                            âš™ï¸ à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸² API
+                            ⚙️ ตั้งค่า API
                         </button>
                     </div>
                 </div>
@@ -5393,29 +5393,29 @@
                 <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 border-bottom pb-2">
                     <div class="nav nav-pills gap-1" role="tablist">
                         <button type="button" class="nav-link active rounded-pill fw-bold py-1 px-3 text-nowrap" id="tabBtnInlineGeminiPicks" onclick="switchInlineGeminiTab('PICKS')" style="font-size: 0.82rem;">
-                            ðŸ† à¸ˆà¸±à¸”à¸­à¸±à¸™à¸”à¸±à¸š Top AI Picks (10 à¸«à¸¸à¹‰à¸™à¸™à¹ˆà¸²à¸ªà¸™à¹ƒà¸ˆ)
+                            🏆 จัดอันดับ Top AI Picks (10 หุ้นน่าสนใจ)
                         </button>
                         <button type="button" class="nav-link rounded-pill fw-bold py-1 px-3 text-nowrap" id="tabBtnInlineGeminiDeepDive" onclick="switchInlineGeminiTab('DEEP_DIVE')" style="font-size: 0.82rem;">
-                            ðŸ” à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸«à¸¸à¹‰à¸™à¸£à¸²à¸¢à¸•à¸±à¸§à¹à¸šà¸šà¸ªà¸” (Deep Dive)
+                            🔍 วิเคราะห์หุ้นรายตัวแบบสด (Deep Dive)
                         </button>
                     </div>
                     <div class="d-flex align-items-center gap-1">
-                        <span class="text-muted fw-bold small">à¸­à¸±à¸›à¹€à¸”à¸•à¸¥à¹ˆà¸²à¸ªà¸¸à¸”:</span>
-                        <span class="badge bg-light text-dark border fw-bold small">à¹€à¸¡à¸·à¹ˆà¸­à¸ªà¸±à¸à¸„à¸£à¸¹à¹ˆ</span>
+                        <span class="text-muted fw-bold small">อัปเดตล่าสุด:</span>
+                        <span class="badge bg-light text-dark border fw-bold small">เมื่อสักครู่</span>
                     </div>
                 </div>
 
                 <!-- Subpane 1: Top AI Picks -->
                 <div id="geminiInlinePanePicks">
                     <div class="d-flex align-items-center gap-1.5 flex-wrap mb-3 overflow-x-auto pb-1">
-                        <span class="text-muted fw-bold small me-1">à¸à¸¥à¸¢à¸¸à¸—à¸˜à¹Œ:</span>
-                        <button type="button" class="btn btn-sm btn-dark rounded-pill py-0.5 px-3 fw-bold active" id="btnInlineGemFilter_ALL" onclick="filterGeminiAiPicks('ALL', true)">ðŸŒŸ à¸—à¸±à¹‰à¸‡à¸«à¸¡à¸” (10 à¸«à¸¸à¹‰à¸™à¹€à¸”à¹ˆà¸™)</button>
-                        <button type="button" class="btn btn-sm btn-outline-success rounded-pill py-0.5 px-3 fw-bold" id="btnInlineGemFilter_BUY" onclick="filterGeminiAiPicks('BUY', true)">ðŸ’Ž Strong Buy</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill py-0.5 px-3 fw-bold" id="btnInlineGemFilter_GROWTH" onclick="filterGeminiAiPicks('GROWTH', true)">ðŸš€ Momentum & Growth</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-3 fw-bold" id="btnInlineGemFilter_DEFENSIVE" onclick="filterGeminiAiPicks('DEFENSIVE', true)">ðŸ›¡ï¸ Value & Defensive</button>
+                        <span class="text-muted fw-bold small me-1">กลยุทธ์:</span>
+                        <button type="button" class="btn btn-sm btn-dark rounded-pill py-0.5 px-3 fw-bold active" id="btnInlineGemFilter_ALL" onclick="filterGeminiAiPicks('ALL', true)">🌟 ทั้งหมด (10 หุ้นเด่น)</button>
+                        <button type="button" class="btn btn-sm btn-outline-success rounded-pill py-0.5 px-3 fw-bold" id="btnInlineGemFilter_BUY" onclick="filterGeminiAiPicks('BUY', true)">💎 Strong Buy</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill py-0.5 px-3 fw-bold" id="btnInlineGemFilter_GROWTH" onclick="filterGeminiAiPicks('GROWTH', true)">🚀 Momentum & Growth</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-3 fw-bold" id="btnInlineGemFilter_DEFENSIVE" onclick="filterGeminiAiPicks('DEFENSIVE', true)">🛡️ Value & Defensive</button>
                     </div>
                     <div id="geminiInlinePicksContainer" class="d-flex flex-column gap-3">
-                        <!-- Rendered by renderGeminiAiPicks() -->
+                        <!-- Rendered dynamically by renderGeminiAiPicks() -->
                     </div>
                 </div>
 
@@ -5423,12 +5423,12 @@
                 <div id="geminiInlinePaneDeepDive" style="display: none;">
                     <div class="card border-0 shadow-sm rounded-4 p-3 p-md-4 mb-4">
                         <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
-                            <h5 class="fw-bold m-0 text-primary">ðŸ” AI Deep Dive Analyzer</h5>
-                            <small class="text-muted">à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¹€à¸Šà¸´à¸‡à¸¥à¸¶à¸à¸žà¸£à¹‰à¸­à¸¡à¸›à¸£à¸°à¹€à¸¡à¸´à¸™à¸à¸£à¸­à¸šà¹à¸™à¸§à¸£à¸±à¸š-à¹à¸™à¸§à¸•à¹‰à¸²à¸™ à¹à¸¥à¸° Catalyst à¸£à¸²à¸¢à¸•à¸±à¸§</small>
+                            <h5 class="fw-bold m-0 text-primary">🔍 AI Deep Dive Analyzer</h5>
+                            <small class="text-muted">วิเคราะห์เชิงลึกพร้อมประเมินกรอบแนวรับ-แนวต้าน และ Catalyst รายตัว</small>
                         </div>
                         <div class="row g-2 mb-3">
                             <div class="col-md-6 col-12">
-                                <label class="form-label small fw-bold text-muted">à¹€à¸¥à¸·à¸­à¸à¸«à¸¸à¹‰à¸™à¸«à¸£à¸·à¸­ ETF à¹ƒà¸™à¸žà¸­à¸£à¹Œà¸•à¹€à¸žà¸·à¹ˆà¸­à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œ:</label>
+                                <label class="form-label small fw-bold text-muted">เลือกหุ้นหรือ ETF ในพอร์ตเพื่อวิเคราะห์:</label>
                                 <select id="geminiInlineDeepDiveTickerSelect" class="form-select form-select-sm fw-bold rounded-3">
                                     <option value="VTI">VTI - Vanguard Total Stock Market ETF</option>
                                     <option value="VXUS">VXUS - Vanguard Total International Stock ETF</option>
@@ -5442,30 +5442,29 @@
                                 </select>
                             </div>
                             <div class="col-md-6 col-12">
-                                <label class="form-label small fw-bold text-muted">à¸£à¸¹à¸›à¹à¸šà¸šà¸à¸²à¸£à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œ:</label>
+                                <label class="form-label small fw-bold text-muted">รูปแบบการวิเคราะห์:</label>
                                 <div class="d-flex gap-2">
                                     <select id="geminiInlineDeepDiveMode" class="form-select form-select-sm rounded-3">
-                                        <option value="COMPREHENSIVE">à¸„à¸£à¸šà¸—à¸¸à¸à¸¡à¸´à¸•à¸´ (Technical + Fundamental + Risk)</option>
-                                        <option value="TECHNICAL_ONLY">à¹€à¸—à¸„à¸™à¸´à¸„ & à¸à¸£à¸­à¸šà¸£à¸²à¸„à¸² à¹à¸™à¸§à¸£à¸±à¸š/à¹à¸™à¸§à¸•à¹‰à¸²à¸™ (S/R)</option>
-                                        <option value="CATALYST_RISK">à¸›à¸±à¸ˆà¸ˆà¸±à¸¢à¸‚à¸±à¸šà¹€à¸„à¸¥à¸·à¹ˆà¸­à¸™ & à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡ (Catalyst & Risk)</option>
+                                        <option value="COMPREHENSIVE">ครบทุกมิติ (Technical + Fundamental + Risk)</option>
+                                        <option value="TECHNICAL_ONLY">เทคนิค & กรอบราคา แนวรับ/แนวต้าน (S/R)</option>
+                                        <option value="CATALYST_RISK">ปัจจัยขับเคลื่อน & ความเสี่ยง (Catalyst & Risk)</option>
                                     </select>
                                     <button type="button" class="btn btn-sm btn-primary rounded-pill px-3 fw-bold text-nowrap" onclick="runInlineGeminiDeepDive()">
-                                        âœ¨ à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸ªà¸”
+                                        ✨ วิเคราะห์สด
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <div id="geminiInlineDeepDiveResultArea" class="p-3 rounded-4 border bg-body-tertiary">
                             <div class="text-muted text-center py-4">
-                                <span class="fs-2 d-block mb-2">ðŸ’¡</span>
-                                <strong>à¹€à¸¥à¸·à¸­à¸à¸«à¸¸à¹‰à¸™à¹à¸¥à¸°à¸„à¸¥à¸´à¸ "à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸ªà¸”" à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰ Gemini AI à¸£à¸±à¸™à¸šà¸—à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¹€à¸Šà¸´à¸‡à¸¥à¸¶à¸</strong>
+                                <span class="fs-2 d-block mb-2">💡</span>
+                                <strong>เลือกหุ้นและคลิก "วิเคราะห์สด" เพื่อให้ Gemini AI รันบทวิเคราะห์เชิงลึก</strong>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- PANE 4: เทคนิค กราฟ (Technical & Trend Hub) -->
             <div class="tab-pane fade" id="technicalViewPane" role="tabpanel">
                 <!-- Section Subtitle Bar -->
                 <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
@@ -5831,27 +5830,28 @@
 
                 </div>
                             <!-- ETF Overlap Analyzer Card (Embedded in Risk & Technical) -->
+                <!-- ETF Overlap Analyzer Card (Embedded in Risk & Technical) -->
                 <div class="card border-0 shadow-sm rounded-4 mb-4 overflow-hidden" id="techEtfOverlapCard">
                     <div class="p-3 p-md-4 border-bottom bg-body-tertiary d-flex justify-content-between align-items-center flex-wrap gap-2">
                         <div class="d-flex align-items-center gap-2">
-                            <span class="fs-4">ðŸ§¬</span>
+                            <span class="fs-4">🧬</span>
                             <div>
                                 <h5 class="fw-bold m-0" style="letter-spacing: -0.3px;">
-                                    à¹€à¸„à¸£à¸·à¹ˆà¸­à¸‡à¸¡à¸·à¸­à¸•à¸£à¸§à¸ˆà¸ªà¸­à¸šà¸„à¸§à¸²à¸¡à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™à¸‚à¸­à¸‡ ETF (ETF Overlap & Exposure Analyzer)
+                                    เครื่องมือตรวจสอบความซ้ำซ้อนของ ETF (ETF Overlap & Exposure Analyzer)
                                 </h5>
                                 <small class="text-muted">
-                                    à¸•à¸£à¸§à¸ˆà¸ªà¸­à¸šà¸§à¹ˆà¸² ETF à¸—à¸µà¹ˆà¸„à¸¸à¸“à¸–à¸·à¸­ (à¹€à¸Šà¹ˆà¸™ VOO, QQQM, VTI, GRID, XLV, SPMO) à¸–à¸·à¸­à¸«à¸¸à¹‰à¸™à¸•à¸±à¸§à¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™à¸¡à¸²à¸à¸™à¹‰à¸­à¸¢à¹€à¸žà¸µà¸¢à¸‡à¹ƒà¸”
+                                    ตรวจสอบว่า ETF ที่คุณถือ (เช่น VOO, QQQM, VTI, GRID, XLV, SPMO) ถือหุ้นตัวเดียวกันซ้ำซ้อนมากน้อยเพียงใด
                                 </small>
                             </div>
                         </div>
                         <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openEtfOverlapModal()">
-                            ðŸ”Ž à¹€à¸›à¸´à¸”à¹€à¸„à¸£à¸·à¹ˆà¸­à¸‡à¸¡à¸·à¸­à¹à¸šà¸šà¸¥à¸°à¹€à¸­à¸µà¸¢à¸” â€º
+                            🔎 เปิดเครื่องมือแบบละเอียด ›
                         </button>
                     </div>
                     <div class="card-body p-3 p-md-4">
                         <div class="row g-2 align-items-end mb-3">
                             <div class="col-md-5 col-12">
-                                <label class="form-label small fw-bold text-muted">ETF à¸•à¸±à¸§à¸—à¸µà¹ˆ 1:</label>
+                                <label class="form-label small fw-bold text-muted">ETF ตัวที่ 1:</label>
                                 <select id="techOverlapEtf1" class="form-select form-select-sm rounded-3 fw-bold" onchange="runTechEtfOverlap()">
                                     <option value="VTI" selected>VTI - Vanguard Total Stock Market ETF</option>
                                     <option value="VOO">VOO - Vanguard S&P 500 ETF</option>
@@ -5864,7 +5864,7 @@
                                 </select>
                             </div>
                             <div class="col-md-5 col-12">
-                                <label class="form-label small fw-bold text-muted">ETF à¸•à¸±à¸§à¸—à¸µà¹ˆ 2:</label>
+                                <label class="form-label small fw-bold text-muted">ETF ตัวที่ 2:</label>
                                 <select id="techOverlapEtf2" class="form-select form-select-sm rounded-3 fw-bold" onchange="runTechEtfOverlap()">
                                     <option value="VOO">VOO - Vanguard S&P 500 ETF</option>
                                     <option value="QQQM" selected>QQQM - Invesco NASDAQ 100 ETF</option>
@@ -5878,7 +5878,7 @@
                             </div>
                             <div class="col-md-2 col-12">
                                 <button type="button" class="btn btn-sm btn-primary rounded-3 w-100 fw-bold py-1.5" onclick="runTechEtfOverlap()">
-                                    âš¡ à¸•à¸£à¸§à¸ˆà¸ªà¸­à¸š
+                                    ⚡ ตรวจสอบ
                                 </button>
                             </div>
                         </div>
@@ -6092,23 +6092,23 @@
                     </div>
                 </div>
             </div>
-                    <!-- PANE 6: à¹à¸œà¸™à¹€à¸à¸©à¸µà¸¢à¸“ & à¸­à¸´à¸ªà¸£à¸ à¸²à¸žà¸—à¸²à¸‡à¸à¸²à¸£à¹€à¸‡à¸´à¸™ (Retirement Planning & FIRE) -->
+                    <!-- PANE 6: แผนเกษียณ & อิสรภาพทางการเงิน (Retirement Planning & FIRE) -->
             <div class="tab-pane fade" id="retirementPane" role="tabpanel">
                 <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
                     <div class="d-flex align-items-center gap-2">
                         <span class="fs-3">&#127963;&#65039;</span>
                         <div>
                             <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
-                                à¹à¸œà¸™à¹€à¸à¸©à¸µà¸¢à¸“ & à¸­à¸´à¸ªà¸£à¸ à¸²à¸žà¸—à¸²à¸‡à¸à¸²à¸£à¹€à¸‡à¸´à¸™ (Retirement Planning & FIRE)
+                                แผนเกษียณ & อิสรภาพทางการเงิน (Retirement Planning & FIRE)
                             </h4>
                             <small class="text-muted">
-                                à¹à¸šà¸šà¸ˆà¸³à¸¥à¸­à¸‡à¸žà¸¥à¸±à¸‡à¸”à¸­à¸à¹€à¸šà¸µà¹‰à¸¢à¸—à¸šà¸•à¹‰à¸™ (Compound Interest), à¹€à¸›à¹‰à¸²à¸«à¸¡à¸²à¸¢à¸›à¸±à¸™à¸œà¸¥à¸£à¸²à¸¢à¹€à¸”à¸·à¸­à¸™ (Monthly Passive Income), à¹à¸¥à¸°à¹à¸šà¸šà¸ˆà¸³à¸¥à¸­à¸‡ Stress Test à¸§à¸´à¸à¸¤à¸•à¸´à¸•à¸¥à¸²à¸”à¸«à¸¸à¹‰à¸™
+                                แบบจำลองพลังดอกเบี้ยทบต้น (Compound Interest), เป้าหมายปันผลรายเดือน (Monthly Passive Income), และแบบจำลอง Stress Test วิกฤติตลาดหุ้น
                             </small>
                         </div>
                     </div>
                     <div class="d-flex align-items-center gap-2">
                         <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openLongTermProjectionModal()">
-                            ðŸ”® à¹€à¸›à¸´à¸”à¹€à¸„à¸£à¸·à¹ˆà¸­à¸‡à¸¡à¸·à¸­à¹€à¸•à¹‡à¸¡à¸ˆà¸­ â€º
+                            🔮 เปิดเครื่องมือเต็มจอ ›
                         </button>
                     </div>
                 </div>
@@ -6117,13 +6117,13 @@
                 <div class="card border-0 shadow-sm rounded-4 mb-4 overflow-hidden">
                     <div class="p-3 p-md-4 border-bottom bg-danger bg-opacity-10 d-flex justify-content-between align-items-center flex-wrap gap-2">
                         <div class="d-flex align-items-center gap-2">
-                            <span class="fs-4">ðŸ›¡ï¸</span>
+                            <span class="fs-4">🛡️</span>
                             <div>
                                 <h5 class="fw-bold m-0 text-danger" style="letter-spacing: -0.3px;">
-                                    à¹à¸šà¸šà¸ˆà¸³à¸¥à¸­à¸‡ Stress Test: à¸§à¸´à¸à¸¤à¸•à¸´à¸•à¸¥à¸²à¸”à¸«à¸¸à¹‰à¸™ & à¹€à¸à¸£à¸²à¸°à¸›à¹‰à¸­à¸‡à¸à¸±à¸™ DCA (Market Crash Scenarios)
+                                    แบบจำลอง Stress Test: วิกฤติตลาดหุ้น & เกราะป้องกัน DCA (Market Crash Scenarios)
                                 </h5>
                                 <small class="text-muted">
-                                    à¸ˆà¸³à¸¥à¸­à¸‡à¸œà¸¥à¸à¸£à¸°à¸—à¸šà¸•à¹ˆà¸­à¸žà¸­à¸£à¹Œà¸•à¸«à¸²à¸à¸•à¸¥à¸²à¸”à¸›à¸£à¸±à¸šà¸à¸²à¸™à¸«à¸™à¸±à¸ à¸žà¸£à¹‰à¸­à¸¡à¹à¸šà¸šà¸ˆà¸³à¸¥à¸­à¸‡à¸£à¸°à¸¢à¸°à¹€à¸§à¸¥à¸²à¸Ÿà¸·à¹‰à¸™à¸•à¸±à¸§ à¹à¸¥à¸°à¸žà¸¥à¸±à¸‡à¸‚à¸­à¸‡à¸à¸²à¸£ DCA à¸¿6,500/à¹€à¸”à¸·à¸­à¸™ à¹ƒà¸™à¸Šà¹ˆà¸§à¸‡à¸§à¸´à¸à¸¤à¸•à¸´
+                                    จำลองผลกระทบต่อพอร์ตหากตลาดปรับฐานหนัก พร้อมแบบจำลองระยะเวลาฟื้นตัว และพลังของการ DCA ฿6,500/เดือน ในช่วงวิกฤติ
                                 </small>
                             </div>
                         </div>
@@ -6137,11 +6137,11 @@
                         </div>
                         <div class="p-3 rounded-4 border bg-body-tertiary">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <span class="fs-5">ðŸ›¡ï¸</span>
-                                <strong class="text-body" style="font-size: 0.92rem;">à¸à¸¥à¸¢à¸¸à¸—à¸˜à¹Œà¸£à¸±à¸šà¸¡à¸·à¸­à¸§à¸´à¸à¸¤à¸•à¸´ (DCA Armor Principle):</strong>
+                                <span class="fs-5">🛡️</span>
+                                <strong class="text-body" style="font-size: 0.92rem;">กลยุทธ์รับมือวิกฤติ (DCA Armor Principle):</strong>
                             </div>
                             <p class="text-muted small m-0" style="line-height: 1.6;">
-                                à¹ƒà¸™à¸Šà¹ˆà¸§à¸‡à¸•à¸¥à¸²à¸”à¸«à¸¸à¹‰à¸™à¸›à¸£à¸±à¸šà¸à¸²à¸™à¸£à¸¸à¸™à¹à¸£à¸‡ à¸à¸²à¸£ <strong>"à¹„à¸¡à¹ˆà¸•à¸·à¹ˆà¸™à¸•à¸£à¸°à¸«à¸™à¸à¸‚à¸²à¸¢"</strong> à¹à¸¥à¸°à¸¢à¸±à¸‡à¸„à¸‡ <strong>"DCA à¸ªà¸°à¸ªà¸¡à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡à¹€à¸”à¸·à¸­à¸™à¸¥à¸° à¸¿6,500"</strong> à¸ˆà¸°à¸Šà¹ˆà¸§à¸¢à¹ƒà¸«à¹‰à¸„à¸¸à¸“à¸‹à¸·à¹‰à¸­à¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œà¸žà¸·à¹‰à¸™à¸à¸²à¸™à¸”à¸µà¹„à¸”à¹‰à¹ƒà¸™à¸£à¸²à¸„à¸²à¸¥à¸”à¸£à¸²à¸„à¸² 20% à¸–à¸¶à¸‡ 40% à¸‹à¸¶à¹ˆà¸‡à¸—à¸³à¸«à¸™à¹‰à¸²à¸—à¸µà¹ˆà¹€à¸›à¹‡à¸™à¸•à¸±à¸§à¹€à¸£à¹ˆà¸‡à¸à¸²à¸£à¸Ÿà¸·à¹‰à¸™à¸•à¸±à¸§à¸‚à¸­à¸‡à¸žà¸­à¸£à¹Œà¸• (Recovery Acceleration) à¸—à¸³à¹ƒà¸«à¹‰à¸žà¸­à¸£à¹Œà¸•à¸à¸¥à¸±à¸šà¸¡à¸²à¹€à¸—à¹ˆà¸²à¸—à¸¸à¸™à¹à¸¥à¸°à¸—à¸³à¸ªà¸–à¸´à¸•à¸´à¸ªà¸¹à¸‡à¸ªà¸¸à¸”à¹ƒà¸«à¸¡à¹ˆ (All-Time High) à¹„à¸”à¹‰à¹€à¸£à¹‡à¸§à¸à¸§à¹ˆà¸²à¸™à¸±à¸à¸¥à¸‡à¸—à¸¸à¸™à¸—à¸±à¹ˆà¸§à¹„à¸›à¹€à¸‰à¸¥à¸µà¹ˆà¸¢ 1.5 - 2 à¹€à¸—à¹ˆà¸²
+                                ในช่วงตลาดหุ้นปรับฐานรุนแรง การ <strong>"ไม่ตื่นตระหนกขาย"</strong> และยังคง <strong>"DCA สะสมต่อเนื่องเดือนละ ฿6,500"</strong> จะช่วยให้คุณซื้อสินทรัพย์พื้นฐานดีได้ในราคาลดราคา 20% ถึง 40% ซึ่งทำหน้าที่เป็นตัวเร่งการฟื้นตัวของพอร์ต (Recovery Acceleration) ทำให้พอร์ตกลับมาเท่าทุนและทำสถิติสูงสุดใหม่ (All-Time High) ได้เร็วกว่านักลงทุนทั่วไปเฉลี่ย 1.5 - 2 เท่า
                             </p>
                         </div>
                     </div>
@@ -6152,36 +6152,36 @@
                     <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
                         <div>
                             <h5 class="fw-bold m-0" style="color: inherit;">
-                                ðŸ“ˆ à¸žà¸¥à¸±à¸‡à¸”à¸­à¸à¹€à¸šà¸µà¹‰à¸¢à¸—à¸šà¸•à¹‰à¸™ & à¹€à¸›à¹‰à¸²à¸«à¸¡à¸²à¸¢à¹€à¸‡à¸´à¸™à¸›à¸±à¸™à¸œà¸¥à¸£à¸²à¸¢à¹€à¸”à¸·à¸­à¸™ (Compound Interest & Dividend Target)
+                                📈 พลังดอกเบี้ยทบต้น & เป้าหมายเงินปันผลรายเดือน (Compound Interest & Dividend Target)
                             </h5>
-                            <small class="text-muted">à¸ˆà¸³à¸¥à¸­à¸‡à¸à¸²à¸£à¹€à¸•à¸´à¸šà¹‚à¸•à¸‚à¸­à¸‡à¹€à¸‡à¸´à¸™à¸¥à¸‡à¸—à¸¸à¸™ 10 - 30 à¸›à¸µ à¹€à¸¡à¸·à¹ˆà¸­à¸¥à¸‡à¸—à¸¸à¸™à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡à¸ªà¸¡à¹ˆà¸³à¹€à¸ªà¸¡à¸­</small>
+                            <small class="text-muted">จำลองการเติบโตของเงินลงทุน 10 - 30 ปี เมื่อลงทุนต่อเนื่องสม่ำเสมอ</small>
                         </div>
                     </div>
                     <div class="row g-3">
                         <div class="col-lg-4 col-12">
                             <div class="p-3 rounded-3 border bg-body-tertiary h-100">
-                                <h6 class="fw-bold mb-3 text-primary">âš™ï¸ à¸›à¸£à¸±à¸šà¸•à¸±à¸§à¹à¸›à¸£à¸à¸²à¸£à¸­à¸­à¸¡</h6>
+                                <h6 class="fw-bold mb-3 text-primary">⚙️ ปรับตัวแปรการออม</h6>
                                 <div class="mb-3">
-                                    <label class="form-label small fw-bold text-muted">à¹€à¸‡à¸´à¸™à¸¥à¸‡à¸—à¸¸à¸™à¹€à¸£à¸´à¹ˆà¸¡à¸•à¹‰à¸™ (Initial Capital):</label>
+                                    <label class="form-label small fw-bold text-muted">เงินลงทุนเริ่มต้น (Initial Capital):</label>
                                     <input type="number" id="retireInitialCapital" class="form-control form-control-sm rounded-3" value="73500" oninput="updateRetirementSimulation()">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label small fw-bold text-muted">à¹€à¸‡à¸´à¸™ DCA à¸›à¸£à¸°à¸ˆà¸³à¹€à¸”à¸·à¸­à¸™ (Monthly Saving):</label>
+                                    <label class="form-label small fw-bold text-muted">เงิน DCA ประจำเดือน (Monthly Saving):</label>
                                     <input type="number" id="retireMonthlyDca" class="form-control form-control-sm rounded-3" value="6500" oninput="updateRetirementSimulation()">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label small fw-bold text-muted">à¸œà¸¥à¸•à¸­à¸šà¹à¸—à¸™à¸„à¸²à¸”à¸«à¸§à¸±à¸‡à¸£à¸§à¸¡ (% à¸•à¹ˆà¸­à¸›à¸µ):</label>
+                                    <label class="form-label small fw-bold text-muted">ผลตอบแทนคาดหวังรวม (% ต่อปี):</label>
                                     <input type="number" id="retireExpectedReturn" class="form-control form-control-sm rounded-3" value="9.0" step="0.5" oninput="updateRetirementSimulation()">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label small fw-bold text-muted">à¸­à¸±à¸•à¸£à¸²à¹€à¸‡à¸´à¸™à¸›à¸±à¸™à¸œà¸¥à¹€à¸‰à¸¥à¸µà¹ˆà¸¢ (% à¸•à¹ˆà¸­à¸›à¸µ):</label>
+                                    <label class="form-label small fw-bold text-muted">อัตราเงินปันผลเฉลี่ย (% ต่อปี):</label>
                                     <input type="number" id="retireDivYield" class="form-control form-control-sm rounded-3" value="3.5" step="0.5" oninput="updateRetirementSimulation()">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-8 col-12">
                             <div class="row g-3" id="retireProjectionMilestones">
-                                <!-- Milestones: 5 à¸›à¸µ, 10 à¸›à¸µ, 20 à¸›à¸µ, 30 à¸›à¸µ -->
+                                <!-- Milestones: 5 ปี, 10 ปี, 20 ปี, 30 ปี -->
                             </div>
                         </div>
                     </div>
@@ -18011,6 +18011,8 @@
         // ==========================================
         // ðŸ“Š EXECUTIVE OVERVIEW DASHBOARD & INVESTMENT RECOMMENDATIONS
         // ==========================================
+        // 📊 EXECUTIVE OVERVIEW DASHBOARD & INVESTMENT RECOMMENDATIONS
+        // ==========================================
         window.renderOverviewDashboard = function() {
             const container = document.getElementById('overviewDashboardContent');
             if (!container) return;
@@ -18059,18 +18061,18 @@
                 }
             });
 
-            let riskTitle = "ðŸŸ¢ à¸ªà¸¡à¸”à¸¸à¸¥à¸”à¸µ (Healthy)";
+            let riskTitle = "🟢 สมดุลดี (Healthy)";
             let riskBadgeClass = "bg-success-subtle text-success border border-success-subtle";
-            let riskSub = "à¸žà¸­à¸£à¹Œà¸•à¸à¸£à¸°à¸ˆà¸²à¸¢à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¹€à¸«à¸¡à¸²à¸°à¸ªà¸¡";
+            let riskSub = "พอร์ตกระจายความเสี่ยงเหมาะสม";
 
             if (techWeight > 45) {
-                riskTitle = "âš ï¸ Tech Concentration à¸ªà¸¹à¸‡";
+                riskTitle = "⚠️ Tech Concentration สูง";
                 riskBadgeClass = "bg-warning-subtle text-warning border border-warning-subtle";
-                riskSub = `à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™à¸à¸¥à¸¸à¹ˆà¸¡ Tech à¸­à¸¢à¸¹à¹ˆà¸—à¸µà¹ˆ ${techWeight.toFixed(1)}% (à¸„à¸§à¸£à¸£à¸°à¸§à¸±à¸‡à¸„à¸§à¸²à¸¡à¸œà¸±à¸™à¸œà¸§à¸™)`;
+                riskSub = `สัดส่วนกลุ่ม Tech อยู่ที่ ${techWeight.toFixed(1)}% (ควรระวังความผันผวน)`;
             } else if (coreEtfWeight < 30) {
-                riskTitle = "ðŸŸ¡ Core Asset à¸™à¹‰à¸­à¸¢à¹€à¸à¸´à¸™à¹„à¸›";
+                riskTitle = "🟡 Core Asset น้อยเกินไป";
                 riskBadgeClass = "bg-warning-subtle text-warning border border-warning-subtle";
-                riskSub = `Core ETF à¸¡à¸µà¹€à¸žà¸µà¸¢à¸‡ ${coreEtfWeight.toFixed(1)}% à¸„à¸§à¸£à¹€à¸žà¸´à¹ˆà¸¡ VTI/VOO`;
+                riskSub = `Core ETF มีเพียง ${coreEtfWeight.toFixed(1)}% ควรเพิ่ม VTI/VOO`;
             }
 
             let buyItems = [];
@@ -18087,67 +18089,67 @@
                         ticker: tk,
                         name: it.fullName,
                         weight: w,
-                        reason: `à¸™à¹‰à¸³à¸«à¸™à¸±à¸à¸ªà¸¹à¸‡à¸–à¸¶à¸‡ ${w.toFixed(1)}% (à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸à¸£à¸°à¸ˆà¸¸à¸à¸•à¸±à¸§à¸ªà¸¹à¸‡)`,
-                        action: 'à¸«à¸¢à¸¸à¸”à¹€à¸•à¸´à¸¡à¹€à¸‡à¸´à¸™à¹€à¸žà¸´à¹ˆà¸¡à¸Šà¸±à¹ˆà¸§à¸„à¸£à¸²à¸§ à¸«à¸£à¸·à¸­à¸žà¸´à¸ˆà¸²à¸£à¸“à¸²à¹€à¸à¸¥à¸µà¹ˆà¸¢à¹€à¸‡à¸´à¸™à¹€à¸‚à¹‰à¸² Core ETF'
+                        reason: `น้ำหนักสูงถึง ${w.toFixed(1)}% (เสี่ยงกระจุกตัวสูง)`,
+                        action: 'หยุดเติมเงินเพิ่มชั่วคราว หรือพิจารณาเกลี่ยเงินเข้า Core ETF'
                     });
                 } else if (isCore && w < 30) {
                     buyItems.push({
                         ticker: tk,
                         name: it.fullName,
                         weight: w,
-                        reason: `Core Asset à¸ªà¸³à¸„à¸±à¸ à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™à¸›à¸±à¸ˆà¸ˆà¸¸à¸šà¸±à¸™ ${w.toFixed(1)}% (à¸•à¹ˆà¸³à¸à¸§à¹ˆà¸²à¹€à¸›à¹‰à¸²à¸«à¸¡à¸²à¸¢ 30%)`,
-                        action: 'à¹€à¸™à¹‰à¸™ DCA à¸—à¸¢à¸­à¸¢à¸ªà¸°à¸ªà¸¡à¹€à¸žà¸´à¹ˆà¸¡à¹€à¸›à¹‡à¸™à¸¥à¸³à¸”à¸±à¸šà¹à¸£à¸à¹€à¸žà¸·à¹ˆà¸­à¸ªà¸£à¹‰à¸²à¸‡à¸à¸²à¸™à¸žà¸­à¸£à¹Œà¸•'
+                        reason: `Core Asset สำคัญ สัดส่วนปัจจุบัน ${w.toFixed(1)}% (ต่ำกว่าเป้าหมาย 30%)`,
+                        action: 'เน้น DCA ทยอยสะสมเพิ่มเป็นลำดับแรกเพื่อสร้างฐานพอร์ต'
                     });
                 } else if (it.plPercent < -8) {
                     buyItems.push({
                         ticker: tk,
                         name: it.fullName,
                         weight: w,
-                        reason: `à¸¢à¹ˆà¸­à¸•à¸±à¸§à¹ƒà¸™à¹‚à¸‹à¸™à¸£à¸±à¸š à¸•à¸´à¸”à¸¥à¸š ${it.plPercent.toFixed(1)}% à¹à¸•à¹ˆà¸žà¸·à¹‰à¸™à¸à¸²à¸™à¹à¸‚à¹‡à¸‡à¹à¸à¸£à¹ˆà¸‡`,
-                        action: 'à¸—à¸¢à¸­à¸¢à¸–à¸±à¸§à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸•à¹‰à¸™à¸—à¸¸à¸™à¹à¸šà¸š DCA à¸•à¸²à¸¡à¸à¸£à¸­à¸šà¸£à¸²à¸„à¸²'
+                        reason: `ย่อตัวในโซนรับ ติดลบ ${it.plPercent.toFixed(1)}% แต่พื้นฐานแข็งแกร่ง`,
+                        action: 'ทยอยถัวเฉลี่ยต้นทุนแบบ DCA ตามกรอบราคา'
                     });
                 } else {
                     holdItems.push({
                         ticker: tk,
                         name: it.fullName,
                         weight: w,
-                        reason: `à¸™à¹‰à¸³à¸«à¸™à¸±à¸à¹€à¸«à¸¡à¸²à¸°à¸ªà¸¡ (${w.toFixed(1)}%) à¹à¸¥à¸°à¸œà¸¥à¸•à¸­à¸šà¹à¸—à¸™à¸­à¸¢à¸¹à¹ˆà¹ƒà¸™à¹€à¸à¸“à¸‘à¹Œà¸”à¸µ`,
-                        action: 'à¸–à¸·à¸­à¸„à¸£à¸­à¸‡à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡ (Hold) à¸•à¸²à¸¡à¹à¸œà¸™à¸à¸²à¸£à¸¥à¸‡à¸—à¸¸à¸™à¸£à¸°à¸¢à¸°à¸¢à¸²à¸§'
+                        reason: `น้ำหนักเหมาะสม (${w.toFixed(1)}%) และผลตอบแทนอยู่ในเกณฑ์ดี`,
+                        action: 'ถือครองต่อเนื่อง (Hold) ตามแผนการลงทุนระยะยาว'
                     });
                 }
             });
 
             if (buyItems.length === 0) {
-                buyItems.push({ ticker: 'VTI', name: 'Vanguard Total Stock Market', weight: 26.4, reason: 'à¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œà¸«à¸¥à¸±à¸à¹€à¸žà¸·à¹ˆà¸­à¸à¸²à¸£à¹€à¸•à¸´à¸šà¹‚à¸•à¸£à¸°à¸¢à¸°à¸¢à¸²à¸§', action: 'DCA à¸ªà¸°à¸ªà¸¡à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡' });
+                buyItems.push({ ticker: 'VTI', name: 'Vanguard Total Stock Market', weight: 26.4, reason: 'สินทรัพย์หลักเพื่อการเติบโตระยะยาว', action: 'DCA สะสมต่อเนื่อง' });
             }
             if (holdItems.length === 0) {
-                holdItems.push({ ticker: 'QQQM', name: 'Invesco NASDAQ 100 ETF', weight: 15.0, reason: 'à¹‚à¸¡à¹€à¸¡à¸™à¸•à¸±à¸¡à¹€à¸—à¸„à¹‚à¸™à¹‚à¸¥à¸¢à¸µà¹à¸‚à¹‡à¸‡à¹à¸à¸£à¹ˆà¸‡', action: 'à¸–à¸·à¸­à¸„à¸£à¸­à¸‡à¸•à¸²à¸¡à¸£à¸­à¸šà¸‚à¸²à¸‚à¸¶à¹‰à¸™' });
+                holdItems.push({ ticker: 'QQQM', name: 'Invesco NASDAQ 100 ETF', weight: 15.0, reason: 'โมเมนตัมเทคโนโลยีแข็งแกร่ง', action: 'ถือครองตามรอบขาขึ้น' });
             }
 
             let dcaBudgetTHB = 6500;
             let dcaBlueprintHtml = `
                 <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
                     <div class="d-flex align-items-center gap-2">
-                        <span class="fs-5">ðŸ’¡</span>
-                        <strong class="text-body" style="font-size: 0.95rem;">DCA Smart Blueprint: à¹à¸œà¸™à¸ˆà¸±à¸”à¸ªà¸£à¸£à¹€à¸‡à¸´à¸™à¸­à¸­à¸¡ à¸¿${dcaBudgetTHB.toLocaleString('th-TH')} à¸›à¸£à¸°à¸ˆà¸³à¹€à¸”à¸·à¸­à¸™</strong>
+                        <span class="fs-5">💡</span>
+                        <strong class="text-body" style="font-size: 0.95rem;">DCA Smart Blueprint: แผนจัดสรรเงินออม ฿${dcaBudgetTHB.toLocaleString('th-TH')} ประจำเดือน</strong>
                     </div>
                     <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-2.5 py-1 fw-bold">
-                        ðŸŽ¯ Rebalance à¹à¸šà¸šà¹„à¸¡à¹ˆà¸•à¹‰à¸­à¸‡à¸‚à¸²à¸¢ (No-Tax DCA)
+                        🎯 Rebalance แบบไม่ต้องขาย (No-Tax DCA)
                     </span>
                 </div>
                 <div class="text-muted small mb-3">
-                    à¸à¸£à¸°à¸ˆà¸²à¸¢à¹€à¸‡à¸´à¸™à¸—à¸¸à¸™à¹ƒà¸«à¸¡à¹ˆà¹€à¸‚à¹‰à¸²à¸ªà¸¹à¹ˆà¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œà¸—à¸µà¹ˆà¸™à¹‰à¸³à¸«à¸™à¸±à¸à¸¢à¸±à¸‡à¸•à¹ˆà¸³à¸à¸§à¹ˆà¸²à¹€à¸›à¹‰à¸²à¸«à¸¡à¸²à¸¢ (Underweight) à¸Šà¹ˆà¸§à¸¢à¸›à¸£à¸±à¸šà¸ªà¸¡à¸”à¸¸à¸¥à¸žà¸­à¸£à¹Œà¸•à¸­à¸±à¸•à¹‚à¸™à¸¡à¸±à¸•à¸´à¹‚à¸”à¸¢à¹„à¸¡à¹ˆà¸•à¹‰à¸­à¸‡à¹€à¸ªà¸µà¸¢à¸ à¸²à¸©à¸µà¸«à¸£à¸·à¸­à¸„à¹ˆà¸²à¸˜à¸£à¸£à¸¡à¹€à¸™à¸µà¸¢à¸¡à¸ˆà¸²à¸à¸à¸²à¸£à¸‚à¸²à¸¢
+                    กระจายเงินทุนใหม่เข้าสู่สินทรัพย์ที่น้ำหนักยังต่ำกว่าเป้าหมาย (Underweight) ช่วยปรับสมดุลพอร์ตอัตโนมัติโดยไม่ต้องเสียภาษีหรือค่าธรรมเนียมจากการขาย
                 </div>
                 <div class="row g-2">
                     <div class="col-md-4 col-12">
                         <div class="p-2.5 rounded-3 border bg-body d-flex align-items-center justify-content-between shadow-sm">
                             <div>
                                 <div class="fw-bold text-primary">VTI (Core US ETF)</div>
-                                <small class="text-muted">à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™ 50% à¸‚à¸­à¸‡à¸‡à¸š DCA</small>
+                                <small class="text-muted">สัดส่วน 50% ของงบ DCA</small>
                             </div>
                             <div class="text-end">
-                                <strong class="text-success fw-bolder">à¸¿3,250</strong>
-                                <div class="text-muted" style="font-size: 0.72rem;">â‰ˆ $97.10 USD</div>
+                                <strong class="text-success fw-bolder">฿3,250</strong>
+                                <div class="text-muted" style="font-size: 0.72rem;">≈ $97.10 USD</div>
                             </div>
                         </div>
                     </div>
@@ -18155,23 +18157,23 @@
                         <div class="p-2.5 rounded-3 border bg-body d-flex align-items-center justify-content-between shadow-sm">
                             <div>
                                 <div class="fw-bold text-primary">VXUS / SCHD</div>
-                                <small class="text-muted">à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™ 30% à¸‚à¸­à¸‡à¸‡à¸š DCA</small>
+                                <small class="text-muted">สัดส่วน 30% ของงบ DCA</small>
                             </div>
                             <div class="text-end">
-                                <strong class="text-success fw-bolder">à¸¿1,950</strong>
-                                <div class="text-muted" style="font-size: 0.72rem;">â‰ˆ $58.26 USD</div>
+                                <strong class="text-success fw-bolder">฿1,950</strong>
+                                <div class="text-muted" style="font-size: 0.72rem;">≈ $58.26 USD</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 col-12">
                         <div class="p-2.5 rounded-3 border bg-body d-flex align-items-center justify-content-between shadow-sm">
                             <div>
-                                <div class="fw-bold text-primary">JEPQ / à¸«à¸¸à¹‰à¸™à¸£à¸²à¸¢à¸•à¸±à¸§</div>
-                                <small class="text-muted">à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™ 20% à¸‚à¸­à¸‡à¸‡à¸š DCA</small>
+                                <div class="fw-bold text-primary">JEPQ / หุ้นรายตัว</div>
+                                <small class="text-muted">สัดส่วน 20% ของงบ DCA</small>
                             </div>
                             <div class="text-end">
-                                <strong class="text-success fw-bolder">à¸¿1,300</strong>
-                                <div class="text-muted" style="font-size: 0.72rem;">â‰ˆ $38.84 USD</div>
+                                <strong class="text-success fw-bolder">฿1,300</strong>
+                                <div class="text-muted" style="font-size: 0.72rem;">≈ $38.84 USD</div>
                             </div>
                         </div>
                     </div>
@@ -18182,11 +18184,11 @@
                 <div class="action-recom-card border-buy mb-2">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <strong class="text-success">${it.ticker}</strong>
-                        <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-0.5" style="font-size: 0.7rem;">BUY (à¹€à¸žà¸´à¹ˆà¸¡à¸™à¹‰à¸³à¸«à¸™à¸±à¸)</span>
+                        <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-0.5" style="font-size: 0.7rem;">BUY (เพิ่มน้ำหนัก)</span>
                     </div>
                     <div class="text-truncate fw-semibold small mb-1" style="color: var(--bs-body-color);">${it.name}</div>
                     <div class="text-muted" style="font-size: 0.75rem; line-height: 1.35;">${it.reason}</div>
-                    <div class="mt-1 text-success fw-bold" style="font-size: 0.72rem;">ðŸ‘‰ ${it.action}</div>
+                    <div class="mt-1 text-success fw-bold" style="font-size: 0.72rem;">👉 ${it.action}</div>
                 </div>
             `).join('');
 
@@ -18194,28 +18196,28 @@
                 <div class="action-recom-card border-hold mb-2">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <strong class="text-warning">${it.ticker}</strong>
-                        <span class="badge bg-warning bg-opacity-10 text-warning rounded-pill px-2 py-0.5" style="font-size: 0.7rem;">HOLD (à¸–à¸·à¸­à¸„à¸£à¸­à¸‡)</span>
+                        <span class="badge bg-warning bg-opacity-10 text-warning rounded-pill px-2 py-0.5" style="font-size: 0.7rem;">HOLD (ถือครอง)</span>
                     </div>
                     <div class="text-truncate fw-semibold small mb-1" style="color: var(--bs-body-color);">${it.name}</div>
                     <div class="text-muted" style="font-size: 0.75rem; line-height: 1.35;">${it.reason}</div>
-                    <div class="mt-1 text-warning fw-bold" style="font-size: 0.72rem;">ðŸ‘‰ ${it.action}</div>
+                    <div class="mt-1 text-warning fw-bold" style="font-size: 0.72rem;">👉 ${it.action}</div>
                 </div>
             `).join('');
 
             let reviewCardsHtml = (reviewItems.length > 0 ? reviewItems.slice(0, 3) : [{
-                ticker: 'à¸à¸£à¸°à¸ˆà¸²à¸¢à¸•à¸±à¸§à¸”à¸µ',
-                name: 'à¹„à¸¡à¹ˆà¸¡à¸µà¸«à¸¸à¹‰à¸™à¸à¸£à¸°à¸ˆà¸¸à¸à¸•à¸±à¸§à¹€à¸à¸´à¸™ 25%',
-                reason: 'à¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œà¸—à¸¸à¸à¸•à¸±à¸§à¸¡à¸µà¸™à¹‰à¸³à¸«à¸™à¸±à¸à¹ƒà¸™à¹€à¸à¸“à¸‘à¹Œà¸›à¸¥à¸­à¸”à¸ à¸±à¸¢ à¹„à¸¡à¹ˆà¸¡à¸µà¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸à¸£à¸°à¸ˆà¸¸à¸à¸•à¸±à¸§à¸ªà¸¹à¸‡',
-                action: 'à¸„à¸‡à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™à¹€à¸”à¸´à¸¡à¸•à¸²à¸¡à¸à¸¥à¸¢à¸¸à¸—à¸˜à¹Œ'
+                ticker: 'กระจายตัวดี',
+                name: 'ไม่มีหุ้นกระจุกตัวเกิน 25%',
+                reason: 'สินทรัพย์ทุกตัวมีน้ำหนักในเกณฑ์ปลอดภัย ไม่มีความเสี่ยงกระจุกตัวสูง',
+                action: 'คงสัดส่วนเดิมตามกลยุทธ์'
             }]).map(it => `
                 <div class="action-recom-card border-review mb-2">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <strong class="text-danger">${it.ticker}</strong>
-                        <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-2 py-0.5" style="font-size: 0.7rem;">REVIEW (à¸—à¸šà¸—à¸§à¸™)</span>
+                        <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-2 py-0.5" style="font-size: 0.7rem;">REVIEW (ทบทวน)</span>
                     </div>
                     <div class="text-truncate fw-semibold small mb-1" style="color: var(--bs-body-color);">${it.name}</div>
                     <div class="text-muted" style="font-size: 0.75rem; line-height: 1.35;">${it.reason}</div>
-                    <div class="mt-1 text-danger fw-bold" style="font-size: 0.72rem;">ðŸ‘‰ ${it.action}</div>
+                    <div class="mt-1 text-danger fw-bold" style="font-size: 0.72rem;">👉 ${it.action}</div>
                 </div>
             `).join('');
 
@@ -18245,37 +18247,37 @@
                     <div class="col-xl-3 col-sm-6">
                         <div class="overview-kpi-card">
                             <div class="d-flex justify-content-between align-items-center mb-1">
-                                <span class="overview-kpi-label">à¸¡à¸¹à¸¥à¸„à¹ˆà¸²à¸žà¸­à¸£à¹Œà¸•à¸£à¸§à¸¡ (Net Worth)</span>
+                                <span class="overview-kpi-label">มูลค่าพอร์ตรวม (Net Worth)</span>
                                 <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-0.5" style="font-size:0.7rem;">ALL PORTS</span>
                             </div>
                             <div class="overview-kpi-val text-primary">$${totalMktUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
-                            <div class="overview-kpi-sub text-muted">â‰ˆ à¸¿${totalMktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</div>
+                            <div class="overview-kpi-sub text-muted">≈ ฿${totalMktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-6">
                         <div class="overview-kpi-card">
                             <div class="d-flex justify-content-between align-items-center mb-1">
-                                <span class="overview-kpi-label">à¸•à¹‰à¸™à¸—à¸¸à¸™à¸£à¸§à¸¡ (Cost Basis)</span>
+                                <span class="overview-kpi-label">ต้นทุนรวม (Cost Basis)</span>
                                 <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-2 py-0.5" style="font-size:0.7rem;">INVESTED</span>
                             </div>
                             <div class="overview-kpi-val">$${totalCostUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
-                            <div class="overview-kpi-sub text-muted">â‰ˆ à¸¿${totalCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</div>
+                            <div class="overview-kpi-sub text-muted">≈ ฿${totalCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-6">
                         <div class="overview-kpi-card">
                             <div class="d-flex justify-content-between align-items-center mb-1">
-                                <span class="overview-kpi-label">à¸à¸³à¹„à¸£/à¸‚à¸²à¸”à¸—à¸¸à¸™à¸£à¸§à¸¡ (Total P/L)</span>
+                                <span class="overview-kpi-label">กำไร/ขาดทุนรวม (Total P/L)</span>
                                 <span class="badge rounded-pill px-2 py-0.5 ${plBadgeBg}" style="font-size:0.7rem;">UNREALIZED</span>
                             </div>
                             <div class="overview-kpi-val ${plColorClass}">${plSign}$${Math.abs(plUSD).toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
-                            <div class="overview-kpi-sub ${plColorClass}">â‰ˆ ${plSign}à¸¿${Math.abs(plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2})} (${plSign}${plPercent.toFixed(2)}%)</div>
+                            <div class="overview-kpi-sub ${plColorClass}">≈ ${plSign}฿${Math.abs(plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2})} (${plSign}${plPercent.toFixed(2)}%)</div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-6">
                         <div class="overview-kpi-card">
                             <div class="d-flex justify-content-between align-items-center mb-1">
-                                <span class="overview-kpi-label">à¸ªà¸¸à¸‚à¸ à¸²à¸žà¸žà¸­à¸£à¹Œà¸• & S&P 500</span>
+                                <span class="overview-kpi-label">สุขภาพพอร์ต & S&P 500</span>
                                 <span class="badge rounded-pill px-2 py-0.5 ${riskBadgeClass}" style="font-size:0.7rem;">HEALTH CHECK</span>
                             </div>
                             <div class="overview-kpi-val" style="font-size: 1.15rem;">${riskTitle}</div>
@@ -18288,19 +18290,19 @@
                 <div class="card border-0 shadow-sm rounded-4 mb-4 overflow-hidden">
                     <div class="p-3 p-md-4 border-bottom bg-body-tertiary d-flex justify-content-between align-items-center flex-wrap gap-2">
                         <div class="d-flex align-items-center gap-2">
-                            <span class="fs-4">ðŸŽ¯</span>
+                            <span class="fs-4">🎯</span>
                             <div>
                                 <h5 class="fw-bold m-0" style="letter-spacing: -0.3px;">
-                                    à¸„à¸³à¹à¸™à¸°à¸™à¸³à¸à¸²à¸£à¸¥à¸‡à¸—à¸¸à¸™ & à¹à¸œà¸™à¸ˆà¸±à¸”à¸ªà¸£à¸£à¹€à¸‡à¸´à¸™ (Systematic Portfolio Recommendations)
+                                    คำแนะนำการลงทุน & แผนจัดสรรเงิน (Systematic Portfolio Recommendations)
                                 </h5>
                                 <small class="text-muted">
-                                    à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸ªà¸–à¸²à¸™à¸°à¸žà¸­à¸£à¹Œà¸•à¹à¸šà¸šà¸­à¸‡à¸„à¹Œà¸£à¸§à¸¡ à¸žà¸£à¹‰à¸­à¸¡à¹à¸œà¸™ DCA 6,500 à¸šà¸²à¸— à¸›à¸£à¸±à¸šà¸ªà¸¡à¸”à¸¸à¸¥à¸žà¸­à¸£à¹Œà¸•à¸­à¸¢à¹ˆà¸²à¸‡à¸Šà¸²à¸à¸‰à¸¥à¸²à¸”à¹‚à¸”à¸¢à¹„à¸¡à¹ˆà¸•à¹‰à¸­à¸‡à¸‚à¸²à¸¢à¸«à¸¸à¹‰à¸™
+                                    วิเคราะห์สถานะพอร์ตแบบองค์รวม พร้อมแผน DCA 6,500 บาท ปรับสมดุลพอร์ตอย่างชาญฉลาดโดยไม่ต้องขายหุ้น
                                 </small>
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-2">
                             <button class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('PORTFOLIO')">
-                                ðŸ’¼ à¸”à¸¹à¸•à¸²à¸£à¸²à¸‡à¸žà¸­à¸£à¹Œà¸•à¹€à¸•à¹‡à¸¡ â€º
+                                💼 ดูตารางพอร์ตเต็ม ›
                             </button>
                         </div>
                     </div>
@@ -18308,19 +18310,19 @@
                         <div class="row g-3 mb-4">
                             <div class="col-md-4 col-12">
                                 <div class="fw-bold text-success mb-2 d-flex align-items-center gap-1.5" style="font-size: 0.88rem;">
-                                    <span>ðŸŸ¢</span> BUY (à¹à¸™à¸°à¸™à¸³à¹€à¸žà¸´à¹ˆà¸¡à¸™à¹‰à¸³à¸«à¸™à¸±à¸ / DCA à¸ªà¸°à¸ªà¸¡)
+                                    <span>🟢</span> BUY (แนะนำเพิ่มน้ำหนัก / DCA สะสม)
                                 </div>
                                 ${buyCardsHtml}
                             </div>
                             <div class="col-md-4 col-12">
                                 <div class="fw-bold text-warning mb-2 d-flex align-items-center gap-1.5" style="font-size: 0.88rem;">
-                                    <span>ðŸŸ¡</span> HOLD (à¸–à¸·à¸­à¸„à¸£à¸­à¸‡à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡à¸•à¸²à¸¡à¹à¸œà¸™)
+                                    <span>🟡</span> HOLD (ถือครองต่อเนื่องตามแผน)
                                 </div>
                                 ${holdCardsHtml}
                             </div>
                             <div class="col-md-4 col-12">
                                 <div class="fw-bold text-danger mb-2 d-flex align-items-center gap-1.5" style="font-size: 0.88rem;">
-                                    <span>ðŸ”´</span> REVIEW / TRIM (à¸—à¸šà¸—à¸§à¸™à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡)
+                                    <span>🔴</span> REVIEW / TRIM (ทบทวนความเสี่ยง)
                                 </div>
                                 ${reviewCardsHtml}
                             </div>
@@ -18337,9 +18339,9 @@
                         <div class="card border-0 shadow-sm rounded-4 h-100 p-3 p-md-4">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h6 class="fw-bold m-0" style="color: inherit;">
-                                    ðŸ“Š à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™à¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œà¹à¸¢à¸à¸•à¸²à¸¡à¸žà¸­à¸£à¹Œà¸• (Asset Allocation)
+                                    📊 สัดส่วนสินทรัพย์แยกตามพอร์ต (Asset Allocation)
                                 </h6>
-                                <small class="text-muted">${holdings.length} à¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œ</small>
+                                <small class="text-muted">${holdings.length} สินทรัพย์</small>
                             </div>
                             <div class="alloc-bar-wrapper mb-3">
                                 <div class="alloc-bar-core" style="width: ${corePct.toFixed(1)}%;" title="Core ETF: ${corePct.toFixed(1)}%"></div>
@@ -18378,14 +18380,14 @@
                         <div class="card border-0 shadow-sm rounded-4 h-100 p-3 p-md-4">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h6 class="fw-bold m-0" style="color: inherit;">
-                                    ðŸ† 5 à¸­à¸±à¸™à¸”à¸±à¸šà¹à¸£à¸à¹ƒà¸™à¸žà¸­à¸£à¹Œà¸• (Top 5 Holdings)
+                                    🏆 5 อันดับแรกในพอร์ต (Top 5 Holdings)
                                 </h6>
                                 <button class="btn btn-sm btn-link p-0 text-decoration-none fw-bold text-primary" onclick="onSwitchViewTab('PORTFOLIO')">
-                                    à¸”à¸¹à¸—à¸±à¹‰à¸‡à¸«à¸¡à¸” â€º
+                                    ดูทั้งหมด ›
                                 </button>
                             </div>
                             <div class="d-flex flex-column gap-2">
-                                ${topHoldingsHtml || '<div class="text-muted text-center py-3">à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¡à¸µà¸£à¸²à¸¢à¸à¸²à¸£à¸–à¸·à¸­à¸„à¸£à¸­à¸‡</div>'}
+                                ${topHoldingsHtml || '<div class="text-muted text-center py-3">ยังไม่มีรายการถือครอง</div>'}
                             </div>
                         </div>
                     </div>
@@ -18394,7 +18396,7 @@
         };
 
         // ==========================================
-        // ðŸ›ï¸ RETIREMENT: MARKET CRASH STRESS TEST & COMPOUND INTEREST
+        // 🏛️ RETIREMENT: MARKET CRASH STRESS TEST & COMPOUND INTEREST
         // ==========================================
         window.renderStressTest = function() {
             const row = document.getElementById('stressTestScenariosRow');
@@ -18410,27 +18412,27 @@
             const scenarios = [
                 {
                     title: 'Correction (-20%)',
-                    badge: 'à¸à¸²à¸£à¸›à¸£à¸±à¸šà¸à¸²à¸™à¸›à¸à¸•à¸´',
+                    badge: 'การปรับฐานปกติ',
                     badgeClass: 'bg-warning-subtle text-warning border border-warning-subtle',
                     pct: 20,
-                    recoveryTime: '8 - 14 à¹€à¸”à¸·à¸­à¸™',
-                    desc: 'à¸à¸²à¸£à¸žà¸±à¸à¸à¸²à¸™à¹€à¸žà¸·à¹ˆà¸­à¸ªà¸°à¸ªà¸¡à¸à¸³à¸¥à¸±à¸‡à¹ƒà¸™à¸£à¸­à¸šà¸§à¸±à¸à¸ˆà¸±à¸à¸£à¸•à¸¥à¸²à¸”à¸à¸£à¸°à¸—à¸´à¸‡ (Bull Run Pullback)'
+                    recoveryTime: '8 - 14 เดือน',
+                    desc: 'การพักฐานเพื่อสะสมกำลังในรอบวัฏจักรตลาดกระทิง (Bull Run Pullback)'
                 },
                 {
                     title: 'Bear Market (-30%)',
-                    badge: 'à¸•à¸¥à¸²à¸”à¸«à¸¡à¸µà¹€à¸¨à¸£à¸©à¸à¸à¸´à¸ˆà¸–à¸”à¸–à¸­à¸¢',
+                    badge: 'ตลาดหมีเศรษฐกิจถดถอย',
                     badgeClass: 'bg-danger-subtle text-danger border border-danger-subtle',
                     pct: 30,
-                    recoveryTime: '18 - 24 à¹€à¸”à¸·à¸­à¸™',
-                    desc: 'à¸ªà¸ à¸²à¸§à¸°à¹€à¸¨à¸£à¸©à¸à¸à¸´à¸ˆà¸Šà¸°à¸¥à¸­à¸•à¸±à¸§ à¸”à¸­à¸à¹€à¸šà¸µà¹‰à¸¢à¸ªà¸¹à¸‡ à¸«à¸£à¸·à¸­à¸Ÿà¸­à¸‡à¸ªà¸šà¸¹à¹ˆà¹€à¸‰à¸žà¸²à¸°à¸à¸¥à¸¸à¹ˆà¸¡à¸„à¸¥à¸²à¸¢à¸•à¸±à¸§'
+                    recoveryTime: '18 - 24 เดือน',
+                    desc: 'สภาวะเศรษฐกิจชะลอตัว ดอกเบี้ยสูง หรือฟองสบู่เฉพาะกลุ่มคลายตัว'
                 },
                 {
                     title: 'Severe Crash (-40%)',
-                    badge: 'à¸§à¸´à¸à¸¤à¸•à¸´à¸£à¸¸à¸™à¹à¸£à¸‡à¸£à¸°à¸”à¸±à¸š GFC / Pandemic',
+                    badge: 'วิกฤติรุนแรงระดับ GFC / Pandemic',
                     badgeClass: 'bg-danger text-white',
                     pct: 40,
-                    recoveryTime: '2.5 - 3.5 à¸›à¸µ',
-                    desc: 'à¸§à¸´à¸à¸¤à¸•à¸´à¹€à¸Šà¸´à¸‡à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸£à¸°à¸”à¸±à¸šà¸›à¸£à¸°à¸§à¸±à¸•à¸´à¸¨à¸²à¸ªà¸•à¸£à¹Œ à¹€à¸Šà¹ˆà¸™ Subprime 2008 à¸«à¸£à¸·à¸­ COVID-19 2020'
+                    recoveryTime: '2.5 - 3.5 ปี',
+                    desc: 'วิกฤติเชิงโครงสร้างระดับประวัติศาสตร์ เช่น Subprime 2008 หรือ COVID-19 2020'
                 }
             ];
 
@@ -18451,19 +18453,19 @@
                                 </div>
                                 <div class="text-muted small mb-2">${sc.desc}</div>
                                 <div class="p-2 rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 mb-2">
-                                    <small class="text-muted d-block" style="font-size: 0.72rem;">à¸¡à¸¹à¸¥à¸„à¹ˆà¸²à¸—à¸µà¹ˆà¸¥à¸”à¸¥à¸‡ (Drawdown):</small>
+                                    <small class="text-muted d-block" style="font-size: 0.72rem;">มูลค่าที่ลดลง (Drawdown):</small>
                                     <strong class="text-danger">-$${dropUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</strong>
-                                    <small class="text-danger">(-à¸¿${Math.round(dropTHB).toLocaleString('th-TH')})</small>
+                                    <small class="text-danger">(-฿${Math.round(dropTHB).toLocaleString('th-TH')})</small>
                                 </div>
                                 <div class="p-2 rounded-3 bg-body-tertiary border mb-2">
-                                    <small class="text-muted d-block" style="font-size: 0.72rem;">à¸¡à¸¹à¸¥à¸„à¹ˆà¸²à¸žà¸­à¸£à¹Œà¸•à¸„à¸‡à¹€à¸«à¸¥à¸·à¸­ (Asset Value):</small>
+                                    <small class="text-muted d-block" style="font-size: 0.72rem;">มูลค่าพอร์ตคงเหลือ (Asset Value):</small>
                                     <strong class="text-body">$${remainingUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</strong>
-                                    <small class="text-muted">(â‰ˆ à¸¿${Math.round(remainingTHB).toLocaleString('th-TH')})</small>
+                                    <small class="text-muted">(≈ ฿${Math.round(remainingTHB).toLocaleString('th-TH')})</small>
                                 </div>
                             </div>
                             <div class="pt-2 border-top">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted small">à¸£à¸°à¸¢à¸°à¹€à¸§à¸¥à¸²à¸Ÿà¸·à¹‰à¸™à¸•à¸±à¸§à¹€à¸‰à¸¥à¸µà¹ˆà¸¢:</span>
+                                    <span class="text-muted small">ระยะเวลาฟื้นตัวเฉลี่ย:</span>
                                     <span class="badge bg-secondary-subtle text-secondary border fw-bold">${sc.recoveryTime}</span>
                                 </div>
                             </div>
@@ -18494,7 +18496,6 @@
 
             years.forEach(y => {
                 let n = y * 12;
-                // Compound interest FV formula: FV = PV*(1+r)^n + PMT*(((1+r)^n - 1)/r)
                 let fv = pv * Math.pow(1 + rMonthly, n) + pmt * ((Math.pow(1 + rMonthly, n) - 1) / rMonthly);
                 let annualDiv = fv * divYieldAnnual;
                 let monthlyDiv = annualDiv / 12;
@@ -18505,30 +18506,29 @@
                     <div class="col-sm-6 col-12">
                         <div class="p-3 rounded-4 border bg-body h-100 shadow-sm">
                             <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="badge bg-primary rounded-pill px-2.5 py-1 fw-bold" style="font-size: 0.75rem;">ðŸ“… à¸ªà¸´à¹‰à¸™à¸›à¸µà¸—à¸µà¹ˆ ${y} (${y * 12} à¹€à¸”à¸·à¸­à¸™)</span>
-                                <small class="text-muted">à¹€à¸‡à¸´à¸™à¸•à¹‰à¸™ à¸¿${Math.round(totalInvested).toLocaleString('th-TH')}</small>
+                                <span class="badge bg-primary rounded-pill px-2.5 py-1 fw-bold" style="font-size: 0.75rem;">📅 สิ้นปีที่ ${y} (${y * 12} เดือน)</span>
+                                <small class="text-muted">เงินต้น ฿${Math.round(totalInvested).toLocaleString('th-TH')}</small>
                             </div>
                             <div class="mb-2">
-                                <small class="text-muted d-block" style="font-size: 0.72rem;">à¸¡à¸¹à¸¥à¸„à¹ˆà¸²à¸žà¸­à¸£à¹Œà¸•à¸£à¸§à¸¡ (Total Wealth):</small>
-                                <h4 class="fw-bold text-primary m-0">à¸¿${Math.round(fv).toLocaleString('th-TH')}</h4>
-                                <small class="text-success fw-bold">+à¸à¸³à¹„à¸£à¸”à¸­à¸à¹€à¸šà¸µà¹‰à¸¢à¸—à¸šà¸•à¹‰à¸™ à¸¿${Math.round(compoundGains).toLocaleString('th-TH')}</small>
+                                <small class="text-muted d-block" style="font-size: 0.72rem;">มูลค่าพอร์ตรวม (Total Wealth):</small>
+                                <h4 class="fw-bold text-primary m-0">฿${Math.round(fv).toLocaleString('th-TH')}</h4>
+                                <small class="text-success fw-bold">+กำไรดอกเบี้ยทบต้น ฿${Math.round(compoundGains).toLocaleString('th-TH')}</small>
                             </div>
                             <div class="p-2 rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25">
-                                <small class="text-muted d-block" style="font-size: 0.72rem;">à¹€à¸‡à¸´à¸™à¸›à¸±à¸™à¸œà¸¥à¸•à¹ˆà¸­à¹€à¸”à¸·à¸­à¸™ (Monthly Cash Flow):</small>
-                                <strong class="text-success" style="font-size: 1.05rem;">à¸¿${Math.round(monthlyDiv).toLocaleString('th-TH')} / à¹€à¸”à¸·à¸­à¸™</strong>
-                                <small class="text-muted d-block" style="font-size: 0.7rem;">(à¸›à¸µà¸¥à¸° à¸¿${Math.round(annualDiv).toLocaleString('th-TH')} à¸„à¸³à¸™à¸§à¸“à¸ˆà¸²à¸ Yield ${(divYieldAnnual * 100).toFixed(1)}%)</small>
+                                <small class="text-muted d-block" style="font-size: 0.72rem;">เงินปันผลต่อเดือน (Monthly Cash Flow):</small>
+                                <strong class="text-success" style="font-size: 1.05rem;">฿${Math.round(monthlyDiv).toLocaleString('th-TH')} / เดือน</strong>
+                                <small class="text-muted d-block" style="font-size: 0.7rem;">(ปีละ ฿${Math.round(annualDiv).toLocaleString('th-TH')} คำนวณจาก Yield ${(divYieldAnnual * 100).toFixed(1)}%)</small>
                             </div>
                         </div>
                     </div>
                 `;
             });
 
-            if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
+            container.innerHTML = html;
         };
 
         // ==========================================
-        // ðŸ§¬ TECHNICAL: ETF OVERLAP QUICK RUNNER
+        // 🧬 TECHNICAL: ETF OVERLAP QUICK RUNNER
         // ==========================================
         window.runTechEtfOverlap = function() {
             const sel1 = document.getElementById('techOverlapEtf1');
@@ -18549,20 +18549,20 @@
 
             let meterClass = overlapPct > 60 ? 'bg-danger' : (overlapPct > 30 ? 'bg-warning' : 'bg-success');
             let meterDesc = overlapPct > 60 
-                ? 'âš ï¸ à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™à¸ªà¸¹à¸‡à¸¡à¸²à¸: à¸–à¸·à¸­à¸«à¸¸à¹‰à¸™à¸Šà¸¸à¸”à¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™à¹€à¸à¸·à¸­à¸šà¸—à¸±à¹‰à¸‡à¸«à¸¡à¸” à¸„à¸§à¸£à¹€à¸¥à¸·à¸­à¸à¸•à¸±à¸§à¹ƒà¸”à¸•à¸±à¸§à¸«à¸™à¸¶à¹ˆà¸‡'
-                : (overlapPct > 30 ? 'ðŸŸ¡ à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™à¸›à¸²à¸™à¸à¸¥à¸²à¸‡: à¸¡à¸µà¸«à¸¸à¹‰à¸™à¹€à¸—à¸„à¸‚à¸™à¸²à¸”à¹ƒà¸«à¸à¹ˆà¸—à¸±à¸šà¸‹à¹‰à¸­à¸™à¸à¸±à¸™à¸šà¸²à¸‡à¸ªà¹ˆà¸§à¸™' : 'ðŸŸ¢ à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™à¸•à¹ˆà¸³: à¸à¸£à¸°à¸ˆà¸²à¸¢à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸‚à¹‰à¸²à¸¡à¸à¸¥à¸¸à¹ˆà¸¡à¸­à¸¸à¸•à¸ªà¸²à¸«à¸à¸£à¸£à¸¡à¹„à¸”à¹‰à¸¢à¸­à¸”à¹€à¸¢à¸µà¹ˆà¸¢à¸¡');
+                ? '⚠️ ซ้ำซ้อนสูงมาก: ถือหุ้นชุดเดียวกันเกือบทั้งหมด ควรเลือกตัวใดตัวหนึ่ง'
+                : (overlapPct > 30 ? '🟡 ซ้ำซ้อนปานกลาง: มีหุ้นเทคขนาดใหญ่ทับซ้อนกันบางส่วน' : '🟢 ซ้ำซ้อนต่ำ: กระจายความเสี่ยงข้ามกลุ่มอุตสาหกรรมได้ยอดเยี่ยม');
 
             resultArea.innerHTML = `
                 <div class="d-flex justify-content-between align-items-center mb-2">
                     <strong class="text-body">${tk1} vs ${tk2}</strong>
-                    <span class="badge ${meterClass} text-white fw-bold px-2.5 py-1" style="font-size: 0.8rem;">à¸„à¸§à¸²à¸¡à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™ ${overlapPct.toFixed(1)}%</span>
+                    <span class="badge ${meterClass} text-white fw-bold px-2.5 py-1" style="font-size: 0.8rem;">ความซ้ำซ้อน ${overlapPct.toFixed(1)}%</span>
                 </div>
                 <div class="progress mb-2" style="height: 10px; border-radius: 999px;">
                     <div class="progress-bar ${meterClass}" style="width: ${overlapPct}%;"></div>
                 </div>
                 <div class="small text-muted mb-3">${meterDesc}</div>
                 <div class="p-2 rounded-3 bg-body border">
-                    <small class="text-muted fw-bold d-block mb-1">à¸«à¸¸à¹‰à¸™à¸«à¸¥à¸±à¸à¸—à¸µà¹ˆà¸–à¸·à¸­à¸‹à¹‰à¸³à¸à¸±à¸™ (Top Shared Holdings):</small>
+                    <small class="text-muted fw-bold d-block mb-1">หุ้นหลักที่ถือซ้ำกัน (Top Shared Holdings):</small>
                     <div class="d-flex flex-wrap gap-1.5">
                         <span class="badge bg-light text-dark border">Apple (AAPL)</span>
                         <span class="badge bg-light text-dark border">Microsoft (MSFT)</span>
@@ -18575,7 +18575,7 @@
         };
 
         // ==========================================
-        // ðŸ¤– AI INVESTMENT: INLINE HELPERS
+        // 🤖 AI INVESTMENT: INLINE HELPERS
         // ==========================================
         window.switchInlineGeminiTab = function(tab) {
             const p1 = document.getElementById('geminiInlinePanePicks');
@@ -18608,8 +18608,8 @@
             area.innerHTML = `
                 <div class="text-center py-4">
                     <div class="spinner-border text-primary mb-2" role="status"></div>
-                    <div class="fw-bold text-body">Gemini AI à¸à¸³à¸¥à¸±à¸‡à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œ ${ticker} à¹ƒà¸™à¹‚à¸«à¸¡à¸” ${mode}...</div>
-                    <small class="text-muted">à¸à¸³à¸¥à¸±à¸‡à¸”à¸¶à¸‡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸£à¸²à¸„à¸² à¸›à¸±à¸ˆà¸ˆà¸±à¸¢à¸‚à¸±à¸šà¹€à¸„à¸¥à¸·à¹ˆà¸­à¸™ à¹à¸¥à¸°à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡</small>
+                    <div class="fw-bold text-body">Gemini AI กำลังวิเคราะห์ ${ticker} ในโหมด ${mode}...</div>
+                    <small class="text-muted">กำลังดึงข้อมูลราคา ปัจจัยขับเคลื่อน และโครงสร้างความเสี่ยง</small>
                 </div>
             `;
 
@@ -18618,42 +18618,42 @@
                 area.innerHTML = `
                     <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom flex-wrap gap-2">
                         <div class="d-flex align-items-center gap-2">
-                            <span class="fs-4">ðŸ¤–</span>
+                            <span class="fs-4">🤖</span>
                             <div>
-                                <h5 class="fw-bold m-0">${ticker} â€¢ à¸šà¸—à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸ªà¸”à¸ˆà¸²à¸ Gemini AI</h5>
-                                <small class="text-muted">à¸£à¸²à¸„à¸²à¸›à¸±à¸ˆà¸ˆà¸¸à¸šà¸±à¸™: $${curPrice.toFixed(2)} | à¸ªà¸–à¸²à¸™à¸°: à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸£à¸²à¸„à¸²à¹à¸‚à¹‡à¸‡à¹à¸à¸£à¹ˆà¸‡</small>
+                                <h5 class="fw-bold m-0">${ticker} • บทวิเคราะห์สดจาก Gemini AI</h5>
+                                <small class="text-muted">ราคาปัจจุบัน: $${curPrice.toFixed(2)} | สถานะ: โครงสร้างราคาแข็งแกร่ง</small>
                             </div>
                         </div>
                         <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-3 py-1 fw-bold">
-                            ðŸŸ¢ AI Signal: ACCUMULATE / STRONG BUY
+                            🟢 AI Signal: ACCUMULATE / STRONG BUY
                         </span>
                     </div>
                     <div class="row g-2 mb-3">
                         <div class="col-md-6 col-12">
                             <div class="p-2.5 rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25 h-100">
-                                <strong class="text-success d-block mb-1">ðŸ’¡ à¸›à¸±à¸ˆà¸ˆà¸±à¸¢à¸«à¸™à¸¸à¸™à¸ªà¸³à¸„à¸±à¸ (Key Growth Catalysts):</strong>
+                                <strong class="text-success d-block mb-1">💡 ปัจจัยหนุนสำคัญ (Key Growth Catalysts):</strong>
                                 <ul class="small m-0 ps-3 text-body" style="line-height: 1.5;">
-                                    <li>à¹€à¸›à¹‡à¸™à¸«à¸±à¸§à¹ƒà¸ˆà¸«à¸¥à¸±à¸à¹ƒà¸™à¸à¸²à¸£à¸ªà¸°à¸ªà¸¡à¸„à¸§à¸²à¸¡à¸¡à¸±à¹ˆà¸‡à¸„à¸±à¹ˆà¸‡à¸£à¸°à¸¢à¸°à¸¢à¸²à¸§ à¸à¸£à¸°à¸ˆà¸²à¸¢à¸•à¸±à¸§à¸„à¸£à¸­à¸šà¸„à¸¥à¸¸à¸¡à¸šà¸£à¸´à¸©à¸±à¸—à¸Šà¸±à¹‰à¸™à¸™à¸³</li>
-                                    <li>à¹‚à¸¡à¹€à¸¡à¸™à¸•à¸±à¸¡à¸œà¸¥à¸›à¸£à¸°à¸à¸­à¸šà¸à¸²à¸£à¹€à¸•à¸´à¸šà¹‚à¸•à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡à¸•à¸²à¸¡à¸—à¸´à¸¨à¸—à¸²à¸‡à¹€à¸¨à¸£à¸©à¸à¸à¸´à¸ˆà¸ªà¸«à¸£à¸±à¸à¸¯</li>
-                                    <li>à¸­à¸±à¸•à¸£à¸²à¸à¸²à¸£à¹€à¸•à¸´à¸šà¹‚à¸•à¸‚à¸­à¸‡à¸à¸£à¸°à¹à¸ªà¹€à¸‡à¸´à¸™à¸ªà¸”à¹à¸¥à¸°à¸™à¸§à¸±à¸•à¸à¸£à¸£à¸¡à¸¡à¸µà¸„à¸§à¸²à¸¡à¸¢à¸·à¸”à¸«à¸¢à¸¸à¹ˆà¸™à¸ªà¸¹à¸‡</li>
+                                    <li>เป็นหัวใจหลักในการสะสมความมั่งคั่งระยะยาว กระจายตัวครอบคลุมบริษัทชั้นนำ</li>
+                                    <li>โมเมนตัมผลประกอบการเติบโตต่อเนื่องตามทิศทางเศรษฐกิจสหรัฐฯ</li>
+                                    <li>อัตราการเติบโตของกระแสเงินสดและนวัตกรรมมีความยืดหยุ่นสูง</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-6 col-12">
                             <div class="p-2.5 rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 h-100">
-                                <strong class="text-danger d-block mb-1">âš ï¸ à¸›à¸±à¸ˆà¸ˆà¸±à¸¢à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¸•à¸´à¸”à¸•à¸²à¸¡ (Key Risks):</strong>
+                                <strong class="text-danger d-block mb-1">⚠️ ปัจจัยเสี่ยงที่ต้องติดตาม (Key Risks):</strong>
                                 <ul class="small m-0 ps-3 text-body" style="line-height: 1.5;">
-                                    <li>à¸„à¸§à¸²à¸¡à¸œà¸±à¸™à¸œà¸§à¸™à¸ˆà¸²à¸à¸•à¸±à¸§à¹€à¸¥à¸‚à¸­à¸±à¸•à¸£à¸²à¸”à¸­à¸à¹€à¸šà¸µà¹‰à¸¢à¹à¸¥à¸°à¸™à¹‚à¸¢à¸šà¸²à¸¢à¸à¸²à¸£à¹€à¸‡à¸´à¸™à¸‚à¸­à¸‡à¹€à¸Ÿà¸”</li>
-                                    <li>à¸«à¸²à¸à¹€à¸à¸´à¸”à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸—à¸²à¸‡à¸ à¸¹à¸¡à¸´à¸£à¸±à¸à¸¨à¸²à¸ªà¸•à¸£à¹Œ à¸­à¸²à¸ˆà¹€à¸à¸´à¸”à¸à¸²à¸£à¸›à¸£à¸±à¸šà¸à¸²à¸™à¸£à¸°à¸¢à¸°à¸ªà¸±à¹‰à¸™ 5-10%</li>
-                                    <li>à¸à¸²à¸£à¸›à¸£à¸°à¹€à¸¡à¸´à¸™à¸¡à¸¹à¸¥à¸„à¹ˆà¸² (Valuation) à¸­à¸¢à¸¹à¹ˆà¹ƒà¸™à¸£à¸°à¸”à¸±à¸šà¸žà¸£à¸µà¹€à¸¡à¸µà¸¢à¸¡à¹ƒà¸™à¸«à¸¸à¹‰à¸™à¸à¸¥à¸¸à¹ˆà¸¡à¹€à¸—à¸„à¸‚à¸™à¸²à¸”à¹ƒà¸«à¸à¹ˆ</li>
+                                    <li>ความผันผวนจากตัวเลขอัตราดอกเบี้ยและนโยบายการเงินของเฟด</li>
+                                    <li>หากเกิดความเสี่ยงทางภูมิรัฐศาสตร์ อาจเกิดการปรับฐานระยะสั้น 5-10%</li>
+                                    <li>การประเมินมูลค่า (Valuation) อยู่ในระดับพรีเมียมในหุ้นกลุ่มเทคขนาดใหญ่</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="p-2.5 rounded-3 bg-body border">
-                        <strong class="text-primary d-block mb-1">ðŸŽ¯ à¸„à¸³à¹à¸™à¸°à¸™à¸³à¹€à¸Šà¸´à¸‡à¸à¸¥à¸¢à¸¸à¸—à¸˜à¹Œ (Actionable Strategy):</strong>
+                        <strong class="text-primary d-block mb-1">🎯 คำแนะนำเชิงกลยุทธ์ (Actionable Strategy):</strong>
                         <p class="small text-muted m-0" style="line-height: 1.5;">
-                            à¹à¸™à¸°à¸™à¸³à¹ƒà¸«à¹‰à¹ƒà¸Šà¹‰à¸à¸¥à¸¢à¸¸à¸—à¸˜à¹Œ <strong>Dollar-Cost Averaging (DCA)</strong> à¸—à¸¢à¸­à¸¢à¸ªà¸°à¸ªà¸¡à¸­à¸¢à¹ˆà¸²à¸‡à¸ªà¸¡à¹ˆà¸³à¹€à¸ªà¸¡à¸­ à¹‚à¸”à¸¢à¹à¸šà¹ˆà¸‡à¹€à¸‡à¸´à¸™à¸•à¸²à¸¡à¹à¸œà¸™ DCA Smart Blueprint à¸Šà¹ˆà¸§à¸¢à¸¥à¸”à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸ˆà¸²à¸à¸„à¸§à¸²à¸¡à¸œà¸±à¸™à¸œà¸§à¸™à¸£à¸°à¸¢à¸°à¸ªà¸±à¹‰à¸™ à¹à¸¥à¸°à¹€à¸žà¸´à¹ˆà¸¡à¸œà¸¥à¸•à¸­à¸šà¹à¸—à¸™à¸—à¸šà¸•à¹‰à¸™à¹ƒà¸™à¸£à¸°à¸¢à¸°à¸¢à¸²à¸§ 5-10 à¸›à¸µà¸‚à¸¶à¹‰à¸™à¹„à¸›
+                            แนะนำให้ใช้กลยุทธ์ <strong>Dollar-Cost Averaging (DCA)</strong> ทยอยสะสมอย่างสม่ำเสมอ โดยแบ่งเงินตามแผน DCA Smart Blueprint ช่วยลดความเสี่ยงจากความผันผวนระยะสั้น และเพิ่มผลตอบแทนทบต้นในระยะยาว 5-10 ปีขึ้นไป
                         </p>
                     </div>
                 `;
