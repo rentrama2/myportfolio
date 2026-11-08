@@ -4353,6 +4353,12 @@
                             <span>📦 ETF Market Overview</span>
                             <span class="badge rounded-pill bg-success" id="etfMarketCountBadge">36 กองทุน</span>
                         </button>
+                        <button type="button" class="market-subnav-btn" id="subtabBtnSectors" onclick="onSwitchViewTab('SECTOR')">
+                            <span>🏢 12 Sector Cards</span>
+                        </button>
+                        <button type="button" class="market-subnav-btn" id="subtabBtnCalendar" onclick="onSwitchViewTab('CALENDAR')">
+                            <span>📅 ปฏิทินประกาศงบ</span>
+                        </button>
                     </div>
                     <div class="d-flex align-items-center gap-2 flex-wrap">
                         <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold d-flex align-items-center gap-1.5 shadow-2xs" onclick="openEtfOverlapModal()" title="ตรวจสอบความซ้ำซ้อนของหุ้นใน ETF เช่น VOO, QQQM, VTI และ Sector ETFs">
@@ -5350,6 +5356,9 @@
                         </small>
                     </div>
                     <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <button class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('MARKET')">
+                            ← กลับไปหน้ารวม Market
+                        </button>
                         <span class="badge rounded-pill bg-body-secondary text-body border px-3 py-2 fw-bold" style="font-size: 0.78rem;">
                             12 กลุ่มอุตสาหกรรม • S&P 500 / US Total Market
                         </span>
@@ -5908,6 +5917,9 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <button class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold me-1" onclick="onSwitchViewTab('MARKET')">
+                            ← กลับไปหน้ารวม Market
+                        </button>
                         <!-- Search Box -->
                         <div class="earnings-search-box shadow-sm">
                             <span style="font-size: 0.85rem; color: #94a3b8;">🔍</span>
@@ -10378,8 +10390,24 @@
             }
 
             // 2.3 หาก sym สั้นหรือตรงกับตัวขึ้นต้นของ ETF ในระบบ อย่าเพิ่งสรุปว่าเป็น US Stocks
+            // 2.3 Prefix matching for ETFs (JE, JEP, VO, SPM, XL)
             const allKnownEtfs = [...coreEtfs, ...retirementEtfs, ...satelliteEtfs];
-            if (sym.length < 3 || allKnownEtfs.some(e => e.startsWith(sym))) {
+            const matchingEtfs = allKnownEtfs.filter(e => e.startsWith(sym));
+            if (matchingEtfs.length > 0) {
+                const matchedPortIds = new Set(matchingEtfs.map(e => {
+                    if (coreEtfs.includes(e)) return 'core';
+                    if (retirementEtfs.includes(e)) return 'retirement';
+                    if (satelliteEtfs.includes(e)) return 'satellite';
+                    return 'other';
+                }));
+                if (matchedPortIds.size === 1) {
+                    const targetPId = Array.from(matchedPortIds)[0];
+                    const p = portfolios.find(x => x.id === targetPId) || portfolios[0];
+                    return { portfolioId: p.id, portName: p.name, source: 'rule', reason: `ตรวจพบกลุ่ม ${p.name} (${matchingEtfs.join(', ')})` };
+                }
+                return null;
+            }
+            if (sym.length < 3) {
                 return null;
             }
 
@@ -10721,7 +10749,9 @@
                 const fn = (typeof getStockFullName === 'function') ? getStockFullName(val) : (stockNames[val] || '');
                 const hintEl = document.getElementById('tickerHint');
 
-                if (fn) {
+                if (val === 'ETF') {
+                    hintEl.innerText = '(💡 เลือกกองทุน ETF ที่ต้องการจากรายการด้านล่าง)';
+                } else if (fn) {
                     hintEl.innerText = '(' + fn + ')';
                 } else if (val.length >= 2) {
                     const catalog = getTickerCatalog();
@@ -12064,7 +12094,7 @@
             });
         }
 
-        function sortTransactions() { transactions.sort((a, b) => new Date(a.date) - new Date(b.date)); }
+        function sortTransactions() { transactions = (transactions || []).filter(t => t && typeof t === 'object'); transactions.sort((a, b) => new Date(a.date || 0) - new Date(b.date || 0)); }
 
         const _fxHistoryCache = {};
         async function getHistoricalFx(dateStr) {
@@ -18011,8 +18041,6 @@
             }
         };
 
-        // ==========================================
-        // ðŸ“Š EXECUTIVE OVERVIEW DASHBOARD & INVESTMENT RECOMMENDATIONS
         // ==========================================
         // 📊 EXECUTIVE OVERVIEW DASHBOARD & INVESTMENT RECOMMENDATIONS
         // ==========================================
