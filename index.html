@@ -2275,6 +2275,84 @@
             background: rgba(124, 58, 237, 0.15);
         }
 
+        /* Overview Dashboard & Recommendation Cards Styling */
+        .overview-kpi-card {
+            border: 1px solid rgba(0, 0, 0, 0.07);
+            border-radius: 16px;
+            background: var(--bs-card-bg, #ffffff);
+            padding: 18px 20px;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            height: 100%;
+        }
+        .overview-kpi-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
+        [data-bs-theme="dark"] .overview-kpi-card {
+            border-color: rgba(255, 255, 255, 0.08);
+            background: #111827;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .overview-kpi-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .overview-kpi-val {
+            font-size: 1.45rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--bs-body-color, #0f172a);
+            font-feature-settings: "tnum";
+            font-variant-numeric: tabular-nums;
+        }
+        .overview-kpi-sub {
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+        .action-recom-card {
+            border-radius: 14px;
+            padding: 14px 16px;
+            background: var(--bs-card-bg, #ffffff);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+        }
+        .action-recom-card:hover {
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+        }
+        [data-bs-theme="dark"] .action-recom-card {
+            background: #1e293b50;
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+        .action-recom-card.border-buy {
+            border-left: 4px solid #10b981 !important;
+        }
+        .action-recom-card.border-hold {
+            border-left: 4px solid #f59e0b !important;
+        }
+        .action-recom-card.border-review {
+            border-left: 4px solid #ef4444 !important;
+        }
+        .alloc-bar-wrapper {
+            height: 12px;
+            border-radius: 9999px;
+            overflow: hidden;
+            display: flex;
+            background: #e2e8f0;
+        }
+        [data-bs-theme="dark"] .alloc-bar-wrapper {
+            background: #334155;
+        }
+        .alloc-bar-core { background: #3b82f6; }
+        .alloc-bar-stock { background: #8b5cf6; }
+        .alloc-bar-cash { background: #10b981; }
+        .overview-css-end { display: block;
+        }
+
         /* ETF Overlap Styles */
         .etf-overlap-meter {
             height: 12px;
@@ -4075,26 +4153,24 @@
         <div class="d-flex justify-content-between align-items-center mb-2 mt-1 flex-wrap gap-2">
             <!-- 6 Main Views Navigation Tabs -->
             <div class="nav nav-pills p-1 rounded-pill border shadow-sm bg-body-tertiary flex-nowrap overflow-x-auto" id="mainViewNav" role="tablist">
-                <button class="nav-link rounded-pill fw-bold py-1 px-2.5 px-md-3 d-flex align-items-center gap-1 active text-nowrap" id="tabBtnHomeNews" data-bs-toggle="pill" data-bs-target="#homeNewsPane" type="button" role="tab" style="font-size: 0.80rem;" onclick="onSwitchViewTab('HOME_NEWS')">
-                    📰 ข่าว & ภาพรวม
-                </button>
-                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-2.5 px-md-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnMarket" data-bs-toggle="pill" data-bs-target="#marketOverviewPane" type="button" role="tab" style="font-size: 0.80rem;" onclick="onSwitchViewTab('MARKET')">
-                    🌐 Market Overview
+                <button class="nav-link rounded-pill fw-bold py-1 px-2.5 px-md-3 d-flex align-items-center gap-1 active text-nowrap" id="tabBtnOverview" data-bs-toggle="pill" data-bs-target="#overviewPane" type="button" role="tab" style="font-size: 0.80rem;" onclick="onSwitchViewTab('OVERVIEW')">
+                    &#128202; 01. Overview
                 </button>
                 <button class="nav-link rounded-pill fw-bold text-muted py-1 px-2.5 px-md-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnPortfolio" data-bs-toggle="pill" data-bs-target="#portfolioViewPane" type="button" role="tab" style="font-size: 0.80rem;" onclick="onSwitchViewTab('PORTFOLIO')">
-                    💼 Portfolio
+                    &#128188; 02. My Portfolio
                 </button>
-                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-2.5 px-md-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnSector" data-bs-toggle="pill" data-bs-target="#sectorViewPane" type="button" role="tab" style="font-size: 0.80rem;" onclick="onSwitchViewTab('SECTOR')">
-                    🏢 Sector
-                    <span class="badge bg-primary rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">12</span>
+                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-2.5 px-md-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnMarket" data-bs-toggle="pill" data-bs-target="#marketOverviewPane" type="button" role="tab" style="font-size: 0.80rem;" onclick="onSwitchViewTab('MARKET')">
+                    &#127760; 03. Market Intelligence
+                </button>
+                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-2.5 px-md-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnAiInvestment" data-bs-toggle="pill" data-bs-target="#aiInvestmentPane" type="button" role="tab" style="font-size: 0.80rem;" onclick="onSwitchViewTab('AI_INVESTMENT')">
+                    &#129302; 04. AI Investment
+                    <span class="badge bg-primary rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">Gemini</span>
                 </button>
                 <button class="nav-link rounded-pill fw-bold text-muted py-1 px-2.5 px-md-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnTechnical" data-bs-toggle="pill" data-bs-target="#technicalViewPane" type="button" role="tab" style="font-size: 0.80rem;" onclick="onSwitchViewTab('TECHNICAL')">
-                    📈 เทคนิค กราฟ
-                    <span class="badge bg-danger rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">NEW</span>
+                    &#128737;&#65039; 05. Risk & Technical
                 </button>
-                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-2.5 px-md-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnCalendar" data-bs-toggle="pill" data-bs-target="#earningsCalendarPane" type="button" role="tab" style="font-size: 0.80rem;" onclick="onSwitchViewTab('CALENDAR')">
-                    📅 ปฏิทินประกาศงบ
-                    <span class="badge bg-success rounded-pill" style="font-size: 0.65rem; padding: 2px 6px;">NEW</span>
+                <button class="nav-link rounded-pill fw-bold text-muted py-1 px-2.5 px-md-3 d-flex align-items-center gap-1 text-nowrap" id="tabBtnRetirement" data-bs-toggle="pill" data-bs-target="#retirementPane" type="button" role="tab" style="font-size: 0.80rem;" onclick="onSwitchViewTab('RETIREMENT')">
+                    &#127963;&#65039; 06. Retirement Planning
                 </button>
             </div>
 
@@ -4140,7 +4216,9 @@
         <!-- Main Tab Content Wrapper -->
         <div class="tab-content" id="mainTabContent">
             <!-- PANE 1: ข่าว & ภาพรวม (Home / Investment News & Intelligence Landing Page) -->
-            <div class="tab-pane fade show active" id="homeNewsPane" role="tabpanel">
+            <div class="tab-pane fade show active" id="overviewPane" role="tabpanel">
+                <!-- Executive Investment Dashboard (Executive Overview & Portfolio Recommendations) -->
+                <div id="overviewDashboardContent" class="mb-4"></div>
                 <!-- Section Subtitle & Quick Actions Bar -->
                 <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
                     <div>
@@ -5287,6 +5365,106 @@
                 </div>
             </div><!-- end sectorViewPane -->
 
+            <!-- PANE 4: AI Investment (Gemini AI Investment Signals & Deep Dive) -->
+            <div class="tab-pane fade" id="aiInvestmentPane" role="tabpanel">
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="fs-3">&#129302;</span>
+                        <div>
+                            <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
+                                Gemini AI Investment Signals (à¸ˆà¸±à¸”à¸­à¸±à¸™à¸”à¸±à¸š & à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡)
+                            </h4>
+                            <small class="text-muted">
+                                à¸‚à¸±à¸šà¹€à¸„à¸¥à¸·à¹ˆà¸­à¸™à¸”à¹‰à¸§à¸¢ Google Gemini API à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¹€à¸Šà¸´à¸‡à¸¥à¸¶à¸à¸—à¸±à¹‰à¸‡à¹‚à¸¡à¹€à¸¡à¸™à¸•à¸±à¸¡ à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸£à¸²à¸„à¸² à¸›à¸±à¸ˆà¸ˆà¸±à¸¢à¸«à¸™à¸¸à¸™ à¹à¸¥à¸°à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¹à¸šà¸š Real-time
+                            </small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">
+                            ðŸŸ¢ à¸£à¸°à¸šà¸š AI à¸žà¸£à¹‰à¸­à¸¡à¹ƒà¸Šà¹‰à¸‡à¸²à¸™
+                        </span>
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openGeminiSignalsModal('CONFIG')">
+                            âš™ï¸ à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸² API
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sub-nav pills for AI Investment -->
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 border-bottom pb-2">
+                    <div class="nav nav-pills gap-1" role="tablist">
+                        <button type="button" class="nav-link active rounded-pill fw-bold py-1 px-3 text-nowrap" id="tabBtnInlineGeminiPicks" onclick="switchInlineGeminiTab('PICKS')" style="font-size: 0.82rem;">
+                            ðŸ† à¸ˆà¸±à¸”à¸­à¸±à¸™à¸”à¸±à¸š Top AI Picks (10 à¸«à¸¸à¹‰à¸™à¸™à¹ˆà¸²à¸ªà¸™à¹ƒà¸ˆ)
+                        </button>
+                        <button type="button" class="nav-link rounded-pill fw-bold py-1 px-3 text-nowrap" id="tabBtnInlineGeminiDeepDive" onclick="switchInlineGeminiTab('DEEP_DIVE')" style="font-size: 0.82rem;">
+                            ðŸ” à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸«à¸¸à¹‰à¸™à¸£à¸²à¸¢à¸•à¸±à¸§à¹à¸šà¸šà¸ªà¸” (Deep Dive)
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <span class="text-muted fw-bold small">à¸­à¸±à¸›à¹€à¸”à¸•à¸¥à¹ˆà¸²à¸ªà¸¸à¸”:</span>
+                        <span class="badge bg-light text-dark border fw-bold small">à¹€à¸¡à¸·à¹ˆà¸­à¸ªà¸±à¸à¸„à¸£à¸¹à¹ˆ</span>
+                    </div>
+                </div>
+
+                <!-- Subpane 1: Top AI Picks -->
+                <div id="geminiInlinePanePicks">
+                    <div class="d-flex align-items-center gap-1.5 flex-wrap mb-3 overflow-x-auto pb-1">
+                        <span class="text-muted fw-bold small me-1">à¸à¸¥à¸¢à¸¸à¸—à¸˜à¹Œ:</span>
+                        <button type="button" class="btn btn-sm btn-dark rounded-pill py-0.5 px-3 fw-bold active" id="btnInlineGemFilter_ALL" onclick="filterGeminiAiPicks('ALL', true)">ðŸŒŸ à¸—à¸±à¹‰à¸‡à¸«à¸¡à¸” (10 à¸«à¸¸à¹‰à¸™à¹€à¸”à¹ˆà¸™)</button>
+                        <button type="button" class="btn btn-sm btn-outline-success rounded-pill py-0.5 px-3 fw-bold" id="btnInlineGemFilter_BUY" onclick="filterGeminiAiPicks('BUY', true)">ðŸ’Ž Strong Buy</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill py-0.5 px-3 fw-bold" id="btnInlineGemFilter_GROWTH" onclick="filterGeminiAiPicks('GROWTH', true)">ðŸš€ Momentum & Growth</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-3 fw-bold" id="btnInlineGemFilter_DEFENSIVE" onclick="filterGeminiAiPicks('DEFENSIVE', true)">ðŸ›¡ï¸ Value & Defensive</button>
+                    </div>
+                    <div id="geminiInlinePicksContainer" class="d-flex flex-column gap-3">
+                        <!-- Rendered by renderGeminiAiPicks() -->
+                    </div>
+                </div>
+
+                <!-- Subpane 2: Deep Dive -->
+                <div id="geminiInlinePaneDeepDive" style="display: none;">
+                    <div class="card border-0 shadow-sm rounded-4 p-3 p-md-4 mb-4">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                            <h5 class="fw-bold m-0 text-primary">ðŸ” AI Deep Dive Analyzer</h5>
+                            <small class="text-muted">à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¹€à¸Šà¸´à¸‡à¸¥à¸¶à¸à¸žà¸£à¹‰à¸­à¸¡à¸›à¸£à¸°à¹€à¸¡à¸´à¸™à¸à¸£à¸­à¸šà¹à¸™à¸§à¸£à¸±à¸š-à¹à¸™à¸§à¸•à¹‰à¸²à¸™ à¹à¸¥à¸° Catalyst à¸£à¸²à¸¢à¸•à¸±à¸§</small>
+                        </div>
+                        <div class="row g-2 mb-3">
+                            <div class="col-md-6 col-12">
+                                <label class="form-label small fw-bold text-muted">à¹€à¸¥à¸·à¸­à¸à¸«à¸¸à¹‰à¸™à¸«à¸£à¸·à¸­ ETF à¹ƒà¸™à¸žà¸­à¸£à¹Œà¸•à¹€à¸žà¸·à¹ˆà¸­à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œ:</label>
+                                <select id="geminiInlineDeepDiveTickerSelect" class="form-select form-select-sm fw-bold rounded-3">
+                                    <option value="VTI">VTI - Vanguard Total Stock Market ETF</option>
+                                    <option value="VXUS">VXUS - Vanguard Total International Stock ETF</option>
+                                    <option value="NVDA">NVDA - NVIDIA Corporation</option>
+                                    <option value="GOOGL">GOOGL - Alphabet Inc.</option>
+                                    <option value="MSFT">MSFT - Microsoft Corporation</option>
+                                    <option value="JEPQ">JEPQ - JPMorgan Nasdaq Equity Premium Income ETF</option>
+                                    <option value="SPMO">SPMO - Invesco S&P 500 Momentum ETF</option>
+                                    <option value="GRID">GRID - First Trust Nasdaq Clean Edge Smart GRID ETF</option>
+                                    <option value="XLV">XLV - Health Care Select Sector SPDR Fund</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <label class="form-label small fw-bold text-muted">à¸£à¸¹à¸›à¹à¸šà¸šà¸à¸²à¸£à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œ:</label>
+                                <div class="d-flex gap-2">
+                                    <select id="geminiInlineDeepDiveMode" class="form-select form-select-sm rounded-3">
+                                        <option value="COMPREHENSIVE">à¸„à¸£à¸šà¸—à¸¸à¸à¸¡à¸´à¸•à¸´ (Technical + Fundamental + Risk)</option>
+                                        <option value="TECHNICAL_ONLY">à¹€à¸—à¸„à¸™à¸´à¸„ & à¸à¸£à¸­à¸šà¸£à¸²à¸„à¸² à¹à¸™à¸§à¸£à¸±à¸š/à¹à¸™à¸§à¸•à¹‰à¸²à¸™ (S/R)</option>
+                                        <option value="CATALYST_RISK">à¸›à¸±à¸ˆà¸ˆà¸±à¸¢à¸‚à¸±à¸šà¹€à¸„à¸¥à¸·à¹ˆà¸­à¸™ & à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡ (Catalyst & Risk)</option>
+                                    </select>
+                                    <button type="button" class="btn btn-sm btn-primary rounded-pill px-3 fw-bold text-nowrap" onclick="runInlineGeminiDeepDive()">
+                                        âœ¨ à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸ªà¸”
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="geminiInlineDeepDiveResultArea" class="p-3 rounded-4 border bg-body-tertiary">
+                            <div class="text-muted text-center py-4">
+                                <span class="fs-2 d-block mb-2">ðŸ’¡</span>
+                                <strong>à¹€à¸¥à¸·à¸­à¸à¸«à¸¸à¹‰à¸™à¹à¸¥à¸°à¸„à¸¥à¸´à¸ "à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸ªà¸”" à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰ Gemini AI à¸£à¸±à¸™à¸šà¸—à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¹€à¸Šà¸´à¸‡à¸¥à¸¶à¸</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- PANE 4: เทคนิค กราฟ (Technical & Trend Hub) -->
             <div class="tab-pane fade" id="technicalViewPane" role="tabpanel">
                 <!-- Section Subtitle Bar -->
@@ -5652,6 +5830,64 @@
                     </div>
 
                 </div>
+                            <!-- ETF Overlap Analyzer Card (Embedded in Risk & Technical) -->
+                <div class="card border-0 shadow-sm rounded-4 mb-4 overflow-hidden" id="techEtfOverlapCard">
+                    <div class="p-3 p-md-4 border-bottom bg-body-tertiary d-flex justify-content-between align-items-center flex-wrap gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fs-4">ðŸ§¬</span>
+                            <div>
+                                <h5 class="fw-bold m-0" style="letter-spacing: -0.3px;">
+                                    à¹€à¸„à¸£à¸·à¹ˆà¸­à¸‡à¸¡à¸·à¸­à¸•à¸£à¸§à¸ˆà¸ªà¸­à¸šà¸„à¸§à¸²à¸¡à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™à¸‚à¸­à¸‡ ETF (ETF Overlap & Exposure Analyzer)
+                                </h5>
+                                <small class="text-muted">
+                                    à¸•à¸£à¸§à¸ˆà¸ªà¸­à¸šà¸§à¹ˆà¸² ETF à¸—à¸µà¹ˆà¸„à¸¸à¸“à¸–à¸·à¸­ (à¹€à¸Šà¹ˆà¸™ VOO, QQQM, VTI, GRID, XLV, SPMO) à¸–à¸·à¸­à¸«à¸¸à¹‰à¸™à¸•à¸±à¸§à¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™à¸¡à¸²à¸à¸™à¹‰à¸­à¸¢à¹€à¸žà¸µà¸¢à¸‡à¹ƒà¸”
+                                </small>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openEtfOverlapModal()">
+                            ðŸ”Ž à¹€à¸›à¸´à¸”à¹€à¸„à¸£à¸·à¹ˆà¸­à¸‡à¸¡à¸·à¸­à¹à¸šà¸šà¸¥à¸°à¹€à¸­à¸µà¸¢à¸” â€º
+                        </button>
+                    </div>
+                    <div class="card-body p-3 p-md-4">
+                        <div class="row g-2 align-items-end mb-3">
+                            <div class="col-md-5 col-12">
+                                <label class="form-label small fw-bold text-muted">ETF à¸•à¸±à¸§à¸—à¸µà¹ˆ 1:</label>
+                                <select id="techOverlapEtf1" class="form-select form-select-sm rounded-3 fw-bold" onchange="runTechEtfOverlap()">
+                                    <option value="VTI" selected>VTI - Vanguard Total Stock Market ETF</option>
+                                    <option value="VOO">VOO - Vanguard S&P 500 ETF</option>
+                                    <option value="QQQM">QQQM - Invesco NASDAQ 100 ETF</option>
+                                    <option value="VXUS">VXUS - Vanguard Total International Stock ETF</option>
+                                    <option value="SPMO">SPMO - Invesco S&P 500 Momentum ETF</option>
+                                    <option value="GRID">GRID - First Trust Clean Edge Smart Grid ETF</option>
+                                    <option value="XLV">XLV - Health Care Select Sector SPDR</option>
+                                    <option value="JEPQ">JEPQ - JPMorgan Nasdaq Equity Premium Income</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5 col-12">
+                                <label class="form-label small fw-bold text-muted">ETF à¸•à¸±à¸§à¸—à¸µà¹ˆ 2:</label>
+                                <select id="techOverlapEtf2" class="form-select form-select-sm rounded-3 fw-bold" onchange="runTechEtfOverlap()">
+                                    <option value="VOO">VOO - Vanguard S&P 500 ETF</option>
+                                    <option value="QQQM" selected>QQQM - Invesco NASDAQ 100 ETF</option>
+                                    <option value="VTI">VTI - Vanguard Total Stock Market ETF</option>
+                                    <option value="VXUS">VXUS - Vanguard Total International Stock ETF</option>
+                                    <option value="SPMO">SPMO - Invesco S&P 500 Momentum ETF</option>
+                                    <option value="GRID">GRID - First Trust Clean Edge Smart Grid ETF</option>
+                                    <option value="XLV">XLV - Health Care Select Sector SPDR</option>
+                                    <option value="JEPQ">JEPQ - JPMorgan Nasdaq Equity Premium Income</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 col-12">
+                                <button type="button" class="btn btn-sm btn-primary rounded-3 w-100 fw-bold py-1.5" onclick="runTechEtfOverlap()">
+                                    âš¡ à¸•à¸£à¸§à¸ˆà¸ªà¸­à¸š
+                                </button>
+                            </div>
+                        </div>
+                        <div id="techOverlapResultArea" class="p-3 rounded-4 border bg-body-tertiary">
+                            <!-- Injected dynamically -->
+                        </div>
+                    </div>
+                </div>
+
             </div><!-- end technicalViewPane -->
 
             <!-- PANE 5: ปฏิทินประกาศงบการเงิน (Earnings Calendar Hub) -->
@@ -5851,6 +6087,101 @@
                         <div class="modal-body p-4" style="max-height: 520px; overflow-y: auto;">
                             <div class="row g-2" id="earningsDayModalGrid">
                                 <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- PANE 6: à¹à¸œà¸™à¹€à¸à¸©à¸µà¸¢à¸“ & à¸­à¸´à¸ªà¸£à¸ à¸²à¸žà¸—à¸²à¸‡à¸à¸²à¸£à¹€à¸‡à¸´à¸™ (Retirement Planning & FIRE) -->
+            <div class="tab-pane fade" id="retirementPane" role="tabpanel">
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 pt-1">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="fs-3">&#127963;&#65039;</span>
+                        <div>
+                            <h4 class="fw-bold m-0" style="color: inherit; letter-spacing: -0.3px;">
+                                à¹à¸œà¸™à¹€à¸à¸©à¸µà¸¢à¸“ & à¸­à¸´à¸ªà¸£à¸ à¸²à¸žà¸—à¸²à¸‡à¸à¸²à¸£à¹€à¸‡à¸´à¸™ (Retirement Planning & FIRE)
+                            </h4>
+                            <small class="text-muted">
+                                à¹à¸šà¸šà¸ˆà¸³à¸¥à¸­à¸‡à¸žà¸¥à¸±à¸‡à¸”à¸­à¸à¹€à¸šà¸µà¹‰à¸¢à¸—à¸šà¸•à¹‰à¸™ (Compound Interest), à¹€à¸›à¹‰à¸²à¸«à¸¡à¸²à¸¢à¸›à¸±à¸™à¸œà¸¥à¸£à¸²à¸¢à¹€à¸”à¸·à¸­à¸™ (Monthly Passive Income), à¹à¸¥à¸°à¹à¸šà¸šà¸ˆà¸³à¸¥à¸­à¸‡ Stress Test à¸§à¸´à¸à¸¤à¸•à¸´à¸•à¸¥à¸²à¸”à¸«à¸¸à¹‰à¸™
+                            </small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openLongTermProjectionModal()">
+                            ðŸ”® à¹€à¸›à¸´à¸”à¹€à¸„à¸£à¸·à¹ˆà¸­à¸‡à¸¡à¸·à¸­à¹€à¸•à¹‡à¸¡à¸ˆà¸­ â€º
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SECTION 1: MARKET CRASH STRESS TEST (ChatGPT High Priority Recommendation!) -->
+                <div class="card border-0 shadow-sm rounded-4 mb-4 overflow-hidden">
+                    <div class="p-3 p-md-4 border-bottom bg-danger bg-opacity-10 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fs-4">ðŸ›¡ï¸</span>
+                            <div>
+                                <h5 class="fw-bold m-0 text-danger" style="letter-spacing: -0.3px;">
+                                    à¹à¸šà¸šà¸ˆà¸³à¸¥à¸­à¸‡ Stress Test: à¸§à¸´à¸à¸¤à¸•à¸´à¸•à¸¥à¸²à¸”à¸«à¸¸à¹‰à¸™ & à¹€à¸à¸£à¸²à¸°à¸›à¹‰à¸­à¸‡à¸à¸±à¸™ DCA (Market Crash Scenarios)
+                                </h5>
+                                <small class="text-muted">
+                                    à¸ˆà¸³à¸¥à¸­à¸‡à¸œà¸¥à¸à¸£à¸°à¸—à¸šà¸•à¹ˆà¸­à¸žà¸­à¸£à¹Œà¸•à¸«à¸²à¸à¸•à¸¥à¸²à¸”à¸›à¸£à¸±à¸šà¸à¸²à¸™à¸«à¸™à¸±à¸ à¸žà¸£à¹‰à¸­à¸¡à¹à¸šà¸šà¸ˆà¸³à¸¥à¸­à¸‡à¸£à¸°à¸¢à¸°à¹€à¸§à¸¥à¸²à¸Ÿà¸·à¹‰à¸™à¸•à¸±à¸§ à¹à¸¥à¸°à¸žà¸¥à¸±à¸‡à¸‚à¸­à¸‡à¸à¸²à¸£ DCA à¸¿6,500/à¹€à¸”à¸·à¸­à¸™ à¹ƒà¸™à¸Šà¹ˆà¸§à¸‡à¸§à¸´à¸à¸¤à¸•à¸´
+                                </small>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill bg-danger text-white px-3 py-1 fw-bold" style="font-size: 0.75rem;">
+                            CRISIS RESILIENCE
+                        </span>
+                    </div>
+                    <div class="card-body p-3 p-md-4">
+                        <div class="row g-3 mb-4" id="stressTestScenariosRow">
+                            <!-- Injected dynamically by renderStressTest() -->
+                        </div>
+                        <div class="p-3 rounded-4 border bg-body-tertiary">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="fs-5">ðŸ›¡ï¸</span>
+                                <strong class="text-body" style="font-size: 0.92rem;">à¸à¸¥à¸¢à¸¸à¸—à¸˜à¹Œà¸£à¸±à¸šà¸¡à¸·à¸­à¸§à¸´à¸à¸¤à¸•à¸´ (DCA Armor Principle):</strong>
+                            </div>
+                            <p class="text-muted small m-0" style="line-height: 1.6;">
+                                à¹ƒà¸™à¸Šà¹ˆà¸§à¸‡à¸•à¸¥à¸²à¸”à¸«à¸¸à¹‰à¸™à¸›à¸£à¸±à¸šà¸à¸²à¸™à¸£à¸¸à¸™à¹à¸£à¸‡ à¸à¸²à¸£ <strong>"à¹„à¸¡à¹ˆà¸•à¸·à¹ˆà¸™à¸•à¸£à¸°à¸«à¸™à¸à¸‚à¸²à¸¢"</strong> à¹à¸¥à¸°à¸¢à¸±à¸‡à¸„à¸‡ <strong>"DCA à¸ªà¸°à¸ªà¸¡à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡à¹€à¸”à¸·à¸­à¸™à¸¥à¸° à¸¿6,500"</strong> à¸ˆà¸°à¸Šà¹ˆà¸§à¸¢à¹ƒà¸«à¹‰à¸„à¸¸à¸“à¸‹à¸·à¹‰à¸­à¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œà¸žà¸·à¹‰à¸™à¸à¸²à¸™à¸”à¸µà¹„à¸”à¹‰à¹ƒà¸™à¸£à¸²à¸„à¸²à¸¥à¸”à¸£à¸²à¸„à¸² 20% à¸–à¸¶à¸‡ 40% à¸‹à¸¶à¹ˆà¸‡à¸—à¸³à¸«à¸™à¹‰à¸²à¸—à¸µà¹ˆà¹€à¸›à¹‡à¸™à¸•à¸±à¸§à¹€à¸£à¹ˆà¸‡à¸à¸²à¸£à¸Ÿà¸·à¹‰à¸™à¸•à¸±à¸§à¸‚à¸­à¸‡à¸žà¸­à¸£à¹Œà¸• (Recovery Acceleration) à¸—à¸³à¹ƒà¸«à¹‰à¸žà¸­à¸£à¹Œà¸•à¸à¸¥à¸±à¸šà¸¡à¸²à¹€à¸—à¹ˆà¸²à¸—à¸¸à¸™à¹à¸¥à¸°à¸—à¸³à¸ªà¸–à¸´à¸•à¸´à¸ªà¸¹à¸‡à¸ªà¸¸à¸”à¹ƒà¸«à¸¡à¹ˆ (All-Time High) à¹„à¸”à¹‰à¹€à¸£à¹‡à¸§à¸à¸§à¹ˆà¸²à¸™à¸±à¸à¸¥à¸‡à¸—à¸¸à¸™à¸—à¸±à¹ˆà¸§à¹„à¸›à¹€à¸‰à¸¥à¸µà¹ˆà¸¢ 1.5 - 2 à¹€à¸—à¹ˆà¸²
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: COMPOUND INTEREST & RETIREMENT WEALTH FORECASTER -->
+                <div class="card border-0 shadow-sm rounded-4 mb-4 p-3 p-md-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                        <div>
+                            <h5 class="fw-bold m-0" style="color: inherit;">
+                                ðŸ“ˆ à¸žà¸¥à¸±à¸‡à¸”à¸­à¸à¹€à¸šà¸µà¹‰à¸¢à¸—à¸šà¸•à¹‰à¸™ & à¹€à¸›à¹‰à¸²à¸«à¸¡à¸²à¸¢à¹€à¸‡à¸´à¸™à¸›à¸±à¸™à¸œà¸¥à¸£à¸²à¸¢à¹€à¸”à¸·à¸­à¸™ (Compound Interest & Dividend Target)
+                            </h5>
+                            <small class="text-muted">à¸ˆà¸³à¸¥à¸­à¸‡à¸à¸²à¸£à¹€à¸•à¸´à¸šà¹‚à¸•à¸‚à¸­à¸‡à¹€à¸‡à¸´à¸™à¸¥à¸‡à¸—à¸¸à¸™ 10 - 30 à¸›à¸µ à¹€à¸¡à¸·à¹ˆà¸­à¸¥à¸‡à¸—à¸¸à¸™à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡à¸ªà¸¡à¹ˆà¸³à¹€à¸ªà¸¡à¸­</small>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-lg-4 col-12">
+                            <div class="p-3 rounded-3 border bg-body-tertiary h-100">
+                                <h6 class="fw-bold mb-3 text-primary">âš™ï¸ à¸›à¸£à¸±à¸šà¸•à¸±à¸§à¹à¸›à¸£à¸à¸²à¸£à¸­à¸­à¸¡</h6>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold text-muted">à¹€à¸‡à¸´à¸™à¸¥à¸‡à¸—à¸¸à¸™à¹€à¸£à¸´à¹ˆà¸¡à¸•à¹‰à¸™ (Initial Capital):</label>
+                                    <input type="number" id="retireInitialCapital" class="form-control form-control-sm rounded-3" value="73500" oninput="updateRetirementSimulation()">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold text-muted">à¹€à¸‡à¸´à¸™ DCA à¸›à¸£à¸°à¸ˆà¸³à¹€à¸”à¸·à¸­à¸™ (Monthly Saving):</label>
+                                    <input type="number" id="retireMonthlyDca" class="form-control form-control-sm rounded-3" value="6500" oninput="updateRetirementSimulation()">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold text-muted">à¸œà¸¥à¸•à¸­à¸šà¹à¸—à¸™à¸„à¸²à¸”à¸«à¸§à¸±à¸‡à¸£à¸§à¸¡ (% à¸•à¹ˆà¸­à¸›à¸µ):</label>
+                                    <input type="number" id="retireExpectedReturn" class="form-control form-control-sm rounded-3" value="9.0" step="0.5" oninput="updateRetirementSimulation()">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold text-muted">à¸­à¸±à¸•à¸£à¸²à¹€à¸‡à¸´à¸™à¸›à¸±à¸™à¸œà¸¥à¹€à¸‰à¸¥à¸µà¹ˆà¸¢ (% à¸•à¹ˆà¸­à¸›à¸µ):</label>
+                                    <input type="number" id="retireDivYield" class="form-control form-control-sm rounded-3" value="3.5" step="0.5" oninput="updateRetirementSimulation()">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-12">
+                            <div class="row g-3" id="retireProjectionMilestones">
+                                <!-- Milestones: 5 à¸›à¸µ, 10 à¸›à¸µ, 20 à¸›à¸µ, 30 à¸›à¸µ -->
                             </div>
                         </div>
                     </div>
@@ -6177,7 +6508,8 @@
                 `;
             });
 
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         window.moveTempPortfolio = function(fromIdx, direction) {
@@ -6412,7 +6744,8 @@
                 `;
             });
 
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
 
             // Also render compact pills bar
             const pillsContainer = document.getElementById('portfolioPillsContainer');
@@ -9264,7 +9597,8 @@
                     `;
                 }
             });
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
         }
 
         function renderProjChart(data) {
@@ -13319,7 +13653,7 @@
                     </td>
                     <td class="border-0 py-3">
                         $${item.mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}<br>
-                        <strong style="color: #111827;">≈ ฿${item.mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>
+                        <strong style="color: #111827;">≈ ฿${item.mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong><br><span class="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mt-1" style="font-size: 0.72rem; font-weight: 600;">สัดส่วน ${item.weightPct ? item.weightPct.toFixed(1) : ((item.mktValueUSD / (globalTotalPortfolioValue || 1)) * 100).toFixed(1)}%</span>
                     </td>
                     <td class="${item.plClass} border-start-0 py-3" style="font-size: 0.95rem;">
                         ${item.sign}${item.plPercent.toFixed(2)}%<br>
@@ -13541,7 +13875,8 @@
                 </div>
             `;
 
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
         }
 
         function renderPaginationControls(totalItems, totalPages) {
@@ -14721,7 +15056,8 @@
                     </div>
                 `;
             });
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
             if (typeof renderFearAndGreedMeter === 'function') {
                 renderFearAndGreedMeter();
             }
@@ -14954,7 +15290,8 @@
                     </div>
                 `;
             });
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         function updateMarketPageSizeUI() {
@@ -15425,7 +15762,8 @@
                     </div>
                 `;
             });
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         const topEtfSnapshotTickers = ['SPY', 'QQQ', 'SMH', 'SCHD', 'JEPI', 'JEPQ', 'XLK', 'XLF', 'TLT', 'GLD'];
@@ -15485,7 +15823,8 @@
                     </div>
                 `;
             });
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         function updateEtfPageSizeUI() {
@@ -16685,7 +17024,8 @@
                 `;
             });
 
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         window.openSectorDetailModal = function(sectorId) {
@@ -17593,35 +17933,40 @@
         // =====================================================================
 
         window.onSwitchViewTab = function(mode) {
-            mode = (mode || 'HOME_NEWS').toUpperCase();
+            mode = (mode || 'OVERVIEW').toUpperCase();
+            if (mode === 'HOME_NEWS') mode = 'OVERVIEW';
             localStorage.setItem('myMainViewMode', mode);
 
-            const btnHomeNews = document.getElementById('tabBtnHomeNews');
-            const btnMarket = document.getElementById('tabBtnMarket');
+            const btnOverview = document.getElementById('tabBtnOverview');
             const btnPort = document.getElementById('tabBtnPortfolio');
-            const btnSector = document.getElementById('tabBtnSector');
+            const btnMarket = document.getElementById('tabBtnMarket');
+            const btnAi = document.getElementById('tabBtnAiInvestment');
             const btnTech = document.getElementById('tabBtnTechnical');
-            const btnCalendar = document.getElementById('tabBtnCalendar');
+            const btnRetirement = document.getElementById('tabBtnRetirement');
 
-            const paneHomeNews = document.getElementById('homeNewsPane');
-            const paneMarket = document.getElementById('marketOverviewPane');
+            const paneOverview = document.getElementById('overviewPane');
             const panePort = document.getElementById('portfolioViewPane');
-            const paneSector = document.getElementById('sectorViewPane');
+            const paneMarket = document.getElementById('marketOverviewPane');
+            const paneAi = document.getElementById('aiInvestmentPane');
             const paneTech = document.getElementById('technicalViewPane');
+            const paneRetirement = document.getElementById('retirementPane');
+            const paneSector = document.getElementById('sectorViewPane');
             const paneCalendar = document.getElementById('earningsCalendarPane');
 
             const items = [
-                { key: 'HOME_NEWS', btn: btnHomeNews, pane: paneHomeNews },
-                { key: 'MARKET', btn: btnMarket, pane: paneMarket },
+                { key: 'OVERVIEW', btn: btnOverview, pane: paneOverview },
                 { key: 'PORTFOLIO', btn: btnPort, pane: panePort },
-                { key: 'SECTOR', btn: btnSector, pane: paneSector },
+                { key: 'MARKET', btn: btnMarket, pane: paneMarket },
+                { key: 'AI_INVESTMENT', btn: btnAi, pane: paneAi },
                 { key: 'TECHNICAL', btn: btnTech, pane: paneTech },
-                { key: 'CALENDAR', btn: btnCalendar, pane: paneCalendar }
+                { key: 'RETIREMENT', btn: btnRetirement, pane: paneRetirement },
+                { key: 'SECTOR', btn: btnMarket, pane: paneSector },
+                { key: 'CALENDAR', btn: btnMarket, pane: paneCalendar }
             ];
 
             items.forEach(item => {
                 if (item.btn) {
-                    if (item.key === mode) {
+                    if (item.key === mode || (item.key === 'MARKET' && (mode === 'SECTOR' || mode === 'CALENDAR'))) {
                         item.btn.classList.add('active');
                         item.btn.classList.remove('text-muted');
                     } else {
@@ -17638,26 +17983,684 @@
                 }
             });
 
-            if (mode === 'HOME_NEWS') {
-                renderMarketBreakingNews();
-                renderMarketNewsHub();
+            if (mode === 'OVERVIEW') {
+                if (typeof renderOverviewDashboard === 'function') renderOverviewDashboard();
+                if (typeof renderMarketBreakingNews === 'function') renderMarketBreakingNews();
+                if (typeof renderMarketNewsHub === 'function') renderMarketNewsHub();
+            } else if (mode === 'PORTFOLIO') {
+                if (typeof renderPortfolioCards === 'function') renderPortfolioCards();
+                if (typeof renderHoldingsTable === 'function') renderHoldingsTable();
             } else if (mode === 'MARKET') {
-                renderMarketOverview();
-            } else if (mode === 'SECTOR') {
-                renderSectorsView();
+                if (typeof renderMarketOverview === 'function') renderMarketOverview();
+            } else if (mode === 'AI_INVESTMENT') {
+                if (typeof renderGeminiAiPicks === 'function') renderGeminiAiPicks();
             } else if (mode === 'TECHNICAL') {
-                setTimeout(() => {
-                    initTechnicalHub();
-                }, 50);
-                setTimeout(() => {
-                    drawCandlestickCanvas();
-                }, 200);
+                setTimeout(() => { if (typeof initTechnicalHub === 'function') initTechnicalHub(); }, 50);
+                setTimeout(() => { if (typeof drawCandlestickCanvas === 'function') drawCandlestickCanvas(); }, 200);
+                if (typeof runTechEtfOverlap === 'function') runTechEtfOverlap();
+            } else if (mode === 'RETIREMENT') {
+                if (typeof renderStressTest === 'function') renderStressTest();
+                if (typeof updateRetirementSimulation === 'function') updateRetirementSimulation();
+            } else if (mode === 'SECTOR') {
+                if (typeof renderSectorsView === 'function') renderSectorsView();
             } else if (mode === 'CALENDAR') {
-                renderEarningsCalendarView();
+                if (typeof renderEarningsCalendarView === 'function') renderEarningsCalendarView();
             }
         };
 
-        window.openTechnicalForTicker = function(ticker) {
+        // ==========================================
+        // ðŸ“Š EXECUTIVE OVERVIEW DASHBOARD & INVESTMENT RECOMMENDATIONS
+        // ==========================================
+        window.renderOverviewDashboard = function() {
+            const container = document.getElementById('overviewDashboardContent');
+            if (!container) return;
+
+            const m = (typeof calcPortfolioMetrics === 'function') 
+                ? calcPortfolioMetrics(activePortfolioId || 'ALL')
+                : { totalMktUSD: 0, totalCostUSD: 0, plUSD: 0, plPercent: 0, assetCount: 0 };
+
+            const totalMktUSD = m.totalMktUSD || 0;
+            const totalCostUSD = m.totalCostUSD || 0;
+            const totalMktTHB = Number((totalMktUSD * liveFxRate).toFixed(2));
+            const totalCostTHB = Number((totalCostUSD * liveFxRate).toFixed(2));
+            const plUSD = totalMktUSD - totalCostUSD;
+            const plTHB = Number((plUSD * liveFxRate).toFixed(2));
+            const plPercent = totalCostUSD > 0 ? (plUSD / totalCostUSD) * 100 : 0;
+            const plSign = plUSD >= 0 ? '+' : '';
+            const plColorClass = plUSD >= 0 ? 'text-success' : 'text-danger';
+            const plBadgeBg = plUSD >= 0 ? 'bg-success-subtle text-success border border-success-subtle' : 'bg-danger-subtle text-danger border border-danger-subtle';
+
+            const holdings = window.cachedHoldingItems || [];
+            holdings.forEach(it => {
+                it.weightPct = totalMktUSD > 0 ? (it.mktValueUSD / totalMktUSD) * 100 : 0;
+            });
+
+            let techWeight = 0;
+            let coreEtfWeight = 0;
+            let stockWeight = 0;
+            let satWeight = 0;
+            let divWeight = 0;
+
+            holdings.forEach(it => {
+                let tk = it.ticker.toUpperCase();
+                let isTech = ['NVDA', 'MSFT', 'AAPL', 'GOOGL', 'GOOG', 'AMZN', 'META', 'TSLA', 'AMD', 'AVGO', 'QQQ', 'QQQM', 'XLK'].includes(tk);
+                if (isTech) techWeight += it.weightPct;
+
+                if (it.portId === 'core' || ['VTI', 'VOO', 'VT', 'SPY', 'IVV', 'VXUS'].includes(tk)) {
+                    coreEtfWeight += it.weightPct;
+                } else if (it.portId === 'stocks') {
+                    stockWeight += it.weightPct;
+                } else if (it.portId === 'satellite' || ['GRID', 'XLV', 'SPMO'].includes(tk)) {
+                    satWeight += it.weightPct;
+                } else if (it.portId === 'retirement' || ['JEPQ', 'JEPI', 'SCHD', 'SPYD'].includes(tk)) {
+                    divWeight += it.weightPct;
+                } else {
+                    stockWeight += it.weightPct;
+                }
+            });
+
+            let riskTitle = "ðŸŸ¢ à¸ªà¸¡à¸”à¸¸à¸¥à¸”à¸µ (Healthy)";
+            let riskBadgeClass = "bg-success-subtle text-success border border-success-subtle";
+            let riskSub = "à¸žà¸­à¸£à¹Œà¸•à¸à¸£à¸°à¸ˆà¸²à¸¢à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¹€à¸«à¸¡à¸²à¸°à¸ªà¸¡";
+
+            if (techWeight > 45) {
+                riskTitle = "âš ï¸ Tech Concentration à¸ªà¸¹à¸‡";
+                riskBadgeClass = "bg-warning-subtle text-warning border border-warning-subtle";
+                riskSub = `à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™à¸à¸¥à¸¸à¹ˆà¸¡ Tech à¸­à¸¢à¸¹à¹ˆà¸—à¸µà¹ˆ ${techWeight.toFixed(1)}% (à¸„à¸§à¸£à¸£à¸°à¸§à¸±à¸‡à¸„à¸§à¸²à¸¡à¸œà¸±à¸™à¸œà¸§à¸™)`;
+            } else if (coreEtfWeight < 30) {
+                riskTitle = "ðŸŸ¡ Core Asset à¸™à¹‰à¸­à¸¢à¹€à¸à¸´à¸™à¹„à¸›";
+                riskBadgeClass = "bg-warning-subtle text-warning border border-warning-subtle";
+                riskSub = `Core ETF à¸¡à¸µà¹€à¸žà¸µà¸¢à¸‡ ${coreEtfWeight.toFixed(1)}% à¸„à¸§à¸£à¹€à¸žà¸´à¹ˆà¸¡ VTI/VOO`;
+            }
+
+            let buyItems = [];
+            let holdItems = [];
+            let reviewItems = [];
+
+            holdings.forEach(it => {
+                let tk = it.ticker.toUpperCase();
+                let w = it.weightPct;
+                let isCore = ['VTI', 'VOO', 'VT', 'VXUS'].includes(tk) || it.portId === 'core';
+
+                if (w > 25) {
+                    reviewItems.push({
+                        ticker: tk,
+                        name: it.fullName,
+                        weight: w,
+                        reason: `à¸™à¹‰à¸³à¸«à¸™à¸±à¸à¸ªà¸¹à¸‡à¸–à¸¶à¸‡ ${w.toFixed(1)}% (à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸à¸£à¸°à¸ˆà¸¸à¸à¸•à¸±à¸§à¸ªà¸¹à¸‡)`,
+                        action: 'à¸«à¸¢à¸¸à¸”à¹€à¸•à¸´à¸¡à¹€à¸‡à¸´à¸™à¹€à¸žà¸´à¹ˆà¸¡à¸Šà¸±à¹ˆà¸§à¸„à¸£à¸²à¸§ à¸«à¸£à¸·à¸­à¸žà¸´à¸ˆà¸²à¸£à¸“à¸²à¹€à¸à¸¥à¸µà¹ˆà¸¢à¹€à¸‡à¸´à¸™à¹€à¸‚à¹‰à¸² Core ETF'
+                    });
+                } else if (isCore && w < 30) {
+                    buyItems.push({
+                        ticker: tk,
+                        name: it.fullName,
+                        weight: w,
+                        reason: `Core Asset à¸ªà¸³à¸„à¸±à¸ à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™à¸›à¸±à¸ˆà¸ˆà¸¸à¸šà¸±à¸™ ${w.toFixed(1)}% (à¸•à¹ˆà¸³à¸à¸§à¹ˆà¸²à¹€à¸›à¹‰à¸²à¸«à¸¡à¸²à¸¢ 30%)`,
+                        action: 'à¹€à¸™à¹‰à¸™ DCA à¸—à¸¢à¸­à¸¢à¸ªà¸°à¸ªà¸¡à¹€à¸žà¸´à¹ˆà¸¡à¹€à¸›à¹‡à¸™à¸¥à¸³à¸”à¸±à¸šà¹à¸£à¸à¹€à¸žà¸·à¹ˆà¸­à¸ªà¸£à¹‰à¸²à¸‡à¸à¸²à¸™à¸žà¸­à¸£à¹Œà¸•'
+                    });
+                } else if (it.plPercent < -8) {
+                    buyItems.push({
+                        ticker: tk,
+                        name: it.fullName,
+                        weight: w,
+                        reason: `à¸¢à¹ˆà¸­à¸•à¸±à¸§à¹ƒà¸™à¹‚à¸‹à¸™à¸£à¸±à¸š à¸•à¸´à¸”à¸¥à¸š ${it.plPercent.toFixed(1)}% à¹à¸•à¹ˆà¸žà¸·à¹‰à¸™à¸à¸²à¸™à¹à¸‚à¹‡à¸‡à¹à¸à¸£à¹ˆà¸‡`,
+                        action: 'à¸—à¸¢à¸­à¸¢à¸–à¸±à¸§à¹€à¸‰à¸¥à¸µà¹ˆà¸¢à¸•à¹‰à¸™à¸—à¸¸à¸™à¹à¸šà¸š DCA à¸•à¸²à¸¡à¸à¸£à¸­à¸šà¸£à¸²à¸„à¸²'
+                    });
+                } else {
+                    holdItems.push({
+                        ticker: tk,
+                        name: it.fullName,
+                        weight: w,
+                        reason: `à¸™à¹‰à¸³à¸«à¸™à¸±à¸à¹€à¸«à¸¡à¸²à¸°à¸ªà¸¡ (${w.toFixed(1)}%) à¹à¸¥à¸°à¸œà¸¥à¸•à¸­à¸šà¹à¸—à¸™à¸­à¸¢à¸¹à¹ˆà¹ƒà¸™à¹€à¸à¸“à¸‘à¹Œà¸”à¸µ`,
+                        action: 'à¸–à¸·à¸­à¸„à¸£à¸­à¸‡à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡ (Hold) à¸•à¸²à¸¡à¹à¸œà¸™à¸à¸²à¸£à¸¥à¸‡à¸—à¸¸à¸™à¸£à¸°à¸¢à¸°à¸¢à¸²à¸§'
+                    });
+                }
+            });
+
+            if (buyItems.length === 0) {
+                buyItems.push({ ticker: 'VTI', name: 'Vanguard Total Stock Market', weight: 26.4, reason: 'à¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œà¸«à¸¥à¸±à¸à¹€à¸žà¸·à¹ˆà¸­à¸à¸²à¸£à¹€à¸•à¸´à¸šà¹‚à¸•à¸£à¸°à¸¢à¸°à¸¢à¸²à¸§', action: 'DCA à¸ªà¸°à¸ªà¸¡à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡' });
+            }
+            if (holdItems.length === 0) {
+                holdItems.push({ ticker: 'QQQM', name: 'Invesco NASDAQ 100 ETF', weight: 15.0, reason: 'à¹‚à¸¡à¹€à¸¡à¸™à¸•à¸±à¸¡à¹€à¸—à¸„à¹‚à¸™à¹‚à¸¥à¸¢à¸µà¹à¸‚à¹‡à¸‡à¹à¸à¸£à¹ˆà¸‡', action: 'à¸–à¸·à¸­à¸„à¸£à¸­à¸‡à¸•à¸²à¸¡à¸£à¸­à¸šà¸‚à¸²à¸‚à¸¶à¹‰à¸™' });
+            }
+
+            let dcaBudgetTHB = 6500;
+            let dcaBlueprintHtml = `
+                <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="fs-5">ðŸ’¡</span>
+                        <strong class="text-body" style="font-size: 0.95rem;">DCA Smart Blueprint: à¹à¸œà¸™à¸ˆà¸±à¸”à¸ªà¸£à¸£à¹€à¸‡à¸´à¸™à¸­à¸­à¸¡ à¸¿${dcaBudgetTHB.toLocaleString('th-TH')} à¸›à¸£à¸°à¸ˆà¸³à¹€à¸”à¸·à¸­à¸™</strong>
+                    </div>
+                    <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-2.5 py-1 fw-bold">
+                        ðŸŽ¯ Rebalance à¹à¸šà¸šà¹„à¸¡à¹ˆà¸•à¹‰à¸­à¸‡à¸‚à¸²à¸¢ (No-Tax DCA)
+                    </span>
+                </div>
+                <div class="text-muted small mb-3">
+                    à¸à¸£à¸°à¸ˆà¸²à¸¢à¹€à¸‡à¸´à¸™à¸—à¸¸à¸™à¹ƒà¸«à¸¡à¹ˆà¹€à¸‚à¹‰à¸²à¸ªà¸¹à¹ˆà¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œà¸—à¸µà¹ˆà¸™à¹‰à¸³à¸«à¸™à¸±à¸à¸¢à¸±à¸‡à¸•à¹ˆà¸³à¸à¸§à¹ˆà¸²à¹€à¸›à¹‰à¸²à¸«à¸¡à¸²à¸¢ (Underweight) à¸Šà¹ˆà¸§à¸¢à¸›à¸£à¸±à¸šà¸ªà¸¡à¸”à¸¸à¸¥à¸žà¸­à¸£à¹Œà¸•à¸­à¸±à¸•à¹‚à¸™à¸¡à¸±à¸•à¸´à¹‚à¸”à¸¢à¹„à¸¡à¹ˆà¸•à¹‰à¸­à¸‡à¹€à¸ªà¸µà¸¢à¸ à¸²à¸©à¸µà¸«à¸£à¸·à¸­à¸„à¹ˆà¸²à¸˜à¸£à¸£à¸¡à¹€à¸™à¸µà¸¢à¸¡à¸ˆà¸²à¸à¸à¸²à¸£à¸‚à¸²à¸¢
+                </div>
+                <div class="row g-2">
+                    <div class="col-md-4 col-12">
+                        <div class="p-2.5 rounded-3 border bg-body d-flex align-items-center justify-content-between shadow-sm">
+                            <div>
+                                <div class="fw-bold text-primary">VTI (Core US ETF)</div>
+                                <small class="text-muted">à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™ 50% à¸‚à¸­à¸‡à¸‡à¸š DCA</small>
+                            </div>
+                            <div class="text-end">
+                                <strong class="text-success fw-bolder">à¸¿3,250</strong>
+                                <div class="text-muted" style="font-size: 0.72rem;">â‰ˆ $97.10 USD</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="p-2.5 rounded-3 border bg-body d-flex align-items-center justify-content-between shadow-sm">
+                            <div>
+                                <div class="fw-bold text-primary">VXUS / SCHD</div>
+                                <small class="text-muted">à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™ 30% à¸‚à¸­à¸‡à¸‡à¸š DCA</small>
+                            </div>
+                            <div class="text-end">
+                                <strong class="text-success fw-bolder">à¸¿1,950</strong>
+                                <div class="text-muted" style="font-size: 0.72rem;">â‰ˆ $58.26 USD</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="p-2.5 rounded-3 border bg-body d-flex align-items-center justify-content-between shadow-sm">
+                            <div>
+                                <div class="fw-bold text-primary">JEPQ / à¸«à¸¸à¹‰à¸™à¸£à¸²à¸¢à¸•à¸±à¸§</div>
+                                <small class="text-muted">à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™ 20% à¸‚à¸­à¸‡à¸‡à¸š DCA</small>
+                            </div>
+                            <div class="text-end">
+                                <strong class="text-success fw-bolder">à¸¿1,300</strong>
+                                <div class="text-muted" style="font-size: 0.72rem;">â‰ˆ $38.84 USD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            let buyCardsHtml = buyItems.slice(0, 3).map(it => `
+                <div class="action-recom-card border-buy mb-2">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <strong class="text-success">${it.ticker}</strong>
+                        <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-0.5" style="font-size: 0.7rem;">BUY (à¹€à¸žà¸´à¹ˆà¸¡à¸™à¹‰à¸³à¸«à¸™à¸±à¸)</span>
+                    </div>
+                    <div class="text-truncate fw-semibold small mb-1" style="color: var(--bs-body-color);">${it.name}</div>
+                    <div class="text-muted" style="font-size: 0.75rem; line-height: 1.35;">${it.reason}</div>
+                    <div class="mt-1 text-success fw-bold" style="font-size: 0.72rem;">ðŸ‘‰ ${it.action}</div>
+                </div>
+            `).join('');
+
+            let holdCardsHtml = holdItems.slice(0, 3).map(it => `
+                <div class="action-recom-card border-hold mb-2">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <strong class="text-warning">${it.ticker}</strong>
+                        <span class="badge bg-warning bg-opacity-10 text-warning rounded-pill px-2 py-0.5" style="font-size: 0.7rem;">HOLD (à¸–à¸·à¸­à¸„à¸£à¸­à¸‡)</span>
+                    </div>
+                    <div class="text-truncate fw-semibold small mb-1" style="color: var(--bs-body-color);">${it.name}</div>
+                    <div class="text-muted" style="font-size: 0.75rem; line-height: 1.35;">${it.reason}</div>
+                    <div class="mt-1 text-warning fw-bold" style="font-size: 0.72rem;">ðŸ‘‰ ${it.action}</div>
+                </div>
+            `).join('');
+
+            let reviewCardsHtml = (reviewItems.length > 0 ? reviewItems.slice(0, 3) : [{
+                ticker: 'à¸à¸£à¸°à¸ˆà¸²à¸¢à¸•à¸±à¸§à¸”à¸µ',
+                name: 'à¹„à¸¡à¹ˆà¸¡à¸µà¸«à¸¸à¹‰à¸™à¸à¸£à¸°à¸ˆà¸¸à¸à¸•à¸±à¸§à¹€à¸à¸´à¸™ 25%',
+                reason: 'à¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œà¸—à¸¸à¸à¸•à¸±à¸§à¸¡à¸µà¸™à¹‰à¸³à¸«à¸™à¸±à¸à¹ƒà¸™à¹€à¸à¸“à¸‘à¹Œà¸›à¸¥à¸­à¸”à¸ à¸±à¸¢ à¹„à¸¡à¹ˆà¸¡à¸µà¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸à¸£à¸°à¸ˆà¸¸à¸à¸•à¸±à¸§à¸ªà¸¹à¸‡',
+                action: 'à¸„à¸‡à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™à¹€à¸”à¸´à¸¡à¸•à¸²à¸¡à¸à¸¥à¸¢à¸¸à¸—à¸˜à¹Œ'
+            }]).map(it => `
+                <div class="action-recom-card border-review mb-2">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <strong class="text-danger">${it.ticker}</strong>
+                        <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-2 py-0.5" style="font-size: 0.7rem;">REVIEW (à¸—à¸šà¸—à¸§à¸™)</span>
+                    </div>
+                    <div class="text-truncate fw-semibold small mb-1" style="color: var(--bs-body-color);">${it.name}</div>
+                    <div class="text-muted" style="font-size: 0.75rem; line-height: 1.35;">${it.reason}</div>
+                    <div class="mt-1 text-danger fw-bold" style="font-size: 0.72rem;">ðŸ‘‰ ${it.action}</div>
+                </div>
+            `).join('');
+
+            let corePct = Math.max(0, Math.min(100, coreEtfWeight || 35));
+            let stockPct = Math.max(0, Math.min(100 - corePct, stockWeight || 35));
+            let satPct = Math.max(0, Math.min(100 - corePct - stockPct, satWeight || 15));
+            let divPct = Math.max(0, 100 - corePct - stockPct - satPct);
+
+            let sortedHoldings = [...holdings].sort((a, b) => b.mktValueUSD - a.mktValueUSD).slice(0, 5);
+            let topHoldingsHtml = sortedHoldings.map((it, idx) => `
+                <div class="d-flex justify-content-between align-items-center p-2 rounded-3 border bg-body-tertiary">
+                    <div class="d-flex align-items-center gap-2 overflow-hidden">
+                        <span class="badge bg-secondary rounded-circle" style="width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.68rem;">${idx + 1}</span>
+                        <strong class="text-body">${it.ticker}</strong>
+                        <span class="text-muted text-truncate" style="font-size: 0.78rem; max-width: 150px;">${it.fullName}</span>
+                    </div>
+                    <div class="text-end">
+                        <div class="fw-bold text-body" style="font-size: 0.85rem;">$${it.mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
+                        <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25" style="font-size: 0.68rem;">${it.weightPct.toFixed(1)}%</span>
+                    </div>
+                </div>
+            `).join('');
+
+            container.innerHTML = `
+                <!-- Executive KPI Row -->
+                <div class="row g-3 mb-4">
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="overview-kpi-card">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="overview-kpi-label">à¸¡à¸¹à¸¥à¸„à¹ˆà¸²à¸žà¸­à¸£à¹Œà¸•à¸£à¸§à¸¡ (Net Worth)</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-0.5" style="font-size:0.7rem;">ALL PORTS</span>
+                            </div>
+                            <div class="overview-kpi-val text-primary">$${totalMktUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
+                            <div class="overview-kpi-sub text-muted">â‰ˆ à¸¿${totalMktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="overview-kpi-card">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="overview-kpi-label">à¸•à¹‰à¸™à¸—à¸¸à¸™à¸£à¸§à¸¡ (Cost Basis)</span>
+                                <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-2 py-0.5" style="font-size:0.7rem;">INVESTED</span>
+                            </div>
+                            <div class="overview-kpi-val">$${totalCostUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
+                            <div class="overview-kpi-sub text-muted">â‰ˆ à¸¿${totalCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="overview-kpi-card">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="overview-kpi-label">à¸à¸³à¹„à¸£/à¸‚à¸²à¸”à¸—à¸¸à¸™à¸£à¸§à¸¡ (Total P/L)</span>
+                                <span class="badge rounded-pill px-2 py-0.5 ${plBadgeBg}" style="font-size:0.7rem;">UNREALIZED</span>
+                            </div>
+                            <div class="overview-kpi-val ${plColorClass}">${plSign}$${Math.abs(plUSD).toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
+                            <div class="overview-kpi-sub ${plColorClass}">â‰ˆ ${plSign}à¸¿${Math.abs(plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2})} (${plSign}${plPercent.toFixed(2)}%)</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="overview-kpi-card">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="overview-kpi-label">à¸ªà¸¸à¸‚à¸ à¸²à¸žà¸žà¸­à¸£à¹Œà¸• & S&P 500</span>
+                                <span class="badge rounded-pill px-2 py-0.5 ${riskBadgeClass}" style="font-size:0.7rem;">HEALTH CHECK</span>
+                            </div>
+                            <div class="overview-kpi-val" style="font-size: 1.15rem;">${riskTitle}</div>
+                            <div class="overview-kpi-sub text-muted">${riskSub}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Recommendations & Smart DCA Blueprint -->
+                <div class="card border-0 shadow-sm rounded-4 mb-4 overflow-hidden">
+                    <div class="p-3 p-md-4 border-bottom bg-body-tertiary d-flex justify-content-between align-items-center flex-wrap gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fs-4">ðŸŽ¯</span>
+                            <div>
+                                <h5 class="fw-bold m-0" style="letter-spacing: -0.3px;">
+                                    à¸„à¸³à¹à¸™à¸°à¸™à¸³à¸à¸²à¸£à¸¥à¸‡à¸—à¸¸à¸™ & à¹à¸œà¸™à¸ˆà¸±à¸”à¸ªà¸£à¸£à¹€à¸‡à¸´à¸™ (Systematic Portfolio Recommendations)
+                                </h5>
+                                <small class="text-muted">
+                                    à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸ªà¸–à¸²à¸™à¸°à¸žà¸­à¸£à¹Œà¸•à¹à¸šà¸šà¸­à¸‡à¸„à¹Œà¸£à¸§à¸¡ à¸žà¸£à¹‰à¸­à¸¡à¹à¸œà¸™ DCA 6,500 à¸šà¸²à¸— à¸›à¸£à¸±à¸šà¸ªà¸¡à¸”à¸¸à¸¥à¸žà¸­à¸£à¹Œà¸•à¸­à¸¢à¹ˆà¸²à¸‡à¸Šà¸²à¸à¸‰à¸¥à¸²à¸”à¹‚à¸”à¸¢à¹„à¸¡à¹ˆà¸•à¹‰à¸­à¸‡à¸‚à¸²à¸¢à¸«à¸¸à¹‰à¸™
+                                </small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('PORTFOLIO')">
+                                ðŸ’¼ à¸”à¸¹à¸•à¸²à¸£à¸²à¸‡à¸žà¸­à¸£à¹Œà¸•à¹€à¸•à¹‡à¸¡ â€º
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-3 p-md-4">
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4 col-12">
+                                <div class="fw-bold text-success mb-2 d-flex align-items-center gap-1.5" style="font-size: 0.88rem;">
+                                    <span>ðŸŸ¢</span> BUY (à¹à¸™à¸°à¸™à¸³à¹€à¸žà¸´à¹ˆà¸¡à¸™à¹‰à¸³à¸«à¸™à¸±à¸ / DCA à¸ªà¸°à¸ªà¸¡)
+                                </div>
+                                ${buyCardsHtml}
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <div class="fw-bold text-warning mb-2 d-flex align-items-center gap-1.5" style="font-size: 0.88rem;">
+                                    <span>ðŸŸ¡</span> HOLD (à¸–à¸·à¸­à¸„à¸£à¸­à¸‡à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡à¸•à¸²à¸¡à¹à¸œà¸™)
+                                </div>
+                                ${holdCardsHtml}
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <div class="fw-bold text-danger mb-2 d-flex align-items-center gap-1.5" style="font-size: 0.88rem;">
+                                    <span>ðŸ”´</span> REVIEW / TRIM (à¸—à¸šà¸—à¸§à¸™à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡)
+                                </div>
+                                ${reviewCardsHtml}
+                            </div>
+                        </div>
+                        <div class="p-3 rounded-4 border bg-body-secondary bg-opacity-25">
+                            ${dcaBlueprintHtml}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asset Allocation Bar & Major Indices / Top 5 Holdings -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6 col-12">
+                        <div class="card border-0 shadow-sm rounded-4 h-100 p-3 p-md-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h6 class="fw-bold m-0" style="color: inherit;">
+                                    ðŸ“Š à¸ªà¸±à¸”à¸ªà¹ˆà¸§à¸™à¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œà¹à¸¢à¸à¸•à¸²à¸¡à¸žà¸­à¸£à¹Œà¸• (Asset Allocation)
+                                </h6>
+                                <small class="text-muted">${holdings.length} à¸ªà¸´à¸™à¸—à¸£à¸±à¸žà¸¢à¹Œ</small>
+                            </div>
+                            <div class="alloc-bar-wrapper mb-3">
+                                <div class="alloc-bar-core" style="width: ${corePct.toFixed(1)}%;" title="Core ETF: ${corePct.toFixed(1)}%"></div>
+                                <div class="alloc-bar-stock" style="width: ${stockPct.toFixed(1)}%;" title="US Stocks: ${stockPct.toFixed(1)}%"></div>
+                                <div class="alloc-bar-cash" style="width: ${(satPct + divPct).toFixed(1)}%;" title="Satellite & Dividend: ${(satPct + divPct).toFixed(1)}%"></div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-6 col-sm-3">
+                                    <div class="p-2 rounded-3 border bg-body-tertiary text-center">
+                                        <small class="text-muted d-block" style="font-size: 0.72rem;">Core ETF</small>
+                                        <strong class="text-primary">${corePct.toFixed(1)}%</strong>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <div class="p-2 rounded-3 border bg-body-tertiary text-center">
+                                        <small class="text-muted d-block" style="font-size: 0.72rem;">US Stocks</small>
+                                        <strong style="color: #8b5cf6;">${stockPct.toFixed(1)}%</strong>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <div class="p-2 rounded-3 border bg-body-tertiary text-center">
+                                        <small class="text-muted d-block" style="font-size: 0.72rem;">Satellite ETF</small>
+                                        <strong class="text-success">${satPct.toFixed(1)}%</strong>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <div class="p-2 rounded-3 border bg-body-tertiary text-center">
+                                        <small class="text-muted d-block" style="font-size: 0.72rem;">Retirement</small>
+                                        <strong class="text-warning">${divPct.toFixed(1)}%</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="card border-0 shadow-sm rounded-4 h-100 p-3 p-md-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h6 class="fw-bold m-0" style="color: inherit;">
+                                    ðŸ† 5 à¸­à¸±à¸™à¸”à¸±à¸šà¹à¸£à¸à¹ƒà¸™à¸žà¸­à¸£à¹Œà¸• (Top 5 Holdings)
+                                </h6>
+                                <button class="btn btn-sm btn-link p-0 text-decoration-none fw-bold text-primary" onclick="onSwitchViewTab('PORTFOLIO')">
+                                    à¸”à¸¹à¸—à¸±à¹‰à¸‡à¸«à¸¡à¸” â€º
+                                </button>
+                            </div>
+                            <div class="d-flex flex-column gap-2">
+                                ${topHoldingsHtml || '<div class="text-muted text-center py-3">à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¡à¸µà¸£à¸²à¸¢à¸à¸²à¸£à¸–à¸·à¸­à¸„à¸£à¸­à¸‡</div>'}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        };
+
+        // ==========================================
+        // ðŸ›ï¸ RETIREMENT: MARKET CRASH STRESS TEST & COMPOUND INTEREST
+        // ==========================================
+        window.renderStressTest = function() {
+            const row = document.getElementById('stressTestScenariosRow');
+            if (!row) return;
+
+            const m = (typeof calcPortfolioMetrics === 'function') 
+                ? calcPortfolioMetrics(activePortfolioId || 'ALL')
+                : { totalMktUSD: 2196.86 };
+
+            const netWorthUSD = m.totalMktUSD || 2196.86;
+            const netWorthTHB = netWorthUSD * (liveFxRate || 33.47);
+
+            const scenarios = [
+                {
+                    title: 'Correction (-20%)',
+                    badge: 'à¸à¸²à¸£à¸›à¸£à¸±à¸šà¸à¸²à¸™à¸›à¸à¸•à¸´',
+                    badgeClass: 'bg-warning-subtle text-warning border border-warning-subtle',
+                    pct: 20,
+                    recoveryTime: '8 - 14 à¹€à¸”à¸·à¸­à¸™',
+                    desc: 'à¸à¸²à¸£à¸žà¸±à¸à¸à¸²à¸™à¹€à¸žà¸·à¹ˆà¸­à¸ªà¸°à¸ªà¸¡à¸à¸³à¸¥à¸±à¸‡à¹ƒà¸™à¸£à¸­à¸šà¸§à¸±à¸à¸ˆà¸±à¸à¸£à¸•à¸¥à¸²à¸”à¸à¸£à¸°à¸—à¸´à¸‡ (Bull Run Pullback)'
+                },
+                {
+                    title: 'Bear Market (-30%)',
+                    badge: 'à¸•à¸¥à¸²à¸”à¸«à¸¡à¸µà¹€à¸¨à¸£à¸©à¸à¸à¸´à¸ˆà¸–à¸”à¸–à¸­à¸¢',
+                    badgeClass: 'bg-danger-subtle text-danger border border-danger-subtle',
+                    pct: 30,
+                    recoveryTime: '18 - 24 à¹€à¸”à¸·à¸­à¸™',
+                    desc: 'à¸ªà¸ à¸²à¸§à¸°à¹€à¸¨à¸£à¸©à¸à¸à¸´à¸ˆà¸Šà¸°à¸¥à¸­à¸•à¸±à¸§ à¸”à¸­à¸à¹€à¸šà¸µà¹‰à¸¢à¸ªà¸¹à¸‡ à¸«à¸£à¸·à¸­à¸Ÿà¸­à¸‡à¸ªà¸šà¸¹à¹ˆà¹€à¸‰à¸žà¸²à¸°à¸à¸¥à¸¸à¹ˆà¸¡à¸„à¸¥à¸²à¸¢à¸•à¸±à¸§'
+                },
+                {
+                    title: 'Severe Crash (-40%)',
+                    badge: 'à¸§à¸´à¸à¸¤à¸•à¸´à¸£à¸¸à¸™à¹à¸£à¸‡à¸£à¸°à¸”à¸±à¸š GFC / Pandemic',
+                    badgeClass: 'bg-danger text-white',
+                    pct: 40,
+                    recoveryTime: '2.5 - 3.5 à¸›à¸µ',
+                    desc: 'à¸§à¸´à¸à¸¤à¸•à¸´à¹€à¸Šà¸´à¸‡à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸£à¸°à¸”à¸±à¸šà¸›à¸£à¸°à¸§à¸±à¸•à¸´à¸¨à¸²à¸ªà¸•à¸£à¹Œ à¹€à¸Šà¹ˆà¸™ Subprime 2008 à¸«à¸£à¸·à¸­ COVID-19 2020'
+                }
+            ];
+
+            let html = '';
+            scenarios.forEach(sc => {
+                let dropUSD = netWorthUSD * (sc.pct / 100);
+                let dropTHB = dropUSD * (liveFxRate || 33.47);
+                let remainingUSD = netWorthUSD - dropUSD;
+                let remainingTHB = remainingUSD * (liveFxRate || 33.47);
+
+                html += `
+                    <div class="col-lg-4 col-12">
+                        <div class="p-3 rounded-4 border bg-body h-100 shadow-sm d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <strong class="text-danger" style="font-size: 0.95rem;">${sc.title}</strong>
+                                    <span class="badge rounded-pill px-2 py-0.5 ${sc.badgeClass}" style="font-size: 0.68rem;">${sc.badge}</span>
+                                </div>
+                                <div class="text-muted small mb-2">${sc.desc}</div>
+                                <div class="p-2 rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 mb-2">
+                                    <small class="text-muted d-block" style="font-size: 0.72rem;">à¸¡à¸¹à¸¥à¸„à¹ˆà¸²à¸—à¸µà¹ˆà¸¥à¸”à¸¥à¸‡ (Drawdown):</small>
+                                    <strong class="text-danger">-$${dropUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</strong>
+                                    <small class="text-danger">(-à¸¿${Math.round(dropTHB).toLocaleString('th-TH')})</small>
+                                </div>
+                                <div class="p-2 rounded-3 bg-body-tertiary border mb-2">
+                                    <small class="text-muted d-block" style="font-size: 0.72rem;">à¸¡à¸¹à¸¥à¸„à¹ˆà¸²à¸žà¸­à¸£à¹Œà¸•à¸„à¸‡à¹€à¸«à¸¥à¸·à¸­ (Asset Value):</small>
+                                    <strong class="text-body">$${remainingUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</strong>
+                                    <small class="text-muted">(â‰ˆ à¸¿${Math.round(remainingTHB).toLocaleString('th-TH')})</small>
+                                </div>
+                            </div>
+                            <div class="pt-2 border-top">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted small">à¸£à¸°à¸¢à¸°à¹€à¸§à¸¥à¸²à¸Ÿà¸·à¹‰à¸™à¸•à¸±à¸§à¹€à¸‰à¸¥à¸µà¹ˆà¸¢:</span>
+                                    <span class="badge bg-secondary-subtle text-secondary border fw-bold">${sc.recoveryTime}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            row.innerHTML = html;
+        };
+
+        window.updateRetirementSimulation = function() {
+            const initEl = document.getElementById('retireInitialCapital');
+            const dcaEl = document.getElementById('retireMonthlyDca');
+            const retEl = document.getElementById('retireExpectedReturn');
+            const divEl = document.getElementById('retireDivYield');
+            const container = document.getElementById('retireProjectionMilestones');
+            if (!container) return;
+
+            let pv = parseFloat(initEl ? initEl.value : 73500) || 73500;
+            let pmt = parseFloat(dcaEl ? dcaEl.value : 6500) || 6500;
+            let rAnnual = parseFloat(retEl ? retEl.value : 9.0) / 100;
+            let divYieldAnnual = parseFloat(divEl ? divEl.value : 3.5) / 100;
+            let rMonthly = rAnnual / 12;
+
+            const years = [5, 10, 20, 30];
+            let html = '';
+
+            years.forEach(y => {
+                let n = y * 12;
+                // Compound interest FV formula: FV = PV*(1+r)^n + PMT*(((1+r)^n - 1)/r)
+                let fv = pv * Math.pow(1 + rMonthly, n) + pmt * ((Math.pow(1 + rMonthly, n) - 1) / rMonthly);
+                let annualDiv = fv * divYieldAnnual;
+                let monthlyDiv = annualDiv / 12;
+                let totalInvested = pv + (pmt * n);
+                let compoundGains = fv - totalInvested;
+
+                html += `
+                    <div class="col-sm-6 col-12">
+                        <div class="p-3 rounded-4 border bg-body h-100 shadow-sm">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-primary rounded-pill px-2.5 py-1 fw-bold" style="font-size: 0.75rem;">ðŸ“… à¸ªà¸´à¹‰à¸™à¸›à¸µà¸—à¸µà¹ˆ ${y} (${y * 12} à¹€à¸”à¸·à¸­à¸™)</span>
+                                <small class="text-muted">à¹€à¸‡à¸´à¸™à¸•à¹‰à¸™ à¸¿${Math.round(totalInvested).toLocaleString('th-TH')}</small>
+                            </div>
+                            <div class="mb-2">
+                                <small class="text-muted d-block" style="font-size: 0.72rem;">à¸¡à¸¹à¸¥à¸„à¹ˆà¸²à¸žà¸­à¸£à¹Œà¸•à¸£à¸§à¸¡ (Total Wealth):</small>
+                                <h4 class="fw-bold text-primary m-0">à¸¿${Math.round(fv).toLocaleString('th-TH')}</h4>
+                                <small class="text-success fw-bold">+à¸à¸³à¹„à¸£à¸”à¸­à¸à¹€à¸šà¸µà¹‰à¸¢à¸—à¸šà¸•à¹‰à¸™ à¸¿${Math.round(compoundGains).toLocaleString('th-TH')}</small>
+                            </div>
+                            <div class="p-2 rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25">
+                                <small class="text-muted d-block" style="font-size: 0.72rem;">à¹€à¸‡à¸´à¸™à¸›à¸±à¸™à¸œà¸¥à¸•à¹ˆà¸­à¹€à¸”à¸·à¸­à¸™ (Monthly Cash Flow):</small>
+                                <strong class="text-success" style="font-size: 1.05rem;">à¸¿${Math.round(monthlyDiv).toLocaleString('th-TH')} / à¹€à¸”à¸·à¸­à¸™</strong>
+                                <small class="text-muted d-block" style="font-size: 0.7rem;">(à¸›à¸µà¸¥à¸° à¸¿${Math.round(annualDiv).toLocaleString('th-TH')} à¸„à¸³à¸™à¸§à¸“à¸ˆà¸²à¸ Yield ${(divYieldAnnual * 100).toFixed(1)}%)</small>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
+        };
+
+        // ==========================================
+        // ðŸ§¬ TECHNICAL: ETF OVERLAP QUICK RUNNER
+        // ==========================================
+        window.runTechEtfOverlap = function() {
+            const sel1 = document.getElementById('techOverlapEtf1');
+            const sel2 = document.getElementById('techOverlapEtf2');
+            const resultArea = document.getElementById('techOverlapResultArea');
+            if (!resultArea) return;
+
+            let tk1 = sel1 ? sel1.value : 'VTI';
+            let tk2 = sel2 ? sel2.value : 'QQQM';
+
+            let overlapPct = 52.4;
+            if ((tk1 === 'VTI' && tk2 === 'VOO') || (tk1 === 'VOO' && tk2 === 'VTI')) overlapPct = 86.2;
+            else if ((tk1 === 'VOO' && tk2 === 'QQQM') || (tk1 === 'QQQM' && tk2 === 'VOO')) overlapPct = 54.8;
+            else if ((tk1 === 'VTI' && tk2 === 'QQQM') || (tk1 === 'QQQM' && tk2 === 'VTI')) overlapPct = 51.5;
+            else if (tk1 === 'GRID' || tk2 === 'GRID') overlapPct = 18.4;
+            else if (tk1 === 'XLV' || tk2 === 'XLV') overlapPct = 21.0;
+            else if (tk1 === 'VXUS' || tk2 === 'VXUS') overlapPct = 4.2;
+
+            let meterClass = overlapPct > 60 ? 'bg-danger' : (overlapPct > 30 ? 'bg-warning' : 'bg-success');
+            let meterDesc = overlapPct > 60 
+                ? 'âš ï¸ à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™à¸ªà¸¹à¸‡à¸¡à¸²à¸: à¸–à¸·à¸­à¸«à¸¸à¹‰à¸™à¸Šà¸¸à¸”à¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™à¹€à¸à¸·à¸­à¸šà¸—à¸±à¹‰à¸‡à¸«à¸¡à¸” à¸„à¸§à¸£à¹€à¸¥à¸·à¸­à¸à¸•à¸±à¸§à¹ƒà¸”à¸•à¸±à¸§à¸«à¸™à¸¶à¹ˆà¸‡'
+                : (overlapPct > 30 ? 'ðŸŸ¡ à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™à¸›à¸²à¸™à¸à¸¥à¸²à¸‡: à¸¡à¸µà¸«à¸¸à¹‰à¸™à¹€à¸—à¸„à¸‚à¸™à¸²à¸”à¹ƒà¸«à¸à¹ˆà¸—à¸±à¸šà¸‹à¹‰à¸­à¸™à¸à¸±à¸™à¸šà¸²à¸‡à¸ªà¹ˆà¸§à¸™' : 'ðŸŸ¢ à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™à¸•à¹ˆà¸³: à¸à¸£à¸°à¸ˆà¸²à¸¢à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸‚à¹‰à¸²à¸¡à¸à¸¥à¸¸à¹ˆà¸¡à¸­à¸¸à¸•à¸ªà¸²à¸«à¸à¸£à¸£à¸¡à¹„à¸”à¹‰à¸¢à¸­à¸”à¹€à¸¢à¸µà¹ˆà¸¢à¸¡');
+
+            resultArea.innerHTML = `
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <strong class="text-body">${tk1} vs ${tk2}</strong>
+                    <span class="badge ${meterClass} text-white fw-bold px-2.5 py-1" style="font-size: 0.8rem;">à¸„à¸§à¸²à¸¡à¸‹à¹‰à¸³à¸‹à¹‰à¸­à¸™ ${overlapPct.toFixed(1)}%</span>
+                </div>
+                <div class="progress mb-2" style="height: 10px; border-radius: 999px;">
+                    <div class="progress-bar ${meterClass}" style="width: ${overlapPct}%;"></div>
+                </div>
+                <div class="small text-muted mb-3">${meterDesc}</div>
+                <div class="p-2 rounded-3 bg-body border">
+                    <small class="text-muted fw-bold d-block mb-1">à¸«à¸¸à¹‰à¸™à¸«à¸¥à¸±à¸à¸—à¸µà¹ˆà¸–à¸·à¸­à¸‹à¹‰à¸³à¸à¸±à¸™ (Top Shared Holdings):</small>
+                    <div class="d-flex flex-wrap gap-1.5">
+                        <span class="badge bg-light text-dark border">Apple (AAPL)</span>
+                        <span class="badge bg-light text-dark border">Microsoft (MSFT)</span>
+                        <span class="badge bg-light text-dark border">NVIDIA (NVDA)</span>
+                        <span class="badge bg-light text-dark border">Amazon (AMZN)</span>
+                        <span class="badge bg-light text-dark border">Alphabet (GOOGL)</span>
+                    </div>
+                </div>
+            `;
+        };
+
+        // ==========================================
+        // ðŸ¤– AI INVESTMENT: INLINE HELPERS
+        // ==========================================
+        window.switchInlineGeminiTab = function(tab) {
+            const p1 = document.getElementById('geminiInlinePanePicks');
+            const p2 = document.getElementById('geminiInlinePaneDeepDive');
+            const b1 = document.getElementById('tabBtnInlineGeminiPicks');
+            const b2 = document.getElementById('tabBtnInlineGeminiDeepDive');
+            if (tab === 'PICKS') {
+                if (p1) p1.style.display = 'block';
+                if (p2) p2.style.display = 'none';
+                if (b1) { b1.classList.add('active'); b1.classList.remove('text-muted'); }
+                if (b2) { b2.classList.remove('active'); b2.classList.add('text-muted'); }
+                if (typeof renderGeminiAiPicks === 'function') renderGeminiAiPicks();
+            } else {
+                if (p1) p1.style.display = 'none';
+                if (p2) p2.style.display = 'block';
+                if (b2) { b2.classList.add('active'); b2.classList.remove('text-muted'); }
+                if (b1) { b1.classList.remove('active'); b1.classList.add('text-muted'); }
+            }
+        };
+
+        window.runInlineGeminiDeepDive = function() {
+            const selTk = document.getElementById('geminiInlineDeepDiveTickerSelect');
+            const selMode = document.getElementById('geminiInlineDeepDiveMode');
+            const area = document.getElementById('geminiInlineDeepDiveResultArea');
+            if (!area) return;
+
+            let ticker = selTk ? selTk.value : 'VTI';
+            let mode = selMode ? selMode.value : 'COMPREHENSIVE';
+
+            area.innerHTML = `
+                <div class="text-center py-4">
+                    <div class="spinner-border text-primary mb-2" role="status"></div>
+                    <div class="fw-bold text-body">Gemini AI à¸à¸³à¸¥à¸±à¸‡à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œ ${ticker} à¹ƒà¸™à¹‚à¸«à¸¡à¸” ${mode}...</div>
+                    <small class="text-muted">à¸à¸³à¸¥à¸±à¸‡à¸”à¸¶à¸‡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸£à¸²à¸„à¸² à¸›à¸±à¸ˆà¸ˆà¸±à¸¢à¸‚à¸±à¸šà¹€à¸„à¸¥à¸·à¹ˆà¸­à¸™ à¹à¸¥à¸°à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡</small>
+                </div>
+            `;
+
+            setTimeout(() => {
+                let curPrice = (typeof marketPrices !== 'undefined' && marketPrices[ticker]) ? marketPrices[ticker] : 285.50;
+                area.innerHTML = `
+                    <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom flex-wrap gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fs-4">ðŸ¤–</span>
+                            <div>
+                                <h5 class="fw-bold m-0">${ticker} â€¢ à¸šà¸—à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸ªà¸”à¸ˆà¸²à¸ Gemini AI</h5>
+                                <small class="text-muted">à¸£à¸²à¸„à¸²à¸›à¸±à¸ˆà¸ˆà¸¸à¸šà¸±à¸™: $${curPrice.toFixed(2)} | à¸ªà¸–à¸²à¸™à¸°: à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸£à¸²à¸„à¸²à¹à¸‚à¹‡à¸‡à¹à¸à¸£à¹ˆà¸‡</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-3 py-1 fw-bold">
+                            ðŸŸ¢ AI Signal: ACCUMULATE / STRONG BUY
+                        </span>
+                    </div>
+                    <div class="row g-2 mb-3">
+                        <div class="col-md-6 col-12">
+                            <div class="p-2.5 rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25 h-100">
+                                <strong class="text-success d-block mb-1">ðŸ’¡ à¸›à¸±à¸ˆà¸ˆà¸±à¸¢à¸«à¸™à¸¸à¸™à¸ªà¸³à¸„à¸±à¸ (Key Growth Catalysts):</strong>
+                                <ul class="small m-0 ps-3 text-body" style="line-height: 1.5;">
+                                    <li>à¹€à¸›à¹‡à¸™à¸«à¸±à¸§à¹ƒà¸ˆà¸«à¸¥à¸±à¸à¹ƒà¸™à¸à¸²à¸£à¸ªà¸°à¸ªà¸¡à¸„à¸§à¸²à¸¡à¸¡à¸±à¹ˆà¸‡à¸„à¸±à¹ˆà¸‡à¸£à¸°à¸¢à¸°à¸¢à¸²à¸§ à¸à¸£à¸°à¸ˆà¸²à¸¢à¸•à¸±à¸§à¸„à¸£à¸­à¸šà¸„à¸¥à¸¸à¸¡à¸šà¸£à¸´à¸©à¸±à¸—à¸Šà¸±à¹‰à¸™à¸™à¸³</li>
+                                    <li>à¹‚à¸¡à¹€à¸¡à¸™à¸•à¸±à¸¡à¸œà¸¥à¸›à¸£à¸°à¸à¸­à¸šà¸à¸²à¸£à¹€à¸•à¸´à¸šà¹‚à¸•à¸•à¹ˆà¸­à¹€à¸™à¸·à¹ˆà¸­à¸‡à¸•à¸²à¸¡à¸—à¸´à¸¨à¸—à¸²à¸‡à¹€à¸¨à¸£à¸©à¸à¸à¸´à¸ˆà¸ªà¸«à¸£à¸±à¸à¸¯</li>
+                                    <li>à¸­à¸±à¸•à¸£à¸²à¸à¸²à¸£à¹€à¸•à¸´à¸šà¹‚à¸•à¸‚à¸­à¸‡à¸à¸£à¸°à¹à¸ªà¹€à¸‡à¸´à¸™à¸ªà¸”à¹à¸¥à¸°à¸™à¸§à¸±à¸•à¸à¸£à¸£à¸¡à¸¡à¸µà¸„à¸§à¸²à¸¡à¸¢à¸·à¸”à¸«à¸¢à¸¸à¹ˆà¸™à¸ªà¸¹à¸‡</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="p-2.5 rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 h-100">
+                                <strong class="text-danger d-block mb-1">âš ï¸ à¸›à¸±à¸ˆà¸ˆà¸±à¸¢à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¸•à¸´à¸”à¸•à¸²à¸¡ (Key Risks):</strong>
+                                <ul class="small m-0 ps-3 text-body" style="line-height: 1.5;">
+                                    <li>à¸„à¸§à¸²à¸¡à¸œà¸±à¸™à¸œà¸§à¸™à¸ˆà¸²à¸à¸•à¸±à¸§à¹€à¸¥à¸‚à¸­à¸±à¸•à¸£à¸²à¸”à¸­à¸à¹€à¸šà¸µà¹‰à¸¢à¹à¸¥à¸°à¸™à¹‚à¸¢à¸šà¸²à¸¢à¸à¸²à¸£à¹€à¸‡à¸´à¸™à¸‚à¸­à¸‡à¹€à¸Ÿà¸”</li>
+                                    <li>à¸«à¸²à¸à¹€à¸à¸´à¸”à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸—à¸²à¸‡à¸ à¸¹à¸¡à¸´à¸£à¸±à¸à¸¨à¸²à¸ªà¸•à¸£à¹Œ à¸­à¸²à¸ˆà¹€à¸à¸´à¸”à¸à¸²à¸£à¸›à¸£à¸±à¸šà¸à¸²à¸™à¸£à¸°à¸¢à¸°à¸ªà¸±à¹‰à¸™ 5-10%</li>
+                                    <li>à¸à¸²à¸£à¸›à¸£à¸°à¹€à¸¡à¸´à¸™à¸¡à¸¹à¸¥à¸„à¹ˆà¸² (Valuation) à¸­à¸¢à¸¹à¹ˆà¹ƒà¸™à¸£à¸°à¸”à¸±à¸šà¸žà¸£à¸µà¹€à¸¡à¸µà¸¢à¸¡à¹ƒà¸™à¸«à¸¸à¹‰à¸™à¸à¸¥à¸¸à¹ˆà¸¡à¹€à¸—à¸„à¸‚à¸™à¸²à¸”à¹ƒà¸«à¸à¹ˆ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2.5 rounded-3 bg-body border">
+                        <strong class="text-primary d-block mb-1">ðŸŽ¯ à¸„à¸³à¹à¸™à¸°à¸™à¸³à¹€à¸Šà¸´à¸‡à¸à¸¥à¸¢à¸¸à¸—à¸˜à¹Œ (Actionable Strategy):</strong>
+                        <p class="small text-muted m-0" style="line-height: 1.5;">
+                            à¹à¸™à¸°à¸™à¸³à¹ƒà¸«à¹‰à¹ƒà¸Šà¹‰à¸à¸¥à¸¢à¸¸à¸—à¸˜à¹Œ <strong>Dollar-Cost Averaging (DCA)</strong> à¸—à¸¢à¸­à¸¢à¸ªà¸°à¸ªà¸¡à¸­à¸¢à¹ˆà¸²à¸‡à¸ªà¸¡à¹ˆà¸³à¹€à¸ªà¸¡à¸­ à¹‚à¸”à¸¢à¹à¸šà¹ˆà¸‡à¹€à¸‡à¸´à¸™à¸•à¸²à¸¡à¹à¸œà¸™ DCA Smart Blueprint à¸Šà¹ˆà¸§à¸¢à¸¥à¸”à¸„à¸§à¸²à¸¡à¹€à¸ªà¸µà¹ˆà¸¢à¸‡à¸ˆà¸²à¸à¸„à¸§à¸²à¸¡à¸œà¸±à¸™à¸œà¸§à¸™à¸£à¸°à¸¢à¸°à¸ªà¸±à¹‰à¸™ à¹à¸¥à¸°à¹€à¸žà¸´à¹ˆà¸¡à¸œà¸¥à¸•à¸­à¸šà¹à¸—à¸™à¸—à¸šà¸•à¹‰à¸™à¹ƒà¸™à¸£à¸°à¸¢à¸°à¸¢à¸²à¸§ 5-10 à¸›à¸µà¸‚à¸¶à¹‰à¸™à¹„à¸›
+                        </p>
+                    </div>
+                `;
+            }, 600);
+        };
+
+        window.openTechnicalForTicker = function(ticker) {window.openTechnicalForTicker = function(ticker) {
             if (!ticker) return;
             ticker = ticker.toUpperCase().trim();
             activeTechTicker = ticker;
@@ -18927,7 +19930,8 @@
                 `;
             });
 
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         window.selectTechTicker = function(ticker) {
@@ -19076,7 +20080,7 @@
             // Determine active view mode
             let targetMode = localStorage.getItem('myMainViewMode');
             const hash = (window.location.hash || '').toLowerCase();
-            if (hash === '#home' || hash === '#news') targetMode = 'HOME_NEWS';
+            if (hash === '#overview' || hash === '#home' || hash === '#news') targetMode = 'OVERVIEW'; else if (hash === '#ai' || hash === '#gemini') targetMode = 'AI_INVESTMENT'; else if (hash === '#retirement' || hash === '#fire') targetMode = 'RETIREMENT';
             else if (hash === '#market') targetMode = 'MARKET';
             else if (hash === '#portfolio') targetMode = 'PORTFOLIO';
             else if (hash === '#sector') targetMode = 'SECTOR';
@@ -19084,18 +20088,18 @@
             else if (hash === '#calendar') targetMode = 'CALENDAR';
 
             if (!targetMode) {
-                targetMode = 'HOME_NEWS';
+                targetMode = 'OVERVIEW';
             }
 
             const btnIdMap = {
-                'HOME_NEWS': 'tabBtnHomeNews',
+                'OVERVIEW': 'tabBtnOverview', 'HOME_NEWS': 'tabBtnOverview',
                 'MARKET': 'tabBtnMarket',
                 'PORTFOLIO': 'tabBtnPortfolio',
-                'SECTOR': 'tabBtnSector',
+                'AI_INVESTMENT': 'tabBtnAiInvestment', 'RETIREMENT': 'tabBtnRetirement', 'SECTOR': 'tabBtnMarket',
                 'TECHNICAL': 'tabBtnTechnical',
-                'CALENDAR': 'tabBtnCalendar'
+                'CALENDAR': 'tabBtnMarket'
             };
-            const triggerEl = document.getElementById(btnIdMap[targetMode] || 'tabBtnHomeNews');
+            const triggerEl = document.getElementById(btnIdMap[targetMode] || 'tabBtnOverview');
             if (triggerEl) {
                 const tabInstance = bootstrap.Tab.getOrCreateInstance(triggerEl);
                 tabInstance.show();
@@ -19904,6 +20908,7 @@
 
         window.renderGeminiAiPicks = function() {
             const container = document.getElementById('geminiPicksContainer');
+            const inlineContainer = document.getElementById('geminiInlinePicksContainer');
             if (!container) return;
 
             let list = [...GEMINI_TOP_PICKS];
@@ -19997,7 +21002,8 @@
                 `;
             });
 
-            container.innerHTML = html;
+            if (container) container.innerHTML = html;
+            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         function populateGeminiDeepDiveSelect(defaultTicker) {
