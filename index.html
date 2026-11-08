@@ -4119,10 +4119,11 @@
 
                             <div class="mb-3">
                                 <label class="form-label fw-bold small">โมเดล AI ที่ต้องการใช้งาน:</label>
-                                <select id="geminiModelSelect" class="form-select form-select-sm rounded-3">
-                                    <option value="gemini-2.5-flash">Gemini 2.5 Flash (แนะนำ - เร็ว ฉลาด วิเคราะห์แม่นยำ)</option>
+                                <select id="geminiModelSelect" class="form-select form-select-sm rounded-3" onchange="localStorage.setItem('gemini_model', this.value)">
+                                    <option value="gemini-3.8-flash" selected>Gemini 3.8 Flash (แนะนำล่าสุด - เร็ว ฉลาด วิเคราะห์แม่นยำ)</option>
                                     <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
                                     <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
+                                    <option value="gemini-1.5-pro">Gemini 1.5 Pro (วิเคราะห์เชิงลึก Reasoning)</option>
                                 </select>
                             </div>
 
@@ -20140,6 +20141,20 @@
             }
             onSwitchViewTab(targetMode);
 
+            // Initialize Gemini AI preferences
+            let gemModel = localStorage.getItem('gemini_model');
+            if (!gemModel || gemModel === 'gemini-2.5-flash') {
+                gemModel = 'gemini-3.8-flash';
+                localStorage.setItem('gemini_model', gemModel);
+            }
+            const gemModelSel = document.getElementById('geminiModelSelect');
+            if (gemModelSel && gemModel) {
+                gemModelSel.value = gemModel;
+            }
+            if (typeof updateGeminiApiStatusBadge === 'function') {
+                updateGeminiApiStatusBadge();
+            }
+
             // ดึงราคาและเรทเงินแอปอัตโนมัติในเบื้องหลังเมื่อเปิดหน้าเว็บ
             setTimeout(() => {
                 if (typeof window.updateAllPricesAndFx === 'function') {
@@ -20925,6 +20940,13 @@
             if (tabName === 'CONFIG') {
                 const input = document.getElementById('geminiApiKeyInput');
                 if (input) input.value = localStorage.getItem('gemini_api_key') || '';
+                const sel = document.getElementById('geminiModelSelect');
+                let savedModel = localStorage.getItem('gemini_model');
+                if (!savedModel || savedModel === 'gemini-2.5-flash') {
+                    savedModel = 'gemini-3.8-flash';
+                    localStorage.setItem('gemini_model', savedModel);
+                }
+                if (sel && savedModel) sel.value = savedModel;
             }
         };
 
@@ -21293,43 +21315,48 @@ ${modeDirective}
             // If API Key is present, call Google Gemini Live API
             if (apiKey && apiKey.trim().length > 10) {
                 try {
-                    let model = document.getElementById('geminiModelSelect')?.value || 'gemini-2.5-flash';
+                    let selectedModel = localStorage.getItem('gemini_model') || document.getElementById('geminiModelSelect')?.value || 'gemini-3.8-flash';
+                    if (selectedModel === 'gemini-2.5-flash') selectedModel = 'gemini-3.8-flash';
                     const prompt = buildInstitutionalGeminiPrompt(ticker, rankedItem, curPrice, changePct, sr, techData, thesisData, userHold, mode);
+                    const candidateModels = [selectedModel, 'gemini-3.8-flash', 'gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-2.0-flash-lite'].filter((v, i, a) => a.indexOf(v) === i);
 
-                    let callUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey.trim()}`;
-                    let res = await fetch(callUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            contents: [{ parts: [{ text: prompt }] }],
-                            generationConfig: {
-                                temperature: 0.35,
-                                topP: 0.85,
-                                maxOutputTokens: 2500
+                    for (const candModel of candidateModels) {
+                        try {
+                            const callUrl = `https://generativelanguage.googleapis.com/v1beta/models/${candModel}:generateContent?key=${apiKey.trim()}`;
+                            const res = await fetch(callUrl, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    contents: [{ parts: [{ text: prompt }] }],
+                                    generationConfig: {
+                                        temperature: 0.35,
+                                        topP: 0.85,
+                                        maxOutputTokens: 2500
+                                    }
+                                })
+                            });
+
+                            if (res.ok) {
+                                const json = await res.json();
+                                const rawText = json?.candidates?.[0]?.content?.parts?.[0]?.text;
+                                if (rawText) {
+                                    aiText = formatGeminiMarkdown(rawText);
+                                    if (candModel !== selectedModel) {
+                                        localStorage.setItem('gemini_model', candModel);
+                                        const sel = document.getElementById('geminiModelSelect');
+                                        if (sel) sel.value = candModel;
+                                    }
+                                    break;
+                                }
+                            } else if (res.status === 404) {
+                                continue;
+                            } else {
+                                break;
                             }
-                        })
-                    });
-
-                    // If model not found (e.g. 404 with 2.5), retry with gemini-2.0-flash
-                    if (!res.ok && res.status === 404 && model !== 'gemini-2.0-flash') {
-                        callUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey.trim()}`;
-                        res = await fetch(callUrl, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                contents: [{ parts: [{ text: prompt }] }],
-                                generationConfig: { temperature: 0.35, topP: 0.85, maxOutputTokens: 2500 }
-                            })
-                        });
-                    }
-
-                    if (res.ok) {
-                        const json = await res.json();
-                        const rawText = json?.candidates?.[0]?.content?.parts?.[0]?.text;
-                        if (rawText) {
-                            aiText = formatGeminiMarkdown(rawText);
+                        } catch(innerErr) {
+                            console.warn(`Gemini live call error on ${candModel}:`, innerErr);
                         }
-                    }
+                        }
                 } catch(err) {
                     console.warn('Gemini Live API fallback to synthesis engine:', err);
                 }
@@ -21496,7 +21523,7 @@ ${modeDirective}
             // ถ้ามี API Key ลองเรียก Google Gemini Live API
             if (apiKey && apiKey.trim().length > 10) {
                 try {
-                    const model = document.getElementById('geminiModelSelect')?.value || 'gemini-2.5-flash';
+                    const model = document.getElementById('geminiModelSelect')?.value || 'gemini-3.8-flash';
                     const prompt = `คุณเป็นผู้เชี่ยวชาญด้าน Technical Analysis และการลงทุนหุ้นสหรัฐฯ วิเคราะห์หุ้น ${ticker} (${rankedItem?.name || ''}) จากข้อมูลสดต่อไปนี้:
 - ราคาปัจจุบัน: $${curPrice.toFixed(2)} (การเปลี่ยนแปลงวันนี้: ${changePct > 0 ? '+' : ''}${changePct}%)
 - แนวต้าน: R1 $${sr.r1.toFixed(2)}, R2 $${sr.r2.toFixed(2)}
@@ -22110,6 +22137,10 @@ ${modeDirective}
             if (!input) return;
             const key = input.value.trim();
             localStorage.setItem('gemini_api_key', key);
+            const sel = document.getElementById('geminiModelSelect');
+            if (sel) {
+                localStorage.setItem('gemini_model', sel.value);
+            }
             updateGeminiApiStatusBadge();
 
             const resDiv = document.getElementById('geminiTestConnectionResult');
@@ -22155,30 +22186,80 @@ ${modeDirective}
             resDiv.className = 'alert alert-info py-2 small';
             resDiv.innerText = '⏳ กำลังทดสอบเชื่อมต่อ Google Gemini API...';
 
-            try {
-                const model = document.getElementById('geminiModelSelect')?.value || 'gemini-2.5-flash';
-                const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
-                const res = await fetch(url, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{ parts: [{ text: 'Hello, reply with "OK"' }] }]
-                    })
-                });
+            let selectedModel = document.getElementById('geminiModelSelect')?.value || localStorage.getItem('gemini_model') || 'gemini-3.8-flash';
+            if (selectedModel === 'gemini-2.5-flash') selectedModel = 'gemini-3.8-flash';
 
-                if (res.ok) {
-                    resDiv.className = 'alert alert-success py-2 small';
-                    resDiv.innerText = '🎉 เชื่อมต่อ Google Gemini API สำเร็จสมบูรณ์! พร้อมใช้งาน Live AI';
-                    localStorage.setItem('gemini_api_key', key);
-                    updateGeminiApiStatusBadge();
-                } else {
-                    const errData = await res.json();
-                    resDiv.className = 'alert alert-danger py-2 small';
-                    resDiv.innerText = `❌ เชื่อมต่อล้มเหลว (${res.status}): ${errData?.error?.message || 'โปรดตรวจสอบความถูกต้องของ Key'}`;
+            // Candidates to try: selected first, then latest official models
+            const candidateModels = [
+                selectedModel,
+                'gemini-3.8-flash',
+                'gemini-2.0-flash',
+                'gemini-1.5-flash',
+                'gemini-2.0-flash-lite'
+            ].filter((v, idx, arr) => arr.indexOf(v) === idx);
+
+            let successfulModel = null;
+            let lastStatus = 0;
+            let lastErrMsg = '';
+
+            for (const candModel of candidateModels) {
+                try {
+                    const url = `https://generativelanguage.googleapis.com/v1beta/models/${candModel}:generateContent?key=${key}`;
+                    const res = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            contents: [{ parts: [{ text: 'Hello, reply with OK' }] }]
+                        })
+                    });
+
+                    if (res.ok) {
+                        successfulModel = candModel;
+                        break;
+                    } else {
+                        lastStatus = res.status;
+                        try {
+                            const errData = await res.json();
+                            lastErrMsg = errData?.error?.message || `HTTP ${res.status}`;
+                        } catch(parseErr) {
+                            lastErrMsg = `HTTP ${res.status}`;
+                        }
+
+                        // If 404 (model deprecated for new accounts), continue cascade to find active model
+                        if (res.status === 404) {
+                            continue;
+                        } else {
+                            break;
+                        }
+                    }
+                } catch(netErr) {
+                    lastErrMsg = netErr.message;
+                    break;
                 }
-            } catch(e) {
+            }
+
+            if (successfulModel) {
+                resDiv.className = 'alert alert-success py-2 small';
+                const modelSel = document.getElementById('geminiModelSelect');
+                if (modelSel) modelSel.value = successfulModel;
+                localStorage.setItem('gemini_model', successfulModel);
+                localStorage.setItem('gemini_api_key', key);
+                updateGeminiApiStatusBadge();
+
+                if (successfulModel !== selectedModel) {
+                    resDiv.innerHTML = `🎉 <strong>เชื่อมต่อ Google Gemini API สำเร็จ!</strong><br><small class="text-success">ระบบตรวจพบโมเดลเดิมไม่รองรับ จึงปรับเป็นโมเดล <code>${successfulModel}</code> ให้อัตโนมัติและบันทึกเรียบร้อย</small>`;
+                } else {
+                    resDiv.innerText = `🎉 เชื่อมต่อ Google Gemini API (${successfulModel}) สำเร็จสมบูรณ์! พร้อมใช้งาน Live AI`;
+                }
+            } else {
                 resDiv.className = 'alert alert-danger py-2 small';
-                resDiv.innerText = `❌ ข้อผิดพลาดในการเชื่อมต่อ: ${e.message}`;
+                let friendlyMsg = lastErrMsg;
+                if (lastStatus === 400 || lastStatus === 403 || lastStatus === 401) {
+                    friendlyMsg = `API Key ไม่ถูกต้อง หรือยังไม่ได้เปิดใช้งานสิทธิ์ Google AI Studio (${lastErrMsg})`;
+                } else if (lastStatus === 429) {
+                    friendlyMsg = `โควตาคำขอเต็มชั่วคราว (Rate Limit) โปรดรอ 1-2 นาทีแล้วลองใหม่`;
+                }
+                resDiv.innerText = `❌ เชื่อมต่อล้มเหลว (${lastStatus || 'Error'}): ${friendlyMsg}`;
             }
         };
 
