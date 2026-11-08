@@ -1,16 +1,44 @@
 {
-  "updated_at": "2026-11-08T09:09:34Z",
-  "updated_at_thai": "8 พ.ย. 2569 16:09 น.",
+  "updated_at": "2026-11-08T12:36:18Z",
+  "updated_at_thai": "8 พ.ย. 2569 19:36 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "ไฮไลท์การโทรผลประกอบการไตรมาส 3 ของ Ring Energy",
+      "title_en": "Ring Energy Q3 Earnings Call Highlights",
+      "summary": "ไฮไลท์การโทรผลประกอบการไตรมาส 3 ของ Ring Energy",
+      "source": "MarketBeat",
+      "sourceUrl": "https://finance.yahoo.com/energy/articles/ring-energy-q3-earnings-call-101410867.html",
+      "time": "2 ชั่วโมงที่แล้ว",
+      "publishedAt": "2026-11-08T10:14:10Z",
+      "category": "EARNINGS",
+      "tickers": [
+        "SPY",
+        "DIA"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "📌 สาระสำคัญ: ไฮไลท์การโทรผลประกอบการไตรมาส 3 ของ Ring Energy",
+        "📊 นัยสำคัญต่อตลาด: ตลาดกำลังจับตารายละเอียดงบการเงินและคาดการณ์ผลการดำเนินงานในไตรมาสถัดไป",
+        "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #SPY #DIA ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
+      ],
+      "fullArticle": [
+        "ไฮไลท์การโทรผลประกอบการไตรมาส 3 ของ Ring Energy ซึ่งเป็นหนึ่งในประเด็นสำคัญที่ตลาดการเงินและนักลงทุนทั่วโลกกำลังให้ความสนใจอย่างใกล้ชิดในรอบวัน",
+        "รายงานจาก MarketBeat ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมผลการดำเนินงานและผลประกอบการบริษัทจดทะเบียน ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
+        "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #SPY #DIA อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"Ring Energy Q3 Earnings Call Highlights\")"
+      ]
+    },
+    {
+      "id": "news-2",
       "title": "Diamondback Energy (FANG) เพิ่มเงินปันผลในขณะที่ถือครองการขุดเจาะหินดินดาน",
       "title_en": "Diamondback Energy (FANG) Raises Dividend While Holding Shale Drilling In Check",
       "summary": "Diamondback Energy (FANG) เพิ่มเงินปันผลในขณะที่ถือครองการขุดเจาะหินดินดาน",
       "source": "Simply Wall St.",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/diamondback-energy-fang-raises-dividend-080848730.html",
-      "time": "1 ชั่วโมงที่แล้ว",
+      "time": "4 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-08T08:08:48Z",
       "category": "MACRO",
       "tickers": [
@@ -18,7 +46,7 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "📌 สาระสำคัญ: Diamondback Energy (FANG) เพิ่มเงินปันผลในขณะที่ถือครองการขุดเจาะหินดินดาน",
         "📊 นัยสำคัญต่อตลาด: สะท้อนความไม่แน่นอนของปัจจัยเศรษฐกิจและนโยบายการเงินที่ตลาดยังคงรอดูความชัดเจนเพื่อประเมินทิศทางต่อไป",
@@ -31,13 +59,13 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-3",
       "title": "สิ่งที่ Talos Energy (TALO) กล่าวในการรายงานผลประกอบการไตรมาส 3",
       "title_en": "What Talos Energy (TALO) Said on Its Q3 Earnings Call",
       "summary": "สิ่งที่ Talos Energy (TALO) กล่าวในการรายงานผลประกอบการไตรมาส 3",
       "source": "MarketBeat",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/talos-energy-talo-said-q3-061407218.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-08T06:14:07Z",
       "category": "EARNINGS",
       "tickers": [
@@ -59,13 +87,13 @@
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-4",
       "title": "Cathie Wood 'รู้สึกดีขึ้นเสมอเมื่อตลาดเป็นกังวล' - นี่คือเหตุผล",
       "title_en": "Cathie Wood 'always feels better when the market is worried' — here's why",
       "summary": "CEO ของ Ark Invest กล่าวว่าขณะนี้มี \"กำแพงแห่งความกังวล\" ที่ครอบงำตลาดอยู่",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/08/cathie-wood-ai-selloff.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-08T06:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -88,13 +116,13 @@
       ]
     },
     {
-      "id": "news-4",
-      "title": "AI กำลังเร่งการสรรหาบุคลากร และกดดันค่าธรรมเนียมเอเจนซี่",
+      "id": "news-5",
+      "title": "AI กำลังเร่งการสรรหาบุคลากร และทำให้ค่าธรรมเนียมเอเจนซี่ตกอยู่ภายใต้ความกดดัน",
       "title_en": "AI is speeding up recruitment — and putting agency fees under pressure",
       "summary": "ผู้สรรหากล่าวว่า AI กำลังเร่งการคัดกรองและปรับโฉมงานเอเจนซี่ ทำให้เกิดคำถามว่าค่าธรรมเนียมการจัดตำแหน่งตามเปอร์เซ็นต์สามารถเก็บได้หรือไม่",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/08/ai-recruitment-agency-fees.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-08T06:00:01Z",
       "category": "TECH",
       "tickers": [
@@ -111,19 +139,19 @@
         "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #NVDA #AAPL #MSFT ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
       ],
       "fullArticle": [
-        "AI กำลังเร่งการสรรหาบุคลากร และกดดันค่าธรรมเนียมเอเจนซี่ โดยมีรายงานว่า ผู้สรรหากล่าวว่า AI กำลังเร่งการคัดกรองและปรับโฉมงานเอเจนซี่ ทำให้เกิดคำถามว่าค่าธรรมเนียมการจัดตำแหน่งตามเปอร์เซ็นต์สามารถเก็บได้หรือไม่",
+        "AI กำลังเร่งการสรรหาบุคลากร และทำให้ค่าธรรมเนียมเอเจนซี่ตกอยู่ภายใต้ความกดดัน โดยมีรายงานว่า ผู้สรรหากล่าวว่า AI กำลังเร่งการคัดกรองและปรับโฉมงานเอเจนซี่ ทำให้เกิดคำถามว่าค่าธรรมเนียมการจัดตำแหน่งตามเปอร์เซ็นต์สามารถเก็บได้หรือไม่",
         "รายงานจาก CNBC ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมเทคโนโลยีและปัญญาประดิษฐ์ (AI) ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
         "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #NVDA #AAPL #MSFT อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"AI is speeding up recruitment — and putting agency fees under pressure\")"
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-6",
       "title": "ไฮไลท์การโทรเพื่อผลประกอบการไตรมาส 3 ของทรัพยากร Permian",
       "title_en": "Permian Resources Q3 Earnings Call Highlights",
       "summary": "ไฮไลท์การโทรเพื่อผลประกอบการไตรมาส 3 ของทรัพยากร Permian",
       "source": "MarketBeat",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/permian-resources-q3-earnings-call-051413053.html",
-      "time": "3 ชั่วโมงที่แล้ว",
+      "time": "7 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-08T05:14:13Z",
       "category": "EARNINGS",
       "tickers": [
@@ -145,13 +173,13 @@
       ]
     },
     {
-      "id": "news-6",
+      "id": "news-7",
       "title": "ประวัติศาสตร์กล่าวว่าพลังงานเป็นผู้นำทุกภาคส่วนในตลาดขาลง (Bear Market)ครั้งล่าสุด นี่คือสิ่งที่แตกต่างตอนนี้",
       "title_en": "History Says Energy Led All Sectors in the Last Bear Market. Here's What's Different Now.",
       "summary": "ประวัติศาสตร์กล่าวว่าพลังงานเป็นผู้นำทุกภาคส่วนในตลาดขาลง (Bear Market)ครั้งล่าสุด นี่คือสิ่งที่แตกต่างตอนนี้",
       "source": "Motley Fool",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/history-says-energy-led-sectors-032000196.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-08T03:20:00Z",
       "category": "MACRO",
       "tickers": [
@@ -174,42 +202,13 @@
       ]
     },
     {
-      "id": "news-7",
-      "title": "การขายหุ้นด้วย AI ผลักดันนักลงทุนไปยังจีน อินเดีย และมองข้ามภาคส่วนเอเชีย",
-      "title_en": "AI stock selloff drives investors to China, India, and overlooked Asian sectors",
-      "summary": "การขายหุ้นด้วย AI ผลักดันนักลงทุนไปยังจีน อินเดีย และมองข้ามภาคส่วนเอเชีย",
-      "source": "Investing.com",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/ai-stock-selloff-drives-investors-013045557.html",
-      "time": "7 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-11-08T01:30:45Z",
-      "category": "TECH",
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT"
-      ],
-      "sentiment": "BEARISH",
-      "impact": "ปัจจัยความเสี่ยงที่ต้องติดตามความผันผวน",
-      "isHero": false,
-      "points": [
-        "📌 สาระสำคัญ: การขายหุ้นด้วย AI ผลักดันนักลงทุนไปยังจีน อินเดีย และมองข้ามภาคส่วนเอเชีย",
-        "📊 นัยสำคัญต่อตลาด: สะท้อนแรงกดดันด้านต้นทุน การแข่งขัน หรือความเสี่ยงด้านเครดิตในกลุ่มเทคโนโลยีที่นักลงทุนควรติดตามอย่างระมัดระวัง",
-        "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #NVDA #AAPL #MSFT ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
-      ],
-      "fullArticle": [
-        "การขายหุ้นด้วย AI ผลักดันนักลงทุนไปยังจีน อินเดีย และมองข้ามภาคส่วนเอเชีย ซึ่งเป็นหนึ่งในประเด็นสำคัญที่ตลาดการเงินและนักลงทุนทั่วโลกกำลังให้ความสนใจอย่างใกล้ชิดในรอบวัน",
-        "รายงานจาก Investing.com ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมเทคโนโลยีและปัญญาประดิษฐ์ (AI) ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
-        "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #NVDA #AAPL #MSFT อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"AI stock selloff drives investors to China, India, and overlooked Asian sectors\")"
-      ]
-    },
-    {
       "id": "news-8",
       "title": "เงินบำนาญของเขาครอบคลุมตั๋วเงินที่ 75 กรมสรรพากรจะยังคงสั่งถอนเงิน 33,333 ดอลลาร์จาก 820,000 ดอลลาร์ดั้งเดิม 401(k) ของเขา",
       "title_en": "His Pension Covers the Bills at 75. The IRS Will Still Order a $33,333 Withdrawal From His $820,000 Traditional 401(k)",
       "summary": "เงินบำนาญของเขาครอบคลุมตั๋วเงินที่ 75 กรมสรรพากรจะยังคงสั่งถอนเงิน 33,333 ดอลลาร์จาก 820,000 ดอลลาร์ดั้งเดิม 401(k) ของเขา",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/options/articles/pension-covers-bills-75-irs-230240337.html",
-      "time": "10 ชั่วโมงที่แล้ว",
+      "time": "13 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-07T23:02:40Z",
       "category": "MACRO",
       "tickers": [
@@ -238,7 +237,7 @@
       "summary": "Dave Wehner ประธานเจ้าหน้าที่ฝ่ายกลยุทธ์ของ Meta กำลังจะลาออกจากบริษัทไปเป็น CFO ของ Fireworks ซึ่งเป็นสตาร์ทอัพด้านโครงสร้างพื้นฐาน AI ที่มีมูลค่า 17.5 พันล้านดอลลาร์ในเดือนกรกฎาคม",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/07/dave-wehner-meta-fireworks-cfo.html",
-      "time": "11 ชั่วโมงที่แล้ว",
+      "time": "14 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-07T22:01:17Z",
       "category": "TECH",
       "tickers": [
@@ -265,7 +264,7 @@
       "summary": "หุ้น AI 1 ตัว ฉันจะซื้อ Hand Over Fist หากตลาดล่มสลาย",
       "source": "Motley Fool",
       "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/1-ai-stock-ill-buy-162000779.html",
-      "time": "16 ชั่วโมงที่แล้ว",
+      "time": "20 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-07T16:20:00Z",
       "category": "TECH",
       "tickers": [
@@ -294,7 +293,7 @@
       "summary": "หุ้นกลุ่มดูแลสุขภาพอาจดิ้นรนเพื่อหาแรงผลักดันเนื่องจากพรรคเดโมแครตเตรียมพร้อมที่จะเข้าครอบครองสภาคองเกรส",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/07/healthcare-stocks-may-face-trouble-due-to-midterm-results.html",
-      "time": "17 ชั่วโมงที่แล้ว",
+      "time": "20 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-07T16:02:33Z",
       "category": "MACRO",
       "tickers": [
@@ -323,7 +322,7 @@
       "summary": "Berkshire Hathaway กล่าวเมื่อวันเสาร์ว่า บริษัทได้เร่งการซื้อหุ้นคืนในช่วงไตรมาสที่สาม เนื่องจากผลกำไรจากการดำเนินงานและโดยรวมได้รับผลกระทบ",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html",
-      "time": "17 ชั่วโมงที่แล้ว",
+      "time": "21 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-07T15:23:46Z",
       "category": "EARNINGS",
       "tickers": [
