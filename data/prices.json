@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-08T20:23:43Z",
-  "updated_at_thai": "9 พ.ย. 2569 03:23 น.",
+  "updated_at": "2026-11-08T22:41:06Z",
+  "updated_at_thai": "9 พ.ย. 2569 05:41 น.",
   "fx": {
     "USDTHB": 33.55
   },
@@ -49,9 +49,9 @@
     },
     "CL=F": {
       "price": 90.83,
-      "prevClose": 90.52,
-      "change": 0.31,
-      "changePct": 0.34,
+      "prevClose": 90.83,
+      "change": 0.0,
+      "changePct": 0.0,
       "name": "WTI Crude Oil"
     },
     "^NDX": {
