@@ -6195,6 +6195,15 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
+        // Global Error Safeguards
+        window.addEventListener('error', function(e) {
+            console.error('App Error caught safely:', e.error || e.message);
+        });
+        window.addEventListener('unhandledrejection', function(e) {
+            console.error('App Promise rejection caught safely:', e.reason);
+        });
+        window.inlineContainer = null;
+
         let globalHoldings = {};
         let globalTotalPortfolioValue = 0;
         let simAction = 'BUY';
@@ -6509,7 +6518,6 @@
             });
 
             if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         window.moveTempPortfolio = function(fromIdx, direction) {
@@ -6745,7 +6753,6 @@
             });
 
             if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
 
             // Also render compact pills bar
             const pillsContainer = document.getElementById('portfolioPillsContainer');
@@ -9598,7 +9605,6 @@
                 }
             });
             if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
         }
 
         function renderProjChart(data) {
@@ -13402,6 +13408,9 @@
             renderPerformanceChart();
             renderDividends();
             renderPortfolioCards();
+            if (typeof renderOverviewDashboard === 'function') {
+                try { renderOverviewDashboard(); } catch(e) {}
+            }
         }
 
         // --- HOLDINGS TABLE HYBRID SYSTEM (Tabs, Grouped / Collapsible, Pagination) ---
@@ -13876,7 +13885,6 @@
             `;
 
             if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
         }
 
         function renderPaginationControls(totalItems, totalPages) {
@@ -15057,7 +15065,6 @@
                 `;
             });
             if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
             if (typeof renderFearAndGreedMeter === 'function') {
                 renderFearAndGreedMeter();
             }
@@ -15291,7 +15298,6 @@
                 `;
             });
             if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         function updateMarketPageSizeUI() {
@@ -15763,7 +15769,6 @@
                 `;
             });
             if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         const topEtfSnapshotTickers = ['SPY', 'QQQ', 'SMH', 'SCHD', 'JEPI', 'JEPQ', 'XLK', 'XLF', 'TLT', 'GLD'];
@@ -15824,7 +15829,6 @@
                 `;
             });
             if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         function updateEtfPageSizeUI() {
@@ -17025,7 +17029,6 @@
             });
 
             if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         window.openSectorDetailModal = function(sectorId) {
@@ -19931,7 +19934,6 @@
             });
 
             if (container) container.innerHTML = html;
-            if (inlineContainer) inlineContainer.innerHTML = html;
         };
 
         window.selectTechTicker = function(ticker) {
@@ -20043,6 +20045,10 @@
             }
 
             syncPortfolioNamesWithDime();
+            if (!portfolios.some(p => p.id === activePortfolioId) && activePortfolioId !== 'ALL') {
+                activePortfolioId = 'ALL';
+                localStorage.setItem('myActivePortfolioId', 'ALL');
+            }
             initTheme();
             initPrivacyMode();
             initMarketIndices();
