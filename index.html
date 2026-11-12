@@ -18060,7 +18060,7 @@
             const plUSD = totalMktUSD - totalCostUSD;
             const plTHB = Number((plUSD * liveFxRate).toFixed(2));
             const plPercent = totalCostUSD > 0 ? (plUSD / totalCostUSD) * 100 : 0;
-            const plSign = plUSD >= 0 ? '+' : '';
+            const plSign = plUSD >= 0 ? '+' : '-';
             const plColorClass = plUSD >= 0 ? 'text-success' : 'text-danger';
             const plBadgeBg = plUSD >= 0 ? 'bg-success-subtle text-success border border-success-subtle' : 'bg-danger-subtle text-danger border border-danger-subtle';
 
@@ -18303,7 +18303,7 @@
                                 <span class="badge rounded-pill px-2 py-0.5 ${plBadgeBg}" style="font-size:0.7rem;">UNREALIZED</span>
                             </div>
                             <div class="overview-kpi-val ${plColorClass}">${plSign}$${Math.abs(plUSD).toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
-                            <div class="overview-kpi-sub ${plColorClass}">≈ ${plSign}฿${Math.abs(plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2})} (${plSign}${plPercent.toFixed(2)}%)</div>
+                            <div class="overview-kpi-sub ${plColorClass}">≈ ${plSign}฿${Math.abs(plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2})} (${plSign}${Math.abs(plPercent).toFixed(2)}%)</div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-6">
