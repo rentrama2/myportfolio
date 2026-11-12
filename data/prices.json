@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-12T03:05:48Z",
-  "updated_at_thai": "12 พ.ย. 2569 10:05 น.",
+  "updated_at": "2026-11-12T10:58:11Z",
+  "updated_at_thai": "12 พ.ย. 2569 17:58 น.",
   "fx": {
-    "USDTHB": 33.77
+    "USDTHB": 33.75
   },
   "indices": {
     "^IXIC": {
@@ -13,24 +13,24 @@
       "name": "Nasdaq"
     },
     "^VIX": {
-      "price": 17.49,
-      "prevClose": 19.46,
-      "change": -1.97,
-      "changePct": -10.12,
+      "price": 18.25,
+      "prevClose": 17.49,
+      "change": 0.76,
+      "changePct": 4.35,
       "name": "VIX Index"
     },
     "GC=F": {
-      "price": 3986.3,
+      "price": 3958.0,
       "prevClose": 4000.5,
-      "change": -14.2,
-      "changePct": -0.35,
+      "change": -42.5,
+      "changePct": -1.06,
       "name": "Gold (XAU)"
     },
     "DX-Y.NYB": {
-      "price": 103.02,
+      "price": 102.82,
       "prevClose": 102.91,
-      "change": 0.11,
-      "changePct": 0.11,
+      "change": -0.09,
+      "changePct": -0.09,
       "name": "DXY Index"
     },
     "^GSPC": {
@@ -42,16 +42,16 @@
     },
     "^DJI": {
       "price": 52486.49,
-      "prevClose": 52231.89,
-      "change": 254.6,
+      "prevClose": 52231.9,
+      "change": 254.59,
       "changePct": 0.49,
       "name": "Dow Jones"
     },
     "CL=F": {
-      "price": 85.82,
+      "price": 85.72,
       "prevClose": 86.53,
-      "change": -0.71,
-      "changePct": -0.82,
+      "change": -0.81,
+      "changePct": -0.94,
       "name": "WTI Crude Oil"
     },
     "^NDX": {
@@ -98,5 +98,278 @@
     "SCHD": 36.02,
     "COIN": 136.27
   },
-  "extended_hours": {}
+  "extended_hours": {
+    "AAPL": {
+      "session": "PRE",
+      "price": 355.49,
+      "regularPrice": 355.63,
+      "change": -0.14,
+      "changePct": -0.04,
+      "time": 1794481089
+    },
+    "AMD": {
+      "session": "PRE",
+      "price": 573.0,
+      "regularPrice": 552.9,
+      "change": 20.1,
+      "changePct": 3.64,
+      "time": 1794481089
+    },
+    "AMZN": {
+      "session": "PRE",
+      "price": 266.44,
+      "regularPrice": 266.17,
+      "change": 0.27,
+      "changePct": 0.1,
+      "time": 1794481089
+    },
+    "BRK-B": {
+      "session": "PRE",
+      "price": 590.1,
+      "regularPrice": 588.24,
+      "change": 1.86,
+      "changePct": 0.32,
+      "time": 1794481089
+    },
+    "BRK.B": {
+      "session": "PRE",
+      "price": 590.1,
+      "regularPrice": 588.24,
+      "change": 1.86,
+      "changePct": 0.32,
+      "time": 1794481089
+    },
+    "CIEN": {
+      "session": "PRE",
+      "price": 288.79,
+      "regularPrice": 296.04,
+      "change": -7.25,
+      "changePct": -2.45,
+      "time": 1794481090
+    },
+    "COIN": {
+      "session": "PRE",
+      "price": 132.62,
+      "regularPrice": 136.27,
+      "change": -3.65,
+      "changePct": -2.68,
+      "time": 1794481090
+    },
+    "CRWD": {
+      "session": "PRE",
+      "price": 228.5,
+      "regularPrice": 229.06,
+      "change": -0.56,
+      "changePct": -0.24,
+      "time": 1794481090
+    },
+    "GOOGL": {
+      "session": "PRE",
+      "price": 293.48,
+      "regularPrice": 293.45,
+      "change": 0.03,
+      "changePct": 0.01,
+      "time": 1794481090
+    },
+    "GRID": {
+      "session": "PRE",
+      "price": 162.0,
+      "regularPrice": 162.54,
+      "change": -0.54,
+      "changePct": -0.33,
+      "time": 1794481090
+    },
+    "INTC": {
+      "session": "PRE",
+      "price": 60.97,
+      "regularPrice": 62.5,
+      "change": -1.53,
+      "changePct": -2.45,
+      "time": 1794481090
+    },
+    "JEPI": {
+      "session": "PRE",
+      "price": 58.14,
+      "regularPrice": 58.21,
+      "change": -0.07,
+      "changePct": -0.12,
+      "time": 1794481090
+    },
+    "JEPQ": {
+      "session": "PRE",
+      "price": 56.59,
+      "regularPrice": 56.93,
+      "change": -0.34,
+      "changePct": -0.6,
+      "time": 1794481090
+    },
+    "LLY": {
+      "session": "PRE",
+      "price": 1479.5,
+      "regularPrice": 1437.29,
+      "change": 42.21,
+      "changePct": 2.94,
+      "time": 1794481090
+    },
+    "META": {
+      "session": "PRE",
+      "price": 628.0,
+      "regularPrice": 628.77,
+      "change": -0.77,
+      "changePct": -0.12,
+      "time": 1794481090
+    },
+    "MSFT": {
+      "session": "PRE",
+      "price": 520.0,
+      "regularPrice": 521.12,
+      "change": -1.12,
+      "changePct": -0.21,
+      "time": 1794481090
+    },
+    "MU": {
+      "session": "PRE",
+      "price": 782.02,
+      "regularPrice": 811.3,
+      "change": -29.28,
+      "changePct": -3.61,
+      "time": 1794481090
+    },
+    "NFLX": {
+      "session": "PRE",
+      "price": 64.1,
+      "regularPrice": 64.54,
+      "change": -0.44,
+      "changePct": -0.68,
+      "time": 1794481090
+    },
+    "NVDA": {
+      "session": "PRE",
+      "price": 162.73,
+      "regularPrice": 173.73,
+      "change": -11.0,
+      "changePct": -6.33,
+      "time": 1794481090
+    },
+    "PLTR": {
+      "session": "PRE",
+      "price": 169.76,
+      "regularPrice": 172.4,
+      "change": -2.64,
+      "changePct": -1.53,
+      "time": 1794481090
+    },
+    "QQQ": {
+      "session": "PRE",
+      "price": 684.85,
+      "regularPrice": 690.38,
+      "change": -5.53,
+      "changePct": -0.8,
+      "time": 1794481090
+    },
+    "QQQM": {
+      "session": "PRE",
+      "price": 282.0,
+      "regularPrice": 284.23,
+      "change": -2.23,
+      "changePct": -0.78,
+      "time": 1794481090
+    },
+    "SCHD": {
+      "session": "PRE",
+      "price": 36.07,
+      "regularPrice": 36.02,
+      "change": 0.05,
+      "changePct": 0.14,
+      "time": 1794481090
+    },
+    "SMH": {
+      "session": "PRE",
+      "price": 496.2,
+      "regularPrice": 506.96,
+      "change": -10.76,
+      "changePct": -2.12,
+      "time": 1794481090
+    },
+    "SOXX": {
+      "session": "PRE",
+      "price": 153.02,
+      "regularPrice": 155.4,
+      "change": -2.38,
+      "changePct": -1.53,
+      "time": 1794481090
+    },
+    "SPMO": {
+      "session": "PRE",
+      "price": 133.55,
+      "regularPrice": 134.42,
+      "change": -0.87,
+      "changePct": -0.65,
+      "time": 1794481090
+    },
+    "SPY": {
+      "session": "PRE",
+      "price": 756.89,
+      "regularPrice": 759.81,
+      "change": -2.92,
+      "changePct": -0.38,
+      "time": 1794481090
+    },
+    "SPYD": {
+      "session": "PRE",
+      "price": 50.44,
+      "regularPrice": 50.06,
+      "change": 0.38,
+      "changePct": 0.76,
+      "time": 1794481091
+    },
+    "TSLA": {
+      "session": "PRE",
+      "price": 389.0,
+      "regularPrice": 390.84,
+      "change": -1.84,
+      "changePct": -0.47,
+      "time": 1794481091
+    },
+    "VOO": {
+      "session": "PRE",
+      "price": 695.79,
+      "regularPrice": 698.35,
+      "change": -2.56,
+      "changePct": -0.37,
+      "time": 1794481091
+    },
+    "VRT": {
+      "session": "PRE",
+      "price": 204.89,
+      "regularPrice": 206.51,
+      "change": -1.62,
+      "changePct": -0.78,
+      "time": 1794481091
+    },
+    "VTI": {
+      "session": "PRE",
+      "price": 373.12,
+      "regularPrice": 374.25,
+      "change": -1.13,
+      "changePct": -0.3,
+      "time": 1794481091
+    },
+    "VXUS": {
+      "session": "PRE",
+      "price": 83.27,
+      "regularPrice": 83.44,
+      "change": -0.17,
+      "changePct": -0.2,
+      "time": 1794481091
+    },
+    "XLV": {
+      "session": "PRE",
+      "price": 190.51,
+      "regularPrice": 188.95,
+      "change": 1.56,
+      "changePct": 0.83,
+      "time": 1794481091
+    }
+  }
 }
