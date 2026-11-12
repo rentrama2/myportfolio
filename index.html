@@ -6649,11 +6649,11 @@
             // Card 1: All Portfolios Overview
             const allM = calcPortfolioMetrics('ALL');
             const isAllActive = (activePortfolioId === 'ALL');
-            const allSign = allM.plUSD >= 0 ? '+' : '';
+            const allSign = allM.plUSD >= 0 ? '+' : '-';
             const allPlClass = allM.plUSD >= 0 ? 'text-profit' : 'text-loss';
             const allPlDisplay = (allM.totalCostUSD === 0 && allM.totalMktUSD === 0)
                 ? `<div class="text-muted fw-bold" style="font-size: 0.85rem;">- 0.00% (฿0.00)</div>`
-                : `<div class="${allPlClass} fw-bold" style="font-size: 0.85rem;">↗ ${allSign}${allM.plPercent.toFixed(2)}% (${allSign}฿${allM.plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})})</div>`;
+                : `<div class="${allPlClass} fw-bold" style="font-size: 0.85rem;">↗ ${allSign}${Math.abs(allM.plPercent).toFixed(2)}% (${allSign}฿${Math.abs(allM.plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})})</div>`;
 
             html += `
                 <div class="portfolio-card ${isAllActive ? 'active-port' : ''}" onclick="selectPortfolio('ALL')">
@@ -6688,11 +6688,11 @@
             portfolios.forEach((p, index) => {
                 const m = calcPortfolioMetrics(p.id);
                 const isActive = (activePortfolioId === p.id);
-                const sign = m.plUSD >= 0 ? '+' : '';
+                const sign = m.plUSD >= 0 ? '+' : '-';
                 const plClass = m.plUSD >= 0 ? 'text-profit' : 'text-loss';
                 const plDisplay = (m.totalCostUSD === 0 && m.totalMktUSD === 0)
                     ? `<div class="text-muted fw-bold" style="font-size: 0.85rem;">- 0.00% (฿0.00)</div>`
-                    : `<div class="${plClass} fw-bold" style="font-size: 0.85rem;">↗ ${sign}${m.plPercent.toFixed(2)}% (${sign}฿${m.plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})})</div>`;
+                    : `<div class="${plClass} fw-bold" style="font-size: 0.85rem;">↗ ${sign}${Math.abs(m.plPercent).toFixed(2)}% (${sign}฿${Math.abs(m.plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})})</div>`;
 
                 let chipsHTML = '';
                 if (m.tickers.length > 0) {
@@ -18050,21 +18050,78 @@
             if (!container) return;
 
             const m = (typeof calcPortfolioMetrics === 'function') 
-                ? calcPortfolioMetrics(activePortfolioId || 'ALL')
+                ? calcPortfolioMetrics('ALL')
                 : { totalMktUSD: 0, totalCostUSD: 0, plUSD: 0, plPercent: 0, assetCount: 0 };
 
             const totalMktUSD = m.totalMktUSD || 0;
             const totalCostUSD = m.totalCostUSD || 0;
-            const totalMktTHB = Number((totalMktUSD * liveFxRate).toFixed(2));
-            const totalCostTHB = Number((totalCostUSD * liveFxRate).toFixed(2));
-            const plUSD = totalMktUSD - totalCostUSD;
-            const plTHB = Number((plUSD * liveFxRate).toFixed(2));
-            const plPercent = totalCostUSD > 0 ? (plUSD / totalCostUSD) * 100 : 0;
+            const totalMktTHB = m.totalMktTHB || Number((totalMktUSD * liveFxRate).toFixed(2));
+            const totalCostTHB = m.totalCostTHB || Number((totalCostUSD * liveFxRate).toFixed(2));
+            const plUSD = m.plUSD !== undefined ? m.plUSD : (totalMktUSD - totalCostUSD);
+            const plTHB = m.plTHB !== undefined ? m.plTHB : (totalMktTHB - totalCostTHB);
+            const plPercent = m.plPercent !== undefined ? m.plPercent : (totalCostUSD > 0 ? (plUSD / totalCostUSD) * 100 : 0);
             const plSign = plUSD >= 0 ? '+' : '-';
             const plColorClass = plUSD >= 0 ? 'text-success' : 'text-danger';
             const plBadgeBg = plUSD >= 0 ? 'bg-success-subtle text-success border border-success-subtle' : 'bg-danger-subtle text-danger border border-danger-subtle';
 
-            const holdings = window.cachedHoldingItems || [];
+            // Compute full holdings list across all portfolios for accurate health check & allocation
+            let allHoldingsMap = {};
+            (transactions || []).forEach(t => {
+                if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW' || t.type === 'DIVIDEND') return;
+                let tk = (t.ticker || '').trim().toUpperCase().replace(/\s+/g, '');
+                if (tk === 'BRK-B' || tk === 'BRK/B' || tk === 'BRK_B') tk = 'BRK.B';
+                if (!tk) return;
+
+                if (!allHoldingsMap[tk]) {
+                    allHoldingsMap[tk] = { ticker: tk, shares: 0, costUSD: 0, costTHB: 0, portId: t.portfolio || 'core' };
+                }
+                if (t.portfolio) allHoldingsMap[tk].portId = t.portfolio;
+                let parsedTHB = parseFloat(t.totalTHB) || 0;
+                let usdAmount = Number((t.shares * t.price).toFixed(2));
+
+                if (t.type === 'BUY') {
+                    allHoldingsMap[tk].shares += t.shares;
+                    allHoldingsMap[tk].costUSD += usdAmount;
+                    allHoldingsMap[tk].costTHB += parsedTHB;
+                } else if (t.type === 'SELL' && allHoldingsMap[tk].shares > 0) {
+                    let avgUSD = allHoldingsMap[tk].costUSD / allHoldingsMap[tk].shares;
+                    let avgTHB = allHoldingsMap[tk].costTHB / allHoldingsMap[tk].shares;
+                    allHoldingsMap[tk].shares -= t.shares;
+                    allHoldingsMap[tk].costUSD -= (t.shares * avgUSD);
+                    allHoldingsMap[tk].costTHB -= (t.shares * avgTHB);
+                }
+            });
+
+            let holdings = [];
+            for (let tk in allHoldingsMap) {
+                let h = allHoldingsMap[tk];
+                if (h.shares > 0.0001) {
+                    let curPrice = (typeof getMarketPrice === 'function') ? getMarketPrice(tk) : (marketPrices[tk] || 0);
+                    if (!curPrice || curPrice <= 0) curPrice = (h.costUSD / h.shares);
+                    let mktUSD = Number((h.shares * curPrice).toFixed(2));
+                    let mktTHB = Number((mktUSD * liveFxRate).toFixed(2));
+                    let groupName = portfolioMapping[tk] || 'Stock';
+                    let fullName = (typeof getStockFullName === 'function') ? getStockFullName(tk, groupName) : (stockNames[tk] || `${tk} Corp`);
+                    let itemPlUSD = mktUSD - h.costUSD;
+                    let itemPlPercent = h.costUSD > 0 ? (itemPlUSD / h.costUSD) * 100 : 0;
+                    let weightPct = totalMktUSD > 0 ? (mktUSD / totalMktUSD) * 100 : 0;
+
+                    holdings.push({
+                        ticker: tk,
+                        fullName: fullName,
+                        shares: h.shares,
+                        costUSD: h.costUSD,
+                        costTHB: h.costTHB,
+                        mktValueUSD: mktUSD,
+                        mktValueTHB: mktTHB,
+                        plUSD: itemPlUSD,
+                        plPercent: itemPlPercent,
+                        weightPct: weightPct,
+                        portId: h.portId,
+                        groupName: groupName
+                    });
+                }
+            }
             holdings.forEach(it => {
                 it.weightPct = totalMktUSD > 0 ? (it.mktValueUSD / totalMktUSD) * 100 : 0;
             });
@@ -18435,7 +18492,7 @@
             if (!row) return;
 
             const m = (typeof calcPortfolioMetrics === 'function') 
-                ? calcPortfolioMetrics(activePortfolioId || 'ALL')
+                ? calcPortfolioMetrics('ALL')
                 : { totalMktUSD: 2196.86 };
 
             const netWorthUSD = m.totalMktUSD || 2196.86;
