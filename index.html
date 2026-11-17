@@ -4763,10 +4763,10 @@
             
             <div class="d-flex align-items-center gap-2 gap-md-3 flex-wrap">
                 <!-- Dow Jones -->
-                <div class="market-index-chip d-flex align-items-center gap-2 py-1 px-2 rounded-2" id="chip-DJI" title="Dow Jones Industrial Average (^DJI) คลิกเพื่อรีเฟรช" onclick="refreshMarketIndices(true)">
+                <div class="market-index-chip d-flex align-items-center gap-2 py-1 px-2 rounded-2" id="chip-DJI" title="Dow Jones Industrial Average / Dow 30 (^DJI) คลิกเพื่อรีเฟรช" onclick="refreshMarketIndices(true)">
                     <span class="fw-bold text-nowrap" style="font-size: 0.82rem;">🇺🇸 Dow Jones</span>
-                    <span class="fw-bold market-index-price text-nowrap" id="val-DJI" style="font-size: 0.84rem;">42,313.00</span>
-                    <span class="badge rounded-pill fw-bold text-nowrap index-badge-up" id="badge-DJI" style="font-size: 0.72rem;">▲ +0.33% (+137.91)</span>
+                    <span class="fw-bold market-index-price text-nowrap" id="val-DJI" style="font-size: 0.84rem;">50,759.78</span>
+                    <span class="badge rounded-pill fw-bold text-nowrap index-badge-down" id="badge-DJI" style="font-size: 0.72rem;">▼ -1.64% (-848.39)</span>
                 </div>
                 
                 <div class="text-muted opacity-25 d-none d-md-inline">|</div>
@@ -4774,17 +4774,20 @@
                 <!-- S&P 500 -->
                 <div class="market-index-chip d-flex align-items-center gap-2 py-1 px-2 rounded-2" id="chip-GSPC" title="S&P 500 Index (^GSPC) คลิกเพื่อรีเฟรช" onclick="refreshMarketIndices(true)">
                     <span class="fw-bold text-nowrap" style="font-size: 0.82rem;">🇺🇸 S&P 500</span>
-                    <span class="fw-bold market-index-price text-nowrap" id="val-GSPC" style="font-size: 0.84rem;">5,738.17</span>
-                    <span class="badge rounded-pill fw-bold text-nowrap index-badge-up" id="badge-GSPC" style="font-size: 0.72rem;">▲ +0.45% (+25.80)</span>
+                    <span class="fw-bold market-index-price text-nowrap" id="val-GSPC" style="font-size: 0.84rem;">7,340.53</span>
+                    <span class="badge rounded-pill fw-bold text-nowrap index-badge-down" id="badge-GSPC" style="font-size: 0.72rem;">▼ -1.03% (-76.39)</span>
                 </div>
 
                 <div class="text-muted opacity-25 d-none d-md-inline">|</div>
 
-                <!-- Nasdaq -->
-                <div class="market-index-chip d-flex align-items-center gap-2 py-1 px-2 rounded-2" id="chip-IXIC" title="Nasdaq Composite (^IXIC) คลิกเพื่อรีเฟรช" onclick="refreshMarketIndices(true)">
-                    <span class="fw-bold text-nowrap" style="font-size: 0.82rem;">🇺🇸 Nasdaq</span>
-                    <span class="fw-bold market-index-price text-nowrap" id="val-IXIC" style="font-size: 0.84rem;">18,179.98</span>
-                    <span class="badge rounded-pill fw-bold text-nowrap index-badge-up" id="badge-IXIC" style="font-size: 0.72rem;">▲ +0.65% (+117.20)</span>
+                <!-- Nasdaq (Defaults to Nasdaq 100 matching Dime, with switch button) -->
+                <div class="market-index-chip d-flex align-items-center gap-1.5 gap-md-2 py-1 px-2 rounded-2" id="chip-IXIC" title="Nasdaq 100 (^NDX) - ดัชนีหุ้นเทคใหญ่ 100 ตัว (ตรงกับแอป Dime) | คลิกเพื่อรีเฟรช หรือกดปุ่มสลับ" onclick="refreshMarketIndices(true)">
+                    <span class="fw-bold text-nowrap" id="label-nasdaq" style="font-size: 0.82rem;">🇺🇸 Nasdaq 100</span>
+                    <span class="fw-bold market-index-price text-nowrap" id="val-IXIC" style="font-size: 0.84rem;">27,001.78</span>
+                    <span class="badge rounded-pill fw-bold text-nowrap index-badge-down" id="badge-IXIC" style="font-size: 0.72rem;">▼ -0.72% (-196.02)</span>
+                    <button type="button" id="btnSwitchNasdaq" class="btn btn-xs btn-outline-secondary py-0 px-1 border-0 text-muted ms-1" onclick="toggleNasdaqIndex(event)" title="สลับระหว่าง Nasdaq 100 (^NDX) กับ Nasdaq Composite (^IXIC)" style="font-size: 0.65rem; border-radius: 4px; line-height: 1.2; background: rgba(0,0,0,0.04);">
+                        🔄 100/Comp
+                    </button>
                 </div>
             </div>
 
@@ -11081,14 +11084,14 @@
 
         // --- US Market & Macro Indices (^DJI, ^GSPC, ^IXIC, ^NDX, ^VIX, GC=F, CL=F, DX-Y.NYB) ---
         let marketIndices = {
-            "^DJI": { name: "Dow Jones", price: 42313.0, prevClose: 42175.09, change: 137.91, changePct: 0.33, updatedAt: "ล่าสุด" },
-            "^GSPC": { name: "S&P 500", price: 5815.03, prevClose: 5790.20, change: 24.83, changePct: 0.43, updatedAt: "ล่าสุด" },
-            "^IXIC": { name: "Nasdaq", price: 18179.98, prevClose: 18062.78, change: 117.2, changePct: 0.65, updatedAt: "ล่าสุด" },
-            "^NDX": { name: "NDX100", price: 20248.50, prevClose: 20120.10, change: 128.40, changePct: 0.64, updatedAt: "ล่าสุด" },
-            "^VIX": { name: "VIX Index", price: 15.20, prevClose: 15.65, change: -0.45, changePct: -2.88, updatedAt: "ล่าสุด" },
-            "GC=F": { name: "Gold (XAU)", price: 2657.40, prevClose: 2648.20, change: 9.20, changePct: 0.35, updatedAt: "ล่าสุด" },
-            "CL=F": { name: "WTI Crude Oil", price: 71.35, prevClose: 72.10, change: -0.75, changePct: -1.04, updatedAt: "ล่าสุด" },
-            "DX-Y.NYB": { name: "DXY Index", price: 102.90, prevClose: 102.65, change: 0.25, changePct: 0.24, updatedAt: "ล่าสุด" }
+            "^DJI": { name: "Dow Jones", price: 50759.78, prevClose: 51608.17, change: -848.39, changePct: -1.64, updatedAt: "ล่าสุด" },
+            "^GSPC": { name: "S&P 500", price: 7340.53, prevClose: 7416.92, change: -76.39, changePct: -1.03, updatedAt: "ล่าสุด" },
+            "^IXIC": { name: "Nasdaq Comp", price: 24248.07, prevClose: 24509.76, change: -261.69, changePct: -1.07, updatedAt: "ล่าสุด" },
+            "^NDX": { name: "Nasdaq 100", price: 27001.78, prevClose: 27197.80, change: -196.02, changePct: -0.72, updatedAt: "ล่าสุด" },
+            "^VIX": { name: "VIX Index", price: 25.64, prevClose: 23.52, change: 2.12, changePct: 9.01, updatedAt: "ล่าสุด" },
+            "GC=F": { name: "Gold (XAU)", price: 4074.90, prevClose: 4113.60, change: -38.70, changePct: -0.94, updatedAt: "ล่าสุด" },
+            "CL=F": { name: "WTI Crude Oil", price: 90.83, prevClose: 90.70, change: 0.13, changePct: 0.14, updatedAt: "ล่าสุด" },
+            "DX-Y.NYB": { name: "DXY Index", price: 102.28, prevClose: 102.35, change: -0.07, changePct: -0.07, updatedAt: "ล่าสุด" }
         };
 
         window.initMarketIndices = function() {
@@ -11097,6 +11100,10 @@
                 if (saved) {
                     const parsed = JSON.parse(saved);
                     if (parsed && typeof parsed === 'object') {
+                        // If cached NDX is old placeholder (around 20248), prefer modern 27000 value
+                        if (parsed['^NDX'] && parsed['^NDX'].price < 23000) {
+                            delete parsed['^NDX'];
+                        }
                         marketIndices = { ...marketIndices, ...parsed };
                     }
                 }
@@ -11104,11 +11111,49 @@
             renderMarketIndicesUI();
         };
 
+        window.toggleNasdaqIndex = function(e) {
+            if (e) {
+                if (typeof e.stopPropagation === 'function') e.stopPropagation();
+                if (typeof e.preventDefault === 'function') e.preventDefault();
+            }
+            const current = localStorage.getItem('myNasdaqMode') || '^NDX';
+            const next = current === '^NDX' ? '^IXIC' : '^NDX';
+            localStorage.setItem('myNasdaqMode', next);
+            renderMarketIndicesUI();
+            if (typeof showNotification === 'function') {
+                const name = next === '^NDX' ? 'Nasdaq 100 (^NDX) - ดัชนีหลัก 100 ตัว (ตรงกับ Dime)' : 'Nasdaq Composite (^IXIC) - ทั้งตลาด 3,000+ ตัว';
+                showNotification(`สลับดัชนีเป็น ${name}`, 'info');
+            }
+        };
+
         window.renderMarketIndicesUI = function() {
+            const nasdaqMode = localStorage.getItem('myNasdaqMode') || '^NDX';
+            const isNdx = (nasdaqMode === '^NDX');
+            const nasdaqKey = isNdx ? '^NDX' : '^IXIC';
+            const nasdaqLabel = isNdx ? 'Nasdaq 100' : 'Nasdaq Comp';
+
+            const nasdaqLabelEl = document.getElementById('label-nasdaq');
+            if (nasdaqLabelEl) {
+                nasdaqLabelEl.innerText = `🇺🇸 ${nasdaqLabel}`;
+            }
+
+            const chipNasdaq = document.getElementById('chip-IXIC');
+            if (chipNasdaq) {
+                chipNasdaq.title = isNdx 
+                    ? 'Nasdaq 100 (^NDX) - ดัชนีหุ้นเทคใหญ่ 100 ตัว (ตรงกับแอป Dime) | คลิกปุ่มสลับเพื่อดู Nasdaq Composite' 
+                    : 'Nasdaq Composite (^IXIC) - รวมทั้งตลาดแนสแด็ก 3,000+ ตัว | คลิกปุ่มสลับเพื่อดู Nasdaq 100';
+            }
+
+            const btnSwitch = document.getElementById('btnSwitchNasdaq');
+            if (btnSwitch) {
+                btnSwitch.innerText = isNdx ? '🔄 100/Comp' : '🔄 Comp/100';
+                btnSwitch.title = isNdx ? 'คลิกเพื่อสลับไปดู Nasdaq Composite (^IXIC)' : 'คลิกเพื่อสลับไปดู Nasdaq 100 (^NDX - ตรงกับ Dime)';
+            }
+
             const indicesConfig = [
                 { key: '^DJI', valId: 'val-DJI', badgeId: 'badge-DJI', defaultName: 'Dow Jones' },
                 { key: '^GSPC', valId: 'val-GSPC', badgeId: 'badge-GSPC', defaultName: 'S&P 500' },
-                { key: '^IXIC', valId: 'val-IXIC', badgeId: 'badge-IXIC', defaultName: 'Nasdaq' }
+                { key: nasdaqKey, valId: 'val-IXIC', badgeId: 'badge-IXIC', defaultName: nasdaqLabel }
             ];
 
             indicesConfig.forEach(item => {
@@ -11131,7 +11176,7 @@
 
             const timeEl = document.getElementById('marketIndicesTime');
             if (timeEl) {
-                const sample = marketIndices['^GSPC'] || marketIndices['^DJI'];
+                const sample = marketIndices[nasdaqKey] || marketIndices['^GSPC'] || marketIndices['^DJI'];
                 if (sample && sample.updatedAt) {
                     timeEl.innerText = `อัปเดต ${sample.updatedAt}`;
                 }
@@ -11155,7 +11200,7 @@
                         const d = await res.json();
                         const meta = (d.chart && d.chart.result && d.chart.result[0]) ? d.chart.result[0].meta : d;
                         const price = meta.regularMarketPrice || meta.chartPreviousClose || meta.previousClose || meta.price;
-                        const prev = meta.chartPreviousClose || meta.previousClose || price;
+                        const prev = meta.chartPreviousClose || meta.regularMarketPreviousClose || meta.previousClose || price;
                         if (price && typeof price === 'number') {
                             const diff = price - prev;
                             const pct = prev > 0 ? (diff / prev) * 100 : 0;
@@ -11186,7 +11231,7 @@
                         if (data && data.chart && data.chart.result && data.chart.result.length > 0) {
                             let meta = data.chart.result[0].meta;
                             let price = meta.regularMarketPrice || meta.chartPreviousClose || meta.previousClose;
-                            let prev = meta.chartPreviousClose || meta.previousClose || price;
+                            let prev = meta.chartPreviousClose || meta.regularMarketPreviousClose || meta.previousClose || price;
                             if (price && typeof price === 'number') {
                                 let diff = price - prev;
                                 let pct = prev > 0 ? (diff / prev) * 100 : 0;
@@ -14680,13 +14725,13 @@
         }
 
         const macroIndicesData = [
-            { id: 'DJI', name: 'Dow Jones', symbol: '^DJI', value: '51,794.30', changePct: 0.27, icon: '🏛️', seed: 88, prefix: '', sub: 'Wall Street 30' },
-            { id: 'SP500', name: 'S&P 500', symbol: '^GSPC', value: '7,802.18', changePct: 0.43, icon: '📊', seed: 101, prefix: '', sub: 'U.S. 500' },
-            { id: 'NDX', name: 'Nasdaq 100', symbol: '^NDX', value: '30,654.88', changePct: 0.64, icon: '💻', seed: 202, prefix: '', sub: 'Tech 100' },
-            { id: 'VIX', name: 'VIX Index', symbol: '^VIX', value: '15.25', changePct: -2.88, icon: '⚡', seed: 303, prefix: '', sub: 'Volatility' },
-            { id: 'GOLD', name: 'Gold (XAU)', symbol: 'GC=F', value: '$4,194.60', changePct: 0.35, icon: '🪙', seed: 404, prefix: '$', sub: 'Commodity' },
-            { id: 'WTI', name: 'WTI Crude Oil', symbol: 'CL=F', value: '$93.81', changePct: -1.04, icon: '🛢️', seed: 505, prefix: '$', sub: 'Oil Futures' },
-            { id: 'DXY', name: 'DXY Index', symbol: 'DX-Y.NYB', value: '102.58', changePct: 0.24, icon: '💵', seed: 606, prefix: '', sub: 'US Dollar' }
+            { id: 'DJI', name: 'Dow Jones', symbol: '^DJI', value: '50,759.78', changePct: -1.64, icon: '🏛️', seed: 88, prefix: '', sub: 'Wall Street 30' },
+            { id: 'SP500', name: 'S&P 500', symbol: '^GSPC', value: '7,340.53', changePct: -1.03, icon: '📊', seed: 101, prefix: '', sub: 'U.S. 500' },
+            { id: 'NDX', name: 'Nasdaq 100', symbol: '^NDX', value: '27,001.78', changePct: -0.72, icon: '💻', seed: 202, prefix: '', sub: 'Tech 100' },
+            { id: 'VIX', name: 'VIX Index', symbol: '^VIX', value: '25.64', changePct: 9.01, icon: '⚡', seed: 303, prefix: '', sub: 'Volatility' },
+            { id: 'GOLD', name: 'Gold (XAU)', symbol: 'GC=F', value: '$4,074.90', changePct: -0.94, icon: '🪙', seed: 404, prefix: '$', sub: 'Commodity' },
+            { id: 'WTI', name: 'WTI Crude Oil', symbol: 'CL=F', value: '$90.83', changePct: 0.14, icon: '🛢️', seed: 505, prefix: '$', sub: 'Oil Futures' },
+            { id: 'DXY', name: 'DXY Index', symbol: 'DX-Y.NYB', value: '102.28', changePct: -0.07, icon: '💵', seed: 606, prefix: '', sub: 'US Dollar' }
         ];
 
         const top10SnapshotData = [
