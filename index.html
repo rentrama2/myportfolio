@@ -3,41 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Pro Dashboard (V58)</title>
+    <title>My Portfolio Pro Dashboard (V59)</title>
+    <!-- Google Fonts: Plus Jakarta Sans (Financial Numbers) & IBM Plex Sans Thai (Modern High-Legibility Thai) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        
-        .text-profit { color: #10b981 !important; font-weight: bold; } 
-        .text-loss { color: #ef4444 !important; font-weight: bold; } 
-        
-        .card { 
-            border-radius: 12px; 
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.02), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
-            transition: transform 0.2s, box-shadow 0.3s; 
-            background-color: #ffffff;
+        body {
+            background-color: #f1f5f9;
+            font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #0f172a;
+            letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
         }
         
-        .border-val { border: 2px solid #c4b5fd !important; }
-        .border-ret { border: 2px solid #fca5a5 !important; }
-        .border-inv { border: 2px solid #93c5fd !important; }
-        .border-csh { border: 2px solid #f9a8d4 !important; }
-        .border-div { border: 2px solid #fde047 !important; }
-        .border-prf { border: 2px solid #86efac !important; }
-        .border-alc { border: 2px solid #7dd3fc !important; }
-        .border-tbl { border: 2px solid #cbd5e1 !important; }
+        .text-profit { color: #059669 !important; font-weight: 700; font-variant-numeric: tabular-nums; } 
+        .text-loss { color: #dc2626 !important; font-weight: 700; font-variant-numeric: tabular-nums; } 
+        [data-bs-theme="dark"] .text-profit { color: #34d399 !important; }
+        [data-bs-theme="dark"] .text-loss { color: #f87171 !important; }
+        
+        .card { 
+            border-radius: 16px; 
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.25s ease; 
+            background-color: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.85);
+        }
+        
+        .border-val { border: 1.5px solid #c4b5fd !important; }
+        .border-ret { border: 1.5px solid #fca5a5 !important; }
+        .border-inv { border: 1.5px solid #93c5fd !important; }
+        .border-csh { border: 1.5px solid #f9a8d4 !important; }
+        .border-div { border: 1.5px solid #fde047 !important; }
+        .border-prf { border: 1.5px solid #86efac !important; }
+        .border-alc { border: 1.5px solid #7dd3fc !important; }
+        .border-tbl { border: 1.5px solid #cbd5e1 !important; }
 
         .card-header-pro { 
             background-color: #ffffff; 
-            border-radius: 12px 12px 0 0;
-            padding: 10px 16px; 
+            border-radius: 16px 16px 0 0;
+            padding: 12px 18px; 
             font-weight: 700; 
             font-size: 0.95rem; 
-            color: #111827;
+            color: #0f172a;
         }
         
-        .metric-value { font-size: 1.45rem; font-weight: 700; color: #111827; line-height: 1.15; margin-top: 3px; }
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.2;
+            margin-top: 4px;
+            letter-spacing: -0.02em;
+            font-variant-numeric: tabular-nums;
+        }
         
         .price-input {
             border: 1px solid #e5e7eb !important; background-color: #f9fafb !important;
@@ -282,6 +303,7 @@
         /* --- Privacy Mode (โหมดซ่อนตัวเลขการเงิน ชี้เมาส์เพื่อดูชั่วคราว) --- */
         body.privacy-mode .metric-value,
         body.privacy-mode .privacy-mask,
+        body.privacy-mode .overview-kpi-privacy,
         body.privacy-mode .portfolio-card .fs-4,
         body.privacy-mode .portfolio-card .text-muted:not(.port-bottom-bar span),
         body.privacy-mode #summaryTableBody td:nth-child(2),
@@ -302,6 +324,7 @@
 
         body.privacy-mode .metric-value:hover,
         body.privacy-mode .privacy-mask:hover,
+        body.privacy-mode .overview-kpi-card:hover .overview-kpi-privacy,
         body.privacy-mode .portfolio-card:hover .fs-4,
         body.privacy-mode #summaryTableBody tr:hover td,
         body.privacy-mode #txnTableBody tr:hover td,
@@ -310,6 +333,7 @@
         }
 
         .cursor-pointer { cursor: pointer; }
+        .tabular-nums { font-variant-numeric: tabular-nums; }
         .target-badge {
             font-size: 0.72rem;
             cursor: pointer;
@@ -322,11 +346,23 @@
         }
 
         /* --- Holdings Table Toolbar & Pagination --- */
+        .holdings-toolbar {
+            background-color: #f8fafc;
+        }
+        [data-bs-theme="dark"] .holdings-toolbar {
+            background-color: #1a2436 !important;
+        }
+        .th-price-col {
+            background-color: #fffbeb !important;
+        }
+        [data-bs-theme="dark"] .th-price-col {
+            background-color: rgba(245, 158, 11, 0.12) !important;
+        }
         .holdings-tab-btn {
             font-size: 0.78rem;
             font-weight: 600;
             border-radius: 20px;
-            padding: 3px 10px;
+            padding: 4px 12px;
             border: 1px solid #cbd5e1;
             background: #ffffff;
             color: #475569;
@@ -347,6 +383,20 @@
             border-color: #0f172a !important;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        [data-bs-theme="dark"] .holdings-tab-btn {
+            background: #1e293b;
+            border-color: #334155;
+            color: #cbd5e1;
+        }
+        [data-bs-theme="dark"] .holdings-tab-btn:hover {
+            background: #334155;
+            color: #ffffff;
+        }
+        [data-bs-theme="dark"] .holdings-tab-btn.active {
+            background: #3b82f6 !important;
+            border-color: #3b82f6 !important;
+            color: #ffffff !important;
+        }
         .holdings-tab-badge {
             font-size: 0.7rem;
             border-radius: 10px;
@@ -355,6 +405,10 @@
             background: #f1f5f9;
             color: #475569;
             font-weight: 700;
+        }
+        [data-bs-theme="dark"] .holdings-tab-badge {
+            background: #0f172a;
+            color: #94a3b8;
         }
         .holdings-tab-btn.active .holdings-tab-badge {
             background: rgba(255, 255, 255, 0.25) !important;
@@ -369,6 +423,14 @@
         }
         .holdings-group-row:hover {
             background-color: #f1f5f9 !important;
+        }
+        [data-bs-theme="dark"] .holdings-group-row {
+            background-color: #1e293b !important;
+            border-top-color: #334155;
+            border-bottom-color: #334155;
+        }
+        [data-bs-theme="dark"] .holdings-group-row:hover {
+            background-color: #263449 !important;
         }
         body.privacy-mode .holdings-privacy-blur {
             filter: blur(6px) !important;
@@ -2277,55 +2339,65 @@
 
         /* Overview Dashboard & Recommendation Cards Styling */
         .overview-kpi-card {
-            border: 1px solid rgba(0, 0, 0, 0.07);
-            border-radius: 16px;
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: 18px;
             background: var(--bs-card-bg, #ffffff);
-            padding: 18px 20px;
-            transition: all 0.25s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 18px 22px;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
             height: 100%;
+            position: relative;
+            overflow: hidden;
         }
         .overview-kpi-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+            border-color: #cbd5e1;
         }
         [data-bs-theme="dark"] .overview-kpi-card {
             border-color: rgba(255, 255, 255, 0.08);
-            background: #111827;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            background: #151e2e;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
         }
         .overview-kpi-label {
-            font-size: 0.75rem;
+            font-size: 0.76rem;
             font-weight: 700;
             color: #64748b;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
             margin-bottom: 4px;
         }
+        [data-bs-theme="dark"] .overview-kpi-label {
+            color: #94a3b8;
+        }
         .overview-kpi-val {
-            font-size: 1.45rem;
+            font-size: 1.55rem;
             font-weight: 800;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.02em;
             color: var(--bs-body-color, #0f172a);
             font-feature-settings: "tnum";
             font-variant-numeric: tabular-nums;
+            line-height: 1.25;
         }
         .overview-kpi-sub {
-            font-size: 0.82rem;
+            font-size: 0.84rem;
             font-weight: 600;
+            font-variant-numeric: tabular-nums;
+            margin-top: 2px;
         }
         .action-recom-card {
             border-radius: 14px;
             padding: 14px 16px;
             background: var(--bs-card-bg, #ffffff);
-            border: 1px solid rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(226, 232, 240, 0.9);
             transition: all 0.2s ease;
         }
         .action-recom-card:hover {
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+            transform: translateY(-1px);
         }
         [data-bs-theme="dark"] .action-recom-card {
-            background: #1e293b50;
+            background: rgba(30, 41, 59, 0.55);
             border-color: rgba(255, 255, 255, 0.08);
         }
         .action-recom-card.border-buy {
@@ -2338,18 +2410,20 @@
             border-left: 4px solid #ef4444 !important;
         }
         .alloc-bar-wrapper {
-            height: 12px;
+            height: 14px;
             border-radius: 9999px;
             overflow: hidden;
             display: flex;
             background: #e2e8f0;
+            gap: 2px;
         }
         [data-bs-theme="dark"] .alloc-bar-wrapper {
             background: #334155;
         }
-        .alloc-bar-core { background: #3b82f6; }
-        .alloc-bar-stock { background: #8b5cf6; }
-        .alloc-bar-cash { background: #10b981; }
+        .alloc-bar-core { background: #3b82f6; transition: width 0.4s ease; }
+        .alloc-bar-stock { background: #8b5cf6; transition: width 0.4s ease; }
+        .alloc-bar-sat, .alloc-bar-cash { background: #10b981; transition: width 0.4s ease; }
+        .alloc-bar-retire { background: #f59e0b; transition: width 0.4s ease; }
         .overview-css-end { display: block;
         }
 
@@ -4860,7 +4934,7 @@
                     <div class="col-md-3 col-6">
                         <div class="card h-100 p-2 p-md-3 border-val">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold" style="font-size: 0.82rem; color: #374151;">
+                                <div class="fw-bold text-body" style="font-size: 0.82rem;">
                                     <span style="color: #8b5cf6;">●</span> มูลค่ารวม
                                 </div>
                                 <div id="topReturnPercentAll" class="fw-bold" style="font-size: 0.72rem; color: #10b981;">+0.00% ทั้งหมด</div>
@@ -4871,7 +4945,7 @@
                     <div class="col-md-3 col-6">
                         <div class="card h-100 p-2 p-md-3 border-ret">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold" style="font-size: 0.82rem; color: #374151;">
+                                <div class="fw-bold text-body" style="font-size: 0.82rem;">
                                     <span style="color: #ef4444;">●</span> ผลตอบแทน
                                 </div>
                                 <div id="topReturnPercent" class="fw-bold text-muted" style="font-size: 0.72rem;">0.00%</div>
@@ -4883,7 +4957,7 @@
                     <div class="col-md-3 col-6">
                         <div class="card h-100 p-2 p-md-3 border-inv">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold" style="font-size: 0.82rem; color: #374151;">
+                                <div class="fw-bold text-body" style="font-size: 0.82rem;">
                                     <span style="color: #3b82f6;">●</span> เงินลงทุนในหุ้น
                                 </div>
                                 <div id="topInvestedPercent" class="fw-bold text-muted" style="font-size: 0.72rem;">0% ของพอร์ต</div>
@@ -4894,7 +4968,7 @@
                     <div class="col-md-3 col-6">
                         <div class="card h-100 p-2 p-md-3 border-csh">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold" style="font-size: 0.82rem; color: #374151;">
+                                <div class="fw-bold text-body" style="font-size: 0.82rem;">
                                     <span style="color: #ec4899;">●</span> <span id="txtTopCashTitle">เงินสดคงเหลือ</span>
                                 </div>
                                 <div id="topCashPercent" class="fw-bold text-muted" style="font-size: 0.72rem;">0% ของพอร์ต</div>
@@ -5000,7 +5074,7 @@
                         </div>
                         <hr style="border-color: #f3f4f6; margin: 6px 0;">
                         <div class="flex-grow-1 d-flex flex-column">
-                            <div style="font-size: 0.8rem; font-weight: bold; margin-bottom: 8px; color: #374151;">สัดส่วนเทียบเป้าหมาย</div>
+                            <div class="text-body" style="font-size: 0.8rem; font-weight: bold; margin-bottom: 8px;">สัดส่วนเทียบเป้าหมาย</div>
                             <div id="allocationBars" class="alloc-scroll" style="flex-grow: 1; overflow-y: auto; padding-right: 5px; padding-bottom: 3px; max-height: 100px;"></div>
                         </div>
                     </div>
@@ -5127,7 +5201,7 @@
                         <div id="stockTargetAlertContainer" class="px-3 pt-2"></div>
 
                         <!-- Toolbar: Tabs by Group/Portfolio & View Mode / Pagination Settings -->
-                        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom flex-wrap gap-2" style="background-color: #f8fafc;">
+                        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom flex-wrap gap-2 holdings-toolbar">
                             <!-- Filter Tabs -->
                             <div class="d-flex align-items-center gap-1 flex-wrap" id="holdingsFilterTabs"></div>
 
@@ -5159,14 +5233,14 @@
                         </div>
 
                         <div class="table-responsive">
-                            <table class="table table-hover text-center align-middle m-0" style="font-size: 0.95rem;">
+                            <table class="table table-hover text-center align-middle m-0" style="font-size: 0.94rem;">
                                 <thead style="background-color: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
                                     <tr>
                                         <th class="py-3 border-0">ชื่อหุ้น / ETF</th>
                                         <th class="py-3 border-0">จำนวนหุ้น</th>
                                         <th class="py-3 border-0">ราคาต้นทุน<br><small class="text-muted">(เฉลี่ยต่อหุ้น USD)</small></th>
                                         <th class="py-3 border-0">ทุนรวม (THB)<br><small class="text-muted" id="thCostSub">อิงเรทเงิน Dime</small></th>
-                                        <th class="py-3 border-0" style="background-color: #fffbeb;" id="thPriceCol">
+                                        <th class="py-3 border-0 th-price-col" id="thPriceCol">
                                             <div class="d-flex flex-column align-items-center">
                                                 <span id="thPriceTitle" class="fw-bold">🔒 ราคาปิดตลาด (USD)</span>
                                                 <button id="btnPriceModeToggle" type="button" class="btn btn-xs badge rounded-pill border my-1" 
@@ -5393,7 +5467,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center gap-2">
-                        <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">
+                        <span id="geminiInlineApiStatusBadge" class="badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold" style="font-size: 0.72rem;">
                             🟢 ระบบ AI พร้อมใช้งาน
                         </span>
                         <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openGeminiSignalsModal('CONFIG')">
@@ -5458,12 +5532,13 @@
                                 <label class="form-label small fw-bold text-muted">รูปแบบการวิเคราะห์:</label>
                                 <div class="d-flex gap-2">
                                     <select id="geminiInlineDeepDiveMode" class="form-select form-select-sm rounded-3">
-                                        <option value="COMPREHENSIVE">ครบทุกมิติ (Technical + Fundamental + Risk)</option>
-                                        <option value="TECHNICAL_ONLY">เทคนิค & กรอบราคา แนวรับ/แนวต้าน (S/R)</option>
-                                        <option value="CATALYST_RISK">ปัจจัยขับเคลื่อน & ความเสี่ยง (Catalyst & Risk)</option>
+                                        <option value="FULL">📊 วิเคราะห์ครบวงจร (เทคนิค + ปัจจัยพื้นฐาน + กลยุทธ์)</option>
+                                        <option value="TECHNICAL">📈 โครงสร้างราคาและจุดเด้ง/เบรคเอาท์</option>
+                                        <option value="RISK">⚠️ เจาะลึกความเสี่ยงและจุด Stop Loss</option>
+                                        <option value="DCA">💰 แผน DCA & แบ่งไม้สะสมระยะยาว (3 ไม้)</option>
                                     </select>
-                                    <button type="button" class="btn btn-sm btn-primary rounded-pill px-3 fw-bold text-nowrap" onclick="runInlineGeminiDeepDive()">
-                                        ✨ วิเคราะห์สด
+                                    <button type="button" class="btn btn-sm btn-gradient-ai text-white rounded-pill px-3 fw-bold text-nowrap" onclick="runInlineGeminiDeepDive()">
+                                        <span class="gemini-sparkle">✨</span> วิเคราะห์สด
                                     </button>
                                 </div>
                             </div>
@@ -6581,6 +6656,28 @@
             }
         };
 
+        window.getEffectiveMarketPrice = function(tk, fallbackPrice = 0) {
+            let resolvedPrice = (typeof getMarketPrice === 'function') ? getMarketPrice(tk) : ((typeof marketPrices === 'object' && marketPrices) ? (marketPrices[tk] || 0) : 0);
+            let regPrice = (resolvedPrice > 0) ? resolvedPrice : fallbackPrice;
+            let curPrice = regPrice;
+            let appliedSession = null;
+
+            const mktStatus = (typeof getUSMarketStatus === 'function') ? getUSMarketStatus() : { isOpen: false, session: 'CLOSED' };
+            const autoSwitchExt = (localStorage.getItem('myAutoSwitchPrice') !== 'false');
+
+            if (autoSwitchExt && !mktStatus.isOpen && (mktStatus.session === 'PRE' || mktStatus.session === 'POST')) {
+                const clean = (tk || '').trim().toUpperCase().replace(/\s+/g, '');
+                const ext = (typeof extendedHoursPrices !== 'undefined' && extendedHoursPrices)
+                    ? (extendedHoursPrices[clean] || extendedHoursPrices[clean.replace('-', '.')] || extendedHoursPrices[clean.replace('.', '-')])
+                    : null;
+                if (ext && ext.price && ext.price > 0 && ext.session === mktStatus.session) {
+                    curPrice = ext.price;
+                    appliedSession = ext.session;
+                }
+            }
+            return { price: curPrice, regularPrice: regPrice, session: appliedSession };
+        };
+
         function calcPortfolioMetrics(portId) {
             let portTxns = (portId === 'ALL')
                 ? transactions
@@ -6596,18 +6693,22 @@
                 else if (t.type === 'SELL' || t.type === 'DIVIDEND') cash += parsedTHB;
 
                 if (t.type === 'DEPOSIT' || t.type === 'WITHDRAW' || t.type === 'DIVIDEND') return;
-                if (!holdings[t.ticker]) holdings[t.ticker] = { shares: 0, costUSD: 0, costTHB: 0 };
+                let tkClean = (t.ticker || '').trim().toUpperCase().replace(/\s+/g, '');
+                if (tkClean === 'BRK-B' || tkClean === 'BRK/B' || tkClean === 'BRK_B') tkClean = 'BRK.B';
+                if (!tkClean) return;
+
+                if (!holdings[tkClean]) holdings[tkClean] = { shares: 0, costUSD: 0, costTHB: 0 };
                 let usdAmount = Number((t.shares * t.price).toFixed(2));
                 if (t.type === 'BUY') {
-                    holdings[t.ticker].shares += t.shares;
-                    holdings[t.ticker].costUSD += usdAmount;
-                    holdings[t.ticker].costTHB += parsedTHB;
-                } else if (t.type === 'SELL' && holdings[t.ticker].shares > 0) {
-                    let avgCostUSD = holdings[t.ticker].costUSD / holdings[t.ticker].shares;
-                    let avgCostTHB = holdings[t.ticker].costTHB / holdings[t.ticker].shares;
-                    holdings[t.ticker].shares -= t.shares;
-                    holdings[t.ticker].costUSD -= (t.shares * avgCostUSD);
-                    holdings[t.ticker].costTHB -= (t.shares * avgCostTHB);
+                    holdings[tkClean].shares += t.shares;
+                    holdings[tkClean].costUSD += usdAmount;
+                    holdings[tkClean].costTHB += parsedTHB;
+                } else if (t.type === 'SELL' && holdings[tkClean].shares > 0) {
+                    let avgCostUSD = holdings[tkClean].costUSD / holdings[tkClean].shares;
+                    let avgCostTHB = holdings[tkClean].costTHB / holdings[tkClean].shares;
+                    holdings[tkClean].shares -= t.shares;
+                    holdings[tkClean].costUSD -= (t.shares * avgCostUSD);
+                    holdings[tkClean].costTHB -= (t.shares * avgCostTHB);
                 }
             });
 
@@ -6619,7 +6720,8 @@
                     let shares = holdings[tk].shares;
                     let costUSD = holdings[tk].costUSD;
                     let avgUSD = costUSD / shares;
-                    let curPriceUSD = marketPrices[tk] || avgUSD;
+                    let eff = getEffectiveMarketPrice(tk, avgUSD);
+                    let curPriceUSD = eff.price;
                     let mktUSD = Number((shares * curPriceUSD).toFixed(2));
                     let mktTHB = Number((mktUSD * liveFxRate).toFixed(2));
                     let cTHB = (currentCalcMode === 'DIME') ? Number((costUSD * liveFxRate).toFixed(2)) : (holdings[tk].costTHB + (tunedDiffsV2[tk] || 0));
@@ -11181,6 +11283,10 @@
                     timeEl.innerText = `อัปเดต ${sample.updatedAt}`;
                 }
             }
+
+            if (typeof renderOverviewDashboard === 'function') {
+                try { renderOverviewDashboard(); } catch(e) {}
+            }
         };
 
         window.fetchMarketIndexFromYahoo = async function(ticker) {
@@ -13091,8 +13197,10 @@
             let allPortfoliosMktTHB = 0;
             for(let tk in allHoldingsMap) {
                 if(allHoldingsMap[tk].shares > 0.0001) {
-                    let curPrice = (typeof getMarketPrice === 'function') ? getMarketPrice(tk) : (marketPrices[tk] || 0);
-                    if (!curPrice || curPrice <= 0) curPrice = (allHoldingsMap[tk].costUSD / allHoldingsMap[tk].shares);
+                    let avgFallback = allHoldingsMap[tk].costUSD / allHoldingsMap[tk].shares;
+                    let curPrice = (typeof getEffectiveMarketPrice === 'function')
+                        ? getEffectiveMarketPrice(tk, avgFallback).price
+                        : ((typeof getMarketPrice === 'function') ? (getMarketPrice(tk) || avgFallback) : (marketPrices[tk] || avgFallback));
                     allPortfoliosMktTHB += (allHoldingsMap[tk].shares * curPrice * liveFxRate);
                 }
             }
@@ -13259,6 +13367,20 @@
                 }
             }
 
+            const isAllMode = (activePortfolioId === 'ALL');
+            let displayCash = Math.max(0, totalAccountCash);
+            let totalPortfolioValue = isAllMode ? (topMetrics.mktValue + displayCash) : topMetrics.mktValue;
+            let totalPlTHB = topMetrics.mktValue - topMetrics.invested;
+            let totalPlPercent = topMetrics.invested > 0 ? (totalPlTHB / topMetrics.invested) * 100 : 0;
+
+            globalHoldings = holdings;
+            globalTotalPortfolioValue = totalPortfolioValue;
+
+            // คำนวณสัดส่วนจริง (%) ของแต่ละหุ้นในพอร์ตที่กำลังดู (ใช้หน่วย THB เดียวกัน)
+            holdingItems.forEach(it => {
+                it.weightPct = topMetrics.mktValue > 0 ? (it.mktValueTHB / topMetrics.mktValue) * 100 : 0;
+            });
+
             window.cachedHoldingItems = holdingItems;
             renderHoldingsTable();
 
@@ -13320,22 +13442,14 @@
                 }
             }
             
-            const isAllMode = (activePortfolioId === 'ALL');
-            let displayCash = Math.max(0, totalAccountCash);
-            let totalPortfolioValue = isAllMode ? (topMetrics.mktValue + displayCash) : topMetrics.mktValue;
-            let totalPlTHB = topMetrics.mktValue - topMetrics.invested;
-            let totalPlPercent = topMetrics.invested > 0 ? (totalPlTHB / topMetrics.invested) * 100 : 0;
-            
-            globalHoldings = holdings;
-            globalTotalPortfolioValue = totalPortfolioValue;
-            
             document.getElementById('topTotalValue').innerText = `฿${totalPortfolioValue.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             document.getElementById('topTotalInvested').innerText = `฿${topMetrics.invested.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             document.getElementById('topTotalCash').innerText = `฿${displayCash.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             
             let retEl = document.getElementById('topTotalReturn');
             let retPct = document.getElementById('topReturnPercent');
-            retEl.innerText = `${totalPlTHB >= 0 ? '+' : ''}฿${totalPlTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            let retSign = totalPlTHB >= 0 ? '+' : '-';
+            retEl.innerText = `${retSign}฿${Math.abs(totalPlTHB).toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             retPct.innerText = `${totalPlPercent >= 0 ? '+' : ''}${totalPlPercent.toFixed(2)}%`;
             retEl.className = `metric-value ${totalPlTHB >= 0 ? 'text-profit' : 'text-loss'}`;
             retPct.className = `fw-bold ${totalPlTHB >= 0 ? 'text-profit' : 'text-loss'}`;
@@ -13398,8 +13512,8 @@
                 let donutCenterTextEl = document.getElementById('donutCenterText');
                 if(donutCenterTextEl) {
                     donutCenterTextEl.innerHTML = `
-                        <div style="font-size:0.75rem; color:#6b7280; font-weight:bold;">TOTAL</div>
-                        <div style="font-size:1.05rem; color:#111827; font-weight:bold;">฿${totalPortfolioValue.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+                        <div class="text-muted" style="font-size:0.72rem; font-weight:700; letter-spacing:0.5px;">TOTAL</div>
+                        <div class="text-body tabular-nums" style="font-size:1.05rem; font-weight:800;">฿${totalPortfolioValue.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
                     `;
                 }
 
@@ -13712,13 +13826,13 @@
                             </div>
                         </div>
                     </td>
-                    <td class="border-0 py-3">${item.shares.toFixed(7)}</td>
-                    <td class="border-0 py-3">
-                        <strong style="color: #111827;">$${item.avgCostUSD.toFixed(4)}</strong><br>
+                    <td class="border-0 py-3 tabular-nums">${item.shares.toFixed(7)}</td>
+                    <td class="border-0 py-3 tabular-nums">
+                        <strong class="text-body">$${item.avgCostUSD.toFixed(4)}</strong><br>
                         <small class="text-muted">(รวม $${item.costUSD.toFixed(2)})</small>
                     </td>
-                    <td class="border-0 py-3">
-                        <strong style="color: #111827;">฿${item.costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong><br>
+                    <td class="border-0 py-3 tabular-nums">
+                        <strong class="text-body">฿${item.costTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong><br>
                         ${item.isDimeMode 
                             ? `<small class="text-muted" style="font-size: 0.72rem;" title="ต้นทุนจริงที่แลกซื้อในอดีต">ต้นทุนแลกจริง ฿${item.rawCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</small>` 
                             : item.syncBtns
@@ -13727,7 +13841,7 @@
                     <td class="bg-warning bg-opacity-10 align-middle border-0 py-3">
                         <div class="d-flex flex-column align-items-center">
                             <div class="d-flex justify-content-center">
-                                <input type="number" id="priceInput_${item.ticker}" class="form-control price-input" 
+                                <input type="number" id="priceInput_${item.ticker}" class="form-control price-input tabular-nums" 
                                        value="${item.currentPriceUSD.toFixed(2)}" step="any"
                                        onblur="updateMarketPrice('${item.ticker}', this.value)"
                                        onclick="this.select()"
@@ -13736,18 +13850,18 @@
                             ${extBadgeHtml}
                         </div>
                     </td>
-                    <td class="border-0 py-3">
+                    <td class="border-0 py-3 tabular-nums">
                         $${item.mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}<br>
-                        <strong style="color: #111827;">≈ ฿${item.mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong><br><span class="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mt-1" style="font-size: 0.72rem; font-weight: 600;">สัดส่วน ${item.weightPct ? item.weightPct.toFixed(1) : ((item.mktValueUSD / (globalTotalPortfolioValue || 1)) * 100).toFixed(1)}%</span>
+                        <strong class="text-body">≈ ฿${item.mktValueTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong><br><span class="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mt-1" style="font-size: 0.72rem; font-weight: 600;">สัดส่วน ${(item.weightPct !== undefined ? item.weightPct : 0).toFixed(1)}%</span>
                     </td>
-                    <td class="${item.plClass} border-start-0 py-3" style="font-size: 0.95rem;">
-                        ${item.sign}${item.plPercent.toFixed(2)}%<br>
-                        <small style="font-size: 0.75rem;">(${item.sign}$${item.plUSD.toFixed(2)})</small><br>
-                        <strong style="color: inherit;">≈ ${item.sign}฿${item.plTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>
+                    <td class="${item.plClass} border-start-0 py-3 tabular-nums" style="font-size: 0.95rem;">
+                        ${item.plUSD >= 0 ? '+' : '-'}${Math.abs(item.plPercent).toFixed(2)}%<br>
+                        <small style="font-size: 0.75rem;">(${item.plUSD >= 0 ? '+' : '-'}$${Math.abs(item.plUSD).toFixed(2)})</small><br>
+                        <strong style="color: inherit;">≈ ${item.plTHB >= 0 ? '+' : '-'}฿${Math.abs(item.plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>
                         ${!item.isDimeMode ? `
                         <div class="mt-1" style="font-size: 0.7rem; font-weight: normal; line-height: 1.2;" title="แจกแจงผลตอบแทน: กำไรราคาหุ้น (Capital Gain) และกำไร/ขาดทุนจากอัตราแลกเปลี่ยน (FX)">
-                            <span class="badge bg-light text-muted border" style="font-weight: 500;">
-                                หุ้น: ${item.capGainTHB >= 0 ? '+' : ''}฿${Math.round(item.capGainTHB).toLocaleString('th-TH')} | FX: ${item.fxGainTHB >= 0 ? '+' : ''}฿${Math.round(item.fxGainTHB).toLocaleString('th-TH')}
+                            <span class="badge bg-body-secondary text-muted border" style="font-weight: 500;">
+                                หุ้น: ${item.capGainTHB >= 0 ? '+' : '-'}฿${Math.abs(Math.round(item.capGainTHB)).toLocaleString('th-TH')} | FX: ${item.fxGainTHB >= 0 ? '+' : '-'}฿${Math.abs(Math.round(item.fxGainTHB)).toLocaleString('th-TH')}
                             </span>
                         </div>` : ''}
                     </td>
@@ -13776,7 +13890,7 @@
                     let grpCostTHB = fullGrpItems.reduce((acc, it) => acc + it.costTHB, 0);
                     let grpPlTHB = grpMktTHB - grpCostTHB;
                     let grpPlPct = grpCostTHB > 0 ? (grpPlTHB / grpCostTHB) * 100 : 0;
-                    let grpSign = grpPlTHB >= 0 ? '+' : '';
+                    let grpSign = grpPlTHB >= 0 ? '+' : '-';
                     let grpPlClass = grpPlTHB >= 0 ? 'text-profit' : 'text-loss';
                     let isCollapsed = !!holdingsCollapsedGroups[grp];
                     let badgeClass = groupBadgeColors[grp] || 'bg-secondary';
@@ -13787,12 +13901,12 @@
                                 <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                                     <div class="d-flex align-items-center gap-2 flex-wrap">
                                         <span class="badge ${badgeClass} px-2 py-1 fs-6">${grp}</span>
-                                        <span class="fw-bold text-dark" style="font-size: 0.88rem;">${fullGrpItems.length} หุ้น</span>
-                                        <span class="text-muted" style="font-size: 0.8rem;">• มูลค่า: <strong class="text-dark holdings-privacy-blur">฿${grpMktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong></span>
-                                        <span class="${grpPlClass} fw-bold holdings-privacy-blur" style="font-size: 0.82rem;">• ผลตอบแทน: ${grpSign}฿${grpPlTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})} (${grpSign}${grpPlPct.toFixed(2)}%)</span>
+                                        <span class="fw-bold text-body" style="font-size: 0.88rem;">${fullGrpItems.length} หุ้น</span>
+                                        <span class="text-muted" style="font-size: 0.8rem;">• มูลค่า: <strong class="text-body holdings-privacy-blur tabular-nums">฿${grpMktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong></span>
+                                        <span class="${grpPlClass} fw-bold holdings-privacy-blur tabular-nums" style="font-size: 0.82rem;">• ผลตอบแทน: ${grpSign}฿${Math.abs(grpPlTHB).toLocaleString('th-TH', {minimumFractionDigits: 2, maximumFractionDigits: 2})} (${grpSign}${Math.abs(grpPlPct).toFixed(2)}%)</span>
                                     </div>
                                     <div class="d-flex align-items-center gap-1 text-muted" style="font-size: 0.78rem;">
-                                        <span class="badge bg-white text-secondary border px-2 py-1 shadow-sm">${isCollapsed ? '▶ คลิกเพื่อกางออก' : '▼ พับเก็บ'}</span>
+                                        <span class="badge bg-body text-secondary border px-2 py-1 shadow-sm">${isCollapsed ? '▶ คลิกเพื่อกางออก' : '▼ พับเก็บ'}</span>
                                     </div>
                                 </div>
                             </td>
@@ -17992,7 +18106,7 @@
                                 </div>
                             </div>
                             <div class="d-flex justify-content-end mt-2 pt-2 border-top">
-                                <button class="btn btn-sm btn-outline-success rounded-pill px-3 py-1 fw-bold" style="font-size:0.75rem;" onclick="bootstrap.Modal.getInstance(document.getElementById('earningsDayDetailModal')).hide(); openTechnicalForTicker('${stk.ticker}');">
+                                <button class="btn btn-sm btn-outline-success rounded-pill px-3 py-1 fw-bold" style="font-size:0.75rem;" onclick="bootstrap.Modal.getInstance(document.getElementById('earningsDayDetailModal'))?.hide(); openTechnicalForTicker('${stk.ticker}');">
                                     📈 ดูกราฟเทคนิค
                                 </button>
                             </div>
@@ -18015,6 +18129,11 @@
             mode = (mode || 'OVERVIEW').toUpperCase();
             if (mode === 'HOME_NEWS') mode = 'OVERVIEW';
             localStorage.setItem('myMainViewMode', mode);
+
+            const btnToggleCar = document.getElementById('btnToggleCarousel');
+            if (btnToggleCar) {
+                btnToggleCar.style.display = (mode === 'PORTFOLIO') ? 'inline-block' : 'none';
+            }
 
             const btnOverview = document.getElementById('tabBtnOverview');
             const btnPort = document.getElementById('tabBtnPortfolio');
@@ -18073,6 +18192,7 @@
                 if (typeof renderMarketOverview === 'function') renderMarketOverview();
             } else if (mode === 'AI_INVESTMENT') {
                 if (typeof renderGeminiAiPicks === 'function') renderGeminiAiPicks();
+                if (typeof populateGeminiDeepDiveSelect === 'function') populateGeminiDeepDiveSelect();
             } else if (mode === 'TECHNICAL') {
                 setTimeout(() => { if (typeof initTechnicalHub === 'function') initTechnicalHub(); }, 50);
                 setTimeout(() => { if (typeof drawCandlestickCanvas === 'function') drawCandlestickCanvas(); }, 200);
@@ -18141,8 +18261,10 @@
             for (let tk in allHoldingsMap) {
                 let h = allHoldingsMap[tk];
                 if (h.shares > 0.0001) {
-                    let curPrice = (typeof getMarketPrice === 'function') ? getMarketPrice(tk) : (marketPrices[tk] || 0);
-                    if (!curPrice || curPrice <= 0) curPrice = (h.costUSD / h.shares);
+                    let avgFallback = h.costUSD / h.shares;
+                    let curPrice = (typeof getEffectiveMarketPrice === 'function')
+                        ? getEffectiveMarketPrice(tk, avgFallback).price
+                        : ((typeof getMarketPrice === 'function') ? (getMarketPrice(tk) || avgFallback) : (marketPrices[tk] || avgFallback));
                     let mktUSD = Number((h.shares * curPrice).toFixed(2));
                     let mktTHB = Number((mktUSD * liveFxRate).toFixed(2));
                     let groupName = portfolioMapping[tk] || 'Stock';
@@ -18155,6 +18277,7 @@
                         ticker: tk,
                         fullName: fullName,
                         shares: h.shares,
+                        curPrice: curPrice,
                         costUSD: h.costUSD,
                         costTHB: h.costTHB,
                         mktValueUSD: mktUSD,
@@ -18182,13 +18305,19 @@
                 let isTech = ['NVDA', 'MSFT', 'AAPL', 'GOOGL', 'GOOG', 'AMZN', 'META', 'TSLA', 'AMD', 'AVGO', 'QQQ', 'QQQM', 'XLK'].includes(tk);
                 if (isTech) techWeight += it.weightPct;
 
-                if (it.portId === 'core' || ['VTI', 'VOO', 'VT', 'SPY', 'IVV', 'VXUS'].includes(tk)) {
+                if (it.portId === 'core') {
                     coreEtfWeight += it.weightPct;
                 } else if (it.portId === 'stocks') {
                     stockWeight += it.weightPct;
-                } else if (it.portId === 'satellite' || ['GRID', 'XLV', 'SPMO'].includes(tk)) {
+                } else if (it.portId === 'satellite') {
                     satWeight += it.weightPct;
-                } else if (it.portId === 'retirement' || ['JEPQ', 'JEPI', 'SCHD', 'SPYD'].includes(tk)) {
+                } else if (it.portId === 'retirement') {
+                    divWeight += it.weightPct;
+                } else if (['VTI', 'VOO', 'VT', 'SPY', 'IVV', 'VXUS'].includes(tk)) {
+                    coreEtfWeight += it.weightPct;
+                } else if (['GRID', 'XLV', 'SPMO'].includes(tk)) {
+                    satWeight += it.weightPct;
+                } else if (['JEPQ', 'JEPI', 'SCHD', 'SPYD'].includes(tk)) {
                     divWeight += it.weightPct;
                 } else {
                     stockWeight += it.weightPct;
@@ -18203,7 +18332,7 @@
                 riskTitle = "⚠️ Tech Concentration สูง";
                 riskBadgeClass = "bg-warning-subtle text-warning border border-warning-subtle";
                 riskSub = `สัดส่วนกลุ่ม Tech อยู่ที่ ${techWeight.toFixed(1)}% (ควรระวังความผันผวน)`;
-            } else if (coreEtfWeight < 30) {
+            } else if (coreEtfWeight < 30 && holdings.length > 0) {
                 riskTitle = "🟡 Core Asset น้อยเกินไป";
                 riskBadgeClass = "bg-warning-subtle text-warning border border-warning-subtle";
                 riskSub = `Core ETF มีเพียง ${coreEtfWeight.toFixed(1)}% ควรเพิ่ม VTI/VOO`;
@@ -18261,29 +18390,43 @@
             }
 
             let dcaBudgetTHB = 6500;
+            let fxSafe = (typeof liveFxRate === 'number' && liveFxRate > 0) ? liveFxRate : 33.47;
+            let vtiPrice = (typeof getEffectiveMarketPrice === 'function' ? getEffectiveMarketPrice('VTI', 352.41).price : 352.41) || 352.41;
+            let vxusPrice = (typeof getEffectiveMarketPrice === 'function' ? getEffectiveMarketPrice('VXUS', 77.93).price : 77.93) || 77.93;
+            let jepqPrice = (typeof getEffectiveMarketPrice === 'function' ? getEffectiveMarketPrice('JEPQ', 53.63).price : 53.63) || 53.63;
+
+            let dca1USD = 3250 / fxSafe;
+            let dca2USD = 1950 / fxSafe;
+            let dca3USD = 1300 / fxSafe;
+
             let dcaBlueprintHtml = `
                 <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
                     <div class="d-flex align-items-center gap-2">
                         <span class="fs-5">💡</span>
                         <strong class="text-body" style="font-size: 0.95rem;">DCA Smart Blueprint: แผนจัดสรรเงินออม ฿${dcaBudgetTHB.toLocaleString('th-TH')} ประจำเดือน</strong>
                     </div>
-                    <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-2.5 py-1 fw-bold">
-                        🎯 Rebalance แบบไม่ต้องขาย (No-Tax DCA)
-                    </span>
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-2.5 py-1 fw-bold">
+                            🎯 Rebalance แบบไม่ต้องขาย (No-Tax DCA)
+                        </span>
+                        <button type="button" class="btn btn-xs btn-primary rounded-pill px-2.5 py-1 fw-bold" style="font-size: 0.74rem;" onclick="openDCAPlanner()">
+                            ⚖️ คำนวณ DCA ปรับงบเอง ›
+                        </button>
+                    </div>
                 </div>
                 <div class="text-muted small mb-3">
-                    กระจายเงินทุนใหม่เข้าสู่สินทรัพย์ที่น้ำหนักยังต่ำกว่าเป้าหมาย (Underweight) ช่วยปรับสมดุลพอร์ตอัตโนมัติโดยไม่ต้องเสียภาษีหรือค่าธรรมเนียมจากการขาย
+                    กระจายเงินทุนใหม่เข้าสู่สินทรัพย์ที่น้ำหนักยังต่ำกว่าเป้าหมาย (Underweight) ช่วยปรับสมดุลพอร์ตอัตโนมัติโดยไม่ต้องเสียภาษีหรือค่าธรรมเนียมจากการขาย (อิงเรท ฿${fxSafe.toFixed(2)}/USD)
                 </div>
                 <div class="row g-2">
                     <div class="col-md-4 col-12">
                         <div class="p-2.5 rounded-3 border bg-body d-flex align-items-center justify-content-between shadow-sm">
                             <div>
                                 <div class="fw-bold text-primary">VTI (Core US ETF)</div>
-                                <small class="text-muted">สัดส่วน 50% ของงบ DCA</small>
+                                <small class="text-muted">สัดส่วน 50% • ≈ ${(dca1USD / vtiPrice).toFixed(4)} หุ้น</small>
                             </div>
-                            <div class="text-end">
+                            <div class="text-end tabular-nums">
                                 <strong class="text-success fw-bolder">฿3,250</strong>
-                                <div class="text-muted" style="font-size: 0.72rem;">≈ $97.10 USD</div>
+                                <div class="text-muted" style="font-size: 0.72rem;">≈ $${dca1USD.toFixed(2)} USD</div>
                             </div>
                         </div>
                     </div>
@@ -18291,11 +18434,11 @@
                         <div class="p-2.5 rounded-3 border bg-body d-flex align-items-center justify-content-between shadow-sm">
                             <div>
                                 <div class="fw-bold text-primary">VXUS / SCHD</div>
-                                <small class="text-muted">สัดส่วน 30% ของงบ DCA</small>
+                                <small class="text-muted">สัดส่วน 30% • ≈ ${(dca2USD / vxusPrice).toFixed(4)} หุ้น</small>
                             </div>
-                            <div class="text-end">
+                            <div class="text-end tabular-nums">
                                 <strong class="text-success fw-bolder">฿1,950</strong>
-                                <div class="text-muted" style="font-size: 0.72rem;">≈ $58.26 USD</div>
+                                <div class="text-muted" style="font-size: 0.72rem;">≈ $${dca2USD.toFixed(2)} USD</div>
                             </div>
                         </div>
                     </div>
@@ -18303,11 +18446,11 @@
                         <div class="p-2.5 rounded-3 border bg-body d-flex align-items-center justify-content-between shadow-sm">
                             <div>
                                 <div class="fw-bold text-primary">JEPQ / หุ้นรายตัว</div>
-                                <small class="text-muted">สัดส่วน 20% ของงบ DCA</small>
+                                <small class="text-muted">สัดส่วน 20% • ≈ ${(dca3USD / jepqPrice).toFixed(4)} หุ้น</small>
                             </div>
-                            <div class="text-end">
+                            <div class="text-end tabular-nums">
                                 <strong class="text-success fw-bolder">฿1,300</strong>
-                                <div class="text-muted" style="font-size: 0.72rem;">≈ $38.84 USD</div>
+                                <div class="text-muted" style="font-size: 0.72rem;">≈ $${dca3USD.toFixed(2)} USD</div>
                             </div>
                         </div>
                     </div>
@@ -18355,27 +18498,86 @@
                 </div>
             `).join('');
 
-            let corePct = Math.max(0, Math.min(100, coreEtfWeight || 35));
-            let stockPct = Math.max(0, Math.min(100 - corePct, stockWeight || 35));
-            let satPct = Math.max(0, Math.min(100 - corePct - stockPct, satWeight || 15));
-            let divPct = Math.max(0, 100 - corePct - stockPct - satPct);
+            let hasHoldings = holdings.length > 0 && totalMktUSD > 0;
+            let corePct = hasHoldings ? Math.max(0, coreEtfWeight) : 35;
+            let stockPct = hasHoldings ? Math.max(0, stockWeight) : 35;
+            let satPct = hasHoldings ? Math.max(0, satWeight) : 15;
+            let divPct = hasHoldings ? Math.max(0, divWeight) : 15;
 
             let sortedHoldings = [...holdings].sort((a, b) => b.mktValueUSD - a.mktValueUSD).slice(0, 5);
-            let topHoldingsHtml = sortedHoldings.map((it, idx) => `
-                <div class="d-flex justify-content-between align-items-center p-2 rounded-3 border bg-body-tertiary">
+            let topHoldingsHtml = sortedHoldings.map((it, idx) => {
+                let itSign = it.plUSD >= 0 ? '+' : '-';
+                let itPlClass = it.plUSD >= 0 ? 'text-success' : 'text-danger';
+                return `
+                <div class="d-flex justify-content-between align-items-center p-2 px-2.5 rounded-3 border bg-body-tertiary cursor-pointer" onclick="openTechnicalForTicker('${it.ticker}')" title="คลิกเพื่อดูกราฟเทคนิค ${it.ticker}">
                     <div class="d-flex align-items-center gap-2 overflow-hidden">
-                        <span class="badge bg-secondary rounded-circle" style="width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.68rem;">${idx + 1}</span>
-                        <strong class="text-body">${it.ticker}</strong>
-                        <span class="text-muted text-truncate" style="font-size: 0.78rem; max-width: 150px;">${it.fullName}</span>
+                        <span class="badge bg-secondary rounded-circle flex-shrink-0" style="width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.68rem;">${idx + 1}</span>
+                        <img src="https://assets.parqet.com/logos/symbol/${it.ticker.replace('.', '-')}" class="rounded-circle border bg-white p-0.5 flex-shrink-0" width="26" height="26" style="object-fit: contain;" onerror="this.style.display='none'">
+                        <div class="overflow-hidden">
+                            <div class="d-flex align-items-center gap-1.5">
+                                <strong class="text-body" style="font-size: 0.88rem;">${it.ticker}</strong>
+                                <span class="text-muted text-truncate" style="font-size: 0.75rem; max-width: 140px;">${it.fullName}</span>
+                            </div>
+                            <small class="text-muted d-block tabular-nums" style="font-size: 0.7rem;">${it.shares.toFixed(4)} หุ้น • ล่าสุด $${it.curPrice.toFixed(2)}</small>
+                        </div>
                     </div>
-                    <div class="text-end">
-                        <div class="fw-bold text-body" style="font-size: 0.85rem;">$${it.mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
-                        <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25" style="font-size: 0.68rem;">${it.weightPct.toFixed(1)}%</span>
+                    <div class="text-end flex-shrink-0 tabular-nums">
+                        <div class="fw-bold text-body overview-kpi-privacy" style="font-size: 0.86rem;">$${it.mktValueUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
+                        <div class="d-flex align-items-center justify-content-end gap-1">
+                            <small class="fw-bold ${itPlClass} overview-kpi-privacy" style="font-size: 0.72rem;">${itSign}${Math.abs(it.plPercent).toFixed(2)}%</small>
+                            <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25" style="font-size: 0.68rem;">${it.weightPct.toFixed(1)}%</span>
+                        </div>
                     </div>
                 </div>
-            `).join('');
+            `}).join('');
+
+            // Build Live Market Pulse Bar for Tab 01 Overview
+            const mktStatus = (typeof getUSMarketStatus === 'function') ? getUSMarketStatus() : { text: 'ตลาดสหรัฐฯ', badgeClass: 'bg-secondary text-white' };
+            const nasdaqMode = localStorage.getItem('myNasdaqMode') || '^NDX';
+            const isNdx = (nasdaqMode === '^NDX');
+            const nasdaqKey = isNdx ? '^NDX' : '^IXIC';
+            const nasdaqLabel = isNdx ? 'Nasdaq 100' : 'Nasdaq Comp';
+
+            const renderIdxPill = (sym, label, isNasdaq = false) => {
+                const d = (typeof marketIndices === 'object' && marketIndices && marketIndices[sym]) ? marketIndices[sym] : null;
+                if (!d || !d.price) return '';
+                const chg = typeof d.change === 'number' ? d.change : (d.price - (d.prevClose || d.price));
+                const pct = typeof d.changePct === 'number' ? d.changePct : ((chg / (d.prevClose || d.price)) * 100);
+                const isUp = chg >= 0;
+                const sign = isUp ? '+' : '';
+                const arrow = isUp ? '▲' : '▼';
+                const badgeCls = isUp ? 'index-badge-up' : 'index-badge-down';
+                const switchBtn = isNasdaq
+                    ? `<button type="button" class="btn btn-xs btn-outline-secondary py-0 px-1 border-0 text-muted ms-1" onclick="toggleNasdaqIndex(event)" title="สลับระหว่าง Nasdaq 100 (^NDX) กับ Nasdaq Composite (^IXIC)" style="font-size: 0.65rem; border-radius: 4px; line-height: 1.2; background: rgba(0,0,0,0.04);">🔄 100/Comp</button>`
+                    : '';
+                return `
+                    <div class="market-index-chip d-flex align-items-center gap-1.5 py-1 px-2.5 rounded-pill" onclick="refreshMarketIndices(true)" title="คลิกเพื่อรีเฟรชดัชนีสด">
+                        <span class="fw-bold text-nowrap" style="font-size: 0.8rem;">${label}</span>
+                        <span class="fw-bolder text-nowrap tabular-nums" style="font-size: 0.83rem;">${Number(d.price).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
+                        <span class="badge rounded-pill fw-bold text-nowrap tabular-nums ${badgeCls}" style="font-size: 0.7rem;">${arrow} ${sign}${pct.toFixed(2)}%</span>
+                        ${switchBtn}
+                    </div>
+                `;
+            };
 
             container.innerHTML = `
+                <!-- Live US Market Pulse Bar on Overview -->
+                <div class="market-indices-bar mb-3 p-2 px-3 rounded-4 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge rounded-pill bg-dark text-white px-2.5 py-1" style="font-size: 0.72rem; letter-spacing: 0.4px;">🇺🇸 US MARKET PULSE</span>
+                        <span class="badge rounded-pill px-2.5 py-1 fw-bold ${mktStatus.badgeClass}" style="font-size: 0.72rem;">${mktStatus.text}</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        ${renderIdxPill('^DJI', '🇺🇸 Dow Jones')}
+                        ${renderIdxPill('^GSPC', '🇺🇸 S&P 500')}
+                        ${renderIdxPill(nasdaqKey, '🇺🇸 ' + nasdaqLabel, true)}
+                        <div class="market-index-chip d-flex align-items-center gap-1.5 py-1 px-2.5 rounded-pill" onclick="onSwitchViewTab('PORTFOLIO')" title="อัตราแลกเปลี่ยน USD/THB">
+                            <span class="fw-bold text-nowrap" style="font-size: 0.8rem;">💵 USD/THB</span>
+                            <span class="fw-bolder text-primary text-nowrap tabular-nums" style="font-size: 0.83rem;">฿${fxSafe.toFixed(2)}</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Executive KPI Row -->
                 <div class="row g-3 mb-4">
                     <div class="col-xl-3 col-sm-6">
@@ -18384,8 +18586,8 @@
                                 <span class="overview-kpi-label">มูลค่าพอร์ตรวม (Net Worth)</span>
                                 <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-0.5" style="font-size:0.7rem;">ALL PORTS</span>
                             </div>
-                            <div class="overview-kpi-val text-primary">$${totalMktUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
-                            <div class="overview-kpi-sub text-muted">≈ ฿${totalMktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</div>
+                            <div class="overview-kpi-val text-primary overview-kpi-privacy">$${totalMktUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
+                            <div class="overview-kpi-sub text-muted overview-kpi-privacy">≈ ฿${totalMktTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-6">
@@ -18394,8 +18596,8 @@
                                 <span class="overview-kpi-label">ต้นทุนรวม (Cost Basis)</span>
                                 <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-2 py-0.5" style="font-size:0.7rem;">INVESTED</span>
                             </div>
-                            <div class="overview-kpi-val">$${totalCostUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
-                            <div class="overview-kpi-sub text-muted">≈ ฿${totalCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</div>
+                            <div class="overview-kpi-val overview-kpi-privacy">$${totalCostUSD.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
+                            <div class="overview-kpi-sub text-muted overview-kpi-privacy">≈ ฿${totalCostTHB.toLocaleString('th-TH', {minimumFractionDigits: 2})}</div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-6">
@@ -18404,8 +18606,8 @@
                                 <span class="overview-kpi-label">กำไร/ขาดทุนรวม (Total P/L)</span>
                                 <span class="badge rounded-pill px-2 py-0.5 ${plBadgeBg}" style="font-size:0.7rem;">UNREALIZED</span>
                             </div>
-                            <div class="overview-kpi-val ${plColorClass}">${plSign}$${Math.abs(plUSD).toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
-                            <div class="overview-kpi-sub ${plColorClass}">≈ ${plSign}฿${Math.abs(plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2})} (${plSign}${Math.abs(plPercent).toFixed(2)}%)</div>
+                            <div class="overview-kpi-val ${plColorClass} overview-kpi-privacy">${plSign}$${Math.abs(plUSD).toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
+                            <div class="overview-kpi-sub ${plColorClass} overview-kpi-privacy">≈ ${plSign}฿${Math.abs(plTHB).toLocaleString('th-TH', {minimumFractionDigits: 2})} (${plSign}${Math.abs(plPercent).toFixed(2)}%)</div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-6">
@@ -18480,31 +18682,32 @@
                             <div class="alloc-bar-wrapper mb-3">
                                 <div class="alloc-bar-core" style="width: ${corePct.toFixed(1)}%;" title="Core ETF: ${corePct.toFixed(1)}%"></div>
                                 <div class="alloc-bar-stock" style="width: ${stockPct.toFixed(1)}%;" title="US Stocks: ${stockPct.toFixed(1)}%"></div>
-                                <div class="alloc-bar-cash" style="width: ${(satPct + divPct).toFixed(1)}%;" title="Satellite & Dividend: ${(satPct + divPct).toFixed(1)}%"></div>
+                                <div class="alloc-bar-sat" style="width: ${satPct.toFixed(1)}%;" title="Satellite ETF: ${satPct.toFixed(1)}%"></div>
+                                <div class="alloc-bar-retire" style="width: ${divPct.toFixed(1)}%;" title="Retirement: ${divPct.toFixed(1)}%"></div>
                             </div>
                             <div class="row g-2">
                                 <div class="col-6 col-sm-3">
-                                    <div class="p-2 rounded-3 border bg-body-tertiary text-center">
-                                        <small class="text-muted d-block" style="font-size: 0.72rem;">Core ETF</small>
-                                        <strong class="text-primary">${corePct.toFixed(1)}%</strong>
+                                    <div class="p-2.5 rounded-3 border bg-body-tertiary text-center cursor-pointer" onclick="selectPortfolio('core'); onSwitchViewTab('PORTFOLIO');" title="คลิกเพื่อดูพอร์ต Core ETF">
+                                        <small class="text-muted d-block" style="font-size: 0.72rem;"><span style="color:#3b82f6;">●</span> Core ETF</small>
+                                        <strong class="text-primary tabular-nums">${corePct.toFixed(1)}%</strong>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-3">
-                                    <div class="p-2 rounded-3 border bg-body-tertiary text-center">
-                                        <small class="text-muted d-block" style="font-size: 0.72rem;">US Stocks</small>
-                                        <strong style="color: #8b5cf6;">${stockPct.toFixed(1)}%</strong>
+                                    <div class="p-2.5 rounded-3 border bg-body-tertiary text-center cursor-pointer" onclick="selectPortfolio('stocks'); onSwitchViewTab('PORTFOLIO');" title="คลิกเพื่อดูพอร์ต US Stocks">
+                                        <small class="text-muted d-block" style="font-size: 0.72rem;"><span style="color:#8b5cf6;">●</span> US Stocks</small>
+                                        <strong class="tabular-nums" style="color: #8b5cf6;">${stockPct.toFixed(1)}%</strong>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-3">
-                                    <div class="p-2 rounded-3 border bg-body-tertiary text-center">
-                                        <small class="text-muted d-block" style="font-size: 0.72rem;">Satellite ETF</small>
-                                        <strong class="text-success">${satPct.toFixed(1)}%</strong>
+                                    <div class="p-2.5 rounded-3 border bg-body-tertiary text-center cursor-pointer" onclick="selectPortfolio('satellite'); onSwitchViewTab('PORTFOLIO');" title="คลิกเพื่อดูพอร์ต Satellite ETF">
+                                        <small class="text-muted d-block" style="font-size: 0.72rem;"><span style="color:#10b981;">●</span> Satellite ETF</small>
+                                        <strong class="text-success tabular-nums">${satPct.toFixed(1)}%</strong>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-3">
-                                    <div class="p-2 rounded-3 border bg-body-tertiary text-center">
-                                        <small class="text-muted d-block" style="font-size: 0.72rem;">Retirement</small>
-                                        <strong class="text-warning">${divPct.toFixed(1)}%</strong>
+                                    <div class="p-2.5 rounded-3 border bg-body-tertiary text-center cursor-pointer" onclick="selectPortfolio('retirement'); onSwitchViewTab('PORTFOLIO');" title="คลิกเพื่อดูพอร์ต Retirement">
+                                        <small class="text-muted d-block" style="font-size: 0.72rem;"><span style="color:#f59e0b;">●</span> Retirement</small>
+                                        <strong class="text-warning tabular-nums">${divPct.toFixed(1)}%</strong>
                                     </div>
                                 </div>
                             </div>
@@ -18727,71 +18930,17 @@
                 if (p2) p2.style.display = 'block';
                 if (b2) { b2.classList.add('active'); b2.classList.remove('text-muted'); }
                 if (b1) { b1.classList.remove('active'); b1.classList.add('text-muted'); }
+                if (typeof populateGeminiDeepDiveSelect === 'function') {
+                    const curVal = document.getElementById('geminiInlineDeepDiveTickerSelect')?.value;
+                    populateGeminiDeepDiveSelect(curVal || 'NVDA');
+                }
             }
         };
 
         window.runInlineGeminiDeepDive = function() {
-            const selTk = document.getElementById('geminiInlineDeepDiveTickerSelect');
-            const selMode = document.getElementById('geminiInlineDeepDiveMode');
-            const area = document.getElementById('geminiInlineDeepDiveResultArea');
-            if (!area) return;
-
-            let ticker = selTk ? selTk.value : 'VTI';
-            let mode = selMode ? selMode.value : 'COMPREHENSIVE';
-
-            area.innerHTML = `
-                <div class="text-center py-4">
-                    <div class="spinner-border text-primary mb-2" role="status"></div>
-                    <div class="fw-bold text-body">Gemini AI กำลังวิเคราะห์ ${ticker} ในโหมด ${mode}...</div>
-                    <small class="text-muted">กำลังดึงข้อมูลราคา ปัจจัยขับเคลื่อน และโครงสร้างความเสี่ยง</small>
-                </div>
-            `;
-
-            setTimeout(() => {
-                let curPrice = (typeof marketPrices !== 'undefined' && marketPrices[ticker]) ? marketPrices[ticker] : 285.50;
-                area.innerHTML = `
-                    <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom flex-wrap gap-2">
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="fs-4">🤖</span>
-                            <div>
-                                <h5 class="fw-bold m-0">${ticker} • บทวิเคราะห์สดจาก Gemini AI</h5>
-                                <small class="text-muted">ราคาปัจจุบัน: $${curPrice.toFixed(2)} | สถานะ: โครงสร้างราคาแข็งแกร่ง</small>
-                            </div>
-                        </div>
-                        <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-3 py-1 fw-bold">
-                            🟢 AI Signal: ACCUMULATE / STRONG BUY
-                        </span>
-                    </div>
-                    <div class="row g-2 mb-3">
-                        <div class="col-md-6 col-12">
-                            <div class="p-2.5 rounded-3 bg-success bg-opacity-10 border border-success border-opacity-25 h-100">
-                                <strong class="text-success d-block mb-1">💡 ปัจจัยหนุนสำคัญ (Key Growth Catalysts):</strong>
-                                <ul class="small m-0 ps-3 text-body" style="line-height: 1.5;">
-                                    <li>เป็นหัวใจหลักในการสะสมความมั่งคั่งระยะยาว กระจายตัวครอบคลุมบริษัทชั้นนำ</li>
-                                    <li>โมเมนตัมผลประกอบการเติบโตต่อเนื่องตามทิศทางเศรษฐกิจสหรัฐฯ</li>
-                                    <li>อัตราการเติบโตของกระแสเงินสดและนวัตกรรมมีความยืดหยุ่นสูง</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="p-2.5 rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 h-100">
-                                <strong class="text-danger d-block mb-1">⚠️ ปัจจัยเสี่ยงที่ต้องติดตาม (Key Risks):</strong>
-                                <ul class="small m-0 ps-3 text-body" style="line-height: 1.5;">
-                                    <li>ความผันผวนจากตัวเลขอัตราดอกเบี้ยและนโยบายการเงินของเฟด</li>
-                                    <li>หากเกิดความเสี่ยงทางภูมิรัฐศาสตร์ อาจเกิดการปรับฐานระยะสั้น 5-10%</li>
-                                    <li>การประเมินมูลค่า (Valuation) อยู่ในระดับพรีเมียมในหุ้นกลุ่มเทคขนาดใหญ่</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-2.5 rounded-3 bg-body border">
-                        <strong class="text-primary d-block mb-1">🎯 คำแนะนำเชิงกลยุทธ์ (Actionable Strategy):</strong>
-                        <p class="small text-muted m-0" style="line-height: 1.5;">
-                            แนะนำให้ใช้กลยุทธ์ <strong>Dollar-Cost Averaging (DCA)</strong> ทยอยสะสมอย่างสม่ำเสมอ โดยแบ่งเงินตามแผน DCA Smart Blueprint ช่วยลดความเสี่ยงจากความผันผวนระยะสั้น และเพิ่มผลตอบแทนทบต้นในระยะยาว 5-10 ปีขึ้นไป
-                        </p>
-                    </div>
-                `;
-            }, 600);
+            if (typeof executeGeminiDeepDive === 'function') {
+                executeGeminiDeepDive(true);
+            }
         };
 
         window.openTechnicalForTicker = function(ticker) {
@@ -21011,16 +21160,22 @@
         };
 
         function updateGeminiApiStatusBadge() {
-            const badge = document.getElementById('geminiApiStatusBadge');
+            const badges = [
+                document.getElementById('geminiApiStatusBadge'),
+                document.getElementById('geminiInlineApiStatusBadge')
+            ];
             const key = localStorage.getItem('gemini_api_key');
-            if (!badge) return;
-            if (key && key.trim().length > 10) {
-                badge.className = 'badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold';
-                badge.innerText = '🟢 เชื่อมต่อ Gemini Live API';
-            } else {
-                badge.className = 'badge rounded-pill bg-primary-subtle text-primary border border-primary-subtle fw-bold';
-                badge.innerText = '✨ พร้อมใช้งาน (AI Synthesis Engine)';
-            }
+            const isLive = (key && key.trim().length > 10);
+            badges.forEach(badge => {
+                if (!badge) return;
+                if (isLive) {
+                    badge.className = 'badge rounded-pill bg-success-subtle text-success border border-success-subtle fw-bold';
+                    badge.innerText = '🟢 เชื่อมต่อ Gemini Live API';
+                } else {
+                    badge.className = 'badge rounded-pill bg-primary-subtle text-primary border border-primary-subtle fw-bold';
+                    badge.innerText = '✨ พร้อมใช้งาน (AI Synthesis Engine)';
+                }
+            });
         }
 
         window.switchGeminiSignalsTab = function(tabName) {
@@ -21054,20 +21209,33 @@
 
         window.filterGeminiAiPicks = function(category) {
             currentGeminiFilter = category;
-            ['btnGemFilter_ALL', 'btnGemFilter_BUY', 'btnGemFilter_GROWTH', 'btnGemFilter_DEFENSIVE'].forEach(id => {
-                const btn = document.getElementById(id);
-                if (btn) btn.classList.remove('active');
+            ['ALL', 'BUY', 'GROWTH', 'DEFENSIVE'].forEach(cat => {
+                const modalBtn = document.getElementById('btnGemFilter_' + cat);
+                const inlineBtn = document.getElementById('btnInlineGemFilter_' + cat);
+                if (modalBtn) modalBtn.classList.toggle('active', cat === category);
+                if (inlineBtn) inlineBtn.classList.toggle('active', cat === category);
             });
-            const activeId = 'btnGemFilter_' + category;
-            const activeBtn = document.getElementById(activeId);
-            if (activeBtn) activeBtn.classList.add('active');
             renderGeminiAiPicks();
+        };
+
+        window.launchGeminiDeepDiveForTicker = function(ticker) {
+            const modalEl = document.getElementById('geminiSignalsModal');
+            const isModalShown = modalEl && modalEl.classList.contains('show');
+            if (isModalShown) {
+                switchGeminiSignalsTab('DEEP_DIVE');
+                populateGeminiDeepDiveSelect(ticker);
+                executeGeminiDeepDive(false);
+            } else {
+                switchInlineGeminiTab('DEEP_DIVE');
+                populateGeminiDeepDiveSelect(ticker);
+                executeGeminiDeepDive(true);
+            }
         };
 
         window.renderGeminiAiPicks = function() {
             const container = document.getElementById('geminiPicksContainer');
             const inlineContainer = document.getElementById('geminiInlinePicksContainer');
-            if (!container) return;
+            if (!container && !inlineContainer) return;
 
             let list = [...GEMINI_TOP_PICKS];
             if (currentGeminiFilter === 'BUY') {
@@ -21081,7 +21249,10 @@
             let html = '';
             list.forEach((item, idx) => {
                 let livePrice = item.price;
-                if (typeof marketPrices !== 'undefined' && marketPrices[item.ticker] && marketPrices[item.ticker] > 0) {
+                if (typeof getEffectiveMarketPrice === 'function') {
+                    const eff = getEffectiveMarketPrice(item.ticker, item.price);
+                    if (eff && eff.price > 0) livePrice = eff.price;
+                } else if (typeof marketPrices !== 'undefined' && marketPrices[item.ticker] && marketPrices[item.ticker] > 0) {
                     livePrice = marketPrices[item.ticker];
                 }
                 const isPos = item.change >= 0;
@@ -21111,7 +21282,7 @@
                                 </div>
                             </div>
                             <div class="d-flex align-items-center gap-3">
-                                <div class="text-end">
+                                <div class="text-end tabular-nums">
                                     <div class="fw-bolder fs-6">$${livePrice.toFixed(2)}</div>
                                     <small class="fw-bold" style="color: ${chgColor}; font-size: 0.74rem;">${isPos ? '▲' : '▼'} ${sign}${item.change.toFixed(2)}%</small>
                                 </div>
@@ -21141,17 +21312,17 @@
 
                         <!-- Trade Plan & Action Buttons -->
                         <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pt-2 border-top bg-light-subtle rounded-3 p-2">
-                            <div class="d-flex align-items-center gap-3 flex-wrap small">
+                            <div class="d-flex align-items-center gap-3 flex-wrap small tabular-nums">
                                 <div><span class="text-muted fw-bold">🎯 ซื้อช่วง:</span> <span class="fw-bold text-primary">${item.entryZone}</span></div>
                                 <div><span class="text-muted fw-bold">🛑 Stop Loss:</span> <span class="fw-bold text-danger">${item.stopLoss}</span></div>
                                 <div><span class="text-muted fw-bold">🚀 Take Profit:</span> <span class="fw-bold text-success">${item.takeProfit}</span></div>
                                 <div><span class="text-muted fw-bold">⚖️ R:R:</span> <span class="badge bg-light text-dark border fw-bold">${item.rr}</span></div>
                             </div>
                             <div class="d-flex align-items-center gap-1.5 ms-auto">
-                                <button type="button" class="btn btn-xs btn-outline-primary rounded-pill fw-bold px-2.5 py-1" onclick="bootstrap.Modal.getInstance(document.getElementById('geminiSignalsModal')).hide(); openTechnicalForTicker('${item.ticker}');">
+                                <button type="button" class="btn btn-xs btn-outline-primary rounded-pill fw-bold px-2.5 py-1" onclick="bootstrap.Modal.getInstance(document.getElementById('geminiSignalsModal'))?.hide(); openTechnicalForTicker('${item.ticker}');">
                                     📈 ดูกราฟเทคนิค
                                 </button>
-                                <button type="button" class="btn btn-xs btn-gradient-ai rounded-pill fw-bold px-3 py-1" onclick="switchGeminiSignalsTab('DEEP_DIVE'); populateGeminiDeepDiveSelect('${item.ticker}'); executeGeminiDeepDive();">
+                                <button type="button" class="btn btn-xs btn-gradient-ai rounded-pill fw-bold px-3 py-1" onclick="launchGeminiDeepDiveForTicker('${item.ticker}');">
                                     <span class="gemini-sparkle">✨</span> วิเคราะห์สด
                                 </button>
                             </div>
@@ -21165,22 +21336,51 @@
         };
 
         function populateGeminiDeepDiveSelect(defaultTicker) {
-            const sel = document.getElementById('geminiDeepDiveTickerSelect');
-            if (!sel) return;
+            const selModal = document.getElementById('geminiDeepDiveTickerSelect');
+            const selInline = document.getElementById('geminiInlineDeepDiveTickerSelect');
+            if (!selModal && !selInline) return;
 
+            let seen = new Set();
             let tickers = [];
-            if (typeof top100StocksData !== 'undefined') {
-                tickers = top100StocksData.map(x => ({ ticker: x.ticker, name: x.name }));
-            } else {
-                tickers = GEMINI_TOP_PICKS.map(x => ({ ticker: x.ticker, name: x.name }));
+            const addTk = (tk, name) => {
+                if (!tk || seen.has(tk)) return;
+                seen.add(tk);
+                tickers.push({ ticker: tk, name: name || (typeof stockNames === 'object' && stockNames[tk]) || tk });
+            };
+
+            // 1. Add user's held tickers first
+            if (typeof transactions !== 'undefined' && Array.isArray(transactions)) {
+                transactions.forEach(t => {
+                    if (t && t.ticker && t.type === 'BUY') {
+                        let clean = t.ticker.trim().toUpperCase();
+                        addTk(clean, (typeof stockNames === 'object' && stockNames[clean]) || clean);
+                    }
+                });
             }
+            // 2. Add Top 100 Stocks & Top ETFs
+            if (typeof top100StocksData !== 'undefined') {
+                top100StocksData.forEach(x => addTk(x.ticker, x.name));
+            }
+            if (typeof topEtfsData !== 'undefined') {
+                topEtfsData.forEach(x => addTk(x.ticker, x.name));
+            }
+            GEMINI_TOP_PICKS.forEach(x => addTk(x.ticker, x.name));
 
             let optHtml = '';
             tickers.forEach(item => {
                 optHtml += `<option value="${item.ticker}">${item.ticker} - ${item.name}</option>`;
             });
-            sel.innerHTML = optHtml;
-            if (defaultTicker) sel.value = defaultTicker;
+
+            if (selModal) {
+                const prev = defaultTicker || selModal.value || 'NVDA';
+                selModal.innerHTML = optHtml;
+                if (seen.has(prev)) selModal.value = prev;
+            }
+            if (selInline) {
+                const prevInline = defaultTicker || selInline.value || 'VTI';
+                selInline.innerHTML = optHtml;
+                if (seen.has(prevInline)) selInline.value = prevInline;
+            }
         }
 
         window.onGeminiDeepDiveTickerChanged = function(ticker) {
@@ -21351,13 +21551,17 @@ ${modeDirective}
    - **คำแนะนำสำหรับพอร์ตของคุณโดยเฉพาะ:** ให้คำแนะนำที่เจาะจงกับข้อมูลพอร์ตที่ระบุไว้ข้างต้น (กรณีมีหุ้นอยู่แล้วควร Let Profit Run หรือขายล็อกกำไร หรือกรณีไม่มีควรแบ่งไม้ซื้ออย่างไร)`;
         }
 
-        window.executeGeminiDeepDive = async function() {
-            const sel = document.getElementById('geminiDeepDiveTickerSelect');
-            const resArea = document.getElementById('geminiDeepDiveResultArea');
+        window.executeGeminiDeepDive = async function(isInline = false) {
+            const sel = document.getElementById(isInline ? 'geminiInlineDeepDiveTickerSelect' : 'geminiDeepDiveTickerSelect');
+            const resArea = document.getElementById(isInline ? 'geminiInlineDeepDiveResultArea' : 'geminiDeepDiveResultArea');
             if (!sel || !resArea) return;
 
             const ticker = sel.value;
-            const mode = document.getElementById('geminiDeepDiveMode')?.value || 'FULL';
+            let rawMode = document.getElementById(isInline ? 'geminiInlineDeepDiveMode' : 'geminiDeepDiveMode')?.value || 'FULL';
+            if (rawMode === 'COMPREHENSIVE') rawMode = 'FULL';
+            else if (rawMode === 'TECHNICAL_ONLY') rawMode = 'TECHNICAL';
+            else if (rawMode === 'CATALYST_RISK') rawMode = 'RISK';
+            const mode = rawMode;
             const rankedItem = (typeof top100StocksData !== 'undefined' ? top100StocksData.find(x => x.ticker === ticker) : null)
                 || (typeof topEtfsData !== 'undefined' ? topEtfsData.find(x => x.ticker === ticker) : null)
                 || GEMINI_TOP_PICKS.find(x => x.ticker === ticker);
@@ -21562,7 +21766,7 @@ ${modeDirective}
                             <span class="badge rounded-pill ${apiKey ? 'bg-success' : 'bg-primary'} px-3 py-1.5 fw-bold shadow-2xs">
                                 ${apiKey ? '🟢 Gemini Live AI' : '✨ Gemini Synthesis Engine'}
                             </span>
-                            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="executeGeminiDeepDive()">
+                            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="executeGeminiDeepDive(${isInline ? 'true' : 'false'})">
                                 🔄 วิเคราะห์ใหม่
                             </button>
                         </div>
@@ -21584,7 +21788,7 @@ ${modeDirective}
                         <div class="small text-muted">
                             🛡️ <em>คำเตือน: บทวิเคราะห์นี้สร้างโดยระบบ AI เพื่อใช้เป็นข้อมูลเชิงปริมาณประกอบการตัดสินใจ ไม่ใช่คำแนะนำชี้ชวนทางการเงิน</em>
                         </div>
-                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill fw-bold px-3" onclick="bootstrap.Modal.getInstance(document.getElementById('geminiSignalsModal')).hide(); openTechnicalForTicker('${ticker}');">
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill fw-bold px-3" onclick="bootstrap.Modal.getInstance(document.getElementById('geminiSignalsModal'))?.hide(); openTechnicalForTicker('${ticker}');">
                             📈 ดูกราฟแท่งเทียน & Technical
                         </button>
                     </div>
