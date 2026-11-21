@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-21T12:29:42Z",
-  "updated_at_thai": "21 พ.ย. 2569 19:29 น.",
+  "updated_at": "2026-11-21T16:54:02Z",
+  "updated_at_thai": "21 พ.ย. 2569 23:54 น.",
   "fx": {
     "USDTHB": 33.96
   },
@@ -56,8 +56,8 @@
     },
     "^NDX": {
       "price": 25028.98,
-      "prevClose": 26517.05,
-      "change": -1488.07,
+      "prevClose": 26517.1,
+      "change": -1488.12,
       "changePct": -5.61,
       "name": "NDX 100"
     }
