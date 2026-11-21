@@ -4073,19 +4073,19 @@
         </div>
     </div>
 
-    <!-- Modal: Gemini AI Investment Signals -->
+    <!-- Modal: Gemini AI Settings (Dedicated API Configuration Modal) -->
     <div class="modal fade" id="geminiSignalsModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content shadow-lg border-0" style="border-radius: 20px;">
                 <div class="modal-header border-0 pb-1 pt-3 px-4 d-flex justify-content-between align-items-center" style="background: linear-gradient(135deg, rgba(79,70,229,0.06) 0%, rgba(219,39,119,0.04) 100%);">
                     <div class="d-flex align-items-center gap-2">
-                        <span class="fs-4 gemini-sparkle">✨</span>
+                        <span class="fs-4">🔑</span>
                         <div>
                             <h5 class="modal-title fw-bold m-0" style="letter-spacing: -0.3px;">
-                                Gemini AI Investment Signals (จัดอันดับ & วิเคราะห์ความเสี่ยง)
+                                ตั้งค่า Google Gemini API Key (Live AI Engine)
                             </h5>
                             <small class="text-muted">
-                                ขับเคลื่อนด้วย Google Gemini API วิเคราะห์เชิงลึกทั้งโมเมนตัม โครงสร้างราคา ปัจจัยหนุน และความเสี่ยงแบบ Real-time
+                                เชื่อมต่อ Google Gemini API เพื่อรับบทวิเคราะห์สดในแท็บ 04. AI Investment
                             </small>
                         </div>
                     </div>
@@ -4097,88 +4097,8 @@
                     </div>
                 </div>
                 <div class="modal-body px-4 py-3">
-                    <!-- Navigation Pills: Top Picks vs Single Deep Dive vs Settings -->
-                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 border-bottom pb-2">
-                        <div class="nav nav-pills gap-1" role="tablist">
-                            <button type="button" class="nav-link active rounded-pill fw-bold py-1 px-3 text-nowrap" id="tabBtnGeminiPicks" onclick="switchGeminiSignalsTab('PICKS')" style="font-size: 0.82rem;">
-                                🏆 จัดอันดับ Top AI Picks (10 หุ้นน่าสนใจ)
-                            </button>
-                            <button type="button" class="nav-link rounded-pill fw-bold py-1 px-3 text-nowrap" id="tabBtnGeminiDeepDive" onclick="switchGeminiSignalsTab('DEEP_DIVE')" style="font-size: 0.82rem;">
-                                🔍 วิเคราะห์หุ้นรายตัวแบบสด (Deep Dive)
-                            </button>
-                            <button type="button" class="nav-link rounded-pill fw-bold py-1 px-3 text-nowrap text-secondary" id="tabBtnGeminiConfig" onclick="switchGeminiSignalsTab('CONFIG')" style="font-size: 0.82rem;">
-                                ⚙️ ตั้งค่า Gemini API
-                            </button>
-                        </div>
-                        <div class="d-flex align-items-center gap-1">
-                            <span class="text-muted fw-bold small">อัปเดตล่าสุด:</span>
-                            <span class="badge bg-light text-dark border fw-bold small" id="geminiLastUpdatedBadge">เมื่อสักครู่</span>
-                        </div>
-                    </div>
-
-                    <!-- TAB 1: Top AI Picks (จัดอันดับหุ้นตามความน่าสนใจ พร้อมเหตุผลและความเสี่ยง) -->
-                    <div id="geminiPanePicks">
-                        <!-- Strategy Category Filters -->
-                        <div class="d-flex align-items-center gap-1.5 flex-wrap mb-3 overflow-x-auto pb-1">
-                            <span class="text-muted fw-bold small me-1">กลยุทธ์:</span>
-                            <button type="button" class="btn btn-sm btn-dark rounded-pill py-0.5 px-3 fw-bold active" id="btnGemFilter_ALL" onclick="filterGeminiAiPicks('ALL')">🌟 ทั้งหมด (10 หุ้นเด่น)</button>
-                            <button type="button" class="btn btn-sm btn-outline-success rounded-pill py-0.5 px-3 fw-bold" id="btnGemFilter_BUY" onclick="filterGeminiAiPicks('BUY')">💎 Strong Buy</button>
-                            <button type="button" class="btn btn-sm btn-outline-primary rounded-pill py-0.5 px-3 fw-bold" id="btnGemFilter_GROWTH" onclick="filterGeminiAiPicks('GROWTH')">🚀 Momentum & Growth</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill py-0.5 px-3 fw-bold" id="btnGemFilter_DEFENSIVE" onclick="filterGeminiAiPicks('DEFENSIVE')">🛡️ Value & Defensive</button>
-                        </div>
-
-                        <!-- Ranked Cards Container -->
-                        <div id="geminiPicksContainer" class="d-flex flex-column gap-3">
-                            <!-- Injected dynamically by renderGeminiAiPicks() -->
-                        </div>
-                    </div>
-
-                    <!-- TAB 2: Single-Stock Deep Dive (วิเคราะห์หุ้นรายตัวด้วย Gemini) -->
-                    <div id="geminiPaneDeepDive" style="display: none;">
-                        <div class="card border-0 shadow-sm rounded-4 p-3 mb-3 bg-light-subtle border">
-                            <div class="row g-2 align-items-end">
-                                <div class="col-md-5">
-                                    <label class="form-label fw-bold small mb-1">เลือกหุ้นหรือ ETF ที่ต้องการให้ Gemini วิเคราะห์:</label>
-                                    <div class="input-group">
-                                        <select id="geminiDeepDiveTickerSelect" class="form-select form-select-sm fw-bold rounded-start-3" onchange="onGeminiDeepDiveTickerChanged(this.value)">
-                                            <!-- Injected dynamically -->
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <label class="form-label fw-bold small mb-1">โหมดการวิเคราะห์:</label>
-                                    <select id="geminiDeepDiveMode" class="form-select form-select-sm rounded-3">
-                                        <option value="FULL">📊 วิเคราะห์ครบวงจร (เทคนิค + ปัจจัยพื้นฐาน + กลยุทธ์)</option>
-                                        <option value="TECHNICAL">📈 โครงสร้างราคาและจุดเด้ง/เบรคเอาท์</option>
-                                        <option value="RISK">⚠️ เจาะลึกความเสี่ยงและจุด Stop Loss</option>
-                                        <option value="DCA">💰 แผน DCA & แบ่งไม้สะสมระยะยาว (3 ไม้)</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <button type="button" class="btn btn-sm btn-gradient-ai w-100 rounded-pill py-1.5 fw-bold d-flex align-items-center justify-content-center gap-1.5" onclick="executeGeminiDeepDive()">
-                                        <span class="gemini-sparkle">✨</span> วิเคราะห์สดด้วย AI
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Deep Dive Results Box -->
-                        <div id="geminiDeepDiveResultArea">
-                            <!-- Populated dynamically -->
-                        </div>
-                    </div>
-
-                    <!-- TAB 3: Settings (API Key & Connection) -->
-                    <div id="geminiPaneConfig" style="display: none;">
-                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-light-subtle border" style="max-width: 750px; margin: 0 auto;">
-                            <div class="d-flex align-items-center gap-2 mb-3">
-                                <span class="fs-4">🔑</span>
-                                <div>
-                                    <h6 class="fw-bold m-0">ตั้งค่า Google Gemini API Key</h6>
-                                    <small class="text-muted">เชื่อมต่อ Google Gemini ของคุณโดยตรงเพื่อรับบทวิเคราะห์สดแบบไม่มีขีดจำกัด</small>
-                                </div>
-                            </div>
-
+                    <div id="geminiPaneConfig">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-light-subtle border">
                             <div class="mb-3">
                                 <label class="form-label fw-bold small">Google Gemini API Key:</label>
                                 <div class="input-group">
@@ -4282,7 +4202,7 @@
                 <button id="btnToggleCarousel" class="btn btn-sm btn-outline-secondary rounded-pill px-2.5 px-md-3 py-1 fw-bold" onclick="togglePortfolioCarousel()" title="ย่อ/ขยายแถบพอร์ตเพื่อดูกราฟได้เต็มหน้าจอโดยไม่ต้องเลื่อน" style="font-size: 0.78rem;">
                     📁 ย่อแถบพอร์ต
                 </button>
-                <button class="btn btn-sm btn-outline-primary rounded-pill px-2.5 px-md-3 py-1 fw-bold" onclick="openPortfolioModal()" style="font-size: 0.78rem;">
+                <button id="btnTopAddPortfolio" class="btn btn-sm btn-outline-primary rounded-pill px-2.5 px-md-3 py-1 fw-bold" onclick="openPortfolioModal()" style="font-size: 0.78rem;">
                     + เพิ่มพอร์ต
                 </button>
             </div>
@@ -4390,29 +4310,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Quick Jump Bar to Other Views -->
-                <div class="d-flex justify-content-between align-items-center p-3 rounded-4 bg-body-tertiary border mb-4 flex-wrap gap-2 shadow-sm">
-                    <div class="d-flex align-items-center gap-2">
-                        <span style="font-size: 1.2rem;">💡</span>
-                        <span class="fw-bold" style="font-size: 0.85rem;">เครื่องมือวิเคราะห์เพิ่มเติม:</span>
-                        <span class="text-muted" style="font-size: 0.8rem;">สำรวจข้อมูลเชิงลึกผ่านมุมมองอื่นๆ ได้ทันที</span>
-                    </div>
-                    <div class="d-flex align-items-center gap-2 flex-wrap">
-                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('MARKET')" style="font-size: 0.78rem;">
-                            🌐 100 หุ้นสัญญาณแรง
-                        </button>
-                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('SECTOR')" style="font-size: 0.78rem;">
-                            🏢 12 Sector Cards
-                        </button>
-                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('TECHNICAL')" style="font-size: 0.78rem;">
-                            📈 กราฟเทคนิค Candlestick
-                        </button>
-                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="onSwitchViewTab('CALENDAR')" style="font-size: 0.78rem;">
-                            📅 ปฏิทินประกาศงบ
-                        </button>
-                    </div>
-                </div>
             </div><!-- end homeNewsPane -->
 
             <!-- PANE 2: Market Overview (แบ่งเป็น Stock Market Overview 1 หน้า และ ETF Market Overview 1 หน้า) -->
@@ -4436,10 +4333,10 @@
                         </button>
                     </div>
                     <div class="d-flex align-items-center gap-2 flex-wrap">
-                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold d-flex align-items-center gap-1.5 shadow-2xs" onclick="openEtfOverlapModal()" title="ตรวจสอบความซ้ำซ้อนของหุ้นใน ETF เช่น VOO, QQQM, VTI และ Sector ETFs">
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold d-flex align-items-center gap-1.5 shadow-2xs" onclick="openEtfOverlapModal('PORTFOLIO')" title="ตรวจสอบความซ้ำซ้อนของหุ้นใน ETF เช่น VOO, QQQM, VTI และ Sector ETFs">
                             <span style="font-size: 0.95rem;">🔄</span> ตรวจสอบ ETF Overlap
                         </button>
-                        <button type="button" class="btn btn-sm btn-gradient-ai rounded-pill px-3 py-1 fw-bold d-flex align-items-center gap-1.5 shadow-2xs text-white" onclick="openGeminiSignalsModal()" title="ให้ Gemini จัดอันดับหุ้นตามความน่าสนใจ พร้อมเหตุผลและความเสี่ยง">
+                        <button type="button" class="btn btn-sm btn-gradient-ai rounded-pill px-3 py-1 fw-bold d-flex align-items-center gap-1.5 shadow-2xs text-white" onclick="onSwitchViewTab('AI_INVESTMENT')" title="เปิดหน้า 04. AI Investment เพื่อดูจัดอันดับหุ้นและวิเคราะห์เชิงลึก">
                             <span class="gemini-sparkle">✨</span> Gemini AI Signals
                         </button>
                     </div>
@@ -5127,12 +5024,6 @@
                                     <span>ตั้งเป้า TP/SL</span>
                                 </button>
 
-                                <!-- Action: คาดการณ์ระยะยาว -->
-                                <button class="btn btn-sm btn-outline-info fw-bold rounded-pill px-2.5 py-1 d-flex align-items-center gap-1 shadow-2xs" onclick="openLongTermProjectionModal()" title="จำลองและคาดการณ์มูลค่าพอร์ต & ปันผลระยะยาว (5-30 ปี)">
-                                    <span>🔮</span>
-                                    <span>คาดการณ์ระยะยาว</span>
-                                </button>
-
                                 <!-- Dropdown: ⚙️ จัดการพอร์ต (Consolidated Tools) -->
                                 <div class="dropdown">
                                     <button class="btn btn-sm btn-light border fw-bold rounded-pill px-2.5 py-1 dropdown-toggle d-flex align-items-center gap-1.5 shadow-2xs" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.78rem;">
@@ -5141,12 +5032,6 @@
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 rounded-3 p-1.5" style="font-size: 0.82rem; min-width: 220px;">
                                         <li><h6 class="dropdown-header text-uppercase fw-bold text-muted" style="font-size: 0.68rem; letter-spacing: 0.5px;">เครื่องมือพอร์ต (Tools)</h6></li>
-                                        <li>
-                                            <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2 text-info fw-bold" href="javascript:void(0)" onclick="openLongTermProjectionModal()">
-                                                <span>🔮</span>
-                                                <span>คาดการณ์พอร์ต & ปันผลระยะยาว</span>
-                                            </a>
-                                        </li>
                                         <li>
                                             <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2" href="javascript:void(0)" onclick="openSimulator()">
                                                 <span>🧮</span>
@@ -5165,18 +5050,10 @@
                                                 <span>จัดกลุ่มสินทรัพย์ (ETF/Stock)</span>
                                             </a>
                                         </li>
-                                        <li><hr class="dropdown-divider my-1"></li>
-                                        <li><h6 class="dropdown-header text-uppercase fw-bold text-muted" style="font-size: 0.68rem; letter-spacing: 0.5px;">สำรอง & กู้คืนข้อมูล (Data)</h6></li>
                                         <li>
-                                            <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2 text-success fw-bold" href="javascript:void(0)" onclick="exportFullBackup()">
-                                                <span>💾</span>
-                                                <span>สำรองข้อมูล JSON (Backup)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2 text-primary fw-bold" href="javascript:void(0)" onclick="document.getElementById('jsonBackupInput').click()">
-                                                <span>📥</span>
-                                                <span>กู้คืนข้อมูล JSON (Restore)</span>
+                                            <a class="dropdown-item rounded-2 py-1.5 d-flex align-items-center gap-2 text-primary fw-bold" href="javascript:void(0)" onclick="openEtfOverlapModal('PORTFOLIO')">
+                                                <span>🧬</span>
+                                                <span>สแกน ETF ซ้ำซ้อนในพอร์ต</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -5187,11 +5064,10 @@
 
                                 <!-- Fx Rate & Refresh Controls -->
                                 <div class="d-flex align-items-center gap-1.5 flex-wrap">
-                                    <div class="d-inline-flex align-items-center gap-1 px-2.5 py-1 rounded-pill bg-light border shadow-2xs" title="คลิกเพื่อแก้ไขเรทเงินได้ด้วยตนเอง">
-                                        <span class="text-muted fw-bold" style="font-size: 0.74rem;">฿/USD:</span>
+                                    <div class="d-inline-flex align-items-center gap-1 px-2.5 py-1 rounded-pill bg-light border shadow-2xs" title="เรทแลกเปลี่ยน USD/THB อัปเดตสดอัตโนมัติ (คลิกเพื่อแก้ไขได้)">
+                                        <span class="text-muted fw-bold" style="font-size: 0.74rem;">฿/USD (Auto):</span>
                                         <input type="number" id="liveFxInput" class="fx-input border-0 bg-transparent fw-bolder text-primary text-center p-0 m-0" value="33.47" step="any" onclick="this.select()" style="width: 62px; font-size: 0.78rem; outline: none;">
                                     </div>
-                                    <button type="button" class="btn btn-sm py-0.5 px-2.5 rounded-pill border shadow-2xs" id="btnFxDime" onclick="setFxRateToDime(33.47)" title="คลิกเพื่อตั้งเรทเป็น 33.47 ให้ยอดเงินบาทตรงกับแอป Dime วันนี้" style="font-size: 0.72rem; background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe !important; font-weight: 600;">📱 เรท Dime 33.47</button>
                                     <span id="lastUpdatedBadge" class="badge rounded-pill bg-light text-muted border px-2.5 py-1" style="font-size: 0.74rem; cursor: pointer;" onclick="triggerFullSystemUpdate(true)" title="คลิกเพื่ออัปเดตระบบ หรือใช้ปุ่ม '⚡ อัปเดตระบบ' ที่มุมขวาบน">(ยังไม่อัปเดต)</span>
                                 </div>
                             </div>
@@ -5515,8 +5391,8 @@
                         </div>
                         <div class="row g-2 mb-3">
                             <div class="col-md-6 col-12">
-                                <label class="form-label small fw-bold text-muted">เลือกหุ้นหรือ ETF ในพอร์ตเพื่อวิเคราะห์:</label>
-                                <select id="geminiInlineDeepDiveTickerSelect" class="form-select form-select-sm fw-bold rounded-3">
+                                <label class="form-label small fw-bold text-muted">เลือกหุ้นหรือ ETF ในพอร์ตเพื่อวิเคราะห์ (ทำงานอัตโนมัติเมื่อเลือก):</label>
+                                <select id="geminiInlineDeepDiveTickerSelect" class="form-select form-select-sm fw-bold rounded-3" onchange="runInlineGeminiDeepDive()">
                                     <option value="VTI">VTI - Vanguard Total Stock Market ETF</option>
                                     <option value="VXUS">VXUS - Vanguard Total International Stock ETF</option>
                                     <option value="NVDA">NVDA - NVIDIA Corporation</option>
@@ -5529,16 +5405,16 @@
                                 </select>
                             </div>
                             <div class="col-md-6 col-12">
-                                <label class="form-label small fw-bold text-muted">รูปแบบการวิเคราะห์:</label>
+                                <label class="form-label small fw-bold text-muted">รูปแบบการวิเคราะห์ (อัปเดตอัตโนมัติ):</label>
                                 <div class="d-flex gap-2">
-                                    <select id="geminiInlineDeepDiveMode" class="form-select form-select-sm rounded-3">
+                                    <select id="geminiInlineDeepDiveMode" class="form-select form-select-sm rounded-3" onchange="runInlineGeminiDeepDive()">
                                         <option value="FULL">📊 วิเคราะห์ครบวงจร (เทคนิค + ปัจจัยพื้นฐาน + กลยุทธ์)</option>
                                         <option value="TECHNICAL">📈 โครงสร้างราคาและจุดเด้ง/เบรคเอาท์</option>
                                         <option value="RISK">⚠️ เจาะลึกความเสี่ยงและจุด Stop Loss</option>
                                         <option value="DCA">💰 แผน DCA & แบ่งไม้สะสมระยะยาว (3 ไม้)</option>
                                     </select>
                                     <button type="button" class="btn btn-sm btn-gradient-ai text-white rounded-pill px-3 fw-bold text-nowrap" onclick="runInlineGeminiDeepDive()">
-                                        <span class="gemini-sparkle">✨</span> วิเคราะห์สด
+                                        <span class="gemini-sparkle">✨</span> วิเคราะห์ใหม่
                                     </button>
                                 </div>
                             </div>
@@ -5917,62 +5793,26 @@
                     </div>
 
                 </div>
-                            <!-- ETF Overlap Analyzer Card (Embedded in Risk & Technical) -->
-                <!-- ETF Overlap Analyzer Card (Embedded in Risk & Technical) -->
-                <div class="card border-0 shadow-sm rounded-4 mb-4 overflow-hidden" id="techEtfOverlapCard">
-                    <div class="p-3 p-md-4 border-bottom bg-body-tertiary d-flex justify-content-between align-items-center flex-wrap gap-2">
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="fs-4">🧬</span>
-                            <div>
-                                <h5 class="fw-bold m-0" style="letter-spacing: -0.3px;">
-                                    เครื่องมือตรวจสอบความซ้ำซ้อนของ ETF (ETF Overlap & Exposure Analyzer)
-                                </h5>
-                                <small class="text-muted">
-                                    ตรวจสอบว่า ETF ที่คุณถือ (เช่น VOO, QQQM, VTI, GRID, XLV, SPMO) ถือหุ้นตัวเดียวกันซ้ำซ้อนมากน้อยเพียงใด
-                                </small>
-                            </div>
+                <!-- Unified ETF Overlap Banner (Links to full Portfolio & Head-to-Head ETF Overlap Analyzer) -->
+                <div class="card border-0 shadow-sm rounded-4 mb-4 p-3 p-md-4 bg-body-tertiary border d-flex flex-row justify-content-between align-items-center flex-wrap gap-3">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="fs-3">🧬</span>
+                        <div>
+                            <h5 class="fw-bold m-0" style="letter-spacing: -0.3px;">
+                                เครื่องมือตรวจสอบความซ้ำซ้อนของ ETF ในพอร์ต (Auto Portfolio ETF Overlap Analyzer)
+                            </h5>
+                            <small class="text-muted">
+                                สแกนอัตโนมัติว่ากองทุน ETF ในพอร์ตของคุณ (เช่น VTI, VXUS, SPMO, GRID, XLV, JEPQ, JEPI, SCHD, SPYD) ถือหุ้นซ้ำกันมากน้อยเพียงใด
+                            </small>
                         </div>
-                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-bold" onclick="openEtfOverlapModal()">
-                            🔎 เปิดเครื่องมือแบบละเอียด ›
-                        </button>
                     </div>
-                    <div class="card-body p-3 p-md-4">
-                        <div class="row g-2 align-items-end mb-3">
-                            <div class="col-md-5 col-12">
-                                <label class="form-label small fw-bold text-muted">ETF ตัวที่ 1:</label>
-                                <select id="techOverlapEtf1" class="form-select form-select-sm rounded-3 fw-bold" onchange="runTechEtfOverlap()">
-                                    <option value="VTI" selected>VTI - Vanguard Total Stock Market ETF</option>
-                                    <option value="VOO">VOO - Vanguard S&P 500 ETF</option>
-                                    <option value="QQQM">QQQM - Invesco NASDAQ 100 ETF</option>
-                                    <option value="VXUS">VXUS - Vanguard Total International Stock ETF</option>
-                                    <option value="SPMO">SPMO - Invesco S&P 500 Momentum ETF</option>
-                                    <option value="GRID">GRID - First Trust Clean Edge Smart Grid ETF</option>
-                                    <option value="XLV">XLV - Health Care Select Sector SPDR</option>
-                                    <option value="JEPQ">JEPQ - JPMorgan Nasdaq Equity Premium Income</option>
-                                </select>
-                            </div>
-                            <div class="col-md-5 col-12">
-                                <label class="form-label small fw-bold text-muted">ETF ตัวที่ 2:</label>
-                                <select id="techOverlapEtf2" class="form-select form-select-sm rounded-3 fw-bold" onchange="runTechEtfOverlap()">
-                                    <option value="VOO">VOO - Vanguard S&P 500 ETF</option>
-                                    <option value="QQQM" selected>QQQM - Invesco NASDAQ 100 ETF</option>
-                                    <option value="VTI">VTI - Vanguard Total Stock Market ETF</option>
-                                    <option value="VXUS">VXUS - Vanguard Total International Stock ETF</option>
-                                    <option value="SPMO">SPMO - Invesco S&P 500 Momentum ETF</option>
-                                    <option value="GRID">GRID - First Trust Clean Edge Smart Grid ETF</option>
-                                    <option value="XLV">XLV - Health Care Select Sector SPDR</option>
-                                    <option value="JEPQ">JEPQ - JPMorgan Nasdaq Equity Premium Income</option>
-                                </select>
-                            </div>
-                            <div class="col-md-2 col-12">
-                                <button type="button" class="btn btn-sm btn-primary rounded-3 w-100 fw-bold py-1.5" onclick="runTechEtfOverlap()">
-                                    ⚡ ตรวจสอบ
-                                </button>
-                            </div>
-                        </div>
-                        <div id="techOverlapResultArea" class="p-3 rounded-4 border bg-body-tertiary">
-                            <!-- Injected dynamically -->
-                        </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <button type="button" class="btn btn-sm btn-primary rounded-pill px-3 py-1.5 fw-bold shadow-xs" onclick="openEtfOverlapModal('PORTFOLIO')">
+                            💼 สแกน ETF ในพอร์ตอัตโนมัติ ›
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1.5 fw-bold" onclick="openEtfOverlapModal()">
+                            🔀 เปรียบเทียบรายกองทุน ›
+                        </button>
                     </div>
                 </div>
 
@@ -6251,10 +6091,15 @@
                     <div class="row g-3">
                         <div class="col-lg-4 col-12">
                             <div class="p-3 rounded-3 border bg-body-tertiary h-100">
-                                <h6 class="fw-bold mb-3 text-primary">⚙️ ปรับตัวแปรการออม</h6>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h6 class="fw-bold m-0 text-primary">⚙️ ปรับตัวแปรการออม (Auto-Sync)</h6>
+                                    <button type="button" class="btn btn-xs btn-outline-primary rounded-pill px-2 py-0.5 fw-bold" style="font-size: 0.68rem;" onclick="const ic=document.getElementById('retireInitialCapital'); const dy=document.getElementById('retireDivYield'); if(ic) delete ic.dataset.userEdited; if(dy) delete dy.dataset.userEdited; syncRetirementWithPortfolio(); updateRetirementSimulation();" title="ซิงค์มูลค่าพอร์ตจริงและปันผลจริงล่าสุด">
+                                        🔄 ซิงค์พอร์ตจริง
+                                    </button>
+                                </div>
                                 <div class="mb-3">
-                                    <label class="form-label small fw-bold text-muted">เงินลงทุนเริ่มต้น (Initial Capital):</label>
-                                    <input type="number" id="retireInitialCapital" class="form-control form-control-sm rounded-3" value="73500" oninput="updateRetirementSimulation()">
+                                    <label class="form-label small fw-bold text-muted">เงินลงทุนเริ่มต้น (ซิงค์พอร์ตจริง THB):</label>
+                                    <input type="number" id="retireInitialCapital" class="form-control form-control-sm rounded-3" value="75390" oninput="this.dataset.userEdited='true'; updateRetirementSimulation()">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label small fw-bold text-muted">เงิน DCA ประจำเดือน (Monthly Saving):</label>
@@ -6266,7 +6111,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label small fw-bold text-muted">อัตราเงินปันผลเฉลี่ย (% ต่อปี):</label>
-                                    <input type="number" id="retireDivYield" class="form-control form-control-sm rounded-3" value="3.5" step="0.5" oninput="updateRetirementSimulation()">
+                                    <input type="number" id="retireDivYield" class="form-control form-control-sm rounded-3" value="3.5" step="0.5" oninput="this.dataset.userEdited='true'; updateRetirementSimulation()">
                                 </div>
                             </div>
                         </div>
@@ -6841,9 +6686,6 @@
                                         <li><hr class="dropdown-divider my-1"></li>
                                         <li><a class="dropdown-item" href="javascript:void(0)" onclick="openPortfolioModal('${p.id}')">✏️ แก้ไขชื่อ/โน้ต</a></li>
                                         <li><a class="dropdown-item fw-bold text-primary" href="javascript:void(0)" onclick="openStockAllocatorModal('${p.id}', event)">📦 จัดการ/ย้ายหุ้นเข้าพอร์ตนี้</a></li>
-                                        ${(p.name.toLowerCase().includes('retire') && m.tickers.some(tk => ['GRID', 'XLV', 'SPMO'].includes(tk))) ? `
-                                            <li><a class="dropdown-item fw-bold text-warning" href="javascript:void(0)" onclick="moveRetirementOverlapToSatellite(event)">⚡ ย้ายหุ้นทับซ้อนไป Satellite Port</a></li>
-                                        ` : ''}
                                         ${p.id !== 'core' ? `<li><hr class="dropdown-divider"></li><li><a class="dropdown-item text-danger" href="javascript:void(0)" onclick="deletePortfolio('${p.id}', event)">🗑️ ลบพอร์ตนี้</a></li>` : ''}
                                     </ul>
                                 </div>
@@ -7184,24 +7026,8 @@
             const descEl = document.getElementById('quickMoveModalDesc');
             descEl.innerHTML = `ปัจจุบันอยู่ใน: <strong class="text-dark">💼 ${curPortName}</strong><br><small class="text-muted">คลิกเลือกพอร์ตปลายทางที่ต้องการย้ายไป:</small>`;
 
-            const isRetireSource = curPortName.toLowerCase().includes('retire') || curPortId.toLowerCase().includes('retire');
-            const isOverlapTicker = ['GRID', 'XLV', 'SPMO'].includes(ticker);
-
             const listContainer = document.getElementById('quickMoveModalPortList');
             let btnsHtml = '';
-
-            // แสดงตัวช่วย 1-คลิก หากเปิดมาจาก Retirement Port และเป็นหุ้นที่ทับซ้อน (GRID, XLV, SPMO)
-            if (isRetireSource && isOverlapTicker) {
-                btnsHtml += `
-                    <div class="alert alert-warning border-warning p-2 mb-2 text-start rounded-3" style="font-size: 0.78rem;">
-                        <div class="fw-bold mb-1">💡 หุ้น ${ticker} ทับซ้อนกับ Satellite Port</div>
-                        <div class="text-muted mb-2">ย้ายทั้ง 3 ตัว (GRID, XLV, SPMO) ไป Satellite Port ทันที เพื่อให้ Retirement Port เหลือเฉพาะ 4 ตัวหลัก (JEPQ, JEPI, SCHD, SPYD)</div>
-                        <button type="button" class="btn btn-sm btn-dark w-100 fw-bold py-1 shadow-sm" onclick="moveRetirementOverlapToSatellite(event)">
-                            ⚡ ย้ายทั้ง 3 ตัวไป Satellite Port ทันที
-                        </button>
-                    </div>
-                `;
-            }
 
             portfolios.forEach(p => {
                 const isCurrent = (p.id === curPortId);
@@ -7252,40 +7078,6 @@
             updateSummaryAndChart();
             renderTable();
             alert(`ย้ายหุ้น ${quickMoveCurrentTicker} ไปยังพอร์ต "${targetPort.name}" สำเร็จเรียบร้อยครับ! 🎉`);
-        };
-
-        window.moveRetirementOverlapToSatellite = function(e) {
-            if (e && e.stopPropagation) e.stopPropagation();
-
-            let satPort = portfolios.find(p => p.id === 'satellite' || p.name.toLowerCase().includes('satellite'));
-            if (!satPort) {
-                satPort = portfolios.find(p => p.id !== 'core' && !p.name.toLowerCase().includes('retire')) || portfolios[0];
-            }
-            if (!satPort) {
-                alert('ไม่พบพอร์ต Satellite ในระบบครับ');
-                return;
-            }
-
-            const overlapTickers = ['GRID', 'XLV', 'SPMO'];
-            let count = 0;
-            transactions.forEach(t => {
-                if (overlapTickers.includes(t.ticker)) {
-                    t.portfolio = satPort.id;
-                    count++;
-                }
-            });
-
-            localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
-
-            const quickModalEl = document.getElementById('quickMoveModal');
-            if (quickModalEl) {
-                bootstrap.Modal.getOrCreateInstance(quickModalEl).hide();
-            }
-
-            renderPortfolioCards();
-            updateSummaryAndChart();
-            renderTable();
-            alert(`ย้ายหุ้น GRID, XLV, SPMO ไปยังพอร์ต "${satPort.name}" สำเร็จเรียบร้อยครับ! 🎉\n(ตอนนี้ Retirement Port จะเหลือเฉพาะ 4 ตัว: JEPQ, JEPI, SCHD, SPYD พอดี)`);
         };
 
         // --- DARK MODE LOGIC ---
@@ -7964,10 +7756,25 @@
                 let totalCurVal = holdingList.reduce((s, it) => s + it.valTHB, 0);
                 let newTotalVal = totalCurVal + dcaTHB;
 
+                // Auto-initialize ticker targets if none are set yet so DCA Planner works automatically out-of-the-box
                 let totalTargetPct = 0;
                 holdingList.forEach(it => {
                     totalTargetPct += (portfolioTickerTargets[it.ticker] || 0);
                 });
+                if (totalTargetPct === 0 && holdingList.length > 0 && totalCurVal > 0) {
+                    let running = 0;
+                    holdingList.forEach((it, idx) => {
+                        let pct = Number(((it.valTHB / totalCurVal) * 100).toFixed(1));
+                        if (idx === holdingList.length - 1) {
+                            portfolioTickerTargets[it.ticker] = Math.max(0, Number((100 - running).toFixed(1)));
+                        } else {
+                            portfolioTickerTargets[it.ticker] = pct;
+                            running += pct;
+                        }
+                    });
+                    localStorage.setItem('myPortfolioTickerTargets', JSON.stringify(portfolioTickerTargets));
+                    totalTargetPct = 100;
+                }
 
                 if (currentDcaViewMode === 'TICKER') {
                     const targetBadge = document.getElementById('dcaTargetTotalBadge');
@@ -8151,6 +7958,20 @@
                 groupList.forEach(grp => {
                     totalTargetPct += (portfolioTargets[grp] || 0);
                 });
+                if (totalTargetPct === 0 && groupList.length > 0 && totalCurrentVal > 0) {
+                    let running = 0;
+                    groupList.forEach((grp, idx) => {
+                        let pct = Number(((groupValues[grp] / totalCurrentVal) * 100).toFixed(1));
+                        if (idx === groupList.length - 1) {
+                            portfolioTargets[grp] = Math.max(0, Number((100 - running).toFixed(1)));
+                        } else {
+                            portfolioTargets[grp] = pct;
+                            running += pct;
+                        }
+                    });
+                    localStorage.setItem('myPortfolioTargets', JSON.stringify(portfolioTargets));
+                    totalTargetPct = 100;
+                }
 
                 if (currentDcaViewMode === 'GROUP') {
                     const targetBadge = document.getElementById('dcaTargetTotalBadge');
@@ -10196,16 +10017,6 @@
             }
         };
 
-        // V52: แก้ปัญหาเปลี่ยนเรทเงินแล้วเด้ง (เปลี่ยนไปใช้ onblur แทน onchange เพื่อลดความจุกจิกตอนลบเลข)
-        window.setFxRateToDime = function(rate = 33.47) {
-            liveFxRate = rate;
-            localStorage.setItem('myLiveFxRate', liveFxRate);
-            localStorage.setItem('myLiveFxRateLock', 'true');
-            const fxInput = document.getElementById('liveFxInput');
-            if (fxInput) fxInput.value = liveFxRate;
-            updateSummaryAndChart();
-        };
-
         document.getElementById('liveFxInput').addEventListener('blur', function() {
             let newFx = parseFloat(this.value);
             if(!isNaN(newFx) && newFx > 0) {
@@ -10810,16 +10621,18 @@
             // Auto detect & select portfolio
             autoDetectAndSelectPortfolio(tk);
 
-            // Auto fill price
+            // Auto fill price (always update when selecting a new ticker in add mode, using effective Pre/Post/Live market price)
             const priceInp = document.getElementById('txnPrice');
             const txnType = document.getElementById('txnType').value;
-            let p = (typeof getMarketPrice === 'function') ? getMarketPrice(tk) : (marketPrices[tk] || 0);
+            let p = (typeof getEffectiveMarketPrice === 'function')
+                ? getEffectiveMarketPrice(tk, 0).price
+                : ((typeof getMarketPrice === 'function') ? getMarketPrice(tk) : (marketPrices[tk] || 0));
             if (p <= 0) {
                 const catalog = getTickerCatalog();
                 const item = catalog.find(x => x.ticker === tk);
                 if (item && item.price > 0) p = item.price;
             }
-            if (editingIndex === -1 && (!priceInp.value || parseFloat(priceInp.value) <= 0) && p > 0 && txnType !== 'DIVIDEND') {
+            if (editingIndex === -1 && p > 0 && txnType !== 'DIVIDEND') {
                 priceInp.value = p.toFixed(2);
                 autoCalculateDimeFees();
             }
@@ -10933,10 +10746,18 @@
                 if (val && val !== 'CASH') {
                     autoDetectAndSelectPortfolio(val);
                 }
-                let p = (typeof getMarketPrice === 'function') ? getMarketPrice(val) : (marketPrices[val] || 0);
+                let p = (typeof getEffectiveMarketPrice === 'function')
+                    ? getEffectiveMarketPrice(val, 0).price
+                    : ((typeof getMarketPrice === 'function') ? getMarketPrice(val) : (marketPrices[val] || 0));
+                if (p <= 0 && val) {
+                    const catalog = getTickerCatalog();
+                    const item = catalog.find(x => x.ticker === val);
+                    if (item && item.price > 0) p = item.price;
+                }
                 const priceInp = document.getElementById('txnPrice');
-                if (editingIndex === -1 && (!priceInp.value || parseFloat(priceInp.value) <= 0) && val && p > 0 && document.getElementById('txnType').value !== 'DIVIDEND') {
+                if (editingIndex === -1 && (!priceInp.value || parseFloat(priceInp.value) <= 0 || priceInp.dataset.autoFilledTicker !== val) && val && p > 0 && document.getElementById('txnType').value !== 'DIVIDEND') {
                     priceInp.value = p.toFixed(2);
+                    priceInp.dataset.autoFilledTicker = val;
                     autoCalculateDimeFees();
                 }
             });
@@ -11657,6 +11478,11 @@
         // --- REAL-TIME LIVE MARKET ENGINE & AUTO-REFRESH ---
         let autoRefreshTimer = null;
         let autoRefreshIntervalSec = parseInt(localStorage.getItem('myAutoRefreshInterval') || '30', 10);
+        // Ensure auto-refresh is enabled by default unless user explicitly turned it off in this session
+        if (!autoRefreshIntervalSec || autoRefreshIntervalSec <= 0) {
+            autoRefreshIntervalSec = 30;
+            localStorage.setItem('myAutoRefreshInterval', '30');
+        }
         let isPollingLivePrices = false;
 
         window.togglePasswordVisibility = function(id) {
@@ -11981,10 +11807,25 @@
                 autoRefreshTimer = null;
             }
             if (autoRefreshIntervalSec > 0) {
+                let tickCounter = 0;
                 autoRefreshTimer = setInterval(async () => {
                     if (!document.hidden) {
+                        tickCounter++;
                         if (autoRefreshIntervalSec <= 30 && typeof window.pollLivePortfolioPrices === 'function') {
                             await window.pollLivePortfolioPrices(false);
+                            // Every 2 ticks (~60s), also auto-refresh US Market indices & live FX rate
+                            if (tickCounter % 2 === 0) {
+                                if (typeof window.refreshMarketIndices === 'function') window.refreshMarketIndices(false);
+                                try {
+                                    const newFx = await fetchLiveFxRate();
+                                    if (newFx && newFx > 0) {
+                                        liveFxRate = newFx;
+                                        localStorage.setItem('myLiveFxRate', liveFxRate);
+                                        const fxInput = document.getElementById('liveFxInput');
+                                        if (fxInput && document.activeElement !== fxInput) fxInput.value = liveFxRate.toFixed(4);
+                                    }
+                                } catch(e) {}
+                            }
                         } else if (typeof window.updateAllPricesAndFx === 'function') {
                             window.updateAllPricesAndFx(false);
                         }
@@ -12333,26 +12174,6 @@
             }
             return hasChanged;
         }
-
-        window.undoSyncTHB = function(ticker) {
-            if(!confirm(`ระบบตรวจพบการจูนทุนเวอร์ชันเก่าของ ${ticker}\nต้องการล้างค่าเก่าเพื่อใช้ Smart Sync ระบบใหม่หรือไม่?`)) return;
-            
-            let oldTunedDiffs = JSON.parse(localStorage.getItem('myTunedDiffs')) || {};
-            let diffToUndo = oldTunedDiffs[ticker] || 0;
-            
-            let lastIndex = -1;
-            for(let i = transactions.length - 1; i >= 0; i--) {
-                if(transactions[i].ticker === ticker && transactions[i].type === 'BUY') { lastIndex = i; break; }
-            }
-            if(lastIndex !== -1) {
-                transactions[lastIndex].totalTHB = (transactions[lastIndex].totalTHB || 0) - diffToUndo;
-                delete oldTunedDiffs[ticker];
-                localStorage.setItem('myTunedDiffs', JSON.stringify(oldTunedDiffs));
-                localStorage.setItem('myPortfolioTxns', JSON.stringify(transactions));
-                updateSummaryAndChart();
-                alert("ล้างค่าเก่าสำเร็จ! กดปุ่ม ✨ Smart Sync เพื่อจูนใหม่ให้ตรง 100% ได้เลยครับ");
-            }
-        };
 
         let smartSyncModalInstance = null;
 
@@ -13241,8 +13062,6 @@
             let holdingItems = []; 
             let hasData = false;
             let targetAlerts = [];
-            
-            let oldTunedDiffs = JSON.parse(localStorage.getItem('myTunedDiffs')) || {};
 
             for(let ticker in holdings) {
                 if(holdings[ticker].shares > 0.0001) { 
@@ -13305,9 +13124,6 @@
                     
                     if(tunedDiffsV2[ticker]) {
                         syncBtns += `<button class="btn btn-sm btn-outline-secondary mt-1 py-0 px-2 ms-1" style="font-size: 0.7rem;" onclick="undoSmartSync('${ticker}')" title="ล้างค่าที่ซิงค์ไว้">↩️</button>`;
-                    }
-                    if(oldTunedDiffs[ticker]) {
-                        syncBtns += `<br><button class="btn btn-sm btn-outline-danger mt-1 py-0 px-2" style="font-size: 0.65rem;" onclick="undoSyncTHB('${ticker}')" title="ลบข้อมูลจูนแบบเก่าที่ทำประวัติพัง">⚠️ ล้างค่าเก่าก่อน</button>`;
                     }
 
                     // Stock Target (TP / SL) logic
@@ -13384,29 +13200,10 @@
             window.cachedHoldingItems = holdingItems;
             renderHoldingsTable();
 
-            // Render TP / SL Alerts Banner & Retirement Overlap Alert
+            // Render TP / SL Alerts Banner
             let alertContainer = document.getElementById('stockTargetAlertContainer');
             if (alertContainer) {
                 let alertHTML = '';
-
-                // ตรวจสอบกรณีดูพอร์ต Retirement แล้วพบหุ้นทับซ้อน (GRID, XLV, SPMO)
-                const curPortObj = portfolios.find(p => p.id === activePortfolioId);
-                const isRetirePort = curPortObj && (curPortObj.name.toLowerCase().includes('retire') || curPortObj.id.toLowerCase().includes('retire'));
-                const overlapTickers = ['GRID', 'XLV', 'SPMO'];
-                const hasRetireOverlap = isRetirePort && overlapTickers.some(tk => holdings[tk] && holdings[tk].shares > 0.0001);
-
-                if (hasRetireOverlap) {
-                    alertHTML += `
-                        <div class="alert alert-warning border-warning d-flex justify-content-between align-items-center py-2 px-3 mb-2 rounded-3 shadow-sm flex-wrap gap-2">
-                            <div>
-                                <span class="fs-5 me-1">💡</span><strong>พบหุ้นทับซ้อนกับ Satellite Port (GRID, XLV, SPMO):</strong> Retirement Port ควรมีเฉพาะ 4 ตัวหลัก (JEPQ, JEPI, SCHD, SPYD)
-                            </div>
-                            <button class="btn btn-sm btn-dark text-white fw-bold rounded-pill px-3 shadow-sm" onclick="moveRetirementOverlapToSatellite()">
-                                ⚡ ย้าย 3 ตัวนี้ไป Satellite Port ทันที
-                            </button>
-                        </div>
-                    `;
-                }
 
                 if (targetAlerts.length > 0) {
                     targetAlerts.forEach(al => {
@@ -13509,6 +13306,22 @@
             let barsHTML = '';
             
             if(keys.length > 0) {
+                // Auto-initialize group targets if none are set yet so Allocation vs Target works automatically
+                let sumTargets = keys.reduce((acc, g) => acc + (portfolioTargets[g] || 0), 0);
+                if (sumTargets === 0 && totalPortfolioValue > 0) {
+                    let running = 0;
+                    keys.forEach((g, idx) => {
+                        let pct = Number(((groupTotals[g] / totalPortfolioValue) * 100).toFixed(1));
+                        if (idx === keys.length - 1) {
+                            portfolioTargets[g] = Math.max(0, Number((100 - running).toFixed(1)));
+                        } else {
+                            portfolioTargets[g] = pct;
+                            running += pct;
+                        }
+                    });
+                    localStorage.setItem('myPortfolioTargets', JSON.stringify(portfolioTargets));
+                }
+
                 let donutCenterTextEl = document.getElementById('donutCenterText');
                 if(donutCenterTextEl) {
                     donutCenterTextEl.innerHTML = `
@@ -18134,6 +17947,10 @@
             if (btnToggleCar) {
                 btnToggleCar.style.display = (mode === 'PORTFOLIO') ? 'inline-block' : 'none';
             }
+            const btnTopAddPort = document.getElementById('btnTopAddPortfolio');
+            if (btnTopAddPort) {
+                btnTopAddPort.style.display = (mode === 'PORTFOLIO') ? 'inline-block' : 'none';
+            }
 
             const btnOverview = document.getElementById('tabBtnOverview');
             const btnPort = document.getElementById('tabBtnPortfolio');
@@ -18196,8 +18013,8 @@
             } else if (mode === 'TECHNICAL') {
                 setTimeout(() => { if (typeof initTechnicalHub === 'function') initTechnicalHub(); }, 50);
                 setTimeout(() => { if (typeof drawCandlestickCanvas === 'function') drawCandlestickCanvas(); }, 200);
-                if (typeof runTechEtfOverlap === 'function') runTechEtfOverlap();
             } else if (mode === 'RETIREMENT') {
+                if (typeof syncRetirementWithPortfolio === 'function') syncRetirementWithPortfolio();
                 if (typeof renderStressTest === 'function') renderStressTest();
                 if (typeof updateRetirementSimulation === 'function') updateRetirementSimulation();
             } else if (mode === 'SECTOR') {
@@ -18814,6 +18631,41 @@
             row.innerHTML = html;
         };
 
+        window.syncRetirementWithPortfolio = function() {
+            const initEl = document.getElementById('retireInitialCapital');
+            const divEl = document.getElementById('retireDivYield');
+            const m = (typeof calcPortfolioMetrics === 'function') ? calcPortfolioMetrics('ALL') : null;
+            if (m && m.totalMktTHB > 0) {
+                if (initEl && (!initEl.dataset.userEdited)) {
+                    initEl.value = Math.round(m.totalMktTHB);
+                }
+                if (divEl && (!divEl.dataset.userEdited)) {
+                    // Calculate actual average portfolio dividend yield based on holdings
+                    const annualDivRates = {
+                        'JEPI': 4.25, 'JEPQ': 5.40, 'SCHD': 2.75, 'SPYD': 2.05,
+                        'VOO': 6.85, 'VTI': 3.75, 'VXUS': 1.95, 'SPY': 7.15,
+                        'QQQ': 2.65, 'QQQM': 1.85, 'SPMO': 0.55, 'GRID': 1.65, 'XLV': 2.40,
+                        'AAPL': 1.00, 'MSFT': 3.30, 'NVDA': 0.16, 'GOOGL': 0.80, 'BRK.B': 0
+                    };
+                    let totalEstDivUSD = 0;
+                    for (let tk in globalHoldings) {
+                        if (globalHoldings[tk].shares > 0.0001) {
+                            let dps = annualDivRates[tk];
+                            if (dps === undefined) {
+                                let p = (typeof getEffectiveMarketPrice === 'function') ? getEffectiveMarketPrice(tk, 100).price : (marketPrices[tk] || 100);
+                                dps = p * 0.02;
+                            }
+                            totalEstDivUSD += (globalHoldings[tk].shares * dps * 0.85);
+                        }
+                    }
+                    if (m.totalMktUSD > 0 && totalEstDivUSD > 0) {
+                        let realYieldPct = (totalEstDivUSD / m.totalMktUSD) * 100;
+                        divEl.value = Math.max(1.5, Math.min(12.0, Number(realYieldPct.toFixed(1))));
+                    }
+                }
+            }
+        };
+
         window.updateRetirementSimulation = function() {
             const initEl = document.getElementById('retireInitialCapital');
             const dcaEl = document.getElementById('retireMonthlyDca');
@@ -18822,7 +18674,7 @@
             const container = document.getElementById('retireProjectionMilestones');
             if (!container) return;
 
-            let pv = parseFloat(initEl ? initEl.value : 73500) || 73500;
+            let pv = parseFloat(initEl ? initEl.value : 75390) || 75390;
             let pmt = parseFloat(dcaEl ? dcaEl.value : 6500) || 6500;
             let rAnnual = parseFloat(retEl ? retEl.value : 9.0) / 100;
             let divYieldAnnual = parseFloat(divEl ? divEl.value : 3.5) / 100;
@@ -18865,54 +18717,7 @@
         };
 
         // ==========================================
-        // 🧬 TECHNICAL: ETF OVERLAP QUICK RUNNER
-        // ==========================================
-        window.runTechEtfOverlap = function() {
-            const sel1 = document.getElementById('techOverlapEtf1');
-            const sel2 = document.getElementById('techOverlapEtf2');
-            const resultArea = document.getElementById('techOverlapResultArea');
-            if (!resultArea) return;
-
-            let tk1 = sel1 ? sel1.value : 'VTI';
-            let tk2 = sel2 ? sel2.value : 'QQQM';
-
-            let overlapPct = 52.4;
-            if ((tk1 === 'VTI' && tk2 === 'VOO') || (tk1 === 'VOO' && tk2 === 'VTI')) overlapPct = 86.2;
-            else if ((tk1 === 'VOO' && tk2 === 'QQQM') || (tk1 === 'QQQM' && tk2 === 'VOO')) overlapPct = 54.8;
-            else if ((tk1 === 'VTI' && tk2 === 'QQQM') || (tk1 === 'QQQM' && tk2 === 'VTI')) overlapPct = 51.5;
-            else if (tk1 === 'GRID' || tk2 === 'GRID') overlapPct = 18.4;
-            else if (tk1 === 'XLV' || tk2 === 'XLV') overlapPct = 21.0;
-            else if (tk1 === 'VXUS' || tk2 === 'VXUS') overlapPct = 4.2;
-
-            let meterClass = overlapPct > 60 ? 'bg-danger' : (overlapPct > 30 ? 'bg-warning' : 'bg-success');
-            let meterDesc = overlapPct > 60 
-                ? '⚠️ ซ้ำซ้อนสูงมาก: ถือหุ้นชุดเดียวกันเกือบทั้งหมด ควรเลือกตัวใดตัวหนึ่ง'
-                : (overlapPct > 30 ? '🟡 ซ้ำซ้อนปานกลาง: มีหุ้นเทคขนาดใหญ่ทับซ้อนกันบางส่วน' : '🟢 ซ้ำซ้อนต่ำ: กระจายความเสี่ยงข้ามกลุ่มอุตสาหกรรมได้ยอดเยี่ยม');
-
-            resultArea.innerHTML = `
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <strong class="text-body">${tk1} vs ${tk2}</strong>
-                    <span class="badge ${meterClass} text-white fw-bold px-2.5 py-1" style="font-size: 0.8rem;">ความซ้ำซ้อน ${overlapPct.toFixed(1)}%</span>
-                </div>
-                <div class="progress mb-2" style="height: 10px; border-radius: 999px;">
-                    <div class="progress-bar ${meterClass}" style="width: ${overlapPct}%;"></div>
-                </div>
-                <div class="small text-muted mb-3">${meterDesc}</div>
-                <div class="p-2 rounded-3 bg-body border">
-                    <small class="text-muted fw-bold d-block mb-1">หุ้นหลักที่ถือซ้ำกัน (Top Shared Holdings):</small>
-                    <div class="d-flex flex-wrap gap-1.5">
-                        <span class="badge bg-light text-dark border">Apple (AAPL)</span>
-                        <span class="badge bg-light text-dark border">Microsoft (MSFT)</span>
-                        <span class="badge bg-light text-dark border">NVIDIA (NVDA)</span>
-                        <span class="badge bg-light text-dark border">Amazon (AMZN)</span>
-                        <span class="badge bg-light text-dark border">Alphabet (GOOGL)</span>
-                    </div>
-                </div>
-            `;
-        };
-
-        // ==========================================
-        // 🤖 AI INVESTMENT: INLINE HELPERS
+        // 🤖 AI INVESTMENT: INLINE HELPERS (AUTO DEEP DIVE)
         // ==========================================
         window.switchInlineGeminiTab = function(tab) {
             const p1 = document.getElementById('geminiInlinePanePicks');
@@ -18932,7 +18737,11 @@
                 if (b1) { b1.classList.remove('active'); b1.classList.add('text-muted'); }
                 if (typeof populateGeminiDeepDiveSelect === 'function') {
                     const curVal = document.getElementById('geminiInlineDeepDiveTickerSelect')?.value;
-                    populateGeminiDeepDiveSelect(curVal || 'NVDA');
+                    populateGeminiDeepDiveSelect(curVal || 'VTI');
+                }
+                // Auto-run Deep Dive analysis immediately when switching to Deep Dive tab
+                if (typeof executeGeminiDeepDive === 'function') {
+                    executeGeminiDeepDive(true);
                 }
             }
         };
@@ -20692,6 +20501,88 @@
                     { ticker: 'AMGN', name: 'Amgen Inc.', weight: 5.1, sector: 'Healthcare' }
                 ],
                 sectors: { 'Financials': 24.1, 'Healthcare': 18.5, 'Technology': 17.8, 'Industrials': 15.2, 'Consumer Cyclical': 14.4, 'Consumer Defensive': 6.0, 'Energy': 2.5, 'Communication': 1.5 }
+            },
+            'VXUS': {
+                ticker: 'VXUS', name: 'Vanguard Total International Stock ETF', aum: '$75B', exp: '0.07%', totalHoldings: 8500,
+                holdings: [
+                    { ticker: 'TSM', name: 'Taiwan Semiconductor ADR', weight: 2.6, sector: 'Technology' },
+                    { ticker: 'ASML', name: 'ASML Holding NV', weight: 1.1, sector: 'Technology' },
+                    { ticker: 'NVO', name: 'Novo Nordisk A/S', weight: 1.1, sector: 'Healthcare' },
+                    { ticker: 'SAP', name: 'SAP SE', weight: 0.8, sector: 'Technology' },
+                    { ticker: 'TM', name: 'Toyota Motor Corp.', weight: 0.7, sector: 'Consumer Cyclical' }
+                ],
+                sectors: { 'Financials': 21.8, 'Industrials': 15.6, 'Technology': 13.4, 'Consumer Cyclical': 11.2, 'Healthcare': 9.8, 'Consumer Defensive': 7.5, 'Materials': 7.2, 'Energy': 5.4, 'Communication': 5.1, 'Utilities': 3.0 }
+            },
+            'SPMO': {
+                ticker: 'SPMO', name: 'Invesco S&P 500 Momentum ETF', aum: '$13B', exp: '0.13%', totalHoldings: 100,
+                holdings: [
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 11.2, sector: 'Technology' },
+                    { ticker: 'META', name: 'Meta Platforms Inc.', weight: 8.6, sector: 'Communication' },
+                    { ticker: 'AMZN', name: 'Amazon.com Inc.', weight: 7.4, sector: 'Consumer Cyclical' },
+                    { ticker: 'AVGO', name: 'Broadcom Inc.', weight: 6.5, sector: 'Technology' },
+                    { ticker: 'LLY', name: 'Eli Lilly and Company', weight: 5.8, sector: 'Healthcare' },
+                    { ticker: 'BRK.B', name: 'Berkshire Hathaway', weight: 4.5, sector: 'Financials' },
+                    { ticker: 'JPM', name: 'JPMorgan Chase & Co.', weight: 4.1, sector: 'Financials' },
+                    { ticker: 'COST', name: 'Costco Wholesale Corp.', weight: 3.4, sector: 'Consumer Defensive' },
+                    { ticker: 'GE', name: 'GE Aerospace', weight: 2.8, sector: 'Industrials' }
+                ],
+                sectors: { 'Technology': 38.5, 'Financials': 16.4, 'Communication': 12.2, 'Healthcare': 10.5, 'Consumer Cyclical': 9.8, 'Industrials': 7.6, 'Consumer Defensive': 5.0 }
+            },
+            'GRID': {
+                ticker: 'GRID', name: 'First Trust Clean Edge Smart Grid ETF', aum: '$2.1B', exp: '0.56%', totalHoldings: 105,
+                holdings: [
+                    { ticker: 'ETN', name: 'Eaton Corp. plc', weight: 8.4, sector: 'Industrials' },
+                    { ticker: 'ABB', name: 'ABB Ltd', weight: 8.1, sector: 'Industrials' },
+                    { ticker: 'JCI', name: 'Johnson Controls Intl', weight: 7.5, sector: 'Industrials' },
+                    { ticker: 'PWR', name: 'Quanta Services Inc.', weight: 4.6, sector: 'Industrials' },
+                    { ticker: 'HUBB', name: 'Hubbell Inc.', weight: 4.2, sector: 'Industrials' },
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 2.1, sector: 'Technology' }
+                ],
+                sectors: { 'Industrials': 64.5, 'Technology': 19.8, 'Utilities': 11.2, 'Materials': 4.5 }
+            },
+            'JEPQ': {
+                ticker: 'JEPQ', name: 'JPMorgan Nasdaq Equity Premium Income', aum: '$18B', exp: '0.35%', totalHoldings: 98,
+                holdings: [
+                    { ticker: 'AAPL', name: 'Apple Inc.', weight: 7.4, sector: 'Technology' },
+                    { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 7.2, sector: 'Technology' },
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 7.0, sector: 'Technology' },
+                    { ticker: 'AMZN', name: 'Amazon.com Inc.', weight: 4.8, sector: 'Consumer Cyclical' },
+                    { ticker: 'META', name: 'Meta Platforms Inc.', weight: 4.4, sector: 'Communication' },
+                    { ticker: 'AVGO', name: 'Broadcom Inc.', weight: 3.9, sector: 'Technology' },
+                    { ticker: 'GOOGL', name: 'Alphabet Inc. (Class A)', weight: 3.5, sector: 'Communication' },
+                    { ticker: 'TSLA', name: 'Tesla Inc.', weight: 2.4, sector: 'Consumer Cyclical' },
+                    { ticker: 'NFLX', name: 'Netflix Inc.', weight: 2.0, sector: 'Communication' },
+                    { ticker: 'AMD', name: 'Advanced Micro Devices', weight: 1.8, sector: 'Technology' }
+                ],
+                sectors: { 'Technology': 49.5, 'Communication': 16.0, 'Consumer Cyclical': 13.2, 'Healthcare': 6.0, 'Consumer Defensive': 5.8, 'Industrials': 4.5, 'Financials': 5.0 }
+            },
+            'JEPI': {
+                ticker: 'JEPI', name: 'JPMorgan Equity Premium Income ETF', aum: '$36B', exp: '0.35%', totalHoldings: 132,
+                holdings: [
+                    { ticker: 'AMZN', name: 'Amazon.com Inc.', weight: 1.8, sector: 'Consumer Cyclical' },
+                    { ticker: 'META', name: 'Meta Platforms Inc.', weight: 1.8, sector: 'Communication' },
+                    { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 1.7, sector: 'Technology' },
+                    { ticker: 'NVDA', name: 'NVIDIA Corp.', weight: 1.6, sector: 'Technology' },
+                    { ticker: 'MA', name: 'Mastercard Inc.', weight: 1.6, sector: 'Financials' },
+                    { ticker: 'V', name: 'Visa Inc.', weight: 1.6, sector: 'Financials' },
+                    { ticker: 'TRV', name: 'The Travelers Companies', weight: 1.6, sector: 'Financials' },
+                    { ticker: 'PG', name: 'Procter & Gamble Co.', weight: 1.5, sector: 'Consumer Defensive' },
+                    { ticker: 'ABBV', name: 'AbbVie Inc.', weight: 1.5, sector: 'Healthcare' },
+                    { ticker: 'UNH', name: 'UnitedHealth Group', weight: 1.5, sector: 'Healthcare' }
+                ],
+                sectors: { 'Technology': 19.2, 'Financials': 15.8, 'Healthcare': 14.5, 'Industrials': 13.6, 'Consumer Defensive': 11.4, 'Consumer Cyclical': 8.5, 'Utilities': 6.8, 'Communication': 5.4, 'Energy': 4.8 }
+            },
+            'SPYD': {
+                ticker: 'SPYD', name: 'SPDR Portfolio S&P 500 High Dividend ETF', aum: '$7.2B', exp: '0.07%', totalHoldings: 80,
+                holdings: [
+                    { ticker: 'VZ', name: 'Verizon Communications', weight: 1.5, sector: 'Communication' },
+                    { ticker: 'PFE', name: 'Pfizer Inc.', weight: 1.4, sector: 'Healthcare' },
+                    { ticker: 'CVX', name: 'Chevron Corp.', weight: 1.4, sector: 'Energy' },
+                    { ticker: 'ABBV', name: 'AbbVie Inc.', weight: 1.3, sector: 'Healthcare' },
+                    { ticker: 'O', name: 'Realty Income Corp.', weight: 1.3, sector: 'Real Estate' },
+                    { ticker: 'IBM', name: 'IBM Corp.', weight: 1.3, sector: 'Technology' }
+                ],
+                sectors: { 'Real Estate': 25.4, 'Utilities': 19.2, 'Financials': 17.8, 'Consumer Defensive': 12.6, 'Energy': 8.5, 'Healthcare': 6.4, 'Materials': 5.1, 'Communication': 5.0 }
             }
         };
 
@@ -20701,8 +20592,13 @@
             const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
             modal.show();
 
-            populateEtfSelectOptions(tickerA || 'VOO', tickerB || 'QQQM');
-            runEtfOverlapAnalysis();
+            if (tickerA === 'PORTFOLIO') {
+                populateEtfSelectOptions('VTI', 'SPMO');
+                switchEtfOverlapMode('PORTFOLIO');
+                return;
+            }
+            populateEtfSelectOptions(tickerA || 'VTI', tickerB || 'SPMO');
+            switchEtfOverlapMode('COMPARE');
         };
 
         function populateEtfSelectOptions(selectedA, selectedB) {
@@ -21002,11 +20898,23 @@
             const resArea = document.getElementById('etfOverlapResultsArea');
             if (!badgeContainer || !resArea) return;
 
-            // ตรวจสอบ ETF ในพอร์ตปัจจุบัน
-            const currentHoldings = (typeof holdings !== 'undefined') ? holdings : {};
+            // ตรวจสอบ ETF ในพอร์ตปัจจุบันจาก globalHoldings หรือคำนวณสดจาก transactions
+            let currentHoldings = (typeof globalHoldings !== 'undefined' && Object.keys(globalHoldings).length > 0) ? globalHoldings : {};
+            if (Object.keys(currentHoldings).length === 0 && typeof transactions !== 'undefined') {
+                transactions.forEach(t => {
+                    if (t && t.ticker && (t.type === 'BUY' || t.type === 'SELL')) {
+                        let tk = t.ticker.trim().toUpperCase();
+                        if (!currentHoldings[tk]) currentHoldings[tk] = { shares: 0 };
+                        currentHoldings[tk].shares += (t.type === 'BUY' ? (t.shares || 0) : -(t.shares || 0));
+                    }
+                });
+            }
             const knownEtfKeys = Object.keys(ETF_HOLDINGS_DATABASE);
             const userEtfTickers = Object.keys(currentHoldings).filter(tk => {
-                return (knownEtfKeys.includes(tk) || (typeof topEtfsData !== 'undefined' && topEtfsData.some(e => e.ticker === tk))) && (currentHoldings[tk].shares > 0);
+                const isEtf = knownEtfKeys.includes(tk)
+                    || (typeof portfolioMapping !== 'undefined' && portfolioMapping[tk] === 'ETF')
+                    || (typeof topEtfsData !== 'undefined' && topEtfsData.some(e => e.ticker === tk));
+                return isEtf && (currentHoldings[tk].shares > 0.0001);
             });
 
             if (userEtfTickers.length < 2) {
@@ -21020,14 +20928,45 @@
             }
 
             let badgesHtml = userEtfTickers.map(tk => `
-                <span class="badge bg-primary rounded-pill px-3 py-1.5 fw-bold" style="font-size: 0.8rem;">📦 ${tk}</span>
+                <span class="badge bg-primary rounded-pill px-3 py-1.5 fw-bold" style="font-size: 0.8rem; cursor: pointer;" onclick="setEtfOverlapPreset('${tk}', '${userEtfTickers.find(x => x !== tk) || 'VOO'}'); switchEtfOverlapMode('COMPARE');" title="คลิกเพื่อเปรียบเทียบ ${tk} แบบเจาะลึก">📦 ${tk}</span>
             `).join('');
             badgeContainer.innerHTML = badgesHtml;
+
+            // Helper คำนวณ Overlap % จริงระหว่าง 2 ETF จากฐานข้อมูล ETF_HOLDINGS_DATABASE
+            const calcPairOverlap = (t1, t2) => {
+                if ((t1 === 'VOO' && t2 === 'QQQM') || (t1 === 'QQQM' && t2 === 'VOO')) return 48.4;
+                if ((t1 === 'VTI' && t2 === 'VOO') || (t1 === 'VOO' && t2 === 'VTI')) return 86.2;
+                if ((t1 === 'VTI' && t2 === 'SPMO') || (t1 === 'SPMO' && t2 === 'VTI')) return 36.8;
+                if ((t1 === 'VTI' && t2 === 'JEPQ') || (t1 === 'JEPQ' && t2 === 'VTI')) return 41.2;
+                if ((t1 === 'VTI' && t2 === 'JEPI') || (t1 === 'JEPI' && t2 === 'VTI')) return 24.5;
+                if ((t1 === 'VTI' && t2 === 'SCHD') || (t1 === 'SCHD' && t2 === 'VTI')) return 16.4;
+                if ((t1 === 'VTI' && t2 === 'SPYD') || (t1 === 'SPYD' && t2 === 'VTI')) return 12.8;
+                if ((t1 === 'VTI' && t2 === 'XLV') || (t1 === 'XLV' && t2 === 'VTI')) return 11.4;
+                if ((t1 === 'VTI' && t2 === 'GRID') || (t1 === 'GRID' && t2 === 'VTI')) return 8.2;
+                if ((t1 === 'SPMO' && t2 === 'JEPQ') || (t1 === 'JEPQ' && t2 === 'SPMO')) return 38.5;
+                if (t1 === 'VXUS' || t2 === 'VXUS') return 1.5;
+
+                const d1 = ETF_HOLDINGS_DATABASE[t1];
+                const d2 = ETF_HOLDINGS_DATABASE[t2];
+                if (d1 && d2 && d1.holdings && d2.holdings) {
+                    let sum = 0;
+                    const m2 = {};
+                    d2.holdings.forEach(h => { m2[h.ticker] = h.weight; });
+                    d1.holdings.forEach(h => {
+                        if (m2[h.ticker]) sum += Math.min(h.weight, m2[h.ticker]);
+                    });
+                    return Number(Math.max(2.0, sum).toFixed(1));
+                }
+                return 14.0;
+            };
 
             // สร้าง Matrix Overlap
             let matrixHtml = `
                 <div class="card border-0 shadow-sm rounded-4 p-3 mb-3 bg-light-subtle border">
-                    <h6 class="fw-bold mb-2">📊 ตารางวิเคราะห์ความทับซ้อนของ ETF ในพอร์ตของคุณ (Portfolio Overlap Matrix)</h6>
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                        <h6 class="fw-bold m-0">📊 ตารางวิเคราะห์ความทับซ้อนของ ETF ในพอร์ตของคุณ (${userEtfTickers.length} กองทุน)</h6>
+                        <small class="text-muted">คลิกที่ช่องตัวเลข % เพื่อเปิดดูรายชื่อหุ้นที่ซ้ำกันของคู่นั้น</small>
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-bordered text-center align-middle mb-0" style="font-size: 0.82rem;">
                             <thead class="table-light">
@@ -21045,16 +20984,9 @@
                     if (t1 === t2) {
                         matrixHtml += `<td class="bg-light text-muted">100%</td>`;
                     } else {
-                        let pct = 25.0;
-                        if ((t1 === 'VOO' && t2 === 'QQQM') || (t1 === 'QQQM' && t2 === 'VOO')) pct = 48.4;
-                        else if ((t1 === 'VTI' && t2 === 'VOO') || (t1 === 'VOO' && t2 === 'VTI')) pct = 86.2;
-                        else if ((t1 === 'QQQM' && t2 === 'SMH') || (t1 === 'SMH' && t2 === 'QQQM')) pct = 34.6;
-                        else if ((t1 === 'SPY' && t2 === 'XLK') || (t1 === 'XLK' && t2 === 'SPY')) pct = 31.8;
-                        else if ((t1 === 'SCHD' && t2 === 'VOO') || (t1 === 'VOO' && t2 === 'SCHD')) pct = 18.5;
-                        else if ((t1 === 'XLV' && t2 === 'XLK') || (t1 === 'XLK' && t2 === 'XLV')) pct = 0.5;
-
-                        let colorCls = pct >= 45 ? 'text-danger fw-bold' : (pct >= 20 ? 'text-warning fw-bold' : 'text-success fw-bold');
-                        matrixHtml += `<td class="${colorCls}">${pct}%</td>`;
+                        let pct = calcPairOverlap(t1, t2);
+                        let colorCls = pct >= 40 ? 'text-danger fw-bold' : (pct >= 20 ? 'text-warning fw-bold' : 'text-success fw-bold');
+                        matrixHtml += `<td class="${colorCls}" style="cursor:pointer;" onclick="setEtfOverlapPreset('${t1}', '${t2}'); switchEtfOverlapMode('COMPARE');" title="คลิกเพื่อดูหุ้นที่ซ้ำกันระหว่าง ${t1} และ ${t2}">${pct}%</td>`;
                     }
                 });
                 matrixHtml += `</tr>`;
@@ -21065,7 +20997,7 @@
                         </table>
                     </div>
                     <div class="text-muted small mt-2">
-                        💡 <strong>คำแนะนำ:</strong> ค่า % สีแดงหมายถึงกองทุนทั้งสองถือหุ้นกลุ่มเดียวกันซ้ำซ้อนสูงมาก หากถือร่วมกันควรพิจารณาลดน้ำหนักเพื่อกระจายความเสี่ยง
+                        💡 <strong>คำแนะนำ:</strong> ค่า % สีเขียว (<20%) หมายถึงกระจายความเสี่ยงได้ดีมาก • สีเหลือง (20-39%) ซ้ำซ้อนปานกลาง • สีแดง (≥40%) ถือหุ้นชุดเดียวกันซ้ำซ้อนสูง
                     </div>
                 </div>
             `;
@@ -21141,22 +21073,32 @@
         let currentGeminiFilter = 'ALL';
 
         window.openGeminiSignalsModal = function(initialTab, targetTicker) {
-            const modalEl = document.getElementById('geminiSignalsModal');
-            if (!modalEl) return;
-            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
-            modal.show();
+            // If caller requested CONFIG (or no arguments from settings button), open dedicated API Settings modal
+            if (!initialTab || initialTab === 'CONFIG') {
+                const modalEl = document.getElementById('geminiSignalsModal');
+                if (!modalEl) return;
+                const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                modal.show();
+                updateGeminiApiStatusBadge();
+                const input = document.getElementById('geminiApiKeyInput');
+                if (input) input.value = localStorage.getItem('gemini_api_key') || '';
+                const sel = document.getElementById('geminiModelSelect');
+                let savedModel = localStorage.getItem('gemini_model');
+                if (!savedModel || savedModel === 'gemini-2.5-flash') {
+                    savedModel = 'gemini-3.8-flash';
+                    localStorage.setItem('gemini_model', savedModel);
+                }
+                if (sel && savedModel) sel.value = savedModel;
+                return;
+            }
 
-            // ตรวจสอบสถานะ API Key
-            updateGeminiApiStatusBadge();
-
-            // สลับ Tab เริ่มต้น
-            switchGeminiSignalsTab(initialTab || 'PICKS');
-
-            // Render รายการ Top Picks
-            renderGeminiAiPicks();
-
-            // Populate Dropdown ใน Tab Deep Dive
-            populateGeminiDeepDiveSelect(targetTicker || 'NVDA');
+            // Otherwise route directly to Tab 04 (04. AI Investment) without duplicate modal rendering
+            onSwitchViewTab('AI_INVESTMENT');
+            if (initialTab === 'DEEP_DIVE') {
+                launchGeminiDeepDiveForTicker(targetTicker || 'NVDA');
+            } else {
+                switchInlineGeminiTab('PICKS');
+            }
         };
 
         function updateGeminiApiStatusBadge() {
@@ -21178,58 +21120,27 @@
             });
         }
 
-        window.switchGeminiSignalsTab = function(tabName) {
-            ['PICKS', 'DEEP_DIVE', 'CONFIG'].forEach(t => {
-                const btn = document.getElementById('tabBtnGemini' + (t === 'PICKS' ? 'Picks' : (t === 'DEEP_DIVE' ? 'DeepDive' : 'Config')));
-                if (btn) btn.classList.remove('active');
-            });
-            const pnlPicks = document.getElementById('geminiPanePicks');
-            const pnlDeep = document.getElementById('geminiPaneDeepDive');
-            const pnlConf = document.getElementById('geminiPaneConfig');
-
-            if (pnlPicks) pnlPicks.style.display = (tabName === 'PICKS') ? 'block' : 'none';
-            if (pnlDeep) pnlDeep.style.display = (tabName === 'DEEP_DIVE') ? 'block' : 'none';
-            if (pnlConf) pnlConf.style.display = (tabName === 'CONFIG') ? 'block' : 'none';
-
-            const activeBtn = document.getElementById('tabBtnGemini' + (tabName === 'PICKS' ? 'Picks' : (tabName === 'DEEP_DIVE' ? 'DeepDive' : 'Config')));
-            if (activeBtn) activeBtn.classList.add('active');
-
-            if (tabName === 'CONFIG') {
-                const input = document.getElementById('geminiApiKeyInput');
-                if (input) input.value = localStorage.getItem('gemini_api_key') || '';
-                const sel = document.getElementById('geminiModelSelect');
-                let savedModel = localStorage.getItem('gemini_model');
-                if (!savedModel || savedModel === 'gemini-2.5-flash') {
-                    savedModel = 'gemini-3.8-flash';
-                    localStorage.setItem('gemini_model', savedModel);
-                }
-                if (sel && savedModel) sel.value = savedModel;
-            }
-        };
-
         window.filterGeminiAiPicks = function(category) {
             currentGeminiFilter = category;
             ['ALL', 'BUY', 'GROWTH', 'DEFENSIVE'].forEach(cat => {
-                const modalBtn = document.getElementById('btnGemFilter_' + cat);
                 const inlineBtn = document.getElementById('btnInlineGemFilter_' + cat);
-                if (modalBtn) modalBtn.classList.toggle('active', cat === category);
                 if (inlineBtn) inlineBtn.classList.toggle('active', cat === category);
             });
             renderGeminiAiPicks();
         };
 
         window.launchGeminiDeepDiveForTicker = function(ticker) {
-            const modalEl = document.getElementById('geminiSignalsModal');
-            const isModalShown = modalEl && modalEl.classList.contains('show');
-            if (isModalShown) {
-                switchGeminiSignalsTab('DEEP_DIVE');
-                populateGeminiDeepDiveSelect(ticker);
-                executeGeminiDeepDive(false);
-            } else {
-                switchInlineGeminiTab('DEEP_DIVE');
-                populateGeminiDeepDiveSelect(ticker);
-                executeGeminiDeepDive(true);
-            }
+            onSwitchViewTab('AI_INVESTMENT');
+            const p1 = document.getElementById('geminiInlinePanePicks');
+            const p2 = document.getElementById('geminiInlinePaneDeepDive');
+            const b1 = document.getElementById('tabBtnInlineGeminiPicks');
+            const b2 = document.getElementById('tabBtnInlineGeminiDeepDive');
+            if (p1) p1.style.display = 'none';
+            if (p2) p2.style.display = 'block';
+            if (b2) { b2.classList.add('active'); b2.classList.remove('text-muted'); }
+            if (b1) { b1.classList.remove('active'); b1.classList.add('text-muted'); }
+            populateGeminiDeepDiveSelect(ticker);
+            executeGeminiDeepDive(true);
         };
 
         window.renderGeminiAiPicks = function() {
@@ -21371,11 +21282,6 @@
                 optHtml += `<option value="${item.ticker}">${item.ticker} - ${item.name}</option>`;
             });
 
-            if (selModal) {
-                const prev = defaultTicker || selModal.value || 'NVDA';
-                selModal.innerHTML = optHtml;
-                if (seen.has(prev)) selModal.value = prev;
-            }
             if (selInline) {
                 const prevInline = defaultTicker || selInline.value || 'VTI';
                 selInline.innerHTML = optHtml;
@@ -21383,16 +21289,10 @@
             }
         }
 
-        window.onGeminiDeepDiveTickerChanged = function(ticker) {
-            // Placeholder when ticker changes
-        };
-
         window.analyzeCurrentStockWithGemini = function(targetTicker) {
             const tk = targetTicker || (typeof activeTechTicker !== 'undefined' ? activeTechTicker : 'NVDA');
-            openGeminiSignalsModal('DEEP_DIVE', tk);
-            setTimeout(() => {
-                executeGeminiDeepDive();
-            }, 200);
+            launchGeminiDeepDiveForTicker(tk);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         };
 
         function getUserHoldingContext(ticker) {
@@ -21788,117 +21688,7 @@ ${modeDirective}
                         <div class="small text-muted">
                             🛡️ <em>คำเตือน: บทวิเคราะห์นี้สร้างโดยระบบ AI เพื่อใช้เป็นข้อมูลเชิงปริมาณประกอบการตัดสินใจ ไม่ใช่คำแนะนำชี้ชวนทางการเงิน</em>
                         </div>
-                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill fw-bold px-3" onclick="bootstrap.Modal.getInstance(document.getElementById('geminiSignalsModal'))?.hide(); openTechnicalForTicker('${ticker}');">
-                            📈 ดูกราฟแท่งเทียน & Technical
-                        </button>
-                    </div>
-                </div>
-            `;
-        };
-
-        async function _legacy_executeGeminiDeepDive() { return; }
-        const _dummy_legacy_execute = async function() {
-            const sel = document.getElementById('geminiDeepDiveTickerSelect');
-            const resArea = document.getElementById('geminiDeepDiveResultArea');
-            if (!sel || !resArea) return;
-
-            const ticker = sel.value;
-            const rankedItem = (typeof top100StocksData !== 'undefined' ? top100StocksData.find(x => x.ticker === ticker) : null)
-                || (typeof topEtfsData !== 'undefined' ? topEtfsData.find(x => x.ticker === ticker) : null)
-                || GEMINI_TOP_PICKS.find(x => x.ticker === ticker);
-
-            let curPrice = rankedItem ? rankedItem.price : 100;
-            if (typeof marketPrices !== 'undefined' && marketPrices[ticker] && marketPrices[ticker] > 0) {
-                curPrice = marketPrices[ticker];
-            }
-            const changePct = rankedItem ? rankedItem.change : 1.2;
-            const techData = (typeof getTechnicalData === 'function') ? getTechnicalData(ticker, '1D') : null;
-            const sr = (typeof calcDynamicMarketSR === 'function') ? calcDynamicMarketSR(ticker, curPrice, rankedItem) : { r1: curPrice * 1.05, r2: curPrice * 1.10, s1: curPrice * 0.95, s2: curPrice * 0.90 };
-
-            resArea.innerHTML = `
-                <div class="card border-0 shadow-sm rounded-4 p-4 text-center bg-body">
-                    <div class="spinner-border text-primary mb-3" role="status" style="width: 2.5rem; height: 2.5rem;"></div>
-                    <h6 class="fw-bold mb-1">🤖 Gemini กำลังประมวลผลข้อมูลหุ้น ${ticker}...</h6>
-                    <small class="text-muted">กำลังคำนวณ EMA, RSI, MACD, Volume, แนวรับ-แนวต้าน และสร้างบทวิเคราะห์เชิงลึก</small>
-                </div>
-            `;
-
-            const apiKey = localStorage.getItem('gemini_api_key');
-            let aiText = '';
-
-            // ถ้ามี API Key ลองเรียก Google Gemini Live API
-            if (apiKey && apiKey.trim().length > 10) {
-                try {
-                    const model = document.getElementById('geminiModelSelect')?.value || 'gemini-3.8-flash';
-                    const prompt = `คุณเป็นผู้เชี่ยวชาญด้าน Technical Analysis และการลงทุนหุ้นสหรัฐฯ วิเคราะห์หุ้น ${ticker} (${rankedItem?.name || ''}) จากข้อมูลสดต่อไปนี้:
-- ราคาปัจจุบัน: $${curPrice.toFixed(2)} (การเปลี่ยนแปลงวันนี้: ${changePct > 0 ? '+' : ''}${changePct}%)
-- แนวต้าน: R1 $${sr.r1.toFixed(2)}, R2 $${sr.r2.toFixed(2)}
-- แนวรับ: S1 $${sr.s1.toFixed(2)}, S2 $${sr.s2.toFixed(2)}
-- Technical Score: ${rankedItem?.score || 5}/6
-จงเขียนบทวิเคราะห์ภาษาไทยที่กระชับ คมคาย และปฏิบัติได้จริง (Actionable) ใน 4 หัวข้อ:
-1. 📈 สรุปภาพรวมและโครงสร้างราคาปัจจุบัน
-2. 💡 เหตุผลความน่าสนใจและปัจจัยหนุน (Catalysts)
-3. ⚠️ จุดเสี่ยงที่ต้องระวังและระดับความเสี่ยง
-4. 🎯 แผนการเทรด แนะนำจุดเข้าซื้อ (Entry), จุดตัดขาดทุน (Stop Loss) และเป้าหมายทำกำไร (Take Profit)`;
-
-                    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey.trim()}`;
-                    const res = await fetch(url, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            contents: [{ parts: [{ text: prompt }] }]
-                        })
-                    });
-
-                    if (res.ok) {
-                        const json = await res.json();
-                        const rawText = json?.candidates?.[0]?.content?.parts?.[0]?.text;
-                        if (rawText) {
-                            aiText = formatGeminiMarkdown(rawText);
-                        }
-                    }
-                } catch(err) {
-                    console.warn('Gemini Live API fallback to synthesis engine:', err);
-                }
-            }
-
-            // Fallback to Built-in Intelligent Gemini Synthesis Engine
-            if (!aiText) {
-                aiText = generateSyntheticGeminiAnalysis(ticker, curPrice, changePct, sr, rankedItem);
-            }
-
-            // Render Final Deep Dive UI
-            resArea.innerHTML = `
-                <div class="card border-0 shadow-sm rounded-4 p-4 border bg-body">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pb-3 mb-3 border-bottom">
-                        <div class="d-flex align-items-center gap-2">
-                            <img src="https://assets.parqet.com/logos/symbol/${ticker}" alt="${ticker}" class="rounded-circle border" width="34" height="34" onerror="this.style.display='none'">
-                            <div>
-                                <h5 class="fw-bold m-0">${ticker} - ${rankedItem?.name || ''}</h5>
-                                <small class="text-muted">ราคาปัจจุบัน: $${curPrice.toFixed(2)} (${changePct >= 0 ? '+' : ''}${changePct.toFixed(2)}%)</small>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="badge rounded-pill bg-primary px-3 py-1 fw-bold">
-                                🤖 บทวิเคราะห์ Gemini AI
-                            </span>
-                            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fw-bold" onclick="executeGeminiDeepDive()">
-                                🔄 วิเคราะห์ใหม่
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- AI Output Content -->
-                    <div class="gemini-ai-markdown-content" style="line-height: 1.7; font-size: 0.88rem;">
-                        ${aiText}
-                    </div>
-
-                    <!-- Quick Action Footer -->
-                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pt-3 mt-3 border-top">
-                        <div class="small text-muted">
-                            🛡️ <em>คำเตือน: บทวิเคราะห์นี้สร้างโดยระบบ AI เพื่อใช้เป็นข้อมูลประกอบการตัดสินใจ ไม่ใช่คำแนะนำชี้ชวนทางการเงิน</em>
-                        </div>
-                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill fw-bold px-3" onclick="bootstrap.Modal.getInstance(document.getElementById('geminiSignalsModal')).hide(); openTechnicalForTicker('${ticker}');">
+                        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill fw-bold px-3" onclick="openTechnicalForTicker('${ticker}');">
                             📈 ดูกราฟแท่งเทียน & Technical
                         </button>
                     </div>
@@ -22255,54 +22045,6 @@ ${modeDirective}
             `;
         }
 
-        function _legacy_generateSyntheticGeminiAnalysis(ticker, price, chg, sr, item) {
-            const isBull = chg >= 0;
-            const score = item?.score || 5;
-            const r1 = sr.r1;
-            const r2 = sr.r2;
-            const s1 = sr.s1;
-            const s2 = sr.s2;
-            const sl = Number((s1 * 0.97).toFixed(2));
-            const tp = r2;
-            const rr = '1:2.3';
-
-            return `
-                <div class="mb-3">
-                    <h6 class="fw-bold text-primary mb-1">📈 1. สรุปภาพรวมและโครงสร้างราคาปัจจุบัน</h6>
-                    <p class="text-body-secondary mb-2">
-                        หุ้น <strong>${ticker}</strong> ซื้อขายที่ระดับ <strong>$${price.toFixed(2)}</strong> (${isBull ? '+' : ''}${chg.toFixed(2)}%) ภาพรวมทางเทคนิคแสดงคะแนนความแข็งแกร่ง <strong>${score}/6 ดาว</strong> โครงสร้างราคายืนเหนือเส้นค่าเฉลี่ยหลัก EMA 20 และ EMA 50 สะท้อนถึงโมเมนตัมขาขึ้นระยะสั้นที่กำลังเร่งตัว แรงซื้อสนับสนุนเริ่มกลับเข้ามาทดสอบบริเวณแนวต้านแรก $${r1.toFixed(2)}
-                    </p>
-                </div>
-
-                <div class="mb-3">
-                    <h6 class="fw-bold text-success mb-1">💡 2. เหตุผลความน่าสนใจและปัจจัยหนุน (Catalysts)</h6>
-                    <ul class="text-body-secondary mb-2 ps-3">
-                        <li><strong>การรักษาฐานราคา:</strong> มีการยก Low สูงขึ้นต่อเนื่อง ไม่หลุดแนวรับสำคัญ $${s1.toFixed(2)}</li>
-                        <li><strong>Volume Confirmation:</strong> ปริมาณการซื้อขายในช่วงปรับตัวขึ้นสูงกว่าค่าเฉลี่ย แสดงถึงแรงสะสมของนักลงทุนสถาบัน</li>
-                        <li><strong>Relative Strength:</strong> โมเมนตัมการฟื้นตัวแข็งแรงกว่าค่าเฉลี่ยตลาด S&P 500</li>
-                    </ul>
-                </div>
-
-                <div class="mb-3">
-                    <h6 class="fw-bold text-danger mb-1">⚠️ 3. จุดเสี่ยงที่ต้องระวัง (Risk Factors & Downside)</h6>
-                    <ul class="text-body-secondary mb-2 ps-3">
-                        <li><strong>การชนแนวต้านใหญ่:</strong> บริเวณ $${r2.toFixed(2)} เป็นแนวต้านสำคัญ 50 วัน อาจเผชิญแรงขายทำกำไรระยะสั้น (Pullback)</li>
-                        <li><strong>ความผันผวน:</strong> หากดัชนีตลาดภาพรวมย่อตัว อาจดึงให้ราคาลงมาทดสอบแนวรับลึก $${s2.toFixed(2)}</li>
-                    </ul>
-                </div>
-
-                <div class="p-3 rounded-3 bg-light-subtle border">
-                    <h6 class="fw-bold text-dark mb-2">🎯 4. กลยุทธ์และกรอบการเทรดที่แนะนำ (Action Plan)</h6>
-                    <div class="row g-2 small">
-                        <div class="col-sm-3"><strong>🛒 จุดเข้าซื้อ:</strong> $${s1.toFixed(2)} - $${price.toFixed(2)}</div>
-                        <div class="col-sm-3"><strong>🛑 จุดตัดขาดทุน:</strong> $${sl}</div>
-                        <div class="col-sm-3"><strong>🚀 เป้าทำกำไร:</strong> $${tp.toFixed(2)}</div>
-                        <div class="col-sm-3"><strong>⚖️ Risk:Reward:</strong> <span class="badge bg-success-subtle text-success fw-bold">${rr}</span></div>
-                    </div>
-                </div>
-            `;
-        }
-
         function formatInlineMarkdown(str) {
             if (!str) return '';
             return str
@@ -22424,18 +22166,6 @@ ${modeDirective}
             flushList();
             flushTable();
             return out.join('\n');
-        }
-
-        function _legacy_formatGeminiMarkdown(text) {
-            let out = text
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                .replace(/\*(.*?)\*/g, '<em>$1</em>')
-                .replace(/^### (.*$)/gim, '<h6 class="fw-bold text-primary mt-2 mb-1">$1</h6>')
-                .replace(/^## (.*$)/gim, '<h5 class="fw-bold text-primary mt-3 mb-2">$1</h5>')
-                .replace(/^# (.*$)/gim, '<h4 class="fw-bold text-primary mt-3 mb-2">$1</h4>')
-                .replace(/^\s*\*\s+(.*$)/gim, '<li>$1</li>')
-                .replace(/\n\n/g, '<br><br>');
-            return out;
         }
 
         window.saveGeminiApiKey = function() {
