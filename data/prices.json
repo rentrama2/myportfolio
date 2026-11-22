@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-22T17:26:02Z",
-  "updated_at_thai": "23 พ.ย. 2569 00:26 น.",
+  "updated_at": "2026-11-22T22:42:45Z",
+  "updated_at_thai": "23 พ.ย. 2569 05:42 น.",
   "fx": {
     "USDTHB": 33.96
   },
@@ -21,9 +21,9 @@
     },
     "GC=F": {
       "price": 3515.4,
-      "prevClose": 3685.5,
-      "change": -170.1,
-      "changePct": -4.62,
+      "prevClose": 3515.4,
+      "change": 0.0,
+      "changePct": 0.0,
       "name": "Gold (XAU)"
     },
     "DX-Y.NYB": {
@@ -49,9 +49,9 @@
     },
     "CL=F": {
       "price": 83.41,
-      "prevClose": 82.44,
-      "change": 0.97,
-      "changePct": 1.18,
+      "prevClose": 83.41,
+      "change": 0.0,
+      "changePct": 0.0,
       "name": "WTI Crude Oil"
     },
     "^NDX": {
