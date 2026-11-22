@@ -1,16 +1,45 @@
 {
-  "updated_at": "2026-11-21T22:02:21Z",
-  "updated_at_thai": "22 พ.ย. 2569 05:02 น.",
+  "updated_at": "2026-11-22T02:08:12Z",
+  "updated_at_thai": "22 พ.ย. 2569 09:08 น.",
   "news_count": 12,
   "news": [
     {
       "id": "news-1",
+      "title": "หุ้นเพนนี 3 ตัวที่มีช่องว่างมูลค่าสูงถึง 81%",
+      "title_en": "3 Penny Stocks With Value Gaps Up To 81%",
+      "summary": "หุ้นเพนนี 3 ตัวที่มีช่องว่างมูลค่าสูงถึง 81%",
+      "source": "Simply Wall St.",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/3-penny-stocks-value-gaps-011025134.html",
+      "time": "57 นาทีที่แล้ว",
+      "publishedAt": "2026-11-22T01:10:25Z",
+      "category": "MACRO",
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TLT"
+      ],
+      "sentiment": "NEUTRAL",
+      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
+      "isHero": true,
+      "points": [
+        "📌 สาระสำคัญ: หุ้นเพนนี 3 ตัวที่มีช่องว่างมูลค่าสูงถึง 81%",
+        "📊 นัยสำคัญต่อตลาด: สะท้อนความไม่แน่นอนของปัจจัยเศรษฐกิจและนโยบายการเงินที่ตลาดยังคงรอดูความชัดเจนเพื่อประเมินทิศทางต่อไป",
+        "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #SPY #QQQ #TLT ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
+      ],
+      "fullArticle": [
+        "หุ้นเพนนี 3 ตัวที่มีช่องว่างมูลค่าสูงถึง 81% ซึ่งเป็นหนึ่งในประเด็นสำคัญที่ตลาดการเงินและนักลงทุนทั่วโลกกำลังให้ความสนใจอย่างใกล้ชิดในรอบวัน",
+        "รายงานจาก Simply Wall St. ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมเศรษฐกิจมหภาคและนโยบายการเงิน ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
+        "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #SPY #QQQ #TLT อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"3 Penny Stocks With Value Gaps Up To 81%\")"
+      ]
+    },
+    {
+      "id": "news-2",
       "title": "น้ำมันกำลังเดินทางไกล และ 90,000 ดอลลาร์สหรัฐฯ ในหุ้นบรรทุกน้ำมัน 3 ตัวนี้จ่ายมากกว่า 10,000 ดอลลาร์ต่อปี",
       "title_en": "Oil Is Taking the Long Way Around, and $90,000 Across These 3 Tanker Stocks Pays More Than $10,000 a Year",
       "summary": "น้ำมันกำลังเดินทางไกล และ 90,000 ดอลลาร์สหรัฐฯ ในหุ้นบรรทุกน้ำมัน 3 ตัวนี้จ่ายมากกว่า 10,000 ดอลลาร์ต่อปี",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/oil-taking-long-way-around-194944634.html",
-      "time": "2 ชั่วโมงที่แล้ว",
+      "time": "6 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-21T19:49:44Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -19,7 +48,7 @@
       ],
       "sentiment": "NEUTRAL",
       "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": true,
+      "isHero": false,
       "points": [
         "📌 สาระสำคัญ: น้ำมันกำลังเดินทางไกล และ 90,000 ดอลลาร์สหรัฐฯ ในหุ้นบรรทุกน้ำมัน 3 ตัวนี้จ่ายมากกว่า 10,000 ดอลลาร์ต่อปี",
         "📊 นัยสำคัญต่อตลาด: ความผันผวนของราคาสินค้าโภคภัณฑ์ยังคงขึ้นอยู่กับประเด็นภูมิรัฐศาสตร์และนโยบายการผลิตระดับโลก",
@@ -32,13 +61,13 @@
       ]
     },
     {
-      "id": "news-2",
+      "id": "news-3",
       "title": "ราคาก๊าซลดลงอย่างรวดเร็วในปี 2551 ก่อนวันขอบคุณพระเจ้า",
       "title_en": "Gas Prices Are Dropping at a 2008 Pace Right Before Thanksgiving",
       "summary": "ราคาก๊าซลดลงอย่างรวดเร็วในปี 2551 ก่อนวันขอบคุณพระเจ้า",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/gas-prices-dropping-2008-pace-172255879.html",
-      "time": "4 ชั่วโมงที่แล้ว",
+      "time": "8 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-21T17:22:55Z",
       "category": "MACRO",
       "tickers": [
@@ -61,13 +90,13 @@
       ]
     },
     {
-      "id": "news-3",
+      "id": "news-4",
       "title": "ทรัมป์ (Trump) กล่าวว่าอาจมี 'การเปลี่ยนแปลงเชิงบวก' จากการแฮ็กฐานข้อมูล FBI ล่าสุด",
       "title_en": "Trump says there could be a 'positive spin' from the latest FBI database hack",
       "summary": "นี่จะทำให้เกิดการบุกรุกระบบ FBI ครั้งที่สอง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/21/trump-fbi-database-hack.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-21T16:57:34Z",
       "category": "MACRO",
       "tickers": [
@@ -90,13 +119,13 @@
       ]
     },
     {
-      "id": "news-4",
+      "id": "news-5",
       "title": "สถิติของ Anthropic IPO ชนกับสัปดาห์ที่เลวร้ายที่สุดของเทคโนโลยีใน Wall Street นับตั้งแต่ปี 2020",
       "title_en": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
       "summary": "Anthropic จัดงานเปิดตัวครั้งประวัติศาสตร์ Nasdaq หนึ่งวันก่อนที่หุ้นของ Nvidia จะปิดสถิติการขาดทุนรายสัปดาห์ที่ยาวนานที่สุดนับตั้งแต่ปี 2008",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html",
-      "time": "5 ชั่วโมงที่แล้ว",
+      "time": "9 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-21T16:40:05Z",
       "category": "TECH",
       "tickers": [
@@ -118,13 +147,13 @@
       ]
     },
     {
-      "id": "news-5",
+      "id": "news-6",
       "title": "แนวหน้า: ประเด็นสำคัญ 3 ประการสำหรับนักลงทุนระยะยาว",
       "title_en": "Frontline: 3 Key Takeaways for Long-Term Investors",
       "summary": "แนวหน้า: ประเด็นสำคัญ 3 ประการสำหรับนักลงทุนระยะยาว",
       "source": "Motley Fool",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/frontline-3-key-takeaways-long-155408540.html",
-      "time": "6 ชั่วโมงที่แล้ว",
+      "time": "10 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-21T15:54:08Z",
       "category": "MACRO",
       "tickers": [
@@ -147,13 +176,13 @@
       ]
     },
     {
-      "id": "news-6",
+      "id": "news-7",
       "title": "การขัดข้องทางเทคโนโลยีกำลังกระตุ้นให้เกิดเศรษฐกิจโลกาวินาศใหม่",
       "title_en": "Tech outages are fueling a new doomsday economy",
       "summary": "การขัดข้องของเทคโนโลยีล่าสุดทำให้เกิดความกังวลเกี่ยวกับการโจมตีทางไซเบอร์ของ AI และโครงข่ายไฟฟ้าของสหรัฐอเมริกา เศรษฐกิจโลกาวินาศจึงร้อนขึ้น",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/21/emergency-prep-spending-tech-outages.html",
-      "time": "6 ชั่วโมงที่แล้ว",
+      "time": "11 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-21T15:04:56Z",
       "category": "TECH",
       "tickers": [
@@ -176,13 +205,13 @@
       ]
     },
     {
-      "id": "news-7",
+      "id": "news-8",
       "title": "ผลงานการเกษียณอายุของ John Bogle นั้นเรียบง่ายมาก Wall Street เกลียดมัน",
       "title_en": "John Bogle’s Retirement Portfolio Was So Simple, Wall Street Hated It",
       "summary": "ผลงานการเกษียณอายุของ John Bogle นั้นเรียบง่ายมาก Wall Street เกลียดมัน",
       "source": "24/7 Wall St.",
       "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/john-bogle-retirement-portfolio-simple-133342787.html",
-      "time": "8 ชั่วโมงที่แล้ว",
+      "time": "12 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-21T13:33:42Z",
       "category": "MACRO",
       "tickers": [
@@ -205,13 +234,13 @@
       ]
     },
     {
-      "id": "news-8",
+      "id": "news-9",
       "title": "Anthropic และ SpaceX ได้สร้างเศรษฐีใหม่ 8,600 ราย แต่ Ryan Serhant กล่าวว่าผู้ชนะที่แท้จริงคือธุรกิจอสังหาริมทรัพย์",
       "title_en": "Anthropic and SpaceX have created 8,600 new millionaires, but Ryan Serhant says the real winner is in real estate",
       "summary": "Anthropic และ SpaceX ได้สร้างเศรษฐีใหม่ 8,600 ราย แต่ Ryan Serhant กล่าวว่าผู้ชนะที่แท้จริงคือธุรกิจอสังหาริมทรัพย์",
       "source": "Moneywise",
       "sourceUrl": "https://finance.yahoo.com/real-estate/articles/anthropic-spacex-created-8-600-131500069.html",
-      "time": "8 ชั่วโมงที่แล้ว",
+      "time": "12 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-21T13:15:00Z",
       "category": "MACRO",
       "tickers": [
@@ -234,13 +263,13 @@
       ]
     },
     {
-      "id": "news-9",
+      "id": "news-10",
       "title": "Goldman ไม่เปิดเผยการคาดการณ์ราคาน้ำมันเบรนท์ในปี 2570",
       "title_en": "Goldman is out with its 2027 forecast for Brent oil prices",
       "summary": "Goldman ไม่เปิดเผยการคาดการณ์ราคาน้ำมันเบรนท์ในปี 2570",
       "source": "Investing.com",
       "sourceUrl": "https://finance.yahoo.com/energy/articles/goldman-2027-forecast-brent-oil-125018615.html",
-      "time": "9 ชั่วโมงที่แล้ว",
+      "time": "13 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-21T12:50:18Z",
       "category": "COMMODITIES",
       "tickers": [
@@ -262,40 +291,13 @@
       ]
     },
     {
-      "id": "news-10",
-      "title": "ผู้เกษียณสามารถเปลี่ยนเงิน 450,000 ดอลลาร์เป็นรายได้เชิงรับด้วยหุ้นปันผล 5 หุ้นเหล่านี้ได้อย่างไร",
-      "title_en": "How Retirees Can Turn $450,000 Into Passive Income With These 5 Dividend Stocks",
-      "summary": "ผู้เกษียณสามารถเปลี่ยนเงิน 450,000 ดอลลาร์เป็นรายได้เชิงรับด้วยหุ้นปันผล 5 หุ้นเหล่านี้ได้อย่างไร",
-      "source": "24/7 Wall St.",
-      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/retirees-turn-450-000-passive-123052938.html",
-      "time": "9 ชั่วโมงที่แล้ว",
-      "publishedAt": "2026-11-21T12:30:52Z",
-      "category": "MACRO",
-      "tickers": [
-        "SCHD"
-      ],
-      "sentiment": "NEUTRAL",
-      "impact": "เกาะติดความคืบหน้าและประเมินทิศทางตลาด",
-      "isHero": false,
-      "points": [
-        "📌 สาระสำคัญ: ผู้เกษียณสามารถเปลี่ยนเงิน 450,000 ดอลลาร์เป็นรายได้เชิงรับด้วยหุ้นปันผล 5 หุ้นเหล่านี้ได้อย่างไร",
-        "📊 นัยสำคัญต่อตลาด: สะท้อนความไม่แน่นอนของปัจจัยเศรษฐกิจและนโยบายการเงินที่ตลาดยังคงรอดูความชัดเจนเพื่อประเมินทิศทางต่อไป",
-        "🎯 หุ้นที่น่าจับตา: ติดตามความเคลื่อนไหวของกลุ่มหุ้นที่เกี่ยวข้อง #SCHD ซึ่งอาจมีความผันผวนตามประเด็นข่าวนี้"
-      ],
-      "fullArticle": [
-        "ผู้เกษียณสามารถเปลี่ยนเงิน 450,000 ดอลลาร์เป็นรายได้เชิงรับด้วยหุ้นปันผล 5 หุ้นเหล่านี้ได้อย่างไร ซึ่งเป็นหนึ่งในประเด็นสำคัญที่ตลาดการเงินและนักลงทุนทั่วโลกกำลังให้ความสนใจอย่างใกล้ชิดในรอบวัน",
-        "รายงานจาก 24/7 Wall St. ระบุว่า ความเคลื่อนไหวดังกล่าวส่งผลต่อมุมมองของนักลงทุนสถาบันและผู้เล่นในตลาด โดยเฉพาะในกลุ่มอุตสาหกรรมเศรษฐกิจมหภาคและนโยบายการเงิน ซึ่งกำลังเผชิญกับปัจจัยขับเคลื่อนทั้งด้านแนวโน้มอุปสงค์-อุปทาน และการปรับสมดุลพอร์ตการลงทุนเพื่อรับมือกับความเปลี่ยนแปลงของสภาวะเศรษฐกิจโลก",
-        "ในมุมมองการลงทุนระยะสั้นถึงระยะกลาง นักวิเคราะห์ประเมินว่าหุ้นกลุ่มที่ได้รับผลกระทบอย่าง #SCHD อาจเผชิญความผันผวนของราคาตามทิศทางกระแสข่าว โดยนักลงทุนควรติดตามข้อมูลความคืบหน้าอย่างใกล้ชิดควบคู่กับการประเมินแนวรับแนวต้านทางเทคนิค (อ้างอิงรายงานภาษาอังกฤษ: \"How Retirees Can Turn $450,000 Into Passive Income With These 5 Dividend Stocks\")"
-      ]
-    },
-    {
       "id": "news-11",
       "title": "จีนใช้การประชุมสุดยอดเพื่อขยายอิทธิพลไปทั่วโลกอย่างไร",
       "title_en": "How China is using summits to expand its global influence",
       "summary": "ประธานาธิบดีสี จิ้นผิง ของจีนได้ช่วยประสานงานภาพถ่ายที่มีความสำคัญระดับโลกอีกครั้งหนึ่ง",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/21/china-xi-trump-putin-global-diplomacy-shenzhen.html",
-      "time": "16 ชั่วโมงที่แล้ว",
+      "time": "20 ชั่วโมงที่แล้ว",
       "publishedAt": "2026-11-21T06:00:02Z",
       "category": "MACRO",
       "tickers": [
@@ -324,7 +326,7 @@
       "summary": "เมื่อเป็นบริษัทที่มีมูลค่ามากที่สุดในโลก ปัจจุบัน Nvidia อยู่ในอันดับที่สี่ตามหลัง Apple, Microsoft และ Alphabet",
       "source": "CNBC",
       "sourceUrl": "https://www.cnbc.com/2026/11/20/nvidias-7-week-losing-streak-is-longest-since-2008-financial-crisis.html",
-      "time": "23 ชั่วโมงที่แล้ว",
+      "time": "1 วันที่แล้ว",
       "publishedAt": "2026-11-20T22:59:33Z",
       "category": "TECH",
       "tickers": [
